@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "rejectedBeforeExternalAccess": [
+    "https://unmocked.invalid/"
+  ],
+  "scope": "Deliberate local negative check of the new QA-only fallback route"
+}

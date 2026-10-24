@@ -1,4 +1,4 @@
-# Hybrid System — frozen research-data foundation
+# Hybrid System — project status and maintained task board
 
 Date: 2026-10-24, Asia/Jerusalem.
 **Application remains 0.4.3**, authoritative `hybrid-terminal.html`, byte-for-byte unchanged:
@@ -14,7 +14,7 @@ This is the project's **single task board**. Keep one active implementation task
 | --- | --- | --- | --- | --- |
 | P1 | Application, navigation and day context | Implemented — app **0.4.3** | Preserve reviewed source while building separate research infrastructure | `qa/source-checksums.json`; `tests/results/0.4.3/`; earlier live limitations remain |
 | P1 | Research-data foundation | Implemented locally — tool **1.0.0 / schema 1**; external review pending | Obtain independent external review of the tool/schema/fixtures before treating local checks as external acceptance | `tests/results/research-data-v1/`; Python oracle is a separate **local** implementation, not an independent external review |
-| P0 | Git / private GitHub / reproducible CI | **Active** — local setup and validation in progress; WSL GitHub login missing | Finish tracked-only checkout checks, then authenticate local CLI as `artimeNFT` and inspect/create/push the private target | `.github/workflows/ci.yml`; `tests/results/ci-setup/`; no verified remote run yet |
+| P0 | Git / private GitHub / reproducible CI | **Active — awaiting WSL GitHub login**; local preparation and clean-clone QA complete | Authenticate local CLI as `artimeNFT`; then inspect/create the private target, push main and verify its Actions run | `.github/workflows/ci.yml`; `tests/results/ci-setup/`; no verified remote run yet |
 | P2 | Episode definitions, warm-up/origin analysis and matched-control pilot | Queued | Define protocol, origin/warm-up policy and matched controls before generating episodes | Research data is an engineering foundation, not strategy evidence; see limits below |
 | P2 | Actual UTC-midnight rollover / one-hour reconnect-storage / physical touch check | Pending observations | Run the bounded observations in their real windows; use a physical device for touch | README bounded-observation commands; `tests/browser-observe-context.cjs`; deterministic/emulated results do not complete these observations |
 | P3 | Additional indicators and derivatives/context features | Deferred | Resolve source/configuration/parity requirements in a separate increment | README follow-up requirements; no approximations or score changes authorized here |
@@ -27,9 +27,27 @@ QA-only dependencies are pinned in package.json/package-lock.json: Playwright 1.
 
 The workflow uses Node 24, standard Ubuntu 24.04 runners, separate deterministic/Chromium jobs, push-main/PR-main/manual triggers, concurrency cancellation, bounded job/test timeouts, read-only contents permission and three-day failure artifacts. Official current action releases/commit pins were checked: checkout v7.0.0, setup-node v7.0.0, upload-artifact v7.0.2 (`tests/results/ci-setup/tool-versions.json`). There is no deployment, scheduled data collection, larger/paid runner or automatic merge.
 
-Local publication status: official GitHub CLI 2.103.2 installed in ignored `.tools/gh` after release-checksum verification. **WSL CLI is not authenticated.** The connected GitHub app reports `artimeNFT`, but its target lookup returned 404, which does not prove the target is absent. No origin was guessed, no remote repository was created and no push/Actions run occurred. Intended target is `artimeNFT/hybrid-terminal`, private only; authenticated inspection is required before reuse/creation. Final local commit/check/run references will be recorded below after validation.
+Local publication status: official GitHub CLI 2.103.2 installed in ignored `.tools/gh` after release-checksum verification. **WSL CLI is not authenticated.** The connected GitHub app reports `artimeNFT`, but its target lookup returned 404, which does not prove the target is absent. No origin was guessed, no remote repository was created and no push/Actions run occurred. Intended target is `artimeNFT/hybrid-terminal`, private only; authenticated inspection is required before reuse/creation. Initial tested checkpoint: **`cdebf5326db63f67e66421016a1287d4f942c1bd`** (`Establish Hybrid project checkpoint and reproducible offline QA`). No repository URL/privacy or Actions run/result has been verified yet. The later documentation/evidence commit leaves these publication steps pending; `git log -1` identifies the current local tip.
 
 The standard Playwright system-dependency installer requires sudo on this WSL host. The documented rootless Ubuntu 24.04 fallback downloaded/extracted the missing NSS/NSPR/ALSA libraries into ignored `.tools/browser-libs`, with no system changes. Normal CI uses Playwright's official --with-deps installation. Application/research/source and frozen-data semantics remain unchanged; old delivery manifests are preserved. CI checks only tracked reviewed sources and synthetic fixtures, and never claims full verification of intentionally untracked delivery files.
+
+## Local setup verification and publication handoff
+
+Completed locally on Node v24.15.0:
+
+- Locked npm installation; all nine original deterministic application suites, all 12 research cases and all five original mocked Chromium suites passed. Existing suite sources were unchanged. New QA hooks/runner hashes are recorded separately; old manifests were not rewritten.
+- A **tracked-only clean Git clone of `cdebf5326db63f67e66421016a1287d4f942c1bd`**, initially without acquired datasets, node_modules or local tools, passed fresh `npm ci`, `npm test`, rootless browser setup and all five browser suites. Legacy NODE_PATH and LD_LIBRARY_PATH were unset; packages/libraries came from the documented installation commands. Browser cache may be shared, as with normal Playwright installation. Evidence: `tests/results/ci-setup/fresh-checkout.json` and `fresh-*.log`.
+- All browser fallback network guards recorded zero unmocked external requests. A separate guard check deliberately attempted an unmocked invalid-host URL and was rejected before public network access. Workflow YAML and trigger/job/permission/pin/timeout/artifact policy assertions passed; this is local validation, **not a GitHub Actions run**.
+- Staged names/sizes and targeted credential patterns were reviewed. Dataset/checkpoint/lock/dependency/tool/browser-artifact exclusions were verified without deleting local files. Initial checkpoint review receipt: `staged-review.json`. Legacy whitespace warnings in untouched notes/diff archives were preserved, not represented as a successful whitespace-clean historical audit.
+- Reviewed app/research/schema and required baselines passed scoped source hashes; original local frozen datasets and earlier evidence also retain their prior delivery byte hashes. The latter is a **local preservation check**, not a CI/full-delivery claim about an intentionally incomplete checkout. Original app hash remains `fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9`.
+
+**Remaining user action:** from this Hybrid folder in WSL, sign in through the browser as **artimeNFT**:
+
+```sh
+.tools/gh/bin/gh auth login --hostname github.com --git-protocol https --web --scopes workflow
+```
+
+If the CLI offers to configure Git authentication globally, choose **No**; this project must retain global Git configuration. No password/token should be sent in chat. After login, the authorized remaining work is to verify the actual CLI account/target, reuse only a related private repository or create the missing target as private, configure this repository's origin/auth locally, push main without force, and inspect the actual Actions result. Until that occurs, **private GitHub publication and remote CI are pending**, and this remains the sole active implementation task. Episode/pilot work stays queued.
 
 ## Research-data increment: scope and preservation (historical)
 

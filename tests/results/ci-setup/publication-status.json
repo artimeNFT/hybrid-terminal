@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-24T12:10:30.743652+00:00",
+  "target": "artimeNFT/hybrid-terminal",
+  "intendedVisibility": "private",
+  "localCliVersion": "2.103.2",
+  "localCliAuthenticated": false,
+  "connectedAppLogin": "artimeNFT",
+  "connectedAppTargetLookup": "404; absent vs inaccessible is unresolved",
+  "originConfigured": false,
+  "pushedCommit": null,
+  "actionsRunUrl": null,
+  "actionsResult": "pending authentication/publication",
+  "requiredUserAction": ".tools/gh/bin/gh auth login --hostname github.com --git-protocol https --web --scopes workflow",
+  "globalGitConfig": "unchanged; decline any global credential-helper setup prompt"
+}
