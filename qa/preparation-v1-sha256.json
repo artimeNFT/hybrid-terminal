@@ -1,0 +1,12 @@
+{
+  "research/prepare.cjs": "31075902684a50afd357b5adb70b49a88b387a259b99a88e0630c63c3d3806c7",
+  "tests/preparation.cjs": "7b22585964c05bbdfb12f0ce55e8cdfe174f89203f6f988055587a9ec2eb8151",
+  "research/preparation/README.md": "8665164d553a6db84f5756599125ad6a3ef084bd34e642628acecf209ebf4c32",
+  "research/preparation/calculations.cjs": "29caecfb5117dc3da2360a35030c1ea2716245d222dd8179a81cfce6c287d0aa",
+  "research/preparation/diagnostics.cjs": "e8913f3f24c2a087ace1ea5637199aaac2a280eeb29d34734ca07c52cdbbdc06",
+  "research/preparation/features.cjs": "423a9e693f3c20009c42672b26e5aa41bbb22f8e401bc3bd2da703e51e023e25",
+  "research/preparation/matching.cjs": "e07d9f287ec41331b947c1b53f3d761b574c9f1852215bf5d0b06b29eaadef47",
+  "research/preparation/protocol.json": "9590a8eb84b6d731a44af6e00b119a5116fc37a3d45aa631a0c386d2217d776c",
+  "research/preparation/worker.cjs": "5c35fbb35027739686d07ab0249574ed563d7eef1f82117323a618e6f464b92b",
+  "tests/verify-preparation.cjs": "bd802a165f38a83894b32f472a120f9aed598fb12ff38caa25f9188f20585443"
+}

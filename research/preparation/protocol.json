@@ -1,0 +1,86 @@
+{
+  "kind": "hybrid-outcome-blind-preparation-protocol",
+  "version": "1.0.0",
+  "status": "exploratory-preparation-only-not-outcome-or-inference-approval",
+  "reviewCheckpoint": "59f998a54bccd0619176fbd9acd434879dcc2f2e",
+  "contractSha256": "04d2c9dbbba6fb3d84b692c4410496f03e280dad82bb8357b44a443527b66156",
+  "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+  "symbol": "BTCUSDT",
+  "timeframe": "5m",
+  "stepMs": 300000,
+  "originInclusive": "2026-07-01T00:00:00Z",
+  "endExclusive": "2026-10-01T00:00:00Z",
+  "expectedBars": 26496,
+  "calculation": {
+    "policy": "actual unmodified application functions, complete past prefix from July 1 at every decision; no serialized parser state or rolling reseed",
+    "firstDecisionIndex": 3999,
+    "validity": "actual sigAt validity.ready and actual from-UTC-open day coverage; no score, selected-side, M/W, stopping-volume or tie-policy filter",
+    "bindings": "Native Math/Number lexical bindings; optional in-memory memo of actual volumeReference on the immutable fixed-origin numeric input. No recursive indicator, classification or M/W state reused; analyze replays every full prefix. Function bodies unchanged; exact memo/no-memo and reviewed-adapter parity required before full run. Cache never serialized."
+  },
+  "episodes": {
+    "arms": {"V": "actual cls===2", "C": "actual cls===0 and source volumeReference.state===ready"},
+    "excludedSources": ["cls===1", "unavailable volume reference", "high<=low"],
+    "upConvention": "close>=open, including doji; doji counts reported",
+    "sides": {"SHORT": "up zone with high < decision close", "LONG": "down zone with low > decision close"},
+    "ageBarsInclusive": [1, 300],
+    "nearEdgeDistanceAtrMaximumInclusive": 6,
+    "recovery": "After source candle through decision inclusive: up-zone midpoint recovered if any low<=midpoint; down-zone midpoint recovered if any high>=midpoint. Equal midpoint excludes both arms symmetrically.",
+    "priorEdgeTouch": "After source through decision inclusive: up any low<=high; down any high>=low. Edge touches allowed, recorded as known at decision.",
+    "firstEligibility": "one episode per zone at its first eligible valid decision in permitted range, determined before block/tail exclusions; never resurrect excluded episodes",
+    "selection": "all eligible zones in both arms; within-arm/side nearest rank by near-edge distance then creation time then ID; not the live nearest-zone estimand",
+    "id": "symbol:timeframe:zoneOpenTimeMilliseconds:side"
+  },
+  "features": {
+    "stopWindow": "decision indices t-19 through t inclusive",
+    "longStop": "min(minimum low - 0.3*ATR14, decision close - ATR14)",
+    "shortStop": "max(maximum high + 0.3*ATR14, decision close + ATR14)",
+    "targets": "TP1 near edge; TP2 midpoint; plans anchored at decision close, no next-open reads",
+    "continuousCalipers": {"midpointDistanceAtr": 0.25, "stopDistanceAtr": 0.25, "zoneWidthAtr": 0.25, "logAge": 0.6931471805599453, "atrPercentile": 0.10},
+    "logAge": "natural logarithm of age bars",
+    "atrPercentile": "(count preceding 288 actual ATR14 values below current ATR + 0.5*count equal)/288, excluding decision ATR; unavailable/nonfinite prior ATR excludes feature construction explicitly",
+    "calendar": "decision-close UTC; weekend is Saturday/Sunday; six-hour bucket=floor(UTC hour/6)"
+  },
+  "chronology": {
+    "blocksDecisionIndexHalfOpen": [[3999,11498],[11498,18997],[18997,26496]],
+    "reservedFollowingBars": 120,
+    "reservation": "include only t+120<blockEnd; coordinates only, never future prices",
+    "excludedEpisodeOrder": ["first eligibility recorded", "block lookup", "tail reservation"],
+    "sourceCensusBlocks": "source creation indices, with pre-permitted separately labeled; not episode decision-block exclusions"
+  },
+  "matching": {
+    "attempts": 1,
+    "ratio": "1:1 greedy without replacement",
+    "vectorOrder": ["decisionIndex ascending", "zoneOpenTime ascending", "ID ASCII ascending"],
+    "exact": ["side", "block", "priorEdgeTouch", "weekend", "utcSixHourBucket"],
+    "absoluteSeparationBarsInclusive": [121,2016],
+    "caliperBoundary": "absolute differences <= declared caliper, no epsilon relaxation",
+    "cost": "sum over five continuous calipers of (difference/caliper)^2",
+    "ties": ["absolute decision separation", "control decisionIndex", "control zoneOpenTime", "control ID ASCII"],
+    "retuning": "forbidden; report poor support/match/balance as findings"
+  },
+  "diagnostics": {
+    "populations": ["global", "each side", "each block", "each side-by-block"],
+    "balanceVariables": ["midpointDistanceAtr","stopDistanceAtr","zoneWidthAtr","logAge","atrPercentile","ageBars","nearEdgeDistanceAtr","plannedRr","priorEdgeTouch","weekend","utcBucket0","utcBucket1","utcBucket2","utcBucket3","sideShort","block0","block1","block2"],
+    "smd": "(mean V - mean C)/sqrt((sampleVariance(pre V)+sampleVariance(pre C))/2); same pre-match denominator for pre/post within each reported population; no variance recomputation on matched sample",
+    "smdFlag": "absolute SMD>=0.1; diagnostic only, not exchangeability or inference acceptance",
+    "undefined": "finite values only with missing counts; pre n<2 in either arm => insufficient-sample, null SMD; zero denominator and equal means => zero-variance-equal/null SMD; unequal means => zero-variance-different/null SMD and flagged; missing matched arm => insufficient-post-sample/null",
+    "distribution": "finite n/missing/min/max/mean/sample SD and type-7 linearly interpolated quartiles",
+    "support": "pre-match opposite-arm min/max overlap and outside-range counts; per-V exact-stratum, time-caliper, continuous-caliper and unused candidate counts; no replacement exhaustion separate",
+    "overlap": "within-arm reserved windows [decisionIndex+1,decisionIndex+120] overlap iff absolute separation<120; report pair count, involved episodes and maximum concurrency pre/post; not independence",
+    "calendar": "per-arm decision-close day/weekend/bucket concentration plus complete pair decision times, zone times and reserved UTC day spans in local pair payload",
+    "noOutcomes": true
+  },
+  "canonicalization": "Recursive ASCII object-key sorting, array order fixed by coordinates, compact UTF-8 JSON, all numbers finite, no volatile runtime fields. Feature payload includes first episodes and their disposition plus decision/source census; pair payload includes pairs and unmatched diagnostics. Each SHA-256 excludes runtime metadata.",
+  "resources": {
+    "workers": 2,
+    "maximumBars": 30000,
+    "maximumWallSeconds": 3600,
+    "workerHeapMb": 512,
+    "vmCallTimeoutMs": 30000,
+    "benchmarkDecisionIndices": [3999,11497,18996,26495],
+    "benchmarkRepeats": 2,
+    "benchmarkAdmission": "worst measured prefix seconds * total decision count / workers * 2 safety factor <= maximum wall seconds; otherwise explicit resource refusal",
+    "failure": "non-complete metadata only, no partial canonical cohort/pair publication; preserve logs; no truncation/reseed or automatic design changes"
+  },
+  "nextAction": "Independent feature/matching/dependence feasibility review, then freeze a separate outcome/inference protocol before any resolution, execution or outcome analysis"
+}

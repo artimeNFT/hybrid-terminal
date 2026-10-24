@@ -1,0 +1,94 @@
+{
+  "writtenAt": "2026-10-24T18:25:23.706Z",
+  "protocolSha256": "c66940fbf10c43387e067d85d54f608fd20dd3ceeaf49de77bcfe68b41b501cd",
+  "wrapperSha256": "b93e1bb5ee65956a771ded0c83af5715972b3e344e0ac5d5aaf9ded54eaafcd3",
+  "phase": "before any real cohort summaries",
+  "dataIdentity": {
+    "canonicalDataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+    "producerToolVersion": "1.0.0",
+    "validatedWithCliVersion": "1.0.1",
+    "schemaVersion": 1,
+    "symbol": "BTCUSDT",
+    "timeframe": "5m",
+    "quality": {
+      "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+      "state": "complete",
+      "rowCount": 26496,
+      "uniqueTimestampCount": 26496,
+      "validUniqueRows": 26496,
+      "expectedRows": 26496,
+      "eligibleRowsAtCutoff": 26496,
+      "excludedDevelopingOrFutureRows": 0,
+      "missingRows": 0,
+      "duplicateRows": 0,
+      "conflictingTimestamps": 0,
+      "duplicates": [],
+      "gaps": [],
+      "coverage": {
+        "firstOpenTime": 1782864000000,
+        "lastOpenTime": 1790812500000,
+        "endExclusive": 1790812800000,
+        "contiguous": true
+      },
+      "issueCount": 0,
+      "issues": [],
+      "issuesTruncated": false
+    },
+    "requestedRange": {
+      "startInclusive": 1782864000000,
+      "endExclusive": 1790812800000
+    },
+    "acquisitionCutoff": 1792820581498,
+    "conversion": "Decimal strings verified/hashed before Number conversion; actual application calculations use binary Number OHLCV"
+  },
+  "calculationIdentity": {
+    "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "functionBodiesSha256": "a936482db9a7448505401aab4bca93ee47d470e9d9c145bf3af7e28278d6f8b2",
+    "bootstrapExecuted": false,
+    "backtestExtracted": false,
+    "statePolicy": "full-past-prefix-recompute"
+  },
+  "samples": [
+    {
+      "index": 3999,
+      "timesSeconds": [
+        0.051178658000000044,
+        0.03342382399999997
+      ],
+      "reviewedAdapterSeconds": 0.1460558370000001,
+      "exactParity": true
+    },
+    {
+      "index": 11497,
+      "timesSeconds": [
+        0.06388102000000004,
+        0.05194982600000003
+      ],
+      "reviewedAdapterSeconds": 0.3337423590000001,
+      "exactParity": true
+    },
+    {
+      "index": 18996,
+      "timesSeconds": [
+        0.11343583799999987,
+        0.12454468700000007
+      ],
+      "reviewedAdapterSeconds": 0.5304248150000003,
+      "exactParity": true
+    },
+    {
+      "index": 26495,
+      "timesSeconds": [
+        0.11291342499999973,
+        0.12108346599999958
+      ],
+      "reviewedAdapterSeconds": 0.7411153680000002,
+      "exactParity": true
+    }
+  ],
+  "conservativeEstimatedSeconds": 2801.8818234390014,
+  "maximumWallSeconds": 3600,
+  "admitted": true,
+  "rssBytes": 309755904,
+  "deniedCalls": []
+}

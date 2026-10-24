@@ -1,0 +1,8 @@
+{
+  "scope": "Independent means from all tracked matched covariate projections, divided by the declared pre-match SDs; no outcomes or new matching design",
+  "populations": 12,
+  "continuousComparisons": 96,
+  "maximumAbsoluteSmdDifferenceFromSummationOrder": 9.465084965798454e-16,
+  "tolerance": 1e-12,
+  "passed": true
+}

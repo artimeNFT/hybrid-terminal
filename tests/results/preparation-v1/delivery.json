@@ -1,0 +1,126 @@
+{
+  "preparationVersion": "1.0.0",
+  "reviewedStartingCommit": "59f998a54bccd0619176fbd9acd434879dcc2f2e",
+  "runtimeNode": "v24.15.0",
+  "platform": "linux",
+  "architecture": "x64",
+  "applicationVersion": "0.4.3",
+  "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "cliVersion": "1.0.1",
+  "schema": 1,
+  "identity": {
+    "preparationVersion": "1.0.0",
+    "protocolHash": "9590a8eb84b6d731a44af6e00b119a5116fc37a3d45aa631a0c386d2217d776c",
+    "contractHash": "04d2c9dbbba6fb3d84b692c4410496f03e280dad82bb8357b44a443527b66156",
+    "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+    "pinnedSourceChecksums": {
+      "hybrid-terminal.html": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+      "research/klines.cjs": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+      "research/audit/adapter.cjs": "cd6f89222bb571c91b5f7b39f65b75bd69e2045208334f59dc85fb9ee1aa6daf",
+      "research/readiness-audit.cjs": "90f486a3b937c51dffbfc4a32fb3ebc83668b7b579fea2e0db62edcf305ca5b5",
+      "research/audit/protocol.json": "50cf2d98d57af48ad53631cc0787432fdbc453d920d8667bd4b8d972b175e9e6"
+    },
+    "preparationSourceChecksums": {
+      "research/prepare.cjs": "31075902684a50afd357b5adb70b49a88b387a259b99a88e0630c63c3d3806c7",
+      "research/preparation/protocol.json": "9590a8eb84b6d731a44af6e00b119a5116fc37a3d45aa631a0c386d2217d776c",
+      "research/preparation/calculations.cjs": "29caecfb5117dc3da2360a35030c1ea2716245d222dd8179a81cfce6c287d0aa",
+      "research/preparation/features.cjs": "423a9e693f3c20009c42672b26e5aa41bbb22f8e401bc3bd2da703e51e023e25",
+      "research/preparation/matching.cjs": "e07d9f287ec41331b947c1b53f3d761b574c9f1852215bf5d0b06b29eaadef47",
+      "research/preparation/diagnostics.cjs": "e8913f3f24c2a087ace1ea5637199aaac2a280eeb29d34734ca07c52cdbbdc06",
+      "research/preparation/worker.cjs": "5c35fbb35027739686d07ab0249574ed563d7eef1f82117323a618e6f464b92b"
+    }
+  },
+  "canonicalFeatureHash": "e33d77e76ac53f0511664528ef87bc145f497c4380db4f20c055859bc9877e5d",
+  "canonicalPairHash": "9a5184f61bba731ff90f946c331f2de5e2c7aa69325b7a537e9775c6e497b575",
+  "counts": {
+    "decisions": 22497,
+    "firstEligible": 6779,
+    "includedV": 964,
+    "includedC": 5707,
+    "tailExcluded": 108,
+    "pairs": 99,
+    "unmatchedV": 865,
+    "matchRate": 0.10269709543568464
+  },
+  "computeWallSeconds": 339.875560576,
+  "maximumObservedProcessRssBytes": 706822144,
+  "scope": "One outcome-blind all-zone feasibility design; no outcomes/inference/retuning/live changes",
+  "verification": {
+    "npmTestPassed": true,
+    "focusedFixtures": 13,
+    "allRecordsVerified": 6779,
+    "allPairsVerified": 99,
+    "matchingReplayHashIdentical": true,
+    "independentContinuousSmdChecks": 96,
+    "realFullFeatureRuns": 1,
+    "originalAppCliAuditContractDataAndHistoricalRecordsUnchanged": true
+  },
+  "artifacts": {
+    "REPORT.md": {
+      "sha256": "1975135e4984b6dba9de6cc65aae8a722cf8da3fd42f0e563232d2c622bd2370",
+      "bytes": 11827
+    },
+    "benchmark.json": {
+      "sha256": "53097565d5792f128ff8a614faecfd87cb8d9d33c5ef9556367469717a8e6516",
+      "bytes": 4283
+    },
+    "findings.json": {
+      "sha256": "1040012c029113517bdcd6fe8cafe597a651cfa29be04e7f6fa058791b7fa679",
+      "bytes": 213312
+    },
+    "fixtures.log": {
+      "sha256": "822478f024c836c18be48a522d1891a17f2b7e299d46fcecf9fb2615f5e2eaf2",
+      "bytes": 1617
+    },
+    "initial-uncached-benchmark.json": {
+      "sha256": "467d7c8814e5860d24b5afb44ff74b910fe4655ee275d2afa0b07f385eb28bfd",
+      "bytes": 2842
+    },
+    "initial-uncached-predeclaration.json": {
+      "sha256": "6d56854e6d76082f72ccd3f5cf1bb290663633fde66fda321678e34adaa08011",
+      "bytes": 268
+    },
+    "matched-balance-crosscheck.json": {
+      "sha256": "10d51dcddfd10c2eb9f9b607608cb0fdeb3e42d35976ddb2aa8c247684d21214",
+      "bytes": 324
+    },
+    "npm-test.log": {
+      "sha256": "3ac83878f78b6c18886e680cc7b137e5d43785a60a4e9d5bd0ccdf5f231e2be7",
+      "bytes": 15326
+    },
+    "pair-day-spans.json": {
+      "sha256": "94fd2d823ea1c36c717681d5b9a75342b514ddae9f6ca511713199c435406ecb",
+      "bytes": 158210
+    },
+    "preparation-manifest.json": {
+      "sha256": "afba21b26622263dfb014bed7b32f8d7bfcaf1c8acfe210cb1954582b6a90631",
+      "bytes": 326
+    },
+    "preservation-and-validation.json": {
+      "sha256": "a1ce6ac309513d534bfa9ad53b5e7627a59153d370e9250720d7188d5393a875",
+      "bytes": 2990
+    },
+    "record-verification.json": {
+      "sha256": "d2c81e0434fbf3eaa384c5df331af07e7b345b4bcf77d225b3401521230662ff",
+      "bytes": 532
+    },
+    "result.json": {
+      "sha256": "bc79e296e5464a6621418299386fe3734fd9c90cc2c62788a7a641402d481c1f",
+      "bytes": 4526
+    },
+    "run.log": {
+      "sha256": "6102c6bf6ac9502662ebebcf318e8afacb1f514b6a254a7e333dc7f5fd3f72e8",
+      "bytes": 9447
+    },
+    "runtime.json": {
+      "sha256": "22f73e0ccb4b84089627d9dc9bab764500563cd099478050dda246e288ba2fb8",
+      "bytes": 2396
+    },
+    "seal.json": {
+      "sha256": "298ff4ee2840e2a3e62e97ca9fc01b2d5152c376323c79fa686a86a4e3019e7b",
+      "bytes": 1807
+    }
+  },
+  "ci": "Actual implementation/run evidence is recorded in STATUS after non-force push; final receipt under ignored .qa-results/preparation-v1/ci-verification.json",
+  "nextAction": "Independent preparation/matching/dependence and memo review, then a separate frozen outcome/inference protocol before any resolution"
+}

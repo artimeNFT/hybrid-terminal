@@ -17,7 +17,7 @@ npm run qa:browser:install
 npm run test:browser
 ```
 
-`npm test` runs the reviewed tracked-source hashes, nine deterministic app suites, the 18-case research suite, nine synthetic audit fixtures and nine calculation-contract fixtures. Browser QA runs the existing five mocked Chromium scripts with synthetic REST/WebSocket fixtures, a guard rejecting unmocked external requests, and per-context traces. Test logs, screenshots, traces and manifests go to ignored `.qa-results/`. Open a trace with `npx playwright show-trace .qa-results/browser/browser-navigation/trace-1.zip`. Neither required CI group uses public Binance, acquired datasets, browser journals, credentials or WSL-specific paths. Legacy direct script commands remain available; the npm runner supplies nonhistorical output directories.
+`npm test` runs the reviewed tracked-source hashes, nine deterministic app suites, the 18-case research suite, nine synthetic audit fixtures, nine calculation-contract fixtures and 13 preparation fixtures. Browser QA runs the existing five mocked Chromium scripts with synthetic REST/WebSocket fixtures, a guard rejecting unmocked external requests, and per-context traces. Test logs, screenshots, traces and manifests go to ignored `.qa-results/`. Open a trace with `npx playwright show-trace .qa-results/browser/browser-navigation/trace-1.zip`. Neither required CI group uses public Binance, acquired datasets, browser journals, credentials or WSL-specific paths. Legacy direct script commands remain available; the npm runner supplies nonhistorical output directories.
 
 On a minimal **Ubuntu 24.04 x64 WSL host without passwordless sudo**, use `npm run qa:browser:local` instead of `qa:browser:install`. It installs the pinned Chromium and downloads/extracts the three missing Ubuntu NSS/NSPR/ALSA packages under ignored `.tools/browser-libs`; the runner discovers these local libraries. Other operating systems should use Playwright's normal dependency setup. This fallback requires Ubuntu apt metadata/access but no system writes. No old `/tmp/hybrid-qa-tools` package/library path is used by the normal QA runner.
 
@@ -26,6 +26,21 @@ Git tracks source, schema, tests, required baselines, documentation, package loc
 `.github/workflows/ci.yml` uses Node 24 / standard Ubuntu 24.04, separate bounded deterministic and Chromium jobs, push/PR targeting main and manual dispatch. Action versions are pinned to verified official release SHAs. Permissions are read-only; only failure diagnostics from `.qa-results/` are uploaded, retained for three days. Required checks do not deploy, schedule collection, enable auto-merge or configure paid runners.
 
 **STATUS.md contains the only maintained task board. Every completed increment must update it.** Local test success and a local independent Python oracle are distinct from a GitHub Actions run and independent external review. Repository publication/remote run status and any remaining login action are recorded there.
+
+## Outcome-blind episode and matching preparation 1.0.0
+
+`research/preparation/protocol.json` declares the exploratory all-eligible-zone V/C preparation and **one** fixed greedy matching design. This changes the estimand from the live nearest-zone policy. The separate tool uses actual full-prefix app calculations under accepted contract 1.0.0 and never resolves outcomes or reads a next-open execution price. App/CLI/data/audit/contract remain unchanged.
+
+```sh
+# Existing local frozen data; fresh ignored output directory, no acquisition.
+node research/prepare.cjs seal --out .qa-results/preparation-v1/q3-new
+node research/prepare.cjs benchmark --dataset research/datasets/btcusdt-5m-2026-q3.json --out .qa-results/preparation-v1/q3-new
+node research/prepare.cjs run --dataset research/datasets/btcusdt-5m-2026-q3.json --out .qa-results/preparation-v1/q3-new
+node research/prepare.cjs verify --out .qa-results/preparation-v1/q3-new
+npm run test:preparation
+```
+
+Full features/pairs/day spans and runtime metadata remain ignored; tracked compact evidence is in `tests/results/preparation-v1/`. Method, symmetry/equality/exclusion order, exact matching/ties, fixed pre-match SMD denominators, missing states, resource bounds and limits: `research/preparation/README.md`. A poor match or residual imbalance is a finding; no automatic retuning or inference is performed. Next action remains independent feasibility/dependence review before a separate frozen outcome/inference protocol. Q3 is exploratory, not an untouched holdout.
 
 ## Offline calculation contract 1.0.0
 
@@ -36,7 +51,7 @@ node research/calculation-contract.cjs
 npm run test:contract
 ```
 
-These commands check the declaration/pinned sources and synthetic policy fixtures without acquired data or application bootstrap. App 0.4.3, CLI 1.0.1/schema 1, the audit and frozen data are unchanged. Contract acceptance is pending independent review; the next action is that review before a separate episode/control/holdout/cost protocol. No episodes/outcomes are generated and no live gates are changed. STATUS remains the only maintained task board.
+These commands check the declaration/pinned sources and synthetic policy fixtures without acquired data or application bootstrap. App 0.4.3, CLI 1.0.1/schema 1, the audit and frozen data are unchanged. Focused independent acceptance is recorded in STATUS; the frozen contract JSON retains its original predeclared status/identity. The separate preparation above uses this finite-origin reference without changing live gates. STATUS remains the only maintained task board.
 
 ## Offline calculation-readiness audit 1.0.0
 

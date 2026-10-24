@@ -1,0 +1,21 @@
+✔ real classification precedence, equality, reference availability and doji direction are preserved (834.217514ms)
+✔ ordinary/vector recovery symmetry, strict outside geometry and inclusive equality boundaries (1.685974ms)
+✔ first eligibility precedes tail/chronology exclusions and cannot resurrect in a later block (1.987667ms)
+✔ ATR percentile excludes t, uses empirical midrank, and calendar features use the close (0.938493ms)
+✔ memoized actual reference values equal uncached full replay and the reviewed adapter, including replay backwards (857.756729ms)
+✔ all eligible arms get decision-time plans/ranks without score/action filtering and future changes cannot affect them (255.680826ms)
+✔ one greedy attempt obeys exact strata, all calipers, no replacement and deterministic ties (2.226627ms)
+✔ unmatched reasons distinguish absent strata, time/caliper support, missing values and exhaustion (0.505536ms)
+✔ SMD keeps the pre-match denominator, flags equality at 0.1 and exposes missing/zero/insufficient states (1.098089ms)
+✔ overlap and full reserved UTC day spans use coordinates, not future prices (0.583434ms)
+✔ restart/full-prefix worker sharding reproduces canonical episodes, decisions and matching (369.119297ms)
+✔ protocol seal, reopened canonical hashes and volatile metadata stay separate; incomplete runs fail (303.417444ms)
+✔ preparation calculations run without network, browser storage, application bootstrap or backtest capabilities (134.704635ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3292.651837

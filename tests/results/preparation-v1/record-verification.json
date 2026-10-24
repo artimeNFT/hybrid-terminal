@@ -1,0 +1,11 @@
+{
+  "state": "all-records-and-pairs-verified",
+  "featureHash": "e33d77e76ac53f0511664528ef87bc145f497c4380db4f20c055859bc9877e5d",
+  "pairHash": "9a5184f61bba731ff90f946c331f2de5e2c7aa69325b7a537e9775c6e497b575",
+  "recordsChecked": 6779,
+  "pairsChecked": 99,
+  "identicalMatchingReplay": true,
+  "realFeatureCohortRuns": 1,
+  "geometryRecoveryChecksReadPastBarsOnly": true,
+  "limitation": "Full Q3 feature calculation was run once; restart/shard feature equality is covered by synthetic fixtures and exact benchmark prefixes"
+}

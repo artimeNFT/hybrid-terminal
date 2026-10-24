@@ -1,0 +1,69 @@
+{
+  "state": "complete",
+  "wallSeconds": 339.875560576,
+  "workers": [
+    {
+      "wallSeconds": 338.000590907,
+      "decisions": 11249,
+      "rssBytesObservedMax": 706822144,
+      "heapBytesObservedMax": 187078088,
+      "memoryScope": "RSS is process-wide across worker threads; heap is this worker; sampled every 100 decisions"
+    },
+    {
+      "wallSeconds": 338.90417884100003,
+      "decisions": 11248,
+      "rssBytesObservedMax": 706129920,
+      "heapBytesObservedMax": 182134248,
+      "memoryScope": "RSS is process-wide across worker threads; heap is this worker; sampled every 100 decisions"
+    }
+  ],
+  "rssBytesObservedMax": 706822144,
+  "benchmarkConservativeEstimatedSeconds": 2021.343346614003,
+  "dataIdentity": {
+    "canonicalDataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+    "producerToolVersion": "1.0.0",
+    "validatedWithCliVersion": "1.0.1",
+    "schemaVersion": 1,
+    "symbol": "BTCUSDT",
+    "timeframe": "5m",
+    "quality": {
+      "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+      "state": "complete",
+      "rowCount": 26496,
+      "uniqueTimestampCount": 26496,
+      "validUniqueRows": 26496,
+      "expectedRows": 26496,
+      "eligibleRowsAtCutoff": 26496,
+      "excludedDevelopingOrFutureRows": 0,
+      "missingRows": 0,
+      "duplicateRows": 0,
+      "conflictingTimestamps": 0,
+      "duplicates": [],
+      "gaps": [],
+      "coverage": {
+        "firstOpenTime": 1782864000000,
+        "lastOpenTime": 1790812500000,
+        "endExclusive": 1790812800000,
+        "contiguous": true
+      },
+      "issueCount": 0,
+      "issues": [],
+      "issuesTruncated": false
+    },
+    "requestedRange": {
+      "startInclusive": 1782864000000,
+      "endExclusive": 1790812800000
+    },
+    "acquisitionCutoff": 1792820581498,
+    "conversion": "Decimal strings verified/hashed before Number conversion; actual application calculations use binary Number OHLCV"
+  },
+  "calculationIdentity": {
+    "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "functionBodiesSha256": "a936482db9a7448505401aab4bca93ee47d470e9d9c145bf3af7e28278d6f8b2",
+    "bootstrapExecuted": false,
+    "backtestExtracted": false,
+    "statePolicy": "full-past-prefix-recompute",
+    "memoizeVolumeReference": true
+  },
+  "completedAt": "2026-10-24T18:40:33.358Z"
+}

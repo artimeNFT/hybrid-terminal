@@ -1,0 +1,26 @@
+{
+  "identities": {
+    "preparationVersion": "1.0.0",
+    "protocolHash": "9590a8eb84b6d731a44af6e00b119a5116fc37a3d45aa631a0c386d2217d776c",
+    "contractHash": "04d2c9dbbba6fb3d84b692c4410496f03e280dad82bb8357b44a443527b66156",
+    "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+    "pinnedSourceChecksums": {
+      "hybrid-terminal.html": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+      "research/klines.cjs": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+      "research/audit/adapter.cjs": "cd6f89222bb571c91b5f7b39f65b75bd69e2045208334f59dc85fb9ee1aa6daf",
+      "research/readiness-audit.cjs": "90f486a3b937c51dffbfc4a32fb3ebc83668b7b579fea2e0db62edcf305ca5b5",
+      "research/audit/protocol.json": "50cf2d98d57af48ad53631cc0787432fdbc453d920d8667bd4b8d972b175e9e6"
+    },
+    "preparationSourceChecksums": {
+      "research/prepare.cjs": "31075902684a50afd357b5adb70b49a88b387a259b99a88e0630c63c3d3806c7",
+      "research/preparation/protocol.json": "9590a8eb84b6d731a44af6e00b119a5116fc37a3d45aa631a0c386d2217d776c",
+      "research/preparation/calculations.cjs": "29caecfb5117dc3da2360a35030c1ea2716245d222dd8179a81cfce6c287d0aa",
+      "research/preparation/features.cjs": "423a9e693f3c20009c42672b26e5aa41bbb22f8e401bc3bd2da703e51e023e25",
+      "research/preparation/matching.cjs": "e07d9f287ec41331b947c1b53f3d761b574c9f1852215bf5d0b06b29eaadef47",
+      "research/preparation/diagnostics.cjs": "e8913f3f24c2a087ace1ea5637199aaac2a280eeb29d34734ca07c52cdbbdc06",
+      "research/preparation/worker.cjs": "5c35fbb35027739686d07ab0249574ed563d7eef1f82117323a618e6f464b92b"
+    }
+  },
+  "writtenAt": "2026-10-24T18:34:49.070Z",
+  "purpose": "Sealed before real cohort summaries; not outcome/inference approval"
+}
