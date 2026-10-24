@@ -1,55 +1,73 @@
-# Hybrid System — project status and maintained task board
+# Hybrid Terminal — current direction and task board
 
-Date: 2026-10-24, Asia/Jerusalem.
-**Application remains 0.4.3**, authoritative `hybrid-terminal.html`, byte-for-byte unchanged:
-`fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9`.
-**Independent CLI tool 1.0.1 / dataset schema 1:** `research/klines.cjs`.
-Final tool SHA-256: `50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d`.
+Updated: 2026-10-24, Asia/Jerusalem.
 
-## Start here — handoff and roadmap
+## Read this first — current decision
 
-**Purpose:** build an accessible, auditable market-context and research terminal, and test whether vector zones add information beyond comparable ordinary levels. Trading advantage remains unestablished.
+**Product objective:** a practical, readable decision-support terminal based on the Hybrid framework: show trustworthy market context, explain the current setup or WAIT, quantify planned risk/targets and preserve decisions for review. Statistical trading advantage is a separate research question; product usefulness does not depend on proving profitability.
 
-**Project:** https://github.com/artimeNFT/hybrid-terminal (private). Authoritative WSL root: `/mnt/c/users/shlom/desktop/the hybrid-terminal`, separate from VECTOR LAB. Latest completed implementation: **`f761e217c2f8a4d61e3c959c95ed1ced54625b78`**, outcome-blind preparation **1.0.0**, [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40123081412). App **0.4.3**, acquisition CLI **1.0.1 / schema 1**, readiness audit **1.0.0** and accepted calculation contract **1.0.0** remain unchanged. Focused independent code/fixture/pair review is complete and accepts the engineering preparation scope, without accepting inference comparability. Next is a bounded read-only support/composition/dependence diagnosis from existing canonical payloads; outcomes and retuning remain deferred. Git HEAD also includes subsequent evidence/documentation updates.
+**Alignment decision:** the unissued preparation-review utility prompt from the previous chat response is **superseded and deferred**. It was technically relevant to research, but it is not a prerequisite for improving the terminal. Stop extending the research-diagnostic chain by default. The single next implementation increment is a usable **0.4.4 presentation release candidate**, including only the necessary separation of frozen research source references from the evolving application. No application edits have yet been made by this alignment update.
 
-Read this section and the maintained task board first, then the specific task's source/report. README covers operation. Historical sections below preserve earlier evidence. Keep one active implementation task: the existing VS Code/WSL Codex session implements code; this conversation reviews evidence, prioritizes work and maintains shared documentation.
+**Authority:** this section, the current roadmap and the current board below supersede all older “next task” instructions inside the historical checkpoint archive. Keep one active code task in the existing VS Code/WSL Codex session; this conversation reviews and prioritizes. Preserve local changes, fetch/fast-forward only when safe, and do not restart completed work after an interrupted reply.
 
-### Roadmap sequence
+## Verified current state
 
-The maintained task board below holds detailed statuses and evidence.
+- Private repository: https://github.com/artimeNFT/hybrid-terminal. WSL root: `/mnt/c/users/shlom/desktop/the hybrid-terminal`. VECTOR LAB is separate.
+- Active app **0.4.3**, SHA-256 `fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9`; chart navigation, candle/body modes, RSI pane, previous-day levels, journal and nominal sizing delivered. Current physical usability, real midnight rollover and extended live behavior are not fully accepted.
+- CLI **1.0.1 / schema 1**, causal/history audit **1.0.0**, finite-origin calculation contract **1.0.0**, and outcome-blind preparation **1.0.0** delivered. Preparation publication `c0997dfb07f2ceae23a112ba5aa4fbef14c42ec9`, [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40123436079).
+- Frozen Q3 input: 26,496 complete BTCUSDT 5m candles; canonical hash `436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1`.
+- Preparation retained **99/964 V (10.27%)**, with conditional SMD flags and overlapping windows. Engineering scope has focused independent acceptance; comparison/inference suitability remains unresolved. No outcomes, profitability estimate or retuning.
+- Reliability/reproducibility improved. Predictive accuracy, trading advantage, exact TR_MAIN parity and equivalence between live windows and frozen research remain unestablished.
 
-| Stage | Deliverable | Position |
+## Current roadmap
+
+| Order | Deliverable | Completion rule |
 | --- | --- | --- |
-| 1. Usable terminal and reproducible work | Readable chart/navigation, honest data states, preserved journal, private Git and CI | Implemented; actual midnight/long-session/physical-touch observations remain open |
-| 2. Data and calculation reliability | Frozen validated inputs, causal checks and measured history-origin sensitivity | CLI 1.0.1 and audit 1.0.0 delivered; focused independent check recorded below |
-| 3. Calculation contract | Predeclare fixed origin, burn-in/exclusions, feature error budgets and M/W retained-state policy; separate score inputs from context | **1.0.0 reviewed as a finite-origin offline reference; episode protocol next** |
-| 4. Vector-specific pilot | Prepare deterministic episodes and comparable ordinary-zone controls; inspect counts/support/balance before freezing outcome inference | **Preparation 1.0.0 complete: 99/964 V matched; conditional balance flags remain. Independent review next; outcomes uncomputed.** |
-| 5. Evidence and trader workflow | Assess effect sizes/uncertainty, dependence, cost-adjusted net R and stability; present supported findings in a concise setup card | Queued; insufficient evidence remains inconclusive |
+| Now | App 0.4.4 presentation release candidate | Preserve calculation/strategy/journal behavior; improve the primary decision/risk hierarchy; validate current desktop and narrow-screen rendering |
+| Next | Bounded real-session acceptance | Observe actual midnight rollover and a one-hour reconnect/storage session; physical-device touch check when available; distinguish measured from still pending |
+| Later | One explicit research decision | Resume only with a concrete question, relevant population, fixed outcome/dependence/cost protocol and stopping decision; keep Q3 exploratory and preserve the first preparation result |
+| Conditional | Indicators, derivatives and closer TR_MAIN context | Add only for a named workflow/research use and verified source/configuration; not as an automatic feature backlog |
 
-Readability, data freshness and real-session reliability continue as focused tasks throughout. Preserve BTC/ETH/SOL and 5m/15m/1h/4h, English chart/controls and Hebrew panel/Help, independent palette/body controls and text/shape cues. A condition count is not a probability. Additional indicators, derivatives and new timeframe choices stay deferred until a defined use justifies separate scope.
+Research review is not a new mandatory gate before each UI improvement. A new audit must identify the concrete unresolved risk and the decision its result can change. Reuse existing successful evidence unless code changes or unresolved concerns justify new checks.
 
-### Short completion checklist
+## Single active implementation increment — 0.4.4 presentation
 
-- [x] Confirm project root, branch/HEAD and local changes; preserve unfinished work.
-- [x] Read the active task and define one bounded result.
-- [x] Reuse completed work/evidence; run checks appropriate to changes or unresolved concerns.
-- [x] Preserve app/data/journal identities unless explicitly changed by the task.
-- [x] Update this STATUS with the new preparation commit and actual CI result.
-- [x] Record the exact next unfinished action before pausing or handing off.
+1. **Necessary source separation:** the historical research adapters/contract currently hash the whole root HTML, so cosmetic changes can invalidate unrelated frozen research checks. Preserve the reviewed 0.4.3 reference and historical declarations/seals/payloads byte-for-byte in an explicit versioned research/baseline context. Use the smallest maintainable source-binding/runner arrangement that lets presentation evolve and old research remain verifiable. Binding/source changes must have honest new identities where appropriate; never rewrite an old seal or bypass a failed hash. The root `hybrid-terminal.html` remains the only active user application. No framework migration, new calculation engine, backend or new dataset run.
+2. **Primary panel:** prioritize existing feed health, last confirmed timestamp, current LONG/SHORT/WAIT and main reason, then the eligible plan and nominal sizing context. Keep provisional updates clearly separate. Do not create a valid plan for WAIT or change the legacy selection policy.
+3. **Risk display:** alongside existing price/%/gross RR, show stop and target distances in actual decision-time ATR and modeled round-trip cost in R. Use the existing 0.1% entry-notional round-trip assumption, explicitly labeled as an assumption rather than verified account fees. CostR = 0.001 * decisionClose / abs(decisionClose-stop). Missing/zero/nonfinite inputs remain unavailable. This is display context, not an execution/sizing/strategy change.
+4. **Reduce density:** keep critical chart navigation and Candles/Body readily accessible; group secondary display controls and make detailed backtest/recovery/diagnostics expandable without removing functionality. Preserve preference restoration and journal records. Keep chart/header/controls English, panel/Help Hebrew, high-contrast and PVSRA modes, independent body selection and non-color cues.
+5. **Verify the result:** compare unchanged calculation/decision behavior against frozen 0.4.3 using relevant fixtures, verify old research under its explicit frozen reference, inspect actual desktop and narrow-screen browser screenshots, and run appropriate required CI. Do not reacquire or regenerate Q3 audit/preparation cohorts for a presentation-only change. Do not claim physical-device or long-session acceptance from browser emulation.
 
-### Resume after a limit or interrupted reply
+**User acceptance:** the main view should clearly answer: is the feed current; which market/timeframe and confirmed time; what is the current setup or WAIT reason; what are planned risk/targets/cost assumptions; which detail is measured/provisional/unvalidated; and where can the decision record be exported. No score-to-probability conversion or new empirical hit-rate label.
 
-An incomplete reply does not establish whether edits, tests or a push completed. Inspect `git status`, branch/HEAD, recent commits, uncommitted changes and relevant test/CI evidence before repeating work. At meaningful pause points, record completed edits/checks, remaining work and the next command; preserve coherent partial work with a local checkpoint where appropriate.
+## Current task board
 
-When remote documentation has advanced, fetch and fast-forward before editing if the local tree is clean. If it contains changes, inspect and preserve them; never reset or discard work to make a pull succeed.
+| Priority | Task | State / next action |
+| --- | --- | --- |
+| P0 | Product alignment and work continuity | Current instructions are here; old next-task text below is historical. One active implementation increment |
+| P1 | 0.4.4 presentation release candidate | Next code task: frozen-source separation plus the bounded UI/risk-context work above |
+| P1 | Actual midnight / one-hour live / physical touch | Pending measured acceptance; use existing observation tools and record what actually occurred |
+| P2 | Vector-versus-ordinary research | Preparation 1.0.0 preserved; outcome inference and the extra support-diagnostic utility deferred, not silently completed |
+| P2 | CLI credential storage | Queued follow-up; current plaintext CLI credential storage is recorded, values never included in chat/repository |
+| P3 | MACD, OI/funding, extra sessions/ADR and other additions | Deferred until a concrete use and source definition justify one bounded increment |
 
-Portable instruction for an existing or new coding chat:
+## Short completion and handoff checklist
 
-> Continue Hybrid Terminal from https://github.com/artimeNFT/hybrid-terminal. Read STATUS.md's start-here section and task board, then inspect the local root, git status, branch, HEAD, recent commits and uncommitted changes. Identify the last completed checkpoint and resume only the recorded unfinished task. Preserve existing work; do not restart completed implementation or repeat successful checks without a relevant change or unresolved concern. If no implementation task is active, identify the next bounded task before starting another increment.
+- [ ] Inspect project root, branch/HEAD, recent commits and local changes; preserve unfinished work.
+- [ ] Identify the one current result and its acceptance criteria; do not obey superseded historical next-task instructions.
+- [ ] Preserve frozen research/data/journal provenance and verify behavior relevant to the change.
+- [ ] Inspect the user-facing result, not only test counts; record remaining observation limits.
+- [ ] Publish the scoped result, verify actual CI, and update this current board.
+- [ ] Send a short summary, commit and Actions URL; attach only current screenshots or local evidence unavailable in GitHub.
 
-### Review handoff
+A limit or interrupted reply is not evidence that implementation failed. Inspect existing work before repeating it. No routine re-upload of tracked source/STATUS is required. GitHub cannot expose ignored local datasets, full generated outputs, journals or uncommitted changes.
 
-Normally send a short completion summary, commit SHA and Actions URL. Tracked files can be read from authorized GitHub access. Attach screenshots, relevant errors, external-model feedback or local/uncommitted files when unavailable there. Acquired datasets and full local audit output are intentionally ignored and cannot be read through GitHub. Request specific evidence when needed. This reduces duplicate handoffs; numerical quota savings are not guaranteed.
+## Historical checkpoint archive — read-only
+
+The following entries preserve evidence and previous decisions. Their “next” instructions and historical task tables are superseded by the current sections above. They are not additional active tasks.
+
+<details>
+<summary>Historical implementation and review checkpoints</summary>
 
 ### Independent check — 2026-10-24, Asia/Jerusalem
 
@@ -287,3 +305,6 @@ Use end `2026-07-02T00:00:00Z` and a fresh name to reproduce the one-day acquisi
 This Q3 sample validates the engineering pipeline, not trading advantage or adequate market-regime coverage. Real rate-limit bans, network failure/cancellation and incomplete upstream feeds were exercised with deterministic fixtures, not induced against the public API. The checksum does not authenticate an independently rehashed payload or volatile acquisition metadata. Large archives, broader venue coverage and strategy evaluation remain future work. Checkpoint persistence is page-based; a hard crash may leave a lock requiring manual process verification before removal. No new actual UTC-midnight, one-hour session or physical-device observation occurred; those earlier app checks remain pending.
 
 Stop after this data-foundation increment.
+
+
+</details>
