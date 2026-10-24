@@ -1,0 +1,17 @@
+✔ contract pins reviewed sources without reading acquired data or bootstrapping the app (53.13812ms)
+✔ 3999 is excluded and the full-origin 4000th candle is the first prepared decision (512.586673ms)
+✔ a warmed trailing window cannot impersonate fixed-origin history or retained parser state (320.272905ms)
+✔ UTC end coordinates allow the last closed candle but reject future or inconsistent coordinates (157.552423ms)
+✔ actual flat-RSI, zero-volume and zero-ATR inputs remain excluded after preparation (710.875623ms)
+✔ a valid WAIT is retained and readiness does not mutate decisions or add context score votes (174.11581ms)
+✔ exact budgets detect price, RSI, RR and state changes smaller than audit reporting tolerances (145.156432ms)
+✔ full-origin restart reproduces M/W with pivots older than a recent-event reporting window (118.653881ms)
+✔ future append parity is exact and cannot be mixed with changed-time comparisons (426.036448ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2977.734989

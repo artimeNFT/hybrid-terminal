@@ -4,9 +4,10 @@ const root=path.resolve(__dirname,'..'),group=process.argv[2],suites={
  app:['regression','ui-smoke','live-chart','readability-reliability','history','increment','integrity','day-context','navigation'],
  research:['research-data'],
  audit:['readiness-audit'],
+ contract:['calculation-contract'],
  browser:['browser-smoke','browser-increment','browser-integrity','browser-day-context','browser-navigation']
 }[group];
-if(!suites){console.error('Usage: node scripts/run-qa.cjs app|research|audit|browser');process.exit(1)}
+if(!suites){console.error('Usage: node scripts/run-qa.cjs app|research|audit|contract|browser');process.exit(1)}
 const output=path.join(root,'.qa-results',group);fs.mkdirSync(output,{recursive:true});
 const manifest={group,node:process.version,startedAt:new Date().toISOString(),scope:'Synthetic/mocked QA only; no acquired datasets or public market access',checks:[]};
 (async()=>{
@@ -15,7 +16,7 @@ const manifest={group,node:process.version,startedAt:new Date().toISOString(),sc
   delete env.NODE_PATH;
   // Rootless Ubuntu fallback is project-local and optional; normal CI uses system dependencies.
   if(group==='browser'){delete env.LD_LIBRARY_PATH;const local=path.join(root,'.tools/browser-libs/root/usr/lib/x86_64-linux-gnu');if(fs.existsSync(local))env.LD_LIBRARY_PATH=local;}
-  const args=(group==='research'||group==='audit')?['--test','tests/'+suite+'.cjs']:group==='browser'?['--require',path.join(__dirname,'mock-browser-hooks.cjs'),'tests/'+suite+'.cjs']:['tests/'+suite+'.cjs'];
+  const args=(group==='research'||group==='audit'||group==='contract')?['--test','tests/'+suite+'.cjs']:group==='browser'?['--require',path.join(__dirname,'mock-browser-hooks.cjs'),'tests/'+suite+'.cjs']:['tests/'+suite+'.cjs'];
   console.log('\nRunning '+suite);const log=fs.createWriteStream(path.join(output,suite+'.log'));
   const result=await new Promise(resolve=>{const child=spawn(process.execPath,args,{cwd:root,env,stdio:['ignore','pipe','pipe'],timeout:group==='browser'?180000:120000,killSignal:'SIGTERM'});
    child.stdout.on('data',data=>{process.stdout.write(data);log.write(data)});child.stderr.on('data',data=>{process.stderr.write(data);log.write(data)});

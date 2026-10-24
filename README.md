@@ -17,7 +17,7 @@ npm run qa:browser:install
 npm run test:browser
 ```
 
-`npm test` runs the reviewed tracked-source hashes, nine deterministic app suites, the 18-case research suite and nine synthetic audit fixtures. Browser QA runs the existing five mocked Chromium scripts with synthetic REST/WebSocket fixtures, a guard rejecting unmocked external requests, and per-context traces. Test logs, screenshots, traces and manifests go to ignored `.qa-results/`. Open a trace with `npx playwright show-trace .qa-results/browser/browser-navigation/trace-1.zip`. Neither required CI group uses public Binance, acquired datasets, browser journals, credentials or WSL-specific paths. Legacy direct script commands remain available; the npm runner supplies nonhistorical output directories.
+`npm test` runs the reviewed tracked-source hashes, nine deterministic app suites, the 18-case research suite, nine synthetic audit fixtures and nine calculation-contract fixtures. Browser QA runs the existing five mocked Chromium scripts with synthetic REST/WebSocket fixtures, a guard rejecting unmocked external requests, and per-context traces. Test logs, screenshots, traces and manifests go to ignored `.qa-results/`. Open a trace with `npx playwright show-trace .qa-results/browser/browser-navigation/trace-1.zip`. Neither required CI group uses public Binance, acquired datasets, browser journals, credentials or WSL-specific paths. Legacy direct script commands remain available; the npm runner supplies nonhistorical output directories.
 
 On a minimal **Ubuntu 24.04 x64 WSL host without passwordless sudo**, use `npm run qa:browser:local` instead of `qa:browser:install`. It installs the pinned Chromium and downloads/extracts the three missing Ubuntu NSS/NSPR/ALSA packages under ignored `.tools/browser-libs`; the runner discovers these local libraries. Other operating systems should use Playwright's normal dependency setup. This fallback requires Ubuntu apt metadata/access but no system writes. No old `/tmp/hybrid-qa-tools` package/library path is used by the normal QA runner.
 
@@ -26,6 +26,17 @@ Git tracks source, schema, tests, required baselines, documentation, package loc
 `.github/workflows/ci.yml` uses Node 24 / standard Ubuntu 24.04, separate bounded deterministic and Chromium jobs, push/PR targeting main and manual dispatch. Action versions are pinned to verified official release SHAs. Permissions are read-only; only failure diagnostics from `.qa-results/` are uploaded, retained for three days. Required checks do not deploy, schedule collection, enable auto-merge or configure paid runners.
 
 **STATUS.md contains the only maintained task board. Every completed increment must update it.** Local test success and a local independent Python oracle are distinct from a GitHub Actions run and independent external review. Repository publication/remote run status and any remaining login action are recorded there.
+
+## Offline calculation contract 1.0.0
+
+The next bounded contract is now predeclared in `research/contract/v1.json`, with assumptions and exclusions in `research/contract/README.md`. It requires full past-prefix replay from the frozen July 1 origin, excludes the first 3999 candles, preserves actual validity/undefined states, requires actual UTC day-open coverage, and allows zero same-origin replay differences for each feature/state/decision. The 4000-bar preparation rule is not a convergence claim. EMA800 remains context-only. M/W resumption recomputes all pivots from the original prefix; recent-event lists and rolling caches are not accepted retained state.
+
+```sh
+node research/calculation-contract.cjs
+npm run test:contract
+```
+
+These commands check the declaration/pinned sources and synthetic policy fixtures without acquired data or application bootstrap. App 0.4.3, CLI 1.0.1/schema 1, the audit and frozen data are unchanged. Contract acceptance is pending independent review; the next action is that review before a separate episode/control/holdout/cost protocol. No episodes/outcomes are generated and no live gates are changed. STATUS remains the only maintained task board.
 
 ## Offline calculation-readiness audit 1.0.0
 
@@ -43,7 +54,7 @@ The real-data command first applies CLI 1.0.1 schema/hash/quality validation to 
 
 Observed at the 24 fixed points: 60/100-bar windows changed component votes at 6/2 points, with no action-side/eligibility flips; plan prices changed at five points in each short window. The 300-bar plan flag is only tiny RR drift. At 1000+ bars, sampled score/plan/target/MW results matched the finite longest reference, while EMA800 still drifted even at 4000 (max 0.053216 price / 0.001574 reference ATR). **EMA800 is context-only.** Five hundred same-origin future-append checks had zero differences. The nine synthetic audit fixtures include an actual old-target LONG/WAIT origin disagreement and flat-tail RSI availability drift, so neither the real sample's side agreement nor a 1000-bar core-input candidate is a universal guarantee.
 
-See `tests/results/calculation-readiness-v1/REPORT.md`, `findings.json` and `research/audit/README.md` for per-feature availability/error units, timestamp-aligned examples, source/data identities, projection assumptions and provisional warm-up guidance. The longest history is a reference, not absolute convergence. Next bounded step is independent adapter/protocol review and a predeclared stable-origin/burn-in/error-budget/state contract; episode generation and matched-control work remain queued. `npm test` and the deterministic Actions job include the synthetic audit group.
+See `tests/results/calculation-readiness-v1/REPORT.md`, `findings.json` and `research/audit/README.md` for per-feature availability/error units, timestamp-aligned examples, source/data identities, projection assumptions and provisional warm-up guidance. The longest history is a reference, not absolute convergence. The focused independent adapter/protocol check is recorded in STATUS; the subsequent contract above is predeclared and awaits its own review. Episode generation and matched-control work remain queued. `npm test` and the deterministic Actions job include the synthetic audit group.
 
 ## Frozen research data — tool 1.0.1 / schema 1
 

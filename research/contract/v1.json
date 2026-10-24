@@ -1,0 +1,82 @@
+{
+  "kind": "hybrid-offline-calculation-contract",
+  "version": "1.0.0",
+  "status": "predeclared-awaiting-independent-review",
+  "scope": "BTCUSDT 5m Q3 offline calculation preparation only; no episodes, outcomes or live-policy changes",
+  "basedOnImplementationCommit": "ffa1d61a45376dd949b3bf9916e18e5dc160f41b",
+  "reviewCheckpoint": "6c3210bfe55ac53676f97e204339e2ec8e8bf5ab",
+  "sourceChecksums": {
+    "hybrid-terminal.html": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "research/klines.cjs": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+    "research/audit/adapter.cjs": "cd6f89222bb571c91b5f7b39f65b75bd69e2045208334f59dc85fb9ee1aa6daf",
+    "research/readiness-audit.cjs": "90f486a3b937c51dffbfc4a32fb3ebc83668b7b579fea2e0db62edcf305ca5b5",
+    "research/audit/protocol.json": "50cf2d98d57af48ad53631cc0787432fdbc453d920d8667bd4b8d972b175e9e6"
+  },
+  "identities": {
+    "applicationVersion": "0.4.3",
+    "cliVersion": "1.0.1",
+    "schemaVersion": 1,
+    "auditVersion": "1.0.0",
+    "ruleVersion": "hybrid-v2-validity-closed",
+    "executionVersion": "ohlc-market-stop-v2-gap-open",
+    "rsiPolicy": "wilder14-local-undefined-zero-change-v1",
+    "minimumScore": 3,
+    "nodeMajor": 24
+  },
+  "data": {
+    "source": "Binance Spot",
+    "symbol": "BTCUSDT",
+    "timeframe": "5m",
+    "stepMs": 300000,
+    "originInclusive": "2026-07-01T00:00:00Z",
+    "endExclusive": "2026-10-01T00:00:00Z",
+    "canonicalHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+    "expectedRows": 26496,
+    "validation": "CLI 1.0.1 verify complete coverage and canonical identity before Number conversion; no reacquisition, rewrite, gaps, interpolation or provisional bars"
+  },
+  "preparation": {
+    "minimumPastBarsIncludingDecision": 4000,
+    "excludedInitialBars": 3999,
+    "firstPermittedDecisionClose": "2026-07-14T21:20:00Z",
+    "requireActualDecisionValidity": true,
+    "requireUtcDayOpenCoverage": true,
+    "validWaitIsRetained": true,
+    "missingInputsAreNotWait": true,
+    "interpretation": "Conservative preparation exclusion inherited from audit reference minimum; not universal convergence, a strategy gate or an outcome-selected cutoff"
+  },
+  "state": {
+    "mode": "full-past-prefix-recompute",
+    "originMayMove": false,
+    "rollingReseedAllowed": false,
+    "serializedIndicatorOrMwStateAllowed": false,
+    "resume": "Revalidate the identical frozen dataset/source/contract identities; replay the entire original prefix through t. A cursor is only a hint, not calculation state.",
+    "mw": "Recompute all alternating pivots and confirmations from the fixed origin, including the three right-confirmation bars known by t. Recent 30-bar reporting and the 15-bar vote horizon are not sufficient retained parser state.",
+    "targets": "Use full-prefix classification/recovery state; classify each potential target with its own 10 preceding bars. Do not truncate to the 300-bar target horizon.",
+    "maximumInputBars": 30000,
+    "resourceLimit": "Fail rather than truncate/reseed if the pinned adapter resource limit is exceeded"
+  },
+  "features": {
+    "ema50": {"role": "score", "minimumBars": 50, "unit": "price", "maximumReplayDelta": 0},
+    "atr14": {"role": "score", "seedBars": 14, "unit": "price", "maximumReplayDelta": 0},
+    "rsi14": {"role": "score", "minimumBars": 15, "unit": "RSI-points", "maximumReplayDelta": 0},
+    "ema13": {"role": "context", "minimumBars": 13, "unit": "price", "maximumReplayDelta": 0},
+    "ema200": {"role": "context", "minimumBars": 200, "unit": "price", "maximumReplayDelta": 0},
+    "ema800": {"role": "context", "minimumBars": 800, "unit": "price", "maximumReplayDelta": 0},
+    "vwap": {"role": "context", "unit": "price", "maximumReplayDelta": 0, "coverage": "actual candle-open UTC day"},
+    "dayOpen": {"role": "context", "unit": "price", "maximumReplayDelta": 0, "coverage": "actual candle-open UTC day"}
+  },
+  "replayBudgets": {
+    "comparison": "exact-decision-time-projection-at-identical-origin-and-timestamp",
+    "maximumPriceDelta": 0,
+    "maximumReferenceAtrNormalizedPriceDelta": 0,
+    "maximumRsiPointDelta": 0,
+    "maximumRiskRewardDelta": 0,
+    "maximumAvailabilityOrStateDisagreements": 0,
+    "maximumVoteSelectionEligibilityOrPlanDisagreements": 0,
+    "fields": ["metrics", "volume", "dayCoverage", "zones", "mw", "stoppingVolume", "decision"],
+    "crossOriginComparisons": "diagnostic-only-outside-contract; no approximation budget or rolling-window substitution authorized",
+    "interpretation": "Reproducibility relative to the pinned finite-origin app calculation, not absolute market-price accuracy or convergence. Audit report tolerances never relax these budgets."
+  },
+  "exclusions": ["initial-preparation", "wrong-origin", "coordinate-mismatch", "outside-frozen-range", "state-policy-not-declared", "unsupported-state-policy", "invalid-score-inputs", "partial-UTC-day"],
+  "nextAction": "Independently review this contract and its focused policy checks before predeclaring a separate episode/control/holdout/cost protocol; do not generate episodes in this increment"
+}

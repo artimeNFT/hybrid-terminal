@@ -10,7 +10,7 @@ Final tool SHA-256: `50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287
 
 **Purpose:** build an accessible, auditable market-context and research terminal, and test whether vector zones add information beyond comparable ordinary levels. Trading advantage remains unestablished.
 
-**Project:** https://github.com/artimeNFT/hybrid-terminal (private). Authoritative WSL root: `/mnt/c/users/shlom/desktop/the hybrid-terminal`, separate from VECTOR LAB. Current implementation checkpoint: `ffa1d61a45376dd949b3bf9916e18e5dc160f41b`; app **0.4.3**, acquisition CLI **1.0.1 / schema 1**, readiness audit **1.0.0**. Git HEAD also includes subsequent documentation updates.
+**Project:** https://github.com/artimeNFT/hybrid-terminal (private). Authoritative WSL root: `/mnt/c/users/shlom/desktop/the hybrid-terminal`, separate from VECTOR LAB. Completed audit implementation checkpoint: `ffa1d61a45376dd949b3bf9916e18e5dc160f41b`; app **0.4.3**, acquisition CLI **1.0.1 / schema 1**, readiness audit **1.0.0**. The subsequent offline calculation contract **1.0.0** is predeclared below; its acceptance awaits independent review. Git HEAD includes the latest contract/documentation checkpoint.
 
 Read this section and the maintained task board first, then the specific task's source/report. README covers operation. Historical sections below preserve earlier evidence. Keep one active implementation task: the existing VS Code/WSL Codex session implements code; this conversation reviews evidence, prioritizes work and maintains shared documentation.
 
@@ -22,7 +22,7 @@ The maintained task board below holds detailed statuses and evidence.
 | --- | --- | --- |
 | 1. Usable terminal and reproducible work | Readable chart/navigation, honest data states, preserved journal, private Git and CI | Implemented; actual midnight/long-session/physical-touch observations remain open |
 | 2. Data and calculation reliability | Frozen validated inputs, causal checks and measured history-origin sensitivity | CLI 1.0.1 and audit 1.0.0 delivered; focused independent check recorded below |
-| 3. Calculation contract | Predeclare fixed origin, burn-in/exclusions, feature error budgets and M/W retained-state policy; separate score inputs from context | **Next bounded task** |
+| 3. Calculation contract | Predeclare fixed origin, burn-in/exclusions, feature error budgets and M/W retained-state policy; separate score inputs from context | **1.0.0 predeclared; independent acceptance review next** |
 | 4. Vector-specific pilot | Define deterministic episodes, comparable ordinary-zone controls, event ordering, horizon/censoring, untouched chronological holdout and costs before evaluating outcomes | Queued after the calculation contract |
 | 5. Evidence and trader workflow | Assess effect sizes/uncertainty, dependence, cost-adjusted net R and stability; present supported findings in a concise setup card | Queued; insufficient evidence remains inconclusive |
 
@@ -30,12 +30,12 @@ Readability, data freshness and real-session reliability continue as focused tas
 
 ### Short completion checklist
 
-- [ ] Confirm project root, branch/HEAD and local changes; preserve unfinished work.
-- [ ] Read the active task and define one bounded result.
-- [ ] Reuse completed work/evidence; run checks appropriate to changes or unresolved concerns.
-- [ ] Preserve app/data/journal identities unless explicitly changed by the task.
+- [x] Confirm project root, branch/HEAD and local changes; preserve unfinished work.
+- [x] Read the active task and define one bounded result.
+- [x] Reuse completed work/evidence; run checks appropriate to changes or unresolved concerns.
+- [x] Preserve app/data/journal identities unless explicitly changed by the task.
 - [ ] Update this STATUS with changes, checks, limitations, commit and actual CI result.
-- [ ] Record the exact next unfinished action before pausing or handing off.
+- [x] Record the exact next unfinished action before pausing or handing off.
 
 ### Resume after a limit or interrupted reply
 
@@ -59,6 +59,18 @@ The report records 24 timestamps, 144 origin comparisons and 500 future-append c
 
 No code task is active at this documentation checkpoint. **Next:** predeclare the calculation-origin/burn-in/error-budget/state contract; episode generation remains queued.
 
+### Resumed continuation — calculation contract 1.0.0
+
+Resumed in the authoritative WSL root on clean `main` at `ffa1d61`, fetched origin and fast-forwarded only to `6c3210bfe55ac53676f97e204339e2ec8e8bf5ab`. No unfinished local changes or applicable AGENTS.md were present. The audit implementation and independent check above were already complete; neither was rebuilt or rerun. The single bounded task now delivered is the offline contract declaration and focused policy checks. No episode generation or performance evaluation is active.
+
+**Declaration:** `research/contract/v1.json`, explanations in `research/contract/README.md`, checker `research/calculation-contract.cjs`. Status is **predeclared, awaiting independent acceptance**, not a new live policy. Fixed July 1 origin; only complete past prefixes from the pinned Q3 identity. Initial 3999 decision timestamps excluded; the 4000th candle closes at `2026-07-14T21:20:00Z`. Preparation bars/events remain calculation inputs. Preserve actual validity/undefined states and valid WAIT; require actual candle-open UTC coverage. The preparation cutoff is not a universal convergence claim.
+
+**Error/state contract:** zero same-origin replay difference separately for each numerical feature, availability/context state, target/event, component vote, side/eligibility and plan. RSI units are points, RR dimensionless, EMA800 context-only. Different-origin approximations have no approved substitution budget. Resume by revalidating source/data/contract identities and recomputing the full original prefix; no serialized M/W/indicator state or rolling cache accepted. A recent M/W reporting list cannot reconstruct older alternating pivots. Helpers consume trusted adapter snapshots; they do not authenticate fabricated snapshots or implement an episode builder.
+
+**Checks actually performed:** all nine new synthetic contract fixtures passed via `npm run test:contract`, including preparation/UTC coordinate boundaries, warmed wrong-origin rejection, real flat-RSI/zero-volume/zero-ATR cases, valid WAIT retention, exact differences below report tolerances, older-pivot M/W dependence and full-prefix restart/future parity. The declaration command verified pinned source hashes without reading acquired data or executing application bootstrap. Git/blob and historical dataset-byte checks confirm app, CLI/schema, original audit/protocol/evidence, datasets/checkpoints and manifests unchanged. Local checks intentionally did not repeat the completed Q3 audit or unchanged app/research/browser suites. Required CI now adds the compact contract suite; remote results will be recorded before delivery. Evidence: `tests/results/calculation-contract-v1/` and separate `qa/calculation-contract-v1-sha256.json`.
+
+**Exact next unfinished action:** independently review `research/contract/v1.json`, `research/contract/README.md` and `tests/calculation-contract.cjs`, particularly the finite-origin definition, 4000-bar exclusion and full-prefix M/W replay choice. After acceptance, separately predeclare the episode/control/ordering/horizon-censoring/chronological-holdout/cost protocol before generating outcomes. Broader data review and actual midnight/long-session/physical-touch observations remain pending. No further implementation task is active once publication is verified.
+
 ## Maintained task board
 
 This is the project's **single task board**. Keep one active implementation task. Every completed increment must update its status, next action and evidence/limitations here; do not create a competing roadmap.
@@ -70,8 +82,9 @@ This is the project's **single task board**. Keep one active implementation task
 | P0 | External timeframe-validation finding | **Resolved — CLI 1.0.1 / schema 1; 18 mocked cases passing** | Retain strict validation and legacy compatibility; episode work stays queued | Reviewed commit `c7dbee4e463ac9bc28dc164f807fda3efc6fcb28`; `tests/results/research-cli-1.0.1/`; [main CI](https://github.com/artimeNFT/hybrid-terminal/actions/workflows/ci.yml?query=branch%3Amain) |
 | P0 | Git / private GitHub / reproducible CI | **Implemented — private repository published; actual CI green** | Maintain the scoped checks and single board on future authorized increments | [Successful GitHub run](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40095837948); `tests/results/ci-publication/` |
 | P1 | CLI credential storage | Follow-up queued — plaintext CLI configuration, file mode `0600` | Migrate to an OS-backed credential store when available; keep secrets out of repository/chat | Publication receipt records storage type only; no credential values are displayed or committed |
-| P0 | Offline calculation-readiness audit | **Implemented — audit 1.0.0; focused independent review and nine-fixture rerun completed** | Predeclare stable-origin/burn-in/error-budget and M/W carry-state contract before episodes | `tests/results/calculation-readiness-v1/REPORT.md`, `findings.json`; real sample is finite, not performance or absolute-convergence evidence |
-| P2 | Episode definitions and matched-control pilot | Queued — origin-sensitivity audit completed separately | Settle/review the calculation-origin contract first; define episodes/controls in a later authorized increment | Readiness report gives assumptions/limits, not trading outcomes; no generation started |
+| P0 | Offline calculation-readiness audit | **Implemented — audit 1.0.0; focused independent review and nine-fixture rerun completed** | Preserve evidence; subsequent contract is predeclared separately | `tests/results/calculation-readiness-v1/REPORT.md`, `findings.json`; real sample is finite, not performance or absolute-convergence evidence |
+| P0 | Offline calculation contract | **1.0.0 predeclared — nine focused fixtures passed; acceptance review pending** | Independently review `research/contract/v1.json` and focused policy checks; preserve fixed origin until separately accepted changes | `tests/results/calculation-contract-v1/`; no rolling-window convergence or trading-performance claim |
+| P2 | Episode definitions and matched-control pilot | Queued — calculation contract predeclared, acceptance pending | After contract acceptance, predeclare a separate episode/control/ordering/horizon/holdout/cost protocol before outcomes | No generation started; contract preparation does not establish trading advantage |
 | P2 | Actual UTC-midnight rollover / one-hour reconnect-storage / physical touch check | Pending observations | Run the bounded observations in their real windows; use a physical device for touch | README bounded-observation commands; `tests/browser-observe-context.cjs`; deterministic/emulated results do not complete these observations |
 | P3 | Additional indicators and derivatives/context features | Deferred | Resolve source/configuration/parity requirements in a separate increment | README follow-up requirements; no approximations or score changes authorized here |
 
