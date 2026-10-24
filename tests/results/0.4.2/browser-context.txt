@@ -1,0 +1,3 @@
+PASS labels/layout desktop-collision [{"text":"PDH/PDL/PP/R1/S1 · inspector","names":["PDH","PDL","PP","R1","S1"],"x":825.42236328125,"y":264.93797933736204,"width":194.57763671875,"height":16,"validFrom":1792627200000}]
+PASS labels/layout phone-collision [{"text":"Levels ×5","names":["PDH","PDL","PP","R1","S1"],"x":229.88134765625,"y":83.88104779979345,"width":70.11865234375,"height":16,"validFrom":1792627200000}]
+PASS: real Chromium/Canvas pixel changes, independent shared-cache layers, deliberately colliding five levels with full-precision inspector, actual pan/zoom/drag/crosshair/End/history, frozen confirmed context/decisions/journal, desktop/390/430 layouts, Help and preference restoration. Feed/candidates are synthetic.

@@ -1,0 +1,5 @@
+PASS: all three palettes meet >=3:1 against modeled chart backgrounds (minimum 5.05:1); default bodies are filled, own-bar direction is stable across volume classes, legacy settings migrate, display choices preserve decisions, and chart/header text is English.
+PASS: delayed/stale and offline feeds are visibly identified; returning to a stale tab resynchronizes; a hanging REST request reaches an explicit timeout error.
+PASS: journal captures closed decisions only, deduplicates, survives reload, exports, preserves a prior conflicting decision, reports unavailable storage, protects malformed stored data, and enforces explicit 1000-record retention.
+PASS: an offline confirmed setup cannot emit a notification; invalid account/risk inputs do not produce a position size.
+Scope: synthetic data and mocked DOM/network; contrast tests are not a claim of full WCAG conformance or human color-perception validation.

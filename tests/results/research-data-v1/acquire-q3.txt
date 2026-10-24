@@ -1,0 +1,52 @@
+checkpoint: page 1, 1000 rows, through 2026-07-04T11:20:00.000Z
+checkpoint: page 2, 2000 rows, through 2026-07-07T22:40:00.000Z
+checkpoint: page 3, 3000 rows, through 2026-07-11T10:00:00.000Z
+checkpoint: page 4, 4000 rows, through 2026-07-14T21:20:00.000Z
+checkpoint: page 5, 5000 rows, through 2026-07-18T08:40:00.000Z
+checkpoint: page 6, 6000 rows, through 2026-07-21T20:00:00.000Z
+checkpoint: page 7, 7000 rows, through 2026-07-25T07:20:00.000Z
+checkpoint: page 8, 8000 rows, through 2026-07-28T18:40:00.000Z
+checkpoint: page 9, 9000 rows, through 2026-08-01T06:00:00.000Z
+checkpoint: page 10, 10000 rows, through 2026-08-04T17:20:00.000Z
+checkpoint: page 11, 11000 rows, through 2026-08-08T04:40:00.000Z
+checkpoint: page 12, 12000 rows, through 2026-08-11T16:00:00.000Z
+checkpoint: page 13, 13000 rows, through 2026-08-15T03:20:00.000Z
+checkpoint: page 14, 14000 rows, through 2026-08-18T14:40:00.000Z
+checkpoint: page 15, 15000 rows, through 2026-08-22T02:00:00.000Z
+checkpoint: page 16, 16000 rows, through 2026-08-25T13:20:00.000Z
+checkpoint: page 17, 17000 rows, through 2026-08-29T00:40:00.000Z
+checkpoint: page 18, 18000 rows, through 2026-09-01T12:00:00.000Z
+checkpoint: page 19, 19000 rows, through 2026-09-04T23:20:00.000Z
+checkpoint: page 20, 20000 rows, through 2026-09-08T10:40:00.000Z
+checkpoint: page 21, 21000 rows, through 2026-09-11T22:00:00.000Z
+checkpoint: page 22, 22000 rows, through 2026-09-15T09:20:00.000Z
+checkpoint: page 23, 23000 rows, through 2026-09-18T20:40:00.000Z
+checkpoint: page 24, 24000 rows, through 2026-09-22T08:00:00.000Z
+checkpoint: page 25, 25000 rows, through 2026-09-25T19:20:00.000Z
+checkpoint: page 26, 26000 rows, through 2026-09-29T06:40:00.000Z
+checkpoint: page 27, 26496 rows, through 2026-10-01T00:00:00.000Z
+{
+  "file": "/mnt/c/users/shlom/desktop/the hybrid-terminal/research/datasets/btcusdt-5m-2026-q3.json",
+  "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+  "state": "complete",
+  "rowCount": 26496,
+  "uniqueTimestampCount": 26496,
+  "validUniqueRows": 26496,
+  "expectedRows": 26496,
+  "eligibleRowsAtCutoff": 26496,
+  "excludedDevelopingOrFutureRows": 0,
+  "missingRows": 0,
+  "duplicateRows": 0,
+  "conflictingTimestamps": 0,
+  "duplicates": [],
+  "gaps": [],
+  "coverage": {
+    "firstOpenTime": 1782864000000,
+    "lastOpenTime": 1790812500000,
+    "endExclusive": 1790812800000,
+    "contiguous": true
+  },
+  "issueCount": 0,
+  "issues": [],
+  "issuesTruncated": false
+}

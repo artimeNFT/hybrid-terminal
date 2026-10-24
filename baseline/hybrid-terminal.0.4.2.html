@@ -1,0 +1,488 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hybrid Terminal · 0.4.2</title>
+<style>
+:root{--bg:#0b0e14;--p:#131722;--b:#252a38;--t:#d1d4dc;--m:#7d8597;--g:#26d97f;--r:#ff4d5e;--bl:#3b82f6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:13px system-ui,sans-serif;height:100vh;display:flex;flex-direction:column}
+header{display:flex;gap:6px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--b);flex-wrap:wrap}
+button,select{background:var(--p);color:var(--t);border:1px solid var(--b);padding:5px 10px;border-radius:6px;cursor:pointer}
+button.on{background:var(--bl);border-color:var(--bl)}
+main{flex:1;display:flex;min-height:0}#cw{flex:1;min-width:0}canvas{width:100%;height:100%;display:block;cursor:grab}
+aside{width:330px;overflow:auto;border-left:1px solid var(--b);padding:10px;background:var(--p);direction:rtl}
+.card{border:1px solid var(--b);border-radius:8px;padding:9px;margin-bottom:9px}.card h4{margin:0 0 6px;font-size:12px;color:var(--m);font-weight:600}
+.sig{font-size:20px;font-weight:700}.L{color:var(--g)}.S{color:var(--r)}.W{color:var(--m)}
+.row{display:flex;justify-content:space-between;padding:2px 0}.ok{color:var(--g)}.no{color:#555d70}
+small{color:var(--m);line-height:1.5;display:block}#st{color:var(--m);margin-inline-start:auto}
+@media(max-width:800px){main{flex-direction:column}aside{width:100%;height:40%;border-left:0}}
+#hp{position:fixed;inset:0;background:#000a;display:flex;align-items:center;justify-content:center;z-index:9}#hp[hidden]{display:none}
+#hp>div{background:var(--p);border:1px solid var(--b);border-radius:10px;max-width:580px;max-height:86vh;overflow:auto;padding:16px;direction:rtl;line-height:1.65;margin:12px}
+#hp h3{margin:12px 0 4px;font-size:13px;color:#93c5fd}#hp ul,#hp ol{margin:0;padding-inline-start:20px}.lb{font-size:12px}
+input{background:var(--bg);color:var(--t);border:1px solid var(--b);border-radius:6px;padding:3px 6px;width:90px}#eq{height:60px;cursor:default}
+:root{--bg:#131722;--p:#1b1f2a;--b:#2a2e39;--m:#8b93a7}
+header{background:#171b26}.brand{font-size:13px;font-weight:800;letter-spacing:1.4px;margin-right:10px;color:#f0f3fa}.brand span{color:#64a0ff}
+#cw{display:flex;flex-direction:column;min-height:0}#chartbar{display:flex;align-items:center;flex-wrap:wrap;gap:5px;min-height:40px;padding:6px 10px;border-bottom:1px solid var(--b);background:#171b26}
+#chartbar button,#chartbar select{font-size:12px;padding:4px 8px}#chartmeta{color:var(--m);font-size:11px;margin-right:auto}#plot{flex:1;min-height:0;position:relative;overflow:hidden}#cv{outline:none;touch-action:none;cursor:crosshair}#cv:focus-visible{outline:1px solid #4b82d1;outline-offset:-1px}
+.badge{display:inline-block;padding:3px 7px;border:1px solid #35523e;border-radius:4px;color:#69d79a;font-size:11px}.pending{color:#e4b65a;border-color:#6b532e}.preview{border-color:#67512e}.preview h4{color:#e4b65a}.footnote{font-size:11px;color:var(--m);line-height:1.6}
+button:disabled{opacity:.4;cursor:default}.no{color:#a6aec0}.row{gap:9px}.row span{min-width:0}.row b{flex-shrink:0}
+#displaysettings{padding:10px 12px;border-bottom:1px solid var(--b);direction:ltr;background:#1b202c;line-height:1.8}#displaysettings[hidden]{display:none}#displaysettings label{display:inline-flex;gap:7px;align-items:center;margin-left:15px}#displaysettings input[type=checkbox]{width:auto;accent-color:#74b8ff}#candlelegend{padding:5px 10px;display:flex;flex-wrap:wrap;gap:12px;font-size:11px;direction:ltr;background:#171b26;color:#d0d7e6}#candlelegend span{display:inline-flex;gap:5px;align-items:center}.swatch{display:inline-block;width:10px;height:10px;border:2px solid currentColor;flex-shrink:0}#historynote{padding:5px 10px;direction:ltr;background:#222635;color:#c3d0e8}#historynote[hidden]{display:none}#contextstatus{display:block;padding:3px 10px;color:#b7c9e7;font-size:11px;min-height:21px;overflow-wrap:anywhere}#inspect{display:block;padding:5px 10px;min-height:28px;background:#171b26;border-bottom:1px solid var(--b);font-size:12px;direction:ltr;color:#c1cadc}
+#sz>label{display:block;margin-top:7px;color:var(--m);font-size:12px}#sz>select{display:block;width:100%;min-width:0;max-width:100%;font-size:12px}#sz>#cashbalance{display:block;width:100%;margin:4px 0 7px}.nearest-row{display:grid;grid-template-columns:auto 1fr;gap:2px 8px;padding:4px 0}.nearest-row b{text-align:end;overflow-wrap:anywhere}.nearest-row small{grid-column:1 / -1}.source-mode{font-size:10px;color:#b9c7dc}details{margin-top:7px}summary{cursor:pointer;color:#b6c9e9}details small{margin:4px 0}.card,.row b{overflow-wrap:anywhere}.version{display:inline;color:#9caac2;font-size:10px;letter-spacing:0}.mode-label{display:inline-flex;align-items:center;gap:5px;color:#c7d2e7;font-size:12px}.health{border-left:3px solid #67e8b5}.health.warn{border-left-color:#ffc77b}.health strong{font-size:13px}.health small{margin-top:4px}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #8ecaff;outline-offset:2px}#journal{direction:rtl}#journal button{margin-top:6px;width:100%}
+@media(max-width:800px){main{display:block;overflow-y:auto}#cw{height:max(470px,65vh)}aside{height:auto!important;min-height:300px;overflow:visible}header{gap:4px;padding:7px}.brand{width:100%}#chartmeta{display:none}#chartbar{gap:3px;padding:5px}#chartbar button{padding:4px 7px}#candlelegend{gap:6px;font-size:10px}#inspect{font-size:11px}aside{height:42%;min-height:190px}}
+</style></head><body>
+<header><span class="brand">HYBRID <span>TERMINAL</span> <small class="version">v0.4.2</small></span><select id="sym"><option>BTCUSDT</option><option>ETHUSDT</option><option>SOLUSDT</option></select>
+<button data-tf="5m" class="on">5m</button><button data-tf="15m">15m</button><button data-tf="1h">1h</button><button data-tf="4h">4h</button>
+<span style="width:8px"></span><button data-l="z" class="on lb">Vectors</button><button data-l="e" class="on lb">EMA / VWAP</button><button data-l="p" class="on lb">Round levels</button><button data-l="m" class="on lb">Markers / Plan</button><select id="ms" class="lb" title="Minimum signal score"><option value="3">Score ≥3</option><option value="4">Score ≥4</option><option value="5">Score 5</option></select><button id="bl" class="lb">🔔 Alerts</button><button id="hq">? Help</button><span class="source-mode">BINANCE SPOT · RESEARCH / SIMULATION</span><span id="st"></span></header>
+<main><div id="cw"><div id="chartbar"><label class="mode-label">Candles <select id="palette" aria-label="Candle display mode"><option value="accessible">High contrast</option><option value="standard">Standard</option><option value="pvsra">PVSRA</option></select></label><label class="mode-label">Body <select id="body" aria-label="Candle body"><option value="filled">Filled</option><option value="hollow">Hollow up</option></select></label><label class="mode-label">Pane <select id="pane" aria-label="Lower pane"><option value="volume">Volume</option><option value="rsi">RSI14</option><option value="none">None</option></select></label><button id="daylevels" aria-pressed="false" title="Previous completed UTC day high / low">Day levels</button><button id="pivots" aria-pressed="false" title="Traditional PP / R1 / S1 from previous completed UTC day">Pivots</button><button id="back" title="Pan to earlier candles" aria-label="Pan to earlier candles">←</button><button id="forward" title="Pan to later candles" aria-label="Pan to later candles">→</button><button id="zoomout" title="Zoom out" aria-label="Zoom out">−</button><button id="zoomin" title="Zoom in" aria-label="Zoom in">+</button><button id="reset" title="Reset zoom and price scale">Reset</button><button id="livebtn" class="on" title="Follow the latest candle">Live</button><button id="autoscale" class="on" title="Restore automatic price scale">Auto scale</button><select id="tz" title="Chart timezone" aria-label="Chart timezone"><option value="Asia/Jerusalem">Jerusalem</option><option value="UTC">UTC</option></select><button id="historybtn" title="Load up to 1,000 older candles for the chart">History +1,000</button><button id="displaybtn" aria-expanded="false" aria-controls="displaysettings">Display</button><button id="reload" title="Reload market data">Refresh</button><span id="chartmeta"></span><span id="candlebadge" class="badge"></span></div><div id="displaysettings" hidden><label><input id="volumetags" type="checkbox"> Volume tags (◆ vector / ● rising volume)</label><small>Body: Hollow up leaves rising bodies hollow and falling bodies filled; Filled fills both. Up / Down compares this candle's close with its own open. PVSRA also colors volume classes. Tags appear on volume bars when zoomed in. Display changes do not change signals.</small></div><div id="candlelegend"></div><output id="contextstatus" aria-live="polite"></output><output id="inspect" aria-label="Selected candle details">Hover over a candle for details</output><small id="historynote" hidden></small><div id="plot"><canvas id="cv" tabindex="0" aria-label="Candlestick chart. Arrow keys pan, plus and minus zoom, End returns to live."></canvas></div></div><aside lang="he" dir="rtl"><div id="systemstatus" role="status"></div><div id="pn"></div><div id="levelcontext" aria-live="polite"></div><div class="card" id="sz"><h4>אומדן גאומטרי נומינלי · לא כמות לביצוע</h4><div class="row"><span>הון ייחוס (USDT)</span><input id="acc" type="number" value="1000" min="0" step="1"></div><div class="row"><span>סיכון לעסקה (%)</span><input id="rk" type="number" value="1" min="0.01" max="100" step=".25"></div><label for="sizeproduct">תרחיש כיסוי מזומן</label><select id="sizeproduct"><option value="unconfigured">לא מוגדר</option><option value="cash-spot-long">Cash-only Spot LONG · הנחה בלבד</option></select><label for="cashbalance">יתרת מזומן מונחת (USDT)</label><input id="cashbalance" type="number" min="0" step="any" placeholder="לא הוגדר"><div id="szo"></div></div><div id="pn2"></div><div id="journal" class="card"><h4>יומן החלטות מאושרות</h4><div id="journalstatus"></div><button id="exportjournal">הורד יומן JSON</button></div></aside></main>
+<div id="hp" lang="he" dir="rtl" hidden><div><button style="float:left">✕ סגור</button><b style="font-size:15px">איך קוראים את הטרמינל</b>
+<h3>1. נרות ומצבי תצוגה</h3><ul><li>מעל הגרף, ליד <b>Candles</b>, אפשר להחליף מיד בין שלושה מצבי צבע. זו החלפת תצוגה באותה גרסה, ללא שינוי בחישובים.</li><li><b>High contrast</b> — ברירת המחדל: <b style="color:#73c8ff">כחול = עולה ↑</b>, <b style="color:#ffbc70">כתום = יורד ↓</b>. שני צבעי כיוון בלבד, לכל דרגות הנפח.</li><li><b>Standard</b> — <b style="color:#4de6a4">ירוק בהיר = עולה ↑</b>, <b style="color:#ff7085">אדום בהיר = יורד ↓</b>. שני צבעי כיוון בלבד.</li><li><b>PVSRA</b> — שישה שילובי צבע של כיוון ונפח: נר רגיל בירוק בהיר / אדום בהיר; וקטור בירוק עז / אדום עז; נפח מוגבר בכחול / סגול. זהו מצב מתקדם לבחירה.</li><li>בקרת <b>Body</b> נפרדת מהצבע: <b>Filled</b> ממלאת את שני הכיוונים; <b>Hollow up</b> מציגה גוף חלול בעלייה ומלא בירידה. ההגדרה לפי פתיחת הנר עצמו, ללא השוואת צבע לסגירה הקודמת. עולה פירושו סגירה מעל <b>פתיחת אותו נר</b>; יורד פירושו סגירה מתחת לפתיחתו. נר יכול להיות עולה גם כשהוא נמוך מהנר הקודם. נר ללא שינוי (Doji) אפור.</li><li>סוג הנפח מופיע בפרטי הנר כשמצביעים עליו. אפשר להוסיף סימני נפח דרך <b>Display → Volume tags</b>: ◆ וקטור, ● נפח מוגבר. ברירת המחדל כבויה כדי לצמצם עומס.</li><li>וקטור: נפח של 200% ומעלה מממוצע 10 הנרות הקודמים, או נפח×טווח הגבוה ביותר ב-10. נפח מוגבר: 150% ומעלה, כשאין סיווג וקטור. הסיווג אינו מזהה את כוונת המשתתפים.</li><li>מסגרת מקווקוות מציינת נר מתהווה. המקרא ושורת הפרטים מציגים את משמעות הצבע והמצב. בחירת התצוגה ואזור הזמן נשמרים כשהדפדפן מאפשר זאת.</li></ul>
+<h3>2. אזורי וקטור</h3><ul><li>המלבן הוא טווח נר הווקטור. הוא נשאר עד שהמחיר חוזר ונוגע בצדו השני.</li><li>הקו המקווקו הוא 50%. רמת ייחוס במודל; אין בכך הבטחה לחזרה או לתגובה במחיר.</li><li>וקטור פתוח הוא אזור למעקב. השימוש בו כיעד חזרה הוא כלל של המודל הנוכחי, שעדיין נדרש לבדוק.</li></ul>
+<h3>3. סדר קריאה מומלץ</h3><ol><li><b>סביבה:</b> אילו וקטורים פתוחים, והאם המחיר מעל או מתחת ל-EMA50.</li><li><b>מתיחה:</b> מרחק של 2 ATR ומעלה מ-EMA50 הוא תנאי במודל הנוכחי; הוא אינו תחזית או אומדן הסתברות.</li><li><b>המתן לסימן חולשה:</b> נר נפח עוצר (▼▲ כתום) או מבנה M / W. לא רודפים אחרי הווקטור.</li><li><b>כניסה וניהול:</b> בכיוון הווקטור, סטופ מעבר לקצה של 20 הנרות האחרונים (ולפחות 1 ATR מהכניסה), יעד 1 במגע, יעד 2 ב-50%.</li><li>המודל בוחן וקטורים במרחק של עד 6 ATR. זהו סף שנבחר לניסוי, ולא אומדן של זמן החזרה.</li></ol>
+<h3>4. הפאנל</h3><ul><li>ציון 0–5 לפי הצ׳קליסט. אות נוצר רק מציון 3 ומעלה ועם וקטור יעד.</li><li>הסטטיסטיקה מציגה מה קרה בהיסטוריה הטעונה (כ-1000 נרות). בדוק אותה על הנכס והטיימפריים שלך לפני שסומכים על האותות.</li></ul>
+<h3>5. קווים</h3><ul><li>EMA13 אדום, EMA50 סגול, EMA200 לבן, EMA800 צהוב.</li><li>VWAP תכלת מקווקו, מתאפס כל יום ב-UTC. DO (אפור) הוא פתיחת היום ב-UTC.</li><li>הקווים העדינים המנוקדים הם מספרים עגולים, לא רמות ה-Psy של Traders Reality (שמבוססות על שיא ושפל של סשן סידני).</li></ul>
+<h3>תצוגת RSI ורמות Pivot</h3><ul><li><b>Pane</b> בוחרת חלונית תחתונה אחת: <b>Volume</b>, <b>RSI14</b> או <b>None</b>. RSI משתמש בחישוב הקיים ובספי 35/65 של הציון; 50 הוא קו אמצע. 14 שינויי מחיר נדרשים לתצוגה. ערך בנר מתהווה מסומן Provisional ואינו החלטה מאושרת.</li><li><b>Pivots</b> מפעילה PP/R1/S1 מסורתיים: PP=(H+L+C)/3, R1=2×PP−L, S1=2×PP−H, מנתוני יום Binance spot מלא קודם ב־UTC. כל קטע תקף ביום העוקב בלבד. נתון חסר מוצג כלא זמין; אזור הזמן משנה תצוגה בלבד. אין טענה להתאמה להגדרות TR_MAIN.</li></ul><h3>6. שליטה</h3><p style="margin:0">גלגלת = זום סביב הסמן. גרירת הגרף = גלילה, גם למרווח ריק ימינה. Shift וגלגלת = גלילה אופקית. גרירת ציר המחיר = שינוי קנה מידה; לחיצה כפולה עליו מחזירה מחיר אוטומטי. לחיצה כפולה בגרף = איפוס. כפתור Live מחזיר מעקב. לאחר לחיצה בגרף: חצים לגלילה, +/− לזום, Home לתחילת הנתונים ו-End לחי. אזור הזמן ניתן לבחירה.</p>
+<h3>7. בדיקה היסטורית ותוצאות</h3><ul><li>מריץ את אותם כללי אות על כל ההיסטוריה הטעונה. כניסה בפתיחת הנר הבא, יציאה ביעד 2 או בסטופ (אם שניהם בנר אחד, הסטופ קודם), פער פתיחה דרך סטופ של עסקה פתוחה מתמלא במחיר הפתיחה, ללא החלקה נוספת במודל. יעד מוגבל למחיר היעד גם בפער חיובי; כניסה לא תקפה מעבר לסטופ או ליעד נדחית. עלות קבועה של 0.1% משווי הכניסה לסיבוב, עד 120 נרות.</li><li>TP1 נספר כמגע בלבד; הסימולציה אינה מממשת בו חלק מהפוזיציה ואינה מזיזה בעקבותיו את הסטופ.</li><li>אחוז ההצלחה מוצג עם טווח ביטחון של 95%. עם פחות מ-30 עסקאות הטווח רחב והתוצאה חלשה סטטיסטית.</li><li>R הוא מכפלה של הסיכון. ממוצע R חיובי ו-Profit Factor מעל 1 הם תנאי מינימום, לא הוכחה.</li></ul>
+<h3>8. עוד כלים</h3><ul><li>גודל פוזיציה: לפי גודל חשבון ואחוז סיכון (נשמר בדפדפן).</li><li>מגמה בטיימפריים גבוה: נרות סגורים, הקשר בלבד, לא חלק מהציון.</li><li>🔔 Alerts: שינוי כיוון האות נבדק פעם אחת בסגירת נר. טעינה ראשונית אינה מפיקה התראה היסטורית.</li><li>אות מאושר ותוכנית מחושבים על הנר הסגור האחרון. כרטיס צהוב מציג בדיקה זמנית לנר המתהווה, ללא התראה.</li><li>גלילה לעבר משנה את התצוגה; הפאנל ממשיך להציג את הניתוח העדכני. זו אינה הרצת Replay.</li><li>📋 העתק דוח: כולל מועד הנר המאושר ומצב התצוגה.</li><li>הספירה לאחור מתחת למחיר היא הזמן עד סגירת הנר.</li></ul>
+<h3>רמות יום והקשר קרוב</h3><ul><li><b>Day levels</b> מפעיל PDH/PDL — שיא ושפל יום UTC קודם מלא מנתוני Binance Spot. המתג נפרד מ־<b>Pivots</b>, ונתוני המקור והבקשות משותפים. PDH מסומן בקווים ארוכים ו־PDL בנקודות; רמות קרובות ממוזגות או מופנות לשורת הפרטים.</li><li>כל קטע תקף רק ביום UTC העוקב, בטווח [תחילה, סוף). הסמן מציג מקור ותקפות של היום שעליו מצביעים. תוויות מחיר מתועדפות ליום הנבדק; רמות מחוץ למסך אינן מרחיבות את סולם המחיר.</li><li>כרטיס הרמות הקרובות מעוגן למחיר, ATR וזמן <b>הסגירה המאושרת</b>, ללא תלות בסמן או בגלילה. מוצגת לכל היותר רמה אחת מעל ומתחת, וגם שוויון למחיר אם קיים. שמות באותו מחיר מקובצים. מרחק ATR חסר או אפס הוא לא זמין.</li><li>בסגירה בדיוק בחצות UTC מתחילה תקופה חדשה, גם לפני עדכון נר הפתיחה. עד שמקור היום שהושלם מתקבל ומאומת, הכרטיס מציג טעינה או חוסר נתונים; רמות היום הישן אינן מקבלות תאריך חדש. אלה רמות ייחוס בלבד, לא תחזית יעד ולא תוספת לציון.</li></ul><h3>שלמות, sizing ומצבי נתונים</h3><ul><li>המקור הוא <b>BINANCE SPOT</b>, והמצב הוא <b>RESEARCH / SIMULATION</b>. SHORT הוא השערת מחקר, לא מכירת Spot ללא השאלה.</li><li>פתח את אבחון המועמדים כדי לראות LONG ו־SHORT, יעד, גאומטריה וכשירות. נשמר הכלל הקודם: הציון הגבוה נבחר, ובשוויון SHORT נבחר לפני בדיקת יעד; לכן ייתכן WAIT גם כש־LONG כשיר. אין החלפה אוטומטית. הציון הוא מספר תנאים ולא הסתברות.</li><li>אין עסקאות: שיעור רווח וטווח Wilson אינם זמינים. אין הפסדים: PF לא מוגדר, ללא 99; כל תוצאות אפס גם הן יחס לא מוגדר. הירידה היא R נטו ממומש בעסקאות סגורות, לא שווי החשבון.</li><li>ה־sizing הוא תקציב סיכון חלקי מרחק הסטופ בלבד. השווי והיחס להון אינם מינוף מאושר או כמות לביצוע. אפשר לבחור <b>Cash-only Spot LONG</b> ולהזין יתרת מזומן ב־USDT כדי לבדוק כיסוי שווי בלבד לפני עלויות; אין אומדן כמות ישימה, עיגול למסננים או בדיקת הרשאות חשבון.</li><li>האומדן אינו כולל עמלות, החלקה, פערים או מימון. עלות הבסיס בבקטסט נשארה 0.1% משווי הכניסה לסיבוב, ואינה עמלת חשבון ידועה. פער עלול לחרוג מתקציב הסיכון.</li><li>נתון חסר, ATR אפס או ייחוס נפח אפס אינם עדות לפעולה. RSI14 עם אפס רווח ואפס הפסד אינו מוגדר במדיניות המקומית; אין הצבת 50 או טענת התאמה ל־Pine. גרסת הכללים החדשה מופיעה בדוח וברשומות החדשות; רשומות קודמות נשמרות.</li><li>ביום הראשון שטעון חלקית, VWAP משתמש רק בנרות שנטענו ו־DO* הוא פתיחת הנר הראשון שנטען. זהו HLC3 משוקלל בנפח בסיס, לא מחיר ממוצע עסקאות מלא.</li><li><b>הורד תמונת מחקר JSON</b> שומר את מצבי הסטטיסטיקה, המועמדים וההנחות הנוכחיות בנפרד מיומן ההחלטות.</li></ul><h3>9. מגבלות</h3><ul><li>M / W ונר נפח עוצר מזוהים בקירוב משלי.</li><li>סימון M / W מוצג לאחר סגירת נר האישור, 3 נרות לאחר נקודת הקיצון. מבנה שהוחלף נשאר באפור עם ×. הניקוד ההיסטורי משתמש במצב שהיה ידוע בכל נר.</li><li>יומן מקומי שומר עד 1,000 החלטות מאושרות, עם אפשרות הורדה. שמירה במכשיר אינה גיבוי חיצוני.</li><li>כפתור History +1,000 טוען עד 5,000 נרות ישנים נוספים לתצוגה. האות והבקטסט נשארים בחלון המחקר המקורי, כדי לשמור על עקביות ההחלטות.</li><li>הנפח הוא של Binance spot בלבד. בכלי הרשמי הנפח עשוי להיות מבורסה או סימבול אחר.</li><li>זו מסגרת קבלת החלטות ולא ייעוץ השקעות.</li></ul></div></div>
+<script>
+const $=id=>document.getElementById(id),S={sym:'BTCUSDT',tf:'5m',k:[],ws:null,n:150,off:-18,follow:true,right:18,price:null,zone:'Asia/Jerusalem',palette:'accessible',body:'filled',pane:'volume',pivots:false,dayLevels:false,dailyCoverage:[],dailyPending:null,dailyController:null,dailyRetryAt:0,dailyRevision:0,pivotDays:new Map(),pivotSeq:0,pivotStatus:'off',volumeTags:false,history:[],chart:null,historyBusy:false,historyError:'',historyDone:false,phase:'loading',connected:false,lastMessageAt:0,connectedAt:0,epoch:0,revision:0,z:[],sv:[],mw:[],e:[],sig:null,preview:null,st:null,closedIndex:-1,mouse:null};
+const EXECUTION_VERSION='ohlc-market-stop-v2-gap-open',APP_VERSION='0.4.2',RULE_VERSION='hybrid-v2-validity-closed',JOURNAL_KEY='hybridTerminal.journal.v1',VIEW_KEY='hybridTerminal.view.v2',LEGACY_VIEW_KEY='hybridTerminal.view.v1';
+const cv=$('cv'),cx=cv.getContext('2d'),TFMS={'5m':3e5,'15m':9e5,'1h':36e5,'4h':144e5,'1d':864e5},HTFM={'5m':'1h','15m':'4h','1h':'4h','4h':'1d'};
+const nice=(lo,hi,t)=>{const r=(hi-lo)/t,m=Math.pow(10,Math.floor(Math.log10(r))),f=r/m;return(f>5?10:f>2?5:f>1?2:1)*m};
+const finite=v=>Number.isFinite(v),positive=v=>finite(v)&&v>0,nullable=v=>finite(v)?v:null;
+const fmt=p=>!finite(p)?'Unavailable':p>=1000?p.toFixed(1):p>=10?p.toFixed(2):p.toFixed(4);
+const RSI_POLICY='wilder14-local-undefined-zero-change-v1';
+function ema(a,p){const r=[],m=2/(p+1);let e=null,count=0;a.forEach(v=>{if(!finite(v)){e=null;count=0;r.push(null);return}e=e===null?v:v*m+e*(1-m);count++;r.push(count<p||!finite(e)?null:e)});return r}
+async function jsonFetch(url,signal){const controller=new AbortController();let timedOut=false;const parentAbort=()=>controller.abort();if(signal?.aborted)controller.abort();else signal?.addEventListener('abort',parentAbort,{once:true});
+ const timer=setTimeout(()=>{timedOut=true;controller.abort()},12000);
+ try{const response=await fetch(url,{signal:controller.signal});if(!response.ok)throw Error('HTTP '+response.status);return await response.json()}
+ catch(e){if(timedOut)throw Object.assign(Error('Request timeout'),{name:'TimeoutError'});throw e}
+ finally{clearTimeout(timer);signal?.removeEventListener('abort',parentAbort)}
+}
+async function serverClock(signal){try{const d=await jsonFetch('https://api.binance.com/api/v3/time',signal);return Number.isFinite(d.serverTime)?d.serverTime:null}catch(e){if(e.name==='AbortError')throw e;return null}}
+function validBar(b){return ['t','o','h','l','c','v'].every(p=>Number.isFinite(b[p]))&&b.t>=0&&b.o>0&&b.c>0&&b.l>0&&b.h>=Math.max(b.o,b.c)&&b.l<=Math.min(b.o,b.c)&&b.v>=0&&Number.isFinite(b.end)&&b.end>=b.t}
+function restBars(rows,tf,serverBefore){if(!Array.isArray(rows)||!rows.length)throw Error('Empty candles');const newest=+rows[rows.length-1][0],step=TFMS[tf];
+ const bars=rows.map(x=>{const t=+x[0],end=x[6]!=null&&Number.isFinite(+x[6])?+x[6]:t+step-1;return{t,o:+x[1],h:+x[2],l:+x[3],c:+x[4],v:+x[5],end,closed:end<newest||(serverBefore!==null&&end<serverBefore)}});
+ if(bars.some((b,i)=>!validBar(b)||(i&&b.t-bars[i-1].t!==step)))throw Error('Invalid or discontinuous candles');return bars;
+}
+function closedEnd(){let i=S.k.length-1;while(i>=0&&S.k[i].closed!==true)i--;return i}
+async function load(){const epoch=++S.epoch,sym=S.sym,tf=S.tf;S.controller?.abort();cancelDailyRequest();const controller=S.controller=new AbortController();
+ if(S.ws){S.ws.onclose=null;S.ws.onmessage=null;S.ws.close();S.ws=null}
+ Object.assign(S,{k:[],sig:null,preview:null,st:null,bt:null,htf:null,htfError:false,htfBucket:null,closedIndex:-1,prev:undefined,notifiedBar:null,revision:0,feedError:false,phase:'loading',connected:false,lastMessageAt:0,connectedAt:0,journalChecked:null,history:[],chart:null,historyBusy:false,historyError:'',historyDone:false,pivotDays:new Map(),pivotStatus:'off',pivotKey:null,dailyCoverage:[],dailyPending:null,dailyRetryAt:0});S.dailyRevision++;S.pivotSeq++;resetView();$('st').textContent='Loading…';sched();
+ try{const clock=await serverClock(controller.signal),offset=clock===null?0:clock-Date.now();if(epoch!==S.epoch)return;
+  const rows=await jsonFetch(`https://api.binance.com/api/v3/klines?symbol=${sym}&interval=${tf}&limit=1000`,controller.signal);if(epoch!==S.epoch)return;
+  S.clockOffset=offset;S.clockTrusted=clock!==null;S.k=restBars(rows,tf,clock);resetView();calc();sched();connect(epoch,sym,tf);refreshHTF();refreshPivots();
+ }catch(e){if(epoch!==S.epoch||e.name==='AbortError')return;$('st').textContent='Data / connection error · retry';S.feedError=true;S.phase='error';S.connected=false;sched()}
+}
+async function htf(epoch,bucket){const tf=HTFM[S.tf],sym=S.sym,signal=S.controller?.signal;
+ try{const clock=await serverClock(signal);if(epoch!==S.epoch)return;
+  const rows=await jsonFetch(`https://api.binance.com/api/v3/klines?symbol=${sym}&interval=${tf}&limit=300`,signal);if(epoch!==S.epoch||bucket!==S.htfBucket)return;
+  const bars=restBars(rows,tf,clock).filter(b=>b.closed),c=bars.map(b=>b.c),a=ema(c,13),b=ema(c,50),i=c.length-1;if(i<49)throw Error('Insufficient context');
+  S.htf={tf,t:bars[i].t,b:c[i]>b[i]&&a[i]>b[i]?1:c[i]<b[i]&&a[i]<b[i]?-1:0};S.htfError=false;sched();
+ }catch(e){if(epoch!==S.epoch||e.name==='AbortError')return;S.htf=null;S.htfError=true;sched()}
+}
+function refreshHTF(){const i=closedEnd();if(i<0)return;const bucket=Math.floor((S.k[i].t+TFMS[S.tf])/TFMS[HTFM[S.tf]]);if(bucket===S.htfBucket)return;S.htfBucket=bucket;htf(S.epoch,bucket)}
+function connect(epoch=S.epoch,sym=S.sym,tf=S.tf){const ws=S.ws=new WebSocket(`wss://stream.binance.com:9443/ws/${sym.toLowerCase()}@kline_${tf}`),active=()=>epoch===S.epoch&&S.ws===ws;
+ ws.onopen=()=>{if(active()){S.connected=true;S.connectedAt=Date.now();S.phase='connecting';S.feedError=false;sched()}};
+ ws.onclose=()=>{if(!active())return;S.connected=false;S.phase='disconnected';sched();setTimeout(()=>active()&&load(),3000)};
+ ws.onerror=()=>{if(active()){S.connected=false;S.phase='error';sched()}};
+ ws.onmessage=m=>{if(!active())return;try{const event=JSON.parse(m.data),x=event.k;if(!x||(x.s&&x.s!==sym)||(event.s&&event.s!==sym)||(x.i&&x.i!==tf))return;
+   const c={t:+x.t,o:+x.o,h:+x.h,l:+x.l,c:+x.c,v:+x.v,end:x.T!=null&&Number.isFinite(+x.T)?+x.T:+x.t+TFMS[tf]-1,closed:x.x===true},last=S.k[S.k.length-1];if(!validBar(c)||!last||c.t<last.t)return;
+   S.lastMessageAt=Date.now();S.phase='live';S.connected=true;
+   if(c.t===last.t){if(last.closed){sched();return}S.k[S.k.length-1]=c}
+   else{if(c.t!==last.t+TFMS[tf]||!last.closed){$('st').textContent='Resynchronizing missing data…';load();return}S.k.push(c);if(!S.follow)S.off++}
+   calc();sched();if(c.closed)refreshHTF();refreshPivots();
+  }catch(e){$('st').textContent='Invalid data update'}};
+}
+// F01: replay pivot confirmations in order and retain supersession history.
+// Bar times identify candle opens; decision/marker consumers require closed bars.
+function mwEvents(k,atr){const pp=[],events=[];let tailEvent=null;
+ function pivot(q){const last=pp[pp.length-1],confirmedAt=q.i+3;
+  if(last&&last.t===q.t){const extreme=q.t==='H'?q.p>last.p:q.p<last.p;if(!extreme)return;
+   if(tailEvent){tailEvent.supersededAt=confirmedAt;tailEvent.supersededBarTime=k[confirmedAt].t}pp[pp.length-1]=q;
+  }else pp.push(q);
+  tailEvent=null;if(pp.length<3)return;
+  const [x,y,z]=pp.slice(-3),at=atr[z.i];
+  const isW=z.t==='L'&&Math.abs(x.p-z.p)<.8*at&&y.p-Math.max(x.p,z.p)>1.2*at;
+  const isM=z.t==='H'&&Math.abs(x.p-z.p)<.8*at&&Math.min(x.p,z.p)-y.p>1.2*at;
+  if(isW||isM){tailEvent={i:z.i,t:isW?'W':'M',p:z.p,pivotTime:k[z.i].t,
+   confirmedAt,confirmationBarTime:k[confirmedAt].t,supersededAt:null,supersededBarTime:null,
+   pivots:[x,y,z].map(p=>({i:p.i,t:p.t,p:p.p}))};events.push(tailEvent)}
+ }
+ for(let i=3;i<k.length-3;i++){let H=true,L=true;
+  for(let j=i-3;j<=i+3;j++){if(k[j].h>k[i].h)H=false;if(k[j].l<k[i].l)L=false}
+  // Preserve the original tie order: high first, then low at the same index.
+  if(H)pivot({i,p:k[i].h,t:'H'});if(L)pivot({i,p:k[i].l,t:'L'});
+ }return events;
+}
+function numericBar(b){return !!b&&finite(b.t)&&b.t>=0&&['o','h','l','c','v'].every(key=>finite(b[key]))&&positive(b.l)&&positive(b.o)&&positive(b.c)&&b.h>=Math.max(b.o,b.c)&&b.l<=Math.min(b.o,b.c)&&b.v>=0}
+function volumeReference(k,i){if(i<10)return{state:'warm-up',mean:null,maxProduct:null,relative:null};
+ const prior=k.slice(i-10,i);if(prior.length!==10||!prior.every(numericBar)||!numericBar(k[i]))return{state:'invalid-data',mean:null,maxProduct:null,relative:null};
+ const mean=prior.reduce((sum,c)=>sum+c.v,0)/10,maxProduct=Math.max(...prior.map(c=>c.v*(c.h-c.l))),relative=positive(mean)?k[i].v/mean:null;
+ return{state:!finite(mean)||!finite(maxProduct)||!finite(k[i].v*(k[i].h-k[i].l))||(relative!==null&&!finite(relative))?'invalid-arithmetic':!positive(mean)?'zero-reference':!positive(k[i].v)?'zero-volume':'ready',mean:nullable(mean),maxProduct:nullable(maxProduct),relative:nullable(relative)}
+}
+function analyze(k){const n=k.length,A={},cl=k.map(x=>x.c);
+ k.forEach((x,i)=>{x.up=x.c>=x.o;x.va=nullable(x.v*(x.h-x.l));x.cls=0;x.volumeReference=volumeReference(k,i);
+  const ref=x.volumeReference;if(ref.state==='ready'){
+   if(x.v>=2*ref.mean||(positive(ref.maxProduct)&&x.va>=ref.maxProduct))x.cls=2;else if(x.v>=1.5*ref.mean)x.cls=1}
+ });
+ A.e=[13,50,200,800].map(p=>ema(cl,p));
+ let pv=0,vv=0,day=-1,coverage='partial';A.dayCoverage=[];A.vw=k.map(x=>{const d=Math.floor(x.t/864e5);if(d!==day){day=d;pv=vv=0;coverage=x.t%864e5===0?'from-UTC-open':'partial-first-day'}A.dayCoverage.push(coverage);pv+=(x.h+x.l+x.c)/3*x.v;vv+=x.v;return positive(vv)&&finite(pv)?nullable(pv/vv):null});
+ let dd=-1,dop=0;A.dop=k.map(x=>{const d=Math.floor(x.t/864e5);if(d!==dd){dd=d;dop=x.o}return nullable(dop)});
+ A.atr=[];let a=0;k.forEach((x,i)=>{const tr=i?Math.max(x.h-x.l,Math.abs(x.h-k[i-1].c),Math.abs(x.l-k[i-1].c)):x.h-x.l;a=i<14?(a*i+tr)/(i+1):(a*13+tr)/14;A.atr.push(nullable(a))});
+ // Local policy: 14 changes to warm up; no gains and no losses is undefined, not 50/100.
+ // A.rsiRaw retains the old seed diagnostic only; neither it nor an unavailable RSI is a score vote.
+ let g=0,ls=0;A.rsiRaw=[];A.rsiState=[];A.rsi=k.map((x,i)=>{if(!i){A.rsiRaw.push(50);A.rsiState.push('warm-up');return null}
+  const d=x.c-k[i-1].c,u=Math.max(d,0),w=Math.max(-d,0);if(i<=14){g=(g*(i-1)+u)/i;ls=(ls*(i-1)+w)/i}else{g=(g*13+u)/14;ls=(ls*13+w)/14}
+  const raw=ls?100-100/(1+g/ls):100;A.rsiRaw.push(nullable(raw));const state=!finite(g)||!finite(ls)||!finite(raw)?'invalid-data':i<14?'warm-up':g===0&&ls===0?'undefined-no-change':'ready';A.rsiState.push(state);return state==='ready'?raw:null;
+ });
+ A.z=[];for(let i=0;i<n;i++){const c=k[i];if(c.cls!==2)continue;const z={i,hi:c.h,lo:c.l,mid:(c.h+c.l)/2,up:c.up,rec:0,bm:null,i1:Infinity,i2:Infinity,i3:Infinity};
+  for(let j=i+1;j<n;j++){const b=k[j];let t=z.up?(b.l<=z.lo?3:b.l<=z.mid?2:b.l<=z.hi?1:0):(b.h>=z.hi?3:b.h>=z.mid?2:b.h>=z.lo?1:0);
+   if(t>z.rec)z.rec=t;if(t>=1&&z.i1===Infinity)z.i1=j;if(t>=2&&z.bm===null){z.bm=j-i;z.i2=j}if(t===3){z.i3=j;break}}A.z.push(z)}
+ A.mw=mwEvents(k,A.atr);
+ A.sv=[];for(let i=20;i<n;i++){const c=k[i];if(c.cls<1)continue;const r=c.h-c.l;if(!positive(r))continue;let mh=0,ml=1e12;for(let j=i-20;j<i;j++){mh=Math.max(mh,k[j].h);ml=Math.min(ml,k[j].l)}
+  if(c.h>mh&&(c.h-Math.max(c.o,c.c))/r>=.5)A.sv.push({i,t:'top'});if(c.l<ml&&(Math.min(c.o,c.c)-c.l)/r>=.5)A.sv.push({i,t:'bot'})}
+ return A;
+}
+function calc(){const k=S.k,n=k.length;if(!n)return;Object.assign(S,analyze(k));S.analysisRevision=(S.analysisRevision||0)+1;
+ const ci=S.closedIndex=closedEnd();S.sig=ci>=0?sigAt(ci):null;S.preview=n-1>ci?sigAt(n-1):null;
+ if(S.sig){const current=S.z.filter(z=>z.i<=ci&&z.i2>ci&&z.i>ci+1-200);S.sig.g=current.filter(z=>z.up).length;S.sig.r=current.filter(z=>!z.up).length}
+ const old=S.z.filter(z=>z.i<ci-29);S.st=[true,false].map(u=>{const a=old.filter(z=>z.up===u),b=a.filter(z=>z.i2<=ci).map(z=>z.bm).sort((x,y)=>x-y);
+  const p=field=>a.length?Math.round(a.filter(z=>z[field]<=ci).length/a.length*100):0;return{n:a.length,t:p('i1'),m:p('i2'),f:p('i3'),med:b.length?b[b.length>>1]:'–'}});
+ const cache=[RULE_VERSION,S.epoch,S.sym,S.tf,ci,ci>=0?k[ci].t:'none',S.revision,S.min,EXECUTION_VERSION].join('|');if(!S.bt||S.btKey!==cache){S.bt=backtest();S.btKey=cache}refreshChart();recordDecision();notify()}
+
+function sigAt(i){const k=S.k,c=k[i],at=S.atr?.[i],e50=S.e?.[1]?.[i],rs=S.rsi?.[i],ref=volumeReference(k,i),reasons=[];
+ if(i<59||!finite(e50))reasons.push('warm-up');if(!numericBar(c))reasons.push('invalid-OHLCV');if(!positive(at))reasons.push('ATR-unavailable-or-zero');
+ if(!finite(rs)||rs<0||rs>100||i<14)reasons.push('RSI-unavailable');if(ref.state!=='ready')reasons.push('volume-'+ref.state);
+ const dev=numericBar(c)&&positive(at)&&finite(e50)?nullable((c.c-e50)/at):null;if(dev===null&&!reasons.length)reasons.push('invalid-arithmetic');
+ const valid=reasons.length===0,act=(S.z||[]).filter(z=>z.i<i&&z.i2>i&&i-z.i<=300&&[z.hi,z.lo,z.mid].every(finite));
+ const gz=act.filter(z=>z.up&&z.hi<c?.c&&c.c-z.hi<=6*at).sort((a,b)=>b.hi-a.hi)[0],rz=act.filter(z=>!z.up&&z.lo>c?.c&&z.lo-c.c<=6*at).sort((a,b)=>a.lo-b.lo)[0];
+ const R=(a,t,w,d)=>(a||[]).some(q=>q.t===t&&i-q.i<=w&&i-q.i>=d&&i>=(q.confirmedAt??q.i)&&(q.supersededAt==null||i<q.supersededAt));
+ const dText=dev===null?'לא זמין':dev.toFixed(1),rText=finite(rs)?rs.toFixed(0):'לא זמין';
+ const sI=[[`מתיחה מעל EMA50 (${dText} ATR)`,dev!==null&&dev>=2],['וקטור ירוק פתוח מתחת (עד 6 ATR)',!!gz],['נר נפח עוצר בשיא',R(S.sv,'top',6,0)],['מבנה M',R(S.mw,'M',15,3)],[`RSI ${rText} מעל 65`,finite(rs)&&rs>65]];
+ const lI=[[`מתיחה מתחת ל-EMA50 (${dText} ATR)`,dev!==null&&dev<=-2],['וקטור אדום פתוח מעל (עד 6 ATR)',!!rz],['נר נפח עוצר בשפל',R(S.sv,'bot',6,0)],['מבנה W',R(S.mw,'W',15,3)],[`RSI ${rText} מתחת ל-35`,finite(rs)&&rs<35]];
+ function candidate(short,items,target){const score=items.filter(x=>x[1]).length;let geometryEligible=false,draft=null;
+  if(valid&&target){const w=k.slice(Math.max(0,i-19),i+1);if(w.every(numericBar)){
+   const stop=short?Math.max(Math.max(...w.map(x=>x.h))+.3*at,c.c+at):Math.min(Math.min(...w.map(x=>x.l))-.3*at,c.c-at),risk=Math.abs(stop-c.c);
+   const rr=positive(risk)?Math.abs(target.mid-c.c)/risk:null;
+   geometryEligible=[stop,target.mid,short?target.hi:target.lo,rr].every(finite)&&positive(stop)&&positive(rr)&&(short?stop>c.c&&target.mid<c.c:stop<c.c&&target.mid>c.c);
+   if(geometryEligible)draft={entry:c.c,stop,tp1:short?target.hi:target.lo,tp2:target.mid,rr};
+  }}
+  const eligible=valid&&score>=S.min&&!!target&&geometryEligible,reason=!valid?'data-unavailable':score<S.min?'below-threshold':!target?'no-target':!geometryEligible?'invalid-geometry':'eligible';
+  return{side:short?'SHORT':'LONG',score,items,targetAvailable:!!target,geometryEligible,eligible,reason,plan:eligible?draft:null};
+ }
+ const LONG=candidate(false,lI,rz),SHORT=candidate(true,sI,gz),short=SHORT.score>=LONG.score,chosen=short?SHORT:LONG,other=short?LONG:SHORT;
+ return{side:chosen.eligible?chosen.side:'WAIT',score:chosen.score,items:chosen.items,plan:chosen.plan,short,candidates:{LONG,SHORT},selection:{policy:'higher-score-short-on-tie-before-eligibility',selected:chosen.side,tied:LONG.score===SHORT.score,suppressedOther:!chosen.eligible&&other.eligible,reason:!chosen.eligible&&other.eligible?'legacy-selection-suppresses-other':chosen.reason},validity:{ready:valid,reasons,raw:{atr:nullable(at),ema50:nullable(e50),rsi:nullable(rs),volumeMean:ref.mean,relativeVolume:ref.relative},rsiPolicy:RSI_POLICY}};
+}
+function backtest(){const k=S.k,n=closedEnd()+1,T=[];if(!k.slice(0,n).every(numericBar))return{...summarizeTrades([]),state:'invalid-data',dataState:'invalid-OHLCV'};let i=60;
+ while(i<n-2){const g=sigAt(i);if(g.side==='WAIT'||!g.plan){i++;continue}
+  const p=g.plan,sh=g.short,en=k[i+1].o,rk=Math.abs(p.stop-en);
+  if(![en,rk,p.stop,p.tp1,p.tp2].every(finite)||rk<=0||(sh?p.stop<=en||p.tp2>=en:p.stop>=en||p.tp2<=en)){i++;continue}
+  let ex=null,t1=false,j=i+1;
+  for(;j<n&&j<=i+120;j++){const b=k[j];if(sh?b.h>=p.stop:b.l<=p.stop){ex=(sh?b.o>=p.stop:b.o<=p.stop)?b.o:p.stop;break}if(sh?b.l<=p.tp1:b.h>=p.tp1)t1=true;if(sh?b.l<=p.tp2:b.h>=p.tp2){ex=p.tp2;break}}
+  if(ex===null){if(j>i+120)ex=k[i+120].c;else break}
+  T.push({R:(sh?en-ex:ex-en)/rk-.001*en/rk,grossR:(sh?en-ex:ex-en)/rk,entry:en,exit:ex,sh,t1});i=j+1}
+ return summarizeTrades(T)}
+function summarizeTrades(T){const N=T.length,valid=T.every(t=>finite(t.R)),w=T.filter(t=>t.R>0).length,gains=T.filter(t=>t.R>0).reduce((sum,t)=>sum+t.R,0),losses=-T.filter(t=>t.R<0).reduce((sum,t)=>sum+t.R,0),sum=T.reduce((sum,t)=>sum+t.R,0);
+ let cumulative=0,peak=0,dd=0;const cur=[0];for(const t of T){cumulative+=t.R;cur.push(cumulative);peak=Math.max(peak,cumulative);dd=Math.max(dd,peak-cumulative)}
+ const ok=valid&&[gains,losses,sum,dd,...cur].every(finite),state=!ok?'invalid-outcomes':!N?'empty':!gains&&!losses?'all-zero':!losses?'no-losses':!gains?'all-losses':'mixed';
+ let wr=null,lo=null,hi=null;if(ok&&N){wr=w/N;const z=1.96,dn=1+z*z/N,ct=(wr+z*z/(2*N))/dn,hw=z*Math.sqrt(wr*(1-wr)/N+z*z/(4*N*N))/dn;lo=Math.max(0,ct-hw);hi=Math.min(1,ct+hw)}
+ const split=sh=>{const a=T.filter(t=>t.sh===sh);return{n:a.length,avg:ok&&a.length?nullable(a.reduce((s,t)=>s+t.R,0)/a.length):null}};
+ return{executionVersion:EXECUTION_VERSION,ruleVersion:RULE_VERSION,statisticsVersion:'net-r-states-v1',state,N,w:ok?w:null,wr,lo,hi,avg:ok&&N?nullable(sum/N):null,pf:ok&&losses>0?nullable(gains/losses):null,pfState:!ok?'invalid':!N?'unavailable':losses>0?(finite(gains/losses)?'finite':'invalid-arithmetic'):gains>0?'no-losses':'all-zero',gains:ok?gains:null,losses:ok?losses:null,dd:ok&&N?dd:null,drawdownBasis:'realized-closed-trade-net-R',cur:ok?cur:[0],t1:ok&&N?T.filter(t=>t.t1).length/N:null,L:split(false),S:split(true),trades:T.map(t=>({...t,R:nullable(t.R),grossR:nullable(t.grossR),entry:nullable(t.entry),exit:nullable(t.exit)}))};
+}
+function statisticsText(b,he=false){const na=he?'לא זמין':'Unavailable',num=(v,d=2)=>finite(v)?v.toFixed(d):na,pc=v=>finite(v)?(v*100).toFixed(0)+'%':na;
+ return{state:b.state,win:pc(b.wr),interval:finite(b.lo)&&finite(b.hi)?pc(b.lo)+'–'+pc(b.hi):na,mean:num(b.avg),pf:b.pfState==='no-losses'?(he?'אין הפסדים במדגם · היחס לא מוגדר':'No losses in sample · ratio undefined'):b.pfState==='all-zero'?(he?'כל התוצאות אפס · היחס לא מוגדר':'All outcomes zero · ratio undefined'):num(b.pf),dd:finite(b.dd)?num(b.dd,1)+'R':na,tp1:pc(b.t1),gains:num(b.gains),losses:num(b.losses)};
+}
+function notify(){const g=S.sig;if(!g)return;const key=[S.sym,S.tf,S.k[S.closedIndex].t].join('|');if(key===S.notifiedBar)return;S.notifiedBar=key;
+ const previous=S.prev;S.prev=g.side;if(previous===undefined||g.side===previous||g.side==='WAIT'||!S.al||!feedHealth().ready)return;
+ document.title=`${g.side} ${S.sym}`;try{const a=new AudioContext(),o=a.createOscillator();o.connect(a.destination);o.frequency.value=g.side==='LONG'?880:440;o.start();o.stop(a.currentTime+.25)}catch(e){}
+ try{new Notification(`${g.side} ${S.sym} ${S.tf} · נר סגור`,{body:`${g.score}/5 · מחיר סגירה ${fmt(g.plan.entry)}`})}catch(e){}
+}
+const PALETTES={
+ standard:{up:'#4de6a4',down:'#ff7085',vectorUp:'#4de6a4',vectorDown:'#ff7085',risingUp:'#4de6a4',risingDown:'#ff7085',flat:'#d4dae6'},
+ accessible:{up:'#73c8ff',down:'#ffbc70',vectorUp:'#73c8ff',vectorDown:'#ffbc70',risingUp:'#73c8ff',risingDown:'#ffbc70',flat:'#d4dae6'},
+ pvsra:{up:'#8cdbba',down:'#f2a1aa',vectorUp:'#12f6a4',vectorDown:'#ff4f78',risingUp:'#62b7ff',risingDown:'#d6a4ff',flat:'#d4dae6'}
+};
+const col=c=>{const p=PALETTES[S.palette]||PALETTES.accessible;if(c.c===c.o)return p.flat;const up=c.c>c.o;return c.cls===2?(up?p.vectorUp:p.vectorDown):c.cls===1?(up?p.risingUp:p.risingDown):(up?p.up:p.down)};
+function candleName(c){return(c.c===c.o?'= Doji':c.c>c.o?'↑ Up (C > O)':'↓ Down (C < O)')+' · '+(c.cls===2?'Vector':c.cls===1?'Rising volume':'Normal volume')}
+function drawCandle(c,xx,cw,y){const width=Math.max(1.5,Math.min(32,cw*.72)),top=y(Math.max(c.o,c.c)),height=Math.max(1.5,Math.abs(y(c.o)-y(c.c))),color=col(c);
+ cx.strokeStyle=color;cx.lineWidth=1.2;cx.setLineDash([]);cx.beginPath();cx.moveTo(xx,y(c.h));cx.lineTo(xx,y(c.l));cx.stroke();
+ cx.fillStyle=S.body==='hollow'&&c.c>c.o?'#131722':color;cx.fillRect(xx-width/2,top,width,height);if(c.closed===false)cx.setLineDash([3,2]);cx.strokeRect(xx-width/2,top,width,height);cx.setLineDash([]);cx.lineWidth=1;
+}
+function feedHealth(now=Date.now()){
+ if(navigator.onLine===false)return{ready:false,label:'אין חיבור לרשת',header:'Offline',detail:'הניתוח המוצג נשמר מהעדכון האחרון. התראות מושהות.'};
+ if(S.phase==='loading')return{ready:false,label:'טוען נתוני שוק',header:'Loading market data',detail:'ממתין לנתונים מאומתים.'};
+ if(S.phase==='error')return{ready:false,label:S.feedError?'טעינת הנתונים נכשלה':'שגיאה בזרם הנתונים',header:S.feedError?'Data load failed':'Stream error',detail:'אפשר לנסות שוב באמצעות רענון נתונים.'};
+ if(!S.connected)return{ready:false,label:'זרם הנתונים מנותק',header:'Stream disconnected',detail:'הניתוח המוצג מתייחס לעדכון האחרון. מנסה להתחבר מחדש.'};
+ const received=S.lastMessageAt||S.connectedAt,age=Math.max(0,now-received);
+ if(!received||age>15000)return{ready:false,label:'הנתונים אינם עדכניים',header:'Stale data',detail:'לא התקבל עדכון תקין ב־15 השניות האחרונות. התראות מושהות.'};
+ if(!S.lastMessageAt)return{ready:false,label:'מחובר · ממתין לעדכון',header:'Connected · awaiting update',detail:'החיבור פתוח. ממתין להודעת נר ראשונה.'};
+ return{ready:true,label:'נתוני שוק עדכניים',header:'Market data live',detail:`עדכון תקין לפני ${Math.floor(age/1000)} שניות · אות מאושר בנר סגור בלבד.`};
+}
+function updateSystemUI(){const health=feedHealth();$('st').textContent=(health.ready?'● ':'◷ ')+health.header;
+ $('systemstatus').innerHTML=`<div class="card health ${health.ready?'':'warn'}"><strong>${health.label}</strong><small>${health.detail}</small>${S.clockTrusted===false?'<small>זמן השרת אינו זמין; נר REST אחרון נשאר זמני.</small>':''}</div>`;
+ if(!S.journal)return;const j=S.journal;$('journalstatus').textContent=`${j.records.length} רשומות במכשיר · עד 1,000 נשמרות${j.retiredCount?' · '+j.retiredCount+' ישנות יצאו מהחלון':''}${S.journalPersistent?'':' · השמירה אינה זמינה; הורד גיבוי'}${S.journalConflict?' · זוהתה אי־התאמה בשחזור; הרשומה המקורית נשמרה':''}`;$('exportjournal').disabled=j.records.length===0;
+}
+function updateLegend(){const p=PALETTES[S.palette],swatch=(label,color)=>`<span style="color:${color}"><i class="swatch" style="background:${S.body==='hollow'&&label.includes('↑')?'transparent':color}"></i>${label}</span>`;
+ $('candlelegend').innerHTML=(S.palette==='pvsra'?swatch('Normal ↑',p.up)+swatch('Normal ↓',p.down)+swatch('Vector ↑',p.vectorUp)+swatch('Vector ↓',p.vectorDown)+swatch('Rising vol ↑',p.risingUp)+swatch('Rising vol ↓',p.risingDown):swatch('Up · C > O',p.up)+swatch('Down · C < O',p.down))+swatch('Doji · C = O',p.flat)+`<span>Body: ${S.body==='hollow'?'Hollow up / filled down':'Filled'}</span>`+(S.volumeTags?'<span>◆ Vector / ● Rising volume</span>':'');
+}
+function loadDisplayPrefs(){try{const saved=JSON.parse(localStorage[VIEW_KEY]||'null'),legacy=saved?null:JSON.parse(localStorage[LEGACY_VIEW_KEY]||'null'),prefs=saved?.schemaVersion===2?saved:legacy;
+ if(prefs){if(['standard','pvsra','accessible'].includes(prefs.palette))S.palette=prefs.palette;if(typeof prefs.volumeTags==='boolean')S.volumeTags=prefs.volumeTags;
+ if(['filled','hollow'].includes(prefs.body))S.body=prefs.body;else if(typeof prefs.hollow==='boolean')S.body=prefs.hollow?'hollow':'filled';
+ if(['volume','rsi','none'].includes(prefs.pane))S.pane=prefs.pane;if(typeof prefs.pivots==='boolean')S.pivots=prefs.pivots;if(typeof prefs.dayLevels==='boolean')S.dayLevels=prefs.dayLevels}
+ const zone=saved?.zone||legacy?.zone;if(['UTC','Asia/Jerusalem'].includes(zone))S.zone=zone;
+ }catch(e){}
+ $('daylevels').classList.toggle('on',S.dayLevels);$('daylevels').setAttribute('aria-pressed',String(S.dayLevels));$('palette').value=S.palette;$('body').value=S.body;$('pane').value=S.pane;$('pivots').classList.toggle('on',S.pivots);$('pivots').setAttribute('aria-pressed',String(S.pivots));$('volumetags').checked=S.volumeTags;$('tz').value=S.zone;
+}
+function saveDisplayPrefs(){try{const previous=JSON.parse(localStorage[VIEW_KEY]||'{}');localStorage[VIEW_KEY]=JSON.stringify({...previous,schemaVersion:2,palette:S.palette,body:S.body,pane:S.pane,pivots:S.pivots,dayLevels:S.dayLevels,volumeTags:S.volumeTags,zone:S.zone})}catch(e){}updateLegend();sched()}
+function initJournal(){S.journalPersistent=true;S.journalConflict=false;S.journalReadOnly=false;let data;
+ try{data=JSON.parse(localStorage[JOURNAL_KEY]||'null');if(data&&(data.schemaVersion!==1||!Array.isArray(data.records))){S.journalReadOnly=true;S.journalPersistent=false}}catch(e){S.journalPersistent=false;S.journalReadOnly=true}
+ const source=Array.isArray(data?.records)?data.records:[],records=source.filter(r=>r&&typeof r.id==='string'&&typeof r.signature==='string'&&Number.isFinite(r.candleCloseTime)).slice(-1000);
+ S.journal={schemaVersion:1,retiredCount:Math.max(0,Number.isFinite(data?.retiredCount)?data.retiredCount:0)+Math.max(0,source.length-1000),records};S.journalById=new Map(records.map(r=>[r.id,r]));S.journalChecked=null;
+}
+function journalExport(){return{schemaVersion:1,applicationVersion:APP_VERSION,exportedAt:new Date().toISOString(),scope:'Observed confirmed decisions, not executed trades. Rolling local retention of at most 1000 records.',retiredCount:S.journal.retiredCount,records:S.journal.records}}
+function persistJournal(){if(S.journalReadOnly){S.journalPersistent=false;return}try{localStorage[JOURNAL_KEY]=JSON.stringify(S.journal);S.journalPersistent=true}catch(e){S.journalPersistent=false}}
+function recordDecision(){if(!S.sig||!S.journal)return;const c=S.k[S.closedIndex];if(!numericBar(c))return;const id=[S.sym,S.tf,c.t,RULE_VERSION,S.min].join('|');
+ if(id===S.journalChecked)return;S.journalChecked=id;const signal={side:S.sig.side,score:S.sig.score,items:S.sig.items.map(x=>[x[0],x[1]]),plan:S.sig.plan?{...S.sig.plan}:null},signature=JSON.stringify(signal),previous=S.journalById.get(id);
+ if(previous){if(previous.signature!==signature)S.journalConflict=true;return}
+ const record={id,signature,observedAt:new Date().toISOString(),applicationVersion:APP_VERSION,ruleVersion:RULE_VERSION,symbol:S.sym,timeframe:S.tf,candleOpenTime:c.t,candleCloseTime:c.t+TFMS[S.tf],candidateDiagnostics:{candidates:S.sig.candidates,selection:S.sig.selection,validity:S.sig.validity},config:{minimumScore:S.min,roundTripFee:.001,executionVersion:EXECUTION_VERSION,rsiPolicy:RSI_POLICY},dataContext:{firstCandle:S.k[0].t,closedCandleCount:S.closedIndex+1},reference:{o:c.o,h:c.h,l:c.l,c:c.c,v:c.v},feedPhase:S.phase==='loading'?'rest-snapshot':S.phase,signal};
+ S.journal.records.push(record);S.journalById.set(id,record);while(S.journal.records.length>1000){const old=S.journal.records.shift();S.journalById.delete(old.id);S.journal.retiredCount++}persistJournal();
+}
+function exportJournal(){const url=URL.createObjectURL(new Blob([JSON.stringify(journalExport(),null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=`hybrid-decisions-${new Date().toISOString().slice(0,10)}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)}
+function bindSystem(){
+ $('displaybtn').onclick=()=>{const open=$('displaysettings').hidden;$('displaysettings').hidden=!open;$('displaybtn').setAttribute('aria-expanded',String(open));sched()};
+ $('palette').onchange=e=>{if(['standard','pvsra','accessible'].includes(e.target.value))S.palette=e.target.value;saveDisplayPrefs()};$('volumetags').onchange=e=>{S.volumeTags=e.target.checked;saveDisplayPrefs()};
+ $('body').onchange=e=>{if(['filled','hollow'].includes(e.target.value))S.body=e.target.value;saveDisplayPrefs()};$('pane').onchange=e=>{if(['volume','rsi','none'].includes(e.target.value))S.pane=e.target.value;saveDisplayPrefs()};
+ for(const [id,key] of [['pivots','pivots'],['daylevels','dayLevels']])$(id).onclick=()=>{S[key]=!S[key];$(id).classList.toggle('on',S[key]);$(id).setAttribute('aria-pressed',String(S[key]));S.dailyRetryAt=0;refreshPivots();saveDisplayPrefs()};
+ $('reload').onclick=()=>load();$('historybtn').onclick=loadOlder;$('exportjournal').onclick=exportJournal;
+ $('sizeproduct').onchange=()=>{saveSizingPrefs();S.panelKey=null;sched()};$('cashbalance').oninput=()=>{saveSizingPrefs();S.panelKey=null;sched()};
+ addEventListener('offline',sched);addEventListener('online',()=>load());
+ document.addEventListener('visibilitychange',()=>{if(document.hidden===false&&!feedHealth().ready&&S.phase!=='loading')load()});
+}
+
+function chartBars(){return S.chart?.k||S.k}
+function refreshChart(){if(!S.history.length){S.chart=null;return}const k=S.history.concat(S.k).map(b=>({...b}));S.chart={k,...analyze(k)}}
+async function loadOlder(){if(S.historyBusy||!S.k.length||S.history.length>=5000||S.historyDone)return;const epoch=S.epoch,tf=S.tf,sym=S.sym,first=(S.history[0]||S.k[0]).t,limit=Math.min(1000,5000-S.history.length);S.historyBusy=true;S.historyError='';sched();
+ try{const rows=await jsonFetch(`https://api.binance.com/api/v3/klines?symbol=${sym}&interval=${tf}&limit=${limit}&endTime=${first-1}`,S.controller?.signal);if(epoch!==S.epoch)return;
+  if(Array.isArray(rows)&&!rows.length){S.historyDone=true;return}const bars=restBars(rows,tf,first);if(bars.length>limit||bars.some(b=>b.t>=first)||bars[bars.length-1].t+TFMS[tf]!==first)throw Error('History continuity');
+  S.history=bars.concat(S.history);S.historyDone=bars.length<limit;refreshChart();refreshPivots();S.follow=false;const start=Math.max(0,bars.length-S.n*.8);S.off=chartBars().length-S.n-start;clampView();
+ }catch(e){if(epoch===S.epoch&&e.name!=='AbortError')S.historyError='Could not load continuous history. Live data is retained; try again.'}
+ finally{if(epoch===S.epoch){S.historyBusy=false;sched()}}
+}
+// One guarded complete-UTC-day cache for independently enabled day levels and pivots.
+const UTC_DAY=86400000;
+const utcDay=t=>Math.floor(t/UTC_DAY)*UTC_DAY;
+function confirmedAsOf(){const c=S.k[S.closedIndex];return c?.closed===true&&finite(c.t)?c.t+TFMS[S.tf]:null}
+function traditionalPivot(b){const pp=(b.h+b.l+b.c)/3;return{pp,r1:2*pp-b.l,s1:2*pp-b.h,sourceStart:b.t,validFrom:b.t+UTC_DAY,validTo:b.t+2*UTC_DAY}}
+function dailyAt(t){return S.clockTrusted&&finite(t)?S.pivotDays.get(utcDay(t))||null:null}
+function pivotAt(t){const p=dailyAt(t);return p&&[p.pp,p.r1,p.s1].every(finite)?{pp:p.pp,r1:p.r1,s1:p.s1,sourceStart:p.sourceStart,validFrom:p.validFrom,validTo:p.validTo}:null}
+function setDailyStatus(status){if(S.pivotStatus!==status){S.pivotStatus=status;S.dailyRevision++;sched()}}
+function cancelDailyRequest(){if(S.dailyPending){S.pivotSeq++;S.dailyController?.abort();S.dailyPending=null;S.pivotKey=null}}
+function uncoveredDailyRanges(first,last,coverage){let next=first;const missing=[];for(const [a,b] of [...coverage].sort((x,y)=>x[0]-y[0])){if(b<next)continue;if(a>last)break;if(a>next)missing.push([next,Math.min(last,a-1)]);next=Math.max(next,b+1)}if(next<=last)missing.push([next,last]);return missing}
+function mergeDailyCoverage(ranges){const out=[];for(const [a,b] of ranges.sort((x,y)=>x[0]-y[0])){const tail=out.at(-1);if(tail&&a<=tail[1]+1)tail[1]=Math.max(tail[1],b);else if(a<=b)out.push([a,b])}return out}
+function refreshPivots(){ // Retained API name; both consumers share this request/cache lifecycle.
+ if(!S.pivots&&!S.dayLevels){cancelDailyRequest();setDailyStatus('off');return Promise.resolve()}
+ const k=chartBars();if(!k.length)return Promise.resolve();
+ if(!S.clockTrusted){cancelDailyRequest();setDailyStatus('unavailable (server UTC clock unavailable)');return Promise.resolve()}
+ const epoch=S.epoch,sym=S.sym,tf=S.tf,first=Math.max(0,utcDay(k[0].t)-UTC_DAY),asOf=confirmedAsOf();
+ // A midnight close advances validity even before the next opening candle is received.
+ // The trusted server clock still bounds which source days may be requested as complete.
+ const clockDay=utcDay(Date.now()+S.clockOffset),last=Math.min(utcDay(Math.max(k.at(-1).t,asOf??k.at(-1).t))-1,clockDay-1);
+ if(last<first){cancelDailyRequest();setDailyStatus('unavailable (awaiting a complete UTC day)');return Promise.resolve()}
+ const key=[epoch,sym,tf,first,last].join('|');if(S.dailyPending?.key===key)return S.dailyPending.promise;
+ cancelDailyRequest();const missing=uncoveredDailyRanges(first,last,S.dailyCoverage);
+ if(!missing.length){S.pivotKey=key;setDailyStatus(S.pivotDays.size?'ready':'unavailable (complete previous UTC day missing)');return Promise.resolve()}
+ if(Date.now()<S.dailyRetryAt)return Promise.resolve();
+ const seq=++S.pivotSeq,controller=S.dailyController=new AbortController(),parent=S.controller?.signal,abort=()=>controller.abort();
+ if(parent?.aborted)controller.abort();else parent?.addEventListener('abort',abort,{once:true});
+ S.pivotKey=key;const pending=S.dailyPending={seq,key,first,last,promise:null};setDailyStatus('loading previous completed UTC days');
+ const active=()=>S.dailyPending===pending&&seq===S.pivotSeq&&epoch===S.epoch&&sym===S.sym&&tf===S.tf&&(S.pivots||S.dayLevels);
+ pending.promise=(async()=>{try{const additions=new Map();for(const [start,end] of missing){for(let from=start;from<=end;){
+   const to=Math.min(end,from+1000*UTC_DAY-1),rows=await jsonFetch(`https://api.binance.com/api/v3/klines?symbol=${sym}&interval=1d&startTime=${from}&endTime=${to}&limit=1000`,controller.signal);
+   if(!active())return;if(!Array.isArray(rows)||rows.length>1000)throw Error('Invalid daily source');let previous=-Infinity;
+   for(const row of rows){if(!Array.isArray(row)||row.length<7)throw Error('Invalid daily source');const b={t:+row[0],o:+row[1],h:+row[2],l:+row[3],c:+row[4],v:+row[5],end:+row[6]};
+    if(!validBar(b)||b.t%UTC_DAY!==0||b.end!==b.t+UTC_DAY-1||b.t<from||b.end>to||b.t<=previous)throw Error('Incomplete or duplicate daily source');
+    previous=b.t;const p=traditionalPivot(b);additions.set(p.validFrom,{...p,pp:nullable(p.pp),r1:nullable(p.r1),s1:nullable(p.s1),pdh:b.h,pdl:b.l,observedAt:Date.now()});
+   }from=to+1;
+  }}
+  if(!active())return;
+  // Commit atomically. An obsolete/failed page cannot publish a partial new period.
+  for(const [day,p] of additions)if(!S.pivotDays.has(day))S.pivotDays.set(day,p);
+  S.dailyCoverage=mergeDailyCoverage([...S.dailyCoverage,...missing]);S.dailyRetryAt=0;
+  const latestSource=clockDay-UTC_DAY;
+  if(last===clockDay-1&&!S.pivotDays.has(clockDay)){
+   // Publication of the just-completed daily bar can lag midnight; retry only this day.
+   S.dailyCoverage=S.dailyCoverage.flatMap(([a,b])=>a<=latestSource&&b>=latestSource?[[a,latestSource-1],[latestSource+UTC_DAY,b]].filter(([x,y])=>x<=y):[[a,b]]);S.dailyRetryAt=Date.now()+15000;
+  }
+  S.dailyRevision++;setDailyStatus(S.pivotDays.size?'ready':'unavailable (complete previous UTC day missing)');
+ }catch(e){if(!active())return;S.pivotKey=null;S.dailyRetryAt=Date.now()+15000;setDailyStatus('unavailable (daily source request failed)')}
+ finally{parent?.removeEventListener('abort',abort);if(active()){S.dailyPending=null;sched()}}
+ })();return pending.promise;
+}
+const DAILY_LEVELS=[['PDH','pdh','#91d5ff',[9,3],'dayLevels'],['PDL','pdl','#ffd28f',[2,3],'dayLevels'],['PP','pp','#f5c84c',[6,4],'pivots'],['R1','r1','#ff9bad',[6,4],'pivots'],['S1','s1','#81d5ff',[6,4],'pivots']];
+function enabledDailyLevels(p){return p?DAILY_LEVELS.filter(([,key,,,toggle])=>S[toggle]&&finite(p[key])).map(([name,key,color,dash])=>({name,value:p[key],color,dash})):[]}
+function nearestLevels(levels,price,atr){if(!positive(price))return{above:null,below:null,equal:null};
+ const grouped=new Map();for(const level of levels){if(!finite(level.value))continue;if(!grouped.has(level.value))grouped.set(level.value,[]);grouped.get(level.value).push(level.name)}
+ const values=[...grouped.keys()].sort((a,b)=>a-b),above=values.find(v=>v>price),below=values.filter(v=>v<price).at(-1),equal=grouped.has(price)?price:undefined;
+ const describe=value=>{if(value===undefined)return null;const distance=Math.abs(value-price);return{names:grouped.get(value),price:value,distance:nullable(distance),percent:nullable(distance/price*100),atr:positive(atr)?nullable(distance/atr):null}};
+ return{above:describe(above),below:describe(below),equal:describe(equal)};
+}
+function nearestDayContext(){const asOf=confirmedAsOf(),c=S.k[S.closedIndex],price=c?.c,atr=S.atr?.[S.closedIndex],enabled=S.pivots||S.dayLevels;
+ const base={kind:'reference-only-no-score-vote',anchor:'latest-confirmed-close',asOf,price:nullable(price),atr:positive(atr)?atr:null,enabled:{dayLevels:S.dayLevels,pivots:S.pivots},state:'unavailable',above:null,below:null,equal:null,sourceStart:null,validFrom:finite(asOf)?utcDay(asOf):null,validTo:finite(asOf)?utcDay(asOf)+UTC_DAY:null,sourceObservedAt:null};
+ if(!enabled)return{...base,state:'disabled'};if(!finite(asOf)||!positive(price))return base;
+ const p=dailyAt(asOf);if(!p){const source=utcDay(asOf)-UTC_DAY,pending=S.dailyPending;return{...base,state:S.clockTrusted&&pending&&pending.first<=source&&pending.last>=source+UTC_DAY-1?'loading':'unavailable'}}
+ return{...base,...nearestLevels(enabledDailyLevels(p),price,atr),state:'ready',sourceStart:p.sourceStart,validFrom:p.validFrom,validTo:p.validTo,sourceObservedAt:p.observedAt};
+}
+function dayPrice(value){const text=fmt(value);return finite(value)&&Number(text)!==value?String(value):text}
+function dailyContextHTML(v){const number=x=>finite(x)?Number(x.toPrecision(4)).toString():'לא זמין';
+ const row=(label,q)=>`<div class="nearest-row"><span>${label}</span>${q?`<b>${q.names.join(' / ')} · ${dayPrice(q.price)}</b><small>מרחק ${number(q.distance)} · ${number(q.percent)}% · ${number(q.atr)} ATR</small>`:'<b>לא זמין</b>'}</div>`;
+ return `<div class="card" data-level-context="${v.state}" data-context-asof="${v.asOf??''}"><h4>רמות קרובות · סגירה מאושרת</h4>${v.state==='disabled'?'<small>שכבות ההקשר כבויות. אפשר להפעיל Day levels או Pivots; לא נגזרים אותות משכבות נסתרות.</small>':`<small>ייחוס בלבד, ללא יעד חזוי או תוספת לציון. מחיר סגירה: ${finite(v.price)?dayPrice(v.price):'לא זמין'}.</small>${v.state==='loading'?'<small>טוען מקור יום UTC קודם מלא לתקופה החדשה.</small>':v.state!=='ready'?'<small>מקור יום UTC קודם מלא אינו זמין או טרם אומת.</small>':''}${row('מעל',v.above)}${v.equal?row('שווה למחיר',v.equal):''}${row('מתחת',v.below)}<details><summary>מקור ותקפות UTC</summary><small>זמן הסגירה שלפיו נבחרה התקופה: ${finite(v.asOf)?new Date(v.asOf).toISOString():'לא זמין'}; מקור: ${finite(v.sourceStart)?new Date(v.sourceStart).toISOString().slice(0,10):'לא זמין'} · Binance Spot.</small><small>תקפות: ${finite(v.validFrom)?'['+new Date(v.validFrom).toISOString()+', '+new Date(v.validTo).toISOString()+')':'לא זמין'}. בחצות UTC מתחיל יום תקפות חדש גם לפני עדכון נר הפתיחה. עד לאימות המקור הוא אינו ידוע.</small><small>${finite(v.sourceObservedAt)?'המקור אומת בתצפית: '+new Date(v.sourceObservedAt).toISOString():''} ATR חסר או אפס מוצג כלא זמין. הסמן והגלילה אינם משנים את עוגן הסגירה.</small></details>`}</div>`;
+}
+function updateLevelContext(){const v=nearestDayContext(),key=JSON.stringify(v);if(key!==S.levelContextKey){S.levelContextKey=key;$('levelcontext').innerHTML=dailyContextHTML(v)}}
+function dailyLabelLayout(levels,pw,ph,left,right,y){const top=78,bottom=ph-8,maxWidth=Math.min(260,pw-16,right-left-12),measure=text=>{const value=cx.measureText(text)?.width;return finite(value)?value:text.length*6.5};
+ if(maxWidth<64||bottom<top)return{labels:[],overflow:levels.length>0};
+ const points=levels.map(q=>({...q,py:y(q.value)})).filter(q=>finite(q.py)&&q.py>=top&&q.py<=bottom).sort((a,b)=>a.py-b.py||DAILY_LEVELS.findIndex(q=>q[0]===a.name)-DAILY_LEVELS.findIndex(q=>q[0]===b.name));
+ const groups=[];for(const q of points){const group=groups.at(-1);if(group&&q.py-group.at(-1).py<18)group.push(q);else groups.push([q])}
+ let overflow=false;const labels=groups.map(group=>{const names=DAILY_LEVELS.map(q=>q[0]).filter(name=>group.some(q=>q.name===name)),same=group.every(q=>q.value===group[0].value);
+  let text=same?names.join('/')+' '+dayPrice(group[0].value):group.map(q=>q.name+' '+dayPrice(q.value)).join(' · ');
+  if(measure(text)+10>maxWidth){text=names.join('/')+' · inspector';overflow=true;if(measure(text)+10>maxWidth)text='Levels ×'+names.length;if(measure(text)+10>maxWidth)text='×'+names.length}
+  const width=Math.min(maxWidth,measure(text)+10),baseline=Math.max(top,Math.min(bottom,group.reduce((sum,q)=>sum+q.py,0)/group.length)),x=Math.max(left+4,Math.min(pw-width-4,right-width-4));
+  return{text,names,levels:group,width,height:16,x,y:baseline-12,baseline,color:group[0].color};
+ });return{labels,overflow};
+}
+function drawDailySegments(k,g,x,y,line,labelTime){const {pw,ph,cw}=g,metrics=S.chartMetrics;metrics.dailySegments=[];metrics.dailyLabels=[];metrics.dailyLabelOverflow=false;
+ if(!S.clockTrusted||(!S.dayLevels&&!S.pivots))return;
+ for(const p of S.pivotDays.values()){
+  const left=Math.max(0,x((p.validFrom-k[0].t)/TFMS[S.tf])-cw/2),right=Math.min(pw,x((p.validTo-k[0].t)/TFMS[S.tf])-cw/2);if(right<=left)continue;
+  const levels=enabledDailyLevels(p);metrics.dailySegments.push({validFrom:p.validFrom,validTo:p.validTo,left,right,names:levels.map(q=>q.name)});
+  for(const q of levels){const yy=y(q.value);if(yy<0||yy>ph)continue;cx.strokeStyle=q.color;cx.setLineDash(q.dash);line(left,yy,right,yy)}cx.setLineDash([]);
+  if(utcDay(labelTime)!==p.validFrom)continue;cx.font='bold 11px system-ui';const layout=dailyLabelLayout(levels,pw,ph,left,right,y);metrics.dailyLabelOverflow=layout.overflow;
+  for(const q of layout.labels){cx.fillStyle='rgba(19,23,34,.94)';cx.fillRect(q.x,q.y,q.width,q.height);cx.strokeStyle=q.color;cx.strokeRect(q.x,q.y,q.width,q.height);cx.fillStyle=q.color;cx.fillText(q.text,q.x+5,q.baseline);metrics.dailyLabels.push({text:q.text,names:q.names,x:q.x,y:q.y,width:q.width,height:q.height,validFrom:p.validFrom})}
+ }
+}
+function dailyInspector(t){if(!S.dayLevels&&!S.pivots)return'Day levels off · Pivots off';const p=dailyAt(t),levels=enabledDailyLevels(p);
+ if(!p){const source=utcDay(t)-UTC_DAY,pending=S.dailyPending,status=!S.clockTrusted?'unavailable (server UTC clock unavailable)':pending&&pending.first<=source&&pending.last>=source+UTC_DAY-1?'loading complete previous UTC day':S.pivotStatus.startsWith('unavailable')?S.pivotStatus:'unavailable (complete previous UTC day missing)';return`Daily UTC · ${status} · inspected day ${new Date(t).toISOString().slice(0,10)}`}
+ const date=x=>new Date(x).toISOString().slice(0,16)+'Z';return`Daily UTC · source ${new Date(p.sourceStart).toISOString().slice(0,10)} · valid [${date(p.validFrom)}, ${date(p.validTo)}) · ${S.pivots?'Traditional Pivots · ':''}${levels.map(q=>q.name+' '+dayPrice(q.value)).join(' / ')}${S.chartMetrics?.dailyLabelOverflow?' · Merged/compact labels; exact values here':''}`;
+}
+function rsiView(A,index){const value=index>=14?A.rsi?.[index]:null;return Number.isFinite(value)?value:null}
+const PRICE_AXIS=86,TIME_AXIS=28;
+function chartGeometry(){const r=cv.getBoundingClientRect(),W=r.width,H=r.height,vh=S.pane==='none'?0:Math.max(64,H*.22);return{W,H,pw:Math.max(40,W-PRICE_AXIS),ph:Math.max(40,H-vh-TIME_AXIS-10),vh,cw:Math.max(40,W-PRICE_AXIS)/S.n}}
+function viewStart(){return chartBars().length-S.off-S.n}
+function clampView(){S.n=Math.max(35,Math.min(Math.max(150,Math.min(2500,chartBars().length+S.right+8)),S.n));const n=chartBars().length,min=-Math.min(8,S.n*.08),max=Math.max(min,n-Math.min(n,Math.max(8,S.n*.2))),start=Math.max(min,Math.min(max,viewStart()));S.off=n-S.n-start}
+function resetView(){S.n=150;S.off=-S.right;S.follow=true;S.price=null;S.mouse=null;clampView()}
+function goLive(){S.follow=true;S.off=-S.right;clampView();sched()}
+function panBars(amount){S.follow=false;S.off-=amount;clampView();sched()}
+function zoomAt(fraction,factor){const start=viewStart(),anchor=start+fraction*S.n;S.n=Math.max(35,Math.min(Math.max(150,Math.min(2500,chartBars().length+S.right+8)),S.n*factor));S.off=chartBars().length-S.n-(anchor-fraction*S.n);S.follow=false;clampView();sched()}
+function visiblePrices(g=chartGeometry()){if(S.price)return S.price;const k=chartBars(),start=viewStart(),a=Math.max(0,Math.floor(start)),b=Math.min(k.length,Math.ceil(start+S.n));let lo=Infinity,hi=-Infinity;
+ for(let i=a;i<b;i++){lo=Math.min(lo,k[i].l);hi=Math.max(hi,k[i].h)}if(!Number.isFinite(lo)){const c=k[k.length-1]?.c||1;lo=c*.99;hi=c*1.01}const pad=Math.max((hi-lo)*.09,Math.abs(hi)*.0001,1e-8);return[lo-pad,hi+pad];
+}
+function scalePrice(factor,base=visiblePrices()){const middle=(base[0]+base[1])/2,span=Math.max(Math.abs(middle)*1e-6,Math.min(Math.abs(middle)*100,(base[1]-base[0])*factor));S.price=[middle-span/2,middle+span/2];sched()}
+function barTime(i){const k=chartBars();if(!k.length)return Date.now();return i<0?k[0].t+i*TFMS[S.tf]:i>=k.length?k[k.length-1].t+(i-k.length+1)*TFMS[S.tf]:k[i].t}
+function timeText(t,full=false){return new Date(t).toLocaleString('he-IL',{timeZone:S.zone,...(full?{day:'2-digit',month:'2-digit'}:{}),hour:'2-digit',minute:'2-digit',hourCycle:'h23'})}
+function draw(){const k=chartBars(),A=S.chart||S,ci=S.history.length+S.closedIndex,n=k.length,g=chartGeometry(),{W,H,pw,ph,vh,cw}=g,dpr=devicePixelRatio||1;
+ cv.width=Math.max(1,Math.round(W*dpr));cv.height=Math.max(1,Math.round(H*dpr));cx.setTransform(dpr,0,0,dpr,0,0);cx.fillStyle='#131722';cx.fillRect(0,0,W,H);updateLegend();
+ $('livebtn').classList.toggle('on',S.follow);$('autoscale').classList.toggle('on',S.price===null);$('autoscale').textContent=S.price?'Manual scale':'Auto scale';
+ $('chartmeta').textContent=n?`${n.toLocaleString('en-US')} bars · ${S.follow?'Following live':'Reviewing history'}`:'Awaiting data';
+ $('historybtn').disabled=S.historyBusy||!S.k.length||S.history.length>=5000||S.historyDone;$('historybtn').textContent=S.historyBusy?'Loading history…':S.historyDone?'History complete':'History +1,000';$('historynote').hidden=!S.history.length&&!S.historyError;$('historynote').textContent=S.historyError||`${S.history.length.toLocaleString('en-US')} older bars added to chart only. Signal and backtest retain the original ${S.k.length.toLocaleString('en-US')} research bars.`;
+ const last=k[n-1];$('candlebadge').textContent=!last?'Awaiting data':last.closed?'Closed candle':'Developing candle';$('candlebadge').classList.toggle('pending',!!last&&!last.closed);
+ if(n<1){$('contextstatus').textContent=S.pivots||S.dayLevels?'Daily levels · awaiting market data':'Day levels off · Pivots off';$('inspect').textContent='Awaiting candles';cx.fillStyle='#8992a6';cx.font='14px system-ui';cx.fillText(S.feedError?'Could not load data. Change market or refresh.':'Loading market data…',25,50);return}
+ clampView();const start=viewStart(),a=Math.max(0,Math.floor(start)),b=Math.min(n,Math.ceil(start+S.n)),[lo,hi]=visiblePrices(g),span=hi-lo;
+ const x=i=>(i-start+.5)*cw,y=p=>(hi-p)/span*ph,line=(x1,y1,x2,y2)=>{cx.beginPath();cx.moveTo(x1,y1);cx.lineTo(x2,y2);cx.stroke()};
+ S.chartMetrics={...g,start,lo,hi};cx.font='11px system-ui';
+ const tick=nice(lo,hi,Math.max(2,ph/58)),digits=Math.max(0,Math.min(8,-Math.floor(Math.log10(tick))));
+ for(let p=Math.ceil(lo/tick)*tick;p<=hi;p+=tick){cx.strokeStyle='#252a36';line(0,y(p),pw,y(p));cx.fillStyle='#9299a9';cx.fillText(p.toFixed(digits),pw+8,y(p)+4)}
+ const tickBars=Math.max(1,Math.ceil(112/cw)),full=S.n*TFMS[S.tf]>864e5;
+ for(let i=Math.ceil(start/tickBars)*tickBars;i<start+S.n;i+=tickBars){const xx=x(i);if(xx<0||xx>pw)continue;cx.strokeStyle='#222732';line(xx,0,xx,H-TIME_AXIS);cx.fillStyle='#9299a9';cx.fillText(timeText(barTime(i),full),Math.max(2,Math.min(pw-95,xx-25)),H-9)}
+ if(S.l.p){let step=Math.pow(10,Math.floor(Math.log10(Math.max(hi,1e-8)))-1);while(span/step>12)step*=5;cx.strokeStyle='#39404d';cx.setLineDash([2,6]);for(let p=Math.ceil(lo/step)*step;p<hi;p+=step)line(0,y(p),pw,y(p));cx.setLineDash([])}
+ cx.save();cx.beginPath();cx.rect(0,0,pw,ph);cx.clip();
+ const zones=S.l.z?A.z.filter(z=>z.i3>ci&&z.i<b&&z.i<=ci):[];
+ for(const up of [true,false]){const color=up?'38,217,127':'255,77,94';cx.beginPath();for(const z of zones.filter(z=>z.up===up)){const xx=Math.max(0,x(z.i)-cw/2);cx.rect(xx,y(z.hi),pw-xx,y(z.lo)-y(z.hi))}cx.fillStyle=`rgba(${color},.045)`;cx.fill()}
+ for(const z of zones){const xx=Math.max(0,x(z.i)-cw/2),color=z.up?'38,217,127':'255,77,94';cx.strokeStyle=`rgba(${color},.35)`;cx.setLineDash([5,5]);line(xx,y(z.mid),pw,y(z.mid));cx.setLineDash([])}
+ const layers=[[A.e[0],'#ff6b6b'],[A.e[1],'#b28af9'],[A.e[2],'#e5e7eb'],[A.e[3],'#f5c84c'],[A.vw,'#38bdf8'],[A.dop,'#94a3b8']];
+ if(S.l.e)layers.forEach(([values,color],index)=>{if(!values)return;cx.strokeStyle=color;cx.lineWidth=index===1?1.5:1;if(index>=4)cx.setLineDash([3,4]);cx.beginPath();let on=false;for(let i=a;i<b;i++){if(!finite(values[i]))continue;on?cx.lineTo(x(i),y(values[i])):cx.moveTo(x(i),y(values[i]));on=true}cx.stroke();cx.setLineDash([])});cx.lineWidth=1;
+ let maxVolume=1;for(let i=a;i<b;i++)maxVolume=Math.max(maxVolume,k[i].v);
+ for(let i=a;i<b;i++)drawCandle(k[i],x(i),cw,y);
+ if(S.l.m){cx.font='bold 12px system-ui';for(const q of A.sv){if(q.i<a||q.i>=b||q.i>ci)continue;const c=k[q.i];cx.fillStyle='#fb923c';cx.fillText(q.t==='top'?'▼':'▲',x(q.i)-5,q.t==='top'?y(c.h)-7:y(c.l)+14)}
+  cx.font='bold 14px system-ui';for(const q of A.mw){const i=q.confirmedAt;if(i<a||i>=b||i>ci)continue;const replaced=q.supersededAt!==null&&q.supersededAt<=ci;cx.fillStyle=replaced?'#94a3b8':q.t==='W'?'#22e07a':'#ff3b4e';cx.fillText(q.t+(replaced?'×':''),x(i)-5,q.t==='W'?y(q.p)+25:y(q.p)-14)}
+  if(S.sig?.plan&&ci>=a&&ci<b){const p=S.sig.plan;for(const [label,price,color] of [['SL',p.stop,'#ff5d6c'],['TP1',p.tp1,'#32cf91'],['TP2',p.tp2,'#32cf91']]){cx.strokeStyle=color;cx.setLineDash([7,5]);line(0,y(price),pw,y(price));cx.setLineDash([]);cx.fillStyle=color;cx.font='11px system-ui';cx.fillText(label,7,y(price)-4)}}
+ }
+ const labelIndex=S.mouse&&S.mouse.x>=0&&S.mouse.x<pw?Math.floor(start+S.mouse.x/cw):null,labelTime=labelIndex!==null?barTime(labelIndex):S.follow?Math.max(last.t,confirmedAsOf()??last.t):k[Math.max(a,b-1)]?.t??last.t;
+ drawDailySegments(k,g,x,y,line,labelTime);
+ cx.restore();cx.strokeStyle='#303541';line(0,ph+7,pw,ph+7);line(pw,0,pw,H);line(0,H-TIME_AXIS,W,H-TIME_AXIS);
+ cx.save();cx.beginPath();cx.rect(0,ph+8,pw,H-TIME_AXIS-ph-8);cx.clip();
+ if(S.pane==='volume'){for(let i=a;i<b;i++){const c=k[i],height=c.v/maxVolume*Math.max(12,vh-24);cx.fillStyle=col(c);cx.globalAlpha=.9;cx.fillRect(x(i)-Math.min(32,cw*.72)/2,H-TIME_AXIS-height,Math.min(32,cw*.72),height);if(S.volumeTags&&cw>=6&&c.cls>=1){cx.globalAlpha=1;cx.fillStyle='#e9edf5';cx.font='10px system-ui';cx.fillText(c.cls===2?'◆':'●',x(i)-4,H-TIME_AXIS-height-3)}}}
+ if(S.pane==='rsi'){
+  const ry=v=>H-TIME_AXIS-5-v/100*Math.max(1,vh-24);S.chartMetrics.rsiY= {top:ry(100),bottom:ry(0)};
+  for(const level of [35,50,65]){cx.strokeStyle=level===50?'#485268':'#7993bb';cx.setLineDash([3,4]);line(0,ry(level),pw,ry(level));cx.setLineDash([]);cx.fillStyle='#bdcce0';cx.font='10px system-ui';cx.fillText(String(level),pw-22,ry(level)-2)}
+  cx.strokeStyle='#bca5ff';cx.lineWidth=1.5;cx.beginPath();let on=false;
+  for(let i=a;i<b;i++){const value=rsiView(A,i);if(value===null||!k[i].closed){on=false;continue}on?cx.lineTo(x(i),ry(value)):cx.moveTo(x(i),ry(value));on=true}cx.stroke();
+  for(let i=a;i<b;i++){if(k[i].closed||rsiView(A,i)===null)continue;cx.strokeStyle='#ffc77b';cx.setLineDash([4,3]);cx.beginPath();const prev=rsiView(A,i-1);if(prev!==null)cx.moveTo(x(i-1),ry(prev));else cx.moveTo(x(i),ry(rsiView(A,i)));cx.lineTo(x(i),ry(rsiView(A,i)));cx.stroke();cx.setLineDash([])}cx.lineWidth=1;
+ }cx.globalAlpha=1;cx.restore();
+ const yy=y(last.c),priceColor=last.c===last.o?PALETTES[S.palette].flat:last.c>last.o?PALETTES[S.palette].up:PALETTES[S.palette].down;
+ if(yy>=0&&yy<=ph){cx.strokeStyle=priceColor;cx.setLineDash([2,4]);line(0,yy,pw,yy);cx.setLineDash([]);cx.fillStyle=priceColor;cx.fillRect(pw,yy-10,PRICE_AXIS,20);cx.fillStyle='#131722';cx.font='bold 11px system-ui';cx.fillText(fmt(last.c),pw+6,yy+4);cx.fillStyle='#a0a8ba';cx.font='10px system-ui';const remain=Math.max(0,(last.end??last.t+TFMS[S.tf]-1)-(Date.now()+(S.clockOffset||0)));cx.fillText(last.closed?'Closed':Math.floor(remain/6e4)+':'+String(Math.floor(remain%6e4/1e3)).padStart(2,'0'),pw+9,yy+25)}
+ const mouse=S.mouse,hover=mouse&&mouse.x>=0&&mouse.x<pw?Math.floor(start+mouse.x/cw):null,selected=hover!==null?k[hover]:k[Math.max(a,b-1)],info=selected||last;
+ cx.save();cx.beginPath();cx.rect(0,0,pw,65);cx.clip();cx.fillStyle='rgba(19,23,34,.88)';cx.fillRect(0,0,Math.min(pw,690),65);cx.fillStyle='#e2e6ef';cx.font='bold 13px system-ui';cx.fillText(`${S.sym} · ${S.tf} · BINANCE SPOT`,12,19);cx.font='11px system-ui';cx.fillStyle=col(info);cx.fillText(`O ${fmt(info.o)}   H ${fmt(info.h)}   L ${fmt(info.l)}   C ${fmt(info.c)}   Vol ${Math.round(info.v).toLocaleString('en-US')}${info.closed?'':'   · developing'}`,12,37);
+ const avg=hover!==null&&hover>=10?k.slice(hover-10,hover).reduce((s,b)=>s+b.v,0)/10:null;$('inspect').textContent=selected?`${timeText(selected.t,true)} · ${candleName(selected)} · ${selected.closed?'Closed':'Developing'}${A.dayCoverage?.[k.indexOf(selected)]==='partial-first-day'?' · VWAP/DO: partial UTC day':''}${avg>0?' · Vol '+(selected.v/avg*100).toFixed(0)+'% of prior 10-bar average':''}`:hover!==null?'Empty space · no candle at this time':`${timeText(info.t,true)} · ${candleName(info)}`;
+ const infoIndex=selected?k.indexOf(selected):-1,rv=rsiView(A,infoIndex),selectedTime=hover!==null?barTime(hover):S.follow?Math.max(info.t,confirmedAsOf()??info.t):info.t;
+ $('contextstatus').textContent=dailyInspector(selectedTime);
+ const legends=[['EMA13','#ff6b6b'],['EMA50','#b28af9'],['EMA200','#e5e7eb'],['EMA800','#f5c84c'],['VWAP','#38bdf8'],[A.dayCoverage?.[infoIndex]==='partial-first-day'?'DO*':'DO','#94a3b8']];cx.font='10px system-ui';legends.forEach(([name,color],i)=>{cx.fillStyle=color;cx.fillText(name,12+i*66,55)});cx.restore();
+ if(S.pane!=='none'){cx.fillStyle='#d2dcec';cx.font='11px system-ui';cx.fillText(S.pane==='rsi'?`RSI14 ${rv===null?(infoIndex<0?'No candle':'Unavailable · warm-up'):rv.toFixed(2)} · ${selected?(selected.closed?'Closed':'Provisional'):'Unavailable'}`:selected?`Volume ${Math.round(selected.v).toLocaleString('en-US')} · ${selected.closed?'Closed':'Provisional'}`:'Volume unavailable · no candle',8,ph+21)}
+ if(mouse&&mouse.x>=0&&mouse.x<pw&&mouse.y>=0&&mouse.y<H-TIME_AXIS){const xx=x(hover);cx.strokeStyle='#7d869a';cx.setLineDash([4,4]);line(xx,0,xx,H-TIME_AXIS);if(S.pane==='rsi'&&mouse.y>ph+22){const ry=S.chartMetrics.rsiY,value=Math.max(0,Math.min(100,(ry.bottom-mouse.y)/(ry.bottom-ry.top)*100));line(0,mouse.y,pw,mouse.y);cx.fillStyle='#cfc2ff';cx.font='11px system-ui';cx.fillText(value.toFixed(1),pw+6,mouse.y+4)}if(mouse.y<ph){line(0,mouse.y,pw,mouse.y);cx.setLineDash([]);cx.fillStyle='#455065';cx.fillRect(pw,mouse.y-10,PRICE_AXIS,20);cx.fillStyle='#fff';cx.font='11px system-ui';cx.fillText(fmt(hi-mouse.y/ph*span),pw+6,mouse.y+4)}cx.setLineDash([]);const width=156,left=Math.max(0,Math.min(pw-width,xx-width/2));cx.fillStyle='#363e50';cx.fillRect(left,H-TIME_AXIS,width,TIME_AXIS);cx.fillStyle='#fff';cx.font='11px system-ui';cx.fillText(timeText(barTime(hover),true),left+7,H-9)}
+}
+let drag=null;
+function bindChart(){
+ cv.onwheel=e=>{e.preventDefault();const g=chartGeometry(),r=cv.getBoundingClientRect(),xx=e.clientX-r.left;if(xx>=g.pw){scalePrice(Math.exp(e.deltaY*.002));return}if(e.shiftKey||Math.abs(e.deltaX||0)>Math.abs(e.deltaY)){panBars((e.deltaX||e.deltaY)/g.cw);return}zoomAt(Math.max(0,Math.min(1,xx/g.pw)),Math.exp(Math.max(-1,Math.min(1,e.deltaY/250))))};
+ cv.onpointerdown=e=>{if(e.button!==0)return;cv.focus();const r=cv.getBoundingClientRect(),g=chartGeometry(),xx=e.clientX-r.left,yy=e.clientY-r.top;drag={id:e.pointerId,x:e.clientX,y:e.clientY,start:viewStart(),n:S.n,price:visiblePrices(),mode:xx>=g.pw?'price':yy>=g.H-TIME_AXIS?'time':'pan'};cv.setPointerCapture?.(e.pointerId);cv.style.cursor='grabbing';e.preventDefault()};
+ cv.onpointermove=e=>{const r=cv.getBoundingClientRect(),g=chartGeometry();S.mouse={x:e.clientX-r.left,y:e.clientY-r.top};if(drag){if(drag.mode==='price')scalePrice(Math.exp((e.clientY-drag.y)/160),drag.price);else if(drag.mode==='time'){const anchor=drag.start+drag.n/2;S.n=Math.max(35,Math.min(Math.max(150,Math.min(2500,chartBars().length+S.right+8)),drag.n*Math.exp((drag.x-e.clientX)/250)));S.off=chartBars().length-S.n-(anchor-S.n/2);S.follow=false;clampView()}else{S.follow=false;S.off=chartBars().length-S.n-(drag.start-(e.clientX-drag.x)/g.cw);clampView()}}else cv.style.cursor=S.mouse.x>=g.pw?'ns-resize':S.mouse.y>=g.H-TIME_AXIS?'ew-resize':'crosshair';sched()};
+ cv.onpointerup=e=>{if(drag&&e.pointerId===drag.id){cv.releasePointerCapture?.(e.pointerId);drag=null;cv.style.cursor='crosshair'}};
+ cv.onpointercancel=()=>{drag=null};cv.onpointerleave=()=>{if(!drag){S.mouse=null;sched()}};
+ cv.ondblclick=e=>{const r=cv.getBoundingClientRect();if(e.clientX-r.left>=chartGeometry().pw)S.price=null;else resetView();sched()};
+ cv.onkeydown=e=>{let handled=true;if(e.key==='ArrowLeft')panBars(-S.n*.15);else if(e.key==='ArrowRight')panBars(S.n*.15);else if(e.key==='Home'){S.off=chartBars().length-S.n;S.follow=false;clampView();sched()}else if(e.key==='End')goLive();else if(e.key==='+'||e.key==='=')zoomAt(.5,.8);else if(e.key==='-')zoomAt(.5,1.25);else if(e.key==='Escape'){S.price=null;sched()}else handled=false;if(handled)e.preventDefault()};
+ $('back').onclick=()=>panBars(-S.n*.2);$('forward').onclick=()=>panBars(S.n*.2);$('zoomin').onclick=()=>zoomAt(.5,.8);$('zoomout').onclick=()=>zoomAt(.5,1.25);$('reset').onclick=()=>{resetView();sched()};$('livebtn').onclick=goLive;$('autoscale').onclick=()=>{S.price=null;sched()};$('tz').onchange=e=>{S.zone=e.target.value;saveDisplayPrefs()};
+}
+
+function nominalSizing(plan,side,account,riskPercent,scenario,cashInput){
+ const out={kind:'nominal-stop-distance-only',state:'unavailable',side,account:nullable(account),riskPercent:nullable(riskPercent),scenario,cash:cashInput===''||cashInput==null?null:nullable(+cashInput),quantity:null,riskBudget:null,notional:null,notionalToAccount:null,affordability:'unknown',executableQuantity:null,venueFilters:'not-checked',accountPermissions:'not-checked',costs:'not-included; account fees/slippage/gaps/funding unconfigured'};
+ if(!plan){out.state='no-plan';return out}if(!positive(account)||!positive(riskPercent)||riskPercent>100||![plan.entry,plan.stop].every(positive)||!positive(Math.abs(plan.entry-plan.stop))){out.state='invalid-input';return out}
+ const budget=account*riskPercent/100,quantity=budget/Math.abs(plan.entry-plan.stop),notional=quantity*plan.entry,ratio=notional/account;
+ if(![budget,quantity,notional,ratio].every(positive)){out.state='invalid-arithmetic';return out}
+ Object.assign(out,{state:'nominal',riskBudget:budget,quantity,notional,notionalToAccount:ratio});
+ if(scenario!=='cash-spot-long')out.affordability='scenario-unconfigured';else if(side!=='LONG')out.affordability='unsupported-short';else if(cashInput===''||cashInput==null)out.affordability='cash-unconfigured';else if(!finite(+cashInput)||+cashInput<0)out.affordability='invalid-cash';else out.affordability=notional<=+cashInput?'covered-before-costs':'insufficient-cash';return out;
+}
+function loadSizingPrefs(){try{const saved=JSON.parse(localStorage['hybridTerminal.sizing.v1']||'null');if(saved?.schemaVersion===1){if(['unconfigured','cash-spot-long'].includes(saved.scenario))$('sizeproduct').value=saved.scenario;if(typeof saved.cash==='string')$('cashbalance').value=saved.cash}}catch(e){}if(!['unconfigured','cash-spot-long'].includes($('sizeproduct').value))$('sizeproduct').value='unconfigured'}
+function saveSizingPrefs(){try{localStorage['hybridTerminal.sizing.v1']=JSON.stringify({schemaVersion:1,scenario:$('sizeproduct').value,cash:$('cashbalance').value})}catch(e){}}
+function sizingSnapshot(){return nominalSizing(S.sig?.plan,S.sig?.side,+$('acc').value,+$('rk').value,$('sizeproduct').value,$('cashbalance').value)}
+function sizingHTML(v){const affordability={'scenario-unconfigured':'תרחיש מוצר/מזומן לא מוגדר.','unsupported-short':'SHORT הוא מחקר כיווני בלבד; אינו מכירת Spot ללא השאלה.','cash-unconfigured':'יתרת מזומן ב־USDT לא הוגדרה.','invalid-cash':'יתרת המזומן אינה תקינה.','insufficient-cash':'אין מספיק מזומן לכיסוי השווי הנומינלי, גם לפני עלויות.','covered-before-costs':'המזומן המונח מכסה את השווי לפני עלויות בלבד; אין אישור ביצוע.','unknown':'כיסוי מזומן לא זמין.'};
+ return `<div data-sizing-state="${v.state}" data-affordability="${v.affordability}">${v.state==='nominal'?`<div class="row"><span>תקציב סיכון נומינלי</span><b>${v.riskBudget.toFixed(2)} USDT</b></div><div class="row"><span>כמות גאומטרית בלבד</span><b>${v.quantity.toPrecision(6)}</b></div><div class="row"><span>שווי נומינלי</span><b>${v.notional.toFixed(2)} USDT</b></div><div class="row"><span>שווי / הון · יחס בלבד</span><b>${v.notionalToAccount.toFixed(1)}×</b></div>`:'<small>נדרשת תוכנית תקינה, יתרה חיובית וסיכון גדול מ־0 ועד 100%. האומדן אינו זמין.</small>'}<small>${affordability[v.affordability]}</small><small>אומדן מרחק סטופ בלבד, ללא עמלות, החלקה או פערים; אינו תקרת הפסד. אין מודל מימון או השאלה. כמות לביצוע אינה מחושבת; מסנני הבורסה והרשאות החשבון לא נבדקו.</small></div>`;
+}
+function selectionText(g){if(!g.selection)return'אבחון לא זמין';const map={'data-unavailable':'נתונים חסרים או לא תקינים לפעולה.','below-threshold':'הכיוון שנבחר מתחת לסף הציון.','no-target':'לכיוון שנבחר אין וקטור יעד מתאים.','invalid-geometry':'גאומטריית המחיר אינה כשירה.','eligible':'הכיוון שנבחר עומד בתנאי המודל.','legacy-selection-suppresses-other':'כלל הבחירה גרם להמתנה: הכיוון האחר כשיר, אך אינו מחליף אוטומטית את הכיוון שנבחר.'};return(g.selection.tied?'שוויון בציונים: SHORT נבחר לפני בדיקת כשירות. ':'')+(map[g.selection.reason]||'אבחון לא זמין')}
+function candidateHTML(g,preview=false){if(!g.candidates)return'';const yes=v=>v?'כן':'לא';return `<details data-diagnostics="${preview?'provisional':'confirmed'}"><summary>מועמדים: LONG ${g.candidates.LONG.score}/5 · SHORT ${g.candidates.SHORT.score}/5</summary><small>זהו מספר תנאים, לא הסתברות הצלחה. נשמר כלל הציון הגבוה, עם SHORT בשוויון, לפני בדיקת יעד.</small>${['LONG','SHORT'].map(side=>{const c=g.candidates[side];return `<div class="card" data-candidate-side="${side}" data-eligible="${c.eligible}"><b>${side} · ${c.score}/5</b><small>יעד זמין: ${yes(c.targetAvailable)} · גאומטריה כשירה: ${yes(c.geometryEligible)} · כשיר: ${yes(c.eligible)}</small>${c.items.map(x=>`<small>${x[1]?'✔':'✗'} ${x[0]}</small>`).join('')}</div>`}).join('')}<small data-validity="${g.validity.ready}">${g.validity.ready?'נתונים כשירים לחישוב':'לא זמין לפעולה: '+g.validity.reasons.map(r=>({'warm-up':'חימום חסר','invalid-OHLCV':'OHLCV לא תקין','ATR-unavailable-or-zero':'ATR חסר או אפס','RSI-unavailable':'RSI לא זמין','volume-zero-reference':'ייחוס נפח אפס','volume-zero-volume':'נפח אפס','volume-warm-up':'חימום נפח חסר','volume-invalid-data':'נתוני נפח לא תקינים','volume-invalid-arithmetic':'חישוב נפח לא סופי','invalid-arithmetic':'חישוב לא סופי'}[r]||'שגיאת נתונים')).join(' · ')}</small></details>`}
+function researchExport(){const ci=S.closedIndex,c=S.k[ci];return{schemaVersion:1,applicationVersion:APP_VERSION,ruleVersion:RULE_VERSION,executionVersion:EXECUTION_VERSION,exportedAt:new Date().toISOString(),source:'BINANCE SPOT',mode:'RESEARCH / SIMULATION',symbol:S.sym,timeframe:S.tf,confirmedCloseTime:c?c.t+TFMS[S.tf]:null,confirmedCandidate:S.sig,provisional:S.preview?{candleOpenTime:S.k.at(-1).t,candidate:S.preview}:null,statistics:S.bt,presentation:S.bt?{he:statisticsText(S.bt,true),en:statisticsText(S.bt)}:null,sizing:sizingSnapshot(),assumptions:{roundTripFeeEntryNotional:.001,feeScope:'historical baseline assumption; not live account fees',execution:'next open; gap stops at open; stop-first; targets at limit; no extra slippage; max 120 bars',drawdownBasis:'realized closed-trade net R, not account equity',rsiPolicy:RSI_POLICY},coverage:{firstResearchCandle:S.k[0]?.t??null,closedBars:ci+1,utcDay:S.dayCoverage?.[ci]??'unavailable',vwapDefinition:'HLC3 weighted by Binance spot base volume; UTC reset'},levelContext:nearestDayContext(),scope:'Current research snapshot, not an order approval, immutable dataset or execution ledger'};}
+function exportResearch(){const url=URL.createObjectURL(new Blob([JSON.stringify(researchExport(),null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=`hybrid-research-${new Date().toISOString().slice(0,10)}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)}
+function panel(){updateSystemUI();updateLevelContext();const g=S.sig,z=S.st,b=S.bt,h=S.htf;if(!g||!b){$('pn').innerHTML='<div class="card"><h4>אות מאושר · Binance Spot · מחקר / סימולציה</h4><small>ממתין לנתונים ולנרות סגורים.</small></div>';$('pn2').innerHTML='';$('szo').innerHTML='';S.rep='Research unavailable · awaiting closed candles';return}
+ const panelKey=[S.epoch,S.analysisRevision,h?.t,h?.b,S.htfError,S.zone,S.follow,$('acc').value,$('rk').value,$('sizeproduct').value,$('cashbalance').value,S.dayLevels,S.pivots,S.dailyRevision].join('|');if(panelKey===S.panelKey)return;S.panelKey=panelKey;
+ const cl=g.side==='LONG'?'L':g.side==='SHORT'?'S':'W',p=g.plan,hb=h?(h.b>0?'עולה':h.b<0?'יורדת':'צדדית'):S.htfError?'לא זמין':'טוען…',ctr=p&&h&&((g.short&&h.b>0)||(!g.short&&h.b<0)),pp=(x,y)=>positive(y)&&finite(x)?(Math.abs(x-y)/y*100).toFixed(2)+'%':'לא זמין',closedCount=S.closedIndex+1,confirmedTime=S.k[S.closedIndex].t+TFMS[S.tf],st=statisticsText(b,true),en=statisticsText(b),size=sizingSnapshot();
+ $('pn').innerHTML=`<div class="card"><h4>אות מאושר · ${S.sym} · ${S.tf}</h4><small>Binance Spot · מחקר / סימולציה</small><div class="sig ${cl}">${g.side==='WAIT'?'המתן':g.side} <span style="font-size:13px;color:var(--m)">${g.score}/5 · נבדק: ${g.short?'שורט':'לונג'}</span></div><small>סגירת הנר המאושר: ${timeText(confirmedTime,true)} · ${S.zone==='UTC'?'UTC':'שעון ישראל'}</small><small>${selectionText(g)}</small>${g.items.map(i=>`<div class="row"><span class="${i[1]?'ok':'no'}">${i[1]?'✔':'✗'} ${i[0]}</span></div>`).join('')}${candidateHTML(g)}</div>`
+ +(S.preview?`<div class="card preview"><h4>נר מתהווה · בדיקה זמנית</h4><div class="row"><span>${S.preview.side==='WAIT'?'תנאים חלקיים':S.preview.side}</span><b>${S.preview.score}/5</b></div><small>פתיחת הנר המתהווה: ${timeText(S.k.at(-1).t,true)}. עשוי להשתנות עד הסגירה; אינו מחליף את המועמד המאושר, מפיק התראה או תוכנית מאושרת.</small>${candidateHTML(S.preview,true)}</div>`:'')
+ +(p?`<div class="card"><h4>תוכנית מחקר על בסיס נר סגור</h4><div class="row"><span>מחיר סגירה</span><b>${fmt(p.entry)}</b></div><div class="row"><span>סטופ (${pp(p.stop,p.entry)})</span><b class="S">${fmt(p.stop)}</b></div><div class="row"><span>יעד 1 · מגע (${pp(p.tp1,p.entry)})</span><b class="L">${fmt(p.tp1)}</b></div><div class="row"><span>יעד 2 · 50% (${pp(p.tp2,p.entry)})</span><b class="L">${fmt(p.tp2)}</b></div><div class="row"><span>R:R ליעד 2</span><b>${finite(p.rr)?p.rr.toFixed(2):'לא זמין'}</b></div>${ctr?`<small style="color:#fbbf24">⚠ נגד המגמה ב-${h.tf}.</small>`:''}</div>`:'');
+ $('szo').innerHTML=sizingHTML(size);
+ const recovery=(s,he=false)=>s.n?`${s.t}% / ${s.m}% / ${s.f}%`:(he?'לא זמין':'Unavailable');
+ S.rep=[`Hybrid terminal ${APP_VERSION} report · BINANCE SPOT · RESEARCH / SIMULATION · ${S.sym} ${S.tf} · ${new Date().toISOString()}`,`Confirmed candle close: ${new Date(confirmedTime).toISOString()}; chart timezone ${S.zone}; chart ${S.follow?'following live':'panned/zoomed (analysis remains current)'}`,`Signal: ${g.side} score ${g.score}/5 (min ${S.min}); rule ${RULE_VERSION}; condition count, not probability; HTF ${h?h.tf+' '+hb:'n/a'} (closed candles)`,...g.items.map(i=>(i[1]?'[x] ':'[ ] ')+i[0]),`Candidates: ${JSON.stringify(g.candidates)}; selection ${JSON.stringify(g.selection)}; validity ${JSON.stringify(g.validity)}`,p?`Plan: signal close ${fmt(p.entry)} SL ${fmt(p.stop)} TP1 ${fmt(p.tp1)} TP2 ${fmt(p.tp2)} RR ${finite(p.rr)?p.rr.toFixed(2):'Unavailable'}`:'Plan: none',`Reference day-level context (not a forecast/score): ${JSON.stringify(nearestDayContext())}`,`Sizing (nominal geometry only, not executable): ${JSON.stringify(size)}`,`Backtest (${closedCount} closed candles, entry next open, gap stops at open, SL-first, ${EXECUTION_VERSION}, round-trip fee 0.1% entry notional baseline assumption, not live account fees, max 120 bars): N ${b.N}, state ${b.state}, win ${en.win} (Wilson 95% CI ${en.interval}), mean net R ${en.mean}, PF ${en.pf}, positive net R ${en.gains}, loss magnitude net R ${en.losses}, realized closed-trade net-R drawdown ${en.dd}, TP1 touch ${en.tp1}`,`Statistics JSON: ${JSON.stringify({state:b.state,N:b.N,wr:b.wr,lo:b.lo,hi:b.hi,pf:b.pf,pfState:b.pfState,avg:b.avg,dd:b.dd})}`,`UTC day coverage: ${S.dayCoverage?.[S.closedIndex]||'unavailable'}; VWAP HLC3 / spot base volume; partial DO is first loaded open only; RSI ${RSI_POLICY}`,`Vector recovery touch/mid/full green: n=${z[0].n} ${recovery(z[0])}; red: n=${z[1].n} ${recovery(z[1])}`].join('\n');
+ $('pn2').innerHTML=`<div class="card"><h4>הקשר · נרות סגורים</h4><div class="row"><span>מגמה ב-${h?h.tf:'…'}</span><b class="${h&&h.b>0?'L':h&&h.b<0?'S':'W'}">${hb}</b></div>${h?`<small>סגירת הקשר: ${timeText(h.t+TFMS[h.tf],true)}</small>`:''}<div class="row"><span>וקטורים פתוחים (ירוק / אדום)</span><span><b class="L">${Number.isInteger(g.g)?g.g:'לא זמין'}</b> / <b class="S">${Number.isInteger(g.r)?g.r:'לא זמין'}</b></span></div><details><summary>כיסוי יומי והגדרות חישוב</summary><small>${S.dayCoverage?.[S.closedIndex]==='from-UTC-open'?'הנתונים טעונים מפתיחת היום ב־UTC עד הנר הנבחר.':'היום הראשון טעון חלקית; DO* הוא פתיחת הנר הראשון שנטען, לא פתיחת היום המאומתת.'} VWAP מחושב מ־HLC3 משוקלל בנפח בסיס Binance Spot ומתאפס ב־UTC. ${finite(S.vw?.[S.closedIndex])?'':'VWAP לא זמין ללא נפח מצטבר חיובי.'}</small><small>RSI14 דורש 14 שינויים; אפס רווח ואפס הפסד הוא לא זמין, ללא הצבת 50. זו מדיניות מקומית ולא התאמה מאומתת ל־Pine.</small></details></div>
+ <div class="card" data-statistics-state="${b.state}"><h4>בדיקה היסטורית · ${closedCount} נרות סגורים · ציון ≥${S.min}</h4><div class="row"><span>עסקאות סגורות</span><b>${b.N} (לונג ${b.L.n} · שורט ${b.S.n})</b></div>${b.state==='invalid-data'||b.state==='invalid-outcomes'?'<small>סטטיסטיקה לא זמינה: נתונים או חישובי תוצאות אינם תקינים.</small>':!b.N?'<small>אין עסקאות בהיסטוריה הטעונה לפי הסף הנבחר. שיעור רווח וטווח ביטחון אינם זמינים.</small>':''}<div class="row"><span>שיעור עסקאות רווחיות</span><b data-stat="win">${st.win}</b></div><div class="row"><span>Wilson 95%</span><b data-stat="interval">${st.interval}</b></div><div class="row"><span>ממוצע R נטו</span><b data-stat="mean">${st.mean}</b></div><div class="row"><span>Profit Factor</span><b data-stat="pf">${st.pf}</b></div><small>סך R נטו חיובי: ${st.gains} · גודל הפסדים ב־R נטו: ${st.losses}</small><div class="row"><span>ירידה ממומשת · עסקאות סגורות</span><b data-stat="dd">${st.dd}</b></div><small>מצטבר R נטו; אינו drawdown של שווי חשבון או שיערוך פוזיציות פתוחות.</small><div class="row"><span>מגע ביעד 1</span><b>${st.tp1}</b></div>${b.N?'<canvas id="eq"></canvas>':''}${b.N>0&&b.N<30?'<small style="color:#fbbf24">⚠ מדגם קטן (פחות מ־30); הטווח רחב.</small>':''}<small>כניסה בפתיחת הנר הבא; פער דרך סטופ מתמלא בפתיחה ללא החלקה נוספת; סטופ קודם ליעד. עלות הבסיס ההיסטורית: 0.1% משווי הכניסה לסיבוב, לא עמלת חשבון ידועה. עד 120 נרות. מודל: ${EXECUTION_VERSION}.</small></div>
+ <div class="card"><h4>התאוששות וקטורים · תיאור ההיסטוריה</h4><small>זמני מעקב שונים; חציון רק לאזורים שהגיעו ל־50%.</small>${[['ירוקים',z[0]],['אדומים',z[1]]].map(([t,s])=>`<small>${t} (N=${s.n}) · מגע / חצי / מלא: ${recovery(s,true)} · חציון נרות ל־50%: ${finite(s.med)?s.med:'לא זמין'}</small>`).join('')}</div>
+ <button id="cp" style="width:100%">📋 העתק דוח</button><button id="exportresearch" style="width:100%;margin-top:6px">הורד תמונת מחקר JSON</button>`;
+ const ec=$('eq');if(ec&&b.cur.length>1){const w=ec.width=ec.clientWidth*2,hh=ec.height=120,c2=ec.getContext('2d'),mn=Math.min(0,...b.cur),mx=Math.max(.01,...b.cur),Y=v=>hh-(v-mn)/(mx-mn)*(hh-8)-4;c2.strokeStyle='#555';c2.beginPath();c2.moveTo(0,Y(0));c2.lineTo(w,Y(0));c2.stroke();c2.strokeStyle='#38bdf8';c2.lineWidth=2;c2.beginPath();b.cur.forEach((v,i)=>{const X=i/(b.cur.length-1)*w;i?c2.lineTo(X,Y(v)):c2.moveTo(X,Y(v))});c2.stroke()}
+}
+let q=0;function sched(){if(!q){q=1;requestAnimationFrame(()=>{q=0;draw();panel()})}}
+$('sym').onchange=e=>{S.sym=e.target.value;load()};
+document.querySelectorAll('[data-tf]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tf]').forEach(x=>x.classList.remove('on'));b.classList.add('on');S.tf=b.dataset.tf;load()});
+S.l={z:1,e:1,p:1,m:1};S.hv=null;
+document.querySelectorAll('[data-l]').forEach(b=>b.onclick=()=>{S.l[b.dataset.l]=S.l[b.dataset.l]?0:1;b.classList.toggle('on');sched()});
+$('hq').onclick=()=>$('hp').hidden=!$('hp').hidden;$('hp').onclick=e=>{if(e.target.id==='hp'||e.target.tagName==='BUTTON')$('hp').hidden=true};
+bindChart();
+S.min=3;S.al=false;initJournal();loadDisplayPrefs();loadSizingPrefs();bindSystem();
+$('ms').onchange=e=>{S.min=+e.target.value;calc();sched()};
+$('bl').onclick=()=>{S.al=!S.al;$('bl').classList.toggle('on',S.al);if(S.al&&window.Notification&&Notification.permission==='default')Notification.requestPermission()};
+try{$('acc').value=localStorage['hybridTerminal.account']||localStorage.acc||1000;$('rk').value=localStorage['hybridTerminal.risk']||localStorage.rk||1}catch(e){}
+['acc','rk'].forEach(i=>$(i).oninput=()=>{try{localStorage[i==='acc'?'hybridTerminal.account':'hybridTerminal.risk']=$(i).value}catch(e){}sched()});
+document.addEventListener('click',e=>{if(e.target.id==='exportresearch'){exportResearch();return}if(e.target.id==='cp'){navigator.clipboard.writeText(S.rep);e.target.textContent='✔ הועתק'}});
+setInterval(()=>{refreshPivots();sched()},1000);
+addEventListener('resize',sched);load();
+</script></body></html>

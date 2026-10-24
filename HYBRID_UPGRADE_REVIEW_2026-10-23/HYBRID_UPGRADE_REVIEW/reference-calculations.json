@@ -1,0 +1,32 @@
+{
+  "scope": "Illustrative reference arithmetic; not historical performance of Hybrid System.",
+  "twoOutcomeExample": {
+    "grossWinR": 2,
+    "grossLossR": -1,
+    "costPerOutcomeR": 0.1,
+    "netWinR": 1.9,
+    "netLossR": -1.1,
+    "breakEvenWinRate": 0.3666666666666667,
+    "hypotheticalWinRate": 0.4,
+    "expectedNetR": 0.09999999999999998
+  },
+  "wilsonExample": {
+    "wins": 55,
+    "trials": 100,
+    "z": 1.96,
+    "lower": 0.45244427031643447,
+    "upper": 0.6438562489359654,
+    "assumption": "Binomial example with independent Bernoulli trials; not a correction for dependent trading outcomes."
+  },
+  "sizingExample": {
+    "equityQuote": 1000,
+    "riskFraction": 0.01,
+    "entry": 100,
+    "stop": 99.9,
+    "nominalRiskBudget": 10,
+    "nominalQuantityApprox": 100,
+    "nominalNotionalApprox": 10000,
+    "cashOnlyLongMaximumQuantityIgnoringCostsAndVenueRounding": 10,
+    "note": "Costs and venue constraints reduce the cash-only ceiling. A stop gap can exceed planned loss."
+  }
+}

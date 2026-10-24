@@ -1,0 +1,2 @@
+PASS: actual browser statistics states, Hebrew values, copied report (clipboard test double), actual JSON downloads and null empty intervals agree for five outcome cases.
+PASS: both-side conflict diagnostics retain WAIT, explicit cash-only assumption and nominal sizing labels, desktop/390px layouts, Help, preferences and untouched journal on sizing changes; no console/page errors. All feed/strategy fixtures in this suite are synthetic.

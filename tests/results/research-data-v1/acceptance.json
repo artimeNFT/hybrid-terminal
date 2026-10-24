@@ -1,0 +1,84 @@
+{
+  "applicationVersion": "0.4.3",
+  "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "toolVersion": "1.0.0",
+  "schemaVersion": 1,
+  "finalToolSha256": "7200e575ba74206dc70a82cdfb7159e9d9596fc5d01e8b0c75215ce30d30d1c5",
+  "acquisitionToolSha256": "9f3348962cbe9ba77223eb127ba201fb3484bcec774116ea5fc332a8f22bbdec",
+  "checkedAt": "2026-10-24T05:50:39.762937+00:00",
+  "fullAcquisitionCommand": [
+    "node",
+    "research/klines.cjs",
+    "acquire",
+    "--symbol",
+    "BTCUSDT",
+    "--timeframe",
+    "5m",
+    "--start",
+    "2026-07-01T00:00:00Z",
+    "--end",
+    "2026-10-01T00:00:00Z",
+    "--out",
+    "research/datasets/btcusdt-5m-2026-q3.json"
+  ],
+  "dataset": "research/datasets/btcusdt-5m-2026-q3.json",
+  "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+  "quality": {
+    "state": "complete",
+    "rowCount": 26496,
+    "uniqueTimestampCount": 26496,
+    "validUniqueRows": 26496,
+    "expectedRows": 26496,
+    "eligibleRowsAtCutoff": 26496,
+    "excludedDevelopingOrFutureRows": 0,
+    "missingRows": 0,
+    "duplicateRows": 0,
+    "conflictingTimestamps": 0,
+    "duplicates": [],
+    "gaps": [],
+    "coverage": {
+      "firstOpenTime": 1782864000000,
+      "lastOpenTime": 1790812500000,
+      "endExclusive": 1790812800000,
+      "contiguous": true
+    },
+    "issueCount": 0,
+    "issues": [],
+    "issuesTruncated": false
+  },
+  "acquisition": {
+    "baseUrl": "https://data-api.binance.vision",
+    "startedAt": "2026-10-24T05:42:56.430Z",
+    "finishedAt": "2026-10-24T05:43:41.287Z",
+    "cutoffServerTime": 1792820581498,
+    "effectiveEndExclusive": 1790812800000,
+    "pages": 27,
+    "resumes": 0
+  },
+  "requestSummary": {
+    "count": 28,
+    "allHttp200": true,
+    "retries": 0
+  },
+  "repeatComparison": {
+    "identical": true,
+    "firstHash": "2912a020aaff86d529f1cc5af148478c48bf99c617c84a9db89b93abb166e34c",
+    "secondHash": "2912a020aaff86d529f1cc5af148478c48bf99c617c84a9db89b93abb166e34c",
+    "added": [],
+    "removed": [],
+    "changed": [],
+    "firstQuality": "complete",
+    "secondQuality": "complete"
+  },
+  "tests": {
+    "deterministicCases": 12,
+    "existingNodeSuites": [
+      "ui-smoke",
+      "navigation"
+    ],
+    "offlineNodeDatasets": 3,
+    "independentPythonDatasets": 3,
+    "browserRerun": false
+  },
+  "note": "The archived acquisition tool predates the final immediate-resume pacing refinement; canonical normalization is unchanged. All final offline/fixture checks used the final tool."
+}

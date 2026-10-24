@@ -1,0 +1,33 @@
+{
+  "reviewDate": "2026-10-23",
+  "applicationVersionReviewed": "0.4.0",
+  "applicationSourceModified": false,
+  "baselineNormalizedSha256": "0593c0096957d295628d267f1f3b16dd90a6478832d61bf39d2e9ed1959bc7d9",
+  "files": [
+    {
+      "name": "NEXT_CODEX_PROMPT_EN.md",
+      "bytes": 8324,
+      "sha256": "ab3b83cd17a61961cc894e39c4c34e6eedb5d634d29afe8d1f43cc4c5cd6005e"
+    },
+    {
+      "name": "REVIEW_AND_ROADMAP.md",
+      "bytes": 18359,
+      "sha256": "68e88971f2093b305679ab661853d28a3f4b04bac4dff1161eb8bee405960acc"
+    },
+    {
+      "name": "audit-040.cjs",
+      "bytes": 5073,
+      "sha256": "c51e23312323f67780d04bef8b6d609214f9dd8438d4d1bd1534ecb438df6487"
+    },
+    {
+      "name": "findings.actual.json",
+      "bytes": 1931,
+      "sha256": "7668b6379ab6b3c75a5dbcf7e7230c768bdd9e40182946f38ae7dc18c99bf07b"
+    },
+    {
+      "name": "reference-calculations.json",
+      "bytes": 1007,
+      "sha256": "9bea9cf5da1ecc3264edc313f282e8b9e7f9e643c350a6029b2ab9d749312e27"
+    }
+  ]
+}

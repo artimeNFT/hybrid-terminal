@@ -1,0 +1,4 @@
+PASS layout desktop {"width":1440,"height":1000,"canvasHeight":814}
+PASS layout narrow {"width":430,"height":1000,"canvasHeight":433}
+PASS layout phone {"width":390,"height":844,"canvasHeight":328.59375}
+PASS: actual Chromium/Canvas, independent appearance controls, synchronized RSI, daily pivot labels, desktop/430/390px layouts, navigation, Hebrew Help/panel, storage restoration, provisional WebSocket and older history; no page/console errors. Network data mocked.

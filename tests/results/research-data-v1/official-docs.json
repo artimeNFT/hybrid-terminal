@@ -1,0 +1,11 @@
+{
+  "checkedOn": "2026-10-24",
+  "sources": [
+    "https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/rest-api/market#klinecandlestick-data",
+    "https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/rest-api/general#check-server-time",
+    "https://developers.binance.com/en/docs/products/spot/rest-api",
+    "https://developers.binance.com/en/docs/products/spot/faqs/market_data_only"
+  ],
+  "verifiedContract": ["12-field tuple and field types", "UTC interpretation", "millisecond timestamp default", "inclusive REST endTime mapped from exclusive input", "1000-row maximum", "kline request weight 2", "public market-data-only host", "server-time endpoint", "429/418 and Retry-After"],
+  "actualEndpointEvidence": "Frozen acquisition metadata records the real HTTPS host, query URLs, status/weight headers, trusted server cutoff and request timestamps. Independent full-grid/12-field validation is in independent-verification.json."
+}

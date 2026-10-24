@@ -1,0 +1,2 @@
+PASS: Chromium loads the actual HTML, renders the closed-candle panel and markers, replays mocked WebSocket updates, retains the decision at bar 93 after supersession at 100, controls history/live view, opens/closes help, and renders at desktop/mobile widths without page errors.
+Network is mocked. This is not a live Binance acceptance test.

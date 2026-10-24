@@ -1,0 +1,1 @@
+PASS: actual public REST OHLCV for 3 Binance spot assets x 4 chart timeframes; complete previous UTC daily klines and PP/R1/S1 for each asset. WebSocket/long sessions not tested by this script.

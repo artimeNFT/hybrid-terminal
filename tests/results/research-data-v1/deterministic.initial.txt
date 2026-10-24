@@ -1,0 +1,15 @@
+✖ tests/research-data.cjs (1938.770436ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1969.967176
+
+✖ failing tests:
+
+test at tests/research-data.cjs:1:1
+✖ tests/research-data.cjs (1938.770436ms)
+  'test failed'

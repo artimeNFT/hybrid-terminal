@@ -1,0 +1,2 @@
+Bounded live sampling started: 2026-10-24T04:31:40.238Z mode: smoke seconds: 75 output: tests/results/0.4.2/live-smoke
+PASS: actual feed day levels/pivots, shared requests, bounded samples, network disconnect/resync and separately tagged isolated storage fixture. Midnight: false long session: false close frame: false

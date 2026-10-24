@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "applicationVersion": "0.4.1",
+  "ruleVersion": "hybrid-v2-validity-closed",
+  "executionVersion": "ohlc-market-stop-v2-gap-open",
+  "exportedAt": "2026-10-24T03:45:34.570Z",
+  "source": "BINANCE SPOT",
+  "mode": "RESEARCH / SIMULATION",
+  "symbol": "BTCUSDT",
+  "timeframe": "5m",
+  "confirmedCloseTime": 1700060000000,
+  "confirmedCandidate": {
+    "side": "SHORT",
+    "score": 3,
+    "items": [
+      [
+        "מתיחה מעל EMA50 (2.4 ATR)",
+        true
+      ],
+      [
+        "וקטור ירוק פתוח מתחת (עד 6 ATR)",
+        true
+      ],
+      [
+        "נר נפח עוצר בשיא",
+        false
+      ],
+      [
+        "מבנה M",
+        false
+      ],
+      [
+        "RSI 67 מעל 65",
+        true
+      ]
+    ],
+    "plan": {
+      "entry": 86.24502430483699,
+      "stop": 91.67041935003506,
+      "tp1": 68.14915369790978,
+      "tp2": 65.36662847257685,
+      "rr": 3.84827199832006
+    },
+    "short": true,
+    "candidates": {
+      "LONG": {
+        "side": "LONG",
+        "score": 0,
+        "items": [
+          [
+            "מתיחה מתחת ל-EMA50 (2.4 ATR)",
+            false
+          ],
+          [
+            "וקטור אדום פתוח מעל (עד 6 ATR)",
+            false
+          ],
+          [
+            "נר נפח עוצר בשפל",
+            false
+          ],
+          [
+            "מבנה W",
+            false
+          ],
+          [
+            "RSI 67 מתחת ל-35",
+            false
+          ]
+        ],
+        "targetAvailable": false,
+        "geometryEligible": false,
+        "eligible": false,
+        "reason": "below-threshold",
+        "plan": null
+      },
+      "SHORT": {
+        "side": "SHORT",
+        "score": 3,
+        "items": [
+          [
+            "מתיחה מעל EMA50 (2.4 ATR)",
+            true
+          ],
+          [
+            "וקטור ירוק פתוח מתחת (עד 6 ATR)",
+            true
+          ],
+          [
+            "נר נפח עוצר בשיא",
+            false
+          ],
+          [
+            "מבנה M",
+            false
+          ],
+          [
+            "RSI 67 מעל 65",
+            true
+          ]
+        ],
+        "targetAvailable": true,
+        "geometryEligible": true,
+        "eligible": true,
+        "reason": "eligible",
+        "plan": {
+          "entry": 86.24502430483699,
+          "stop": 91.67041935003506,
+          "tp1": 68.14915369790978,
+          "tp2": 65.36662847257685,
+          "rr": 3.84827199832006
+        }
+      }
+    },
+    "selection": {
+      "policy": "higher-score-short-on-tie-before-eligibility",
+      "selected": "SHORT",
+      "tied": false,
+      "suppressedOther": false,
+      "reason": "eligible"
+    },
+    "validity": {
+      "ready": true,
+      "reasons": [],
+      "raw": {
+        "atr": 4.89582373171285,
+        "ema50": 74.64974020240459,
+        "rsi": 67.09287135008755,
+        "volumeMean": 502.6661431323737,
+        "relativeVolume": 0.8362714664258343
+      },
+      "rsiPolicy": "wilder14-local-undefined-zero-change-v1"
+    },
+    "g": 1,
+    "r": 0
+  },
+  "provisional": null,
+  "statistics": {
+    "executionVersion": "ohlc-market-stop-v2-gap-open",
+    "ruleVersion": "hybrid-v2-validity-closed",
+    "statisticsVersion": "net-r-states-v1",
+    "state": "empty",
+    "N": 0,
+    "w": 0,
+    "wr": null,
+    "lo": null,
+    "hi": null,
+    "avg": null,
+    "pf": null,
+    "pfState": "unavailable",
+    "gains": 0,
+    "losses": 0,
+    "dd": null,
+    "drawdownBasis": "realized-closed-trade-net-R",
+    "cur": [
+      0
+    ],
+    "t1": null,
+    "L": {
+      "n": 0,
+      "avg": null
+    },
+    "S": {
+      "n": 0,
+      "avg": null
+    },
+    "trades": []
+  },
+  "presentation": {
+    "he": {
+      "state": "empty",
+      "win": "לא זמין",
+      "interval": "לא זמין",
+      "mean": "לא זמין",
+      "pf": "לא זמין",
+      "dd": "לא זמין",
+      "tp1": "לא זמין",
+      "gains": "0.00",
+      "losses": "0.00"
+    },
+    "en": {
+      "state": "empty",
+      "win": "Unavailable",
+      "interval": "Unavailable",
+      "mean": "Unavailable",
+      "pf": "Unavailable",
+      "dd": "Unavailable",
+      "tp1": "Unavailable",
+      "gains": "0.00",
+      "losses": "0.00"
+    }
+  },
+  "sizing": {
+    "kind": "nominal-stop-distance-only",
+    "state": "nominal",
+    "side": "SHORT",
+    "account": 1000,
+    "riskPercent": 1,
+    "scenario": "unconfigured",
+    "cash": null,
+    "quantity": 1.8431837528312034,
+    "riskBudget": 10,
+    "notional": 158.96542756120778,
+    "notionalToAccount": 0.15896542756120777,
+    "affordability": "scenario-unconfigured",
+    "executableQuantity": null,
+    "venueFilters": "not-checked",
+    "accountPermissions": "not-checked",
+    "costs": "not-included; account fees/slippage/gaps/funding unconfigured"
+  },
+  "assumptions": {
+    "roundTripFeeEntryNotional": 0.001,
+    "feeScope": "historical baseline assumption; not live account fees",
+    "execution": "next open; gap stops at open; stop-first; targets at limit; no extra slippage; max 120 bars",
+    "drawdownBasis": "realized closed-trade net R, not account equity",
+    "rsiPolicy": "wilder14-local-undefined-zero-change-v1"
+  },
+  "coverage": {
+    "firstResearchCandle": 1700000000000,
+    "closedBars": 200,
+    "utcDay": "partial-first-day",
+    "vwapDefinition": "HLC3 weighted by Binance spot base volume; UTC reset"
+  },
+  "scope": "Current research snapshot, not an order approval, immutable dataset or execution ledger"
+}

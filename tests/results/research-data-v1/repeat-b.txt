@@ -1,0 +1,26 @@
+{
+  "file": "/mnt/c/users/shlom/desktop/the hybrid-terminal/research/datasets/btcusdt-5m-2026-07-01-repeat-b.json",
+  "dataHash": "2912a020aaff86d529f1cc5af148478c48bf99c617c84a9db89b93abb166e34c",
+  "state": "complete",
+  "rowCount": 288,
+  "uniqueTimestampCount": 288,
+  "validUniqueRows": 288,
+  "expectedRows": 288,
+  "eligibleRowsAtCutoff": 288,
+  "excludedDevelopingOrFutureRows": 0,
+  "missingRows": 0,
+  "duplicateRows": 0,
+  "conflictingTimestamps": 0,
+  "duplicates": [],
+  "gaps": [],
+  "coverage": {
+    "firstOpenTime": 1782864000000,
+    "lastOpenTime": 1782950100000,
+    "endExclusive": 1782950400000,
+    "contiguous": true
+  },
+  "issueCount": 0,
+  "issues": [],
+  "issuesTruncated": false
+}
+checkpoint: page 1, 288 rows, through 2026-07-02T00:00:00.000Z

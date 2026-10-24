@@ -1,0 +1,51 @@
+{
+  "sourceVersion": "0.4.0",
+  "normalizedSha256": "0593c0096957d295628d267f1f3b16dd90a6478832d61bf39d2e9ed1959bc7d9",
+  "scope": "Isolated synthetic mathematical probes, not full application QA or live/performance validation.",
+  "probes": {
+    "zeroVolumeFlat": {
+      "rsi": 100,
+      "atr": 0,
+      "vectors": 90,
+      "vwap": null
+    },
+    "directionTie": {
+      "tiedOutput": {
+        "side": "WAIT",
+        "score": 3,
+        "selectedShort": true,
+        "plan": null
+      },
+      "sameLongConditionsWithoutExtraShortRsi": {
+        "side": "LONG",
+        "score": 3,
+        "rr": 2.307692307692313
+      },
+      "interpretation": "A higher/equal preliminary short score can suppress an otherwise eligible long plan when the selected short side has no target. This is a policy/eligibility counterexample, not a measurement of market frequency."
+    },
+    "positionSizing": {
+      "account": 1000,
+      "riskPercent": 1,
+      "entry": 100,
+      "stop": 99.9,
+      "quantityApprox": 100,
+      "notionalApprox": 10000,
+      "displayedNotionalToAccount": "10.0x",
+      "interpretation": "Nominal stop-distance sizing has no spot-cash cap, step-size rounding or costs; this is not an executable unleveraged spot size."
+    },
+    "noLossProfitFactor": {
+      "closedTrades": 1,
+      "grossProfitR": 2,
+      "netR": 1.9,
+      "reportedProfitFactor": 99,
+      "interpretation": "99 is a display sentinel, not the mathematical ratio when the denominator is zero. Use an explicit unavailable/no-loss state."
+    },
+    "zeroTradeInterval": {
+      "trades": 0,
+      "winRate": 0,
+      "lower": 0,
+      "upper": 0.7934567085261071,
+      "interpretation": "The aggregate routine uses max(N,1), manufacturing a nonempty-denominator Wilson interval when N=0. The on-screen no-trade branch hides metrics, but the report path still formats these values. Use unavailable statistics for N=0."
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "verifiedAt": "2026-10-24T12:04:51.240785+00:00",
+  "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "researchToolSha256": "7200e575ba74206dc70a82cdfb7159e9d9596fc5d01e8b0c75215ce30d30d1c5",
+  "preservedDeliveryArtifacts": {
+    "hybrid-terminal.html": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "research/klines.cjs": "7200e575ba74206dc70a82cdfb7159e9d9596fc5d01e8b0c75215ce30d30d1c5",
+    "research/SCHEMA.md": "d4698d2ca8351a67293c53842b5ba0fc6cec31c3b888d1ab7fae19afd2198a72",
+    "tests/research-data.cjs": "a4f44ebfbd64f28f89c89fc4026aa7560bb1806ec62baead18e222cd0cce780e",
+    "tests/verify-research-data.py": "c83ce5f4d50f4e85ba483dafda807687b3cb96a504ad7721a2e04a847826070c",
+    "SHA256SUMS.txt": "feca92fd62074714a6aec1b0ce6cc39649879ace9970f3d608d21eb7fb9ea828",
+    "RESEARCH_DATA_SHA256SUMS.txt": "cd302abce831011166942a5b21e21e0bedc2c109828f6f3e3303a0b67ea5c256",
+    "baseline/STATUS.before-research-data-v1.md": "ea4ceb95105a45012f2e825e764b8b7ada3e6be53010fb4e71ea675139e96ea0",
+    "research/datasets/btcusdt-5m-2026-07-01-repeat-a.json": "07f26ec1f4ae0b90e77ce9245961d9da1f5677564bc4d5d46fdd3cccaee6f610",
+    "research/datasets/btcusdt-5m-2026-07-01-repeat-a.json.checkpoint.json": "c95ee0e7d867dad2f0e0480a4f7566b455a40eed3b93012b85e4608a8b9fc208",
+    "research/datasets/btcusdt-5m-2026-07-01-repeat-b.json": "3d84dfb321dc491013607d8ff82771efe3f921ec67d6998ec39f702e3e9b7689",
+    "research/datasets/btcusdt-5m-2026-07-01-repeat-b.json.checkpoint.json": "54f5ad7c1dea4e83633206b31069611707631153758c1c776be5daa9100dd8b0",
+    "research/datasets/btcusdt-5m-2026-q3.json": "fc06545122b941f570c4cca001d0ae57306b3e0ca010130984c5f46156440ea3",
+    "research/datasets/btcusdt-5m-2026-q3.json.checkpoint.json": "777cfe0bd19823db246e564f0be52b57e34ccd9eacb21a088dc2f0aca1af8242"
+  },
+  "originalSuitesUnchanged": {
+    "regression": "cfee532b71e56a94519bb56e9b6d6bcf3fb2d0e22d341c7753e18bed4d77ed47",
+    "ui-smoke": "1210b62303e5a85e4ac03f78aed78be5f20115b5ff041c9a673fb77b28c419f3",
+    "live-chart": "b03878024eb6e2dae0ae83ed256a59ea343eefad53da8e5fee4eff1c48f9e44c",
+    "readability-reliability": "b4c831e60013104115790ee420a0733d730068c7d1fd7fb0c68345825da02ced",
+    "history": "a0130823786eab3acddff40d8f3ed5e85b440f6bd9215ca05f2f448b2f969e34",
+    "increment": "a4d7b25aed39a615d34c419ac7344585bcad6b49f72be00cdd3de59f5aee5949",
+    "integrity": "fe0167148474b329c5f6e7583f9c122fc44e33a36743973d4d8d5e14e52ce364",
+    "day-context": "d439113c0f90042e97aa5e88e0477f6eba2dc4c0d229811c20072a9ad94ae363",
+    "navigation": "dd2b2a3394ea148dc1fc8bc7bef445455fe832de322804ecfa1fc8ec421b0ae3",
+    "research-data": "a4f44ebfbd64f28f89c89fc4026aa7560bb1806ec62baead18e222cd0cce780e",
+    "browser-smoke": "e77f419b6b0e844757e44ed7019ea54ced60ec4798bede8d608163bff5cbbc59",
+    "browser-increment": "98d72b67a8c708ed8b312bec2675ac477b518c109e2557439df2d5abbee9e348",
+    "browser-integrity": "d4e04bf8423c69a54f1fba7b32d56ba05f03866a1b379bf4902e4b7f8c6816e6",
+    "browser-day-context": "265160824b71ae0443917d16226c7d92e04dcaccfb2cf8c1cfdcf8b680d5a6b5",
+    "browser-navigation": "4684db5b81449c42e4cf426b7e33cea15d6a04c67c39e10df7b52d3b965898de"
+  },
+  "newQaHarness": {
+    "scripts/check-source.cjs": "45fa0b8d46e2c6f306599cee5bb4187bd114e490090607d701f46213209e19dd",
+    "scripts/install-local-browser-deps.cjs": "c2d606c5e61f163063b85e4f67daea17bb9509d7915639a2106d088a8ab8a937",
+    "scripts/mock-browser-hooks.cjs": "aaa5cb36defee948872d8550c6c3bdd687c985e63941baef7356146814fa98be",
+    "scripts/run-qa.cjs": "5bf5ec11e07a30c64ea0170998abc7add348a43891a0a2b1d6818a88ce6f06be"
+  },
+  "scope": "Local preservation check against the retained original delivery. CI deliberately checks only qa/source-checksums.json and generated synthetic fixtures, never the ignored frozen data or full delivery manifests."
+}

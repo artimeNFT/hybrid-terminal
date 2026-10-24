@@ -1,0 +1,197 @@
+node:assert:152
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: Past decision survives later supersession
++ actual - expected
+... Skipped lines
+
+  {
++   candidates: {
++     LONG: {
++       eligible: false,
++       geometryEligible: false,
++       items: [
++         [
++           'מתיחה מתחת ל-EMA50 (0.3 ATR)',
++           false
++         ],
++         [
++           'וקטור אדום פתוח מעל (עד 6 ATR)',
++           false
++         ],
++         [
++           'נר נפח עוצר בשפל',
++           false
++         ],
++         [
++           'מבנה W',
++           false
++         ],
++         [
++           'RSI 63 מתחת ל-35',
++           false
++         ]
++       ],
++       plan: null,
++       reason: 'below-threshold',
++       score: 0,
++       side: 'LONG',
++       targetAvailable: false
++     },
++     SHORT: {
++       eligible: false,
++       geometryEligible: false,
++       items: [
++         [
++           'מתיחה מעל EMA50 (0.3 ATR)',
++           false
++         ],
++         [
++           'וקטור ירוק פתוח מתחת (עד 6 ATR)',
++           false
++         ],
++         [
++           'נר נפח עוצר בשיא',
++           false
++         ],
++         [
++           'מבנה M',
++           true
++         ],
++         [
++           'RSI 63 מעל 65',
++           false
++         ]
++       ],
++       plan: null,
++       reason: 'below-threshold',
++       score: 1,
++       side: 'SHORT',
++       targetAvailable: false
++     }
++   },
+    items: [
+      [
+        'מתיחה מעל EMA50 (0.3 ATR)',
+        false
+      ],
+...
+    score: 1,
++   selection: {
++     policy: 'higher-score-short-on-tie-before-eligibility',
++     reason: 'below-threshold',
++     selected: 'SHORT',
++     suppressedOther: false,
++     tied: false
++   },
+    short: true,
+    side: 'WAIT',
++   validity: {
++     raw: {
++       atr: 12.726548381075117,
++       ema50: 114.49308724892326,
++       relativeVolume: 1,
++       rsi: 62.82320547776022,
++       volumeMean: 100
++     },
++     ready: true,
++     reasons: [],
++     rsiPolicy: 'wilder14-local-undefined-zero-change-v1'
++   }
+  }
+
+    at Object.<anonymous> (/mnt/c/Users/shlom/Desktop/THE hybrid-terminal/tests/regression.cjs:116:10)
+    at Module._compile (node:internal/modules/cjs/loader:1830:14)
+    at Object..js (node:internal/modules/cjs/loader:1961:10)
+    at Module.load (node:internal/modules/cjs/loader:1553:32)
+    at Module._load (node:internal/modules/cjs/loader:1355:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: {
+    side: 'WAIT',
+    score: 1,
+    items: [
+      [ 'מתיחה מעל EMA50 (0.3 ATR)', false ],
+      [ 'וקטור ירוק פתוח מתחת (עד 6 ATR)', false ],
+      [ 'נר נפח עוצר בשיא', false ],
+      [ 'מבנה M', true ],
+      [ 'RSI 63 מעל 65', false ]
+    ],
+    plan: null,
+    short: true,
+    candidates: {
+      LONG: {
+        side: 'LONG',
+        score: 0,
+        items: [
+          [ 'מתיחה מתחת ל-EMA50 (0.3 ATR)', false ],
+          [ 'וקטור אדום פתוח מעל (עד 6 ATR)', false ],
+          [ 'נר נפח עוצר בשפל', false ],
+          [ 'מבנה W', false ],
+          [ 'RSI 63 מתחת ל-35', false ]
+        ],
+        targetAvailable: false,
+        geometryEligible: false,
+        eligible: false,
+        reason: 'below-threshold',
+        plan: null
+      },
+      SHORT: {
+        side: 'SHORT',
+        score: 1,
+        items: [
+          [ 'מתיחה מעל EMA50 (0.3 ATR)', false ],
+          [ 'וקטור ירוק פתוח מתחת (עד 6 ATR)', false ],
+          [ 'נר נפח עוצר בשיא', false ],
+          [ 'מבנה M', true ],
+          [ 'RSI 63 מעל 65', false ]
+        ],
+        targetAvailable: false,
+        geometryEligible: false,
+        eligible: false,
+        reason: 'below-threshold',
+        plan: null
+      }
+    },
+    selection: {
+      policy: 'higher-score-short-on-tie-before-eligibility',
+      selected: 'SHORT',
+      tied: false,
+      suppressedOther: false,
+      reason: 'below-threshold'
+    },
+    validity: {
+      ready: true,
+      reasons: [],
+      raw: {
+        atr: 12.726548381075117,
+        ema50: 114.49308724892326,
+        rsi: 62.82320547776022,
+        volumeMean: 100,
+        relativeVolume: 1
+      },
+      rsiPolicy: 'wilder14-local-undefined-zero-change-v1'
+    }
+  },
+  expected: {
+    side: 'WAIT',
+    score: 1,
+    items: [
+      [ 'מתיחה מעל EMA50 (0.3 ATR)', false ],
+      [ 'וקטור ירוק פתוח מתחת (עד 6 ATR)', false ],
+      [ 'נר נפח עוצר בשיא', false ],
+      [ 'מבנה M', true ],
+      [ 'RSI 63 מעל 65', false ]
+    ],
+    plan: null,
+    short: true
+  },
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.15.0

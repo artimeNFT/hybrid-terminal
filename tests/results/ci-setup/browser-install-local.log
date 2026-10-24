@@ -1,0 +1,9 @@
+
+> hybrid-terminal-qa@1.0.0 qa:browser:local
+> node scripts/install-local-browser-deps.cjs
+
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libnspr4 amd64 2:4.35-1.1build1 [117 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasound2t64 amd64 1.2.11-1ubuntu0.3 [398 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnss3 amd64 2:3.98-1ubuntu0.3 [1445 kB]
+Fetched 1960 kB in 2s (884 kB/s)
+Local Chromium libraries ready under .tools/browser-libs; run npm run test:browser. No /tmp QA package or system installation is used.

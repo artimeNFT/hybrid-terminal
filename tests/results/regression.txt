@@ -1,0 +1,5 @@
+PASS: M replacement at pivot 97 preserves the decision at bar 93; supersession begins at 100.
+PASS: W replacement at pivot 97 preserves the decision at bar 93; supersession begins at 100.
+PASS: 4185 original/current-bar comparisons and 4185 append-only decision comparisons across 15 datasets and all three score thresholds.
+PASS: complete event history reproduces every original prefix pattern set; backtest outputs are finite.
+Scope: synthetic completed candles with a fixed history origin. Live candle closure, rolling-window reseeding, feed isolation and market performance are not validated here.

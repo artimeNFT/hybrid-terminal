@@ -1,0 +1,29 @@
+{
+  "kind": "Actual Binance Spot BTCUSDT 5m; no feed interception; isolated temporary Chromium profile",
+  "mode": "midnight",
+  "requestedSamplingSeconds": 420,
+  "sourceSha256": "d91b92a0105e4c35aa8357d19ac123a2c73918cf093a7e905b1aa4941df7b6ed",
+  "started": {
+    "utc": "2026-10-24T04:34:31.067Z",
+    "zone": "Asia/Jerusalem",
+    "local": "Saturday, 24 October 2026 at 07:34:31 GMT+3",
+    "offset": "07h GMT+03:00"
+  },
+  "samples": [],
+  "closedFrames": [],
+  "dailyRequests": [],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "passed": false,
+  "observedMidnight": false,
+  "observedLongSession": false,
+  "status": "pending-window-unavailable",
+  "nextUtcMidnight": "2026-10-25T00:00:00.000Z",
+  "reason": "Start 1–3 minutes BEFORE UTC midnight with enough window for 60 seconds after it; this command never waits all day.",
+  "finished": {
+    "utc": "2026-10-24T04:34:31.085Z",
+    "zone": "Asia/Jerusalem",
+    "local": "Saturday, 24 October 2026 at 07:34:31 GMT+3",
+    "offset": "07h GMT+03:00"
+  }
+}

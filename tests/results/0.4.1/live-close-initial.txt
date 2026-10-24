@@ -1,0 +1,2 @@
+Live observation started 2026-10-24T03:35:00.000Z waiting for an actual x=true frame (<=330s).
+PASS: actual x=true 5m close, confirmed candidates/RSI, exactly one new versioned journal record, real daily pivots and no console/page errors. No UTC-midnight/long-soak claim.

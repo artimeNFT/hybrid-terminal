@@ -1,0 +1,119 @@
+{
+  "version": "0.4.2",
+  "verifiedAt": "2026-10-24T04:41:14.613015+00:00",
+  "sourceSha256": "d91b92a0105e4c35aa8357d19ac123a2c73918cf093a7e905b1aa4941df7b6ed",
+  "nodeSuites": [
+    {
+      "suite": "regression",
+      "exitCode": 0
+    },
+    {
+      "suite": "ui-smoke",
+      "exitCode": 0
+    },
+    {
+      "suite": "live-chart",
+      "exitCode": 0
+    },
+    {
+      "suite": "readability-reliability",
+      "exitCode": 0
+    },
+    {
+      "suite": "history",
+      "exitCode": 0
+    },
+    {
+      "suite": "increment",
+      "exitCode": 0
+    },
+    {
+      "suite": "integrity",
+      "exitCode": 0
+    },
+    {
+      "suite": "day-context",
+      "exitCode": 0
+    }
+  ],
+  "browserSuites": {
+    "browser-smoke": "browser-smoke.txt",
+    "browser-increment": "browser-increment.txt",
+    "browser-integrity": "browser-integrity.txt",
+    "browser-day-context": "browser-context.txt"
+  },
+  "byteIdenticalBaselineSectionsSha256": {
+    "strategy-analysis-backtest": "b9000df0d63975dfbcc75715f7a9265d77625486a5c9b014283bb06399409dbe",
+    "journal": "0b8ad0440de16f6900c0404fabc621974ca6ccda53574b5e34343ebe3c9417f1",
+    "automatic-price-range": "647fa5306f2ff89855be5d1bef551e9f6d00bc8f645ff6186fab7fa982966bc0"
+  },
+  "numberedSourcesPreserved": true,
+  "actualLiveObservation": {
+    "evidence": "live-smoke/evidence.json",
+    "passed": true,
+    "samplingElapsedSeconds": 75.011,
+    "observedCompletedCandle": false,
+    "observedMidnight": false,
+    "observedLongSession": false,
+    "storageFailure": "explicitly injected in an isolated temporary browser context"
+  },
+  "midnightWindowGuard": {
+    "evidence": "midnight-window-check/evidence.json",
+    "status": "pending-window-unavailable"
+  },
+  "unobserved": [
+    "new completed 5m candle in this short observation",
+    "actual UTC-midnight transition",
+    "one-hour session reliability"
+  ],
+  "artifacts": {
+    "hybrid-terminal.html": "d91b92a0105e4c35aa8357d19ac123a2c73918cf093a7e905b1aa4941df7b6ed",
+    "README.md": "02e0ee4b13518ad510558f070edb8926c3106c02a9222b93b53cd14d596d4d43",
+    "STATUS.md": "76905283d765d88b09ce4c461288869d1e18882512a07d73d79632cea24a08e0",
+    "SOURCE_PROVENANCE.md": "8a0d4554be3994687172e77b6146f21e2aa7059b2708aed1e1e7259893db364c",
+    "SHA256SUMS.txt": "fca0c9a2679f50b4d0b4ea551ef85f5540bf2538a18a9f1bfa1c709536be2960",
+    "changes-since-0.4.1.diff": "befcafccc2a109b145eefe54134ba28f997fa8c60c452cb5df9128b5140ec204",
+    "baseline/hybrid-terminal.0.4.1.html": "7ebb7bf88cc2721722b5e4d6769a6938a5b48478f03452919e50259f2512caf4",
+    "baseline/STATUS.0.4.1.md": "eeed77131de3ad0fae035b35b503475404fa7469a4a540f6828d04bcd8fafa00",
+    "tests/day-context.cjs": "d439113c0f90042e97aa5e88e0477f6eba2dc4c0d229811c20072a9ad94ae363",
+    "tests/browser-day-context.cjs": "e0aa38b29539be8ff29f2ceb1ae29e62bc9e25430ded7b8defb2d62e80dd5719",
+    "tests/browser-observe-context.cjs": "29c876a56460e9bcc10e86140ae6896ed3f409734e685fd1e2632c3d2fa6b1c6"
+  },
+  "evidence": {
+    "browser-context/desktop-collision.png": "040bcbb6a498bafe91696b19f4278cfb3138b7491f8c7f77c73574566c6a0c51",
+    "browser-context/history.png": "d5115aa83cd93c60b753c9fb8bacae238b45dc5475144d80f69f8216fcca73b1",
+    "browser-context/narrow-history.png": "8e1f9d0fb0813e1174c7b66481a5252139664b22ec3f4e6f090034e52b8c4f70",
+    "browser-context/phone-collision.png": "c5163b39ceb60137e07a257d3f912d531c3ceae95b09c928c89d5dc417e62d27",
+    "browser-context.txt": "3d09d8f593f0eee23800194ccf19e4369d0f1dfe764e0bc31da30fd4d01a870f",
+    "browser-increment.txt": "a5b082b09d13982bac9c5c30dd3ff777a3108343ad80d4577b14a6c8caa7e83e",
+    "browser-integrity/export-all-losses.json": "64846aa5f0a2d0324eda1a43063a98016be1968e771e926a54fcb7a9cf1da038",
+    "browser-integrity/export-all-zero.json": "8d6bca004e9487d1b5c2299f0d6de7c26e01bd864611dc4019f45066494709a3",
+    "browser-integrity/export-empty.json": "bd2d1df599fc0dbdcdfec6932feed08f115cae82c0a072007941054c12a0a8b5",
+    "browser-integrity/export-mixed.json": "fcb3b8706c0a709ca06fc716f95617a6fe58da6ed6c31c007794dec4109afa15",
+    "browser-integrity/export-no-losses.json": "ebddfb97ef516e13a80eebd6fa3c1fe124d3d5ba7fe1b5ae1c4635ef16f9cae6",
+    "browser-integrity/sizing-desktop.png": "79c2df00026b487070395e5648eff7878f1f0cd955a0b4d87a9245c08d0505d9",
+    "browser-integrity/sizing-phone.png": "fc82c73edf3d538857a0f7829be6f9d1ffe7f822295498174bf58ffe42d372ac",
+    "browser-integrity/tie-desktop.png": "ce442c35613548ceb18bacd24945979e0ba5fb9b0e5fcdba76576302f4a6a4d3",
+    "browser-integrity.txt": "c49dc5867d3f2af954461bd7de661617c2a577014d608120bf96e7336f06d783",
+    "browser-retained/desktop.png": "13ea9bfe9734c3ef6deb26145cfd410bf3459e0aafabec22def8a71d13447e2a",
+    "browser-retained/narrow.png": "7b39f0ee6179729e4559cdfb1671585260de033b98b792f0c7490cbacd744ba2",
+    "browser-retained/phone.png": "e0da4ea4760ceea60c3622f5e254554c76179e4a869e4a74e12a43651e37cd26",
+    "browser-retained.txt": "a5b082b09d13982bac9c5c30dd3ff777a3108343ad80d4577b14a6c8caa7e83e",
+    "browser-smoke.png": "03ded8f6c82c2f3d905ee9b8d747db7fea8fcb41ab399e8ae585c434c8f5560c",
+    "browser-smoke.txt": "3c06e46dfaa09377a0de4ce9c1e9de3740342779b19c09fe7f03d7e339ae652b",
+    "day-context.txt": "fb1357932b161b4d643de5d40532dfa139cbdc308e8ccbc6c2e61f32426c20c2",
+    "history.txt": "a3fcb978510fa68386d85bf77f435f9b424094620c5ff20263e9ef44917491f7",
+    "increment.txt": "d7e3d8c22935003d12c97e82163078f2a5a37cd5cf96af1547459ff2d02deeb9",
+    "integrity.txt": "a4343bc399069a41265338e84306bcd0ead78fc7259e29d4d5ce591621bc2af9",
+    "live-chart.txt": "97f017902d867338e14e547a44fe7877401498f5252000ef8d640573f205ae63",
+    "live-smoke/evidence.json": "0c354a119d7831c4a06f2f1bfc5c987d4db1d8b8d027f82b24d8402a75f03094",
+    "live-smoke/final.png": "cb0d77c7dfba3efc0b1e9551f342fc388d8669e156fcc63bb1ca708629327a5d",
+    "live-smoke.txt": "d346e9a193b1397ecb071b34360b3cc44ec3aa94a2ae015f8dd2ee15a5f52e76",
+    "midnight-window-check/evidence.json": "80b151af243e9dfb91f881c6a596c68458a164de556c7c39578ac8a915b0b587",
+    "midnight-window-check.txt": "d1d2729e47b9aba98ccdbe6dc64b1e216c231f2ad3e650781d6e15cc1cc02104",
+    "node-validation.json": "a65632de6a47e4af75ec821c119707055701596382a552f303d9bdf06db4ad01",
+    "readability-reliability.txt": "a76d6d7cddec4cd747c23b25753020eef21886ab0fda7feeb7f36a6cd3c13b62",
+    "regression.txt": "e6603e45d4796236daf0ff94d8f1d96e1acd16b8a2a9c325f2c4727aa234c4f4",
+    "ui-smoke.txt": "a48dc7496bf78f9638e7f5a31c731b40953c802b7b09ed34e53939ba89e3412f"
+  }
+}

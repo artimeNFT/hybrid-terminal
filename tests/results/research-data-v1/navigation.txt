@@ -1,0 +1,4 @@
+PASS: 80px vertical, same-gesture reversal and diagonal translation use drag-start bounds with constant span, correct time movement and unchanged market/indicator/signal/backtest/journal state.
+PASS: click/jitter and near-horizontal thresholds, Volume/RSI origin isolation, secondary-pointer isolation, cancel and lost-capture cleanup.
+PASS: axis scaling/time zoom, focused vertical keyboard controls and frozen drag-start geometry across resize.
+PASS: manual position survives provisional and confirmed stream updates; engine/journal match untouched control and 0.4.2 upgrade bytes. Live/Auto scale/Reset and invalid/empty/zero-size guards verified.

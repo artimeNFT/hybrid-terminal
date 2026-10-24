@@ -1,0 +1,5 @@
+* text=auto eol=lf
+# Exact historical/application HTML byte identities are part of the evidence.
+*.html -text
+*.png -text
+*.zip -text

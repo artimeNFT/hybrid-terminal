@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="he"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hybrid Terminal · 0.2.0</title>
+<style>
+:root{--bg:#0b0e14;--p:#131722;--b:#252a38;--t:#d1d4dc;--m:#7d8597;--g:#26d97f;--r:#ff4d5e;--bl:#3b82f6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:13px system-ui,sans-serif;height:100vh;display:flex;flex-direction:column}
+header{display:flex;gap:6px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--b);flex-wrap:wrap}
+button,select{background:var(--p);color:var(--t);border:1px solid var(--b);padding:5px 10px;border-radius:6px;cursor:pointer}
+button.on{background:var(--bl);border-color:var(--bl)}
+main{flex:1;display:flex;min-height:0}#cw{flex:1;min-width:0}canvas{width:100%;height:100%;display:block;cursor:grab}
+aside{width:330px;overflow:auto;border-left:1px solid var(--b);padding:10px;background:var(--p);direction:rtl}
+.card{border:1px solid var(--b);border-radius:8px;padding:9px;margin-bottom:9px}.card h4{margin:0 0 6px;font-size:12px;color:var(--m);font-weight:600}
+.sig{font-size:20px;font-weight:700}.L{color:var(--g)}.S{color:var(--r)}.W{color:var(--m)}
+.row{display:flex;justify-content:space-between;padding:2px 0}.ok{color:var(--g)}.no{color:#555d70}
+small{color:var(--m);line-height:1.5;display:block}#st{color:var(--m);margin-inline-start:auto}
+@media(max-width:800px){main{flex-direction:column}aside{width:100%;height:40%;border-left:0}}
+#hp{position:fixed;inset:0;background:#000a;display:flex;align-items:center;justify-content:center;z-index:9}#hp[hidden]{display:none}
+#hp>div{background:var(--p);border:1px solid var(--b);border-radius:10px;max-width:580px;max-height:86vh;overflow:auto;padding:16px;direction:rtl;line-height:1.65;margin:12px}
+#hp h3{margin:12px 0 4px;font-size:13px;color:#93c5fd}#hp ul,#hp ol{margin:0;padding-inline-start:20px}.lb{font-size:12px}
+input{background:var(--bg);color:var(--t);border:1px solid var(--b);border-radius:6px;padding:3px 6px;width:90px}#eq{height:60px;cursor:default}
+:root{--bg:#131722;--p:#1b1f2a;--b:#2a2e39;--m:#8b93a7}
+header{background:#171b26}.brand{font-size:13px;font-weight:800;letter-spacing:1.4px;margin-right:10px;color:#f0f3fa}.brand span{color:#64a0ff}
+#cw{display:flex;flex-direction:column;min-height:0}#chartbar{display:flex;align-items:center;flex-wrap:wrap;gap:5px;min-height:40px;padding:6px 10px;border-bottom:1px solid var(--b);background:#171b26}
+#chartbar button,#chartbar select{font-size:12px;padding:4px 8px}#chartmeta{color:var(--m);font-size:11px;margin-right:auto}#plot{flex:1;min-height:0;position:relative;overflow:hidden}#cv{outline:none;touch-action:none;cursor:crosshair}#cv:focus-visible{outline:1px solid #4b82d1;outline-offset:-1px}
+.badge{display:inline-block;padding:3px 7px;border:1px solid #35523e;border-radius:4px;color:#69d79a;font-size:11px}.pending{color:#e4b65a;border-color:#6b532e}.preview{border-color:#67512e}.preview h4{color:#e4b65a}.footnote{font-size:11px;color:var(--m);line-height:1.6}
+button:disabled{opacity:.4;cursor:default}@media(max-width:800px){header{gap:4px;padding:7px}.brand{width:100%}#chartmeta{display:none}#chartbar{gap:3px;padding:5px}#chartbar button{padding:4px 7px}aside{height:42%;min-height:190px}}
+</style></head><body>
+<header><span class="brand">HYBRID <span>TERMINAL</span></span><select id="sym"><option>BTCUSDT</option><option>ETHUSDT</option><option>SOLUSDT</option></select>
+<button data-tf="5m" class="on">5m</button><button data-tf="15m">15m</button><button data-tf="1h">1h</button><button data-tf="4h">4h</button>
+<span style="width:8px"></span><button data-l="z" class="on lb">וקטורים</button><button data-l="e" class="on lb">ממוצעים</button><button data-l="p" class="on lb">מספרים עגולים</button><button data-l="m" class="on lb">סימונים ותוכנית</button><select id="ms" class="lb" title="סף ציון מינימלי לסיגנל"><option value="3">ציון ≥3</option><option value="4">ציון ≥4</option><option value="5">ציון 5</option></select><button id="bl" class="lb">🔔 התראות</button><button id="hq">? עזרה</button><span id="st"></span></header>
+<main><div id="cw"><div id="chartbar"><button id="back" title="גלילה לעבר" aria-label="גלילה לעבר">←</button><button id="forward" title="גלילה קדימה" aria-label="גלילה קדימה">→</button><button id="zoomout" title="הקטנת זום" aria-label="הקטנת זום">−</button><button id="zoomin" title="הגדלת זום" aria-label="הגדלת זום">+</button><button id="reset" title="איפוס זום וציר מחיר">איפוס</button><button id="livebtn" class="on" title="מעקב אחר הנר האחרון">חזרה לחי</button><button id="autoscale" class="on" title="איפוס קנה המידה של המחיר">מחיר אוטומטי</button><select id="tz" title="אזור זמן"><option value="Asia/Jerusalem">ישראל</option><option value="UTC">UTC</option></select><span id="chartmeta"></span><span id="candlebadge" class="badge"></span></div><div id="plot"><canvas id="cv" tabindex="0" aria-label="גרף נרות. חצים לגלילה, פלוס ומינוס לזום, End לחזרה לחי."></canvas></div></div><aside><div id="pn"></div><div class="card" id="sz"><h4>גודל פוזיציה</h4><div class="row"><span>חשבון ($)</span><input id="acc" type="number" value="1000"></div><div class="row"><span>סיכון לעסקה (%)</span><input id="rk" type="number" value="1" step=".25"></div><div id="szo"></div></div><div id="pn2"></div></aside></main>
+<div id="hp" hidden><div><button style="float:left">✕ סגור</button><b style="font-size:15px">איך קוראים את הטרמינל</b>
+<h3>1. צבעי הנרות</h3><ul><li><b style="color:#22e07a">ירוק</b> / <b style="color:#ff3b4e">אדום</b> – וקטור: נפח חריג (200% ומעלה מממוצע 10 הנרות הקודמים), או נפח×טווח הגבוה ביותר ב-10. סימן לפעילות כבדה.</li><li><b style="color:#3b82f6">כחול</b> / <b style="color:#a855f7">סגול</b> – נפח עולה (150% ומעלה), נר עולה / יורד.</li><li>אפור – נר רגיל.</li></ul>
+<h3>2. אזורי וקטור</h3><ul><li>המלבן הוא טווח נר הווקטור. הוא נשאר עד שהמחיר חוזר ונוגע בצדו השני.</li><li>הקו המקווקו הוא 50%. לפי המסמך הרשמי, לעיתים קרובות המחיר מקפץ משם.</li><li>וקטור שלא התאושש מעיד על כיוון מועדף. כשהמחיר מתרחק ממנו הרבה, הוא הופך ליעד חזרה.</li></ul>
+<h3>3. סדר קריאה מומלץ</h3><ol><li><b>סביבה:</b> אילו וקטורים פתוחים, והאם המחיר מעל או מתחת ל-EMA50.</li><li><b>מתיחה:</b> מחיר רחוק מ-EMA50 (בערך 2 ATR ומעלה) מעלה סיכוי לחזרה לממוצע.</li><li><b>המתן לסימן חולשה:</b> נר נפח עוצר (▼▲ כתום) או מבנה M / W. לא רודפים אחרי הווקטור.</li><li><b>כניסה וניהול:</b> בכיוון הווקטור, סטופ מעבר לקצה של 20 הנרות האחרונים (ולפחות 1 ATR מהכניסה), יעד 1 במגע, יעד 2 ב-50%.</li><li>וקטור רחוק מאוד מהמחיר לא יחזור מהר. לכן הטרמינל מתחשב רק בווקטורים עד 6 ATR מהמחיר.</li></ol>
+<h3>4. הפאנל</h3><ul><li>ציון 0–5 לפי הצ׳קליסט. אות נוצר רק מציון 3 ומעלה ועם וקטור יעד.</li><li>הסטטיסטיקה מציגה מה קרה בהיסטוריה הטעונה (כ-1000 נרות). בדוק אותה על הנכס והטיימפריים שלך לפני שסומכים על האותות.</li></ul>
+<h3>5. קווים</h3><ul><li>EMA13 אדום, EMA50 סגול, EMA200 לבן, EMA800 צהוב.</li><li>VWAP תכלת מקווקו, מתאפס כל יום ב-UTC. DO (אפור) הוא פתיחת היום ב-UTC.</li><li>הקווים העדינים המנוקדים הם מספרים עגולים, לא רמות ה-Psy של Traders Reality (שמבוססות על שיא ושפל של סשן סידני).</li></ul>
+<h3>6. שליטה</h3><p style="margin:0">גלגלת = זום סביב הסמן. גרירת הגרף = גלילה, גם למרווח ריק ימינה. Shift וגלגלת = גלילה אופקית. גרירת ציר המחיר = שינוי קנה מידה; לחיצה כפולה עליו מחזירה מחיר אוטומטי. לחיצה כפולה בגרף = איפוס. כפתור חזרה לחי מחזיר מעקב. לאחר לחיצה בגרף: חצים לגלילה, +/− לזום, Home לתחילת הנתונים ו-End לחי. אזור הזמן ניתן לבחירה.</p>
+<h3>7. בדיקה היסטורית והסתברות</h3><ul><li>מריץ את אותם כללי אות על כל ההיסטוריה הטעונה. כניסה בפתיחת הנר הבא, יציאה ביעד 2 או בסטופ (אם שניהם בנר אחד, הסטופ קודם), עמלה 0.1%, עד 120 נרות.</li><li>אחוז ההצלחה מוצג עם טווח ביטחון של 95%. עם פחות מ-30 עסקאות הטווח רחב והתוצאה חלשה סטטיסטית.</li><li>R הוא מכפלה של הסיכון. ממוצע R חיובי ו-Profit Factor מעל 1 הם תנאי מינימום, לא הוכחה.</li></ul>
+<h3>8. עוד כלים</h3><ul><li>גודל פוזיציה: לפי גודל חשבון ואחוז סיכון (נשמר בדפדפן).</li><li>מגמה בטיימפריים גבוה: נרות סגורים, הקשר בלבד, לא חלק מהציון.</li><li>🔔 התראות: שינוי כיוון האות נבדק פעם אחת בסגירת נר. טעינה ראשונית אינה מפיקה התראה היסטורית.</li><li>אות מאושר ותוכנית מחושבים על הנר הסגור האחרון. כרטיס צהוב מציג בדיקה זמנית לנר המתהווה, ללא התראה.</li><li>גלילה לעבר משנה את התצוגה; הפאנל ממשיך להציג את הניתוח העדכני. זו אינה הרצת Replay.</li><li>📋 העתק דוח: כולל מועד הנר המאושר ומצב התצוגה.</li><li>הספירה לאחור מתחת למחיר היא הזמן עד סגירת הנר.</li></ul>
+<h3>9. מגבלות</h3><ul><li>M / W ונר נפח עוצר מזוהים בקירוב משלי.</li><li>סימון M / W מוצג לאחר סגירת נר האישור, 3 נרות לאחר נקודת הקיצון. מבנה שהוחלף נשאר באפור עם ×. הניקוד ההיסטורי משתמש במצב שהיה ידוע בכל נר.</li><li>הגלילה זמינה לכל הנתונים שנטענו; אין כאן עדיין טעינת שנים של היסטוריה.</li><li>הנפח הוא של Binance spot בלבד. בכלי הרשמי הנפח עשוי להיות מבורסה או סימבול אחר.</li><li>זו מסגרת קבלת החלטות ולא ייעוץ השקעות.</li></ul></div></div>
+<script>
+const $=id=>document.getElementById(id),S={sym:'BTCUSDT',tf:'5m',k:[],ws:null,n:150,off:-18,follow:true,right:18,price:null,zone:'Asia/Jerusalem',epoch:0,revision:0,z:[],sv:[],mw:[],e:[],sig:null,preview:null,st:null,closedIndex:-1,mouse:null};
+const cv=$('cv'),cx=cv.getContext('2d'),TFMS={'5m':3e5,'15m':9e5,'1h':36e5,'4h':144e5,'1d':864e5},HTFM={'5m':'1h','15m':'4h','1h':'4h','4h':'1d'};
+const nice=(lo,hi,t)=>{const r=(hi-lo)/t,m=Math.pow(10,Math.floor(Math.log10(r))),f=r/m;return(f>5?10:f>2?5:f>1?2:1)*m};
+const fmt=p=>p>=1000?p.toFixed(1):p>=10?p.toFixed(2):p.toFixed(4);
+function ema(a,p){const r=[],m=2/(p+1);let e=null;a.forEach((v,i)=>{e=e===null?v:v*m+e*(1-m);r.push(i<p-1?null:e)});return r}
+async function jsonFetch(url,signal){const response=await fetch(url,{signal});if(!response.ok)throw Error('HTTP '+response.status);return response.json()}
+async function serverClock(signal){try{const d=await jsonFetch('https://api.binance.com/api/v3/time',signal);return Number.isFinite(d.serverTime)?d.serverTime:null}catch(e){if(e.name==='AbortError')throw e;return null}}
+function validBar(b){return ['t','o','h','l','c','v'].every(p=>Number.isFinite(b[p]))&&b.t>=0&&b.o>0&&b.c>0&&b.l>0&&b.h>=Math.max(b.o,b.c)&&b.l<=Math.min(b.o,b.c)&&b.v>=0&&Number.isFinite(b.end)&&b.end>=b.t}
+function restBars(rows,tf,serverBefore){if(!Array.isArray(rows)||!rows.length)throw Error('Empty candles');const newest=+rows[rows.length-1][0],step=TFMS[tf];
+ const bars=rows.map(x=>{const t=+x[0],end=x[6]!=null&&Number.isFinite(+x[6])?+x[6]:t+step-1;return{t,o:+x[1],h:+x[2],l:+x[3],c:+x[4],v:+x[5],end,closed:end<newest||(serverBefore!==null&&end<serverBefore)}});
+ if(bars.some((b,i)=>!validBar(b)||(i&&b.t-bars[i-1].t!==step)))throw Error('Invalid or discontinuous candles');return bars;
+}
+function closedEnd(){let i=S.k.length-1;while(i>=0&&S.k[i].closed!==true)i--;return i}
+async function load(){const epoch=++S.epoch,sym=S.sym,tf=S.tf;S.controller?.abort();const controller=S.controller=new AbortController();
+ if(S.ws){S.ws.onclose=null;S.ws.onmessage=null;S.ws.close();S.ws=null}
+ Object.assign(S,{k:[],sig:null,preview:null,st:null,bt:null,htf:null,htfError:false,htfBucket:null,closedIndex:-1,prev:undefined,notifiedBar:null,revision:0,feedError:false});resetView();$('st').textContent='טוען…';sched();
+ try{const clock=await serverClock(controller.signal),offset=clock===null?0:clock-Date.now();if(epoch!==S.epoch)return;
+  const rows=await jsonFetch(`https://api.binance.com/api/v3/klines?symbol=${sym}&interval=${tf}&limit=1000`,controller.signal);if(epoch!==S.epoch)return;
+  S.clockOffset=offset;S.clockTrusted=clock!==null;S.k=restBars(rows,tf,clock);resetView();calc();sched();connect(epoch,sym,tf);refreshHTF();
+ }catch(e){if(epoch!==S.epoch||e.name==='AbortError')return;$('st').textContent='שגיאת נתונים או חיבור · נסה שוב';S.feedError=true;sched()}
+}
+async function htf(epoch,bucket){const tf=HTFM[S.tf],sym=S.sym,signal=S.controller?.signal;
+ try{const clock=await serverClock(signal);if(epoch!==S.epoch)return;
+  const rows=await jsonFetch(`https://api.binance.com/api/v3/klines?symbol=${sym}&interval=${tf}&limit=300`,signal);if(epoch!==S.epoch||bucket!==S.htfBucket)return;
+  const bars=restBars(rows,tf,clock).filter(b=>b.closed),c=bars.map(b=>b.c),a=ema(c,13),b=ema(c,50),i=c.length-1;if(i<49)throw Error('Insufficient context');
+  S.htf={tf,t:bars[i].t,b:c[i]>b[i]&&a[i]>b[i]?1:c[i]<b[i]&&a[i]<b[i]?-1:0};S.htfError=false;sched();
+ }catch(e){if(epoch!==S.epoch||e.name==='AbortError')return;S.htf=null;S.htfError=true;sched()}
+}
+function refreshHTF(){const i=closedEnd();if(i<0)return;const bucket=Math.floor((S.k[i].t+TFMS[S.tf])/TFMS[HTFM[S.tf]]);if(bucket===S.htfBucket)return;S.htfBucket=bucket;htf(S.epoch,bucket)}
+function connect(epoch=S.epoch,sym=S.sym,tf=S.tf){const ws=S.ws=new WebSocket(`wss://stream.binance.com:9443/ws/${sym.toLowerCase()}@kline_${tf}`),active=()=>epoch===S.epoch&&S.ws===ws;
+ ws.onopen=()=>{if(active()){$('st').textContent='● זרם מחובר';S.feedError=false}};
+ ws.onclose=()=>{if(!active())return;$('st').textContent='מנותק · מתחבר מחדש';setTimeout(()=>active()&&load(),3000)};
+ ws.onerror=()=>{if(active())$('st').textContent='שגיאת זרם'};
+ ws.onmessage=m=>{if(!active())return;try{const event=JSON.parse(m.data),x=event.k;if(!x||(x.s&&x.s!==sym)||(event.s&&event.s!==sym)||(x.i&&x.i!==tf))return;
+   const c={t:+x.t,o:+x.o,h:+x.h,l:+x.l,c:+x.c,v:+x.v,end:x.T!=null&&Number.isFinite(+x.T)?+x.T:+x.t+TFMS[tf]-1,closed:x.x===true},last=S.k[S.k.length-1];if(!validBar(c)||!last||c.t<last.t)return;
+   if(c.t===last.t){if(last.closed)return;S.k[S.k.length-1]=c}
+   else{if(c.t!==last.t+TFMS[tf]||!last.closed){$('st').textContent='משלים נתונים חסרים…';load();return}S.k.push(c);if(!S.follow)S.off++}
+   calc();sched();if(c.closed)refreshHTF();
+  }catch(e){$('st').textContent='עדכון נתונים לא תקין'}};
+}
+// F01: replay pivot confirmations in order and retain supersession history.
+// Bar times identify candle opens; decision/marker consumers require closed bars.
+function mwEvents(k,atr){const pp=[],events=[];let tailEvent=null;
+ function pivot(q){const last=pp[pp.length-1],confirmedAt=q.i+3;
+  if(last&&last.t===q.t){const extreme=q.t==='H'?q.p>last.p:q.p<last.p;if(!extreme)return;
+   if(tailEvent){tailEvent.supersededAt=confirmedAt;tailEvent.supersededBarTime=k[confirmedAt].t}pp[pp.length-1]=q;
+  }else pp.push(q);
+  tailEvent=null;if(pp.length<3)return;
+  const [x,y,z]=pp.slice(-3),at=atr[z.i];
+  const isW=z.t==='L'&&Math.abs(x.p-z.p)<.8*at&&y.p-Math.max(x.p,z.p)>1.2*at;
+  const isM=z.t==='H'&&Math.abs(x.p-z.p)<.8*at&&Math.min(x.p,z.p)-y.p>1.2*at;
+  if(isW||isM){tailEvent={i:z.i,t:isW?'W':'M',p:z.p,pivotTime:k[z.i].t,
+   confirmedAt,confirmationBarTime:k[confirmedAt].t,supersededAt:null,supersededBarTime:null,
+   pivots:[x,y,z].map(p=>({i:p.i,t:p.t,p:p.p}))};events.push(tailEvent)}
+ }
+ for(let i=3;i<k.length-3;i++){let H=true,L=true;
+  for(let j=i-3;j<=i+3;j++){if(k[j].h>k[i].h)H=false;if(k[j].l<k[i].l)L=false}
+  // Preserve the original tie order: high first, then low at the same index.
+  if(H)pivot({i,p:k[i].h,t:'H'});if(L)pivot({i,p:k[i].l,t:'L'});
+ }return events;
+}
+function calc(){const k=S.k,n=k.length;if(n<60)return;const cl=k.map(x=>x.c);
+ k.forEach((x,i)=>{x.up=x.c>=x.o;x.va=x.v*(x.h-x.l);x.cls=0;if(i>=10){let s=0,m=0;for(let j=i-10;j<i;j++){s+=k[j].v;m=Math.max(m,k[j].va)}const a=s/10;
+  if(x.v>=2*a||x.va>=m)x.cls=2;else if(x.v>=1.5*a)x.cls=1}});
+ S.e=[13,50,200,800].map(p=>ema(cl,p));
+ let pv=0,vv=0,day=-1;S.vw=k.map(x=>{const d=Math.floor(x.t/864e5);if(d!==day){day=d;pv=vv=0}pv+=(x.h+x.l+x.c)/3*x.v;vv+=x.v;return pv/vv});
+ let dd=-1,dop=0;S.dop=k.map(x=>{const d=Math.floor(x.t/864e5);if(d!==dd){dd=d;dop=x.o}return dop});
+ S.atr=[];let a=0;k.forEach((x,i)=>{const tr=i?Math.max(x.h-x.l,Math.abs(x.h-k[i-1].c),Math.abs(x.l-k[i-1].c)):x.h-x.l;a=i<14?(a*i+tr)/(i+1):(a*13+tr)/14;S.atr.push(a)});
+ let g=0,ls=0;S.rsi=k.map((x,i)=>{if(!i)return 50;const d=x.c-k[i-1].c,u=Math.max(d,0),w=Math.max(-d,0);if(i<=14){g=(g*(i-1)+u)/i;ls=(ls*(i-1)+w)/i}else{g=(g*13+u)/14;ls=(ls*13+w)/14}return ls?100-100/(1+g/ls):100});
+ S.z=[];for(let i=0;i<n;i++){const c=k[i];if(c.cls!==2)continue;const z={i,hi:c.h,lo:c.l,mid:(c.h+c.l)/2,up:c.up,rec:0,bm:null,i1:Infinity,i2:Infinity,i3:Infinity};
+  for(let j=i+1;j<n;j++){const b=k[j];let t=z.up?(b.l<=z.lo?3:b.l<=z.mid?2:b.l<=z.hi?1:0):(b.h>=z.hi?3:b.h>=z.mid?2:b.h>=z.lo?1:0);
+   if(t>z.rec)z.rec=t;if(t>=1&&z.i1===Infinity)z.i1=j;if(t>=2&&z.bm===null){z.bm=j-i;z.i2=j}if(t===3){z.i3=j;break}}S.z.push(z)}
+ S.mw=mwEvents(k,S.atr);
+ S.sv=[];for(let i=20;i<n;i++){const c=k[i];if(c.cls<1)continue;const r=c.h-c.l||1e-9;let mh=0,ml=1e12;for(let j=i-20;j<i;j++){mh=Math.max(mh,k[j].h);ml=Math.min(ml,k[j].l)}
+  if(c.h>mh&&(c.h-Math.max(c.o,c.c))/r>=.5)S.sv.push({i,t:'top'});if(c.l<ml&&(Math.min(c.o,c.c)-c.l)/r>=.5)S.sv.push({i,t:'bot'})}
+ const ci=S.closedIndex=closedEnd();S.sig=ci>=59?sigAt(ci):null;S.preview=n-1>ci?sigAt(n-1):null;
+ if(S.sig){const current=S.z.filter(z=>z.i<=ci&&z.i2>ci&&z.i>ci+1-200);S.sig.g=current.filter(z=>z.up).length;S.sig.r=current.filter(z=>!z.up).length}
+ const old=S.z.filter(z=>z.i<ci-29);S.st=[true,false].map(u=>{const a=old.filter(z=>z.up===u),b=a.filter(z=>z.i2<=ci).map(z=>z.bm).sort((x,y)=>x-y);
+  const p=field=>a.length?Math.round(a.filter(z=>z[field]<=ci).length/a.length*100):0;return{n:a.length,t:p('i1'),m:p('i2'),f:p('i3'),med:b.length?b[b.length>>1]:'–'}});
+ const cache=[S.epoch,S.sym,S.tf,ci,ci>=0?k[ci].t:'none',S.revision,S.min].join('|');if(!S.bt||S.btKey!==cache){S.bt=backtest();S.btKey=cache}notify()}
+
+function sigAt(i){const k=S.k,c=k[i],at=S.atr[i],dev=(c.c-S.e[1][i])/at,rs=S.rsi[i],act=S.z.filter(z=>z.i<i&&z.i2>i&&i-z.i<=300);
+ const gz=act.filter(z=>z.up&&z.hi<c.c&&c.c-z.hi<=6*at).sort((a,b)=>b.hi-a.hi)[0],rz=act.filter(z=>!z.up&&z.lo>c.c&&z.lo-c.c<=6*at).sort((a,b)=>a.lo-b.lo)[0];
+ const R=(a,t,w,d)=>a.some(q=>q.t===t&&i-q.i<=w&&i-q.i>=d&&i>=(q.confirmedAt??q.i)&&(q.supersededAt==null||i<q.supersededAt));
+ const sI=[[`מתיחה מעל EMA50 (${dev.toFixed(1)} ATR)`,dev>=2],['וקטור ירוק פתוח מתחת (עד 6 ATR)',!!gz],['נר נפח עוצר בשיא',R(S.sv,'top',6,0)],['מבנה M',R(S.mw,'M',15,3)],[`RSI ${rs.toFixed(0)} מעל 65`,rs>65]];
+ const lI=[[`מתיחה מתחת ל-EMA50 (${dev.toFixed(1)} ATR)`,dev<=-2],['וקטור אדום פתוח מעל (עד 6 ATR)',!!rz],['נר נפח עוצר בשפל',R(S.sv,'bot',6,0)],['מבנה W',R(S.mw,'W',15,3)],[`RSI ${rs.toFixed(0)} מתחת ל-35`,rs<35]];
+ const sc=a=>a.filter(x=>x[1]).length,ss=sc(sI),ls=sc(lI),short=ss>=ls,items=short?sI:lI,score=short?ss:ls,tz=short?gz:rz;
+ let plan=null;if(score>=S.min&&tz){const w=k.slice(Math.max(0,i-19),i+1),stop=short?Math.max(Math.max(...w.map(x=>x.h))+.3*at,c.c+at):Math.min(Math.min(...w.map(x=>x.l))-.3*at,c.c-at);plan={entry:c.c,stop,tp1:short?tz.hi:tz.lo,tp2:tz.mid};plan.rr=Math.abs(plan.tp2-c.c)/Math.abs(stop-c.c)}
+ return{side:plan?(short?'SHORT':'LONG'):'WAIT',score,items,plan,short}}
+function backtest(){const k=S.k,n=closedEnd()+1,T=[];let i=60;
+ while(i<n-2){const g=sigAt(i);if(g.side==='WAIT'){i++;continue}
+  const p=g.plan,sh=g.short,en=k[i+1].o,rk=Math.abs(p.stop-en);
+  if(rk<=0||(sh?p.stop<=en||p.tp2>=en:p.stop>=en||p.tp2<=en)){i++;continue}
+  let ex=null,t1=false,j=i+1;
+  for(;j<n&&j<=i+120;j++){const b=k[j];if(sh?b.h>=p.stop:b.l<=p.stop){ex=p.stop;break}if(sh?b.l<=p.tp1:b.h>=p.tp1)t1=true;if(sh?b.l<=p.tp2:b.h>=p.tp2){ex=p.tp2;break}}
+  if(ex===null){if(j>i+120)ex=k[i+120].c;else break}
+  T.push({R:(sh?en-ex:ex-en)/rk-.001*en/rk,sh,t1});i=j+1}
+ const N=T.length,M=Math.max(N,1),w=T.filter(t=>t.R>0).length,sum=T.reduce((a,t)=>a+t.R,0),gp=T.filter(t=>t.R>0).reduce((a,t)=>a+t.R,0),gl=-T.filter(t=>t.R<=0).reduce((a,t)=>a+t.R,0);
+ let c=0,pk=0,dd=0;const cur=[0];T.forEach(t=>{c+=t.R;cur.push(c);pk=Math.max(pk,c);dd=Math.max(dd,pk-c)});
+ const z=1.96,ph=w/M,dn=1+z*z/M,ct=(ph+z*z/(2*M))/dn,hw=z*Math.sqrt(ph*(1-ph)/M+z*z/(4*M*M))/dn,sd=a=>({n:a.length,avg:a.length?a.reduce((x,t)=>x+t.R,0)/a.length:0});
+ return{N,w,wr:ph,lo:Math.max(0,ct-hw),hi:Math.min(1,ct+hw),avg:sum/M,pf:gl?gp/gl:(gp?99:0),dd,cur,t1:T.filter(t=>t.t1).length/M,L:sd(T.filter(t=>!t.sh)),S:sd(T.filter(t=>t.sh))}}
+function notify(){const g=S.sig;if(!g)return;const key=[S.sym,S.tf,S.k[S.closedIndex].t].join('|');if(key===S.notifiedBar)return;S.notifiedBar=key;
+ const previous=S.prev;S.prev=g.side;if(previous===undefined||g.side===previous||g.side==='WAIT'||!S.al)return;
+ document.title=`${g.side} ${S.sym}`;try{const a=new AudioContext(),o=a.createOscillator();o.connect(a.destination);o.frequency.value=g.side==='LONG'?880:440;o.start();o.stop(a.currentTime+.25)}catch(e){}
+ try{new Notification(`${g.side} ${S.sym} ${S.tf} · נר סגור`,{body:`${g.score}/5 · מחיר סגירה ${fmt(g.plan.entry)}`})}catch(e){}
+}
+const col=c=>c.cls===2?(c.up?'#22e07a':'#ff3b4e'):c.cls===1?(c.up?'#3b82f6':'#a855f7'):(c.up?'#4b6b5f':'#7a4a52');
+const PRICE_AXIS=86,TIME_AXIS=28;
+function chartGeometry(){const r=cv.getBoundingClientRect(),W=r.width,H=r.height,vh=Math.max(35,H*.14);return{W,H,pw:Math.max(40,W-PRICE_AXIS),ph:Math.max(40,H-vh-TIME_AXIS-10),vh,cw:Math.max(40,W-PRICE_AXIS)/S.n}}
+function viewStart(){return S.k.length-S.off-S.n}
+function clampView(){S.n=Math.max(35,Math.min(Math.max(150,Math.min(2500,S.k.length+S.right+8)),S.n));const n=S.k.length,min=-Math.min(8,S.n*.08),max=Math.max(min,n-Math.min(n,Math.max(8,S.n*.2))),start=Math.max(min,Math.min(max,viewStart()));S.off=n-S.n-start}
+function resetView(){S.n=150;S.off=-S.right;S.follow=true;S.price=null;S.mouse=null;clampView()}
+function goLive(){S.follow=true;S.off=-S.right;clampView();sched()}
+function panBars(amount){S.follow=false;S.off-=amount;clampView();sched()}
+function zoomAt(fraction,factor){const start=viewStart(),anchor=start+fraction*S.n;S.n=Math.max(35,Math.min(Math.max(150,Math.min(2500,S.k.length+S.right+8)),S.n*factor));S.off=S.k.length-S.n-(anchor-fraction*S.n);S.follow=false;clampView();sched()}
+function visiblePrices(g=chartGeometry()){if(S.price)return S.price;const start=viewStart(),a=Math.max(0,Math.floor(start)),b=Math.min(S.k.length,Math.ceil(start+S.n));let lo=Infinity,hi=-Infinity;
+ for(let i=a;i<b;i++){lo=Math.min(lo,S.k[i].l);hi=Math.max(hi,S.k[i].h)}if(!Number.isFinite(lo)){const c=S.k[S.k.length-1]?.c||1;lo=c*.99;hi=c*1.01}const pad=Math.max((hi-lo)*.09,Math.abs(hi)*.0001,1e-8);return[lo-pad,hi+pad];
+}
+function scalePrice(factor,base=visiblePrices()){const middle=(base[0]+base[1])/2,span=Math.max(Math.abs(middle)*1e-6,Math.min(Math.abs(middle)*100,(base[1]-base[0])*factor));S.price=[middle-span/2,middle+span/2];sched()}
+function barTime(i){const k=S.k;if(!k.length)return Date.now();return i<0?k[0].t+i*TFMS[S.tf]:i>=k.length?k[k.length-1].t+(i-k.length+1)*TFMS[S.tf]:k[i].t}
+function timeText(t,full=false){return new Date(t).toLocaleString('he-IL',{timeZone:S.zone,...(full?{day:'2-digit',month:'2-digit'}:{}),hour:'2-digit',minute:'2-digit',hourCycle:'h23'})}
+function draw(){const k=S.k,n=k.length,g=chartGeometry(),{W,H,pw,ph,vh,cw}=g,dpr=devicePixelRatio||1;
+ cv.width=Math.max(1,Math.round(W*dpr));cv.height=Math.max(1,Math.round(H*dpr));cx.setTransform(dpr,0,0,dpr,0,0);cx.fillStyle='#131722';cx.fillRect(0,0,W,H);
+ $('livebtn').classList.toggle('on',S.follow);$('autoscale').classList.toggle('on',S.price===null);$('autoscale').textContent=S.price?'מחיר ידני':'מחיר אוטומטי';
+ $('chartmeta').textContent=n?`${n.toLocaleString('he-IL')} נרות · ${S.follow?'מעקב חי':'תצוגת עבר / גלילה'}`:'ממתין לנתונים';
+ const last=k[n-1];$('candlebadge').textContent=!last?'ממתין לנתונים':last.closed?'נר סגור':'נר מתהווה';$('candlebadge').classList.toggle('pending',!!last&&!last.closed);
+ if(n<1){cx.fillStyle='#8992a6';cx.font='14px system-ui';cx.fillText(S.feedError?'לא ניתן לטעון נתונים. החלף נכס או נסה לרענן.':'טוען נתוני שוק…',25,50);return}
+ clampView();const start=viewStart(),a=Math.max(0,Math.floor(start)),b=Math.min(n,Math.ceil(start+S.n)),[lo,hi]=visiblePrices(g),span=hi-lo;
+ const x=i=>(i-start+.5)*cw,y=p=>(hi-p)/span*ph,line=(x1,y1,x2,y2)=>{cx.beginPath();cx.moveTo(x1,y1);cx.lineTo(x2,y2);cx.stroke()};
+ S.chartMetrics={...g,start,lo,hi};cx.font='11px system-ui';
+ const tick=nice(lo,hi,Math.max(2,ph/58)),digits=Math.max(0,Math.min(8,-Math.floor(Math.log10(tick))));
+ for(let p=Math.ceil(lo/tick)*tick;p<=hi;p+=tick){cx.strokeStyle='#252a36';line(0,y(p),pw,y(p));cx.fillStyle='#9299a9';cx.fillText(p.toFixed(digits),pw+8,y(p)+4)}
+ const tickBars=Math.max(1,Math.ceil(112/cw)),full=S.n*TFMS[S.tf]>864e5;
+ for(let i=Math.ceil(start/tickBars)*tickBars;i<start+S.n;i+=tickBars){const xx=x(i);if(xx<0||xx>pw)continue;cx.strokeStyle='#222732';line(xx,0,xx,H-TIME_AXIS);cx.fillStyle='#9299a9';cx.fillText(timeText(barTime(i),full),Math.max(2,Math.min(pw-95,xx-25)),H-9)}
+ if(S.l.p){let step=Math.pow(10,Math.floor(Math.log10(Math.max(hi,1e-8)))-1);while(span/step>12)step*=5;cx.strokeStyle='#39404d';cx.setLineDash([2,6]);for(let p=Math.ceil(lo/step)*step;p<hi;p+=step)line(0,y(p),pw,y(p));cx.setLineDash([])}
+ cx.save();cx.beginPath();cx.rect(0,0,pw,ph);cx.clip();
+ for(const z of S.z){if(!S.l.z||z.i3<=S.closedIndex||z.i>=b||z.i>S.closedIndex)continue;const xx=Math.max(0,x(z.i)-cw/2),color=z.up?'38,217,127':'255,77,94';cx.fillStyle=`rgba(${color},.065)`;cx.fillRect(xx,y(z.hi),pw-xx,y(z.lo)-y(z.hi));cx.strokeStyle=`rgba(${color},.42)`;cx.setLineDash([5,5]);line(xx,y(z.mid),pw,y(z.mid));cx.setLineDash([])}
+ const layers=[[S.e[0],'#ff6b6b'],[S.e[1],'#b28af9'],[S.e[2],'#e5e7eb'],[S.e[3],'#f5c84c'],[S.vw,'#38bdf8'],[S.dop,'#94a3b8']];
+ if(S.l.e)layers.forEach(([values,color],index)=>{if(!values)return;cx.strokeStyle=color;cx.lineWidth=index===1?1.5:1;if(index>=4)cx.setLineDash([3,4]);cx.beginPath();let on=false;for(let i=a;i<b;i++){if(values[i]==null)continue;on?cx.lineTo(x(i),y(values[i])):cx.moveTo(x(i),y(values[i]));on=true}cx.stroke();cx.setLineDash([])});cx.lineWidth=1;
+ let maxVolume=1;for(let i=a;i<b;i++)maxVolume=Math.max(maxVolume,k[i].v);
+ for(let i=a;i<b;i++){const c=k[i],body=Math.max(1,Math.min(30,cw*.7));cx.strokeStyle=cx.fillStyle=col(c);cx.globalAlpha=c.closed?1:.6;line(x(i),y(c.h),x(i),y(c.l));cx.fillRect(x(i)-body/2,y(Math.max(c.o,c.c)),body,Math.max(1,Math.abs(y(c.o)-y(c.c))));}cx.globalAlpha=1;
+ if(S.l.m){cx.font='bold 12px system-ui';for(const q of S.sv){if(q.i<a||q.i>=b||q.i>S.closedIndex)continue;const c=k[q.i];cx.fillStyle='#fb923c';cx.fillText(q.t==='top'?'▼':'▲',x(q.i)-5,q.t==='top'?y(c.h)-7:y(c.l)+14)}
+  cx.font='bold 14px system-ui';for(const q of S.mw){const i=q.confirmedAt;if(i<a||i>=b||i>S.closedIndex)continue;const replaced=q.supersededAt!==null&&q.supersededAt<=S.closedIndex;cx.fillStyle=replaced?'#94a3b8':q.t==='W'?'#22e07a':'#ff3b4e';cx.fillText(q.t+(replaced?'×':''),x(i)-5,q.t==='W'?y(q.p)+25:y(q.p)-14)}
+  if(S.sig?.plan&&S.closedIndex>=a&&S.closedIndex<b){const p=S.sig.plan;for(const [label,price,color] of [['SL',p.stop,'#ff5d6c'],['TP1',p.tp1,'#32cf91'],['TP2',p.tp2,'#32cf91']]){cx.strokeStyle=color;cx.setLineDash([7,5]);line(0,y(price),pw,y(price));cx.setLineDash([]);cx.fillStyle=color;cx.font='11px system-ui';cx.fillText(label,7,y(price)-4)}}
+ }
+ cx.restore();cx.strokeStyle='#303541';line(0,ph+7,pw,ph+7);line(pw,0,pw,H);line(0,H-TIME_AXIS,W,H-TIME_AXIS);
+ for(let i=a;i<b;i++){const c=k[i],height=c.v/maxVolume*vh;cx.fillStyle=col(c);cx.globalAlpha=.65;cx.fillRect(x(i)-Math.min(30,cw*.7)/2,H-TIME_AXIS-height,Math.min(30,cw*.7),height)}cx.globalAlpha=1;
+ const yy=y(last.c),priceColor=last.c>=last.o?'#26a69a':'#ef5350';
+ if(yy>=0&&yy<=ph){cx.strokeStyle=priceColor;cx.setLineDash([2,4]);line(0,yy,pw,yy);cx.setLineDash([]);cx.fillStyle=priceColor;cx.fillRect(pw,yy-10,PRICE_AXIS,20);cx.fillStyle='#fff';cx.font='bold 11px system-ui';cx.fillText(fmt(last.c),pw+6,yy+4);cx.fillStyle='#a0a8ba';cx.font='10px system-ui';const remain=Math.max(0,(last.end??last.t+TFMS[S.tf]-1)-(Date.now()+(S.clockOffset||0)));cx.fillText(last.closed?'סגור':Math.floor(remain/6e4)+':'+String(Math.floor(remain%6e4/1e3)).padStart(2,'0'),pw+9,yy+25)}
+ const mouse=S.mouse,hover=mouse&&mouse.x>=0&&mouse.x<pw?Math.floor(start+mouse.x/cw):null,selected=hover!==null?k[hover]:k[Math.max(a,b-1)],info=selected||last;
+ cx.save();cx.beginPath();cx.rect(0,0,pw,65);cx.clip();cx.fillStyle='rgba(19,23,34,.88)';cx.fillRect(0,0,Math.min(pw,690),65);cx.fillStyle='#e2e6ef';cx.font='bold 13px system-ui';cx.fillText(`${S.sym} · ${S.tf} · BINANCE SPOT`,12,19);cx.font='11px system-ui';cx.fillStyle=info.c>=info.o?'#6fcba5':'#ef8791';cx.fillText(`O ${fmt(info.o)}   H ${fmt(info.h)}   L ${fmt(info.l)}   C ${fmt(info.c)}   Vol ${Math.round(info.v).toLocaleString('en-US')}${info.closed?'':'   · זמני'}`,12,37);
+ const legends=[['EMA13','#ff6b6b'],['EMA50','#b28af9'],['EMA200','#e5e7eb'],['EMA800','#f5c84c'],['VWAP','#38bdf8'],['DO','#94a3b8']];cx.font='10px system-ui';legends.forEach(([name,color],i)=>{cx.fillStyle=color;cx.fillText(name,12+i*66,55)});cx.restore();
+ if(mouse&&mouse.x>=0&&mouse.x<pw&&mouse.y>=0&&mouse.y<H-TIME_AXIS){const xx=x(hover);cx.strokeStyle='#7d869a';cx.setLineDash([4,4]);line(xx,0,xx,H-TIME_AXIS);if(mouse.y<ph){line(0,mouse.y,pw,mouse.y);cx.setLineDash([]);cx.fillStyle='#455065';cx.fillRect(pw,mouse.y-10,PRICE_AXIS,20);cx.fillStyle='#fff';cx.font='11px system-ui';cx.fillText(fmt(hi-mouse.y/ph*span),pw+6,mouse.y+4)}cx.setLineDash([]);const width=156,left=Math.max(0,Math.min(pw-width,xx-width/2));cx.fillStyle='#363e50';cx.fillRect(left,H-TIME_AXIS,width,TIME_AXIS);cx.fillStyle='#fff';cx.font='11px system-ui';cx.fillText(timeText(barTime(hover),true),left+7,H-9)}
+}
+let drag=null;
+function bindChart(){
+ cv.onwheel=e=>{e.preventDefault();const g=chartGeometry(),r=cv.getBoundingClientRect(),xx=e.clientX-r.left;if(xx>=g.pw){scalePrice(Math.exp(e.deltaY*.002));return}if(e.shiftKey||Math.abs(e.deltaX||0)>Math.abs(e.deltaY)){panBars((e.deltaX||e.deltaY)/g.cw);return}zoomAt(Math.max(0,Math.min(1,xx/g.pw)),Math.exp(Math.max(-1,Math.min(1,e.deltaY/250))))};
+ cv.onpointerdown=e=>{if(e.button!==0)return;cv.focus();const r=cv.getBoundingClientRect(),g=chartGeometry(),xx=e.clientX-r.left,yy=e.clientY-r.top;drag={id:e.pointerId,x:e.clientX,y:e.clientY,start:viewStart(),n:S.n,price:visiblePrices(),mode:xx>=g.pw?'price':yy>=g.H-TIME_AXIS?'time':'pan'};cv.setPointerCapture?.(e.pointerId);cv.style.cursor='grabbing';e.preventDefault()};
+ cv.onpointermove=e=>{const r=cv.getBoundingClientRect(),g=chartGeometry();S.mouse={x:e.clientX-r.left,y:e.clientY-r.top};if(drag){if(drag.mode==='price')scalePrice(Math.exp((e.clientY-drag.y)/160),drag.price);else if(drag.mode==='time'){const anchor=drag.start+drag.n/2;S.n=Math.max(35,Math.min(Math.max(150,Math.min(2500,S.k.length+S.right+8)),drag.n*Math.exp((drag.x-e.clientX)/250)));S.off=S.k.length-S.n-(anchor-S.n/2);S.follow=false;clampView()}else{S.follow=false;S.off=S.k.length-S.n-(drag.start-(e.clientX-drag.x)/g.cw);clampView()}}else cv.style.cursor=S.mouse.x>=g.pw?'ns-resize':S.mouse.y>=g.H-TIME_AXIS?'ew-resize':'crosshair';sched()};
+ cv.onpointerup=e=>{if(drag&&e.pointerId===drag.id){cv.releasePointerCapture?.(e.pointerId);drag=null;cv.style.cursor='crosshair'}};
+ cv.onpointercancel=()=>{drag=null};cv.onpointerleave=()=>{if(!drag){S.mouse=null;sched()}};
+ cv.ondblclick=e=>{const r=cv.getBoundingClientRect();if(e.clientX-r.left>=chartGeometry().pw)S.price=null;else resetView();sched()};
+ cv.onkeydown=e=>{let handled=true;if(e.key==='ArrowLeft')panBars(-S.n*.15);else if(e.key==='ArrowRight')panBars(S.n*.15);else if(e.key==='Home'){S.off=S.k.length-S.n;S.follow=false;clampView();sched()}else if(e.key==='End')goLive();else if(e.key==='+'||e.key==='=')zoomAt(.5,.8);else if(e.key==='-')zoomAt(.5,1.25);else if(e.key==='Escape'){S.price=null;sched()}else handled=false;if(handled)e.preventDefault()};
+ $('back').onclick=()=>panBars(-S.n*.2);$('forward').onclick=()=>panBars(S.n*.2);$('zoomin').onclick=()=>zoomAt(.5,.8);$('zoomout').onclick=()=>zoomAt(.5,1.25);$('reset').onclick=()=>{resetView();sched()};$('livebtn').onclick=goLive;$('autoscale').onclick=()=>{S.price=null;sched()};$('tz').onchange=e=>{S.zone=e.target.value;sched()};
+}
+
+function panel(){const g=S.sig,z=S.st,b=S.bt,h=S.htf;if(!g||!b){$('pn').innerHTML='<div class="card"><h4>אות מאושר</h4><small>ממתין לנתונים ולנרות סגורים.</small></div>';$('pn2').innerHTML='';$('szo').innerHTML='';return}
+ const cl=g.side==='LONG'?'L':g.side==='SHORT'?'S':'W',p=g.plan,pc=v=>(v*100).toFixed(0)+'%',hb=h?(h.b>0?'עולה':h.b<0?'יורדת':'צדדית'):S.htfError?'לא זמין':'טוען…',ctr=p&&h&&((g.short&&h.b>0)||(!g.short&&h.b<0)),pp=(x,y)=>(Math.abs(x-y)/y*100).toFixed(2)+'%',closedCount=S.closedIndex+1,confirmedTime=S.k[S.closedIndex].t+TFMS[S.tf];
+ $('pn').innerHTML=`<div class="card"><h4>אות מאושר · ${S.sym} · ${S.tf}</h4><div class="sig ${cl}">${g.side==='WAIT'?'המתן':g.side} <span style="font-size:13px;color:var(--m)">${g.score}/5 · נבדק: ${g.short?'שורט':'לונג'}</span></div><small>סגירת הנר: ${timeText(confirmedTime,true)} · ${S.zone==='UTC'?'UTC':'שעון ישראל'}</small>${g.items.map(i=>`<div class="row"><span class="${i[1]?'ok':'no'}">${i[1]?'✔':'✗'} ${i[0]}</span></div>`).join('')}</div>`
+ +(S.preview?`<div class="card preview"><h4>נר מתהווה · בדיקה זמנית</h4><div class="row"><span>${S.preview.side==='WAIT'?'תנאים חלקיים':S.preview.side}</span><b>${S.preview.score}/5</b></div><small>עשוי להשתנות עד הסגירה. אינו מפיק התראה או תוכנית מאושרת.</small></div>`:'')
+ +(p?`<div class="card"><h4>תוכנית על בסיס נר סגור</h4><div class="row"><span>מחיר סגירה</span><b>${fmt(p.entry)}</b></div><div class="row"><span>סטופ (${pp(p.stop,p.entry)})</span><b class="S">${fmt(p.stop)}</b></div><div class="row"><span>יעד 1 · מגע (${pp(p.tp1,p.entry)})</span><b class="L">${fmt(p.tp1)}</b></div><div class="row"><span>יעד 2 · 50% (${pp(p.tp2,p.entry)})</span><b class="L">${fmt(p.tp2)}</b></div><div class="row"><span>R:R ליעד 2</span><b>${p.rr.toFixed(2)}</b></div>${ctr?`<small style="color:#fbbf24">⚠ נגד המגמה ב-${h.tf}.</small>`:''}</div>`:'');
+ const acc=+$('acc').value,rk=+$('rk').value;$('szo').innerHTML=p&&acc&&rk?(()=>{const q=acc*rk/100/Math.abs(p.entry-p.stop),nt=q*p.entry;return `<div class="row"><span>סיכון</span><b>$${(acc*rk/100).toFixed(2)}</b></div><div class="row"><span>כמות</span><b>${q.toPrecision(4)}</b></div><div class="row"><span>שווי פוזיציה</span><b>$${nt.toFixed(0)} (${(nt/acc).toFixed(1)}x)</b></div>`})():'<small>יוצג כשיש תוכנית.</small>';
+ S.rep=[`Hybrid terminal 0.2.0 report · ${S.sym} ${S.tf} · ${new Date().toISOString()}`,`Confirmed candle close: ${new Date(confirmedTime).toISOString()}; chart timezone ${S.zone}; chart ${S.follow?'following live':'panned/zoomed (analysis remains current)'}`,`Signal: ${g.side} score ${g.score}/5 (min ${S.min}); HTF ${h?h.tf+' '+hb:'n/a'} (closed candles)`,...g.items.map(i=>(i[1]?'[x] ':'[ ] ')+i[0]),p?`Plan: signal close ${fmt(p.entry)} SL ${fmt(p.stop)} TP1 ${fmt(p.tp1)} TP2 ${fmt(p.tp2)} RR ${p.rr.toFixed(2)}`:'Plan: none',`Backtest (${closedCount} closed candles, entry next open, SL-first, round-trip fee 0.1%, max 120 bars): trades ${b.N}, win ${pc(b.wr)} (95% CI ${pc(b.lo)}-${pc(b.hi)}), avg R ${b.avg.toFixed(2)}, PF ${b.pf.toFixed(2)}, maxDD ${b.dd.toFixed(1)}R, TP1 touch ${pc(b.t1)}`,`Vector recovery green: n=${z[0].n} touch ${z[0].t}% mid ${z[0].m}% full ${z[0].f}%; red: n=${z[1].n} touch ${z[1].t}% mid ${z[1].m}% full ${z[1].f}%`].join('\n');
+ $('pn2').innerHTML=`<div class="card"><h4>הקשר · נרות סגורים</h4><div class="row"><span>מגמה ב-${h?h.tf:'…'}</span><b class="${h&&h.b>0?'L':h&&h.b<0?'S':'W'}">${hb}</b></div>${h?`<small>סגירת הקשר: ${timeText(h.t+TFMS[h.tf],true)}</small>`:''}<div class="row"><span>וקטורים פתוחים (ירוק / אדום)</span><span><b class="L">${g.g}</b> / <b class="S">${g.r}</b></span></div></div>
+ <div class="card"><h4>בדיקה היסטורית · ${closedCount} נרות סגורים · ציון ≥${S.min}</h4>${b.N?`<div class="row"><span>עסקאות</span><b>${b.N} (לונג ${b.L.n} · שורט ${b.S.n})</b></div><div class="row"><span>שיעור עסקאות רווחיות</span><b>${pc(b.wr)} <small style="display:inline">(${pc(b.lo)}–${pc(b.hi)})</small></b></div><div class="row"><span>ממוצע R נטו</span><b class="${b.avg>0?'L':'S'}">${b.avg.toFixed(2)}</b></div><div class="row"><span>Profit Factor</span><b>${b.pf.toFixed(2)}</b></div><div class="row"><span>ירידה מקסימלית</span><b>${b.dd.toFixed(1)}R</b></div><div class="row"><span>מגע ביעד 1</span><b>${pc(b.t1)}</b></div><canvas id="eq"></canvas>${b.N<30?'<small style="color:#fbbf24">⚠ מדגם קטן (פחות מ-30). הטווח רחב והתוצאה חלשה סטטיסטית.</small>':''}<small>כניסה בפתיחת הנר הבא, סטופ קודם לנר משותף, עלות הלוך ושוב 0.1%, עד 120 נרות.</small>`:'<small>אין עסקאות בהיסטוריה הטעונה לפי הסף הנבחר.</small>'}</div>
+ <div class="card"><h4>התאוששות וקטורים (היסטוריה)</h4>${[['ירוקים',z[0]],['אדומים',z[1]]].map(([t,s])=>`<div class="row"><span>${t} (${s.n})</span><span>מגע ${s.t}% · חצי ${s.m}% · מלא ${s.f}%</span></div><small>חציון נרות עד 50%: ${s.med}</small>`).join('')}</div>
+ <button id="cp" style="width:100%">📋 העתק דוח (לשליחה למודל אחר)</button>`;
+ const ec=$('eq');if(ec&&b.cur.length>1){const w=ec.width=ec.clientWidth*2,hh=ec.height=120,c2=ec.getContext('2d'),mn=Math.min(0,...b.cur),mx=Math.max(.01,...b.cur),Y=v=>hh-(v-mn)/(mx-mn)*(hh-8)-4;c2.strokeStyle='#555';c2.beginPath();c2.moveTo(0,Y(0));c2.lineTo(w,Y(0));c2.stroke();c2.strokeStyle='#38bdf8';c2.lineWidth=2;c2.beginPath();b.cur.forEach((v,i)=>{const X=i/(b.cur.length-1)*w;i?c2.lineTo(X,Y(v)):c2.moveTo(X,Y(v))});c2.stroke()}}
+let q=0;function sched(){if(!q){q=1;requestAnimationFrame(()=>{q=0;draw();panel()})}}
+$('sym').onchange=e=>{S.sym=e.target.value;load()};
+document.querySelectorAll('[data-tf]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tf]').forEach(x=>x.classList.remove('on'));b.classList.add('on');S.tf=b.dataset.tf;load()});
+S.l={z:1,e:1,p:1,m:1};S.hv=null;
+document.querySelectorAll('[data-l]').forEach(b=>b.onclick=()=>{S.l[b.dataset.l]=S.l[b.dataset.l]?0:1;b.classList.toggle('on');sched()});
+$('hq').onclick=()=>$('hp').hidden=!$('hp').hidden;$('hp').onclick=e=>{if(e.target.id==='hp'||e.target.tagName==='BUTTON')$('hp').hidden=true};
+bindChart();
+S.min=3;S.al=false;
+$('ms').onchange=e=>{S.min=+e.target.value;calc();sched()};
+$('bl').onclick=()=>{S.al=!S.al;$('bl').classList.toggle('on',S.al);if(S.al&&window.Notification&&Notification.permission==='default')Notification.requestPermission()};
+try{$('acc').value=localStorage.acc||1000;$('rk').value=localStorage.rk||1}catch(e){}
+['acc','rk'].forEach(i=>$(i).oninput=()=>{try{localStorage[i]=$(i).value}catch(e){}sched()});
+document.addEventListener('click',e=>{if(e.target.id==='cp'){navigator.clipboard.writeText(S.rep);e.target.textContent='✔ הועתק'}});
+setInterval(sched,1000);
+addEventListener('resize',sched);load();
+</script></body></html>

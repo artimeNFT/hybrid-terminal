@@ -1,0 +1,103 @@
+{
+  "kind": "Actual public Binance browser probe, no request interception",
+  "observedAt": "2026-10-23T07:43:37.329Z",
+  "checks": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "5m",
+      "bars": 1000,
+      "phase": "live",
+      "closedIndex": 998,
+      "preview": true,
+      "health": {
+        "ready": true,
+        "label": "נתוני שוק עדכניים",
+        "header": "Market data live",
+        "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+      },
+      "pivotStatus": "ready",
+      "pivot": {
+        "pp": 82244.28,
+        "r1": 83549.02,
+        "s1": 80111.34999999999,
+        "sourceStart": 1792627200000,
+        "validFrom": 1792713600000,
+        "validTo": 1792800000000
+      },
+      "chartText": "Pivots · Traditional · previous completed UTC day · source 2026-10-22 → valid 2026-10-23 UTC · PP 82244.3 / R1 83549.0 / S1 80111.3"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "timeframe": "15m",
+      "bars": 1000,
+      "phase": "live",
+      "closedIndex": 998,
+      "preview": true,
+      "health": {
+        "ready": true,
+        "label": "נתוני שוק עדכניים",
+        "header": "Market data live",
+        "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+      },
+      "pivotStatus": "ready",
+      "pivot": {
+        "pp": 2410.6499999999996,
+        "r1": 2460.979999999999,
+        "s1": 2338.8099999999995,
+        "sourceStart": 1792627200000,
+        "validFrom": 1792713600000,
+        "validTo": 1792800000000
+      },
+      "chartText": "Pivots · Traditional · previous completed UTC day · source 2026-10-22 → valid 2026-10-23 UTC · PP 2410.6 / R1 2461.0 / S1 2338.8"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "timeframe": "4h",
+      "bars": 1000,
+      "phase": "live",
+      "closedIndex": 998,
+      "preview": true,
+      "health": {
+        "ready": true,
+        "label": "נתוני שוק עדכניים",
+        "header": "Market data live",
+        "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+      },
+      "pivotStatus": "ready",
+      "pivot": {
+        "pp": 104.73000000000002,
+        "r1": 106.42000000000003,
+        "s1": 101.96000000000004,
+        "sourceStart": 1792627200000,
+        "validFrom": 1792713600000,
+        "validTo": 1792800000000
+      },
+      "chartText": "Pivots · Traditional · previous completed UTC day · source 2026-10-22 → valid 2026-10-23 UTC · PP 104.73 / R1 106.42 / S1 101.96"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "1h",
+      "bars": 1000,
+      "phase": "live",
+      "closedIndex": 998,
+      "preview": true,
+      "health": {
+        "ready": true,
+        "label": "נתוני שוק עדכניים",
+        "header": "Market data live",
+        "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+      },
+      "pivotStatus": "ready",
+      "pivot": {
+        "pp": 82244.28,
+        "r1": 83549.02,
+        "s1": 80111.34999999999,
+        "sourceStart": 1792627200000,
+        "validFrom": 1792713600000,
+        "validTo": 1792800000000
+      },
+      "chartText": "Pivots · Traditional · previous completed UTC day · source 2026-10-22 → valid 2026-10-23 UTC · PP 82244.3 / R1 83549.0 / S1 80111.3"
+    }
+  ],
+  "errors": []
+}

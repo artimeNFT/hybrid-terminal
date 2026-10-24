@@ -1,0 +1,3 @@
+PASS: five dated pages add 5000 chart-only candles, enforce the cap and preserve all live-core bars, confirmed signal, statistics, backtest and journal snapshots; live appends retain the historical viewport.
+PASS: short history pages stop further loading; discontinuous history is rejected without touching live decisions; obsolete history responses cannot cross an asset switch.
+Scope: older data is for chart navigation. It does not extend research/backtest coverage or reseed the live decision engine.

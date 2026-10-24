@@ -1,0 +1,1 @@
+PASS: actual mouse 80px/reverse/diagonal candle-pixel displacement, constant span, thresholds, axes/lower panes, capture/release, stream persistence, controls, keyboard/focus, layers/history and narrow emulated touch/cancel; no page/console errors. Synthetic feed; no physical-device or live-soak claim.

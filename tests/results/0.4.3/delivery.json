@@ -1,0 +1,152 @@
+{
+  "version": "0.4.3",
+  "sourceSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "verifiedAt": "2026-10-24T05:23:57.516030+00:00",
+  "nodeSuites": [
+    {
+      "suite": "regression",
+      "exitCode": 0
+    },
+    {
+      "suite": "ui-smoke",
+      "exitCode": 0
+    },
+    {
+      "suite": "live-chart",
+      "exitCode": 0
+    },
+    {
+      "suite": "readability-reliability",
+      "exitCode": 0
+    },
+    {
+      "suite": "history",
+      "exitCode": 0
+    },
+    {
+      "suite": "increment",
+      "exitCode": 0
+    },
+    {
+      "suite": "integrity",
+      "exitCode": 0
+    },
+    {
+      "suite": "day-context",
+      "exitCode": 0
+    },
+    {
+      "suite": "navigation",
+      "exitCode": 0
+    }
+  ],
+  "browserSuites": [
+    {
+      "suite": "browser-smoke",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-increment",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-integrity",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-day-context",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-navigation",
+      "exitCode": 0
+    }
+  ],
+  "byteIdenticalBaselineSectionsSha256": {
+    "strategy-analysis-backtest": "b9000df0d63975dfbcc75715f7a9265d77625486a5c9b014283bb06399409dbe",
+    "preferences-journal-history-day-context": "c8c98252a366fcb00bd3e03019d979613a7ed3705e900b27a51721f511a1b5dc",
+    "renderer": "f9de8d4ddfe400d1df9037631665bbdcde8dbf942545f4669650119d33446f16",
+    "sizing-research-export-report": "c10070e85e6346b8141ede652b68772fbda13ae3962e6b56f3e8bad6c6dcba6f",
+    "display-preferences": "b9925c70250fb898b791f5be61729b690147eaae1333fa759afe223bcd65d496"
+  },
+  "historical042EvidencePreserved": true,
+  "actualCandlePixelDisplacements": [
+    {
+      "name": "80px vertical mouse drag",
+      "pixelDisplacement": 80,
+      "spanBefore": 6.0133617573658,
+      "spanAfter": 6.0133617573658
+    },
+    {
+      "name": "reverse and diagonal",
+      "reversePixelDisplacement": -80,
+      "diagonalX": 70,
+      "diagonalY": 40
+    }
+  ],
+  "testInputs": "synthetic REST/WebSocket; actual Chromium mouse and emulated touch events",
+  "retryNote": "Existing day-context assertion now awaits the scheduled rendered disabled state; original failure retained in *.initial artifacts.",
+  "unobserved": [
+    "0.4.3 actual public-feed run",
+    "actual UTC-midnight transition",
+    "one-hour reconnect/storage session",
+    "physical touch-device operation"
+  ],
+  "artifacts": {
+    "hybrid-terminal.html": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "README.md": "4e9e6213a5f525eb1c4aca5c19ab3ca8e6ccc8837cd9b1beb08c109b4671127a",
+    "STATUS.md": "ea4ceb95105a45012f2e825e764b8b7ada3e6be53010fb4e71ea675139e96ea0",
+    "SOURCE_PROVENANCE.md": "f8ffb1d52501c1ce794d469c42ba6b5128117b90021a218c4fe1c2c47ddf7342",
+    "SHA256SUMS.txt": "ac5a1f36ac5bf0d2fd92ebd5c975cd99ae97dd1dcdd0050d42c0bce4a57dba46",
+    "changes-since-0.4.2.diff": "2b457b1433f474d3f37fc735988192df5417221cd4de563d7836e4656c687b6a",
+    "baseline/hybrid-terminal.0.4.2.html": "d91b92a0105e4c35aa8357d19ac123a2c73918cf093a7e905b1aa4941df7b6ed",
+    "baseline/STATUS.0.4.2.md": "76905283d765d88b09ce4c461288869d1e18882512a07d73d79632cea24a08e0",
+    "tests/navigation.cjs": "dd2b2a3394ea148dc1fc8bc7bef445455fe832de322804ecfa1fc8ec421b0ae3",
+    "tests/browser-navigation.cjs": "4684db5b81449c42e4cf426b7e33cea15d6a04c67c39e10df7b52d3b965898de",
+    "tests/ui-smoke.cjs": "1210b62303e5a85e4ac03f78aed78be5f20115b5ff041c9a673fb77b28c419f3",
+    "tests/browser-day-context.cjs": "265160824b71ae0443917d16226c7d92e04dcaccfb2cf8c1cfdcf8b680d5a6b5",
+    "tests/browser-observe-context.cjs": "1699710293faaa4e704d9d9313e5946e8f8eedfe339ec6c022b238d21d7a6a26"
+  },
+  "evidence": {
+    "browser-context/desktop-collision.png": "35d35dabd87920e88580515f441ab3da89265a7854ccece5594e4c4c6e3c8022",
+    "browser-context/history.png": "ab5736ace359888ae6f3dbcfca7f96bcbc22303e9bc6efff9d26a599a7dfbf46",
+    "browser-context/narrow-history.png": "d08224666bb8f8dbc16fe92df8f490af39cfc687fa4cd3117f82c71df31c1fd9",
+    "browser-context/phone-collision.png": "0dc21b2623b32aaad14be869f1bdf614937d67174846cbedc0a22b7bacae9c3e",
+    "browser-day-context.initial.txt": "bbd571372120c6f6f2cf976873ebb1498e00b1d0c6e5e33333cfeb8ade860f00",
+    "browser-day-context.txt": "043a09d17603ce4692e9ff6feee37b16419681c7262f4ecf3e65aa8ad44bf1ab",
+    "browser-increment.txt": "a5b082b09d13982bac9c5c30dd3ff777a3108343ad80d4577b14a6c8caa7e83e",
+    "browser-integrity/export-all-losses.json": "47957a442af1706639fa87f88bc412cbf552953220dae030fd3a0bd1a32bc834",
+    "browser-integrity/export-all-zero.json": "43bec0f243dd2d5fda214a3677183f776c07eaf3d7f22b3afc0852a618e21ac4",
+    "browser-integrity/export-empty.json": "79cc8eab3f8fc876a74146cd38dee3f918e8396d79e3c78afd56ac77c32688b6",
+    "browser-integrity/export-mixed.json": "e9fd8be4a16904872a1a31eab46607902b81775919d4fd7bb80641c7bb684681",
+    "browser-integrity/export-no-losses.json": "53191f313fd111048bafbddd5f4c951c92958571b3a0472579492bc72ec33042",
+    "browser-integrity/sizing-desktop.png": "3cb48468009936b7b6d166312c5c30b9ea5dd57d67146d7eb29373503b2a690c",
+    "browser-integrity/sizing-phone.png": "ed49698f458ae07b36626c932cc0ada52c3e98bf99df51e0f159e29c706e7e95",
+    "browser-integrity/tie-desktop.png": "b538e3defe9546efc0f29a087f170a71b1fb29370bee306b33de70f63b11bd26",
+    "browser-integrity.txt": "c49dc5867d3f2af954461bd7de661617c2a577014d608120bf96e7336f06d783",
+    "browser-navigation/desktop-before.png": "943f5432abb7687499228767da6de9b05ed0b2e621400b61e25b0defc1b9aaf6",
+    "browser-navigation/desktop-down80.png": "2b2c85883c2f3601ed13ca1f94a205ab68d86d7f1c67d1e4787a92b4b283d0f4",
+    "browser-navigation/evidence.json": "982fc1991edeec29bddd37b0392bc7b6471453ba04f0650e070e60cef3c1beec",
+    "browser-navigation/narrow.png": "b1ab33d8df8608a3e0e629be407822dbdb70b6b10f1ee34798bbc9aafd88b07c",
+    "browser-navigation/phone-touch.png": "e2c9465ad531eaf3ba209bd1624e8708039b8ce2900d15f391dfb9b25fe6bda5",
+    "browser-navigation.txt": "3e7e799d0a71e45acfb27e051ee0368ec70bc1229abf08b16297d0be318f2849",
+    "browser-retained/desktop.png": "2275d716bb9917e82c531b03100e94e2164427a09ecfdb6d262a1db3185f062e",
+    "browser-retained/narrow.png": "fe4f78093165a8bc2e931e1b571fd586e9b82a431bb736017f54ff680c2bb938",
+    "browser-retained/phone.png": "e2649912bf500207af43b4f9da167228583f59b3928281eec6af1b40801b3d8d",
+    "browser-smoke.png": "88de2ea0b469b1a19e282558036d47b187ad426a3e503203dd637a42d109e3a1",
+    "browser-smoke.txt": "3c06e46dfaa09377a0de4ce9c1e9de3740342779b19c09fe7f03d7e339ae652b",
+    "browser-validation.initial.json": "2a76a0b5840883ac5b233d24c6bf14635c9f6a4fbd6e9df73622cc5bbc2231cf",
+    "browser-validation.json": "bf61ecc8e4f887943209b2693397ec72ea9ab605812ee44b93569924cea35eca",
+    "day-context.txt": "fb1357932b161b4d643de5d40532dfa139cbdc308e8ccbc6c2e61f32426c20c2",
+    "history.txt": "a3fcb978510fa68386d85bf77f435f9b424094620c5ff20263e9ef44917491f7",
+    "increment.txt": "d7e3d8c22935003d12c97e82163078f2a5a37cd5cf96af1547459ff2d02deeb9",
+    "integrity.txt": "a4343bc399069a41265338e84306bcd0ead78fc7259e29d4d5ce591621bc2af9",
+    "live-chart.txt": "97f017902d867338e14e547a44fe7877401498f5252000ef8d640573f205ae63",
+    "navigation.txt": "ff23db3f0b755700f500d3551fce960bcb808085330981b81bd5401597436f73",
+    "node-validation.json": "2eeef50453d4137ec504e0bbeea10854ab18842beeb6f4f92b88d8fb5ac7a544",
+    "preservation.json": "cf55c7ae990176ec77701db2e9b0ae8c0fd0fbed3d1c0c75e79706f9bd203264",
+    "readability-reliability.txt": "a76d6d7cddec4cd747c23b25753020eef21886ab0fda7feeb7f36a6cd3c13b62",
+    "regression.txt": "e6603e45d4796236daf0ff94d8f1d96e1acd16b8a2a9c325f2c4727aa234c4f4",
+    "ui-smoke.txt": "a48dc7496bf78f9638e7f5a31c731b40953c802b7b09ed34e53939ba89e3412f"
+  }
+}

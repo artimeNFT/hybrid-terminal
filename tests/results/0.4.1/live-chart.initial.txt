@@ -1,0 +1,107 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+... Skipped lines
+
+  {
+-   candidates: {
+-     LONG: {
+-       eligible: false,
+-       geometryEligible: false,
+-       items: [
+-         [
+-           'מתיחה מתחת ל-EMA50 (0.3 ATR)',
+-           false
+-         ],
+-         [
+-           'וקטור אדום פתוח מעל (עד 6 ATR)',
+-           false
+-         ],
+-         [
+-           'נר נפח עוצר בשפל',
+-           false
+-         ],
+-         [
+-           'מבנה W',
+-           false
+-         ],
+-         [
+-           'RSI 63 מתחת ל-35',
+-           false
+-         ]
+-       ],
+-       plan: null,
+-       reason: 'below-threshold',
+-       score: 0,
+-       side: 'LONG',
+-       targetAvailable: false
+-     },
+-     SHORT: {
+-       eligible: false,
+-       geometryEligible: false,
+-       items: [
+-         [
+-           'מתיחה מעל EMA50 (0.3 ATR)',
+-           false
+-         ],
+-         [
+-           'וקטור ירוק פתוח מתחת (עד 6 ATR)',
+-           false
+-         ],
+-         [
+-           'נר נפח עוצר בשיא',
+-           false
+-         ],
+-         [
+-           'מבנה M',
+-           true
+-         ],
+-         [
+-           'RSI 63 מעל 65',
+-           false
+-         ]
+-       ],
+-       plan: null,
+-       reason: 'below-threshold',
+-       score: 1,
+-       side: 'SHORT',
+-       targetAvailable: false
+-     }
+-   },
+    items: [
+      [
+        'מתיחה מעל EMA50 (0.3 ATR)',
+        false
+      ],
+...
+    score: 1,
+-   selection: {
+-     policy: 'higher-score-short-on-tie-before-eligibility',
+-     reason: 'below-threshold',
+-     selected: 'SHORT',
+-     suppressedOther: false,
+-     tied: false
+-   },
+    short: true,
+    side: 'WAIT',
+-   validity: {
+-     raw: {
+-       atr: 12.726548381075117,
+-       ema50: 114.49308724892326,
+-       relativeVolume: 1,
+-       rsi: 62.82320547776022,
+-       volumeMean: 100
+-     },
+-     ready: true,
+-     reasons: [],
+-     rsiPolicy: 'wilder14-local-undefined-zero-change-v1'
+-   }
+  }
+
+    at /mnt/c/Users/shlom/Desktop/THE hybrid-terminal/tests/live-chart.cjs:16:9 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}

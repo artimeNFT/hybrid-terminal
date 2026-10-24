@@ -1,0 +1,36 @@
+AssertionError [ERR_ASSERTION]: The input did not match the regular expression /0\.4\.0 report/. Input:
+
+'Hybrid terminal 0.4.1 report · BINANCE SPOT · RESEARCH / SIMULATION · BTCUSDT 5m · 2026-10-24T03:36:31.876Z\n' +
+  'Confirmed candle close: 2023-11-15T06:38:20.000Z; chart timezone Asia/Jerusalem; chart following live\n' +
+  'Signal: WAIT score 1/5 (min 3); rule hybrid-v2-validity-closed; condition count, not probability; HTF 1h עולה (closed candles)\n' +
+  '[ ] מתיחה מעל EMA50 (0.8 ATR)\n' +
+  '[ ] וקטור ירוק פתוח מתחת (עד 6 ATR)\n' +
+  '[ ] נר נפח עוצר בשיא\n' +
+  '[ ] מבנה M\n' +
+  '[x] RSI 81 מעל 65\n' +
+  'Candidates: {"LONG":{"side":"LONG","score":0,"items":[["מתיחה מתחת ל-EMA50 (0.8 ATR)",false],["וקטור אדום פתוח מעל (עד 6 ATR)",false],["נר נפח עוצר בשפל",false],["מבנה W",false],["RSI 81 מתחת ל-35",false]],"targetAvailable":false,"geometryEligible":false,"eligible":false,"reason":"below-threshold","plan":null},"SHORT":{"side":"SHORT","score":1,"items":[["מתיחה מעל EMA50 (0.8 ATR)",false],["וקטור ירוק פתוח מתחת (עד 6 ATR)",false],["נר נפח עוצר בשיא",false],["מבנה M",false],["RSI 81 מעל 65",true]],"targetAvailable":false,"geometryEligible":false,"eligible":false,"reason":"below-threshold","plan":null}}; selection {"policy":"higher-score-short-on-tie-before-eligibility","selected":"SHORT","tied":false,"suppressedOther":false,"reason":"below-threshold"}; validity {"ready":true,"reasons":[],"raw":{"atr":17.722430124834773,"ema50":118.51479952116762,"rsi":81.28136657932862,"volumeMean":100,"relativeVolume":1},"rsiPolicy":"wilder14-local-undefined-zero-change-v1"}\n' +
+  'Plan: none\n' +
+  'Sizing (nominal geometry only, not executable): {"kind":"nominal-stop-distance-only","state":"no-plan","side":"WAIT","account":1000,"riskPercent":1,"scenario":"unconfigured","cash":null,"quantity":null,"riskBudget":null,"notional":null,"notionalToAccount":null,"affordability":"unknown","executableQuantity":null,"venueFilters":"not-checked","accountPermissions":"not-checked","costs":"not-included; account fees/slippage/gaps/funding unconfigured"}\n' +
+  'Backtest (101 closed candles, entry next open, gap stops at open, SL-first, ohlc-market-stop-v2-gap-open, round-trip fee 0.1% entry notional baseline assumption, not live account fees, max 120 bars): N 0, state empty, win Unavailable (Wilson 95% CI Unavailable), mean net R Unavailable, PF Unavailable, positive net R 0.00, loss magnitude net R 0.00, realized closed-trade net-R drawdown Unavailable, TP1 touch Unavailable\n' +
+  'Statistics JSON: {"state":"empty","N":0,"wr":null,"lo":null,"hi":null,"pf":null,"pfState":"unavailable","avg":null,"dd":null}\n' +
+  'UTC day coverage: partial-first-day; VWAP HLC3 / spot base volume; partial DO is first loaded open only; RSI wilder14-local-undefined-zero-change-v1\n' +
+  'Vector recovery touch/mid/full green: n=4 100% / 100% / 100%; red: n=0 Unavailable'
+
+    at /mnt/c/Users/shlom/Desktop/THE hybrid-terminal/tests/ui-smoke.cjs:18:52 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'Hybrid terminal 0.4.1 report · BINANCE SPOT · RESEARCH / SIMULATION · BTCUSDT 5m · 2026-10-24T03:36:31.876Z\n' +
+    'Confirmed candle close: 2023-11-15T06:38:20.000Z; chart timezone Asia/Jerusalem; chart following live\n' +
+    'Signal: WAIT score 1/5 (min 3); rule hybrid-v2-validity-closed; condition count, not probability; HTF 1h עולה (closed candles)\n' +
+    '[ ] מתיחה מעל EMA50 (0.8 ATR)\n' +
+    '[ ] וקטור ירוק פתוח מתחת (עד 6 ATR)\n' +
+    '[ ] נר נפח עוצר בשיא\n' +
+    '[ ] מבנה M\n' +
+    '[x] RSI 81 מעל 65\n' +
+    'Candidates: {"LONG":{"side":"LONG","score":0,"items":[["מתיחה מתחת ל-EMA50 (0.8 ATR)",false],["וקטור אדום פתוח מעל (עד 6 ATR)",false],["נר נפח עוצר בשפל",false],["מבנה W",false],["RSI 81 מתחת ל-35",false]],"targetAvailable":false,"geometryEligible":false,"eligible":false,"reason":"below-threshold","plan":null},"SHORT":{"side":"SHORT","score":1,"items":[["מתיחה מעל EMA50 (0.8 ATR)",false],["וקטור ירוק פתוח מתחת (עד 6 ATR)",false],["נר נפח עוצר בשיא",false],["מבנה M",false],["RSI 81 מעל 65",true]],"targetAvailable":false,"geometryEligible":false,"eligible":false,"reason":"below-threshold","plan":null}}; selection {"policy":"higher-score-short-on-tie-before-eligibility","selected":"SHORT","tied":false,"suppressedOther":false,"reason":"below-threshold"}; validity {"ready":true,"reasons":[],"raw":{"atr":17.722430124834773,"ema50":118.51479952116762,"rsi":81.28136657932862,"volumeMean":100,"relativeVolume":1},"rsiPolicy":"wilder14-local-undefined-zero-change-v1"}\n' +
+    'Plan: none\n' +
+    '...',
+  expected: /0\.4\.0 report/,
+  operator: 'match',
+  diff: 'simple'
+}

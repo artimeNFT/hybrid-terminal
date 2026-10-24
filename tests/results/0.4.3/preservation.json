@@ -1,0 +1,11 @@
+{
+  "baselineSha256": "d91b92a0105e4c35aa8357d19ac123a2c73918cf093a7e905b1aa4941df7b6ed",
+  "sourceSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "byteIdenticalSectionsSha256": {
+    "strategy-analysis-backtest": "b9000df0d63975dfbcc75715f7a9265d77625486a5c9b014283bb06399409dbe",
+    "preferences-journal-history-day-context": "c8c98252a366fcb00bd3e03019d979613a7ed3705e900b27a51721f511a1b5dc",
+    "renderer": "f9de8d4ddfe400d1df9037631665bbdcde8dbf942545f4669650119d33446f16",
+    "sizing-research-export-report": "c10070e85e6346b8141ede652b68772fbda13ae3962e6b56f3e8bad6c6dcba6f",
+    "display-preferences": "b9925c70250fb898b791f5be61729b690147eaae1333fa759afe223bcd65d496"
+  }
+}

@@ -1,0 +1,1 @@
+PASS: four actual Binance browser selections load OHLCV, live WebSocket updates and complete UTC pivots without console errors.

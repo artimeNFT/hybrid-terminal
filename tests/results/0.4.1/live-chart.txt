@@ -1,0 +1,7 @@
+PASS: 20 developing-candle changes leave confirmed signal, recovery statistics and backtest unchanged; confirmation occurs only on x=true; confirmed bars cannot be downgraded.
+PASS: real setup fixture emits no provisional alert, emits one close alert, suppresses duplicate closes and agrees with completed-candle replay.
+PASS: missing server time conservatively leaves the final REST candle provisional, independent of the local wall clock.
+PASS: an older BTC response cannot overwrite ETH; cache identity changes with the asset; mismatched stream symbols are ignored.
+PASS: higher-timeframe context refreshes on its close boundary using closed candles; a stream gap starts a guarded REST resynchronization.
+PASS: right margin, cursor-anchored zoom, full loaded-history navigation, clamped future pan, End/Home controls, consistent drag width, stable historical view on new candles, price scale reset, future crosshair and timezone selection.
+Scope: deterministic/mocked data and DOM/canvas test doubles. Live exchange connectivity and full browser layout remain separate checks.

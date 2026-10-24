@@ -1,0 +1,7 @@
+PASS: known/distinct PDH/PDL periods, [from,to) boundaries, independent toggles and cache reuse, preserved preferences, historical chart versus frozen current context, no autoscale distortion and unchanged signal/backtest/journal bytes.
+PASS: exact nearest above/below/equal grouping, missing sides, finite positive price/ATR denominators and deterministic merged/overflow label placement.
+PASS: incomplete/truncated/invalid/duplicate/out-of-order/failed/missing daily source and missing trusted clock stay unavailable; failures use bounded retry instead of update-driven request floods.
+PASS: exact midnight close advances context before the next opening-bar update, delayed sources are unknown until validated, trusted clock lag is conservative, and late completion/provisional updates preserve frozen decisions/backtest/journal.
+PASS: one shared in-flight/cache path, independent layer rendering, all-off/reenable guards, obsolete asset/timeframe/range rejection and <=1000-day missing-range pagination.
+PASS: exact 0.4.1 signal/backtest/journal upgrade preservation, unchanged rule/execution versions, no context-induced journal write, and IANA Jerusalem DST-aware observation labels.
+Scope: deterministic synthetic/mocked data and DOM; no claim of an observed live UTC-midnight transition or long-session soak.

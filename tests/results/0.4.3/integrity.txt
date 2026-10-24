@@ -1,0 +1,7 @@
+PASS: empty/all-zero/no-loss/all-loss/mixed net-R states agree in actual UI, copied report and serialized research export; known Wilson reference, ratio overflow and invalid outcomes; actual backtest no-loss/empty aggregation.
+PASS: reviewed 1000/1%/100/99.9 sizing, nominal 100 units/10000 notional/10x, explicit cash scenario and balance, insufficient/covered-before-costs/SHORT/unconfigured/invalid/overflow states; no feasible/executable quantity or venue approval invented.
+PASS: review tie fixture exposes eligible LONG but deliberately retains selected SHORT/WAIT; no fallback or threshold tuning, clear conflict reason and frozen confirmed versus provisional diagnostics.
+PASS: flat zero-volume has no vectors, zero ATR and undefined RSI are non-actionable, warm-up/invalid arithmetic/overflow are explicit, one-sided RSI remains 100, zero-product references are not strength and partial-day coverage is labeled without replacing VWAP.
+PASS: 6882 ordinary valid-input decisions exactly match actual 0.4.0 legacy fields, plans, items, thresholds and direction policy across 14 datasets; volume classes unchanged.
+PASS: prior journal record bytes/IDs/versions retained, new semantics identified separately, execution version/fees retained, sizing/appearance/export leave journal bytes unchanged and preference migration retains unrelated fields.
+Scope: synthetic fixtures and mocked DOM/network, distinct from real browser/live-close evidence.

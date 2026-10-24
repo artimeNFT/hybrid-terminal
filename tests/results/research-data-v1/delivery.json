@@ -1,0 +1,120 @@
+{
+  "applicationVersion": "0.4.3",
+  "applicationUnchanged": true,
+  "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "toolVersion": "1.0.0",
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-24T05:51:26.197685+00:00",
+  "dataset": "research/datasets/btcusdt-5m-2026-q3.json",
+  "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+  "quality": {
+    "state": "complete",
+    "rowCount": 26496,
+    "uniqueTimestampCount": 26496,
+    "validUniqueRows": 26496,
+    "expectedRows": 26496,
+    "eligibleRowsAtCutoff": 26496,
+    "excludedDevelopingOrFutureRows": 0,
+    "missingRows": 0,
+    "duplicateRows": 0,
+    "conflictingTimestamps": 0,
+    "duplicates": [],
+    "gaps": [],
+    "coverage": {
+      "firstOpenTime": 1782864000000,
+      "lastOpenTime": 1790812500000,
+      "endExclusive": 1790812800000,
+      "contiguous": true
+    },
+    "issueCount": 0,
+    "issues": [],
+    "issuesTruncated": false
+  },
+  "checks": [
+    {
+      "name": "12 deterministic Node tests",
+      "exitCode": 0
+    },
+    {
+      "name": "existing ui-smoke",
+      "exitCode": 0
+    },
+    {
+      "name": "existing navigation",
+      "exitCode": 0
+    },
+    {
+      "name": "public Q3 acquisition",
+      "exitCode": 0
+    },
+    {
+      "name": "two one-day public acquisitions",
+      "exitCode": 0
+    },
+    {
+      "name": "three offline Node validations",
+      "exitCode": 0
+    },
+    {
+      "name": "fixed-range comparison",
+      "exitCode": 0
+    },
+    {
+      "name": "independent Python JSON/SHA256/Decimal/grid",
+      "exitCode": 0
+    },
+    {
+      "name": "application and historical evidence preservation",
+      "exitCode": 0
+    },
+    {
+      "name": "project and research checksum manifests",
+      "exitCode": 0
+    }
+  ],
+  "limitations": [
+    "No strategy evaluation or trading-edge inference",
+    "No real public rate-limit/ban or outage was induced; deterministic fixtures cover these behaviors",
+    "Actual application UTC-midnight/long-session/physical-device observations remain pending"
+  ],
+  "artifacts": {
+    "hybrid-terminal.html": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "research/klines.cjs": "7200e575ba74206dc70a82cdfb7159e9d9596fc5d01e8b0c75215ce30d30d1c5",
+    "research/SCHEMA.md": "d4698d2ca8351a67293c53842b5ba0fc6cec31c3b888d1ab7fae19afd2198a72",
+    "tests/research-data.cjs": "a4f44ebfbd64f28f89c89fc4026aa7560bb1806ec62baead18e222cd0cce780e",
+    "tests/verify-research-data.py": "c83ce5f4d50f4e85ba483dafda807687b3cb96a504ad7721a2e04a847826070c",
+    "README.md": "311b6981f2deebe101028be35534e9622f97b5ff70c6ce057caec9c05a1d41f3",
+    "STATUS.md": "04847386315d1208783643dfd2c86e02190c61dfd573fb459417798aa026beac",
+    "SOURCE_PROVENANCE.md": "0a78350bbfce5dbab5f1213b1823a37fe0a58cf1d8a1b5e5b70553a92cb3420b",
+    "SHA256SUMS.txt": "feca92fd62074714a6aec1b0ce6cc39649879ace9970f3d608d21eb7fb9ea828",
+    "RESEARCH_DATA_SHA256SUMS.txt": "cd302abce831011166942a5b21e21e0bedc2c109828f6f3e3303a0b67ea5c256",
+    "baseline/STATUS.before-research-data-v1.md": "ea4ceb95105a45012f2e825e764b8b7ada3e6be53010fb4e71ea675139e96ea0",
+    "research/datasets/btcusdt-5m-2026-07-01-repeat-a.json": "07f26ec1f4ae0b90e77ce9245961d9da1f5677564bc4d5d46fdd3cccaee6f610",
+    "research/datasets/btcusdt-5m-2026-07-01-repeat-a.json.checkpoint.json": "c95ee0e7d867dad2f0e0480a4f7566b455a40eed3b93012b85e4608a8b9fc208",
+    "research/datasets/btcusdt-5m-2026-07-01-repeat-b.json": "3d84dfb321dc491013607d8ff82771efe3f921ec67d6998ec39f702e3e9b7689",
+    "research/datasets/btcusdt-5m-2026-07-01-repeat-b.json.checkpoint.json": "54f5ad7c1dea4e83633206b31069611707631153758c1c776be5daa9100dd8b0",
+    "research/datasets/btcusdt-5m-2026-q3.json": "fc06545122b941f570c4cca001d0ae57306b3e0ca010130984c5f46156440ea3",
+    "research/datasets/btcusdt-5m-2026-q3.json.checkpoint.json": "777cfe0bd19823db246e564f0be52b57e34ccd9eacb21a088dc2f0aca1af8242"
+  },
+  "evidence": {
+    "acceptance.json": "e7ef331b930deadf759271bae2c1dd5c35f2a94ef6391c28f6b9712560bf8f12",
+    "acquire-q3.txt": "370e2d6914bd18cdb84cb40d8ecc586f1cbb4361b7f4f5ba85212b23b83a6f04",
+    "acquisition-tool-sha256.txt": "51f3222633ebbe5fdaea0ffa1ddd4aa6a1e16c96d2965b6ebb851299e94f8a36",
+    "acquisition-tool.cjs": "9f3348962cbe9ba77223eb127ba201fb3484bcec774116ea5fc332a8f22bbdec",
+    "deterministic.initial.txt": "da2f51f891efd880a03e24384fd91fd0fa5e2ad1f471ccd428b32013532ea405",
+    "deterministic.txt": "7e6588513feca7525bbda063e960a7a4239c9140998ca9153834b3d16b1a0eee",
+    "independent-verification.json": "acf6d22c1e773ed8ac6f537489056bab428230d01caceaaadca3265b0fa942b0",
+    "navigation.txt": "ff23db3f0b755700f500d3551fce960bcb808085330981b81bd5401597436f73",
+    "official-docs.json": "8ac1513d4c5cd69c18a6029d961c47205b87627406175f566a021f36fc684aae",
+    "offline-q3.txt": "a15bc9b14eb83444e5711292874806334f261dd43bb98c347383918950e19713",
+    "offline-validation.json": "b41da58631a5739ca2823d6cb69a579526f59d01d8ff489e1eac22e8ec2eac21",
+    "repeat-a-offline.txt": "800090c24d20fe2b4f4e129ad15d963ae4d9bc5eed2d85f0e89aa302e34343f2",
+    "repeat-a.txt": "4a2af4ccd3d8b886278928a62cf37e99cd46383c4ffb188b46153790bb534c56",
+    "repeat-acquisitions.json": "89580b805b65f930084ff1b8c8adff669a88c9ccb4364ca4ee2a84c5a458f7f8",
+    "repeat-b-offline.txt": "800090c24d20fe2b4f4e129ad15d963ae4d9bc5eed2d85f0e89aa302e34343f2",
+    "repeat-b.txt": "4cd76f079b4ef34b465e38ee34b033705b263753cbafc06f497ae0a71fbff3c3",
+    "repeat-comparison.json": "6c508207c10c9cf64ecb244d0f80e6ac0a67334eb950f8dfb74be47621b184b0",
+    "subset-comparison.json": "b8957dfdd79a8ea567577269afba1df67d32f0947e613040d95a021a111a77ed",
+    "ui-smoke.txt": "a48dc7496bf78f9638e7f5a31c731b40953c802b7b09ed34e53939ba89e3412f"
+  }
+}

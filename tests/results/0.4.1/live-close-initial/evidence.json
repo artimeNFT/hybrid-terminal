@@ -1,0 +1,1198 @@
+{
+  "kind": "Actual Binance Spot BTCUSDT 5m observation; no interception",
+  "startedAt": "2026-10-24T03:37:45.101Z",
+  "sourceSha256": "8f83b3b8727867b7ee1bcf35ed2d843020c746c0825bbab7b539a53d521479b3",
+  "closedFrames": [
+    {
+      "receivedAt": "2026-10-24T03:40:00.919Z",
+      "k": {
+        "t": 1792812900000,
+        "T": 1792813199999,
+        "s": "BTCUSDT",
+        "i": "5m",
+        "f": 6787888538,
+        "L": 6787890715,
+        "o": "81004.88000000",
+        "c": "80950.00000000",
+        "h": "81004.89000000",
+        "l": "80950.00000000",
+        "v": "6.09203000",
+        "n": 2178,
+        "x": true,
+        "q": "493301.27127120",
+        "V": "2.63934000",
+        "Q": "213715.21104350",
+        "B": "0"
+      }
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "before": {
+    "version": "0.4.1",
+    "rule": "hybrid-v2-validity-closed",
+    "execution": "ohlc-market-stop-v2-gap-open",
+    "target": 1792812900000,
+    "serverNow": 1792813070544,
+    "closedTime": 1792812600000,
+    "confirmed": {
+      "side": "WAIT",
+      "score": 1,
+      "items": [
+        [
+          "מתיחה מתחת ל-EMA50 (0.7 ATR)",
+          false
+        ],
+        [
+          "וקטור אדום פתוח מעל (עד 6 ATR)",
+          true
+        ],
+        [
+          "נר נפח עוצר בשפל",
+          false
+        ],
+        [
+          "מבנה W",
+          false
+        ],
+        [
+          "RSI 56 מתחת ל-35",
+          false
+        ]
+      ],
+      "plan": null,
+      "short": false,
+      "candidates": {
+        "LONG": {
+          "side": "LONG",
+          "score": 1,
+          "items": [
+            [
+              "מתיחה מתחת ל-EMA50 (0.7 ATR)",
+              false
+            ],
+            [
+              "וקטור אדום פתוח מעל (עד 6 ATR)",
+              true
+            ],
+            [
+              "נר נפח עוצר בשפל",
+              false
+            ],
+            [
+              "מבנה W",
+              false
+            ],
+            [
+              "RSI 56 מתחת ל-35",
+              false
+            ]
+          ],
+          "targetAvailable": true,
+          "geometryEligible": true,
+          "eligible": false,
+          "reason": "below-threshold",
+          "plan": null
+        },
+        "SHORT": {
+          "side": "SHORT",
+          "score": 0,
+          "items": [
+            [
+              "מתיחה מעל EMA50 (0.7 ATR)",
+              false
+            ],
+            [
+              "וקטור ירוק פתוח מתחת (עד 6 ATR)",
+              false
+            ],
+            [
+              "נר נפח עוצר בשיא",
+              false
+            ],
+            [
+              "מבנה M",
+              false
+            ],
+            [
+              "RSI 56 מעל 65",
+              false
+            ]
+          ],
+          "targetAvailable": false,
+          "geometryEligible": false,
+          "eligible": false,
+          "reason": "below-threshold",
+          "plan": null
+        }
+      },
+      "selection": {
+        "policy": "higher-score-short-on-tie-before-eligibility",
+        "selected": "LONG",
+        "tied": false,
+        "suppressedOther": false,
+        "reason": "below-threshold"
+      },
+      "validity": {
+        "ready": true,
+        "reasons": [],
+        "raw": {
+          "atr": 59.03188614104026,
+          "ema50": 80965.2196340002,
+          "rsi": 56.31630262434893,
+          "volumeMean": 18.0509,
+          "relativeVolume": 0.7031427795843975
+        },
+        "rsiPolicy": "wilder14-local-undefined-zero-change-v1"
+      },
+      "g": 0,
+      "r": 2
+    },
+    "journal": {
+      "schemaVersion": 1,
+      "applicationVersion": "0.4.1",
+      "exportedAt": "2026-10-24T03:37:51.319Z",
+      "scope": "Observed confirmed decisions, not executed trades. Rolling local retention of at most 1000 records.",
+      "retiredCount": 0,
+      "records": [
+        {
+          "id": "BTCUSDT|5m|1792812600000|hybrid-v2-validity-closed|3",
+          "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מתחת ל-EMA50 (0.7 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",false],[\"RSI 56 מתחת ל-35\",false]],\"plan\":null}",
+          "observedAt": "2026-10-24T03:37:48.707Z",
+          "applicationVersion": "0.4.1",
+          "ruleVersion": "hybrid-v2-validity-closed",
+          "symbol": "BTCUSDT",
+          "timeframe": "5m",
+          "candleOpenTime": 1792812600000,
+          "candleCloseTime": 1792812900000,
+          "candidateDiagnostics": {
+            "candidates": {
+              "LONG": {
+                "side": "LONG",
+                "score": 1,
+                "items": [
+                  [
+                    "מתיחה מתחת ל-EMA50 (0.7 ATR)",
+                    false
+                  ],
+                  [
+                    "וקטור אדום פתוח מעל (עד 6 ATR)",
+                    true
+                  ],
+                  [
+                    "נר נפח עוצר בשפל",
+                    false
+                  ],
+                  [
+                    "מבנה W",
+                    false
+                  ],
+                  [
+                    "RSI 56 מתחת ל-35",
+                    false
+                  ]
+                ],
+                "targetAvailable": true,
+                "geometryEligible": true,
+                "eligible": false,
+                "reason": "below-threshold",
+                "plan": null
+              },
+              "SHORT": {
+                "side": "SHORT",
+                "score": 0,
+                "items": [
+                  [
+                    "מתיחה מעל EMA50 (0.7 ATR)",
+                    false
+                  ],
+                  [
+                    "וקטור ירוק פתוח מתחת (עד 6 ATR)",
+                    false
+                  ],
+                  [
+                    "נר נפח עוצר בשיא",
+                    false
+                  ],
+                  [
+                    "מבנה M",
+                    false
+                  ],
+                  [
+                    "RSI 56 מעל 65",
+                    false
+                  ]
+                ],
+                "targetAvailable": false,
+                "geometryEligible": false,
+                "eligible": false,
+                "reason": "below-threshold",
+                "plan": null
+              }
+            },
+            "selection": {
+              "policy": "higher-score-short-on-tie-before-eligibility",
+              "selected": "LONG",
+              "tied": false,
+              "suppressedOther": false,
+              "reason": "below-threshold"
+            },
+            "validity": {
+              "ready": true,
+              "reasons": [],
+              "raw": {
+                "atr": 59.03188614104026,
+                "ema50": 80965.2196340002,
+                "rsi": 56.31630262434893,
+                "volumeMean": 18.0509,
+                "relativeVolume": 0.7031427795843975
+              },
+              "rsiPolicy": "wilder14-local-undefined-zero-change-v1"
+            }
+          },
+          "config": {
+            "minimumScore": 3,
+            "roundTripFee": 0.001,
+            "executionVersion": "ohlc-market-stop-v2-gap-open",
+            "rsiPolicy": "wilder14-local-undefined-zero-change-v1"
+          },
+          "dataContext": {
+            "firstCandle": 1792513200000,
+            "closedCandleCount": 999
+          },
+          "reference": {
+            "o": 80970.01,
+            "h": 81019.76,
+            "l": 80964,
+            "c": 81004.88,
+            "v": 12.69236
+          },
+          "feedPhase": "rest-snapshot",
+          "signal": {
+            "side": "WAIT",
+            "score": 1,
+            "items": [
+              [
+                "מתיחה מתחת ל-EMA50 (0.7 ATR)",
+                false
+              ],
+              [
+                "וקטור אדום פתוח מעל (עד 6 ATR)",
+                true
+              ],
+              [
+                "נר נפח עוצר בשפל",
+                false
+              ],
+              [
+                "מבנה W",
+                false
+              ],
+              [
+                "RSI 56 מתחת ל-35",
+                false
+              ]
+            ],
+            "plan": null
+          }
+        }
+      ]
+    },
+    "health": {
+      "ready": true,
+      "label": "נתוני שוק עדכניים",
+      "header": "Market data live",
+      "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+    },
+    "pivot": {
+      "pp": 81254.43666666666,
+      "r1": 81995.87333333332,
+      "s1": 80447.99333333332,
+      "sourceStart": 1792713600000,
+      "validFrom": 1792800000000,
+      "validTo": 1792886400000
+    }
+  },
+  "after": {
+    "confirmed": {
+      "side": "WAIT",
+      "score": 1,
+      "items": [
+        [
+          "מתיחה מתחת ל-EMA50 (-0.2 ATR)",
+          false
+        ],
+        [
+          "וקטור אדום פתוח מעל (עד 6 ATR)",
+          true
+        ],
+        [
+          "נר נפח עוצר בשפל",
+          false
+        ],
+        [
+          "מבנה W",
+          false
+        ],
+        [
+          "RSI 50 מתחת ל-35",
+          false
+        ]
+      ],
+      "plan": null,
+      "short": false,
+      "candidates": {
+        "LONG": {
+          "side": "LONG",
+          "score": 1,
+          "items": [
+            [
+              "מתיחה מתחת ל-EMA50 (-0.2 ATR)",
+              false
+            ],
+            [
+              "וקטור אדום פתוח מעל (עד 6 ATR)",
+              true
+            ],
+            [
+              "נר נפח עוצר בשפל",
+              false
+            ],
+            [
+              "מבנה W",
+              false
+            ],
+            [
+              "RSI 50 מתחת ל-35",
+              false
+            ]
+          ],
+          "targetAvailable": true,
+          "geometryEligible": true,
+          "eligible": false,
+          "reason": "below-threshold",
+          "plan": null
+        },
+        "SHORT": {
+          "side": "SHORT",
+          "score": 0,
+          "items": [
+            [
+              "מתיחה מעל EMA50 (-0.2 ATR)",
+              false
+            ],
+            [
+              "וקטור ירוק פתוח מתחת (עד 6 ATR)",
+              false
+            ],
+            [
+              "נר נפח עוצר בשיא",
+              false
+            ],
+            [
+              "מבנה M",
+              false
+            ],
+            [
+              "RSI 50 מעל 65",
+              false
+            ]
+          ],
+          "targetAvailable": false,
+          "geometryEligible": false,
+          "eligible": false,
+          "reason": "below-threshold",
+          "plan": null
+        }
+      },
+      "selection": {
+        "policy": "higher-score-short-on-tie-before-eligibility",
+        "selected": "LONG",
+        "tied": false,
+        "suppressedOther": false,
+        "reason": "below-threshold"
+      },
+      "validity": {
+        "ready": true,
+        "reasons": [],
+        "raw": {
+          "atr": 58.73603713096592,
+          "ema50": 80964.62278560804,
+          "rsi": 50.38505547794185,
+          "volumeMean": 17.99759,
+          "relativeVolume": 0.3384914313527534
+        },
+        "rsiPolicy": "wilder14-local-undefined-zero-change-v1"
+      },
+      "g": 0,
+      "r": 2
+    },
+    "confirmedAt": 1792812900000,
+    "closedBar": {
+      "t": 1792812900000,
+      "o": 81004.88,
+      "h": 81004.89,
+      "l": 80950,
+      "c": 80950,
+      "v": 6.09203,
+      "end": 1792813199999,
+      "closed": true,
+      "up": false,
+      "va": 334.39152669999646,
+      "cls": 0,
+      "volumeReference": {
+        "state": "ready",
+        "mean": 17.99759,
+        "maxProduct": 2829.7010303997317,
+        "relative": 0.3384914313527534
+      }
+    },
+    "rsi": 50.38505547794185,
+    "rsiState": "ready",
+    "candidateMatches": true,
+    "records": [
+      {
+        "id": "BTCUSDT|5m|1792812900000|hybrid-v2-validity-closed|3",
+        "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מתחת ל-EMA50 (-0.2 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",false],[\"RSI 50 מתחת ל-35\",false]],\"plan\":null}",
+        "observedAt": "2026-10-24T03:40:00.914Z",
+        "applicationVersion": "0.4.1",
+        "ruleVersion": "hybrid-v2-validity-closed",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "candleOpenTime": 1792812900000,
+        "candleCloseTime": 1792813200000,
+        "candidateDiagnostics": {
+          "candidates": {
+            "LONG": {
+              "side": "LONG",
+              "score": 1,
+              "items": [
+                [
+                  "מתיחה מתחת ל-EMA50 (-0.2 ATR)",
+                  false
+                ],
+                [
+                  "וקטור אדום פתוח מעל (עד 6 ATR)",
+                  true
+                ],
+                [
+                  "נר נפח עוצר בשפל",
+                  false
+                ],
+                [
+                  "מבנה W",
+                  false
+                ],
+                [
+                  "RSI 50 מתחת ל-35",
+                  false
+                ]
+              ],
+              "targetAvailable": true,
+              "geometryEligible": true,
+              "eligible": false,
+              "reason": "below-threshold",
+              "plan": null
+            },
+            "SHORT": {
+              "side": "SHORT",
+              "score": 0,
+              "items": [
+                [
+                  "מתיחה מעל EMA50 (-0.2 ATR)",
+                  false
+                ],
+                [
+                  "וקטור ירוק פתוח מתחת (עד 6 ATR)",
+                  false
+                ],
+                [
+                  "נר נפח עוצר בשיא",
+                  false
+                ],
+                [
+                  "מבנה M",
+                  false
+                ],
+                [
+                  "RSI 50 מעל 65",
+                  false
+                ]
+              ],
+              "targetAvailable": false,
+              "geometryEligible": false,
+              "eligible": false,
+              "reason": "below-threshold",
+              "plan": null
+            }
+          },
+          "selection": {
+            "policy": "higher-score-short-on-tie-before-eligibility",
+            "selected": "LONG",
+            "tied": false,
+            "suppressedOther": false,
+            "reason": "below-threshold"
+          },
+          "validity": {
+            "ready": true,
+            "reasons": [],
+            "raw": {
+              "atr": 58.73603713096592,
+              "ema50": 80964.62278560804,
+              "rsi": 50.38505547794185,
+              "volumeMean": 17.99759,
+              "relativeVolume": 0.3384914313527534
+            },
+            "rsiPolicy": "wilder14-local-undefined-zero-change-v1"
+          }
+        },
+        "config": {
+          "minimumScore": 3,
+          "roundTripFee": 0.001,
+          "executionVersion": "ohlc-market-stop-v2-gap-open",
+          "rsiPolicy": "wilder14-local-undefined-zero-change-v1"
+        },
+        "dataContext": {
+          "firstCandle": 1792513200000,
+          "closedCandleCount": 1000
+        },
+        "reference": {
+          "o": 81004.88,
+          "h": 81004.89,
+          "l": 80950,
+          "c": 80950,
+          "v": 6.09203
+        },
+        "feedPhase": "live",
+        "signal": {
+          "side": "WAIT",
+          "score": 1,
+          "items": [
+            [
+              "מתיחה מתחת ל-EMA50 (-0.2 ATR)",
+              false
+            ],
+            [
+              "וקטור אדום פתוח מעל (עד 6 ATR)",
+              true
+            ],
+            [
+              "נר נפח עוצר בשפל",
+              false
+            ],
+            [
+              "מבנה W",
+              false
+            ],
+            [
+              "RSI 50 מתחת ל-35",
+              false
+            ]
+          ],
+          "plan": null
+        }
+      }
+    ],
+    "journalCount": 2,
+    "health": {
+      "ready": true,
+      "label": "נתוני שוק עדכניים",
+      "header": "Market data live",
+      "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+    },
+    "report": "Hybrid terminal 0.4.1 report · BINANCE SPOT · RESEARCH / SIMULATION · BTCUSDT 5m · 2026-10-24T03:40:00.921Z\nConfirmed candle close: 2026-10-24T03:40:00.000Z; chart timezone Asia/Jerusalem; chart following live\nSignal: WAIT score 1/5 (min 3); rule hybrid-v2-validity-closed; condition count, not probability; HTF 1h יורדת (closed candles)\n[ ] מתיחה מתחת ל-EMA50 (-0.2 ATR)\n[x] וקטור אדום פתוח מעל (עד 6 ATR)\n[ ] נר נפח עוצר בשפל\n[ ] מבנה W\n[ ] RSI 50 מתחת ל-35\nCandidates: {\"LONG\":{\"side\":\"LONG\",\"score\":1,\"items\":[[\"מתיחה מתחת ל-EMA50 (-0.2 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",false],[\"RSI 50 מתחת ל-35\",false]],\"targetAvailable\":true,\"geometryEligible\":true,\"eligible\":false,\"reason\":\"below-threshold\",\"plan\":null},\"SHORT\":{\"side\":\"SHORT\",\"score\":0,\"items\":[[\"מתיחה מעל EMA50 (-0.2 ATR)\",false],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 50 מעל 65\",false]],\"targetAvailable\":false,\"geometryEligible\":false,\"eligible\":false,\"reason\":\"below-threshold\",\"plan\":null}}; selection {\"policy\":\"higher-score-short-on-tie-before-eligibility\",\"selected\":\"LONG\",\"tied\":false,\"suppressedOther\":false,\"reason\":\"below-threshold\"}; validity {\"ready\":true,\"reasons\":[],\"raw\":{\"atr\":58.73603713096592,\"ema50\":80964.62278560804,\"rsi\":50.38505547794185,\"volumeMean\":17.99759,\"relativeVolume\":0.3384914313527534},\"rsiPolicy\":\"wilder14-local-undefined-zero-change-v1\"}\nPlan: none\nSizing (nominal geometry only, not executable): {\"kind\":\"nominal-stop-distance-only\",\"state\":\"no-plan\",\"side\":\"WAIT\",\"account\":1000,\"riskPercent\":1,\"scenario\":\"unconfigured\",\"cash\":null,\"quantity\":null,\"riskBudget\":null,\"notional\":null,\"notionalToAccount\":null,\"affordability\":\"unknown\",\"executableQuantity\":null,\"venueFilters\":\"not-checked\",\"accountPermissions\":\"not-checked\",\"costs\":\"not-included; account fees/slippage/gaps/funding unconfigured\"}\nBacktest (1000 closed candles, entry next open, gap stops at open, SL-first, ohlc-market-stop-v2-gap-open, round-trip fee 0.1% entry notional baseline assumption, not live account fees, max 120 bars): N 42, state mixed, win 17% (Wilson 95% CI 8%–31%), mean net R -0.90, PF 0.26, positive net R 13.03, loss magnitude net R 50.98, realized closed-trade net-R drawdown 39.6R, TP1 touch 33%\nStatistics JSON: {\"state\":\"mixed\",\"N\":42,\"wr\":0.16666666666666666,\"lo\":0.08315811295836502,\"hi\":0.30604296204774295,\"pf\":0.25564350440389033,\"pfState\":\"finite\",\"avg\":-0.9034864482024704,\"dd\":39.585597520261}\nUTC day coverage: from-UTC-open; VWAP HLC3 / spot base volume; partial DO is first loaded open only; RSI wilder14-local-undefined-zero-change-v1\nVector recovery touch/mid/full green: n=48 100% / 100% / 100%; red: n=69 100% / 91% / 78%",
+    "research": {
+      "schemaVersion": 1,
+      "applicationVersion": "0.4.1",
+      "ruleVersion": "hybrid-v2-validity-closed",
+      "executionVersion": "ohlc-market-stop-v2-gap-open",
+      "exportedAt": "2026-10-24T03:40:00.960Z",
+      "source": "BINANCE SPOT",
+      "mode": "RESEARCH / SIMULATION",
+      "symbol": "BTCUSDT",
+      "timeframe": "5m",
+      "confirmedCloseTime": 1792813200000,
+      "confirmedCandidate": {
+        "side": "WAIT",
+        "score": 1,
+        "items": [
+          [
+            "מתיחה מתחת ל-EMA50 (-0.2 ATR)",
+            false
+          ],
+          [
+            "וקטור אדום פתוח מעל (עד 6 ATR)",
+            true
+          ],
+          [
+            "נר נפח עוצר בשפל",
+            false
+          ],
+          [
+            "מבנה W",
+            false
+          ],
+          [
+            "RSI 50 מתחת ל-35",
+            false
+          ]
+        ],
+        "plan": null,
+        "short": false,
+        "candidates": {
+          "LONG": {
+            "side": "LONG",
+            "score": 1,
+            "items": [
+              [
+                "מתיחה מתחת ל-EMA50 (-0.2 ATR)",
+                false
+              ],
+              [
+                "וקטור אדום פתוח מעל (עד 6 ATR)",
+                true
+              ],
+              [
+                "נר נפח עוצר בשפל",
+                false
+              ],
+              [
+                "מבנה W",
+                false
+              ],
+              [
+                "RSI 50 מתחת ל-35",
+                false
+              ]
+            ],
+            "targetAvailable": true,
+            "geometryEligible": true,
+            "eligible": false,
+            "reason": "below-threshold",
+            "plan": null
+          },
+          "SHORT": {
+            "side": "SHORT",
+            "score": 0,
+            "items": [
+              [
+                "מתיחה מעל EMA50 (-0.2 ATR)",
+                false
+              ],
+              [
+                "וקטור ירוק פתוח מתחת (עד 6 ATR)",
+                false
+              ],
+              [
+                "נר נפח עוצר בשיא",
+                false
+              ],
+              [
+                "מבנה M",
+                false
+              ],
+              [
+                "RSI 50 מעל 65",
+                false
+              ]
+            ],
+            "targetAvailable": false,
+            "geometryEligible": false,
+            "eligible": false,
+            "reason": "below-threshold",
+            "plan": null
+          }
+        },
+        "selection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "LONG",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "validity": {
+          "ready": true,
+          "reasons": [],
+          "raw": {
+            "atr": 58.73603713096592,
+            "ema50": 80964.62278560804,
+            "rsi": 50.38505547794185,
+            "volumeMean": 17.99759,
+            "relativeVolume": 0.3384914313527534
+          },
+          "rsiPolicy": "wilder14-local-undefined-zero-change-v1"
+        },
+        "g": 0,
+        "r": 2
+      },
+      "provisional": null,
+      "statistics": {
+        "executionVersion": "ohlc-market-stop-v2-gap-open",
+        "ruleVersion": "hybrid-v2-validity-closed",
+        "statisticsVersion": "net-r-states-v1",
+        "state": "mixed",
+        "N": 42,
+        "w": 7,
+        "wr": 0.16666666666666666,
+        "lo": 0.08315811295836502,
+        "hi": 0.30604296204774295,
+        "avg": -0.9034864482024704,
+        "pf": 0.25564350440389033,
+        "pfState": "finite",
+        "gains": 13.032409353568145,
+        "losses": 50.9788401780719,
+        "dd": 39.585597520261,
+        "drawdownBasis": "realized-closed-trade-net-R",
+        "cur": [
+          0,
+          -1.7245355258788495,
+          -1.7391796429936286,
+          -1.3336501581326239,
+          -3.6096024163072324,
+          1.6391666957572384,
+          0.24667817718650786,
+          -1.3929196624059716,
+          -2.806459756959505,
+          -0.7173105801912372,
+          -2.2106816740837356,
+          -3.6417683038264723,
+          -5.094787949960148,
+          -6.529199719017734,
+          -7.696373809766336,
+          -7.708484541579655,
+          -9.076523513634609,
+          -10.537007446716586,
+          -12.123044073727057,
+          -13.54570444964798,
+          -15.036470548145905,
+          -16.66137915394238,
+          -18.61368996299867,
+          -20.55913218549142,
+          -22.442729898824187,
+          -23.971608602931994,
+          -25.75174741080269,
+          -27.501938762399554,
+          -29.27875539266617,
+          -30.682631355226672,
+          -29.598339524395346,
+          -31.58807598058926,
+          -33.210347398122025,
+          -32.38502529156168,
+          -33.82137141539616,
+          -31.268375450844037,
+          -31.59431448711773,
+          -33.59100532027636,
+          -33.60656123219501,
+          -32.7802095542644,
+          -34.81693829385968,
+          -36.5326145874649,
+          -37.94643082450376
+        ],
+        "t1": 0.3333333333333333,
+        "L": {
+          "n": 26,
+          "avg": -0.9692951826745332
+        },
+        "S": {
+          "n": 16,
+          "avg": -0.7965472546853685
+        },
+        "trades": [
+          {
+            "R": -1.7245355258788495,
+            "grossR": -1,
+            "entry": 82914.48,
+            "exit": 83028.91811523172,
+            "sh": true,
+            "t1": false
+          },
+          {
+            "R": -0.014644117114779143,
+            "grossR": 0.47867949278984606,
+            "entry": 83040.01,
+            "exit": 82959.435,
+            "sh": true,
+            "t1": true
+          },
+          {
+            "R": 0.4055294848610047,
+            "grossR": 1.4005957015127133,
+            "entry": 82836,
+            "exit": 82952.595,
+            "sh": false,
+            "t1": true
+          },
+          {
+            "R": -2.2759522581746086,
+            "grossR": -1,
+            "entry": 82733.82,
+            "exit": 82668.97915703747,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": 5.248769112064471,
+            "grossR": 6.331370949672307,
+            "entry": 82672.01,
+            "exit": 83155.5,
+            "sh": false,
+            "t1": true
+          },
+          {
+            "R": -1.3924885185707305,
+            "grossR": -1,
+            "entry": 83035.47,
+            "exit": 83247.03152618777,
+            "sh": true,
+            "t1": false
+          },
+          {
+            "R": -1.6395978395924795,
+            "grossR": -1,
+            "entry": 83153.78,
+            "exit": 83283.78947603729,
+            "sh": true,
+            "t1": false
+          },
+          {
+            "R": -1.4135400945535335,
+            "grossR": -1,
+            "entry": 83185.09,
+            "exit": 83386.2436271708,
+            "sh": true,
+            "t1": false
+          },
+          {
+            "R": 2.089149176768268,
+            "grossR": 2.7892189856547667,
+            "entry": 83608.98,
+            "exit": 83275.86499999999,
+            "sh": true,
+            "t1": true
+          },
+          {
+            "R": -1.4933710938924987,
+            "grossR": -1,
+            "entry": 83586.82,
+            "exit": 83756.23977557002,
+            "sh": true,
+            "t1": false
+          },
+          {
+            "R": -1.4310866297427367,
+            "grossR": -1,
+            "entry": 83750.01,
+            "exit": 83944.28651943179,
+            "sh": true,
+            "t1": false
+          },
+          {
+            "R": -1.453019646133676,
+            "grossR": -1,
+            "entry": 83913.91,
+            "exit": 84099.14238609224,
+            "sh": true,
+            "t1": false
+          },
+          {
+            "R": -1.4344117690575864,
+            "grossR": -1,
+            "entry": 84106.39,
+            "exit": 84299.99983286079,
+            "sh": true,
+            "t1": false
+          },
+          {
+            "R": -1.1671740907486017,
+            "grossR": -1,
+            "entry": 84391.99,
+            "exit": 84896.80500824736,
+            "sh": true,
+            "t1": false
+          },
+          {
+            "R": -0.012110731813319453,
+            "grossR": 0.9686906853133178,
+            "entry": 84138.93,
+            "exit": 84222.03,
+            "sh": false,
+            "t1": true
+          },
+          {
+            "R": -1.368038972054953,
+            "grossR": -1,
+            "entry": 83859.08,
+            "exit": 83631.22619546465,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -1.4604839330819783,
+            "grossR": -1,
+            "entry": 83692.99,
+            "exit": 83511.23992364045,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -1.5860366270104704,
+            "grossR": -1,
+            "entry": 83336.64,
+            "exit": 83194.43619198014,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -1.4226603759209233,
+            "grossR": -1,
+            "entry": 83000,
+            "exit": 82803.62483750895,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -1.4907660984979256,
+            "grossR": -1,
+            "entry": 82870.4,
+            "exit": 82701.54074045937,
+            "sh": false,
+            "t1": true
+          },
+          {
+            "R": -1.6249086057964757,
+            "grossR": -1,
+            "entry": 82670.75,
+            "exit": 82538.45745476511,
+            "sh": false,
+            "t1": true
+          },
+          {
+            "R": -1.952310809056288,
+            "grossR": -1,
+            "entry": 82549.73,
+            "exit": 82463.04639921024,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -1.9454422224927503,
+            "grossR": -1,
+            "entry": 82342.28,
+            "exit": 82255.1860686724,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -1.8835977133327648,
+            "grossR": -1,
+            "entry": 82306.06,
+            "exit": 82212.91120755965,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -1.5288787041078087,
+            "grossR": -1,
+            "entry": 82239.46,
+            "exit": 82083.96222827797,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -1.7801388078706961,
+            "grossR": -1,
+            "entry": 82030.03,
+            "exit": 81924.88200688337,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -1.7501913515968637,
+            "grossR": -1,
+            "entry": 81920.74,
+            "exit": 81811.54020740626,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -1.7768166302666177,
+            "grossR": -1,
+            "entry": 81777.57,
+            "exit": 81672.29731811634,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -1.4038759625605013,
+            "grossR": -1,
+            "entry": 81822.06,
+            "exit": 81619.46794802131,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": 1.0842918308313243,
+            "grossR": 1.6414865686468552,
+            "entry": 81037.45,
+            "exit": 81276.185,
+            "sh": false,
+            "t1": true
+          },
+          {
+            "R": -1.9897364561939144,
+            "grossR": -1,
+            "entry": 81532.01,
+            "exit": 81614.38749502886,
+            "sh": true,
+            "t1": true
+          },
+          {
+            "R": -1.6222714175327666,
+            "grossR": -1,
+            "entry": 81895.8,
+            "exit": 82027.4078445716,
+            "sh": true,
+            "t1": false
+          },
+          {
+            "R": 0.8253221065603437,
+            "grossR": 1.3710177485929893,
+            "entry": 81912.99,
+            "exit": 81707.19,
+            "sh": true,
+            "t1": false
+          },
+          {
+            "R": -1.4363461238344761,
+            "grossR": -1,
+            "entry": 81772,
+            "exit": 81959.40168763598,
+            "sh": true,
+            "t1": true
+          },
+          {
+            "R": 2.552995964552122,
+            "grossR": 3.1837164759058223,
+            "entry": 82003.94,
+            "exit": 81590.005,
+            "sh": true,
+            "t1": true
+          },
+          {
+            "R": -0.3259390362736949,
+            "grossR": 0.6575098000460755,
+            "entry": 81449.29,
+            "exit": 81503.745,
+            "sh": false,
+            "t1": true
+          },
+          {
+            "R": -1.996690833158627,
+            "grossR": -1,
+            "entry": 81430,
+            "exit": 81348.29963987735,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -0.015555911918651133,
+            "grossR": 0.9683933774384977,
+            "entry": 81280.01,
+            "exit": 81360.005,
+            "sh": false,
+            "t1": true
+          },
+          {
+            "R": 0.8263516779306096,
+            "grossR": 1.659681240874498,
+            "entry": 81328,
+            "exit": 81489.975,
+            "sh": false,
+            "t1": true
+          },
+          {
+            "R": -2.036728739595274,
+            "grossR": -1,
+            "entry": 81186.75,
+            "exit": 81108.43949610513,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -1.715676293605223,
+            "grossR": -1,
+            "entry": 80684.37,
+            "exit": 80571.63136282431,
+            "sh": false,
+            "t1": false
+          },
+          {
+            "R": -1.4138162370388585,
+            "grossR": -1,
+            "entry": 80719.13,
+            "exit": 80524.06967424382,
+            "sh": false,
+            "t1": false
+          }
+        ]
+      },
+      "presentation": {
+        "he": {
+          "state": "mixed",
+          "win": "17%",
+          "interval": "8%–31%",
+          "mean": "-0.90",
+          "pf": "0.26",
+          "dd": "39.6R",
+          "tp1": "33%",
+          "gains": "13.03",
+          "losses": "50.98"
+        },
+        "en": {
+          "state": "mixed",
+          "win": "17%",
+          "interval": "8%–31%",
+          "mean": "-0.90",
+          "pf": "0.26",
+          "dd": "39.6R",
+          "tp1": "33%",
+          "gains": "13.03",
+          "losses": "50.98"
+        }
+      },
+      "sizing": {
+        "kind": "nominal-stop-distance-only",
+        "state": "no-plan",
+        "side": "WAIT",
+        "account": 1000,
+        "riskPercent": 1,
+        "scenario": "unconfigured",
+        "cash": null,
+        "quantity": null,
+        "riskBudget": null,
+        "notional": null,
+        "notionalToAccount": null,
+        "affordability": "unknown",
+        "executableQuantity": null,
+        "venueFilters": "not-checked",
+        "accountPermissions": "not-checked",
+        "costs": "not-included; account fees/slippage/gaps/funding unconfigured"
+      },
+      "assumptions": {
+        "roundTripFeeEntryNotional": 0.001,
+        "feeScope": "historical baseline assumption; not live account fees",
+        "execution": "next open; gap stops at open; stop-first; targets at limit; no extra slippage; max 120 bars",
+        "drawdownBasis": "realized closed-trade net R, not account equity",
+        "rsiPolicy": "wilder14-local-undefined-zero-change-v1"
+      },
+      "coverage": {
+        "firstResearchCandle": 1792513200000,
+        "closedBars": 1000,
+        "utcDay": "from-UTC-open",
+        "vwapDefinition": "HLC3 weighted by Binance spot base volume; UTC reset"
+      },
+      "scope": "Current research snapshot, not an order approval, immutable dataset or execution ledger"
+    }
+  },
+  "finishedAt": "2026-10-24T03:40:01.161Z"
+}

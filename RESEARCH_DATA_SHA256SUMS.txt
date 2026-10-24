@@ -1,0 +1,11 @@
+7200e575ba74206dc70a82cdfb7159e9d9596fc5d01e8b0c75215ce30d30d1c5  research/klines.cjs
+d4698d2ca8351a67293c53842b5ba0fc6cec31c3b888d1ab7fae19afd2198a72  research/SCHEMA.md
+a4f44ebfbd64f28f89c89fc4026aa7560bb1806ec62baead18e222cd0cce780e  tests/research-data.cjs
+c83ce5f4d50f4e85ba483dafda807687b3cb96a504ad7721a2e04a847826070c  tests/verify-research-data.py
+ea4ceb95105a45012f2e825e764b8b7ada3e6be53010fb4e71ea675139e96ea0  baseline/STATUS.before-research-data-v1.md
+07f26ec1f4ae0b90e77ce9245961d9da1f5677564bc4d5d46fdd3cccaee6f610  research/datasets/btcusdt-5m-2026-07-01-repeat-a.json
+c95ee0e7d867dad2f0e0480a4f7566b455a40eed3b93012b85e4608a8b9fc208  research/datasets/btcusdt-5m-2026-07-01-repeat-a.json.checkpoint.json
+3d84dfb321dc491013607d8ff82771efe3f921ec67d6998ec39f702e3e9b7689  research/datasets/btcusdt-5m-2026-07-01-repeat-b.json
+54f5ad7c1dea4e83633206b31069611707631153758c1c776be5daa9100dd8b0  research/datasets/btcusdt-5m-2026-07-01-repeat-b.json.checkpoint.json
+fc06545122b941f570c4cca001d0ae57306b3e0ca010130984c5f46156440ea3  research/datasets/btcusdt-5m-2026-q3.json
+777cfe0bd19823db246e564f0be52b57e34ccd9eacb21a088dc2f0aca1af8242  research/datasets/btcusdt-5m-2026-q3.json.checkpoint.json

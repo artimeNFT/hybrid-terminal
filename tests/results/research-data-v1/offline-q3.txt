@@ -1,0 +1,24 @@
+{
+  "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+  "state": "complete",
+  "rowCount": 26496,
+  "uniqueTimestampCount": 26496,
+  "validUniqueRows": 26496,
+  "expectedRows": 26496,
+  "eligibleRowsAtCutoff": 26496,
+  "excludedDevelopingOrFutureRows": 0,
+  "missingRows": 0,
+  "duplicateRows": 0,
+  "conflictingTimestamps": 0,
+  "duplicates": [],
+  "gaps": [],
+  "coverage": {
+    "firstOpenTime": 1782864000000,
+    "lastOpenTime": 1790812500000,
+    "endExclusive": 1790812800000,
+    "contiguous": true
+  },
+  "issueCount": 0,
+  "issues": [],
+  "issuesTruncated": false
+}

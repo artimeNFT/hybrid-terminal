@@ -1,0 +1,53 @@
+{
+  "version": "0.4.1",
+  "sourceSha256": "7ebb7bf88cc2721722b5e4d6769a6938a5b48478f03452919e50259f2512caf4",
+  "nodeSuites": [
+    {
+      "suite": "regression",
+      "exitCode": 0
+    },
+    {
+      "suite": "ui-smoke",
+      "exitCode": 0
+    },
+    {
+      "suite": "live-chart",
+      "exitCode": 0
+    },
+    {
+      "suite": "readability-reliability",
+      "exitCode": 0
+    },
+    {
+      "suite": "history",
+      "exitCode": 0
+    },
+    {
+      "suite": "increment",
+      "exitCode": 0
+    },
+    {
+      "suite": "integrity",
+      "exitCode": 0
+    }
+  ],
+  "browserSuites": [
+    "browser-smoke",
+    "browser-retained",
+    "browser-integrity"
+  ],
+  "actualLiveClosePassed": true,
+  "unobserved": [
+    "actual UTC-midnight transition",
+    "long reconnect/storage soak"
+  ],
+  "artifacts": {
+    "hybrid-terminal.html": "7ebb7bf88cc2721722b5e4d6769a6938a5b48478f03452919e50259f2512caf4",
+    "README.md": "e61b8b3dbd6b2e16ccc68e1e76afb062406d861ed0760cfcc3fcd98ebf2a2c93",
+    "STATUS.md": "eeed77131de3ad0fae035b35b503475404fa7469a4a540f6828d04bcd8fafa00",
+    "SOURCE_PROVENANCE.md": "7affaa1225ee774139534b88fb93c0f304d7d3a0ea5b6ff2601eef9f1ff2059a",
+    "SHA256SUMS.txt": "06fca45c629ce1a5481438fb070fdf47b13ff3206d1d6ec47868870cd54b186f",
+    "changes-since-0.4.0.diff": "447aec48a53d86969abe92ea97a5a630d43deb560b2ffea2caa313863a567c39",
+    "baseline/hybrid-terminal.0.4.0.html": "0593c0096957d295628d267f1f3b16dd90a6478832d61bf39d2e9ed1959bc7d9"
+  }
+}

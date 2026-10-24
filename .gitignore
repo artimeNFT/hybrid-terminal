@@ -1,0 +1,35 @@
+# QA dependencies, local tools and generated runs; keep lockfiles and fixtures.
+node_modules/
+/.tools/
+/.qa-results/
+/.qa-clean-checkout/
+/test-results/
+/playwright-report/
+/.cache/
+
+# Acquired market data and page checkpoints remain local on disk.
+/research/datasets/
+
+# Historical release bundles and generated browser binaries/images stay on disk.
+/HYBRID_SYSTEM_*.zip
+/tests/results/**/*.png
+/tests/results/**/*.zip
+/tests/results/**/*.webm
+/tests/results/**/*.mp4
+
+# Local credentials/configuration and personal exports (not synthetic fixtures).
+/.aws/
+/.codex/
+/.agents/
+/.env
+/.env.*
+!/.env.example
+/.npmrc
+/.ssh/
+/.gnupg/
+/credentials.json
+/journal-exports/
+/hybrid-decisions-*.json
+/hybrid-research-*.json
+*.pem
+*.key

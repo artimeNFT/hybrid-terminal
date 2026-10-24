@@ -1,0 +1,2533 @@
+{
+  "kind": "Actual Binance Spot BTCUSDT 5m; no feed interception; isolated temporary Chromium profile",
+  "mode": "smoke",
+  "requestedSamplingSeconds": 75,
+  "sourceSha256": "d91b92a0105e4c35aa8357d19ac123a2c73918cf093a7e905b1aa4941df7b6ed",
+  "started": {
+    "utc": "2026-10-24T04:31:32.884Z",
+    "zone": "Asia/Jerusalem",
+    "local": "Saturday, 24 October 2026 at 07:31:32 GMT+3",
+    "offset": "07h GMT+03:00"
+  },
+  "samples": [
+    {
+      "label": "initial validated context",
+      "time": {
+        "utc": "2026-10-24T04:31:37.470Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:31:37 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 1,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816297342
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816297342
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816297342
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:31:45.240Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:31:45 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 1 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:31:50.246Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:31:50 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:31:55.252Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:31:55 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 1 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:32:00.257Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:00 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:32:05.264Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:05 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:32:10.277Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:10 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 1 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:32:15.292Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:15 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:32:20.313Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:20 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 1 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:32:25.326Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:25 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:32:30.341Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:30 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 1 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:32:35.353Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:35 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:32:40.364Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:40 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 1 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:32:44.761Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:44 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:32:49.783Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:49 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 1 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:32:54.792Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:54 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T04:32:55.241Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:55 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    },
+    {
+      "label": "final",
+      "time": {
+        "utc": "2026-10-24T04:32:55.249Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:32:55 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.2",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 2,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792816200000,
+          "price": 80865.36,
+          "atr": 62.028119182438864,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 389.07666666666046,
+            "percent": 0.4811413275927548,
+            "atr": 6.272585269308217
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 352.3600000000006,
+            "percent": 0.43573663679973795,
+            "atr": 5.680649431971802
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792816298689
+        },
+        "firstDailySegment": {
+          "pp": 82281.75,
+          "r1": 82814.65,
+          "s1": 81405.5,
+          "sourceStart": 1792368000000,
+          "validFrom": 1792454400000,
+          "validTo": 1792540800000,
+          "pdh": 83158,
+          "pdl": 81748.85,
+          "observedAt": 1792816298689
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792816298689
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792713600000,
+            "validTo": 1792800000000,
+            "left": 0,
+            "right": 525.6533333333334,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 525.6533333333334,
+            "right": 1024,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792815900000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+              "candleCloseTime": 1792816200000
+            }
+          ]
+        },
+        "storedJournalBytes": 2103
+      }
+    }
+  ],
+  "closedFrames": [],
+  "dailyRequests": [
+    {
+      "time": {
+        "utc": "2026-10-24T04:31:36.986Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:31:36 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1792368000000&endTime=1792799999999&limit=1000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-24T04:31:38.395Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Saturday, 24 October 2026 at 07:31:38 GMT+3",
+        "offset": "07h GMT+03:00"
+      },
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1792368000000&endTime=1792799999999&limit=1000"
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "passed": true,
+  "observedMidnight": false,
+  "observedLongSession": false,
+  "phase": "sampling",
+  "secondConsumerExtraRequests": 0,
+  "disconnect": {
+    "label": "network offline",
+    "time": {
+      "utc": "2026-10-24T04:31:37.535Z",
+      "zone": "Asia/Jerusalem",
+      "local": "Saturday, 24 October 2026 at 07:31:37 GMT+3",
+      "offset": "07h GMT+03:00"
+    },
+    "data": {
+      "version": "0.4.2",
+      "rule": "hybrid-v2-validity-closed",
+      "execution": "ohlc-market-stop-v2-gap-open",
+      "epoch": 1,
+      "health": {
+        "ready": false,
+        "label": "אין חיבור לרשת",
+        "header": "Offline",
+        "detail": "הניתוח המוצג נשמר מהעדכון האחרון. התראות מושהות."
+      },
+      "dailyStatus": "ready",
+      "context": {
+        "kind": "reference-only-no-score-vote",
+        "anchor": "latest-confirmed-close",
+        "asOf": 1792816200000,
+        "price": 80865.36,
+        "atr": 62.028119182438864,
+        "enabled": {
+          "dayLevels": true,
+          "pivots": true
+        },
+        "state": "ready",
+        "above": {
+          "names": [
+            "PP"
+          ],
+          "price": 81254.43666666666,
+          "distance": 389.07666666666046,
+          "percent": 0.4811413275927548,
+          "atr": 6.272585269308217
+        },
+        "below": {
+          "names": [
+            "PDL"
+          ],
+          "price": 80513,
+          "distance": 352.3600000000006,
+          "percent": 0.43573663679973795,
+          "atr": 5.680649431971802
+        },
+        "equal": null,
+        "sourceStart": 1792713600000,
+        "validFrom": 1792800000000,
+        "validTo": 1792886400000,
+        "sourceObservedAt": 1792816297342
+      },
+      "firstDailySegment": {
+        "pp": 82281.75,
+        "r1": 82814.65,
+        "s1": 81405.5,
+        "sourceStart": 1792368000000,
+        "validFrom": 1792454400000,
+        "validTo": 1792540800000,
+        "pdh": 83158,
+        "pdl": 81748.85,
+        "observedAt": 1792816297342
+      },
+      "lastDailySegment": {
+        "pp": 81254.43666666666,
+        "r1": 81995.87333333332,
+        "s1": 80447.99333333332,
+        "sourceStart": 1792713600000,
+        "validFrom": 1792800000000,
+        "validTo": 1792886400000,
+        "pdh": 82060.88,
+        "pdl": 80513,
+        "observedAt": 1792816297342
+      },
+      "visibleDailySegments": [
+        {
+          "validFrom": 1792713600000,
+          "validTo": 1792800000000,
+          "left": 0,
+          "right": 525.6533333333334,
+          "names": [
+            "PDH",
+            "PDL",
+            "PP",
+            "R1",
+            "S1"
+          ]
+        },
+        {
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "left": 525.6533333333334,
+          "right": 1024,
+          "names": [
+            "PDH",
+            "PDL",
+            "PP",
+            "R1",
+            "S1"
+          ]
+        }
+      ],
+      "closedCandleCount": 999,
+      "closedCandleTime": 1792815900000,
+      "journal": {
+        "count": 1,
+        "retiredCount": 0,
+        "persistent": true,
+        "conflict": false,
+        "records": [
+          {
+            "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+            "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+            "candleCloseTime": 1792816200000
+          }
+        ]
+      },
+      "storedJournalBytes": 2103
+    }
+  },
+  "resync": {
+    "label": "online and guarded reload",
+    "time": {
+      "utc": "2026-10-24T04:31:40.214Z",
+      "zone": "Asia/Jerusalem",
+      "local": "Saturday, 24 October 2026 at 07:31:40 GMT+3",
+      "offset": "07h GMT+03:00"
+    },
+    "data": {
+      "version": "0.4.2",
+      "rule": "hybrid-v2-validity-closed",
+      "execution": "ohlc-market-stop-v2-gap-open",
+      "epoch": 2,
+      "health": {
+        "ready": true,
+        "label": "נתוני שוק עדכניים",
+        "header": "Market data live",
+        "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+      },
+      "dailyStatus": "ready",
+      "context": {
+        "kind": "reference-only-no-score-vote",
+        "anchor": "latest-confirmed-close",
+        "asOf": 1792816200000,
+        "price": 80865.36,
+        "atr": 62.028119182438864,
+        "enabled": {
+          "dayLevels": true,
+          "pivots": true
+        },
+        "state": "ready",
+        "above": {
+          "names": [
+            "PP"
+          ],
+          "price": 81254.43666666666,
+          "distance": 389.07666666666046,
+          "percent": 0.4811413275927548,
+          "atr": 6.272585269308217
+        },
+        "below": {
+          "names": [
+            "PDL"
+          ],
+          "price": 80513,
+          "distance": 352.3600000000006,
+          "percent": 0.43573663679973795,
+          "atr": 5.680649431971802
+        },
+        "equal": null,
+        "sourceStart": 1792713600000,
+        "validFrom": 1792800000000,
+        "validTo": 1792886400000,
+        "sourceObservedAt": 1792816298689
+      },
+      "firstDailySegment": {
+        "pp": 82281.75,
+        "r1": 82814.65,
+        "s1": 81405.5,
+        "sourceStart": 1792368000000,
+        "validFrom": 1792454400000,
+        "validTo": 1792540800000,
+        "pdh": 83158,
+        "pdl": 81748.85,
+        "observedAt": 1792816298689
+      },
+      "lastDailySegment": {
+        "pp": 81254.43666666666,
+        "r1": 81995.87333333332,
+        "s1": 80447.99333333332,
+        "sourceStart": 1792713600000,
+        "validFrom": 1792800000000,
+        "validTo": 1792886400000,
+        "pdh": 82060.88,
+        "pdl": 80513,
+        "observedAt": 1792816298689
+      },
+      "visibleDailySegments": [
+        {
+          "validFrom": 1792713600000,
+          "validTo": 1792800000000,
+          "left": 0,
+          "right": 525.6533333333334,
+          "names": [
+            "PDH",
+            "PDL",
+            "PP",
+            "R1",
+            "S1"
+          ]
+        },
+        {
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "left": 525.6533333333334,
+          "right": 1024,
+          "names": [
+            "PDH",
+            "PDL",
+            "PP",
+            "R1",
+            "S1"
+          ]
+        }
+      ],
+      "closedCandleCount": 999,
+      "closedCandleTime": 1792815900000,
+      "journal": {
+        "count": 1,
+        "retiredCount": 0,
+        "persistent": true,
+        "conflict": false,
+        "records": [
+          {
+            "id": "BTCUSDT|5m|1792815900000|hybrid-v2-validity-closed|3",
+            "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מתחת ל-EMA50 (-1.4 ATR)\",false],[\"וקטור אדום פתוח מעל (עד 6 ATR)\",true],[\"נר נפח עוצר בשפל\",false],[\"מבנה W\",true],[\"RSI 44 מתחת ל-35\",false]],\"plan\":null}",
+            "candleCloseTime": 1792816200000
+          }
+        ]
+      },
+      "storedJournalBytes": 2103
+    }
+  },
+  "storageFixture": {
+    "kind": "Injected quota-style failure/recovery in isolated temporary context, not an observed storage-full incident",
+    "failure": {
+      "persistent": false,
+      "storageUnchanged": true,
+      "status": "1 רשומות במכשיר · עד 1,000 נשמרות · השמירה אינה זמינה; הורד גיבוי"
+    },
+    "recovery": {
+      "persistent": true,
+      "idsUnchanged": true,
+      "storageUnchanged": true,
+      "status": "1 רשומות במכשיר · עד 1,000 נשמרות"
+    }
+  },
+  "samplingStarted": {
+    "utc": "2026-10-24T04:31:40.238Z",
+    "zone": "Asia/Jerusalem",
+    "local": "Saturday, 24 October 2026 at 07:31:40 GMT+3",
+    "offset": "07h GMT+03:00"
+  },
+  "samplingElapsedSeconds": 75.011,
+  "observedCompletedCandle": false,
+  "priorRecordsPreserved": true,
+  "staleSampleCount": 0,
+  "status": "passed",
+  "finished": {
+    "utc": "2026-10-24T04:32:55.373Z",
+    "zone": "Asia/Jerusalem",
+    "local": "Saturday, 24 October 2026 at 07:32:55 GMT+3",
+    "offset": "07h GMT+03:00"
+  }
+}

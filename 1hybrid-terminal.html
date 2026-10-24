@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="he"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hybrid Terminal</title>
+<style>
+:root{--bg:#0b0e14;--p:#131722;--b:#252a38;--t:#d1d4dc;--m:#7d8597;--g:#26d97f;--r:#ff4d5e;--bl:#3b82f6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:13px system-ui,sans-serif;height:100vh;display:flex;flex-direction:column}
+header{display:flex;gap:6px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--b);flex-wrap:wrap}
+button,select{background:var(--p);color:var(--t);border:1px solid var(--b);padding:5px 10px;border-radius:6px;cursor:pointer}
+button.on{background:var(--bl);border-color:var(--bl)}
+main{flex:1;display:flex;min-height:0}#cw{flex:1;min-width:0}canvas{width:100%;height:100%;display:block;cursor:grab}
+aside{width:330px;overflow:auto;border-left:1px solid var(--b);padding:10px;background:var(--p);direction:rtl}
+.card{border:1px solid var(--b);border-radius:8px;padding:9px;margin-bottom:9px}.card h4{margin:0 0 6px;font-size:12px;color:var(--m);font-weight:600}
+.sig{font-size:20px;font-weight:700}.L{color:var(--g)}.S{color:var(--r)}.W{color:var(--m)}
+.row{display:flex;justify-content:space-between;padding:2px 0}.ok{color:var(--g)}.no{color:#555d70}
+small{color:var(--m);line-height:1.5;display:block}#st{color:var(--m);margin-inline-start:auto}
+@media(max-width:800px){main{flex-direction:column}aside{width:100%;height:40%;border-left:0}}
+</style></head><body>
+<header><select id="sym"><option>BTCUSDT</option><option>ETHUSDT</option><option>SOLUSDT</option></select>
+<button data-tf="5m" class="on">5m</button><button data-tf="15m">15m</button><button data-tf="1h">1h</button><button data-tf="4h">4h</button>
+<span id="st"></span></header>
+<main><div id="cw"><canvas id="cv"></canvas></div><aside id="pn"></aside></main>
+<script>
+const $=id=>document.getElementById(id),S={sym:'BTCUSDT',tf:'5m',k:[],ws:null,n:150,off:0,z:[],sv:[],mw:[],e:[],sig:null,st:null};
+const cv=$('cv'),cx=cv.getContext('2d');
+const fmt=p=>p>=1000?p.toFixed(1):p>=10?p.toFixed(2):p.toFixed(4);
+function ema(a,p){const r=[],m=2/(p+1);let e=null;a.forEach((v,i)=>{e=e===null?v:v*m+e*(1-m);r.push(i<p-1?null:e)});return r}
+async function load(){if(S.ws){S.ws.onclose=null;S.ws.close()}$('st').textContent='טוען…';
+ try{const d=await(await fetch(`https://api.binance.com/api/v3/klines?symbol=${S.sym}&interval=${S.tf}&limit=1000`)).json();
+ S.k=d.map(x=>({t:x[0],o:+x[1],h:+x[2],l:+x[3],c:+x[4],v:+x[5]}));S.off=0;calc();sched();connect()}
+ catch(e){$('st').textContent='שגיאת חיבור (פתח את הקובץ מהמחשב, לא מתוך הצ׳אט)'}}
+function connect(){const ws=S.ws=new WebSocket(`wss://stream.binance.com:9443/ws/${S.sym.toLowerCase()}@kline_${S.tf}`);
+ ws.onopen=()=>$('st').textContent='● חי';ws.onclose=()=>{$('st').textContent='מנותק';setTimeout(()=>S.ws===ws&&load(),3000)};
+ ws.onmessage=m=>{const x=JSON.parse(m.data).k,c={t:x.t,o:+x.o,h:+x.h,l:+x.l,c:+x.c,v:+x.v},L=S.k[S.k.length-1];
+ if(L.t===c.t)S.k[S.k.length-1]=c;else{S.k.push(c);if(S.k.length>1200)S.k.shift()}calc();sched()}}
+function calc(){const k=S.k,n=k.length;if(n<60)return;const cl=k.map(x=>x.c);
+ k.forEach((x,i)=>{x.up=x.c>=x.o;x.va=x.v*(x.h-x.l);x.cls=0;if(i>=10){let s=0,m=0;for(let j=i-10;j<i;j++){s+=k[j].v;m=Math.max(m,k[j].va)}const a=s/10;
+  if(x.v>=2*a||x.va>m)x.cls=2;else if(x.v>=1.5*a)x.cls=1}});
+ S.e=[13,50,200,800].map(p=>ema(cl,p));
+ let pv=0,vv=0,day=-1;S.vw=k.map(x=>{const d=Math.floor(x.t/864e5);if(d!==day){day=d;pv=vv=0}pv+=(x.h+x.l+x.c)/3*x.v;vv+=x.v;return pv/vv});
+ S.atr=[];let a=0;k.forEach((x,i)=>{const tr=i?Math.max(x.h-x.l,Math.abs(x.h-k[i-1].c),Math.abs(x.l-k[i-1].c)):x.h-x.l;a=i<14?(a*i+tr)/(i+1):(a*13+tr)/14;S.atr.push(a)});
+ let g=0,ls=0;S.rsi=k.map((x,i)=>{if(!i)return 50;const d=x.c-k[i-1].c,u=Math.max(d,0),w=Math.max(-d,0);if(i<=14){g=(g*(i-1)+u)/i;ls=(ls*(i-1)+w)/i}else{g=(g*13+u)/14;ls=(ls*13+w)/14}return ls?100-100/(1+g/ls):100});
+ S.z=[];for(let i=0;i<n;i++){const c=k[i];if(c.cls!==2)continue;const z={i,hi:c.h,lo:c.l,mid:(c.h+c.l)/2,up:c.up,rec:0,bm:null};
+  for(let j=i+1;j<n;j++){const b=k[j];let t=z.up?(b.l<=z.lo?3:b.l<=z.mid?2:b.l<=z.hi?1:0):(b.h>=z.hi?3:b.h>=z.mid?2:b.h>=z.lo?1:0);
+   if(t>z.rec)z.rec=t;if(t>=2&&z.bm===null)z.bm=j-i;if(t===3)break}S.z.push(z)}
+ const sh=[],sl=[];for(let i=3;i<n-3;i++){let H=1,L=1;for(let j=i-3;j<=i+3;j++){if(k[j].h>k[i].h)H=0;if(k[j].l<k[i].l)L=0}if(H)sh.push({i,p:k[i].h,t:'H'});if(L)sl.push({i,p:k[i].l,t:'L'})}
+ const pp=[];[...sh,...sl].sort((a,b)=>a.i-b.i).forEach(q=>{const l=pp[pp.length-1];if(l&&l.t===q.t){if((q.t==='H'&&q.p>l.p)||(q.t==='L'&&q.p<l.p))pp[pp.length-1]=q}else pp.push(q)});
+ S.mw=[];for(let m=2;m<pp.length;m++){const x=pp[m-2],y=pp[m-1],z=pp[m],at=S.atr[z.i];
+  if(z.t==='L'&&Math.abs(x.p-z.p)<.8*at&&y.p-Math.max(x.p,z.p)>1.2*at)S.mw.push({i:z.i,t:'W',p:z.p});
+  if(z.t==='H'&&Math.abs(x.p-z.p)<.8*at&&Math.min(x.p,z.p)-y.p>1.2*at)S.mw.push({i:z.i,t:'M',p:z.p})}
+ S.sv=[];for(let i=20;i<n;i++){const c=k[i];if(c.cls<1)continue;const r=c.h-c.l||1e-9;let mh=0,ml=1e12;for(let j=i-20;j<i;j++){mh=Math.max(mh,k[j].h);ml=Math.min(ml,k[j].l)}
+  if(c.h>mh&&(c.h-Math.max(c.o,c.c))/r>=.5)S.sv.push({i,t:'top'});if(c.l<ml&&(Math.min(c.o,c.c)-c.l)/r>=.5)S.sv.push({i,t:'bot'})}
+ // signal
+ const c=k[n-1],at=S.atr[n-1],dev=(c.c-S.e[1][n-1])/at,rs=S.rsi[n-1],act=S.z.filter(z=>z.rec<2&&n-z.i<=300);
+ const gz=act.filter(z=>z.up&&z.hi<c.c).sort((a,b)=>b.hi-a.hi)[0],rz=act.filter(z=>!z.up&&z.lo>c.c).sort((a,b)=>a.lo-b.lo)[0];
+ const R=(a,t,w)=>a.some(q=>q.t===t&&n-q.i<=w);
+ const sI=[[`מתיחה מעל EMA50 (${dev.toFixed(1)} ATR)`,dev>=2],['וקטור ירוק פתוח מתחת למחיר (יעד)',!!gz],['נר נפח עוצר בשיא',R(S.sv,'top',6)],['מבנה M',R(S.mw,'M',15)],[`RSI ${rs.toFixed(0)} מעל 65`,rs>65]];
+ const lI=[[`מתיחה מתחת ל-EMA50 (${dev.toFixed(1)} ATR)`,dev<=-2],['וקטור אדום פתוח מעל המחיר (יעד)',!!rz],['נר נפח עוצר בשפל',R(S.sv,'bot',6)],['מבנה W',R(S.mw,'W',15)],[`RSI ${rs.toFixed(0)} מתחת ל-35`,rs<35]];
+ const sc=a=>a.filter(x=>x[1]).length,ss=sc(sI),ls2=sc(lI),short=ss>=ls2,items=short?sI:lI,score=short?ss:ls2,tz=short?gz:rz;
+ let plan=null;if(score>=3&&tz){const w=k.slice(-20),stop=short?Math.max(...w.map(x=>x.h))+.3*at:Math.min(...w.map(x=>x.l))-.3*at;
+  const tp1=short?tz.hi:tz.lo,tp2=tz.mid;plan={entry:c.c,stop,tp1,tp2,rr:Math.abs(tp2-c.c)/Math.abs(stop-c.c)}}
+ const lw=k.length-200;S.sig={side:plan?(short?'SHORT':'LONG'):'WAIT',score,items,plan,short,
+  g:S.z.filter(z=>z.up&&z.rec<2&&z.i>lw).length,r:S.z.filter(z=>!z.up&&z.rec<2&&z.i>lw).length};
+ const old=S.z.filter(z=>z.i<n-30);S.st=[true,false].map(u=>{const a=old.filter(z=>z.up===u),b=a.map(z=>z.bm).filter(x=>x!==null).sort((x,y)=>x-y);
+  const p=t=>a.length?Math.round(a.filter(z=>z.rec>=t).length/a.length*100):0;return{n:a.length,t:p(1),m:p(2),f:p(3),med:b.length?b[b.length>>1]:'–'}})}
+const col=c=>c.cls===2?(c.up?'#22e07a':'#ff3b4e'):c.cls===1?(c.up?'#3b82f6':'#a855f7'):(c.up?'#4b6b5f':'#7a4a52');
+function draw(){const k=S.k,n=k.length;if(n<60)return;const dpr=devicePixelRatio||1,r=cv.getBoundingClientRect();cv.width=r.width*dpr;cv.height=r.height*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
+ const W=r.width,H=r.height,pr=62,pb=6,vh=H*.15,ph=H-vh-pb-6,N=S.n,e=n-S.off,s=Math.max(0,e-N),cw=(W-pr)/N;
+ let lo=1e12,hi=0;for(let i=s;i<e;i++){lo=Math.min(lo,k[i].l);hi=Math.max(hi,k[i].h)}const pd=(hi-lo)*.06;lo-=pd;hi+=pd;
+ const y=p=>ph*(1-(p-lo)/(hi-lo)),x=i=>(i-s)*cw+cw/2,line=(a,b,c,d)=>{cx.beginPath();cx.moveTo(a,b);cx.lineTo(c,d);cx.stroke()};
+ cx.fillStyle='#0b0e14';cx.fillRect(0,0,W,H);cx.font='11px system-ui';
+ let st=Math.pow(10,Math.floor(Math.log10(hi))-1);while((hi-lo)/st>14)st*=5;
+ for(let p=Math.ceil(lo/st)*st;p<hi;p+=st){cx.strokeStyle='rgba(255,255,255,.07)';cx.setLineDash([2,4]);line(0,y(p),W-pr,y(p));cx.setLineDash([]);cx.fillStyle='#5b6376';cx.fillText(fmt(p),W-pr+4,y(p)+3)}
+ cx.save();cx.beginPath();cx.rect(0,0,W-pr,ph);cx.clip();
+ S.z.forEach(z=>{if(z.rec>=3||z.i>=e)return;const x0=Math.max(0,x(z.i)-cw/2),c=z.up?'38,217,127':'255,77,94';
+  cx.fillStyle=`rgba(${c},.13)`;cx.fillRect(x0,y(z.hi),W-pr-x0,y(z.lo)-y(z.hi));cx.strokeStyle=`rgba(${c},.65)`;cx.setLineDash([5,4]);line(x0,y(z.mid),W-pr,y(z.mid));cx.setLineDash([])});
+ const lines=[[S.e[0],'#ff6b6b'],[S.e[1],'#a855f7'],[S.e[2],'#e5e7eb'],[S.e[3],'#facc15'],[S.vw,'#38bdf8']];
+ lines.forEach(([a,c],q)=>{cx.strokeStyle=c;cx.lineWidth=1.2;if(q===4)cx.setLineDash([3,3]);cx.beginPath();let on=0;for(let i=s;i<e;i++){if(a[i]==null)continue;on?cx.lineTo(x(i),y(a[i])):cx.moveTo(x(i),y(a[i]));on=1}cx.stroke();cx.setLineDash([])});cx.lineWidth=1;
+ let mv=1;for(let i=s;i<e;i++)mv=Math.max(mv,k[i].v);
+ for(let i=s;i<e;i++){const c=k[i];cx.strokeStyle=cx.fillStyle=col(c);line(x(i),y(c.h),x(i),y(c.l));cx.fillRect(x(i)-cw*.35,y(Math.max(c.o,c.c)),cw*.7,Math.max(1,Math.abs(y(c.o)-y(c.c))))}
+ cx.font='bold 12px system-ui';S.sv.forEach(q=>{if(q.i<s||q.i>=e)return;const c=k[q.i];cx.fillStyle='#fb923c';cx.fillText(q.t==='top'?'▼':'▲',x(q.i)-5,q.t==='top'?y(c.h)-6:y(c.l)+14)});
+ S.mw.forEach(q=>{if(q.i<s||q.i>=e)return;cx.fillStyle=q.t==='W'?'#22e07a':'#ff3b4e';cx.font='bold 15px system-ui';cx.fillText(q.t,x(q.i)-5,q.t==='W'?y(q.p)+30:y(q.p)-14)});
+ const sg=S.sig;if(sg&&sg.plan&&!S.off){[['SL',sg.plan.stop,'#ff4d5e'],['TP1',sg.plan.tp1,'#26d97f'],['TP2',sg.plan.tp2,'#26d97f']].forEach(([t,p,c])=>{cx.strokeStyle=c;cx.setLineDash([8,4]);line(0,y(p),W-pr,y(p));cx.setLineDash([]);cx.fillStyle=c;cx.font='11px system-ui';cx.fillText(t,6,y(p)-3)})}
+ cx.restore();
+ for(let i=s;i<e;i++){const c=k[i];cx.fillStyle=col(c);const h=c.v/mv*vh;cx.fillRect(x(i)-cw*.35,H-pb-h,cw*.7,h)}
+ const L=k[n-1],ly=y(L.c);if(ly>0&&ly<ph){cx.strokeStyle='#888';cx.setLineDash([2,3]);line(0,ly,W-pr,ly);cx.setLineDash([]);cx.fillStyle=L.up?'#26d97f':'#ff4d5e';cx.fillRect(W-pr,ly-8,pr,16);cx.fillStyle='#000';cx.font='bold 11px system-ui';cx.fillText(fmt(L.c),W-pr+4,ly+4)}
+ cx.font='11px system-ui';[['EMA13','#ff6b6b'],['EMA50','#a855f7'],['EMA200','#e5e7eb'],['EMA800','#facc15'],['VWAP','#38bdf8']].forEach(([t,c],i)=>{cx.fillStyle=c;cx.fillText(t,8+i*62,14)})}
+function panel(){const g=S.sig,z=S.st;if(!g)return;const cl=g.side==='LONG'?'L':g.side==='SHORT'?'S':'W',p=g.plan;
+ $('pn').innerHTML=`<div class="card"><h4>סיגנל (${S.sym} · ${S.tf})</h4><div class="sig ${cl}">${g.side==='WAIT'?'המתן':g.side} <span style="font-size:13px;color:var(--m)">${g.score}/5 · כיוון נבדק: ${g.short?'שורט':'לונג'}</span></div>
+ ${g.items.map(i=>`<div class="row"><span class="${i[1]?'ok':'no'}">${i[1]?'✔':'✗'} ${i[0]}</span></div>`).join('')}</div>
+ ${p?`<div class="card"><h4>תוכנית</h4><div class="row"><span>כניסה</span><b>${fmt(p.entry)}</b></div><div class="row"><span>סטופ</span><b class="S">${fmt(p.stop)}</b></div><div class="row"><span>יעד 1 (מגע בווקטור)</span><b class="L">${fmt(p.tp1)}</b></div><div class="row"><span>יעד 2 (50% וקטור)</span><b class="L">${fmt(p.tp2)}</b></div><div class="row"><span>R:R ליעד 2</span><b>${p.rr.toFixed(2)}</b></div></div>`:''}
+ <div class="card"><h4>סביבה (200 נרות אחרונים)</h4><div class="row"><span>וקטורים ירוקים פתוחים</span><b class="L">${g.g}</b></div><div class="row"><span>וקטורים אדומים פתוחים</span><b class="S">${g.r}</b></div></div>
+ <div class="card"><h4>סטטיסטיקת התאוששות (היסטוריה טעונה)</h4>${[['ירוקים',z[0]],['אדומים',z[1]]].map(([t,s])=>`<div class="row"><span>${t} (${s.n})</span><span>מגע ${s.t}% · חצי ${s.m}% · מלא ${s.f}%</span></div><small>חציון נרות עד 50%: ${s.med}</small>`).join('')}</div>
+ <div class="card"><h4>מקרא</h4><small>ירוק/אדום = וקטור (נפח ≥200% מממוצע 10, או נפח×טווח הגבוה ב-10). כחול/סגול = נפח עולה (≥150%). מלבנים = וקטורים שטרם התאוששו, קו מקווקו = 50%. ▼▲ כתום = נר נפח עוצר. M/W = זיהוי משוער.<br>זו שחזור לפי הגדרות PVSRA הנפוצות, לא הקוד המקורי של TR_MAIN. לא ייעוץ השקעות.</small></div>`}
+let q=0;function sched(){if(!q){q=1;requestAnimationFrame(()=>{q=0;draw();panel()})}}
+$('sym').onchange=e=>{S.sym=e.target.value;load()};
+document.querySelectorAll('[data-tf]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tf]').forEach(x=>x.classList.remove('on'));b.classList.add('on');S.tf=b.dataset.tf;load()});
+cv.onwheel=e=>{e.preventDefault();S.n=Math.max(40,Math.min(500,Math.round(S.n*(e.deltaY>0?1.12:.9))));sched()};
+let dr=null;cv.onmousedown=e=>dr={x:e.clientX,o:S.off};addEventListener('mouseup',()=>dr=null);
+addEventListener('mousemove',e=>{if(!dr)return;const cw=cv.getBoundingClientRect().width/S.n;S.off=Math.max(0,Math.min(S.k.length-S.n,dr.o+Math.round((e.clientX-dr.x)/cw)));sched()});
+addEventListener('resize',sched);load();
+</script></body></html>

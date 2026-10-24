@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="he"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hybrid Terminal</title>
+<style>
+:root{--bg:#0b0e14;--p:#131722;--b:#252a38;--t:#d1d4dc;--m:#7d8597;--g:#26d97f;--r:#ff4d5e;--bl:#3b82f6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:13px system-ui,sans-serif;height:100vh;display:flex;flex-direction:column}
+header{display:flex;gap:6px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--b);flex-wrap:wrap}
+button,select{background:var(--p);color:var(--t);border:1px solid var(--b);padding:5px 10px;border-radius:6px;cursor:pointer}
+button.on{background:var(--bl);border-color:var(--bl)}
+main{flex:1;display:flex;min-height:0}#cw{flex:1;min-width:0}canvas{width:100%;height:100%;display:block;cursor:grab}
+aside{width:330px;overflow:auto;border-left:1px solid var(--b);padding:10px;background:var(--p);direction:rtl}
+.card{border:1px solid var(--b);border-radius:8px;padding:9px;margin-bottom:9px}.card h4{margin:0 0 6px;font-size:12px;color:var(--m);font-weight:600}
+.sig{font-size:20px;font-weight:700}.L{color:var(--g)}.S{color:var(--r)}.W{color:var(--m)}
+.row{display:flex;justify-content:space-between;padding:2px 0}.ok{color:var(--g)}.no{color:#555d70}
+small{color:var(--m);line-height:1.5;display:block}#st{color:var(--m);margin-inline-start:auto}
+@media(max-width:800px){main{flex-direction:column}aside{width:100%;height:40%;border-left:0}}
+#hp{position:fixed;inset:0;background:#000a;display:flex;align-items:center;justify-content:center;z-index:9}#hp[hidden]{display:none}
+#hp>div{background:var(--p);border:1px solid var(--b);border-radius:10px;max-width:580px;max-height:86vh;overflow:auto;padding:16px;direction:rtl;line-height:1.65;margin:12px}
+#hp h3{margin:12px 0 4px;font-size:13px;color:#93c5fd}#hp ul,#hp ol{margin:0;padding-inline-start:20px}.lb{font-size:12px}
+input{background:var(--bg);color:var(--t);border:1px solid var(--b);border-radius:6px;padding:3px 6px;width:90px}#eq{height:60px;cursor:default}
+</style></head><body>
+<header><select id="sym"><option>BTCUSDT</option><option>ETHUSDT</option><option>SOLUSDT</option></select>
+<button data-tf="5m" class="on">5m</button><button data-tf="15m">15m</button><button data-tf="1h">1h</button><button data-tf="4h">4h</button>
+<span style="width:8px"></span><button data-l="z" class="on lb">וקטורים</button><button data-l="e" class="on lb">ממוצעים</button><button data-l="p" class="on lb">מספרים עגולים</button><button data-l="m" class="on lb">סימונים ותוכנית</button><select id="ms" class="lb" title="סף ציון מינימלי לסיגנל"><option value="3">ציון ≥3</option><option value="4">ציון ≥4</option><option value="5">ציון 5</option></select><button id="bl" class="lb">🔔 התראות</button><button id="hq">? עזרה</button><span id="st"></span></header>
+<main><div id="cw"><canvas id="cv"></canvas></div><aside><div id="pn"></div><div class="card" id="sz"><h4>גודל פוזיציה</h4><div class="row"><span>חשבון ($)</span><input id="acc" type="number" value="1000"></div><div class="row"><span>סיכון לעסקה (%)</span><input id="rk" type="number" value="1" step=".25"></div><div id="szo"></div></div><div id="pn2"></div></aside></main>
+<div id="hp" hidden><div><button style="float:left">✕ סגור</button><b style="font-size:15px">איך קוראים את הטרמינל</b>
+<h3>1. צבעי הנרות</h3><ul><li><b style="color:#22e07a">ירוק</b> / <b style="color:#ff3b4e">אדום</b> – וקטור: נפח חריג (200% ומעלה מממוצע 10 הנרות הקודמים), או נפח×טווח הגבוה ביותר ב-10. סימן לפעילות כבדה.</li><li><b style="color:#3b82f6">כחול</b> / <b style="color:#a855f7">סגול</b> – נפח עולה (150% ומעלה), נר עולה / יורד.</li><li>אפור – נר רגיל.</li></ul>
+<h3>2. אזורי וקטור</h3><ul><li>המלבן הוא טווח נר הווקטור. הוא נשאר עד שהמחיר חוזר ונוגע בצדו השני.</li><li>הקו המקווקו הוא 50%. לפי המסמך הרשמי, לעיתים קרובות המחיר מקפץ משם.</li><li>וקטור שלא התאושש מעיד על כיוון מועדף. כשהמחיר מתרחק ממנו הרבה, הוא הופך ליעד חזרה.</li></ul>
+<h3>3. סדר קריאה מומלץ</h3><ol><li><b>סביבה:</b> אילו וקטורים פתוחים, והאם המחיר מעל או מתחת ל-EMA50.</li><li><b>מתיחה:</b> מחיר רחוק מ-EMA50 (בערך 2 ATR ומעלה) מעלה סיכוי לחזרה לממוצע.</li><li><b>המתן לסימן חולשה:</b> נר נפח עוצר (▼▲ כתום) או מבנה M / W. לא רודפים אחרי הווקטור.</li><li><b>כניסה וניהול:</b> בכיוון הווקטור, סטופ מעבר לקצה של 20 הנרות האחרונים (ולפחות 1 ATR מהכניסה), יעד 1 במגע, יעד 2 ב-50%.</li><li>וקטור רחוק מאוד מהמחיר לא יחזור מהר. לכן הטרמינל מתחשב רק בווקטורים עד 6 ATR מהמחיר.</li></ol>
+<h3>4. הפאנל</h3><ul><li>ציון 0–5 לפי הצ׳קליסט. אות נוצר רק מציון 3 ומעלה ועם וקטור יעד.</li><li>הסטטיסטיקה מציגה מה קרה בהיסטוריה הטעונה (כ-1000 נרות). בדוק אותה על הנכס והטיימפריים שלך לפני שסומכים על האותות.</li></ul>
+<h3>5. קווים</h3><ul><li>EMA13 אדום, EMA50 סגול, EMA200 לבן, EMA800 צהוב.</li><li>VWAP תכלת מקווקו, מתאפס כל יום ב-UTC. DO (אפור) הוא פתיחת היום ב-UTC.</li><li>הקווים העדינים המנוקדים הם מספרים עגולים, לא רמות ה-Psy של Traders Reality (שמבוססות על שיא ושפל של סשן סידני).</li></ul>
+<h3>6. שליטה</h3><p style="margin:0">גלגלת = זום, גרירה = גלילה, ריחוף על נר = פרטים. הכפתורים למעלה מכבים שכבות.</p>
+<h3>7. בדיקה היסטורית והסתברות</h3><ul><li>מריץ את אותם כללי אות על כל ההיסטוריה הטעונה. כניסה בפתיחת הנר הבא, יציאה ביעד 2 או בסטופ (אם שניהם בנר אחד, הסטופ קודם), עמלה 0.1%, עד 120 נרות.</li><li>אחוז ההצלחה מוצג עם טווח ביטחון של 95%. עם פחות מ-30 עסקאות הטווח רחב והתוצאה חלשה סטטיסטית.</li><li>R הוא מכפלה של הסיכון. ממוצע R חיובי ו-Profit Factor מעל 1 הם תנאי מינימום, לא הוכחה.</li></ul>
+<h3>8. עוד כלים</h3><ul><li>גודל פוזיציה: לפי גודל חשבון ואחוז סיכון (נשמר בדפדפן).</li><li>מגמה בטיימפריים גבוה: הקשר בלבד, לא חלק מהציון.</li><li>🔔 התראות: צליל והתראת דפדפן כשנוצר סיגנל חדש.</li><li>📋 העתק דוח: טקסט מוכן לשליחה למודל או לשיחה אחרת.</li><li>הספירה לאחור מתחת למחיר היא הזמן עד סגירת הנר.</li></ul>
+<h3>9. מגבלות</h3><ul><li>M / W ונר נפח עוצר מזוהים בקירוב משלי.</li><li>הנפח הוא של Binance spot בלבד. בכלי הרשמי הנפח עשוי להיות מבורסה או סימבול אחר.</li><li>זו מסגרת קבלת החלטות ולא ייעוץ השקעות.</li></ul></div></div>
+<script>
+const $=id=>document.getElementById(id),S={sym:'BTCUSDT',tf:'5m',k:[],ws:null,n:150,off:0,z:[],sv:[],mw:[],e:[],sig:null,st:null};
+const cv=$('cv'),cx=cv.getContext('2d'),TFMS={'5m':3e5,'15m':9e5,'1h':36e5,'4h':144e5},HTFM={'5m':'1h','15m':'4h','1h':'4h','4h':'1d'};
+const nice=(lo,hi,t)=>{const r=(hi-lo)/t,m=Math.pow(10,Math.floor(Math.log10(r))),f=r/m;return(f>5?10:f>2?5:f>1?2:1)*m};
+const fmt=p=>p>=1000?p.toFixed(1):p>=10?p.toFixed(2):p.toFixed(4);
+function ema(a,p){const r=[],m=2/(p+1);let e=null;a.forEach((v,i)=>{e=e===null?v:v*m+e*(1-m);r.push(i<p-1?null:e)});return r}
+async function load(){if(S.ws){S.ws.onclose=null;S.ws.close()}$('st').textContent='טוען…';
+ try{const d=await(await fetch(`https://api.binance.com/api/v3/klines?symbol=${S.sym}&interval=${S.tf}&limit=1000`)).json();
+ S.k=d.map(x=>({t:x[0],o:+x[1],h:+x[2],l:+x[3],c:+x[4],v:+x[5]}));S.off=0;S.prev=undefined;calc();sched();connect();htf()}
+ catch(e){$('st').textContent='שגיאת חיבור (פתח את הקובץ מהמחשב, לא מתוך הצ׳אט)'}}
+async function htf(){const t=HTFM[S.tf];try{const d=await(await fetch(`https://api.binance.com/api/v3/klines?symbol=${S.sym}&interval=${t}&limit=300`)).json(),c=d.map(x=>+x[4]),a=ema(c,13),b=ema(c,50),n=c.length-1,up=c[n]>b[n]&&a[n]>b[n],dn=c[n]<b[n]&&a[n]<b[n];S.htf={tf:t,b:up?1:dn?-1:0};sched()}catch(e){}}
+function connect(){const ws=S.ws=new WebSocket(`wss://stream.binance.com:9443/ws/${S.sym.toLowerCase()}@kline_${S.tf}`);
+ ws.onopen=()=>$('st').textContent='● חי';ws.onclose=()=>{$('st').textContent='מנותק';setTimeout(()=>S.ws===ws&&load(),3000)};
+ ws.onmessage=m=>{const x=JSON.parse(m.data).k,c={t:x.t,o:+x.o,h:+x.h,l:+x.l,c:+x.c,v:+x.v},L=S.k[S.k.length-1];
+ if(L.t===c.t)S.k[S.k.length-1]=c;else{S.k.push(c);if(S.k.length>1200)S.k.shift()}calc();sched()}}
+function calc(){const k=S.k,n=k.length;if(n<60)return;const cl=k.map(x=>x.c);
+ k.forEach((x,i)=>{x.up=x.c>=x.o;x.va=x.v*(x.h-x.l);x.cls=0;if(i>=10){let s=0,m=0;for(let j=i-10;j<i;j++){s+=k[j].v;m=Math.max(m,k[j].va)}const a=s/10;
+  if(x.v>=2*a||x.va>=m)x.cls=2;else if(x.v>=1.5*a)x.cls=1}});
+ S.e=[13,50,200,800].map(p=>ema(cl,p));
+ let pv=0,vv=0,day=-1;S.vw=k.map(x=>{const d=Math.floor(x.t/864e5);if(d!==day){day=d;pv=vv=0}pv+=(x.h+x.l+x.c)/3*x.v;vv+=x.v;return pv/vv});
+ let dd=-1,dop=0;S.dop=k.map(x=>{const d=Math.floor(x.t/864e5);if(d!==dd){dd=d;dop=x.o}return dop});
+ S.atr=[];let a=0;k.forEach((x,i)=>{const tr=i?Math.max(x.h-x.l,Math.abs(x.h-k[i-1].c),Math.abs(x.l-k[i-1].c)):x.h-x.l;a=i<14?(a*i+tr)/(i+1):(a*13+tr)/14;S.atr.push(a)});
+ let g=0,ls=0;S.rsi=k.map((x,i)=>{if(!i)return 50;const d=x.c-k[i-1].c,u=Math.max(d,0),w=Math.max(-d,0);if(i<=14){g=(g*(i-1)+u)/i;ls=(ls*(i-1)+w)/i}else{g=(g*13+u)/14;ls=(ls*13+w)/14}return ls?100-100/(1+g/ls):100});
+ S.z=[];for(let i=0;i<n;i++){const c=k[i];if(c.cls!==2)continue;const z={i,hi:c.h,lo:c.l,mid:(c.h+c.l)/2,up:c.up,rec:0,bm:null,i2:1e9};
+  for(let j=i+1;j<n;j++){const b=k[j];let t=z.up?(b.l<=z.lo?3:b.l<=z.mid?2:b.l<=z.hi?1:0):(b.h>=z.hi?3:b.h>=z.mid?2:b.h>=z.lo?1:0);
+   if(t>z.rec)z.rec=t;if(t>=2&&z.bm===null){z.bm=j-i;z.i2=j}if(t===3)break}S.z.push(z)}
+ const sh=[],sl=[];for(let i=3;i<n-3;i++){let H=1,L=1;for(let j=i-3;j<=i+3;j++){if(k[j].h>k[i].h)H=0;if(k[j].l<k[i].l)L=0}if(H)sh.push({i,p:k[i].h,t:'H'});if(L)sl.push({i,p:k[i].l,t:'L'})}
+ const pp=[];[...sh,...sl].sort((a,b)=>a.i-b.i).forEach(q=>{const l=pp[pp.length-1];if(l&&l.t===q.t){if((q.t==='H'&&q.p>l.p)||(q.t==='L'&&q.p<l.p))pp[pp.length-1]=q}else pp.push(q)});
+ S.mw=[];for(let m=2;m<pp.length;m++){const x=pp[m-2],y=pp[m-1],z=pp[m],at=S.atr[z.i];
+  if(z.t==='L'&&Math.abs(x.p-z.p)<.8*at&&y.p-Math.max(x.p,z.p)>1.2*at)S.mw.push({i:z.i,t:'W',p:z.p});
+  if(z.t==='H'&&Math.abs(x.p-z.p)<.8*at&&Math.min(x.p,z.p)-y.p>1.2*at)S.mw.push({i:z.i,t:'M',p:z.p})}
+ S.sv=[];for(let i=20;i<n;i++){const c=k[i];if(c.cls<1)continue;const r=c.h-c.l||1e-9;let mh=0,ml=1e12;for(let j=i-20;j<i;j++){mh=Math.max(mh,k[j].h);ml=Math.min(ml,k[j].l)}
+  if(c.h>mh&&(c.h-Math.max(c.o,c.c))/r>=.5)S.sv.push({i,t:'top'});if(c.l<ml&&(Math.min(c.o,c.c)-c.l)/r>=.5)S.sv.push({i,t:'bot'})}
+ S.sig=sigAt(n-1);const lw=n-200;S.sig.g=S.z.filter(z=>z.up&&z.rec<2&&z.i>lw).length;S.sig.r=S.z.filter(z=>!z.up&&z.rec<2&&z.i>lw).length;
+ const old=S.z.filter(z=>z.i<n-30);S.st=[true,false].map(u=>{const a=old.filter(z=>z.up===u),b=a.map(z=>z.bm).filter(x=>x!==null).sort((x,y)=>x-y);
+  const p=t=>a.length?Math.round(a.filter(z=>z.rec>=t).length/a.length*100):0;return{n:a.length,t:p(1),m:p(2),f:p(3),med:b.length?b[b.length>>1]:'–'}});if(!S.bt||S.btT!==k[n-1].t||S.btM!==S.min){S.bt=backtest();S.btT=k[n-1].t;S.btM=S.min}notify()}
+
+function sigAt(i){const k=S.k,c=k[i],at=S.atr[i],dev=(c.c-S.e[1][i])/at,rs=S.rsi[i],act=S.z.filter(z=>z.i<i&&z.i2>i&&i-z.i<=300);
+ const gz=act.filter(z=>z.up&&z.hi<c.c&&c.c-z.hi<=6*at).sort((a,b)=>b.hi-a.hi)[0],rz=act.filter(z=>!z.up&&z.lo>c.c&&z.lo-c.c<=6*at).sort((a,b)=>a.lo-b.lo)[0];
+ const R=(a,t,w,d)=>a.some(q=>q.t===t&&i-q.i<=w&&i-q.i>=d);
+ const sI=[[`מתיחה מעל EMA50 (${dev.toFixed(1)} ATR)`,dev>=2],['וקטור ירוק פתוח מתחת (עד 6 ATR)',!!gz],['נר נפח עוצר בשיא',R(S.sv,'top',6,0)],['מבנה M',R(S.mw,'M',15,3)],[`RSI ${rs.toFixed(0)} מעל 65`,rs>65]];
+ const lI=[[`מתיחה מתחת ל-EMA50 (${dev.toFixed(1)} ATR)`,dev<=-2],['וקטור אדום פתוח מעל (עד 6 ATR)',!!rz],['נר נפח עוצר בשפל',R(S.sv,'bot',6,0)],['מבנה W',R(S.mw,'W',15,3)],[`RSI ${rs.toFixed(0)} מתחת ל-35`,rs<35]];
+ const sc=a=>a.filter(x=>x[1]).length,ss=sc(sI),ls=sc(lI),short=ss>=ls,items=short?sI:lI,score=short?ss:ls,tz=short?gz:rz;
+ let plan=null;if(score>=S.min&&tz){const w=k.slice(Math.max(0,i-19),i+1),stop=short?Math.max(Math.max(...w.map(x=>x.h))+.3*at,c.c+at):Math.min(Math.min(...w.map(x=>x.l))-.3*at,c.c-at);plan={entry:c.c,stop,tp1:short?tz.hi:tz.lo,tp2:tz.mid};plan.rr=Math.abs(plan.tp2-c.c)/Math.abs(stop-c.c)}
+ return{side:plan?(short?'SHORT':'LONG'):'WAIT',score,items,plan,short}}
+function backtest(){const k=S.k,n=k.length,T=[];let i=60;
+ while(i<n-2){const g=sigAt(i);if(g.side==='WAIT'){i++;continue}
+  const p=g.plan,sh=g.short,en=k[i+1].o,rk=Math.abs(p.stop-en);
+  if(rk<=0||(sh?p.stop<=en||p.tp2>=en:p.stop>=en||p.tp2<=en)){i++;continue}
+  let ex=null,t1=false,j=i+1;
+  for(;j<n&&j<=i+120;j++){const b=k[j];if(sh?b.h>=p.stop:b.l<=p.stop){ex=p.stop;break}if(sh?b.l<=p.tp1:b.h>=p.tp1)t1=true;if(sh?b.l<=p.tp2:b.h>=p.tp2){ex=p.tp2;break}}
+  if(ex===null){if(j>i+120)ex=k[i+120].c;else break}
+  T.push({R:(sh?en-ex:ex-en)/rk-.001*en/rk,sh,t1});i=j+1}
+ const N=T.length,M=Math.max(N,1),w=T.filter(t=>t.R>0).length,sum=T.reduce((a,t)=>a+t.R,0),gp=T.filter(t=>t.R>0).reduce((a,t)=>a+t.R,0),gl=-T.filter(t=>t.R<=0).reduce((a,t)=>a+t.R,0);
+ let c=0,pk=0,dd=0;const cur=[0];T.forEach(t=>{c+=t.R;cur.push(c);pk=Math.max(pk,c);dd=Math.max(dd,pk-c)});
+ const z=1.96,ph=w/M,dn=1+z*z/M,ct=(ph+z*z/(2*M))/dn,hw=z*Math.sqrt(ph*(1-ph)/M+z*z/(4*M*M))/dn,sd=a=>({n:a.length,avg:a.length?a.reduce((x,t)=>x+t.R,0)/a.length:0});
+ return{N,w,wr:ph,lo:Math.max(0,ct-hw),hi:Math.min(1,ct+hw),avg:sum/M,pf:gl?gp/gl:(gp?99:0),dd,cur,t1:T.filter(t=>t.t1).length/M,L:sd(T.filter(t=>!t.sh)),S:sd(T.filter(t=>t.sh))}}
+function notify(){const g=S.sig;if(S.prev===undefined){S.prev=g.side;return}if(g.side!==S.prev){S.prev=g.side;if(S.al&&g.side!=='WAIT'){document.title=`${g.side} ${S.sym}`;try{const a=new AudioContext(),o=a.createOscillator();o.connect(a.destination);o.frequency.value=g.side==='LONG'?880:440;o.start();o.stop(a.currentTime+.25)}catch(e){}try{new Notification(`${g.side} ${S.sym} ${S.tf}`,{body:`${g.score}/5 · כניסה ${fmt(g.plan.entry)}`})}catch(e){}}}}
+const col=c=>c.cls===2?(c.up?'#22e07a':'#ff3b4e'):c.cls===1?(c.up?'#3b82f6':'#a855f7'):(c.up?'#4b6b5f':'#7a4a52');
+function draw(){const k=S.k,n=k.length;if(n<60)return;const dpr=devicePixelRatio||1,r=cv.getBoundingClientRect();cv.width=r.width*dpr;cv.height=r.height*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
+ const W=r.width,H=r.height,pr=62,pb=18,vh=H*.15,ph=H-vh-pb-6,N=S.n,e=n-S.off,s=Math.max(0,e-N),cw=(W-pr)/N;
+ let lo=1e12,hi=0;for(let i=s;i<e;i++){lo=Math.min(lo,k[i].l);hi=Math.max(hi,k[i].h)}const pd=(hi-lo)*.06;lo-=pd;hi+=pd;
+ const y=p=>ph*(1-(p-lo)/(hi-lo)),x=i=>(i-s)*cw+cw/2,line=(a,b,c,d)=>{cx.beginPath();cx.moveTo(a,b);cx.lineTo(c,d);cx.stroke()};
+ cx.fillStyle='#0b0e14';cx.fillRect(0,0,W,H);cx.font='11px system-ui';
+ let st=Math.pow(10,Math.floor(Math.log10(hi))-1);while((hi-lo)/st>14)st*=5;
+ for(let p=Math.ceil(lo/st)*st;S.l.p&&p<hi;p+=st){cx.strokeStyle='rgba(255,255,255,.07)';cx.setLineDash([2,4]);line(0,y(p),W-pr,y(p));cx.setLineDash([])}
+ const ts=nice(lo,hi,ph/55),dc=Math.max(0,-Math.floor(Math.log10(ts)));for(let p=Math.ceil(lo/ts)*ts;p<hi;p+=ts){cx.strokeStyle='rgba(255,255,255,.045)';line(0,y(p),W-pr,y(p));cx.fillStyle='#8b93a7';cx.fillText(p.toFixed(dc),W-pr+5,y(p)+4)}
+ cx.save();cx.beginPath();cx.rect(0,0,W-pr,ph);cx.clip();
+ S.z.forEach(z=>{if(!S.l.z||z.rec>=3||z.i>=e)return;const x0=Math.max(0,x(z.i)-cw/2),c=z.up?'38,217,127':'255,77,94';
+  cx.fillStyle=`rgba(${c},.13)`;cx.fillRect(x0,y(z.hi),W-pr-x0,y(z.lo)-y(z.hi));cx.strokeStyle=`rgba(${c},.65)`;cx.setLineDash([5,4]);line(x0,y(z.mid),W-pr,y(z.mid));cx.setLineDash([])});
+ const lines=[[S.e[0],'#ff6b6b'],[S.e[1],'#a855f7'],[S.e[2],'#e5e7eb'],[S.e[3],'#facc15'],[S.vw,'#38bdf8'],[S.dop,'#94a3b8']];
+ lines.forEach(([a,c],q)=>{if(!S.l.e)return;cx.strokeStyle=c;cx.lineWidth=1.2;if(q>=4)cx.setLineDash([3,3]);cx.beginPath();let on=0;for(let i=s;i<e;i++){if(a[i]==null)continue;on?cx.lineTo(x(i),y(a[i])):cx.moveTo(x(i),y(a[i]));on=1}cx.stroke();cx.setLineDash([])});cx.lineWidth=1;
+ let mv=1;for(let i=s;i<e;i++)mv=Math.max(mv,k[i].v);
+ for(let i=s;i<e;i++){const c=k[i];cx.strokeStyle=cx.fillStyle=col(c);line(x(i),y(c.h),x(i),y(c.l));cx.fillRect(x(i)-cw*.35,y(Math.max(c.o,c.c)),cw*.7,Math.max(1,Math.abs(y(c.o)-y(c.c))))}
+ cx.font='bold 12px system-ui';S.l.m&&S.sv.forEach(q=>{if(q.i<s||q.i>=e)return;const c=k[q.i];cx.fillStyle='#fb923c';cx.fillText(q.t==='top'?'▼':'▲',x(q.i)-5,q.t==='top'?y(c.h)-6:y(c.l)+14)});
+ S.l.m&&S.mw.forEach(q=>{if(q.i<s||q.i>=e)return;cx.fillStyle=q.t==='W'?'#22e07a':'#ff3b4e';cx.font='bold 15px system-ui';cx.fillText(q.t,x(q.i)-5,q.t==='W'?y(q.p)+30:y(q.p)-14)});
+ const sg=S.sig;if(sg&&sg.plan&&!S.off&&S.l.m){[['SL',sg.plan.stop,'#ff4d5e'],['TP1',sg.plan.tp1,'#26d97f'],['TP2',sg.plan.tp2,'#26d97f']].forEach(([t,p,c])=>{cx.strokeStyle=c;cx.setLineDash([8,4]);line(0,y(p),W-pr,y(p));cx.setLineDash([]);cx.fillStyle=c;cx.font='11px system-ui';cx.fillText(t,6,y(p)-3)})}
+ cx.restore();
+ for(let i=s;i<e;i++){const c=k[i];cx.fillStyle=col(c);const h=c.v/mv*vh;cx.fillRect(x(i)-cw*.35,H-pb-h,cw*.7,h)}
+ cx.fillStyle='#6b7388';cx.font='10px system-ui';for(let i=s;i<e;i+=Math.max(1,Math.round(95/cw))){const d=new Date(k[i].t),hm=String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');cx.fillText(S.tf==='5m'||S.tf==='15m'?hm:d.getDate()+'/'+(d.getMonth()+1)+' '+hm,x(i)-14,H-5)}
+ const L=k[n-1],ly=y(L.c);if(ly>0&&ly<ph){cx.strokeStyle='#888';cx.setLineDash([2,3]);line(0,ly,W-pr,ly);cx.setLineDash([]);cx.fillStyle=L.up?'#26d97f':'#ff4d5e';cx.fillRect(W-pr,ly-8,pr,16);cx.fillStyle='#000';cx.font='bold 11px system-ui';cx.fillText(fmt(L.c),W-pr+4,ly+4);const rm=Math.max(0,L.t+TFMS[S.tf]-Date.now());cx.fillStyle='#8b93a7';cx.font='10px system-ui';cx.fillText(Math.floor(rm/6e4)+':'+String(Math.floor(rm%6e4/1e3)).padStart(2,'0'),W-pr+14,ly+22)}
+ cx.font='11px system-ui';[['EMA13','#ff6b6b'],['EMA50','#a855f7'],['EMA200','#e5e7eb'],['EMA800','#facc15'],['VWAP','#38bdf8'],['DO','#94a3b8']].forEach(([t,c],i)=>{cx.fillStyle=c;cx.fillText(t,8+i*62,14)});const h=k[S.hv];if(h&&S.hv>=s&&S.hv<e){cx.strokeStyle='rgba(255,255,255,.25)';cx.setLineDash([4,4]);line(x(S.hv),0,x(S.hv),ph);if(S.my>0&&S.my<ph){line(0,S.my,W-pr,S.my);cx.setLineDash([]);cx.fillStyle='#363c4e';cx.fillRect(W-pr,S.my-8,pr,16);cx.fillStyle='#fff';cx.font='11px system-ui';cx.fillText((lo+(1-S.my/ph)*(hi-lo)).toFixed(dc+1),W-pr+4,S.my+4)}cx.setLineDash([]);const nm=h.cls===2?(h.up?'וקטור ירוק':'וקטור אדום'):h.cls===1?(h.up?'נפח עולה (כחול)':'נפח עולה (סגול)'):'נר רגיל',av=S.hv>=10?k.slice(S.hv-10,S.hv).reduce((q,w)=>q+w.v,0)/10:0;cx.fillStyle='#d1d4dc';cx.font='12px system-ui';cx.fillText(`${new Date(h.t).toLocaleString('he-IL')}  O ${fmt(h.o)} H ${fmt(h.h)} L ${fmt(h.l)} C ${fmt(h.c)} | ${nm} | נפח ${av?(h.v/av*100).toFixed(0)+'% מהממוצע':'–'}`,8,32)}}
+function panel(){const g=S.sig,z=S.st,b=S.bt,h=S.htf;if(!g||!b)return;
+ const cl=g.side==='LONG'?'L':g.side==='SHORT'?'S':'W',p=g.plan,pc=v=>(v*100).toFixed(0)+'%',hb=h?(h.b>0?'עולה':h.b<0?'יורדת':'צדדית'):'טוען…',ctr=p&&h&&((g.short&&h.b>0)||(!g.short&&h.b<0)),pp=(x,y)=>(Math.abs(x-y)/y*100).toFixed(2)+'%';
+ $('pn').innerHTML=`<div class="card"><h4>סיגנל · ${S.sym} · ${S.tf}</h4><div class="sig ${cl}">${g.side==='WAIT'?'המתן':g.side} <span style="font-size:13px;color:var(--m)">${g.score}/5 · נבדק: ${g.short?'שורט':'לונג'}</span></div>${g.items.map(i=>`<div class="row"><span class="${i[1]?'ok':'no'}">${i[1]?'✔':'✗'} ${i[0]}</span></div>`).join('')}</div>`
+ +(p?`<div class="card"><h4>תוכנית</h4><div class="row"><span>כניסה</span><b>${fmt(p.entry)}</b></div><div class="row"><span>סטופ (${pp(p.stop,p.entry)})</span><b class="S">${fmt(p.stop)}</b></div><div class="row"><span>יעד 1 · מגע (${pp(p.tp1,p.entry)})</span><b class="L">${fmt(p.tp1)}</b></div><div class="row"><span>יעד 2 · 50% (${pp(p.tp2,p.entry)})</span><b class="L">${fmt(p.tp2)}</b></div><div class="row"><span>R:R ליעד 2</span><b>${p.rr.toFixed(2)}</b></div>${ctr?`<small style="color:#fbbf24">⚠ נגד המגמה ב-${h.tf}. עסקת היפוך, כדאי להקטין גודל.</small>`:''}</div>`:'');
+ const acc=+$('acc').value,rk=+$('rk').value;$('szo').innerHTML=p&&acc&&rk?(()=>{const q=acc*rk/100/Math.abs(p.entry-p.stop),nt=q*p.entry;return `<div class="row"><span>סיכון</span><b>$${(acc*rk/100).toFixed(2)}</b></div><div class="row"><span>כמות</span><b>${q.toPrecision(4)}</b></div><div class="row"><span>שווי פוזיציה</span><b>$${nt.toFixed(0)} (${(nt/acc).toFixed(1)}x)</b></div>`})():'<small>יוצג כשיש תוכנית.</small>';
+ S.rep=[`Hybrid terminal report · ${S.sym} ${S.tf} · ${new Date().toISOString()}`,`Signal: ${g.side} score ${g.score}/5 (min ${S.min}); HTF ${h?h.tf+' '+hb:'n/a'}`,...g.items.map(i=>(i[1]?'[x] ':'[ ] ')+i[0]),p?`Plan: entry ${fmt(p.entry)} SL ${fmt(p.stop)} TP1 ${fmt(p.tp1)} TP2 ${fmt(p.tp2)} RR ${p.rr.toFixed(2)}`:'Plan: none',`Backtest (${S.k.length} candles, entry next open, SL-first, fee 0.1%, max 120 bars): trades ${b.N}, win ${pc(b.wr)} (95% CI ${pc(b.lo)}-${pc(b.hi)}), avg R ${b.avg.toFixed(2)}, PF ${b.pf.toFixed(2)}, maxDD ${b.dd.toFixed(1)}R, TP1 touch ${pc(b.t1)}`,`Vector recovery green: n=${z[0].n} touch ${z[0].t}% mid ${z[0].m}% full ${z[0].f}%; red: n=${z[1].n} touch ${z[1].t}% mid ${z[1].m}% full ${z[1].f}%`].join('\n');
+ $('pn2').innerHTML=`<div class="card"><h4>הקשר</h4><div class="row"><span>מגמה ב-${h?h.tf:'…'}</span><b class="${h&&h.b>0?'L':h&&h.b<0?'S':'W'}">${hb}</b></div><div class="row"><span>וקטורים פתוחים (ירוק / אדום)</span><span><b class="L">${g.g}</b> / <b class="S">${g.r}</b></span></div></div>
+ <div class="card"><h4>בדיקה היסטורית · ${S.k.length} נרות · ציון ≥${S.min}</h4>${b.N?`<div class="row"><span>עסקאות</span><b>${b.N} (לונג ${b.L.n} · שורט ${b.S.n})</b></div><div class="row"><span>הסתברות הצלחה</span><b>${pc(b.wr)} <small style="display:inline">(${pc(b.lo)}–${pc(b.hi)})</small></b></div><div class="row"><span>ממוצע R נטו</span><b class="${b.avg>0?'L':'S'}">${b.avg.toFixed(2)}</b></div><div class="row"><span>Profit Factor</span><b>${b.pf.toFixed(2)}</b></div><div class="row"><span>ירידה מקסימלית</span><b>${b.dd.toFixed(1)}R</b></div><div class="row"><span>מגע ביעד 1</span><b>${pc(b.t1)}</b></div><canvas id="eq"></canvas>${b.N<30?'<small style="color:#fbbf24">⚠ מדגם קטן (פחות מ-30). הטווח רחב והתוצאה חלשה סטטיסטית.</small>':''}<small>כניסה בפתיחת הנר הבא, סטופ קודם לנר משותף, עמלה 0.1%, עד 120 נרות. לא מבטיח עתיד.</small>`:'<small>אין עסקאות בהיסטוריה הטעונה. נסה סף ציון נמוך יותר או טיימפריים אחר.</small>'}</div>
+ <div class="card"><h4>התאוששות וקטורים (היסטוריה)</h4>${[['ירוקים',z[0]],['אדומים',z[1]]].map(([t,s])=>`<div class="row"><span>${t} (${s.n})</span><span>מגע ${s.t}% · חצי ${s.m}% · מלא ${s.f}%</span></div><small>חציון נרות עד 50%: ${s.med}</small>`).join('')}</div>
+ <button id="cp" style="width:100%">📋 העתק דוח (לשליחה למודל אחר)</button>`;
+ const ec=$('eq');if(ec&&b.cur.length>1){const w=ec.width=ec.clientWidth*2,hh=ec.height=120,c2=ec.getContext('2d'),mn=Math.min(0,...b.cur),mx=Math.max(.01,...b.cur),Y=v=>hh-(v-mn)/(mx-mn)*(hh-8)-4;c2.strokeStyle='#555';c2.beginPath();c2.moveTo(0,Y(0));c2.lineTo(w,Y(0));c2.stroke();c2.strokeStyle='#38bdf8';c2.lineWidth=2;c2.beginPath();b.cur.forEach((v,i)=>{const X=i/(b.cur.length-1)*w;i?c2.lineTo(X,Y(v)):c2.moveTo(X,Y(v))});c2.stroke()}}
+let q=0;function sched(){if(!q){q=1;requestAnimationFrame(()=>{q=0;draw();panel()})}}
+$('sym').onchange=e=>{S.sym=e.target.value;load()};
+document.querySelectorAll('[data-tf]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tf]').forEach(x=>x.classList.remove('on'));b.classList.add('on');S.tf=b.dataset.tf;load()});
+cv.onwheel=e=>{e.preventDefault();S.n=Math.max(40,Math.min(500,Math.round(S.n*(e.deltaY>0?1.12:.9))));sched()};
+let dr=null;cv.onmousedown=e=>dr={x:e.clientX,o:S.off};addEventListener('mouseup',()=>dr=null);
+addEventListener('mousemove',e=>{if(!dr)return;const cw=cv.getBoundingClientRect().width/S.n;S.off=Math.max(0,Math.min(S.k.length-S.n,dr.o+Math.round((e.clientX-dr.x)/cw)));sched()});
+S.l={z:1,e:1,p:1,m:1};S.hv=null;
+document.querySelectorAll('[data-l]').forEach(b=>b.onclick=()=>{S.l[b.dataset.l]=S.l[b.dataset.l]?0:1;b.classList.toggle('on');sched()});
+$('hq').onclick=()=>$('hp').hidden=!$('hp').hidden;$('hp').onclick=e=>{if(e.target.id==='hp'||e.target.tagName==='BUTTON')$('hp').hidden=true};
+cv.onmousemove=e=>{const r=cv.getBoundingClientRect(),s=Math.max(0,S.k.length-S.off-S.n);S.hv=s+Math.floor((e.clientX-r.left)/((r.width-62)/S.n));S.my=e.clientY-r.top;sched()};
+cv.onmouseleave=()=>{S.hv=null;sched()};
+S.min=3;S.al=false;
+$('ms').onchange=e=>{S.min=+e.target.value;calc();sched()};
+$('bl').onclick=()=>{S.al=!S.al;$('bl').classList.toggle('on',S.al);if(S.al&&window.Notification&&Notification.permission==='default')Notification.requestPermission()};
+try{$('acc').value=localStorage.acc||1000;$('rk').value=localStorage.rk||1}catch(e){}
+['acc','rk'].forEach(i=>$(i).oninput=()=>{try{localStorage[i]=$(i).value}catch(e){}sched()});
+document.addEventListener('click',e=>{if(e.target.id==='cp'){navigator.clipboard.writeText(S.rep);e.target.textContent='✔ הועתק'}});
+setInterval(sched,1000);
+addEventListener('resize',sched);load();
+</script></body></html>

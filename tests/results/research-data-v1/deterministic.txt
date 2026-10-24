@@ -1,0 +1,20 @@
+✔ UTC configuration/alignment and exact twelve-field decimal validation (10.840107ms)
+✔ bounded pagination: 1000/200 rows, endTime exclusive conversion, offline process and no overwrite (355.479035ms)
+✔ short pages continue, empty windows advance and explicitly report gaps (325.558324ms)
+✔ developing candle exclusion uses fixed trusted cutoff and UTC boundaries (70.78143ms)
+✔ duplicates/conflicts/order/gaps and exact precision remain visible to offline quality (0.711626ms)
+✔ bad/duplicate/backward pages stop; raw rejected rows survive without a frozen output (200.060209ms)
+✔ hashes exclude metadata, preserve raw decimal text and detect changed/tampered data/quality/schema (237.074898ms)
+✔ 429 Retry-After and 5xx retries obey bounded waits; 418 stops immediately (276.803853ms)
+✔ request timeouts and cancellation/resumption preserve pages, cutoff and configuration (270.512958ms)
+✔ offline CLI detects edited files and original app remains untouched (154.446493ms)
+✔ checkpoint tampering and concurrent writer locks cannot resume or overwrite work (93.195606ms)
+✔ actual compare/invalid-quality CLI exit codes and absent trusted server clock (230.212092ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2390.266614

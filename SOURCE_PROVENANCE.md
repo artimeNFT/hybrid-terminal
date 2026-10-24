@@ -1,0 +1,72 @@
+# Source provenance — 2026-10-23
+
+Workspace: `/mnt/c/Users/shlom/Desktop/THE hybrid-terminal`. No active Git repository (`git status` reports not a repository); no applicable AGENTS.md found. All work is inside this Hybrid workspace. No other project/process/configuration was changed.
+
+Read: HYBRID_NEXT_TASK.md, HYBRID_PROJECT_BASELINE_2026-10-23.md, HYBRID_TERMINAL_NOTES.md, and the 0.3.1 archive README/STATUS/HANDOFF/REVIEW. No local README/STATUS existed before this increment. The latest attached request explicitly adds RSI/Pivots to the older next-task scope.
+
+The authoritative starting source was the unnumbered `hybrid-terminal.html`: internal title and APP_VERSION 0.3.1, byte-identical to the release ZIP, with closed-bar/request-generation guards, M/W chronology, journal, palettes, data health and isolated older chart history. Selection was based on source features and release consistency, not filename number or mtime.
+
+| Preserved file | Internal version/title | SHA-256 |
+| --- | --- | --- |
+| `1hybrid-terminal.html` | Hybrid Terminal | `0a1627edf187ca25f89335deb29687901d3099c604f4c09ecf8abf23460ebc4f` |
+| `2hybrid-terminal.html` | Hybrid Terminal | `7a479277cc055b44f783776dcbb4ba05acfb73bfd6430e28f32cbecf88dc3ab3` |
+| `3hybrid-terminal.html` | Hybrid Terminal | `88bbfd418aeddb437240f517173d4581badda8f45ef8100c240555efafc3d533` |
+| `4hybrid-terminal.html` | Hybrid Terminal · 0.1.1 | `8867fb07cb59fe54080228998c5d67a72fa7d1c2528d89082d16ccc779cfdee8` |
+| `5hybrid-terminal.html` | Hybrid Terminal · 0.2.0 | `8dd23b4eebf9976999128d74c7837527c920b32b2081c64081f5115f7365737f` |
+| `6hybrid-terminal.html` | Hybrid Terminal · 0.3.0 | `7733abbdfbb30a533737b997bdaee75c214e454fe6d9e94918c69f04a0d4c0b0` |
+| `baseline/hybrid-terminal.0.3.1.html` | Hybrid Terminal · 0.3.1 | `940e951deaea0474a575a4ba859c43333aed9b5996441ab6975f22f5beba793e` |
+| `baseline/hybrid-terminal.0.4.0.html` | Hybrid Terminal · 0.4.0 | `0593c0096957d295628d267f1f3b16dd90a6478832d61bf39d2e9ed1959bc7d9` |
+| `baseline/hybrid-terminal.0.4.1.html` | Hybrid Terminal · 0.4.1 | `7ebb7bf88cc2721722b5e4d6769a6938a5b48478f03452919e50259f2512caf4` |
+| `baseline/hybrid-terminal.0.4.2.html` | Hybrid Terminal · 0.4.2 | `d91b92a0105e4c35aa8357d19ac123a2c73918cf093a7e905b1aa4941df7b6ed` |
+| `hybrid-terminal.html` (working) | Hybrid Terminal · 0.4.3 | `fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9` |
+
+Static comparison: copies 1–3 contain OHLCV/RSI/MW without the later closed-input/request-epoch/journal/history safeguards. Copy 4 (0.1.1) has the earlier M/W fix. Copy 5 (0.2.0) has closed-input and epoch guards; copy 6 (0.3.0) additionally has the journal, chart history and palette controls. The unnumbered 0.3.1 refines those controls and matches its packaged release. Candidates were not all executed; the preserved 0.3.1 was executed only for the requested gap regression, and the original baseline is used by the inherited chronology suite.
+
+Archived working HTML identities:
+- `HYBRID_SYSTEM_0.1.1_F01.zip` / `HYBRID_SYSTEM_0.1.1_F01/hybrid-terminal.html`: `8867fb07cb59fe54080228998c5d67a72fa7d1c2528d89082d16ccc779cfdee8`.
+- `HYBRID_SYSTEM_0.2.0.zip` / `HYBRID_SYSTEM_0.2.0/hybrid-terminal.html`: `8dd23b4eebf9976999128d74c7837527c920b32b2081c64081f5115f7365737f`.
+- `HYBRID_SYSTEM_0.3.1.zip` / `HYBRID_SYSTEM_0.3.1/hybrid-terminal.html`: `940e951deaea0474a575a4ba859c43333aed9b5996441ab6975f22f5beba793e`.
+
+Original comparison source extracted unchanged from the 0.3.1 archive to `baseline/hybrid-terminal.original.html` (also identical to numbered copy 3). Existing test scripts were recovered from that archive; the original files/archives were not overwritten. `changes-since-0.3.1.diff` is the focused application diff.
+
+## Integrity increment — 2026-10-24
+
+The request named `HYBRID_UPGRADE_REVIEW/NEXT_CODEX_PROMPT_EN.md`; its actual local location is `HYBRID_UPGRADE_REVIEW_2026-10-23/HYBRID_UPGRADE_REVIEW/`. Read that prompt, REVIEW_AND_ROADMAP.md, findings.actual.json and audit-040.cjs plus root README/STATUS and applicable instruction paths (no AGENTS.md found).
+
+The starting HTML was exactly the reviewed normalized 0.4.0 hash above; no newer work was restored/replaced. Saved `baseline/hybrid-terminal.0.4.0.html` before editing with read-only permission bits. Ran the original hash-locked audit against that baseline; its five probes reproduced the supplied findings, saved in `tests/results/0.4.1/findings.baseline.json`. The review packet and lock were not changed. Git remains absent; no repository conversion or branch operation was performed.
+
+That integrity increment produced 0.4.1, with the separate `changes-since-0.4.0.diff`. All previous baselines, numbered HTML, release archives, old diffs, review documents and earlier results remain preserved. New validation lives under `tests/results/0.4.1/`. Source hashing is recorded in its Node and live-close evidence. Old journal content is not migrated/re-versioned; new rule semantics have a distinct rule identity.
+
+## UTC day context increment — 2026-10-24
+
+Read HYBRID_NEXT_TASK_0.4.2_EN.md, current README/STATUS and actual source/tests. No applicable AGENTS.md or active Git repository was present. The starting file exactly matched the task's reviewed 0.4.1 hash above; preserved it read-only as `baseline/hybrid-terminal.0.4.1.html` before editing, together with `baseline/STATUS.0.4.1.md`. No old source, release archive, diff, review packet or prior evidence was changed.
+
+The working 0.4.2 adds reference-only UTC PDH/PDL and nearest-level context; `changes-since-0.4.1.diff` contains the application change. Rule/execution versions remain unchanged. Strategy/analysis/backtest, journal implementation and automatic price-range source were compared byte for byte with 0.4.1 and match. Current checks and observation source hashes live under `tests/results/0.4.2/`; they are distinct from prior-release observations. No subagents, repository conversion, other-project work or runtime dependencies.
+
+## Vertical chart navigation increment — 2026-10-24
+
+Read the corrected navigation request, current README/STATUS and actual source/tests. The workspace resolves to `/mnt/c/users/shlom/desktop/the hybrid-terminal` in this session (the established Windows Hybrid folder); no applicable AGENTS.md or active Git repository. The authoritative HTML exactly matched reviewed 0.4.2 hash `d91b92a0105e4c35aa8357d19ac123a2c73918cf093a7e905b1aa4941df7b6ed`; no newer navigation work was present. Preserved it before edits as read-only `baseline/hybrid-terminal.0.4.2.html` plus `baseline/STATUS.0.4.2.md`. All previous numbered files/baselines, archives, review notes, diffs and release evidence are retained. No parallel implementation, subagents, Git conversion or other-project work.
+
+Version 0.4.3 extends the existing chart pointer handler with price translation from drag-start bounds/geometry, a documented movement threshold and focused vertical keyboard controls. The renderer, strategy/analysis/backtest, journal, daily source/labels/context, preferences and research export implementations are unchanged; rule/execution identities are unchanged. English tooltips/accessibility and Hebrew Help describe the exact controls. Focused and existing test evidence is under `tests/results/0.4.3/`; `changes-since-0.4.2.diff` is the application-only diff. Browser tests use actual Chromium mouse/touch events and candle pixels, with synthetic feed inputs. No live midnight/long-session observation or dependency was added.
+
+## Research data foundation — 2026-10-24
+
+Read the attached data-foundation task, applicable instruction paths and current README/STATUS. Workspace is the established `/mnt/c/users/shlom/desktop/the hybrid-terminal`, separate from other projects; no applicable AGENTS.md or active Git repository. The authoritative app matched reviewed 0.4.3 SHA-256 `fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9` and remains byte-for-byte unchanged. Preserved the prior STATUS as `baseline/STATUS.before-research-data-v1.md`. No app version bump, source restoration, subagents or other-project changes.
+
+Added the independent Node-built-in CLI `research/klines.cjs`, tool 1.0.0 / dataset schema 1, `research/SCHEMA.md`, deterministic CLI tests and a separate Python stdlib QA oracle. Current official Binance Spot REST field/time/limit/Retry-After/public-host documentation was checked; URLs and receipt are in `tests/results/research-data-v1/official-docs.json`. No authentication, keys, external packages, app state or live journal access.
+
+The actual public HTTPS acceptance acquisition used `data-api.binance.vision` and saved `research/datasets/btcusdt-5m-2026-q3.json`: 26,496 closed 5m BTCUSDT rows across [2026-07-01, 2026-10-01) UTC, complete grid, zero gaps/duplicates/conflicts. Canonical data hash `436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1`. All 12 returned fields, original decimal strings and volatile request/server-cutoff metadata are retained. Separate frozen repeat-a/repeat-b July 1 files each contain 288 rows with matching canonical hash `2912a020aaff86d529f1cc5af148478c48bf99c617c84a9db89b93abb166e34c`; they agree with the Q3 subset. Offline Node validation and an independent Python JSON/SHA256/Decimal/full-grid check passed.
+
+Full acceptance and both small acquisitions ran before a final resume-pacing refinement (ordinary one-second pacing is waited on immediate resume; long server cooldowns still stop). The acquisition-time tool source is preserved as `tests/results/research-data-v1/acquisition-tool.cjs`, with its own checksum. The final tool reran offline validation, comparison and deterministic resumption tests. Canonical schema/data normalization are identical; no full redownload was needed. Final tool/test/file checksums are separate from canonical dataset hashes in `RESEARCH_DATA_SHA256SUMS.txt` and `delivery.json`. No upstream revisions appeared in the repeated small sample; this does not exclude revisions elsewhere or later.
+
+All previous sources, releases, archives, baselines, notes, diffs and evidence remain. The app's rule/execution identities, navigation, decisions, plans, backtest, journal, preferences and snapshot export are untouched. Actual UTC-midnight/long-session and physical-device observations remain pending as before. Stop after this data-foundation increment.
+
+## Git and reproducible QA setup — 2026-10-24
+
+Read the attached Git/GitHub/CI task and current README/STATUS/instruction paths. No applicable AGENTS.md was present. Initial inspection found no active repository/remotes in the exact established Hybrid folder; configured identity was already `artime` / `shlomics@gmail.com`. Initialized `main` locally, preserving all working/historical files and global configuration. The single maintained task board now lives in STATUS; it distinguishes local research checks from pending independent external review. Prior STATUS is saved at `baseline/STATUS.before-git-ci.md`.
+
+The application HTML remains byte-identical 0.4.3 (`fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9`); research CLI remains tool 1.0.0/schema 1 (`7200e575ba74206dc70a82cdfb7159e9d9596fc5d01e8b0c75215ce30d30d1c5`). No existing test suite or canonical schema/data was changed. Existing manifests are retained; `tests/results/ci-setup/source-preservation.json` separately records unchanged source/suite hashes and new QA harness hashes. Generated datasets/checkpoints, local tools/dependencies, release ZIPs and bulky browser artifacts stay on disk and are intentionally not committed. Historical full-delivery manifests refer to those retained files; required CI does not run them or claim they are present in a fresh checkout.
+
+Pinned QA-only npm dependencies and lockfile replace the normal /tmp package path. New Node scripts run the original nine app suites, original research suite and original five mocked Chromium suites, use isolated generated output paths, reject unmocked browser network traffic and retain failure diagnostics/traces. Only scoped tracked-source hashes are mandatory. Official checkout/setup-node v7.0.0 and upload-artifact v7.0.2 release SHAs were verified and pinned in a Node-24/Ubuntu-24.04 workflow with main/PR/manual triggers, bounded jobs, concurrency cancellation, read-only contents and three-day failure artifacts. No deploy/scheduler/auto-merge/larger runner is enabled.
+
+The standard Playwright installer required a sudo password on this host. A reproducible optional rootless Ubuntu-24.04 helper downloaded/extracted the missing Ubuntu packages into ignored project-local `.tools/browser-libs`; no system configuration or previous /tmp QA installation was used by the successful npm browser run. Official GitHub CLI 2.103.2 was installed under ignored `.tools/gh` with release-checksum verification. Its local auth status is unauthenticated. Connected-app identity/404 lookup does not establish local authentication, target absence/privacy, publication or an Actions result. Authenticated remote inspection/creation/push/run verification remain pending; STATUS holds the current state. No independent external research review or actual UTC-midnight/long-session/physical-device observation was substituted by local QA.

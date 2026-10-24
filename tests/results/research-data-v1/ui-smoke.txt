@@ -1,0 +1,2 @@
+PASS: application startup, closed-candle panel, REST/WebSocket flow, canvas draw calls, M/W confirmation/supersession, help, layer toggle and report copy.
+Scope: DOM, canvas and network are test doubles; not full browser QA.

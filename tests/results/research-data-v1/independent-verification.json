@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "datasets": [
+    {
+      "file": "research/datasets/btcusdt-5m-2026-q3.json",
+      "state": "complete",
+      "rows": 26496,
+      "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+      "coverage": [
+        "2026-07-01T00:00:00+00:00",
+        "2026-10-01T00:00:00+00:00"
+      ],
+      "independentOracle": "Python stdlib JSON/SHA256/Decimal/grid"
+    },
+    {
+      "file": "research/datasets/btcusdt-5m-2026-07-01-repeat-a.json",
+      "state": "complete",
+      "rows": 288,
+      "dataHash": "2912a020aaff86d529f1cc5af148478c48bf99c617c84a9db89b93abb166e34c",
+      "coverage": [
+        "2026-07-01T00:00:00+00:00",
+        "2026-07-02T00:00:00+00:00"
+      ],
+      "independentOracle": "Python stdlib JSON/SHA256/Decimal/grid"
+    },
+    {
+      "file": "research/datasets/btcusdt-5m-2026-07-01-repeat-b.json",
+      "state": "complete",
+      "rows": 288,
+      "dataHash": "2912a020aaff86d529f1cc5af148478c48bf99c617c84a9db89b93abb166e34c",
+      "coverage": [
+        "2026-07-01T00:00:00+00:00",
+        "2026-07-02T00:00:00+00:00"
+      ],
+      "independentOracle": "Python stdlib JSON/SHA256/Decimal/grid"
+    }
+  ]
+}

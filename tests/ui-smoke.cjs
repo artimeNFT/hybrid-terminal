@@ -1,0 +1,21 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {openApp}=require('./app-harness.cjs');
+const {replacementFixture}=require('./regression.cjs');
+(async()=>{
+ const app=await openApp(),{element,read,drawCalls,sockets}=app,candles=replacementFixture();
+ assert.equal(read('S.k.length'),94);assert.equal(sockets.length,1);assert.equal(read('S.closedIndex'),93);
+ assert.match(element('pn').innerHTML,/אות מאושר/);assert.match(element('pn2').innerHTML,/נרות סגורים/);
+ assert.ok(drawCalls.some(c=>c.method==='fillText'&&c.args[0]==='M'));
+ const before=read('sigAt(93)');
+ for(const b of candles.slice(94,101))sockets[0].receive(b,true);
+ await app.flush();assert.equal(read('S.k.length'),101);assert.deepEqual(read('sigAt(93)'),before);
+ assert.equal(read('S.mw.find(e=>e.i===90).supersededAt'),100);
+ assert.ok(drawCalls.some(c=>c.method==='fillText'&&c.args[0]==='M×'));
+ element('hq').onclick();assert.equal(element('hp').hidden,false);element('hp').onclick({target:{tagName:'BUTTON'}});assert.equal(element('hp').hidden,true);
+ drawCalls.length=0;app.selectors['[data-l]'].find(e=>e.dataset.l==='m').onclick();await app.flush();
+ assert.ok(!drawCalls.some(c=>c.method==='fillText'&&/^[MW]×?$/.test(c.args[0])));
+ app.handlers.click({target:element('cp')});assert.match(app.copied,/0\.4\.3 report/);assert.match(app.copied,/Confirmed candle close:/);
+ console.log('PASS: application startup, closed-candle panel, REST/WebSocket flow, canvas draw calls, M/W confirmation/supersession, help, layer toggle and report copy.');
+ console.log('Scope: DOM, canvas and network are test doubles; not full browser QA.');
+})().catch(error=>{console.error(error);process.exitCode=1});

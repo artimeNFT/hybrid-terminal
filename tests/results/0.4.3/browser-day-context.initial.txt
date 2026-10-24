@@ -1,0 +1,28 @@
+PASS labels/layout desktop-collision [{"text":"PDH/PDL/PP/R1/S1 · inspector","names":["PDH","PDL","PP","R1","S1"],"x":825.42236328125,"y":269.09233954212203,"width":194.57763671875,"height":16,"validFrom":1792627200000}]
+PASS labels/layout phone-collision [{"text":"Levels ×5","names":["PDH","PDL","PP","R1","S1"],"x":229.88134765625,"y":83.88104779979345,"width":70.11865234375,"height":16,"validFrom":1792627200000}]
+AssertionError [ERR_ASSERTION]: The input did not match the regular expression /שכבות ההקשר כבויות/. Input:
+
+'רמות קרובות · סגירה מאושרת\n' +
+  'ייחוס בלבד, ללא יעד חזוי או תוספת לציון. מחיר סגירה: 99.8637740150901.\n' +
+  'מעל\n' +
+  'PDL · 99.99995\n' +
+  'מרחק 0.1362 · 0.1364% · 0.43 ATR\n' +
+  'מתחת\n' +
+  'לא זמין\n' +
+  'מקור ותקפות UTC'
+
+    at /mnt/c/users/shlom/desktop/the hybrid-terminal/tests/browser-day-context.cjs:29:280 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'רמות קרובות · סגירה מאושרת\n' +
+    'ייחוס בלבד, ללא יעד חזוי או תוספת לציון. מחיר סגירה: 99.8637740150901.\n' +
+    'מעל\n' +
+    'PDL · 99.99995\n' +
+    'מרחק 0.1362 · 0.1364% · 0.43 ATR\n' +
+    'מתחת\n' +
+    'לא זמין\n' +
+    'מקור ותקפות UTC',
+  expected: /שכבות ההקשר כבויות/,
+  operator: 'match',
+  diff: 'simple'
+}
