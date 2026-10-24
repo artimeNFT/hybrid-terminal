@@ -1,19 +1,19 @@
 # Hybrid Terminal — current direction and task board
 
-Updated: 2026-10-24, Asia/Jerusalem.
+Updated: 2026-10-25, Asia/Jerusalem.
 
 ## Read this first — current decision
 
 **Product objective:** a practical, readable decision-support terminal based on the Hybrid framework: show trustworthy market context, explain the current setup or WAIT, quantify planned risk/targets and preserve decisions for review. Statistical trading advantage is a separate research question; product usefulness does not depend on proving profitability.
 
-**Alignment decision:** the unissued preparation-review utility prompt from the previous chat response is **superseded and deferred**. It was technically relevant to research, but it is not a prerequisite for improving the terminal. Stop extending the research-diagnostic chain by default. The single next implementation increment is a usable **0.4.4 presentation release candidate**, including only the necessary separation of frozen research source references from the evolving application. No application edits have yet been made by this alignment update.
+**Alignment decision:** the unissued preparation-review utility prompt from the previous chat response is **superseded and deferred**. It was technically relevant to research, but it is not a prerequisite for improving the terminal. Stop extending the research-diagnostic chain by default. The single next implementation increment is a usable **0.4.4 presentation release candidate**, including only the necessary separation of frozen research source references from the evolving application. The presentation increment is now implemented and locally validated below; real-session acceptance remains separate.
 
 **Authority:** this section, the current roadmap and the current board below supersede all older “next task” instructions inside the historical checkpoint archive. Keep one active code task in the existing VS Code/WSL Codex session; this conversation reviews and prioritizes. Preserve local changes, fetch/fast-forward only when safe, and do not restart completed work after an interrupted reply.
 
 ## Verified current state
 
 - Private repository: https://github.com/artimeNFT/hybrid-terminal. WSL root: `/mnt/c/users/shlom/desktop/the hybrid-terminal`. VECTOR LAB is separate.
-- Active app **0.4.3**, SHA-256 `fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9`; chart navigation, candle/body modes, RSI pane, previous-day levels, journal and nominal sizing delivered. Current physical usability, real midnight rollover and extended live behavior are not fully accepted.
+- Active app **0.4.4 presentation RC**, sole user application `hybrid-terminal.html`, SHA-256 `f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa`. Exact internal 0.4.3 reference is `baseline/hybrid-terminal.0.4.3.html`, SHA-256 `fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9`. Physical usability, real midnight rollover and extended live behavior remain pending.
 - CLI **1.0.1 / schema 1**, causal/history audit **1.0.0**, finite-origin calculation contract **1.0.0**, and outcome-blind preparation **1.0.0** delivered. Preparation publication `c0997dfb07f2ceae23a112ba5aa4fbef14c42ec9`, [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40123436079).
 - Frozen Q3 input: 26,496 complete BTCUSDT 5m candles; canonical hash `436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1`.
 - Preparation retained **99/964 V (10.27%)**, with conditional SMD flags and overlapping windows. Engineering scope has focused independent acceptance; comparison/inference suitability remains unresolved. No outcomes, profitability estimate or retuning.
@@ -23,7 +23,7 @@ Updated: 2026-10-24, Asia/Jerusalem.
 
 | Order | Deliverable | Completion rule |
 | --- | --- | --- |
-| Now | App 0.4.4 presentation release candidate | Preserve calculation/strategy/journal behavior; improve the primary decision/risk hierarchy; validate current desktop and narrow-screen rendering |
+| Delivered RC | App 0.4.4 presentation release candidate | Primary hierarchy/risk/display work and local validation complete; publication/actual CI verified before delivery |
 | Next | Bounded real-session acceptance | Observe actual midnight rollover and a one-hour reconnect/storage session; physical-device touch check when available; distinguish measured from still pending |
 | Later | One explicit research decision | Resume only with a concrete question, relevant population, fixed outcome/dependence/cost protocol and stopping decision; keep Q3 exploratory and preserve the first preparation result |
 | Conditional | Indicators, derivatives and closer TR_MAIN context | Add only for a named workflow/research use and verified source/configuration; not as an automatic feature backlog |
@@ -45,18 +45,34 @@ Research review is not a new mandatory gate before each UI improvement. A new au
 | Priority | Task | State / next action |
 | --- | --- | --- |
 | P0 | Product alignment and work continuity | Current instructions are here; old next-task text below is historical. One active implementation increment |
-| P1 | 0.4.4 presentation release candidate | Next code task: frozen-source separation plus the bounded UI/risk-context work above |
+| P1 | 0.4.4 presentation release candidate | **Implemented and locally validated; publication verification pending** — explicit frozen context, clearer primary panel, guarded ATR/cost display, grouped controls and six Chromium suites. See current evidence below. |
 | P1 | Actual midnight / one-hour live / physical touch | Pending measured acceptance; use existing observation tools and record what actually occurred |
 | P2 | Vector-versus-ordinary research | Preparation 1.0.0 preserved; outcome inference and the extra support-diagnostic utility deferred, not silently completed |
 | P2 | CLI credential storage | Queued follow-up; current plaintext CLI credential storage is recorded, values never included in chat/repository |
 | P3 | MACD, OI/funding, extra sessions/ADR and other additions | Deferred until a concrete use and source definition justify one bounded increment |
 
+## Current 0.4.4 evidence and exact next action
+
+Started from clean `main` at `c0997df`, fetched and fast-forwarded to the user's current alignment checkpoint `ae45baf74efc58698afe35d5981df87006d16bad`; no unfinished local changes or applicable AGENTS.md. The superseded preparation-review utility was not implemented. Only presentation/source-binding work is active in this increment.
+
+**Presentation:** feed health and confirmed UTC/local timestamp, LONG/SHORT/WAIT and its main reason lead the Hebrew panel; eligible plan follows. WAIT retains no approved/substitute plan. Price/%/gross RR remain, with guarded decision-time ATR distances for stop/TP1/TP2 and modeled cost R = 0.001 × confirmed close / absolute stop distance. The label states the existing round-trip entry-notional assumption, not verified account fees or total execution costs. Sizing/execution/strategy calculations are unchanged. Provisional information is separate; candidate/context/statistics/recovery/cash detail expanders reduce density and retain expansion state on feed redraw. Candles/Body and chart navigation remain directly accessible; Display groups secondary controls. Hebrew Help is updated. Journal export is directly accessible; old records/IDs/preferences are preserved.
+
+**Frozen research:** copied exact 0.4.3 bytes before UI edits, clearly labeled internal-only in `baseline/README.md`. `research/run-frozen.cjs` explicitly launches source context `hybrid-html-0.4.3-context-v1`. Only logical root-HTML reads (sync/callback/promise) bind to the verified baseline; original expected hashes, code, declarations, seals, payloads and historical manifests are unchanged. New binding/loader identities and actual active-UI hash are reported separately. Direct unbound research still rejects changed root HTML. Active checks use new `qa/source-checksums.0.4.4.json`; old `qa/source-checksums.json` is preserved. Existing original audit bytes/source identity and preparation seal/canonical payloads verified in the explicit context; **no Q3 audit/cohort regeneration or data acquisition**.
+
+**Performed checks:** full `npm test` passed: nine active-app suites, unchanged 18 CLI / nine audit / nine contract / 13 preparation cases in frozen context, and five new presentation tests. Nonpresentation function bodies match frozen 0.4.3; synthetic calculations/decisions/backtests agree across score thresholds and degenerate inputs. Guarded risk arithmetic, original journal bytes and preferences pass. All **six actual Chromium suites** passed, including 80px/reverse/diagonal candle-pixel panning, axes/lower panes, touch emulation, preferences, daily levels, historical statistics, expanded equity curve and journal invariance. Existing fixtures were adapted to open grouped controls; initial CLI-guard failures exposed its asynchronous HTML read and were resolved in the binding, retaining the original assertion/source. No old seal or accepted hash was changed.
+
+**Visual inspection:** actual current desktop (1440×1100) and narrow (390×844, touch emulation) screenshots were inspected for WAIT, eligible-plan, unavailable-data and provisional states. No horizontal overflow; the narrow chart retains usable height and the primary reason/plan is readable after normal scrolling. Images are local under `.qa-results/browser/browser-presentation/`; source-bound screenshot registry, logs and reports are tracked under `tests/results/0.4.4/`. These screenshots use synthetic REST/WebSocket fixtures and do not establish physical-device or real live-session acceptance.
+
+**Delivery state:** implementation/local checks complete; publish without force, inspect actual GitHub Actions, then record its commit/run here before final delivery. Root active HTML is intentionally changed to `f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa`; only the internal frozen source retains old `fa349f…` bytes. New scoped source/checksum records are separate; old evidence/manifests are not rewritten. The historical STATUS archive below remains byte-identical.
+
+**Exact next unfinished milestone:** bounded real-session acceptance with existing `tests/browser-observe-context.cjs`: actual UTC-midnight rollover, a separate one-hour reconnect/storage observation, and physical-device touch when available. The observer was adapted to open Display and defaults to ignored timestamped output; only syntax/compatibility was checked here. All three actual observations remain **pending**. Do not start the deferred research utility, outcome analysis or indicator expansion by default. Stop after publication of this presentation increment.
+
 ## Short completion and handoff checklist
 
-- [ ] Inspect project root, branch/HEAD, recent commits and local changes; preserve unfinished work.
-- [ ] Identify the one current result and its acceptance criteria; do not obey superseded historical next-task instructions.
-- [ ] Preserve frozen research/data/journal provenance and verify behavior relevant to the change.
-- [ ] Inspect the user-facing result, not only test counts; record remaining observation limits.
+- [x] Inspect project root, branch/HEAD, recent commits and local changes; preserve unfinished work.
+- [x] Identify the one current result and its acceptance criteria; do not obey superseded historical next-task instructions.
+- [x] Preserve frozen research/data/journal provenance and verify behavior relevant to the change.
+- [x] Inspect the user-facing result, not only test counts; record remaining observation limits.
 - [ ] Publish the scoped result, verify actual CI, and update this current board.
 - [ ] Send a short summary, commit and Actions URL; attach only current screenshots or local evidence unavailable in GitHub.
 

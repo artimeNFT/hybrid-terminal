@@ -1,0 +1,78 @@
+{
+  "version": "0.4.4",
+  "checks": [
+    {
+      "state": "wait",
+      "layout": "desktop",
+      "root": 1440,
+      "viewport": 1440,
+      "canvas": 917,
+      "screenshot": "wait-desktop.png",
+      "feed": "Synthetic REST/WebSocket fixtures; actual Chromium rendering"
+    },
+    {
+      "state": "eligible",
+      "layout": "desktop",
+      "root": 1440,
+      "viewport": 1440,
+      "canvas": 917,
+      "screenshot": "eligible-desktop.png",
+      "feed": "Synthetic REST/WebSocket fixtures; actual Chromium rendering"
+    },
+    {
+      "state": "unavailable",
+      "layout": "desktop",
+      "root": 1440,
+      "viewport": 1440,
+      "canvas": 917,
+      "screenshot": "unavailable-desktop.png",
+      "feed": "Synthetic REST/WebSocket fixtures; actual Chromium rendering"
+    },
+    {
+      "state": "provisional",
+      "layout": "desktop",
+      "root": 1440,
+      "viewport": 1440,
+      "canvas": 917,
+      "screenshot": "provisional-desktop.png",
+      "feed": "Synthetic REST/WebSocket fixtures; actual Chromium rendering"
+    },
+    {
+      "state": "wait",
+      "layout": "narrow",
+      "root": 390,
+      "viewport": 390,
+      "canvas": 280,
+      "screenshot": "wait-narrow.png",
+      "feed": "Synthetic REST/WebSocket fixtures; actual Chromium rendering"
+    },
+    {
+      "state": "eligible",
+      "layout": "narrow",
+      "root": 390,
+      "viewport": 390,
+      "canvas": 280,
+      "screenshot": "eligible-narrow.png",
+      "feed": "Synthetic REST/WebSocket fixtures; actual Chromium rendering"
+    },
+    {
+      "state": "unavailable",
+      "layout": "narrow",
+      "root": 390,
+      "viewport": 390,
+      "canvas": 280,
+      "screenshot": "unavailable-narrow.png",
+      "feed": "Synthetic REST/WebSocket fixtures; actual Chromium rendering"
+    },
+    {
+      "state": "provisional",
+      "layout": "narrow",
+      "root": 390,
+      "viewport": 390,
+      "canvas": 280,
+      "screenshot": "provisional-narrow.png",
+      "feed": "Synthetic REST/WebSocket fixtures; actual Chromium rendering"
+    }
+  ],
+  "scope": "Actual desktop and narrow/touch-emulated Chromium, mocked market data; no public-live, physical-device, midnight or long-session acceptance"
+}

@@ -1,0 +1,43 @@
+{
+  "applicationVersion": "0.4.4 RC",
+  "reviewedStartingCommit": "ae45baf74efc58698afe35d5981df87006d16bad",
+  "applicationSha256": "f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa",
+  "frozenReferenceSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "bindingContext": "hybrid-html-0.4.3-context-v1",
+  "cliVersion": "1.0.1",
+  "schemaVersion": 1,
+  "npmTest": "passed",
+  "browserSuites": 6,
+  "newPresentationTests": 5,
+  "newPresentationBrowserScenarios": 8,
+  "protectedHistoricalTrackedFiles": 222,
+  "unchangedExistingNonpresentationFunctionBodies": 77,
+  "frozenDatasetCheckpointFiles": 6,
+  "q3AuditOrCohortRegenerated": false,
+  "sourceManifest": "qa/presentation-0.4.4-sha256.json",
+  "sourceManifestSha256": "002c6da4d8db93afae20b7e8786aeda66ea5c9de4c873fcaf519d02d2afcde48",
+  "localEvidence": {
+    "REPORT.md": "b3e594d7072f3d2ab169815ba19b103bcf1df1fd169d712662e3c19117b27444",
+    "app-manifest.json": "564bc9cbed43b3c76b19d77054f1de188fdbf1c55ae05e9c8f3ecda7cd7678fa",
+    "audit-manifest.json": "09c9f20a41b3922ce0e08c53754e2ccc8126a94465b80347ce7f464e3fea8f9a",
+    "browser-manifest.json": "17baee07c792f94678ceb68bbb7d090a67791fb86adee5caddec297c9c2666e1",
+    "browser-navigation.json": "b7950ec49c3b4585eab2605422bdf30798b36420bfd66c01d070387657ad4e4e",
+    "browser-presentation.json": "4cfc2ab538358d8112b098ef1f3dbaa1ae07cd60efdb0d3fd4d7979c5da2b5c7",
+    "browser-test.log": "e899ebc63e09f1972a214efea7a26ace24bba964dc11abcc07b1cf6f0631170a",
+    "contract-manifest.json": "ea75dd70f6feb72fb569e41d5eca9584b7b5e35c5aded085ec91cb897c1c2d9a",
+    "frozen-existing-verification.json": "d389166c0df3f75777e7f1ec3ae15910f7970c2ed9562e0b6b5876c6d38061d6",
+    "network-guards.json": "a7eb104523aa95d753dc9880f9dfe194397dfe838f714c84c38eef3807b40663",
+    "npm-test.log": "f8fd603763812a67652831d40068fd5de73b4c2df4adbb107cc1a03c4b2f8952",
+    "preparation-manifest.json": "762b2b01300ad94e9f4ea317bd8226e2710a8a9be04bf4da2bbedd9ae7caf176",
+    "presentation-manifest.json": "dd7b276371d1112eea817fd1e7406a0aacf98abf79ee4452dc83a627e96fe42a",
+    "preservation.json": "125fffb61eb58e80ea65bdc85ced77273819b31bde2c859366c5ba7fdf432afd",
+    "research-manifest.json": "1f90423ea9628b19f104fe32c35e05dab8ef50f6e63d086e64b7b57b0d3f0d55",
+    "screenshots.json": "62a91bdd53e029d68f5b6121d4eb1f69fb2a900566d8fcbd915d0de721ee0ac6"
+  },
+  "publication": "Actual implementation run added separately after non-force push; final run receipt is ignored to avoid self-reference. See CURRENT STATUS for commit and run.",
+  "pendingObservations": [
+    "actual UTC-midnight rollover",
+    "one-hour reconnect/storage",
+    "physical-device touch"
+  ]
+}

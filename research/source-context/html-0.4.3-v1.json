@@ -1,0 +1,9 @@
+{
+  "contextId": "hybrid-html-0.4.3-context-v1",
+  "bindingVersion": 1,
+  "logicalSource": "hybrid-terminal.html",
+  "physicalSource": "baseline/hybrid-terminal.0.4.3.html",
+  "sha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "reviewedCheckpoint": "ae45baf74efc58698afe35d5981df87006d16bad",
+  "scope": "Explicit historical research process only; root HTML outside this context is the active user application. Original declarations/seals/payloads remain unchanged."
+}

@@ -1,0 +1,98 @@
+{
+  "applicationVersion": "0.4.4 RC",
+  "sourceSha256": "f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa",
+  "browser": "actual pinned Chromium",
+  "viewports": {
+    "desktop": [
+      1440,
+      1100
+    ],
+    "narrowTouchEmulation": [
+      390,
+      844
+    ]
+  },
+  "feed": "Deterministic synthetic REST/WebSocket fixtures, not public live feed",
+  "images": [
+    {
+      "localPath": ".qa-results/browser/browser-presentation/eligible-desktop-panel.png",
+      "sha256": "39a813da8a3820bb82a4bdf1a88d1d2407a0b503aebdfd569598e8e1551aee87",
+      "bytes": 75120,
+      "visuallyInspected": false
+    },
+    {
+      "localPath": ".qa-results/browser/browser-presentation/eligible-desktop.png",
+      "sha256": "0d004b6ca40aa2c493b18a2f0452573ccfbdeb27d8d6bbdc8953ff9cda41b7d9",
+      "bytes": 156877,
+      "visuallyInspected": true
+    },
+    {
+      "localPath": ".qa-results/browser/browser-presentation/eligible-narrow-overview.png",
+      "sha256": "fc3fb71605967a65a66d7c75ee59da2b61dc08c9f646afd3ea47d68775f56eee",
+      "bytes": 65354,
+      "visuallyInspected": false
+    },
+    {
+      "localPath": ".qa-results/browser/browser-presentation/eligible-narrow.png",
+      "sha256": "f4c2b2fa3d0f442dbe4e434685bf49d08259f6908c273415206640b8a8102d9b",
+      "bytes": 60438,
+      "visuallyInspected": true
+    },
+    {
+      "localPath": ".qa-results/browser/browser-presentation/provisional-desktop.png",
+      "sha256": "5af9a1a50f331f5fead22088bd2928958c62094993f07d841648a06b37b9433d",
+      "bytes": 174457,
+      "visuallyInspected": true
+    },
+    {
+      "localPath": ".qa-results/browser/browser-presentation/provisional-narrow-overview.png",
+      "sha256": "76705602751547003abd09cd0bf1b0e1301e52e63b769378d982cba7e1592d93",
+      "bytes": 70183,
+      "visuallyInspected": false
+    },
+    {
+      "localPath": ".qa-results/browser/browser-presentation/provisional-narrow.png",
+      "sha256": "8112a97574a923142fd8804eb3f4de3a84e852bc6c4ceb51aa5ec8c2ef0d1222",
+      "bytes": 68238,
+      "visuallyInspected": true
+    },
+    {
+      "localPath": ".qa-results/browser/browser-presentation/unavailable-desktop.png",
+      "sha256": "a77d9320d7d6ef75726473baa7187d21cd2b2d66bd874bf216d4f4aeb3c928bc",
+      "bytes": 80585,
+      "visuallyInspected": true
+    },
+    {
+      "localPath": ".qa-results/browser/browser-presentation/unavailable-narrow-overview.png",
+      "sha256": "c98943745972a5943d76860457d37e3336a36fd076f1e7b818c3f61ddb2fa32c",
+      "bytes": 52033,
+      "visuallyInspected": false
+    },
+    {
+      "localPath": ".qa-results/browser/browser-presentation/unavailable-narrow.png",
+      "sha256": "c98943745972a5943d76860457d37e3336a36fd076f1e7b818c3f61ddb2fa32c",
+      "bytes": 52033,
+      "visuallyInspected": true
+    },
+    {
+      "localPath": ".qa-results/browser/browser-presentation/wait-desktop.png",
+      "sha256": "1fbc0ba6727aeebaa565448e0028653bd135a2d0b7c03898d70c6aeba860d340",
+      "bytes": 151977,
+      "visuallyInspected": true
+    },
+    {
+      "localPath": ".qa-results/browser/browser-presentation/wait-narrow-overview.png",
+      "sha256": "aca30251fb0afb39d232a0a5f68b1def099bf9eb4f984a774338f39ac1563800",
+      "bytes": 66196,
+      "visuallyInspected": true
+    },
+    {
+      "localPath": ".qa-results/browser/browser-presentation/wait-narrow.png",
+      "sha256": "c3aebf50feae7a15f9cdfaa41874e27bc14ebc06f3ebd0779785ddd011486900",
+      "bytes": 63764,
+      "visuallyInspected": false
+    }
+  ],
+  "retention": "Images/traces are ignored local artifacts; this registry records their current hashes. Reproduce with npm run test:browser.",
+  "physicalDeviceAcceptance": false
+}

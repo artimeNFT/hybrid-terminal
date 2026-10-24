@@ -1,0 +1,38 @@
+{
+  "sourceSha256": "f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa",
+  "startedAt": "2026-10-24T22:33:09.256Z",
+  "feed": "synthetic REST/WebSocket fixtures; actual Chromium mouse and emulated touch input",
+  "checks": [
+    {
+      "name": "80px vertical mouse drag",
+      "pixelDisplacement": 80,
+      "spanBefore": 6.0133617573658,
+      "spanAfter": 6.0133617573658
+    },
+    {
+      "name": "reverse and diagonal",
+      "reversePixelDisplacement": -80,
+      "diagonalX": 70.00000000000023,
+      "diagonalY": 40
+    },
+    {
+      "name": "click/near-horizontal threshold, Volume/RSI isolation, price-axis drag/wheel/double-click, time-axis drag and plot wheel zoom",
+      "passed": true
+    },
+    {
+      "name": "actual capture/release, provisional and confirmed WebSocket persistence, Auto scale/Live/Reset, focused keyboard and outside-focus isolation",
+      "passed": true
+    },
+    {
+      "name": "Day levels/Pivots labels, PVSRA/Hollow up, history and fixed confirmed context",
+      "passed": true
+    },
+    {
+      "name": "390px emulated touch 80px pan, unchanged span, page-scroll isolation, release and pointer cancellation",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "finishedAt": "2026-10-24T22:33:21.216Z"
+}

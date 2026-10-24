@@ -1,0 +1,228 @@
+
+> hybrid-terminal-qa@1.0.0 test
+> npm run check:source && npm run test:app && npm run test:research && npm run test:audit && npm run test:contract && npm run test:preparation && npm run test:presentation
+
+
+> hybrid-terminal-qa@1.0.0 check:source
+> node scripts/check-source.cjs
+
+PASS source SHA-256: hybrid-terminal.html
+PASS source SHA-256: research/klines.cjs
+PASS source SHA-256: research/SCHEMA.md
+PASS source SHA-256: baseline/hybrid-terminal.0.3.1.html
+PASS source SHA-256: baseline/hybrid-terminal.0.4.0.html
+PASS source SHA-256: baseline/hybrid-terminal.0.4.1.html
+PASS source SHA-256: baseline/hybrid-terminal.0.4.2.html
+PASS source SHA-256: baseline/hybrid-terminal.original.html
+PASS source SHA-256: baseline/research-klines.1.0.0.cjs
+PASS source SHA-256: baseline/hybrid-terminal.0.4.3.html
+PASS source SHA-256: research/run-frozen.cjs
+PASS source SHA-256: research/source-context/preload.cjs
+PASS source SHA-256: research/source-context/check.cjs
+PASS source SHA-256: research/source-context/html-0.4.3-v1.json
+Scope: tracked application/research source and required HTML baselines only; no claim about ignored delivery datasets or historical browser artifacts.
+
+> hybrid-terminal-qa@1.0.0 test:app
+> node scripts/run-qa.cjs app
+
+
+Running regression
+PASS: M replacement at pivot 97 preserves the decision at bar 93; supersession begins at 100.
+PASS: W replacement at pivot 97 preserves the decision at bar 93; supersession begins at 100.
+PASS: 4002 original/current-bar comparisons and 4185 append-only decision comparisons; 183 explicit flat-RSI unavailable cases across 15 datasets and all three score thresholds.
+PASS: complete event history reproduces every original prefix pattern set; backtest outputs are finite.
+Scope: synthetic completed candles with a fixed history origin. Live candle closure, rolling-window reseeding, feed isolation and market performance are not validated here.
+
+Running ui-smoke
+PASS: application startup, closed-candle panel, REST/WebSocket flow, canvas draw calls, M/W confirmation/supersession, help, layer toggle and report copy.
+Scope: DOM, canvas and network are test doubles; not full browser QA.
+
+Running live-chart
+PASS: 20 developing-candle changes leave confirmed signal, recovery statistics and backtest unchanged; confirmation occurs only on x=true; confirmed bars cannot be downgraded.
+PASS: real setup fixture emits no provisional alert, emits one close alert, suppresses duplicate closes and agrees with completed-candle replay.
+PASS: missing server time conservatively leaves the final REST candle provisional, independent of the local wall clock.
+PASS: an older BTC response cannot overwrite ETH; cache identity changes with the asset; mismatched stream symbols are ignored.
+PASS: higher-timeframe context refreshes on its close boundary using closed candles; a stream gap starts a guarded REST resynchronization.
+PASS: right margin, cursor-anchored zoom, full loaded-history navigation, clamped future pan, End/Home controls, consistent drag width, stable historical view on new candles, price scale reset, future crosshair and timezone selection.
+Scope: deterministic/mocked data and DOM/canvas test doubles. Live exchange connectivity and full browser layout remain separate checks.
+
+Running readability-reliability
+PASS: all three palettes meet >=3:1 against modeled chart backgrounds (minimum 5.05:1); default bodies are filled, own-bar direction is stable across volume classes, legacy settings migrate, display choices preserve decisions, and chart/header text is English.
+PASS: delayed/stale and offline feeds are visibly identified; returning to a stale tab resynchronizes; a hanging REST request reaches an explicit timeout error.
+PASS: journal captures closed decisions only, deduplicates, survives reload, exports, preserves a prior conflicting decision, reports unavailable storage, protects malformed stored data, and enforces explicit 1000-record retention.
+PASS: an offline confirmed setup cannot emit a notification; invalid account/risk inputs do not produce a position size.
+Scope: synthetic data and mocked DOM/network; contrast tests are not a claim of full WCAG conformance or human color-perception validation.
+
+Running history
+PASS: five dated pages add 5000 chart-only candles, enforce the cap and preserve all live-core bars, confirmed signal, statistics, backtest and journal snapshots; live appends retain the historical viewport.
+PASS: short history pages stop further loading; discontinuous history is rejected without touching live decisions; obsolete history responses cannot cross an asset switch.
+Scope: older data is for chart navigation. It does not extend research/backtest coverage or reseed the live decision engine.
+
+Running increment
+PASS: 54 palette/body/class/direction cases, neutral doji, own OHLC despite conflicting cached direction, v1/v2 preferences, unrelated view fields and byte-identical journal across appearance changes.
+PASS: displayed RSI reuses the original RSI14 array, hides seed/warm-up, follows selected candle/pan/zoom/crosshair, marks developing values provisional, preserves closed signals/backtest/journal and retains Volume/None choices.
+PASS: pivot 110/90/100 arithmetic, UTC boundaries/timezone invariance, separate complete daily source, missing/incomplete source rejection, stable history, <=1000-day pagination and obsolete symbol/timeframe/range response rejection.
+PASS: real baseline reproduces both optimistic gap fills; new long/short gross -2.5R and net -2.55R, ordinary ambiguous bars stop first, invalid gap entries skipped, explicit execution version, old journal records preserved.
+Scope: deterministic synthetic data and mocked DOM/network; browser/live-feed evidence is reported separately.
+
+Running integrity
+PASS: empty/all-zero/no-loss/all-loss/mixed net-R states agree in actual UI, copied report and serialized research export; known Wilson reference, ratio overflow and invalid outcomes; actual backtest no-loss/empty aggregation.
+PASS: reviewed 1000/1%/100/99.9 sizing, nominal 100 units/10000 notional/10x, explicit cash scenario and balance, insufficient/covered-before-costs/SHORT/unconfigured/invalid/overflow states; no feasible/executable quantity or venue approval invented.
+PASS: review tie fixture exposes eligible LONG but deliberately retains selected SHORT/WAIT; no fallback or threshold tuning, clear conflict reason and frozen confirmed versus provisional diagnostics.
+PASS: flat zero-volume has no vectors, zero ATR and undefined RSI are non-actionable, warm-up/invalid arithmetic/overflow are explicit, one-sided RSI remains 100, zero-product references are not strength and partial-day coverage is labeled without replacing VWAP.
+PASS: 6882 ordinary valid-input decisions exactly match actual 0.4.0 legacy fields, plans, items, thresholds and direction policy across 14 datasets; volume classes unchanged.
+PASS: prior journal record bytes/IDs/versions retained, new semantics identified separately, execution version/fees retained, sizing/appearance/export leave journal bytes unchanged and preference migration retains unrelated fields.
+Scope: synthetic fixtures and mocked DOM/network, distinct from real browser/live-close evidence.
+
+Running day-context
+PASS: known/distinct PDH/PDL periods, [from,to) boundaries, independent toggles and cache reuse, preserved preferences, historical chart versus frozen current context, no autoscale distortion and unchanged signal/backtest/journal bytes.
+PASS: exact nearest above/below/equal grouping, missing sides, finite positive price/ATR denominators and deterministic merged/overflow label placement.
+PASS: incomplete/truncated/invalid/duplicate/out-of-order/failed/missing daily source and missing trusted clock stay unavailable; failures use bounded retry instead of update-driven request floods.
+PASS: exact midnight close advances context before the next opening-bar update, delayed sources are unknown until validated, trusted clock lag is conservative, and late completion/provisional updates preserve frozen decisions/backtest/journal.
+PASS: one shared in-flight/cache path, independent layer rendering, all-off/reenable guards, obsolete asset/timeframe/range rejection and <=1000-day missing-range pagination.
+PASS: exact 0.4.1 signal/backtest/journal upgrade preservation, unchanged rule/execution versions, no context-induced journal write, and IANA Jerusalem DST-aware observation labels.
+Scope: deterministic synthetic/mocked data and DOM; no claim of an observed live UTC-midnight transition or long-session soak.
+
+Running navigation
+PASS: 80px vertical, same-gesture reversal and diagonal translation use drag-start bounds with constant span, correct time movement and unchanged market/indicator/signal/backtest/journal state.
+PASS: click/jitter and near-horizontal thresholds, Volume/RSI origin isolation, secondary-pointer isolation, cancel and lost-capture cleanup.
+PASS: axis scaling/time zoom, focused vertical keyboard controls and frozen drag-start geometry across resize.
+PASS: manual position survives provisional and confirmed stream updates; engine/journal match untouched control and 0.4.2 upgrade bytes. Live/Auto scale/Reset and invalid/empty/zero-size guards verified.
+PASS app: 9 suites
+
+> hybrid-terminal-qa@1.0.0 test:research
+> node scripts/run-qa.cjs research
+
+
+Running research-data
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+✔ UTC configuration/alignment and exact twelve-field decimal validation (5.507092ms)
+✔ bounded pagination: 1000/200 rows, endTime exclusive conversion, offline process and no overwrite (476.672569ms)
+✔ short pages continue, empty windows advance and explicitly report gaps (526.603579ms)
+✔ developing candle exclusion uses fixed trusted cutoff and UTC boundaries (82.508079ms)
+✔ duplicates/conflicts/order/gaps and exact precision remain visible to offline quality (1.371331ms)
+✔ bad/duplicate/backward pages stop; raw rejected rows survive without a frozen output (302.153055ms)
+✔ hashes exclude metadata, preserve raw decimal text and detect changed/tampered data/quality/schema (199.792877ms)
+✔ 429 Retry-After and 5xx retries obey bounded waits; 418 stops immediately (450.147453ms)
+✔ request timeouts and cancellation/resumption preserve pages, cutoff and configuration (466.451883ms)
+✔ offline CLI detects edited files and original app remains untouched (233.530837ms)
+✔ checkpoint tampering and concurrent writer locks cannot resume or overwrite work (86.542419ms)
+✔ actual compare/invalid-quality CLI exit codes and absent trusted server clock (198.663107ms)
+✔ external finding reproduces on reviewed 1.0.0 and reopened dataset is rejected by 1.0.1 (124.905177ms)
+✔ invalid timeframe input fails before any filesystem/network call, without coercion, including resume (2.882516ms)
+✔ canonical/quality/verify/comparison reject forged timeframe payloads even with recomputed hashes for both producers (446.292664ms)
+✔ all four timeframes retain valid 1.0.0 hashes/quality, and empty ranges of data are finite incomplete states (4.825346ms)
+✔ valid cancelled 1.0.0 checkpoint resumes as 1.0.1 with identical rows/hash and original cutoff (321.814998ms)
+✔ malformed checksummed checkpoints from either producer reject stored timeframe before network and retain original bytes (323.378015ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4595.73533
+PASS research: 1 suites
+
+> hybrid-terminal-qa@1.0.0 test:audit
+> node scripts/run-qa.cjs audit
+
+
+Running readiness-audit
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+✔ adapter uses hash-checked actual functions without bootstrap/storage/backtest and target capture preserves decisions (249.700287ms)
+✔ same timestamps, not local array indices, align finite volume/UTC metrics and eligible zone identities (176.763682ms)
+✔ UTC boundaries distinguish a midnight close from a new-day opening candle and partial-day origins (90.750246ms)
+✔ known recursive-origin sensitivity separates minimum availability, flat-RSI state and context-only EMA800 (435.953849ms)
+✔ short history loses eligible old targets without a future leak (121.444117ms)
+✔ M/W confirmation and future supersession are projected as known at t, not raw future caches (95.43832ms)
+✔ causality detector flags deliberately altered votes/values, separately from seed drift (67.084627ms)
+✔ compact generated synthetic audit covers every window, fixed-origin future checks, and bounded sampling (1872.078317ms)
+✔ the real-data command validates CLI schema/hash before analysis and never accepts fabricated input (1.301193ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3457.437891
+PASS audit: 1 suites
+
+> hybrid-terminal-qa@1.0.0 test:contract
+> node scripts/run-qa.cjs contract
+
+
+Running calculation-contract
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+✔ contract pins reviewed sources without reading acquired data or bootstrapping the app (59.813302ms)
+✔ 3999 is excluded and the full-origin 4000th candle is the first prepared decision (598.110762ms)
+✔ a warmed trailing window cannot impersonate fixed-origin history or retained parser state (350.796971ms)
+✔ UTC end coordinates allow the last closed candle but reject future or inconsistent coordinates (149.130108ms)
+✔ actual flat-RSI, zero-volume and zero-ATR inputs remain excluded after preparation (642.410644ms)
+✔ a valid WAIT is retained and readiness does not mutate decisions or add context score votes (188.875445ms)
+✔ exact budgets detect price, RSI, RR and state changes smaller than audit reporting tolerances (161.598733ms)
+✔ full-origin restart reproduces M/W with pivots older than a recent-event reporting window (123.257297ms)
+✔ future append parity is exact and cannot be mixed with changed-time comparisons (512.23358ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3255.750105
+PASS contract: 1 suites
+
+> hybrid-terminal-qa@1.0.0 test:preparation
+> node scripts/run-qa.cjs preparation
+
+
+Running preparation
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+✔ real classification precedence, equality, reference availability and doji direction are preserved (800.789316ms)
+✔ ordinary/vector recovery symmetry, strict outside geometry and inclusive equality boundaries (0.760129ms)
+✔ first eligibility precedes tail/chronology exclusions and cannot resurrect in a later block (1.04429ms)
+✔ ATR percentile excludes t, uses empirical midrank, and calendar features use the close (0.522845ms)
+✔ memoized actual reference values equal uncached full replay and the reviewed adapter, including replay backwards (840.16935ms)
+✔ all eligible arms get decision-time plans/ranks without score/action filtering and future changes cannot affect them (248.686329ms)
+✔ one greedy attempt obeys exact strata, all calipers, no replacement and deterministic ties (1.685857ms)
+✔ unmatched reasons distinguish absent strata, time/caliper support, missing values and exhaustion (0.44423ms)
+✔ SMD keeps the pre-match denominator, flags equality at 0.1 and exposes missing/zero/insufficient states (0.637687ms)
+✔ overlap and full reserved UTC day spans use coordinates, not future prices (0.386038ms)
+✔ restart/full-prefix worker sharding reproduces canonical episodes, decisions and matching (465.025982ms)
+✔ protocol seal, reopened canonical hashes and volatile metadata stay separate; incomplete runs fail (361.201497ms)
+✔ preparation calculations run without network, browser storage, application bootstrap or backtest capabilities (128.285595ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3440.362048
+PASS preparation: 1 suites
+
+> hybrid-terminal-qa@1.0.0 test:presentation
+> node scripts/run-qa.cjs presentation
+
+
+Running presentation
+✔ frozen reference is exact, explicit context verifies old sources, and unbound research rejects the active UI (1030.420041ms)
+✔ all existing nonpresentation functions remain source-identical to frozen 0.4.3 (135.897096ms)
+✔ synthetic calculation/decision/backtest behavior matches 0.4.3 across thresholds and degenerate inputs (739.096575ms)
+✔ presentation risk uses confirmed coordinates, independent ATR availability and guarded arithmetic (28.266689ms)
+✔ upgrade preserves old journal bytes/identities and display/sizing preferences (60.83704ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2145.484216
+PASS presentation: 1 suites

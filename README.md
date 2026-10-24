@@ -1,6 +1,6 @@
-# Hybrid System 0.4.3
+# Hybrid Terminal 0.4.4 RC
 
-**Current direction and task order:** read the current sections at the top of [STATUS.md](STATUS.md). The extra preparation-review utility is deferred; the next bounded product increment is the 0.4.4 presentation release candidate, including explicit separation of frozen research source references from the evolving app. No 0.4.4 application has been delivered yet. Historical research instructions below document reproducibility, not additional active tasks.
+**Current direction and task order:** read the CURRENT sections of [STATUS.md](STATUS.md). This presentation release candidate improves the existing decision/risk hierarchy without changing strategy or execution. Next is bounded real-session acceptance; the extra preparation-review utility and research extensions remain deferred.
 
 Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Binance spot REST/WebSocket access is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
 
@@ -19,26 +19,49 @@ npm run qa:browser:install
 npm run test:browser
 ```
 
-`npm test` runs the reviewed tracked-source hashes, nine deterministic app suites, the 18-case research suite, nine synthetic audit fixtures, nine calculation-contract fixtures and 13 preparation fixtures. Browser QA runs the existing five mocked Chromium scripts with synthetic REST/WebSocket fixtures, a guard rejecting unmocked external requests, and per-context traces. Test logs, screenshots, traces and manifests go to ignored `.qa-results/`. Open a trace with `npx playwright show-trace .qa-results/browser/browser-navigation/trace-1.zip`. Neither required CI group uses public Binance, acquired datasets, browser journals, credentials or WSL-specific paths. Legacy direct script commands remain available; the npm runner supplies nonhistorical output directories.
+`npm test` runs the active versioned source checks, nine deterministic app suites, the unchanged 18-case research / nine audit / nine contract / 13 preparation fixtures in an explicit frozen 0.4.3 context, and five focused presentation checks. Browser QA runs six mocked Chromium scripts with synthetic REST/WebSocket fixtures, a guard rejecting unmocked external requests, and per-context traces. Test logs, screenshots, traces and manifests go to ignored `.qa-results/`. Open a trace with `npx playwright show-trace .qa-results/browser/browser-navigation/trace-1.zip`. Neither required CI group uses public Binance, acquired datasets, browser journals, credentials or WSL-specific paths. Legacy direct script commands remain available; the npm runner supplies nonhistorical output directories.
 
 On a minimal **Ubuntu 24.04 x64 WSL host without passwordless sudo**, use `npm run qa:browser:local` instead of `qa:browser:install`. It installs the pinned Chromium and downloads/extracts the three missing Ubuntu NSS/NSPR/ALSA packages under ignored `.tools/browser-libs`; the runner discovers these local libraries. Other operating systems should use Playwright's normal dependency setup. This fallback requires Ubuntu apt metadata/access but no system writes. No old `/tmp/hybrid-qa-tools` package/library path is used by the normal QA runner.
 
-Git tracks source, schema, tests, required baselines, documentation, package lock and small textual evidence. Acquired `research/datasets/`, dependencies/tools, release ZIPs and bulky generated browser artifacts remain on disk and are ignored. Frozen data and historical full-delivery manifests are provenance records; those full manifests require the retained local delivery and are **not** required checkout/CI checks. `npm run check:source` explicitly checks only the tracked reviewed HTML, research source/schema and required HTML baselines.
+Git tracks source, schema, tests, required baselines, documentation, package lock and small textual evidence. Acquired `research/datasets/`, dependencies/tools, release ZIPs and bulky generated browser artifacts remain on disk and are ignored. Frozen data and historical full-delivery manifests are provenance records; those full manifests require the retained local delivery and are **not** required checkout/CI checks. `npm run check:source` uses new `qa/source-checksums.0.4.4.json` for the active app, exact internal baseline, binding code and required tracked sources. The old `qa/source-checksums.json` remains an unchanged historical 0.4.3 manifest and is verified only in its explicit frozen context.
 
 `.github/workflows/ci.yml` uses Node 24 / standard Ubuntu 24.04, separate bounded deterministic and Chromium jobs, push/PR targeting main and manual dispatch. Action versions are pinned to verified official release SHAs. Permissions are read-only; only failure diagnostics from `.qa-results/` are uploaded, retained for three days. Required checks do not deploy, schedule collection, enable auto-merge or configure paid runners.
 
 **STATUS.md contains the only maintained task board. Every completed increment must update it.** Local test success and a local independent Python oracle are distinct from a GitHub Actions run and independent external review. Repository publication/remote run status and any remaining login action are recorded there.
 
+## Presentation release candidate 0.4.4
+
+The primary Hebrew panel shows existing feed health, the latest confirmed UTC/local close, LONG/SHORT/WAIT and its main reason first. The eligible confirmed plan follows; WAIT has no substitute plan. Stop/TP1/TP2 distances use the **confirmed decision's ATR**, alongside prices, percentages and gross RR. Modeled cost in R is `0.001 * decisionClose / abs(decisionClose - stop)`, the existing 0.1% entry-notional round-trip assumption. It is neither verified account fees nor total execution cost; it does not change nominal sizing or backtest deductions. Missing/zero/nonfinite inputs display unavailable.
+
+Candles, independent Body and critical chart navigation remain accessible. **Display** groups layers, Pane, Day levels/Pivots, timezone and volume tags. Candidate diagnostics, confirmed context, historical statistics/recovery and cash assumptions expand on demand. Dynamic detail expanders retain their open state across feed redraws. The provisional card is separate and marked temporary; it never supplies confirmed plan coordinates. The journal/export remains directly accessible. Existing preferences/records/IDs, rules, execution, palettes, symbols and timeframes are preserved; new application metadata is 0.4.4.
+
+Current actual Chromium screenshots cover WAIT, eligible-plan, unavailable and provisional states at desktop and 390px touch-emulated widths. Feed data is synthetic; physical-device, real midnight and one-hour session acceptance remain pending. Evidence: `tests/results/0.4.4/`; screenshots are local under `.qa-results/browser/browser-presentation/`.
+
+## Frozen research source context
+
+The only active application is the root HTML. Exact reviewed **0.4.3** bytes are preserved internally as `baseline/hybrid-terminal.0.4.3.html` (SHA-256 `fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9`). Historical research modules/declarations/seals/payloads and their old hash checks remain unchanged.
+
+Use the explicit process-local source runner below. It maps only historical logical reads of root HTML to that verified immutable reference, logs its new binding/loader identities, and reports the actual active-app hash separately. Other reads/writes are unchanged. Direct historical adapters against the new active HTML still reject the old hash; there is no accepted-hash expansion or new calculation engine. Details: `research/source-context/README.md`.
+
+```sh
+# Source-only verification; no acquired dataset required.
+node research/run-frozen.cjs check
+# Optional read-only verification of existing local original artifacts; no regeneration.
+node research/run-frozen.cjs check --preparation-output .qa-results/preparation-v1/q3-v1 --audit-output .qa-results/calculation-readiness-v1/q3-audit.json
+```
+
+The historical reproduction commands below use this context. They document old studies, not permission to generate new cohorts or resume deferred research. Required CI uses compact synthetic fixtures, and the active app/browser suites run outside the frozen context.
+
 ## Outcome-blind episode and matching preparation 1.0.0
 
-`research/preparation/protocol.json` declares the exploratory all-eligible-zone V/C preparation and **one** fixed greedy matching design. This changes the estimand from the live nearest-zone policy. The separate tool uses actual full-prefix app calculations under accepted contract 1.0.0 and never resolves outcomes or reads a next-open execution price. App/CLI/data/audit/contract remain unchanged.
+`research/preparation/protocol.json` declares the exploratory all-eligible-zone V/C preparation and **one** fixed greedy matching design. This changes the estimand from the live nearest-zone policy. The separate tool uses actual full-prefix app calculations under accepted contract 1.0.0 and never resolves outcomes or reads a next-open execution price. The frozen 0.4.3 research reference, CLI/data/audit/contract remain unchanged; the active presentation version is separate.
 
 ```sh
 # Existing local frozen data; fresh ignored output directory, no acquisition.
-node research/prepare.cjs seal --out .qa-results/preparation-v1/q3-new
-node research/prepare.cjs benchmark --dataset research/datasets/btcusdt-5m-2026-q3.json --out .qa-results/preparation-v1/q3-new
-node research/prepare.cjs run --dataset research/datasets/btcusdt-5m-2026-q3.json --out .qa-results/preparation-v1/q3-new
-node research/prepare.cjs verify --out .qa-results/preparation-v1/q3-new
+node research/run-frozen.cjs prepare seal --out .qa-results/preparation-v1/q3-new
+node research/run-frozen.cjs prepare benchmark --dataset research/datasets/btcusdt-5m-2026-q3.json --out .qa-results/preparation-v1/q3-new
+node research/run-frozen.cjs prepare run --dataset research/datasets/btcusdt-5m-2026-q3.json --out .qa-results/preparation-v1/q3-new
+node research/run-frozen.cjs prepare verify --out .qa-results/preparation-v1/q3-new
 npm run test:preparation
 ```
 
@@ -49,7 +72,7 @@ Full features/pairs/day spans and runtime metadata remain ignored; tracked compa
 The next bounded contract is now predeclared in `research/contract/v1.json`, with assumptions and exclusions in `research/contract/README.md`. It requires full past-prefix replay from the frozen July 1 origin, excludes the first 3999 candles, preserves actual validity/undefined states, requires actual UTC day-open coverage, and allows zero same-origin replay differences for each feature/state/decision. The 4000-bar preparation rule is not a convergence claim. EMA800 remains context-only. M/W resumption recomputes all pivots from the original prefix; recent-event lists and rolling caches are not accepted retained state.
 
 ```sh
-node research/calculation-contract.cjs
+node research/run-frozen.cjs contract
 npm run test:contract
 ```
 
@@ -61,7 +84,7 @@ This separate audit measures **history-origin sensitivity and decision-time caus
 
 ```sh
 # Existing local dataset only; no acquisition. Use a fresh output name each run.
-node research/readiness-audit.cjs --dataset research/datasets/btcusdt-5m-2026-q3.json --out .qa-results/calculation-readiness-v1/q3-new.json
+node research/run-frozen.cjs audit --dataset research/datasets/btcusdt-5m-2026-q3.json --out .qa-results/calculation-readiness-v1/q3-new.json
 
 # Compact synthetic fixtures; no acquired dataset or public market access needed.
 npm run test:audit
@@ -77,7 +100,7 @@ See `tests/results/calculation-readiness-v1/REPORT.md`, `findings.json` and `res
 
 CLI **1.0.1** fixes the externally reproduced timeframe-validation defect: only primitive strings `5m`, `15m`, `1h`, `4h` are accepted through an own-key check. Inherited names and coercible non-strings fail before acquisition filesystem/network activity. Valid 1.0.0 datasets/checkpoints remain compatible; malformed payloads are rejected for both producers even if rehashed. Schema 1 and valid-data hashes are unchanged. See `research/SCHEMA.md` and the resolution/evidence on STATUS's single task board.
 
-`research/klines.cjs` is a separate dependency-free Node.js >=22 command-line tool. **The authoritative HTML remains byte-for-byte 0.4.3**, SHA-256 `fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9`. The CLI never imports the terminal, chart cache, indicators or journal. It acquires public Binance Spot klines, preserves all 12 fields and decimal-string precision, validates closed UTC coverage, saves immutable outputs and independently reloads/verifies them offline. Tool/schema are versioned separately from the app.
+`research/klines.cjs` is a separate dependency-free Node.js >=22 command-line tool. **The internal frozen research HTML is byte-for-byte 0.4.3**, SHA-256 `fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9`. The CLI never imports the terminal, chart cache, indicators or journal. It acquires public Binance Spot klines, preserves all 12 fields and decimal-string precision, validates closed UTC coverage, saves immutable outputs and independently reloads/verifies them offline. Tool/schema are versioned separately from the app.
 
 The actual acceptance dataset, retained locally and intentionally excluded from Git, is `research/datasets/btcusdt-5m-2026-q3.json`: **complete, 26,496 rows, zero gaps/duplicates/conflicts**, coverage **[2026-07-01T00:00:00Z, 2026-10-01T00:00:00Z)**. Canonical data SHA-256: `436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1`. It was acquired from the official public market-data-only host, offline validated and independently checked with Python stdlib JSON/SHA256/Decimal/grid QA. Two separate 288-row July 1 acquisitions have identical canonical data hashes; that sample also matches the corresponding Q3 rows. These are engineering checks, not strategy evaluation or trading-advantage evidence.
 
@@ -92,13 +115,13 @@ node research/klines.cjs acquire --symbol BTCUSDT --timeframe 5m --start 2026-07
 # Offline, using the frozen dataset delivered here:
 node research/klines.cjs validate --file research/datasets/btcusdt-5m-2026-q3.json
 node research/klines.cjs compare --first research/datasets/btcusdt-5m-2026-07-01-repeat-a.json --second research/datasets/btcusdt-5m-2026-07-01-repeat-b.json
-node --test tests/research-data.cjs
+npm run test:research
 node scripts/check-source.cjs
 ```
 
 To repeat the small check with a fresh file, use the acquisition command with end `2026-07-02T00:00:00Z` and a new output name, then compare with `research/datasets/btcusdt-5m-2026-07-01-repeat-a.json`. If `data-api.binance.vision` is unavailable, an explicit `--base-url https://api.binance.com` is supported; a resumed acquisition must keep its original host.
 
-Adjacent `.checkpoint.json` files are resumable work states, **not frozen datasets**; the offline dataset validator rejects them. Request timeout is 15 seconds, pages at most 1,000, retries at most three, with pacing, Retry-After and immediate HTTP 418 stop. Missing/developing rows remain gaps and produce `incomplete`; invalid/conflicting source pages block and remain in checkpoint evidence. Exit 0 means complete/identical, 2 valid incomplete/different, 1 error/invalid, 130 cancelled. See `research/SCHEMA.md` for exact field order/units, canonical bytes, precision/quality rules, rate policy, lock recovery and resource bounds. Data hashes exclude volatile acquisition metadata; file checksums protect delivered bytes separately. `RESEARCH_DATA_SHA256SUMS.txt` and earlier delivery manifests remain historical **1.0.0** records; use the reviewed historical commit/original delivery to check them. Current mandatory source checks are `qa/source-checksums.json` via `npm run check:source`; CLI 1.0.1 source/test/schema checks are also recorded in `qa/research-cli-1.0.1-sha256.json`.
+Adjacent `.checkpoint.json` files are resumable work states, **not frozen datasets**; the offline dataset validator rejects them. Request timeout is 15 seconds, pages at most 1,000, retries at most three, with pacing, Retry-After and immediate HTTP 418 stop. Missing/developing rows remain gaps and produce `incomplete`; invalid/conflicting source pages block and remain in checkpoint evidence. Exit 0 means complete/identical, 2 valid incomplete/different, 1 error/invalid, 130 cancelled. See `research/SCHEMA.md` for exact field order/units, canonical bytes, precision/quality rules, rate policy, lock recovery and resource bounds. Data hashes exclude volatile acquisition metadata; file checksums protect delivered bytes separately. `RESEARCH_DATA_SHA256SUMS.txt` and earlier delivery manifests remain historical **1.0.0** records; use the reviewed historical commit/original delivery to check them. Current active-app checks are `qa/source-checksums.0.4.4.json` via `npm run check:source`; the original `qa/source-checksums.json` remains historical; CLI 1.0.1 source/test/schema checks are also recorded in `qa/research-cli-1.0.1-sha256.json`.
 
 Evidence and provenance: `tests/results/research-data-v1/`, `SOURCE_PROVENANCE.md`, `STATUS.md`. No app dependency, UI, strategy, research-snapshot export, archive ingestion, indicator or paper-trade feature changed. Prior app browser/live evidence remains historical; no new UTC-midnight or long-session observation was performed.
 
@@ -222,17 +245,17 @@ The 0.4.1 close observation remains preserved. The 0.4.2 short live check observ
 
 Run from this project root with Playwright/Chromium QA tools. Every run uses an isolated temporary browser context, records source SHA-256, UTC plus runtime IANA `Asia/Jerusalem` timestamps, first/last daily source segments, completed-candle/journal counts, actual offline/online resync, and an explicitly injected quota-style storage failure/recovery. The user's ordinary browser journal is never used. No feed interception is used. Sampling has a hard deadline and each default output directory is timestamped. This is not an account/order test.
 
-In this WSL environment the exact commands are (not run for 0.4.3):
+For 0.4.4 these bounded observations remain pending. With the locked QA installation on this WSL host, use these existing tools (the Display-group access was adapted; no observation was run in this presentation increment):
 
 ```sh
 # Short practical observation (75 seconds of sampling, plus bounded setup/resync).
-LD_LIBRARY_PATH=/tmp/hybrid-qa-tools/libs/usr/lib/x86_64-linux-gnu NODE_PATH=/tmp/hybrid-qa-tools/node_modules HYBRID_OBSERVE_MODE=smoke HYBRID_OBSERVE_SECONDS=75 node tests/browser-observe-context.cjs
+LD_LIBRARY_PATH="$PWD/.tools/browser-libs/root/usr/lib/x86_64-linux-gnu" HYBRID_OBSERVE_MODE=smoke HYBRID_OBSERVE_SECONDS=75 node tests/browser-observe-context.cjs
 
 # Start 1–3 minutes BEFORE 00:00 UTC; collects at least a minute after it.
-LD_LIBRARY_PATH=/tmp/hybrid-qa-tools/libs/usr/lib/x86_64-linux-gnu NODE_PATH=/tmp/hybrid-qa-tools/node_modules HYBRID_OBSERVE_MODE=midnight HYBRID_OBSERVE_SECONDS=420 node tests/browser-observe-context.cjs
+LD_LIBRARY_PATH="$PWD/.tools/browser-libs/root/usr/lib/x86_64-linux-gnu" HYBRID_OBSERVE_MODE=midnight HYBRID_OBSERVE_SECONDS=420 node tests/browser-observe-context.cjs
 
 # Separate, explicit one-hour sampling observation (not run in this increment).
-LD_LIBRARY_PATH=/tmp/hybrid-qa-tools/libs/usr/lib/x86_64-linux-gnu NODE_PATH=/tmp/hybrid-qa-tools/node_modules HYBRID_OBSERVE_MODE=soak HYBRID_OBSERVE_SECONDS=3600 node tests/browser-observe-context.cjs
+LD_LIBRARY_PATH="$PWD/.tools/browser-libs/root/usr/lib/x86_64-linux-gnu" HYBRID_OBSERVE_MODE=soak HYBRID_OBSERVE_SECONDS=3600 node tests/browser-observe-context.cjs
 ```
 
-The midnight command outside its window writes **pending-window-unavailable** and exits without waiting all day. Smoke does not qualify as midnight/soak. Failed/unreached required windows are marked incomplete/partial. Sampling is restricted to 30–7,200 seconds with a setup/resync deadline of sampling plus 120 seconds. Tools under `/tmp` are temporary; opening the standalone app needs none of them. Actual UTC-midnight transition and a one-hour reconnect/storage observation remain pending.
+The midnight command outside its window writes **pending-window-unavailable** and exits without waiting all day. Smoke does not qualify as midnight/soak. Failed/unreached required windows are marked incomplete/partial. Sampling is restricted to 30–7,200 seconds with a setup/resync deadline of sampling plus 120 seconds. Outputs default to ignored `.qa-results/observations/` with source hash and actual runtime version tags; opening the standalone app needs no QA tools. Actual UTC-midnight transition and a one-hour reconnect/storage observation remain pending.

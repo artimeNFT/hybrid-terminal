@@ -1,0 +1,30 @@
+
+> hybrid-terminal-qa@1.0.0 test:browser
+> node scripts/run-qa.cjs browser
+
+
+Running browser-smoke
+PASS: Chromium loads the actual HTML, renders the closed-candle panel and markers, replays mocked WebSocket updates, retains the decision at bar 93 after supersession at 100, controls history/live view, opens/closes help, and renders at desktop/mobile widths without page errors.
+Network is mocked. This is not a live Binance acceptance test.
+
+Running browser-increment
+PASS layout desktop {"width":1440,"height":1000,"canvasHeight":656.546875}
+PASS layout narrow {"width":430,"height":1000,"canvasHeight":280}
+PASS layout phone {"width":390,"height":844,"canvasHeight":280}
+PASS: actual Chromium/Canvas, independent appearance controls, synchronized RSI, daily pivot labels, desktop/430/390px layouts, navigation, Hebrew Help/panel, storage restoration, provisional WebSocket and older history; no page/console errors. Network data mocked.
+
+Running browser-integrity
+PASS: actual browser statistics states, Hebrew values, copied report (clipboard test double), actual JSON downloads and null empty intervals agree for five outcome cases.
+PASS: both-side conflict diagnostics retain WAIT, explicit cash-only assumption and nominal sizing labels, desktop/390px layouts, Help, preferences and untouched journal on sizing changes; no console/page errors. All feed/strategy fixtures in this suite are synthetic.
+
+Running browser-day-context
+PASS labels/layout desktop-collision [{"text":"PDH/PDL/PP/R1/S1 · inspector","names":["PDH","PDL","PP","R1","S1"],"x":769.42236328125,"y":213.4038491268938,"width":194.57763671875,"height":16,"validFrom":1792627200000}]
+PASS labels/layout phone-collision [{"text":"Levels ×5","names":["PDH","PDL","PP","R1","S1"],"x":229.88134765625,"y":74.18602755795936,"width":70.11865234375,"height":16,"validFrom":1792627200000}]
+PASS: real Chromium/Canvas pixel changes, independent shared-cache layers, deliberately colliding five levels with full-precision inspector, actual pan/zoom/drag/crosshair/End/history, frozen confirmed context/decisions/journal, desktop/390/430 layouts, Help and preference restoration. Feed/candidates are synthetic.
+
+Running browser-navigation
+PASS: actual mouse 80px/reverse/diagonal candle-pixel displacement, constant span, thresholds, axes/lower panes, capture/release, stream persistence, controls, keyboard/focus, layers/history and narrow emulated touch/cancel; no page/console errors. Synthetic feed; no physical-device or live-soak claim.
+
+Running browser-presentation
+PASS: current desktop/narrow WAIT, eligible-plan, unavailable and provisional screenshots; confirmed ATR/cost coordinates, no WAIT plan, independent provisional state, collapsed/persistent details, chart space, palette/body/pane preferences and journal invariance.
+PASS browser: 6 suites
