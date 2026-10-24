@@ -1,0 +1,233 @@
+{
+  "conclusion": "success",
+  "createdAt": "2026-10-24T18:57:31Z",
+  "databaseId": 40123081412,
+  "headSha": "f761e217c2f8a4d61e3c959c95ed1ced54625b78",
+  "jobs": [
+    {
+      "completedAt": "2026-10-24T18:58:34Z",
+      "conclusion": "success",
+      "databaseId": 120958647260,
+      "name": "Node 24 mocked Chromium QA",
+      "startedAt": "2026-10-24T18:57:34Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-24T18:57:37Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-24T18:57:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:57:38Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "number": 2,
+          "startedAt": "2026-10-24T18:57:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:57:40Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "startedAt": "2026-10-24T18:57:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:57:41Z",
+          "conclusion": "success",
+          "name": "Run npm ci --ignore-scripts --no-audit --no-fund",
+          "number": 4,
+          "startedAt": "2026-10-24T18:57:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:15Z",
+          "conclusion": "success",
+          "name": "Run npm run qa:browser:install",
+          "number": 5,
+          "startedAt": "2026-10-24T18:57:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:15Z",
+          "conclusion": "success",
+          "name": "Run npm run check:source",
+          "number": 6,
+          "startedAt": "2026-10-24T18:58:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:32Z",
+          "conclusion": "success",
+          "name": "Run npm run test:browser",
+          "number": 7,
+          "startedAt": "2026-10-24T18:58:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:32Z",
+          "conclusion": "skipped",
+          "name": "Failure logs, screenshots and traces",
+          "number": 8,
+          "startedAt": "2026-10-24T18:58:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:32Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 15,
+          "startedAt": "2026-10-24T18:58:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:32Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "number": 16,
+          "startedAt": "2026-10-24T18:58:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:32Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-24T18:58:32Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/artimeNFT/hybrid-terminal/actions/runs/40123081412/job/120958647260"
+    },
+    {
+      "completedAt": "2026-10-24T18:58:19Z",
+      "conclusion": "success",
+      "databaseId": 120958647428,
+      "name": "Node 24 deterministic QA",
+      "startedAt": "2026-10-24T18:57:34Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-24T18:57:37Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-24T18:57:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:57:38Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "number": 2,
+          "startedAt": "2026-10-24T18:57:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:57:42Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "startedAt": "2026-10-24T18:57:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:57:43Z",
+          "conclusion": "success",
+          "name": "Run npm ci --ignore-scripts --no-audit --no-fund",
+          "number": 4,
+          "startedAt": "2026-10-24T18:57:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:57:44Z",
+          "conclusion": "success",
+          "name": "Run npm run check:source",
+          "number": 5,
+          "startedAt": "2026-10-24T18:57:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:11Z",
+          "conclusion": "success",
+          "name": "Run npm run test:app",
+          "number": 6,
+          "startedAt": "2026-10-24T18:57:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:12Z",
+          "conclusion": "success",
+          "name": "Run npm run test:research",
+          "number": 7,
+          "startedAt": "2026-10-24T18:58:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:14Z",
+          "conclusion": "success",
+          "name": "Run npm run test:audit",
+          "number": 8,
+          "startedAt": "2026-10-24T18:58:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:16Z",
+          "conclusion": "success",
+          "name": "Run npm run test:contract",
+          "number": 9,
+          "startedAt": "2026-10-24T18:58:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:17Z",
+          "conclusion": "success",
+          "name": "Run npm run test:preparation",
+          "number": 10,
+          "startedAt": "2026-10-24T18:58:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:17Z",
+          "conclusion": "skipped",
+          "name": "Failure diagnostics",
+          "number": 11,
+          "startedAt": "2026-10-24T18:58:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:17Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 21,
+          "startedAt": "2026-10-24T18:58:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:17Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "number": 22,
+          "startedAt": "2026-10-24T18:58:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T18:58:17Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-24T18:58:17Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/artimeNFT/hybrid-terminal/actions/runs/40123081412/job/120958647428"
+    }
+  ],
+  "status": "completed",
+  "updatedAt": "2026-10-24T18:58:35Z",
+  "url": "https://github.com/artimeNFT/hybrid-terminal/actions/runs/40123081412"
+}
