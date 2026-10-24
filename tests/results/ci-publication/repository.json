@@ -1,0 +1,10 @@
+{
+  "defaultBranchRef": {
+    "name": "main"
+  },
+  "isPrivate": true,
+  "nameWithOwner": "artimeNFT/hybrid-terminal",
+  "url": "https://github.com/artimeNFT/hybrid-terminal",
+  "viewerPermission": "ADMIN",
+  "visibility": "PRIVATE"
+}

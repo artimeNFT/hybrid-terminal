@@ -1,0 +1,44 @@
+{
+  "applicationVersion": "0.4.3",
+  "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "researchToolVersion": "1.0.0",
+  "researchSchemaVersion": 1,
+  "researchToolSha256": "7200e575ba74206dc70a82cdfb7159e9d9596fc5d01e8b0c75215ce30d30d1c5",
+  "repositoryUrl": "https://github.com/artimeNFT/hybrid-terminal",
+  "repositoryPrivate": true,
+  "verifiedCodeCommit": "f20cebb732e48b320cfc0406a023b195d0dd025f",
+  "verifiedRunUrl": "https://github.com/artimeNFT/hybrid-terminal/actions/runs/40095837948",
+  "verifiedRunResult": "success",
+  "globalGitConfigUnchanged": true,
+  "credentialStorageFollowUp": "Plaintext CLI configuration mode 0600; migrate to OS-backed storage later. No credential values included.",
+  "preservedArtifacts": {
+    "hybrid-terminal.html": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "research/klines.cjs": "7200e575ba74206dc70a82cdfb7159e9d9596fc5d01e8b0c75215ce30d30d1c5",
+    "research/SCHEMA.md": "d4698d2ca8351a67293c53842b5ba0fc6cec31c3b888d1ab7fae19afd2198a72",
+    "tests/research-data.cjs": "a4f44ebfbd64f28f89c89fc4026aa7560bb1806ec62baead18e222cd0cce780e",
+    "tests/verify-research-data.py": "c83ce5f4d50f4e85ba483dafda807687b3cb96a504ad7721a2e04a847826070c",
+    "SHA256SUMS.txt": "feca92fd62074714a6aec1b0ce6cc39649879ace9970f3d608d21eb7fb9ea828",
+    "RESEARCH_DATA_SHA256SUMS.txt": "cd302abce831011166942a5b21e21e0bedc2c109828f6f3e3303a0b67ea5c256",
+    "baseline/STATUS.before-research-data-v1.md": "ea4ceb95105a45012f2e825e764b8b7ada3e6be53010fb4e71ea675139e96ea0",
+    "research/datasets/btcusdt-5m-2026-07-01-repeat-a.json": "07f26ec1f4ae0b90e77ce9245961d9da1f5677564bc4d5d46fdd3cccaee6f610",
+    "research/datasets/btcusdt-5m-2026-07-01-repeat-a.json.checkpoint.json": "c95ee0e7d867dad2f0e0480a4f7566b455a40eed3b93012b85e4608a8b9fc208",
+    "research/datasets/btcusdt-5m-2026-07-01-repeat-b.json": "3d84dfb321dc491013607d8ff82771efe3f921ec67d6998ec39f702e3e9b7689",
+    "research/datasets/btcusdt-5m-2026-07-01-repeat-b.json.checkpoint.json": "54f5ad7c1dea4e83633206b31069611707631153758c1c776be5daa9100dd8b0",
+    "research/datasets/btcusdt-5m-2026-q3.json": "fc06545122b941f570c4cca001d0ae57306b3e0ca010130984c5f46156440ea3",
+    "research/datasets/btcusdt-5m-2026-q3.json.checkpoint.json": "777cfe0bd19823db246e564f0be52b57e34ccd9eacb21a088dc2f0aca1af8242"
+  },
+  "artifacts": {
+    "README.md": "091e4a93fcaf0035c000971d41e6135de2936dd059b94c78315163984982c3be",
+    "STATUS.md": "4693203091e4b6e06c79872e2fdc53d47960d6e052f884a2565bd8b41d29f440",
+    "SOURCE_PROVENANCE.md": "3cc2170f4aa28e9b1bd6bb0bc0ba66cdd076ffa5a441389f70175584ddc55b84"
+  },
+  "evidence": {
+    "initial-run-test-summary.log": "ed97aa235e893f423faacef3678ed061b5a2a55d4754d87df44d11f060b26716",
+    "initial-successful-run.json": "dccb3194e7f8a23b6a628524609a0f471624696b849bf06fa609c2305f24cc2a",
+    "publication-start.json": "ecee7ab4fd7cae58a0aa57fd8577cd618a401e411c479ec0068363713e1aeb19",
+    "repository.json": "3846f86920fcf9749f641de7d5c0043031e6002b461dfaacd06e47b88f8713c3",
+    "verification.json": "d0f4d1149ee54800165595f3237b48a0c4e70c2c4dfd6bfc55ef4502c71d3df9"
+  },
+  "verifiedAt": "2026-10-24T12:58:10.070133+00:00",
+  "finalPushVerification": "The documentation/evidence commit is pushed and its actual run checked after commit; post-push receipt is kept under ignored .qa-results/ci-publication/final-verification.json."
+}

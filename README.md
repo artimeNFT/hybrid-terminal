@@ -6,6 +6,8 @@ Chart/header/inspector text is English; the analysis panel and Help are Hebrew. 
 
 ## Reproducible QA and version control
 
+Private repository: [artimeNFT/hybrid-terminal](https://github.com/artimeNFT/hybrid-terminal). The [main CI workflow](https://github.com/artimeNFT/hybrid-terminal/actions/workflows/ci.yml?query=branch%3Amain) has verified remote runs; exact checkpoint/run evidence and the credential-storage follow-up are maintained in STATUS.md.
+
 Use **Node.js 24** (`.nvmrc`). The standalone HTML needs no npm installation. For development/CI, the exact QA-only Playwright 1.64.1 and @napi-rs/canvas 1.0.13 versions and transitive integrity hashes are locked:
 
 ```sh

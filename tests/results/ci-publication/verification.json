@@ -1,0 +1,16 @@
+{
+  "verifiedAt": "2026-10-24T12:56:46.985537+00:00",
+  "repositoryUrl": "https://github.com/artimeNFT/hybrid-terminal",
+  "private": true,
+  "initialPushedCommit": "f20cebb732e48b320cfc0406a023b195d0dd025f",
+  "actualRunUrl": "https://github.com/artimeNFT/hybrid-terminal/actions/runs/40095837948",
+  "actualResult": "success",
+  "globalGitConfigurationUnchanged": true,
+  "localHttpsAuthenticationVerifiedByPush": true,
+  "testCounts": {
+    "applicationSuites": 9,
+    "researchCases": 12,
+    "mockedChromiumSuites": 5
+  },
+  "credentialStorageFollowUp": "Migrate plaintext CLI credentials (mode 0600) to OS-backed storage when available; credential values were not printed or copied into evidence."
+}

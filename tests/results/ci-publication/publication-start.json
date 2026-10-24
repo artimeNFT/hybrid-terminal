@@ -1,0 +1,13 @@
+{
+  "verifiedAt": "2026-10-24T12:53:42.346603+00:00",
+  "account": "artimeNFT",
+  "createdPrivateRepository": true,
+  "repositoryUrl": "https://github.com/artimeNFT/hybrid-terminal",
+  "private": true,
+  "httpsOrigin": "https://github.com/artimeNFT/hybrid-terminal.git",
+  "credentialHelperScope": "repository-local, host-specific; global helper list reset locally",
+  "globalGitConfigSha256": "ff839621ac7ddedae144237d1f9e4141e70ee46c69bb841ff537f81d05aa5cfe",
+  "globalGitConfigurationUnchanged": true,
+  "credentialStorage": "plaintext CLI config, mode 0600; no credential values collected",
+  "initialCommitToPush": "f20cebb732e48b320cfc0406a023b195d0dd025f"
+}
