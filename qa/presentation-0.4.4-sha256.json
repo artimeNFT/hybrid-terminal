@@ -22,6 +22,6 @@
   "tests/browser-day-context.cjs": "7f123310cab2f47daabf09e26e647188e76fdc67d6efe431b6c33516d88ecaa1",
   "tests/browser-navigation.cjs": "5d31d23f5047c2d1102a44efaa5b42fdc244bc81178035ef557b4da38eb594cf",
   "tests/browser-observe-context.cjs": "4cdc73e4e9654de1faab7791959d88efaebd9ce28bd53cbab338103ce303c05d",
-  "README.md": "407c14b29a9ee05dcb2c2ca20f1419e04d960f3f7d3d87b50baa77b07dab4e4e",
-  "SOURCE_PROVENANCE.md": "deebde2c8fb081c46690d643cd09f353da7397372e2e8acda5be641ebf7d5b96"
+  "README.md": "17d5bf3a2c99a9d174dcc2fe66c710ead314b37aa99b6f48c6b0e69177e68832",
+  "SOURCE_PROVENANCE.md": "834eb6a1edc6114c39c0f8c984088d431cafe43ff050610bc419266ec978a796"
 }

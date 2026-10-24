@@ -6,7 +6,7 @@ Updated: 2026-10-25, Asia/Jerusalem.
 
 **Product objective:** a practical, readable decision-support terminal based on the Hybrid framework: show trustworthy market context, explain the current setup or WAIT, quantify planned risk/targets and preserve decisions for review. Statistical trading advantage is a separate research question; product usefulness does not depend on proving profitability.
 
-**Alignment decision:** the unissued preparation-review utility prompt from the previous chat response is **superseded and deferred**. It was technically relevant to research, but it is not a prerequisite for improving the terminal. Stop extending the research-diagnostic chain by default. The single next implementation increment is a usable **0.4.4 presentation release candidate**, including only the necessary separation of frozen research source references from the evolving application. The presentation increment is now implemented and locally validated below; real-session acceptance remains separate.
+**Alignment decision:** the unissued preparation-review utility prompt from the previous chat response is **superseded and deferred**. It was technically relevant to research, but it is not a prerequisite for improving the terminal. Stop extending the research-diagnostic chain by default. The single bounded **0.4.4 presentation release candidate** is now published and verified, including only the necessary separation of frozen research source references from the evolving application. Stop implementation here; bounded real-session acceptance is the next unfinished milestone.
 
 **Authority:** this section, the current roadmap and the current board below supersede all older “next task” instructions inside the historical checkpoint archive. Keep one active code task in the existing VS Code/WSL Codex session; this conversation reviews and prioritizes. Preserve local changes, fetch/fast-forward only when safe, and do not restart completed work after an interrupted reply.
 
@@ -23,14 +23,14 @@ Updated: 2026-10-25, Asia/Jerusalem.
 
 | Order | Deliverable | Completion rule |
 | --- | --- | --- |
-| Delivered RC | App 0.4.4 presentation release candidate | Primary hierarchy/risk/display work and local validation complete; publication/actual CI verified before delivery |
+| Delivered RC | App 0.4.4 presentation release candidate | Primary hierarchy/risk/display work complete; local checks and actual published-commit CI successful |
 | Next | Bounded real-session acceptance | Observe actual midnight rollover and a one-hour reconnect/storage session; physical-device touch check when available; distinguish measured from still pending |
 | Later | One explicit research decision | Resume only with a concrete question, relevant population, fixed outcome/dependence/cost protocol and stopping decision; keep Q3 exploratory and preserve the first preparation result |
 | Conditional | Indicators, derivatives and closer TR_MAIN context | Add only for a named workflow/research use and verified source/configuration; not as an automatic feature backlog |
 
 Research review is not a new mandatory gate before each UI improvement. A new audit must identify the concrete unresolved risk and the decision its result can change. Reuse existing successful evidence unless code changes or unresolved concerns justify new checks.
 
-## Single active implementation increment — 0.4.4 presentation
+## Completed bounded increment — 0.4.4 presentation
 
 1. **Necessary source separation:** the historical research adapters/contract currently hash the whole root HTML, so cosmetic changes can invalidate unrelated frozen research checks. Preserve the reviewed 0.4.3 reference and historical declarations/seals/payloads byte-for-byte in an explicit versioned research/baseline context. Use the smallest maintainable source-binding/runner arrangement that lets presentation evolve and old research remain verifiable. Binding/source changes must have honest new identities where appropriate; never rewrite an old seal or bypass a failed hash. The root `hybrid-terminal.html` remains the only active user application. No framework migration, new calculation engine, backend or new dataset run.
 2. **Primary panel:** prioritize existing feed health, last confirmed timestamp, current LONG/SHORT/WAIT and main reason, then the eligible plan and nominal sizing context. Keep provisional updates clearly separate. Do not create a valid plan for WAIT or change the legacy selection policy.
@@ -44,8 +44,8 @@ Research review is not a new mandatory gate before each UI improvement. A new au
 
 | Priority | Task | State / next action |
 | --- | --- | --- |
-| P0 | Product alignment and work continuity | Current instructions are here; old next-task text below is historical. One active implementation increment |
-| P1 | 0.4.4 presentation release candidate | **Implemented and locally validated; publication verification pending** — explicit frozen context, clearer primary panel, guarded ATR/cost display, grouped controls and six Chromium suites. See current evidence below. |
+| P0 | Product alignment and work continuity | Current instructions are here; old next-task text below is historical. 0.4.4 is complete; no additional implementation task started |
+| P1 | 0.4.4 presentation release candidate | **Completed and published** — `015d5b5`; [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40139782891). Explicit frozen context, primary hierarchy, guarded ATR/cost display, grouped controls and all six Chromium suites. Next: bounded real-session acceptance. |
 | P1 | Actual midnight / one-hour live / physical touch | Pending measured acceptance; use existing observation tools and record what actually occurred |
 | P2 | Vector-versus-ordinary research | Preparation 1.0.0 preserved; outcome inference and the extra support-diagnostic utility deferred, not silently completed |
 | P2 | CLI credential storage | Queued follow-up; current plaintext CLI credential storage is recorded, values never included in chat/repository |
@@ -53,17 +53,19 @@ Research review is not a new mandatory gate before each UI improvement. A new au
 
 ## Current 0.4.4 evidence and exact next action
 
-Started from clean `main` at `c0997df`, fetched and fast-forwarded to the user's current alignment checkpoint `ae45baf74efc58698afe35d5981df87006d16bad`; no unfinished local changes or applicable AGENTS.md. The superseded preparation-review utility was not implemented. Only presentation/source-binding work is active in this increment.
+Started from clean `main` at `c0997df`, fetched and fast-forwarded to the user's current alignment checkpoint `ae45baf74efc58698afe35d5981df87006d16bad`; no unfinished local changes or applicable AGENTS.md. The superseded preparation-review utility was not implemented. Only presentation/source-binding work was implemented in this increment; it is now complete.
 
 **Presentation:** feed health and confirmed UTC/local timestamp, LONG/SHORT/WAIT and its main reason lead the Hebrew panel; eligible plan follows. WAIT retains no approved/substitute plan. Price/%/gross RR remain, with guarded decision-time ATR distances for stop/TP1/TP2 and modeled cost R = 0.001 × confirmed close / absolute stop distance. The label states the existing round-trip entry-notional assumption, not verified account fees or total execution costs. Sizing/execution/strategy calculations are unchanged. Provisional information is separate; candidate/context/statistics/recovery/cash detail expanders reduce density and retain expansion state on feed redraw. Candles/Body and chart navigation remain directly accessible; Display groups secondary controls. Hebrew Help is updated. Journal export is directly accessible; old records/IDs/preferences are preserved.
 
 **Frozen research:** copied exact 0.4.3 bytes before UI edits, clearly labeled internal-only in `baseline/README.md`. `research/run-frozen.cjs` explicitly launches source context `hybrid-html-0.4.3-context-v1`. Only logical root-HTML reads (sync/callback/promise) bind to the verified baseline; original expected hashes, code, declarations, seals, payloads and historical manifests are unchanged. New binding/loader identities and actual active-UI hash are reported separately. Direct unbound research still rejects changed root HTML. Active checks use new `qa/source-checksums.0.4.4.json`; old `qa/source-checksums.json` is preserved. Existing original audit bytes/source identity and preparation seal/canonical payloads verified in the explicit context; **no Q3 audit/cohort regeneration or data acquisition**.
 
+**Preservation receipt:** 222 original tracked files and all six dataset/checkpoint byte hashes match the alignment checkpoint; all 77 existing nonpresentation function bodies match frozen 0.4.3. The historical STATUS archive is unchanged. Details: `tests/results/0.4.4/preservation.json`.
+
 **Performed checks:** full `npm test` passed: nine active-app suites, unchanged 18 CLI / nine audit / nine contract / 13 preparation cases in frozen context, and five new presentation tests. Nonpresentation function bodies match frozen 0.4.3; synthetic calculations/decisions/backtests agree across score thresholds and degenerate inputs. Guarded risk arithmetic, original journal bytes and preferences pass. All **six actual Chromium suites** passed, including 80px/reverse/diagonal candle-pixel panning, axes/lower panes, touch emulation, preferences, daily levels, historical statistics, expanded equity curve and journal invariance. Existing fixtures were adapted to open grouped controls; initial CLI-guard failures exposed its asynchronous HTML read and were resolved in the binding, retaining the original assertion/source. No old seal or accepted hash was changed.
 
 **Visual inspection:** actual current desktop (1440×1100) and narrow (390×844, touch emulation) screenshots were inspected for WAIT, eligible-plan, unavailable-data and provisional states. No horizontal overflow; the narrow chart retains usable height and the primary reason/plan is readable after normal scrolling. Images are local under `.qa-results/browser/browser-presentation/`; source-bound screenshot registry, logs and reports are tracked under `tests/results/0.4.4/`. These screenshots use synthetic REST/WebSocket fixtures and do not establish physical-device or real live-session acceptance.
 
-**Delivery state:** implementation/local checks complete; publish without force, inspect actual GitHub Actions, then record its commit/run here before final delivery. Root active HTML is intentionally changed to `f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa`; only the internal frozen source retains old `fa349f…` bytes. New scoped source/checksum records are separate; old evidence/manifests are not rewritten. The historical STATUS archive below remains byte-identical.
+**Delivery state:** implementation `015d5b52fc841e4b6f62922c45824fc54579343c` pushed to private main without force. [Actual push-triggered Actions](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40139782891) **completed successfully**: Node 24 deterministic and mocked Chromium jobs both passed, including all nine app suites, research/audit/contract/preparation/presentation groups and six browser suites. Receipts: `tests/results/0.4.4/implementation-run.json` and `implementation-test-summary.log`. The final documentation/evidence commit is pushed and its own actual run is verified before the final response; the post-push receipt is ignored to avoid a self-referential commit/run loop. Root active HTML is intentionally changed to `f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa`; only the internal frozen source retains old `fa349f…` bytes. New scoped source/checksum records are separate; old evidence/manifests are not rewritten. The historical STATUS archive below remains byte-identical.
 
 **Exact next unfinished milestone:** bounded real-session acceptance with existing `tests/browser-observe-context.cjs`: actual UTC-midnight rollover, a separate one-hour reconnect/storage observation, and physical-device touch when available. The observer was adapted to open Display and defaults to ignored timestamped output; only syntax/compatibility was checked here. All three actual observations remain **pending**. Do not start the deferred research utility, outcome analysis or indicator expansion by default. Stop after publication of this presentation increment.
 
@@ -73,8 +75,8 @@ Started from clean `main` at `c0997df`, fetched and fast-forwarded to the user's
 - [x] Identify the one current result and its acceptance criteria; do not obey superseded historical next-task instructions.
 - [x] Preserve frozen research/data/journal provenance and verify behavior relevant to the change.
 - [x] Inspect the user-facing result, not only test counts; record remaining observation limits.
-- [ ] Publish the scoped result, verify actual CI, and update this current board.
-- [ ] Send a short summary, commit and Actions URL; attach only current screenshots or local evidence unavailable in GitHub.
+- [x] Publish the scoped result, verify actual CI, and update this current board.
+- [x] Complete delivery evidence for the short summary, commit and Actions URL; current screenshots remain available locally.
 
 A limit or interrupted reply is not evidence that implementation failed. Inspect existing work before repeating it. No routine re-upload of tracked source/STATUS is required. GitHub cannot expose ignored local datasets, full generated outputs, journals or uncommitted changes.
 

@@ -76,11 +76,11 @@ node research/run-frozen.cjs contract
 npm run test:contract
 ```
 
-These commands check the declaration/pinned sources and synthetic policy fixtures without acquired data or application bootstrap. App 0.4.3, CLI 1.0.1/schema 1, the audit and frozen data are unchanged. Focused independent acceptance is recorded in STATUS; the frozen contract JSON retains its original predeclared status/identity. The separate preparation above uses this finite-origin reference without changing live gates. STATUS remains the only maintained task board.
+These commands check the declaration/pinned sources and synthetic policy fixtures without acquired data or application bootstrap. The frozen 0.4.3 research reference, CLI 1.0.1/schema 1, audit and frozen data are unchanged. Focused independent acceptance is recorded in STATUS; the frozen contract JSON retains its original predeclared status/identity. The separate preparation above uses this finite-origin reference without changing live gates. STATUS remains the only maintained task board.
 
 ## Offline calculation-readiness audit 1.0.0
 
-This separate audit measures **history-origin sensitivity and decision-time causality**, using the actual reviewed app calculation functions through a controlled adapter. It does not execute application bootstrap, storage, `calc()` or backtest, duplicate indicator formulas, generate episodes/outcomes, or change live strategy policies. App 0.4.3 and CLI 1.0.1/schema 1 remain unchanged.
+This separate audit measures **history-origin sensitivity and decision-time causality**, using the actual reviewed app calculation functions through a controlled adapter. It does not execute application bootstrap, storage, `calc()` or backtest, duplicate indicator formulas, generate episodes/outcomes, or change live strategy policies. The frozen 0.4.3 research reference and CLI 1.0.1/schema 1 remain unchanged.
 
 ```sh
 # Existing local dataset only; no acquisition. Use a fresh output name each run.
@@ -123,7 +123,7 @@ To repeat the small check with a fresh file, use the acquisition command with en
 
 Adjacent `.checkpoint.json` files are resumable work states, **not frozen datasets**; the offline dataset validator rejects them. Request timeout is 15 seconds, pages at most 1,000, retries at most three, with pacing, Retry-After and immediate HTTP 418 stop. Missing/developing rows remain gaps and produce `incomplete`; invalid/conflicting source pages block and remain in checkpoint evidence. Exit 0 means complete/identical, 2 valid incomplete/different, 1 error/invalid, 130 cancelled. See `research/SCHEMA.md` for exact field order/units, canonical bytes, precision/quality rules, rate policy, lock recovery and resource bounds. Data hashes exclude volatile acquisition metadata; file checksums protect delivered bytes separately. `RESEARCH_DATA_SHA256SUMS.txt` and earlier delivery manifests remain historical **1.0.0** records; use the reviewed historical commit/original delivery to check them. Current active-app checks are `qa/source-checksums.0.4.4.json` via `npm run check:source`; the original `qa/source-checksums.json` remains historical; CLI 1.0.1 source/test/schema checks are also recorded in `qa/research-cli-1.0.1-sha256.json`.
 
-Evidence and provenance: `tests/results/research-data-v1/`, `SOURCE_PROVENANCE.md`, `STATUS.md`. No app dependency, UI, strategy, research-snapshot export, archive ingestion, indicator or paper-trade feature changed. Prior app browser/live evidence remains historical; no new UTC-midnight or long-session observation was performed.
+Evidence and provenance: `tests/results/research-data-v1/`, `SOURCE_PROVENANCE.md`, `STATUS.md`. The CLI 1.0.1 increment changed no app dependency, UI, strategy, research-snapshot export, archive ingestion, indicator or paper-trade feature. Prior app browser/live evidence remains historical; no new UTC-midnight or long-session observation was performed.
 
 ## Chart navigation — 0.4.3
 
@@ -133,7 +133,7 @@ Only a gesture starting in the main price plot can translate price. Volume/RSI g
 
 Manual price positioning survives developing and confirmed feed updates. **Live / End** returns to latest time and retains manual price position. **Auto scale / Escape**, or double-clicking the price axis, restores automatic price fitting. **Reset**, or double-clicking the plot, restores 150 bars, latest time with the existing 18-bar right margin, and automatic price fitting. With chart focus, **Up/Down** moves candles by 10% of the price-plot height; Left/Right, Home and +/− keep their existing actions. Keys outside chart focus retain page/input behavior. Viewport positioning is session-local, as before; reload/market/timeframe changes retain the existing reset behavior.
 
-Baseline 0.4.2 is preserved as `baseline/hybrid-terminal.0.4.2.html` (reviewed SHA-256 `d91b92a0105e4c35aa8357d19ac123a2c73918cf093a7e905b1aa4941df7b6ed`). Current source hash, exact performed checks and limitations are in STATUS; evidence is under `tests/results/0.4.3/`. This is a navigation-only increment: strategy, backtest, day context, preferences and journal semantics remain unchanged. No dependencies added.
+Baseline 0.4.2 is preserved as `baseline/hybrid-terminal.0.4.2.html` (reviewed SHA-256 `d91b92a0105e4c35aa8357d19ac123a2c73918cf093a7e905b1aa4941df7b6ed`). Current source hash, exact performed checks and limitations are in STATUS; evidence is under `tests/results/0.4.3/`. That historical increment changed navigation only; strategy, backtest, day context, preferences and journal semantics were preserved. No dependencies added.
 
 ## UTC day context — 0.4.2
 
@@ -227,7 +227,7 @@ node tests/browser-live.cjs
 python3 tests/public-feed.py
 ```
 
-`browser-smoke` and `browser-increment` use actual Chromium/Canvas with synthetic/mocked feed data. `browser-live` and `public-feed.py` access actual public Binance data. Current navigation checks are under `tests/results/0.4.3/`; 0.4.2 day-context and 0.4.1 integrity results remain historical evidence. `browser-navigation` verifies actual candle pixels after mouse gestures and Chromium touch emulation; its feed is synthetic, with no physical-device or actual live-stream claim. `browser-integrity` uses controlled synthetic candidates/outcomes and downloads real JSON files; its clipboard is a test double. `browser-live-close` makes no feed interception and stops after one actual 5m close or a bounded timeout. Earlier release QA used temporary packages/libraries under `/tmp/hybrid-qa-tools`; that historical setup is not needed by the locked npm QA commands above. The retained observation commands below describe prior runs and remain outside required CI. Opening the standalone app needs no QA packages.
+`browser-smoke` and `browser-increment` use actual Chromium/Canvas with synthetic/mocked feed data. `browser-live` and `public-feed.py` access actual public Binance data. Current navigation rechecks are under `tests/results/0.4.4/`; original 0.4.3 navigation, 0.4.2 day-context and 0.4.1 integrity results remain historical evidence. `browser-navigation` verifies actual candle pixels after mouse gestures and Chromium touch emulation; its feed is synthetic, with no physical-device or actual live-stream claim. `browser-integrity` uses controlled synthetic candidates/outcomes and downloads real JSON files; its clipboard is a test double. `browser-live-close` makes no feed interception and stops after one actual 5m close or a bounded timeout. Earlier release QA used temporary packages/libraries under `/tmp/hybrid-qa-tools`; that historical setup is not needed by the locked npm QA commands above. The retained observation commands below describe prior runs and remain outside required CI. Opening the standalone app needs no QA packages.
 
 ## Defined follow-up requirements
 

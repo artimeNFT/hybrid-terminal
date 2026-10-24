@@ -15,7 +15,7 @@
   "frozenDatasetCheckpointFiles": 6,
   "q3AuditOrCohortRegenerated": false,
   "sourceManifest": "qa/presentation-0.4.4-sha256.json",
-  "sourceManifestSha256": "002c6da4d8db93afae20b7e8786aeda66ea5c9de4c873fcaf519d02d2afcde48",
+  "sourceManifestSha256": "4cf6b7b205dc4444a2a5cde78ee21edf1ec6448e2a025b1a7071da78f8b8b269",
   "localEvidence": {
     "REPORT.md": "b3e594d7072f3d2ab169815ba19b103bcf1df1fd169d712662e3c19117b27444",
     "app-manifest.json": "564bc9cbed43b3c76b19d77054f1de188fdbf1c55ae05e9c8f3ecda7cd7678fa",
@@ -26,6 +26,8 @@
     "browser-test.log": "e899ebc63e09f1972a214efea7a26ace24bba964dc11abcc07b1cf6f0631170a",
     "contract-manifest.json": "ea75dd70f6feb72fb569e41d5eca9584b7b5e35c5aded085ec91cb897c1c2d9a",
     "frozen-existing-verification.json": "d389166c0df3f75777e7f1ec3ae15910f7970c2ed9562e0b6b5876c6d38061d6",
+    "implementation-run.json": "241636da8d31b358d05ca94ba23755e7a05d81a4f194edc1f1465431e320033a",
+    "implementation-test-summary.log": "af790293e1a30c390eaf9eb90a24b2291a7e2727b51ebb813d0aeb5bfaf5c1ab",
     "network-guards.json": "a7eb104523aa95d753dc9880f9dfe194397dfe838f714c84c38eef3807b40663",
     "npm-test.log": "f8fd603763812a67652831d40068fd5de73b4c2df4adbb107cc1a03c4b2f8952",
     "preparation-manifest.json": "762b2b01300ad94e9f4ea317bd8226e2710a8a9be04bf4da2bbedd9ae7caf176",
@@ -34,10 +36,13 @@
     "research-manifest.json": "1f90423ea9628b19f104fe32c35e05dab8ef50f6e63d086e64b7b57b0d3f0d55",
     "screenshots.json": "62a91bdd53e029d68f5b6121d4eb1f69fb2a900566d8fcbd915d0de721ee0ac6"
   },
-  "publication": "Actual implementation run added separately after non-force push; final run receipt is ignored to avoid self-reference. See CURRENT STATUS for commit and run.",
+  "publication": "Implementation pushed without force and actual run verified; final evidence commit/run is separately verified in ignored final receipt.",
   "pendingObservations": [
     "actual UTC-midnight rollover",
     "one-hour reconnect/storage",
     "physical-device touch"
-  ]
+  ],
+  "implementationCommit": "015d5b52fc841e4b6f62922c45824fc54579343c",
+  "implementationActionsUrl": "https://github.com/artimeNFT/hybrid-terminal/actions/runs/40139782891",
+  "implementationActionsResult": "success (both jobs)"
 }
