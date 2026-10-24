@@ -1,0 +1,70 @@
+{
+  "auditVersion": "1.0.0",
+  "reviewedStartingCommit": "b65e76efbb931e149146933be99116f7dc1b14bb",
+  "verifiedAt": "2026-10-24T17:07:19.698421+00:00",
+  "applicationVersion": "0.4.3",
+  "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "cliVersion": "1.0.1",
+  "cliSha256": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+  "schemaVersion": 1,
+  "canonicalDataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+  "scope": "Offline reliability, no outcomes or strategy changes; required CI is generated synthetic data only",
+  "results": {
+    "decisionTimestamps": 24,
+    "originComparisons": 144,
+    "causalityComparisons": 500,
+    "causalityDifferences": 0,
+    "referenceDecisionCounts": {
+      "LONG": 3,
+      "SHORT": 2,
+      "WAIT": 19
+    },
+    "scoreComponentDifferencesByWindow": {
+      "60": 6,
+      "100": 2,
+      "300": 0,
+      "1000": 0,
+      "2000": 0,
+      "4000": 0
+    }
+  },
+  "localChecks": {
+    "npmTestExitCode": 0,
+    "applicationSuites": 9,
+    "researchDataCases": 18,
+    "auditFixtures": 9,
+    "appCliSchemaDataAndHistoricalManifestsUnchanged": true
+  },
+  "fullLocalEvidence": {
+    "path": ".qa-results/calculation-readiness-v1/q3-audit.json",
+    "sha256": "d35db2d34dbc76f285b0f32e35668478b90e1b48323c9ff8569b9e938528fd97",
+    "bytes": 3140956,
+    "notRequiredByCi": true
+  },
+  "artifacts": {
+    "research/readiness-audit.cjs": "90f486a3b937c51dffbfc4a32fb3ebc83668b7b579fea2e0db62edcf305ca5b5",
+    "research/audit/adapter.cjs": "cd6f89222bb571c91b5f7b39f65b75bd69e2045208334f59dc85fb9ee1aa6daf",
+    "research/audit/protocol.json": "50cf2d98d57af48ad53631cc0787432fdbc453d920d8667bd4b8d972b175e9e6",
+    "research/audit/README.md": "0ac966de2dfb52415cc7d098e90d676a69fcbe6c4c67e02fe38ef4155c1b0754",
+    "tests/readiness-audit.cjs": "573272853a535a3f01696535ace133b2dddc530f40a3dfc0044b41b9f6bdf494",
+    "qa/calculation-readiness-v1-sha256.json": "388b5f7415bdea0133366d458f2495c68ca7351b29aa9243bbfd76670e6c9e2b",
+    "package.json": "95b6ab4f67f3f71135e956caf278cfbd1ee0e9481773036c9cce057f9ea16254",
+    "scripts/run-qa.cjs": "1116741202ae757248d114b29c2db270e866277533e933b1966f2ac53944fa91",
+    ".github/workflows/ci.yml": "de1e6d3179d146b2764bf28f4898db7be8ba4a5ef66cb6ede3b91b8018d2f986",
+    "README.md": "2ee7beaeb5766580ad86c6bfc7e028bf46ef1d0b5a72828c335f020a5985f09b",
+    "STATUS.md": "b5d96656c7510ab3e6727fb5239a7b28cb186ff7e3b63f61408c17531c748c5b",
+    "SOURCE_PROVENANCE.md": "3324827718d8b560bb48147847756097ca5012c7146a81466018045a67bc8790"
+  },
+  "evidence": {
+    "REPORT.md": "79101aa90df5cf766298a6cd80923c1d70304f838cd296f2ecb0fe09cca516d3",
+    "app-manifest.json": "a78b14ec4fe77183699781639196f99bb88505dc7e57bd116ed7c5c139736132",
+    "audit-manifest.json": "f924d604d3eb07c0e360377053b3ee6a6b1676b401293eade2ec48ef580eea34",
+    "findings.json": "bbe7277e0d492ea1cf59a9c97c5c9fa2b2c6709fef43af297d5c77a805e80e4a",
+    "fixtures.log": "affdb562e74ecd3568b0aeef8362a991f6634dd6c10f11a82196b4e491944f13",
+    "npm-test.log": "d2ff0fbc3e1086708aa8633d7f068b23b3a64a6b3f18c30c068a2d7f3bb2cc89",
+    "preservation-and-validation.json": "d8de4522c73eff3acd44f343673280deb8b1993c102f89982cfec4244b8a1752",
+    "research-manifest.json": "2c95c3d87fad833a680af8773dbefdf493f65620a380906be41f6c4220525972",
+    "run.log": "f5b7dc69a10f4426255da5292a84783a90464bff4813466e39375a7fd195758b"
+  },
+  "remoteVerification": "Actual run for the pushed commit is verified before final report; receipt is kept under ignored .qa-results/calculation-readiness-v1/ci-verification.json."
+}

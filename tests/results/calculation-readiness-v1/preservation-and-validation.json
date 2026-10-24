@@ -1,0 +1,71 @@
+{
+  "verifiedAt": "2026-10-24T17:05:09.172519+00:00",
+  "reviewedCommit": "b65e76efbb931e149146933be99116f7dc1b14bb",
+  "applicationVersion": "0.4.3",
+  "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "cliVersion": "1.0.1",
+  "cliSha256": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+  "schemaVersion": 1,
+  "appCliSchemaCurrentSourceManifestsAndFrozenFilesUnchanged": true,
+  "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+  "dataCoverage": {
+    "firstOpenTime": 1782864000000,
+    "lastOpenTime": 1790812500000,
+    "endExclusive": 1790812800000,
+    "contiguous": true
+  },
+  "referenceDecisionCounts": {
+    "LONG": 3,
+    "SHORT": 2,
+    "WAIT": 19
+  },
+  "predeclaredSample": [
+    "2026-07-15T00:00:00.000Z",
+    "2026-07-15T00:05:00.000Z",
+    "2026-07-15T12:00:00.000Z",
+    "2026-07-15T23:55:00.000Z",
+    "2026-08-01T00:00:00.000Z",
+    "2026-08-01T00:05:00.000Z",
+    "2026-08-01T12:00:00.000Z",
+    "2026-08-01T23:55:00.000Z",
+    "2026-08-15T00:00:00.000Z",
+    "2026-08-15T00:05:00.000Z",
+    "2026-08-15T12:00:00.000Z",
+    "2026-08-15T23:55:00.000Z",
+    "2026-09-01T00:00:00.000Z",
+    "2026-09-01T00:05:00.000Z",
+    "2026-09-01T12:00:00.000Z",
+    "2026-09-01T23:55:00.000Z",
+    "2026-09-15T00:00:00.000Z",
+    "2026-09-15T00:05:00.000Z",
+    "2026-09-15T12:00:00.000Z",
+    "2026-09-15T23:55:00.000Z",
+    "2026-09-30T00:00:00.000Z",
+    "2026-09-30T00:05:00.000Z",
+    "2026-09-30T12:00:00.000Z",
+    "2026-09-30T23:55:00.000Z"
+  ],
+  "protocolUnchangedSinceFirstRun": true,
+  "counts": {
+    "timestamps": 24,
+    "originComparisons": 144,
+    "causalityComparisons": 500,
+    "causalityDifferences": 0,
+    "auditFixtures": 9,
+    "existingAppSuites": 9,
+    "existingResearchCases": 18
+  },
+  "limits": [
+    "Longest available past-only history is a reference, not absolute convergence",
+    "Fixed 24-point schedule is not an exhaustive test or a regime/performance sample",
+    "EMA13/200/800 and VWAP are context; EMA50/ATR/RSI and pattern/target votes are measured separately",
+    "Future recovery/supersession metadata is intentionally censored to what was known at the decision close; raw future caches are not causal snapshots",
+    "No bootstrap, calc(), backtest(), browser storage, research outcomes or live-policy changes executed"
+  ],
+  "fullLocalEvidence": {
+    "path": ".qa-results/calculation-readiness-v1/q3-audit.json",
+    "sha256": "d35db2d34dbc76f285b0f32e35668478b90e1b48323c9ff8569b9e938528fd97",
+    "bytes": 3140956,
+    "notRequiredByCi": true
+  }
+}

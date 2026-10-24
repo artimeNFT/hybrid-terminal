@@ -1,0 +1,842 @@
+Audit 1/24: 2026-07-15T00:00:00.000Z
+Audit 2/24: 2026-07-15T00:05:00.000Z
+Audit 3/24: 2026-07-15T12:00:00.000Z
+Audit 4/24: 2026-07-15T23:55:00.000Z
+Audit 5/24: 2026-08-01T00:00:00.000Z
+Audit 6/24: 2026-08-01T00:05:00.000Z
+Audit 7/24: 2026-08-01T12:00:00.000Z
+Audit 8/24: 2026-08-01T23:55:00.000Z
+Audit 9/24: 2026-08-15T00:00:00.000Z
+Audit 10/24: 2026-08-15T00:05:00.000Z
+Audit 11/24: 2026-08-15T12:00:00.000Z
+Audit 12/24: 2026-08-15T23:55:00.000Z
+Audit 13/24: 2026-09-01T00:00:00.000Z
+Audit 14/24: 2026-09-01T00:05:00.000Z
+Audit 15/24: 2026-09-01T12:00:00.000Z
+Audit 16/24: 2026-09-01T23:55:00.000Z
+Audit 17/24: 2026-09-15T00:00:00.000Z
+Audit 18/24: 2026-09-15T00:05:00.000Z
+Audit 19/24: 2026-09-15T12:00:00.000Z
+Audit 20/24: 2026-09-15T23:55:00.000Z
+Audit 21/24: 2026-09-30T00:00:00.000Z
+Audit 22/24: 2026-09-30T00:05:00.000Z
+Audit 23/24: 2026-09-30T12:00:00.000Z
+Audit 24/24: 2026-09-30T23:55:00.000Z
+{
+  "audit": "/mnt/c/users/shlom/desktop/the hybrid-terminal/.qa-results/calculation-readiness-v1/q3-audit.json",
+  "report": "/mnt/c/users/shlom/desktop/the hybrid-terminal/.qa-results/calculation-readiness-v1/q3-audit.json.md",
+  "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+  "decisions": 24,
+  "causalityChecks": 500,
+  "causalityDifferences": 0,
+  "summaryByWindow": {
+    "60": {
+      "comparisons": 24,
+      "features": {
+        "ema13": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.02850184954877477,
+          "maxAbsoluteDeltaInReferenceAtr": 0.0003708283201236985,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema50": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 43.72159766353434,
+          "maxAbsoluteDeltaInReferenceAtr": 0.7195787715701059,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema200": {
+          "comparable": 0,
+          "referenceAvailable": 24,
+          "windowAvailable": 0,
+          "availabilityDifferences": 24,
+          "maxAbsoluteDelta": null,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema800": {
+          "comparable": 0,
+          "referenceAvailable": 24,
+          "windowAvailable": 0,
+          "availabilityDifferences": 24,
+          "maxAbsoluteDelta": null,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "atr14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 1.401730073312109,
+          "maxAbsoluteDeltaInReferenceAtr": 0.011567485436071884,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "vwap": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 1016.6815144324137,
+          "maxAbsoluteDeltaInReferenceAtr": 18.22237281165119,
+          "exceedsNumericTolerance": 18,
+          "unit": "price"
+        },
+        "dayOpen": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 2383.9900000000052,
+          "maxAbsoluteDeltaInReferenceAtr": 50.73693924349344,
+          "exceedsNumericTolerance": 18,
+          "unit": "price"
+        },
+        "rsi14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.8249044494020197,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 24,
+          "unit": "RSI-points"
+        }
+      },
+      "disagreements": {
+        "scoreComponents": 6,
+        "scoreTotals": 6,
+        "selectedDirection": 1,
+        "selectedSide": 0,
+        "eligibility": 0,
+        "geometryEligibility": 4,
+        "planAvailability": 0,
+        "planPrices": 5,
+        "planRiskReward": 5,
+        "planGeometry": 5,
+        "decisionValidity": 0,
+        "volumeClass": 0,
+        "dayCoverage": 18,
+        "eligibleTargetState": 6,
+        "mwState": 0,
+        "stoppingVolumeState": 0
+      },
+      "representatives": [
+        {
+          "decisionCloseTime": "2026-07-15T00:00:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": false,
+            "planGeometry": false,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": true,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        },
+        {
+          "decisionCloseTime": "2026-07-15T12:00:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": false,
+            "planGeometry": false,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": true,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        },
+        {
+          "decisionCloseTime": "2026-07-15T23:55:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": false,
+            "planGeometry": false,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": true,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        }
+      ]
+    },
+    "100": {
+      "comparisons": 24,
+      "features": {
+        "ema13": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.00008440494275419042,
+          "maxAbsoluteDeltaInReferenceAtr": 0.000001404383573255447,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema50": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 18.146233931183815,
+          "maxAbsoluteDeltaInReferenceAtr": 0.250647659650719,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema200": {
+          "comparable": 0,
+          "referenceAvailable": 24,
+          "windowAvailable": 0,
+          "availabilityDifferences": 24,
+          "maxAbsoluteDelta": null,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema800": {
+          "comparable": 0,
+          "referenceAvailable": 24,
+          "windowAvailable": 0,
+          "availabilityDifferences": 24,
+          "maxAbsoluteDelta": null,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "atr14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.08721318694485092,
+          "maxAbsoluteDeltaInReferenceAtr": 0.0010917604947853737,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "vwap": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 936.947672733826,
+          "maxAbsoluteDeltaInReferenceAtr": 18.346320203176237,
+          "exceedsNumericTolerance": 18,
+          "unit": "price"
+        },
+        "dayOpen": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 2481.4100000000035,
+          "maxAbsoluteDeltaInReferenceAtr": 61.941851779489724,
+          "exceedsNumericTolerance": 18,
+          "unit": "price"
+        },
+        "rsi14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.06870134445649256,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 24,
+          "unit": "RSI-points"
+        }
+      },
+      "disagreements": {
+        "scoreComponents": 2,
+        "scoreTotals": 2,
+        "selectedDirection": 0,
+        "selectedSide": 0,
+        "eligibility": 0,
+        "geometryEligibility": 2,
+        "planAvailability": 0,
+        "planPrices": 5,
+        "planRiskReward": 5,
+        "planGeometry": 5,
+        "decisionValidity": 0,
+        "volumeClass": 0,
+        "dayCoverage": 18,
+        "eligibleTargetState": 2,
+        "mwState": 0,
+        "stoppingVolumeState": 0
+      },
+      "representatives": [
+        {
+          "decisionCloseTime": "2026-07-15T00:00:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": false,
+            "planGeometry": false,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": true,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        },
+        {
+          "decisionCloseTime": "2026-07-15T12:00:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": false,
+            "planGeometry": false,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": true,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        },
+        {
+          "decisionCloseTime": "2026-07-15T23:55:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": false,
+            "planGeometry": false,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": true,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        }
+      ]
+    },
+    "300": {
+      "comparisons": 24,
+      "features": {
+        "ema13": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema50": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.002588430550531484,
+          "maxAbsoluteDeltaInReferenceAtr": 0.00003686828033950064,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema200": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 43.69432089777547,
+          "maxAbsoluteDeltaInReferenceAtr": 1.2769681815652543,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema800": {
+          "comparable": 0,
+          "referenceAvailable": 24,
+          "windowAvailable": 0,
+          "availabilityDifferences": 24,
+          "maxAbsoluteDelta": null,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "atr14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 3.8278336944586044e-8,
+          "maxAbsoluteDeltaInReferenceAtr": 6.334252336443389e-10,
+          "exceedsNumericTolerance": 2,
+          "unit": "price"
+        },
+        "vwap": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "dayOpen": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "rsi14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 4.4716706781855464e-8,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 6,
+          "unit": "RSI-points"
+        }
+      },
+      "disagreements": {
+        "scoreComponents": 0,
+        "scoreTotals": 0,
+        "selectedDirection": 0,
+        "selectedSide": 0,
+        "eligibility": 0,
+        "geometryEligibility": 0,
+        "planAvailability": 0,
+        "planPrices": 0,
+        "planRiskReward": 1,
+        "planGeometry": 1,
+        "decisionValidity": 0,
+        "volumeClass": 0,
+        "dayCoverage": 0,
+        "eligibleTargetState": 0,
+        "mwState": 0,
+        "stoppingVolumeState": 0
+      },
+      "representatives": [
+        {
+          "decisionCloseTime": "2026-08-15T23:55:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": true,
+            "planGeometry": true,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": false,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        }
+      ]
+    },
+    "1000": {
+      "comparisons": 24,
+      "features": {
+        "ema13": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema50": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema200": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.03264043337549083,
+          "maxAbsoluteDeltaInReferenceAtr": 0.0009476792848907437,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema800": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 93.74181544331077,
+          "maxAbsoluteDeltaInReferenceAtr": 3.1785643912752257,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "atr14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "vwap": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "dayOpen": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "rsi14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "RSI-points"
+        }
+      },
+      "disagreements": {
+        "scoreComponents": 0,
+        "scoreTotals": 0,
+        "selectedDirection": 0,
+        "selectedSide": 0,
+        "eligibility": 0,
+        "geometryEligibility": 0,
+        "planAvailability": 0,
+        "planPrices": 0,
+        "planRiskReward": 0,
+        "planGeometry": 0,
+        "decisionValidity": 0,
+        "volumeClass": 0,
+        "dayCoverage": 0,
+        "eligibleTargetState": 0,
+        "mwState": 0,
+        "stoppingVolumeState": 0
+      },
+      "representatives": []
+    },
+    "2000": {
+      "comparisons": 24,
+      "features": {
+        "ema13": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema50": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema200": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.00000230608566198498,
+          "maxAbsoluteDeltaInReferenceAtr": 3.8160823218661204e-8,
+          "exceedsNumericTolerance": 21,
+          "unit": "price"
+        },
+        "ema800": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 16.61433142221358,
+          "maxAbsoluteDeltaInReferenceAtr": 0.27749754356093104,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "atr14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "vwap": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "dayOpen": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "rsi14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "RSI-points"
+        }
+      },
+      "disagreements": {
+        "scoreComponents": 0,
+        "scoreTotals": 0,
+        "selectedDirection": 0,
+        "selectedSide": 0,
+        "eligibility": 0,
+        "geometryEligibility": 0,
+        "planAvailability": 0,
+        "planPrices": 0,
+        "planRiskReward": 0,
+        "planGeometry": 0,
+        "decisionValidity": 0,
+        "volumeClass": 0,
+        "dayCoverage": 0,
+        "eligibleTargetState": 0,
+        "mwState": 0,
+        "stoppingVolumeState": 0
+      },
+      "representatives": []
+    },
+    "4000": {
+      "comparisons": 24,
+      "features": {
+        "ema13": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema50": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema200": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema800": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.053216115724353585,
+          "maxAbsoluteDeltaInReferenceAtr": 0.0015742349554576888,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "atr14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "vwap": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "dayOpen": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "rsi14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "RSI-points"
+        }
+      },
+      "disagreements": {
+        "scoreComponents": 0,
+        "scoreTotals": 0,
+        "selectedDirection": 0,
+        "selectedSide": 0,
+        "eligibility": 0,
+        "geometryEligibility": 0,
+        "planAvailability": 0,
+        "planPrices": 0,
+        "planRiskReward": 0,
+        "planGeometry": 0,
+        "decisionValidity": 0,
+        "volumeClass": 0,
+        "dayCoverage": 0,
+        "eligibleTargetState": 0,
+        "mwState": 0,
+        "stoppingVolumeState": 0
+      },
+      "representatives": []
+    }
+  }
+}

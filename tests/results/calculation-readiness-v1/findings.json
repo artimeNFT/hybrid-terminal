@@ -1,0 +1,5172 @@
+{
+  "auditVersion": "1.0.0",
+  "auditFilesSha256": {
+    "audit": "90f486a3b937c51dffbfc4a32fb3ebc83668b7b579fea2e0db62edcf305ca5b5",
+    "adapter": "cd6f89222bb571c91b5f7b39f65b75bd69e2045208334f59dc85fb9ee1aa6daf"
+  },
+  "protocol": {
+    "auditVersion": "1.0.0",
+    "purpose": "Calculation reliability only; no outcomes, strategy optimization or episode generation",
+    "applicationVersion": "0.4.3",
+    "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "cliVersion": "1.0.1",
+    "schemaVersion": 1,
+    "expectedDataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+    "symbol": "BTCUSDT",
+    "timeframe": "5m",
+    "range": {
+      "startInclusive": "2026-07-01T00:00:00Z",
+      "endExclusive": "2026-10-01T00:00:00Z"
+    },
+    "decisionDatesUtc": [
+      "2026-07-15",
+      "2026-08-01",
+      "2026-08-15",
+      "2026-09-01",
+      "2026-09-15",
+      "2026-09-30"
+    ],
+    "decisionCloseTimesUtc": [
+      "00:00:00Z",
+      "00:05:00Z",
+      "12:00:00Z",
+      "23:55:00Z"
+    ],
+    "maximumDecisions": 24,
+    "minimumReferenceBars": 4000,
+    "trailingWindows": [
+      60,
+      100,
+      300,
+      1000,
+      2000,
+      4000
+    ],
+    "causalityAppendBars": [
+      1,
+      3,
+      288
+    ],
+    "alsoCompareAllFutureForLongestOrigin": true,
+    "minimumScore": 3,
+    "mwReportingLookbackBars": 30,
+    "numericDifferenceTolerance": {
+      "priceAbsoluteFloor": 1e-08,
+      "priceRelative": 1e-12,
+      "rsiPoints": 1e-08,
+      "dimensionless": 1e-10
+    },
+    "causalityComparison": "Exact equality of decision-time projections at the identical history origin; no tolerance",
+    "normalization": "Price deltas / longest past-only reference ATR when finite and positive; RSI differences are points, never price/ATR errors",
+    "referenceLimitation": "Longest available past-only prefix is a reference, not proof of absolute convergence; no acceptance/error budget is optimized"
+  },
+  "protocolSha256": "50cf2d98d57af48ad53631cc0787432fdbc453d920d8667bd4b8d972b175e9e6",
+  "source": {
+    "applicationVersion": "0.4.3",
+    "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "extractedAdapterSha256": "7c352a80a918fdf54095d78ffaf3ec85beb9ac079d5f3f72f76348b2eda3e559",
+    "ruleVersion": "hybrid-v2-validity-closed",
+    "rsiPolicy": "wilder14-local-undefined-zero-change-v1",
+    "functions": [
+      "ema",
+      "mwEvents",
+      "numericBar",
+      "volumeReference",
+      "analyze",
+      "sigAt"
+    ],
+    "bootstrapExecuted": false,
+    "backtestExecuted": false
+  },
+  "sample": [
+    "2026-07-15T00:00:00.000Z",
+    "2026-07-15T00:05:00.000Z",
+    "2026-07-15T12:00:00.000Z",
+    "2026-07-15T23:55:00.000Z",
+    "2026-08-01T00:00:00.000Z",
+    "2026-08-01T00:05:00.000Z",
+    "2026-08-01T12:00:00.000Z",
+    "2026-08-01T23:55:00.000Z",
+    "2026-08-15T00:00:00.000Z",
+    "2026-08-15T00:05:00.000Z",
+    "2026-08-15T12:00:00.000Z",
+    "2026-08-15T23:55:00.000Z",
+    "2026-09-01T00:00:00.000Z",
+    "2026-09-01T00:05:00.000Z",
+    "2026-09-01T12:00:00.000Z",
+    "2026-09-01T23:55:00.000Z",
+    "2026-09-15T00:00:00.000Z",
+    "2026-09-15T00:05:00.000Z",
+    "2026-09-15T12:00:00.000Z",
+    "2026-09-15T23:55:00.000Z",
+    "2026-09-30T00:00:00.000Z",
+    "2026-09-30T00:05:00.000Z",
+    "2026-09-30T12:00:00.000Z",
+    "2026-09-30T23:55:00.000Z"
+  ],
+  "summaryByWindow": {
+    "60": {
+      "comparisons": 24,
+      "features": {
+        "ema13": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.02850184954877477,
+          "maxAbsoluteDeltaInReferenceAtr": 0.0003708283201236985,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema50": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 43.72159766353434,
+          "maxAbsoluteDeltaInReferenceAtr": 0.7195787715701059,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema200": {
+          "comparable": 0,
+          "referenceAvailable": 24,
+          "windowAvailable": 0,
+          "availabilityDifferences": 24,
+          "maxAbsoluteDelta": null,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema800": {
+          "comparable": 0,
+          "referenceAvailable": 24,
+          "windowAvailable": 0,
+          "availabilityDifferences": 24,
+          "maxAbsoluteDelta": null,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "atr14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 1.401730073312109,
+          "maxAbsoluteDeltaInReferenceAtr": 0.011567485436071884,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "vwap": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 1016.6815144324137,
+          "maxAbsoluteDeltaInReferenceAtr": 18.22237281165119,
+          "exceedsNumericTolerance": 18,
+          "unit": "price"
+        },
+        "dayOpen": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 2383.9900000000052,
+          "maxAbsoluteDeltaInReferenceAtr": 50.73693924349344,
+          "exceedsNumericTolerance": 18,
+          "unit": "price"
+        },
+        "rsi14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.8249044494020197,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 24,
+          "unit": "RSI-points"
+        }
+      },
+      "disagreements": {
+        "scoreComponents": 6,
+        "scoreTotals": 6,
+        "selectedDirection": 1,
+        "selectedSide": 0,
+        "eligibility": 0,
+        "geometryEligibility": 4,
+        "planAvailability": 0,
+        "planPrices": 5,
+        "planRiskReward": 5,
+        "planGeometry": 5,
+        "decisionValidity": 0,
+        "volumeClass": 0,
+        "dayCoverage": 18,
+        "eligibleTargetState": 6,
+        "mwState": 0,
+        "stoppingVolumeState": 0
+      },
+      "representatives": [
+        {
+          "decisionCloseTime": "2026-07-15T00:00:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": false,
+            "planGeometry": false,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": true,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        },
+        {
+          "decisionCloseTime": "2026-07-15T12:00:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": false,
+            "planGeometry": false,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": true,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        },
+        {
+          "decisionCloseTime": "2026-07-15T23:55:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": false,
+            "planGeometry": false,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": true,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        }
+      ]
+    },
+    "100": {
+      "comparisons": 24,
+      "features": {
+        "ema13": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 8.440494275419042e-05,
+          "maxAbsoluteDeltaInReferenceAtr": 1.404383573255447e-06,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema50": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 18.146233931183815,
+          "maxAbsoluteDeltaInReferenceAtr": 0.250647659650719,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema200": {
+          "comparable": 0,
+          "referenceAvailable": 24,
+          "windowAvailable": 0,
+          "availabilityDifferences": 24,
+          "maxAbsoluteDelta": null,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema800": {
+          "comparable": 0,
+          "referenceAvailable": 24,
+          "windowAvailable": 0,
+          "availabilityDifferences": 24,
+          "maxAbsoluteDelta": null,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "atr14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.08721318694485092,
+          "maxAbsoluteDeltaInReferenceAtr": 0.0010917604947853737,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "vwap": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 936.947672733826,
+          "maxAbsoluteDeltaInReferenceAtr": 18.346320203176237,
+          "exceedsNumericTolerance": 18,
+          "unit": "price"
+        },
+        "dayOpen": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 2481.4100000000035,
+          "maxAbsoluteDeltaInReferenceAtr": 61.941851779489724,
+          "exceedsNumericTolerance": 18,
+          "unit": "price"
+        },
+        "rsi14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.06870134445649256,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 24,
+          "unit": "RSI-points"
+        }
+      },
+      "disagreements": {
+        "scoreComponents": 2,
+        "scoreTotals": 2,
+        "selectedDirection": 0,
+        "selectedSide": 0,
+        "eligibility": 0,
+        "geometryEligibility": 2,
+        "planAvailability": 0,
+        "planPrices": 5,
+        "planRiskReward": 5,
+        "planGeometry": 5,
+        "decisionValidity": 0,
+        "volumeClass": 0,
+        "dayCoverage": 18,
+        "eligibleTargetState": 2,
+        "mwState": 0,
+        "stoppingVolumeState": 0
+      },
+      "representatives": [
+        {
+          "decisionCloseTime": "2026-07-15T00:00:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": false,
+            "planGeometry": false,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": true,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        },
+        {
+          "decisionCloseTime": "2026-07-15T12:00:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": false,
+            "planGeometry": false,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": true,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        },
+        {
+          "decisionCloseTime": "2026-07-15T23:55:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": false,
+            "planGeometry": false,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": true,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        }
+      ]
+    },
+    "300": {
+      "comparisons": 24,
+      "features": {
+        "ema13": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema50": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.002588430550531484,
+          "maxAbsoluteDeltaInReferenceAtr": 3.686828033950064e-05,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema200": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 43.69432089777547,
+          "maxAbsoluteDeltaInReferenceAtr": 1.2769681815652543,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema800": {
+          "comparable": 0,
+          "referenceAvailable": 24,
+          "windowAvailable": 0,
+          "availabilityDifferences": 24,
+          "maxAbsoluteDelta": null,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "atr14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 3.8278336944586044e-08,
+          "maxAbsoluteDeltaInReferenceAtr": 6.334252336443389e-10,
+          "exceedsNumericTolerance": 2,
+          "unit": "price"
+        },
+        "vwap": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "dayOpen": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "rsi14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 4.4716706781855464e-08,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 6,
+          "unit": "RSI-points"
+        }
+      },
+      "disagreements": {
+        "scoreComponents": 0,
+        "scoreTotals": 0,
+        "selectedDirection": 0,
+        "selectedSide": 0,
+        "eligibility": 0,
+        "geometryEligibility": 0,
+        "planAvailability": 0,
+        "planPrices": 0,
+        "planRiskReward": 1,
+        "planGeometry": 1,
+        "decisionValidity": 0,
+        "volumeClass": 0,
+        "dayCoverage": 0,
+        "eligibleTargetState": 0,
+        "mwState": 0,
+        "stoppingVolumeState": 0
+      },
+      "representatives": [
+        {
+          "decisionCloseTime": "2026-08-15T23:55:00.000Z",
+          "causes": [
+            "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+            "EMA800 availability/drift is context-only and does not itself change any score"
+          ],
+          "disagreements": {
+            "scoreComponents": false,
+            "scoreTotals": false,
+            "selectedDirection": false,
+            "selectedSide": false,
+            "eligibility": false,
+            "geometryEligibility": false,
+            "planAvailability": false,
+            "planPrices": false,
+            "planRiskReward": true,
+            "planGeometry": true,
+            "decisionValidity": false,
+            "volumeClass": false,
+            "dayCoverage": false,
+            "eligibleTargetState": false,
+            "mwState": false,
+            "stoppingVolumeState": false
+          }
+        }
+      ]
+    },
+    "1000": {
+      "comparisons": 24,
+      "features": {
+        "ema13": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema50": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema200": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.03264043337549083,
+          "maxAbsoluteDeltaInReferenceAtr": 0.0009476792848907437,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "ema800": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 93.74181544331077,
+          "maxAbsoluteDeltaInReferenceAtr": 3.1785643912752257,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "atr14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "vwap": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "dayOpen": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "rsi14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "RSI-points"
+        }
+      },
+      "disagreements": {
+        "scoreComponents": 0,
+        "scoreTotals": 0,
+        "selectedDirection": 0,
+        "selectedSide": 0,
+        "eligibility": 0,
+        "geometryEligibility": 0,
+        "planAvailability": 0,
+        "planPrices": 0,
+        "planRiskReward": 0,
+        "planGeometry": 0,
+        "decisionValidity": 0,
+        "volumeClass": 0,
+        "dayCoverage": 0,
+        "eligibleTargetState": 0,
+        "mwState": 0,
+        "stoppingVolumeState": 0
+      },
+      "representatives": []
+    },
+    "2000": {
+      "comparisons": 24,
+      "features": {
+        "ema13": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema50": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema200": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 2.30608566198498e-06,
+          "maxAbsoluteDeltaInReferenceAtr": 3.8160823218661204e-08,
+          "exceedsNumericTolerance": 21,
+          "unit": "price"
+        },
+        "ema800": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 16.61433142221358,
+          "maxAbsoluteDeltaInReferenceAtr": 0.27749754356093104,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "atr14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "vwap": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "dayOpen": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "rsi14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "RSI-points"
+        }
+      },
+      "disagreements": {
+        "scoreComponents": 0,
+        "scoreTotals": 0,
+        "selectedDirection": 0,
+        "selectedSide": 0,
+        "eligibility": 0,
+        "geometryEligibility": 0,
+        "planAvailability": 0,
+        "planPrices": 0,
+        "planRiskReward": 0,
+        "planGeometry": 0,
+        "decisionValidity": 0,
+        "volumeClass": 0,
+        "dayCoverage": 0,
+        "eligibleTargetState": 0,
+        "mwState": 0,
+        "stoppingVolumeState": 0
+      },
+      "representatives": []
+    },
+    "4000": {
+      "comparisons": 24,
+      "features": {
+        "ema13": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema50": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema200": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "ema800": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0.053216115724353585,
+          "maxAbsoluteDeltaInReferenceAtr": 0.0015742349554576888,
+          "exceedsNumericTolerance": 24,
+          "unit": "price"
+        },
+        "atr14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "vwap": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "dayOpen": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": 0,
+          "exceedsNumericTolerance": 0,
+          "unit": "price"
+        },
+        "rsi14": {
+          "comparable": 24,
+          "referenceAvailable": 24,
+          "windowAvailable": 24,
+          "availabilityDifferences": 0,
+          "maxAbsoluteDelta": 0,
+          "maxAbsoluteDeltaInReferenceAtr": null,
+          "exceedsNumericTolerance": 0,
+          "unit": "RSI-points"
+        }
+      },
+      "disagreements": {
+        "scoreComponents": 0,
+        "scoreTotals": 0,
+        "selectedDirection": 0,
+        "selectedSide": 0,
+        "eligibility": 0,
+        "geometryEligibility": 0,
+        "planAvailability": 0,
+        "planPrices": 0,
+        "planRiskReward": 0,
+        "planGeometry": 0,
+        "decisionValidity": 0,
+        "volumeClass": 0,
+        "dayCoverage": 0,
+        "eligibleTargetState": 0,
+        "mwState": 0,
+        "stoppingVolumeState": 0
+      },
+      "representatives": []
+    }
+  },
+  "causality": {
+    "checks": 500,
+    "failures": [],
+    "checksByOrigin": {
+      "60": 68,
+      "100": 68,
+      "300": 68,
+      "1000": 68,
+      "2000": 68,
+      "4000": 68,
+      "longest": 68
+    },
+    "skippedFutureHorizons": 28,
+    "status": "no-differences-detected"
+  },
+  "data": {
+    "canonicalDataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+    "producerToolVersion": "1.0.0",
+    "validatedWithCliVersion": "1.0.1",
+    "schemaVersion": 1,
+    "symbol": "BTCUSDT",
+    "timeframe": "5m",
+    "quality": {
+      "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+      "state": "complete",
+      "rowCount": 26496,
+      "uniqueTimestampCount": 26496,
+      "validUniqueRows": 26496,
+      "expectedRows": 26496,
+      "eligibleRowsAtCutoff": 26496,
+      "excludedDevelopingOrFutureRows": 0,
+      "missingRows": 0,
+      "duplicateRows": 0,
+      "conflictingTimestamps": 0,
+      "duplicates": [],
+      "gaps": [],
+      "coverage": {
+        "firstOpenTime": 1782864000000,
+        "lastOpenTime": 1790812500000,
+        "endExclusive": 1790812800000,
+        "contiguous": true
+      },
+      "issueCount": 0,
+      "issues": [],
+      "issuesTruncated": false
+    },
+    "requestedRange": {
+      "startInclusive": 1782864000000,
+      "endExclusive": 1790812800000
+    },
+    "acquisitionCutoff": 1792820581498,
+    "conversion": "Decimal strings verified/hashed before Number conversion; actual application calculations use binary Number OHLCV"
+  },
+  "limits": [
+    "Longest available past-only history is a reference, not absolute convergence",
+    "Fixed 24-point schedule is not an exhaustive test or a regime/performance sample",
+    "EMA13/200/800 and VWAP are context; EMA50/ATR/RSI and pattern/target votes are measured separately",
+    "Future recovery/supersession metadata is intentionally censored to what was known at the decision close; raw future caches are not causal snapshots",
+    "No bootstrap, calc(), backtest(), browser storage, research outcomes or live-policy changes executed"
+  ],
+  "referenceDecisionCounts": {
+    "LONG": 3,
+    "SHORT": 2,
+    "WAIT": 19
+  },
+  "originComparisons": 144,
+  "representativeDetails": [
+    {
+      "decisionCloseTime": "2026-08-01T23:55:00.000Z",
+      "window": 60,
+      "referenceDayCoverage": "from-UTC-open",
+      "windowDayCoverage": "partial-first-day",
+      "comparison": {
+        "changedComponents": [
+          {
+            "side": "SHORT",
+            "component": "ema50Stretch",
+            "reference": false,
+            "window": true
+          }
+        ],
+        "referenceStart": 1782864000000,
+        "windowStart": 1785610500000,
+        "referenceBars": 9215,
+        "windowBars": 60,
+        "referenceAtr": 28.61602539254517,
+        "metrics": {
+          "ema13": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 62814.28559604915,
+            "window": 62814.28926889921,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0.003672850056318566,
+            "absoluteDelta": 0.003672850056318566,
+            "deltaInReferenceAtr": 0.00012834941281801454,
+            "exceedsNumericTolerance": true
+          },
+          "ema50": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 62776.6157966308,
+            "window": 62756.9995047554,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -19.616291875405295,
+            "absoluteDelta": 19.616291875405295,
+            "deltaInReferenceAtr": -0.6855002260556976,
+            "exceedsNumericTolerance": true
+          },
+          "ema200": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 62879.319285749094,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "ema800": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 63416.75002442218,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "atr14": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 28.61602539254517,
+            "window": 28.441285511593357,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.1747398809518117,
+            "absoluteDelta": 0.1747398809518117,
+            "deltaInReferenceAtr": -0.006106364477763345,
+            "exceedsNumericTolerance": true
+          },
+          "vwap": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 62913.9427791892,
+            "window": 62698.03094512929,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -215.91183405990887,
+            "absoluteDelta": 215.91183405990887,
+            "deltaInReferenceAtr": -7.545137072605359,
+            "exceedsNumericTolerance": true
+          },
+          "dayOpen": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 62887.88,
+            "window": 62458,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -429.8799999999974,
+            "absoluteDelta": 429.8799999999974,
+            "deltaInReferenceAtr": -15.02235178027157,
+            "exceedsNumericTolerance": true
+          },
+          "rsi14": {
+            "unit": "RSI-points",
+            "referenceState": "ready",
+            "windowState": "ready",
+            "reference": 54.12282241602466,
+            "window": 54.19450830562634,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0.07168588960168165,
+            "absoluteDelta": 0.07168588960168165,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": true
+          }
+        },
+        "planMetrics": {
+          "LONG.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          }
+        },
+        "zones": {
+          "LONG": {
+            "referenceCount": 0,
+            "windowCount": 0,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": null,
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "unavailable",
+              "windowState": "unavailable",
+              "reference": null,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": false,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          },
+          "SHORT": {
+            "referenceCount": 0,
+            "windowCount": 0,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": null,
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "unavailable",
+              "windowState": "unavailable",
+              "reference": null,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": false,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          }
+        },
+        "disagreements": {
+          "scoreComponents": true,
+          "scoreTotals": true,
+          "selectedDirection": false,
+          "selectedSide": false,
+          "eligibility": false,
+          "geometryEligibility": false,
+          "planAvailability": false,
+          "planPrices": false,
+          "planRiskReward": false,
+          "planGeometry": false,
+          "decisionValidity": false,
+          "volumeClass": false,
+          "dayCoverage": true,
+          "eligibleTargetState": false,
+          "mwState": false,
+          "stoppingVolumeState": false
+        },
+        "referenceVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "windowVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "referenceSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": true,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "windowSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "referenceSide": "WAIT",
+        "windowSide": "WAIT",
+        "referenceEligibility": [
+          false,
+          false
+        ],
+        "windowEligibility": [
+          false,
+          false
+        ],
+        "causes": [
+          "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+          "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+          "EMA800 availability/drift is context-only and does not itself change any score"
+        ]
+      }
+    },
+    {
+      "decisionCloseTime": "2026-08-15T00:00:00.000Z",
+      "window": 60,
+      "referenceDayCoverage": "from-UTC-open",
+      "windowDayCoverage": "partial-first-day",
+      "comparison": {
+        "changedComponents": [
+          {
+            "side": "LONG",
+            "component": "oppositeVectorTarget",
+            "reference": true,
+            "window": false
+          }
+        ],
+        "referenceStart": 1782864000000,
+        "windowStart": 1786734000000,
+        "referenceBars": 12960,
+        "windowBars": 60,
+        "referenceAtr": 37.120828997020915,
+        "metrics": {
+          "ema13": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 62974.964766654804,
+            "window": 62974.95343604254,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.011330612265737727,
+            "absoluteDelta": 0.011330612265737727,
+            "deltaInReferenceAtr": -0.0003052359705287576,
+            "exceedsNumericTolerance": true
+          },
+          "ema50": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 62934.7394781019,
+            "window": 62923.51769149906,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -11.221786602844077,
+            "absoluteDelta": 11.221786602844077,
+            "deltaInReferenceAtr": -0.30230431016895304,
+            "exceedsNumericTolerance": true
+          },
+          "ema200": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 62988.828472946916,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "ema800": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 63385.356749051985,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "atr14": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 37.120828997020915,
+            "window": 37.03413222059344,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.08669677642747331,
+            "absoluteDelta": 0.08669677642747331,
+            "deltaInReferenceAtr": -0.0023355291023923804,
+            "exceedsNumericTolerance": true
+          },
+          "vwap": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 62996.255390666294,
+            "window": 62930.18022020165,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -66.07517046464636,
+            "absoluteDelta": 66.07517046464636,
+            "deltaInReferenceAtr": -1.7800025551678584,
+            "exceedsNumericTolerance": true
+          },
+          "dayOpen": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63490.86,
+            "window": 62930.01,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -560.8499999999985,
+            "absoluteDelta": 560.8499999999985,
+            "deltaInReferenceAtr": -15.108768180931758,
+            "exceedsNumericTolerance": true
+          },
+          "rsi14": {
+            "unit": "RSI-points",
+            "referenceState": "ready",
+            "windowState": "ready",
+            "reference": 67.31797127324491,
+            "window": 67.93126398146606,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0.6132927082211523,
+            "absoluteDelta": 0.6132927082211523,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": true
+          }
+        },
+        "planMetrics": {
+          "LONG.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.entry": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63043.56,
+            "window": 63043.56,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.stop": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63080.68082899702,
+            "window": 63080.59413222059,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.0866967764304718,
+            "absoluteDelta": 0.0866967764304718,
+            "deltaInReferenceAtr": -0.002335529102473157,
+            "exceedsNumericTolerance": true
+          },
+          "SHORT.tp1": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63029.53,
+            "window": 63029.53,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp2": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63001.765,
+            "window": 63001.765,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.rr": {
+            "unit": "dimensionless",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 1.1259177429294318,
+            "window": 1.1285535125015773,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0.0026357695721455077,
+            "absoluteDelta": 0.0026357695721455077,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": true
+          }
+        },
+        "zones": {
+          "LONG": {
+            "referenceCount": 1,
+            "windowCount": 0,
+            "missingIds": [
+              "1786688100000:down"
+            ],
+            "additionalIds": [],
+            "referenceSelected": "1786688100000:down",
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "available",
+              "windowState": "unavailable",
+              "reference": 63255.06,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": true,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          },
+          "SHORT": {
+            "referenceCount": 1,
+            "windowCount": 1,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": "1786750800000:up",
+            "windowSelected": "1786750800000:up",
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "available",
+              "windowState": "available",
+              "reference": 63001.765,
+              "window": 63001.765,
+              "comparable": true,
+              "availabilityChanged": false,
+              "delta": 0,
+              "absoluteDelta": 0,
+              "deltaInReferenceAtr": 0,
+              "exceedsNumericTolerance": false
+            }
+          }
+        },
+        "disagreements": {
+          "scoreComponents": true,
+          "scoreTotals": true,
+          "selectedDirection": false,
+          "selectedSide": false,
+          "eligibility": false,
+          "geometryEligibility": true,
+          "planAvailability": false,
+          "planPrices": true,
+          "planRiskReward": true,
+          "planGeometry": true,
+          "decisionValidity": false,
+          "volumeClass": false,
+          "dayCoverage": true,
+          "eligibleTargetState": true,
+          "mwState": false,
+          "stoppingVolumeState": false
+        },
+        "referenceVotes": [
+          [
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            true,
+            false,
+            false,
+            true
+          ]
+        ],
+        "windowVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            true,
+            false,
+            false,
+            true
+          ]
+        ],
+        "referenceSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "eligible"
+        },
+        "windowSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "eligible"
+        },
+        "referenceSide": "SHORT",
+        "windowSide": "SHORT",
+        "referenceEligibility": [
+          false,
+          true
+        ],
+        "windowEligibility": [
+          false,
+          true
+        ],
+        "causes": [
+          "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+          "Timestamp-aligned eligible vector targets differ; short origins lose classification context and/or 300-bar target history",
+          "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+          "EMA800 availability/drift is context-only and does not itself change any score"
+        ]
+      }
+    },
+    {
+      "decisionCloseTime": "2026-09-01T00:05:00.000Z",
+      "window": 60,
+      "referenceDayCoverage": "from-UTC-open",
+      "windowDayCoverage": "from-UTC-open",
+      "comparison": {
+        "changedComponents": [
+          {
+            "side": "LONG",
+            "component": "ema50Stretch",
+            "reference": false,
+            "window": true
+          }
+        ],
+        "referenceStart": 1782864000000,
+        "windowStart": 1788203100000,
+        "referenceBars": 17857,
+        "windowBars": 60,
+        "referenceAtr": 60.43071054235723,
+        "metrics": {
+          "ema13": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 78589.57306804413,
+            "window": 78589.59547746301,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0.02240941887430381,
+            "absoluteDelta": 0.02240941887430381,
+            "deltaInReferenceAtr": 0.0003708283201236985,
+            "exceedsNumericTolerance": true
+          },
+          "ema50": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 78721.51747739849,
+            "window": 78765.00213385567,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 43.48465645717806,
+            "absoluteDelta": 43.48465645717806,
+            "deltaInReferenceAtr": 0.7195787715701059,
+            "exceedsNumericTolerance": true
+          },
+          "ema200": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 78592.06422095811,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "ema800": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 78422.41875049892,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "atr14": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 60.43071054235723,
+            "window": 60.28313895407932,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.14757158827791272,
+            "absoluteDelta": 0.14757158827791272,
+            "deltaInReferenceAtr": -0.002441996576798092,
+            "exceedsNumericTolerance": true
+          },
+          "vwap": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 78614.11666666665,
+            "window": 78614.11666666665,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "dayOpen": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 78581.3,
+            "window": 78581.3,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "rsi14": {
+            "unit": "RSI-points",
+            "referenceState": "ready",
+            "windowState": "ready",
+            "reference": 48.605063614802305,
+            "window": 47.780159165400285,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.8249044494020197,
+            "absoluteDelta": 0.8249044494020197,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": true
+          }
+        },
+        "planMetrics": {
+          "LONG.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          }
+        },
+        "zones": {
+          "LONG": {
+            "referenceCount": 0,
+            "windowCount": 0,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": null,
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "unavailable",
+              "windowState": "unavailable",
+              "reference": null,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": false,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          },
+          "SHORT": {
+            "referenceCount": 0,
+            "windowCount": 0,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": null,
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "unavailable",
+              "windowState": "unavailable",
+              "reference": null,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": false,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          }
+        },
+        "disagreements": {
+          "scoreComponents": true,
+          "scoreTotals": true,
+          "selectedDirection": true,
+          "selectedSide": false,
+          "eligibility": false,
+          "geometryEligibility": false,
+          "planAvailability": false,
+          "planPrices": false,
+          "planRiskReward": false,
+          "planGeometry": false,
+          "decisionValidity": false,
+          "volumeClass": false,
+          "dayCoverage": false,
+          "eligibleTargetState": false,
+          "mwState": false,
+          "stoppingVolumeState": false
+        },
+        "referenceVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "windowVotes": [
+          [
+            true,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "referenceSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": true,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "windowSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "LONG",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "referenceSide": "WAIT",
+        "windowSide": "WAIT",
+        "referenceEligibility": [
+          false,
+          false
+        ],
+        "windowEligibility": [
+          false,
+          false
+        ],
+        "causes": [
+          "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+          "EMA800 availability/drift is context-only and does not itself change any score"
+        ]
+      }
+    },
+    {
+      "decisionCloseTime": "2026-08-15T00:00:00.000Z",
+      "window": 100,
+      "referenceDayCoverage": "from-UTC-open",
+      "windowDayCoverage": "partial-first-day",
+      "comparison": {
+        "changedComponents": [
+          {
+            "side": "LONG",
+            "component": "oppositeVectorTarget",
+            "reference": true,
+            "window": false
+          }
+        ],
+        "referenceStart": 1782864000000,
+        "windowStart": 1786722000000,
+        "referenceBars": 12960,
+        "windowBars": 100,
+        "referenceAtr": 37.120828997020915,
+        "metrics": {
+          "ema13": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 62974.964766654804,
+            "window": 62974.9648108318,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 4.4176995288580656e-05,
+            "absoluteDelta": 4.4176995288580656e-05,
+            "deltaInReferenceAtr": 1.1900864415535016e-06,
+            "exceedsNumericTolerance": true
+          },
+          "ema50": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 62934.7394781019,
+            "window": 62939.097679400365,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 4.358201298462518,
+            "absoluteDelta": 4.358201298462518,
+            "deltaInReferenceAtr": 0.11740581814086856,
+            "exceedsNumericTolerance": true
+          },
+          "ema200": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 62988.828472946916,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "ema800": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 63385.356749051985,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "atr14": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 37.120828997020915,
+            "window": 37.11180931042812,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.009019686592793619,
+            "absoluteDelta": 0.009019686592793619,
+            "deltaInReferenceAtr": -0.0002429818200859006,
+            "exceedsNumericTolerance": true
+          },
+          "vwap": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 62996.255390666294,
+            "window": 63007.243876376946,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 10.98848571065173,
+            "absoluteDelta": 10.98848571065173,
+            "deltaInReferenceAtr": 0.29601940494199624,
+            "exceedsNumericTolerance": true
+          },
+          "dayOpen": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63490.86,
+            "window": 63024,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -466.8600000000006,
+            "absoluteDelta": 466.8600000000006,
+            "deltaInReferenceAtr": -12.576766538200637,
+            "exceedsNumericTolerance": true
+          },
+          "rsi14": {
+            "unit": "RSI-points",
+            "referenceState": "ready",
+            "windowState": "ready",
+            "reference": 67.31797127324491,
+            "window": 67.32061647435188,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0.002645201106972195,
+            "absoluteDelta": 0.002645201106972195,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": true
+          }
+        },
+        "planMetrics": {
+          "LONG.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.entry": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63043.56,
+            "window": 63043.56,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.stop": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63080.68082899702,
+            "window": 63080.67180931043,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.009019686593092047,
+            "absoluteDelta": 0.009019686593092047,
+            "deltaInReferenceAtr": -0.00024298182009394,
+            "exceedsNumericTolerance": true
+          },
+          "SHORT.tp1": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63029.53,
+            "window": 63029.53,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp2": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63001.765,
+            "window": 63001.765,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.rr": {
+            "unit": "dimensionless",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 1.1259177429294318,
+            "window": 1.12619138696241,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0.0002736440329782486,
+            "absoluteDelta": 0.0002736440329782486,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": true
+          }
+        },
+        "zones": {
+          "LONG": {
+            "referenceCount": 1,
+            "windowCount": 0,
+            "missingIds": [
+              "1786688100000:down"
+            ],
+            "additionalIds": [],
+            "referenceSelected": "1786688100000:down",
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "available",
+              "windowState": "unavailable",
+              "reference": 63255.06,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": true,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          },
+          "SHORT": {
+            "referenceCount": 1,
+            "windowCount": 1,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": "1786750800000:up",
+            "windowSelected": "1786750800000:up",
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "available",
+              "windowState": "available",
+              "reference": 63001.765,
+              "window": 63001.765,
+              "comparable": true,
+              "availabilityChanged": false,
+              "delta": 0,
+              "absoluteDelta": 0,
+              "deltaInReferenceAtr": 0,
+              "exceedsNumericTolerance": false
+            }
+          }
+        },
+        "disagreements": {
+          "scoreComponents": true,
+          "scoreTotals": true,
+          "selectedDirection": false,
+          "selectedSide": false,
+          "eligibility": false,
+          "geometryEligibility": true,
+          "planAvailability": false,
+          "planPrices": true,
+          "planRiskReward": true,
+          "planGeometry": true,
+          "decisionValidity": false,
+          "volumeClass": false,
+          "dayCoverage": true,
+          "eligibleTargetState": true,
+          "mwState": false,
+          "stoppingVolumeState": false
+        },
+        "referenceVotes": [
+          [
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            true,
+            false,
+            false,
+            true
+          ]
+        ],
+        "windowVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            true,
+            false,
+            false,
+            true
+          ]
+        ],
+        "referenceSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "eligible"
+        },
+        "windowSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "eligible"
+        },
+        "referenceSide": "SHORT",
+        "windowSide": "SHORT",
+        "referenceEligibility": [
+          false,
+          true
+        ],
+        "windowEligibility": [
+          false,
+          true
+        ],
+        "causes": [
+          "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+          "Timestamp-aligned eligible vector targets differ; short origins lose classification context and/or 300-bar target history",
+          "Loaded UTC-day coverage differs; partial-first-day VWAP/DO is not a full-day reference",
+          "EMA800 availability/drift is context-only and does not itself change any score"
+        ]
+      }
+    },
+    {
+      "decisionCloseTime": "2026-08-15T00:05:00.000Z",
+      "window": 100,
+      "referenceDayCoverage": "from-UTC-open",
+      "windowDayCoverage": "from-UTC-open",
+      "comparison": {
+        "changedComponents": [
+          {
+            "side": "LONG",
+            "component": "oppositeVectorTarget",
+            "reference": true,
+            "window": false
+          }
+        ],
+        "referenceStart": 1782864000000,
+        "windowStart": 1786722300000,
+        "referenceBars": 12961,
+        "windowBars": 100,
+        "referenceAtr": 36.856484068662155,
+        "metrics": {
+          "ema13": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 62982.266942846974,
+            "window": 62982.26697589157,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 3.304459823993966e-05,
+            "absoluteDelta": 3.304459823993966e-05,
+            "deltaInReferenceAtr": 8.965748924498304e-07,
+            "exceedsNumericTolerance": true
+          },
+          "ema50": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 62938.32145935281,
+            "window": 62942.07178966023,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 3.7503303074190626,
+            "absoluteDelta": 3.7503303074190626,
+            "deltaInReferenceAtr": 0.10175496665477768,
+            "exceedsNumericTolerance": true
+          },
+          "ema200": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 62989.19913490765,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "ema800": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 63384.45967851752,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "atr14": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 36.856484068662155,
+            "window": 36.84872021467677,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.007763853985387925,
+            "absoluteDelta": 0.007763853985387925,
+            "deltaInReferenceAtr": -0.00021065096635165134,
+            "exceedsNumericTolerance": true
+          },
+          "vwap": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63037.219999999994,
+            "window": 63037.219999999994,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "dayOpen": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63043.56,
+            "window": 63043.56,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "rsi14": {
+            "unit": "RSI-points",
+            "referenceState": "ready",
+            "windowState": "ready",
+            "reference": 63.499137208774044,
+            "window": 63.5084502489277,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0.00931304015365697,
+            "absoluteDelta": 0.00931304015365697,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": true
+          }
+        },
+        "planMetrics": {
+          "LONG.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          }
+        },
+        "zones": {
+          "LONG": {
+            "referenceCount": 1,
+            "windowCount": 0,
+            "missingIds": [
+              "1786688100000:down"
+            ],
+            "additionalIds": [],
+            "referenceSelected": "1786688100000:down",
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "available",
+              "windowState": "unavailable",
+              "reference": 63255.06,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": true,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          },
+          "SHORT": {
+            "referenceCount": 0,
+            "windowCount": 0,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": null,
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "unavailable",
+              "windowState": "unavailable",
+              "reference": null,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": false,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          }
+        },
+        "disagreements": {
+          "scoreComponents": true,
+          "scoreTotals": true,
+          "selectedDirection": false,
+          "selectedSide": false,
+          "eligibility": false,
+          "geometryEligibility": true,
+          "planAvailability": false,
+          "planPrices": false,
+          "planRiskReward": false,
+          "planGeometry": false,
+          "decisionValidity": false,
+          "volumeClass": false,
+          "dayCoverage": false,
+          "eligibleTargetState": true,
+          "mwState": false,
+          "stoppingVolumeState": false
+        },
+        "referenceVotes": [
+          [
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "windowVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false,
+            false,
+            false
+          ]
+        ],
+        "referenceSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": true,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "windowSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "referenceSide": "WAIT",
+        "windowSide": "WAIT",
+        "referenceEligibility": [
+          false,
+          false
+        ],
+        "windowEligibility": [
+          false,
+          false
+        ],
+        "causes": [
+          "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+          "Timestamp-aligned eligible vector targets differ; short origins lose classification context and/or 300-bar target history",
+          "EMA800 availability/drift is context-only and does not itself change any score"
+        ]
+      }
+    },
+    {
+      "decisionCloseTime": "2026-07-15T00:05:00.000Z",
+      "window": 100,
+      "referenceDayCoverage": "from-UTC-open",
+      "windowDayCoverage": "from-UTC-open",
+      "comparison": {
+        "changedComponents": [],
+        "referenceStart": 1782864000000,
+        "windowStart": 1784043900000,
+        "referenceBars": 4033,
+        "windowBars": 100,
+        "referenceAtr": 72.39738027664349,
+        "metrics": {
+          "ema13": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 64968.31138197452,
+            "window": 64968.31146486933,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 8.289481047540903e-05,
+            "absoluteDelta": 8.289481047540903e-05,
+            "deltaInReferenceAtr": 1.1449973764057894e-06,
+            "exceedsNumericTolerance": true
+          },
+          "ema50": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 64790.221238275684,
+            "window": 64808.36747220687,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 18.146233931183815,
+            "absoluteDelta": 18.146233931183815,
+            "deltaInReferenceAtr": 0.250647659650719,
+            "exceedsNumericTolerance": true
+          },
+          "ema200": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 64110.70394544649,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "ema800": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 63493.73591733659,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "atr14": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 72.39738027664349,
+            "window": 72.37406989969409,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.023310376949396527,
+            "absoluteDelta": 0.023310376949396527,
+            "deltaInReferenceAtr": -0.0003219781829166105,
+            "exceedsNumericTolerance": true
+          },
+          "vwap": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 65022.05,
+            "window": 65022.05,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "dayOpen": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 65043.99,
+            "window": 65043.99,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "rsi14": {
+            "unit": "RSI-points",
+            "referenceState": "ready",
+            "windowState": "ready",
+            "reference": 59.332297814914384,
+            "window": 59.294049608382245,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.03824820653213834,
+            "absoluteDelta": 0.03824820653213834,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": true
+          }
+        },
+        "planMetrics": {
+          "LONG.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          }
+        },
+        "zones": {
+          "LONG": {
+            "referenceCount": 0,
+            "windowCount": 0,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": null,
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "unavailable",
+              "windowState": "unavailable",
+              "reference": null,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": false,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          },
+          "SHORT": {
+            "referenceCount": 0,
+            "windowCount": 0,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": null,
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "unavailable",
+              "windowState": "unavailable",
+              "reference": null,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": false,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          }
+        },
+        "disagreements": {
+          "scoreComponents": false,
+          "scoreTotals": false,
+          "selectedDirection": false,
+          "selectedSide": false,
+          "eligibility": false,
+          "geometryEligibility": false,
+          "planAvailability": false,
+          "planPrices": false,
+          "planRiskReward": false,
+          "planGeometry": false,
+          "decisionValidity": false,
+          "volumeClass": false,
+          "dayCoverage": false,
+          "eligibleTargetState": false,
+          "mwState": false,
+          "stoppingVolumeState": false
+        },
+        "referenceVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false,
+            true,
+            false
+          ]
+        ],
+        "windowVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false,
+            true,
+            false
+          ]
+        ],
+        "referenceSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "windowSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "referenceSide": "WAIT",
+        "windowSide": "WAIT",
+        "referenceEligibility": [
+          false,
+          false
+        ],
+        "windowEligibility": [
+          false,
+          false
+        ],
+        "causes": [
+          "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+          "EMA800 availability/drift is context-only and does not itself change any score"
+        ]
+      }
+    },
+    {
+      "decisionCloseTime": "2026-08-15T23:55:00.000Z",
+      "window": 300,
+      "referenceDayCoverage": "from-UTC-open",
+      "windowDayCoverage": "from-UTC-open",
+      "comparison": {
+        "changedComponents": [],
+        "referenceStart": 1782864000000,
+        "windowStart": 1786748100000,
+        "referenceBars": 13247,
+        "windowBars": 300,
+        "referenceAtr": 8.659594365717638,
+        "metrics": {
+          "ema13": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63116.07271840944,
+            "window": 63116.07271840944,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "ema50": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63120.051694891365,
+            "window": 63120.05153597705,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.00015891431394265965,
+            "absoluteDelta": 0.00015891431394265965,
+            "deltaInReferenceAtr": -1.8351242244299985e-05,
+            "exceedsNumericTolerance": true
+          },
+          "ema200": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63082.60919788956,
+            "window": 63077.3376692355,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -5.271528654055146,
+            "absoluteDelta": 5.271528654055146,
+            "deltaInReferenceAtr": -0.6087500674309337,
+            "exceedsNumericTolerance": true
+          },
+          "ema800": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 63226.23757953827,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "atr14": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 8.659594365717638,
+            "window": 8.659594367509806,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 1.792168191627752e-09,
+            "absoluteDelta": 1.792168191627752e-09,
+            "deltaInReferenceAtr": 2.0695752202005497e-10,
+            "exceedsNumericTolerance": false
+          },
+          "vwap": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63067.755451432706,
+            "window": 63067.755451432706,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "dayOpen": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63043.56,
+            "window": 63043.56,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "rsi14": {
+            "unit": "RSI-points",
+            "referenceState": "ready",
+            "windowState": "ready",
+            "reference": 30.000256553703778,
+            "window": 30.000256579501354,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 2.579757563125895e-08,
+            "absoluteDelta": 2.579757563125895e-08,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": true
+          }
+        },
+        "planMetrics": {
+          "LONG.entry": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63086.01,
+            "window": 63086.01,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.stop": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63077.350405634286,
+            "window": 63077.35040563249,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -1.7971615307033062e-09,
+            "absoluteDelta": 1.7971615307033062e-09,
+            "deltaInReferenceAtr": -2.0753414707484072e-10,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp1": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63135.52,
+            "window": 63135.52,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp2": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63155.259999999995,
+            "window": 63155.259999999995,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.rr": {
+            "unit": "dimensionless",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 7.9969103719408405,
+            "window": 7.996910370281208,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -1.65963243148326e-09,
+            "absoluteDelta": 1.65963243148326e-09,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": true
+          },
+          "SHORT.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          }
+        },
+        "zones": {
+          "LONG": {
+            "referenceCount": 1,
+            "windowCount": 1,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": "1786834200000:down",
+            "windowSelected": "1786834200000:down",
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "available",
+              "windowState": "available",
+              "reference": 63155.259999999995,
+              "window": 63155.259999999995,
+              "comparable": true,
+              "availabilityChanged": false,
+              "delta": 0,
+              "absoluteDelta": 0,
+              "deltaInReferenceAtr": 0,
+              "exceedsNumericTolerance": false
+            }
+          },
+          "SHORT": {
+            "referenceCount": 4,
+            "windowCount": 4,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": "1786826400000:up",
+            "windowSelected": "1786826400000:up",
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "available",
+              "windowState": "available",
+              "reference": 63079.895000000004,
+              "window": 63079.895000000004,
+              "comparable": true,
+              "availabilityChanged": false,
+              "delta": 0,
+              "absoluteDelta": 0,
+              "deltaInReferenceAtr": 0,
+              "exceedsNumericTolerance": false
+            }
+          }
+        },
+        "disagreements": {
+          "scoreComponents": false,
+          "scoreTotals": false,
+          "selectedDirection": false,
+          "selectedSide": false,
+          "eligibility": false,
+          "geometryEligibility": false,
+          "planAvailability": false,
+          "planPrices": false,
+          "planRiskReward": true,
+          "planGeometry": true,
+          "decisionValidity": false,
+          "volumeClass": false,
+          "dayCoverage": false,
+          "eligibleTargetState": false,
+          "mwState": false,
+          "stoppingVolumeState": false
+        },
+        "referenceVotes": [
+          [
+            true,
+            true,
+            false,
+            true,
+            true
+          ],
+          [
+            false,
+            true,
+            false,
+            true,
+            false
+          ]
+        ],
+        "windowVotes": [
+          [
+            true,
+            true,
+            false,
+            true,
+            true
+          ],
+          [
+            false,
+            true,
+            false,
+            true,
+            false
+          ]
+        ],
+        "referenceSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "LONG",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "eligible"
+        },
+        "windowSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "LONG",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "eligible"
+        },
+        "referenceSide": "LONG",
+        "windowSide": "LONG",
+        "referenceEligibility": [
+          true,
+          false
+        ],
+        "windowEligibility": [
+          true,
+          false
+        ],
+        "causes": [
+          "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+          "EMA800 availability/drift is context-only and does not itself change any score"
+        ]
+      }
+    },
+    {
+      "decisionCloseTime": "2026-08-15T12:00:00.000Z",
+      "window": 300,
+      "referenceDayCoverage": "from-UTC-open",
+      "windowDayCoverage": "from-UTC-open",
+      "comparison": {
+        "changedComponents": [],
+        "referenceStart": 1782864000000,
+        "windowStart": 1786705200000,
+        "referenceBars": 13104,
+        "windowBars": 300,
+        "referenceAtr": 14.7306036402791,
+        "metrics": {
+          "ema13": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63028.785356224515,
+            "window": 63028.785356224515,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "ema50": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63032.77612648893,
+            "window": 63032.77562135457,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.0005051343541708775,
+            "absoluteDelta": 0.0005051343541708775,
+            "deltaInReferenceAtr": -3.429149045797737e-05,
+            "exceedsNumericTolerance": true
+          },
+          "ema200": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63037.51029090598,
+            "window": 63018.69977876209,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -18.810512143885717,
+            "absoluteDelta": 18.810512143885717,
+            "deltaInReferenceAtr": -1.2769681815652543,
+            "exceedsNumericTolerance": true
+          },
+          "ema800": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "unavailable",
+            "reference": 63286.437007477645,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": true,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "atr14": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 14.7306036402791,
+            "window": 14.730603640674547,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 3.9544723051676556e-10,
+            "absoluteDelta": 3.9544723051676556e-10,
+            "deltaInReferenceAtr": 2.684528347741716e-11,
+            "exceedsNumericTolerance": false
+          },
+          "vwap": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63058.27309062836,
+            "window": 63058.27309062836,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "dayOpen": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63043.56,
+            "window": 63043.56,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "rsi14": {
+            "unit": "RSI-points",
+            "referenceState": "ready",
+            "windowState": "ready",
+            "reference": 47.763908377249365,
+            "window": 47.763908380859455,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 3.610090004713129e-09,
+            "absoluteDelta": 3.610090004713129e-09,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          }
+        },
+        "planMetrics": {
+          "LONG.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          }
+        },
+        "zones": {
+          "LONG": {
+            "referenceCount": 0,
+            "windowCount": 0,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": null,
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "unavailable",
+              "windowState": "unavailable",
+              "reference": null,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": false,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          },
+          "SHORT": {
+            "referenceCount": 1,
+            "windowCount": 1,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": "1786785300000:up",
+            "windowSelected": "1786785300000:up",
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "available",
+              "windowState": "available",
+              "reference": 62966.13,
+              "window": 62966.13,
+              "comparable": true,
+              "availabilityChanged": false,
+              "delta": 0,
+              "absoluteDelta": 0,
+              "deltaInReferenceAtr": 0,
+              "exceedsNumericTolerance": false
+            }
+          }
+        },
+        "disagreements": {
+          "scoreComponents": false,
+          "scoreTotals": false,
+          "selectedDirection": false,
+          "selectedSide": false,
+          "eligibility": false,
+          "geometryEligibility": false,
+          "planAvailability": false,
+          "planPrices": false,
+          "planRiskReward": false,
+          "planGeometry": false,
+          "decisionValidity": false,
+          "volumeClass": false,
+          "dayCoverage": false,
+          "eligibleTargetState": false,
+          "mwState": false,
+          "stoppingVolumeState": false
+        },
+        "referenceVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            false,
+            true,
+            false
+          ]
+        ],
+        "windowVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            false,
+            true,
+            false
+          ]
+        ],
+        "referenceSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "windowSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "referenceSide": "WAIT",
+        "windowSide": "WAIT",
+        "referenceEligibility": [
+          false,
+          false
+        ],
+        "windowEligibility": [
+          false,
+          false
+        ],
+        "causes": [
+          "Recursive seed/origin differences in score inputs; inspect actual vote changes separately",
+          "EMA800 availability/drift is context-only and does not itself change any score"
+        ]
+      }
+    },
+    {
+      "decisionCloseTime": "2026-08-15T12:00:00.000Z",
+      "window": 1000,
+      "referenceDayCoverage": "from-UTC-open",
+      "windowDayCoverage": "from-UTC-open",
+      "comparison": {
+        "changedComponents": [],
+        "referenceStart": 1782864000000,
+        "windowStart": 1786495200000,
+        "referenceBars": 13104,
+        "windowBars": 1000,
+        "referenceAtr": 14.7306036402791,
+        "metrics": {
+          "ema13": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63028.785356224515,
+            "window": 63028.785356224515,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "ema50": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63032.77612648893,
+            "window": 63032.77612648893,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "ema200": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63037.51029090598,
+            "window": 63037.50718795684,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.0031029491365188733,
+            "absoluteDelta": 0.0031029491365188733,
+            "deltaInReferenceAtr": -0.00021064643461278293,
+            "exceedsNumericTolerance": true
+          },
+          "ema800": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63286.437007477645,
+            "window": 63239.614835284665,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -46.82217219298036,
+            "absoluteDelta": 46.82217219298036,
+            "deltaInReferenceAtr": -3.1785643912752257,
+            "exceedsNumericTolerance": true
+          },
+          "atr14": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 14.7306036402791,
+            "window": 14.7306036402791,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "vwap": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63058.27309062836,
+            "window": 63058.27309062836,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "dayOpen": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63043.56,
+            "window": 63043.56,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "rsi14": {
+            "unit": "RSI-points",
+            "referenceState": "ready",
+            "windowState": "ready",
+            "reference": 47.763908377249365,
+            "window": 47.763908377249365,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          }
+        },
+        "planMetrics": {
+          "LONG.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          }
+        },
+        "zones": {
+          "LONG": {
+            "referenceCount": 0,
+            "windowCount": 0,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": null,
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "unavailable",
+              "windowState": "unavailable",
+              "reference": null,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": false,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          },
+          "SHORT": {
+            "referenceCount": 1,
+            "windowCount": 1,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": "1786785300000:up",
+            "windowSelected": "1786785300000:up",
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "available",
+              "windowState": "available",
+              "reference": 62966.13,
+              "window": 62966.13,
+              "comparable": true,
+              "availabilityChanged": false,
+              "delta": 0,
+              "absoluteDelta": 0,
+              "deltaInReferenceAtr": 0,
+              "exceedsNumericTolerance": false
+            }
+          }
+        },
+        "disagreements": {
+          "scoreComponents": false,
+          "scoreTotals": false,
+          "selectedDirection": false,
+          "selectedSide": false,
+          "eligibility": false,
+          "geometryEligibility": false,
+          "planAvailability": false,
+          "planPrices": false,
+          "planRiskReward": false,
+          "planGeometry": false,
+          "decisionValidity": false,
+          "volumeClass": false,
+          "dayCoverage": false,
+          "eligibleTargetState": false,
+          "mwState": false,
+          "stoppingVolumeState": false
+        },
+        "referenceVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            false,
+            true,
+            false
+          ]
+        ],
+        "windowVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            false,
+            true,
+            false
+          ]
+        ],
+        "referenceSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "windowSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "referenceSide": "WAIT",
+        "windowSide": "WAIT",
+        "referenceEligibility": [
+          false,
+          false
+        ],
+        "windowEligibility": [
+          false,
+          false
+        ],
+        "causes": [
+          "EMA800 availability/drift is context-only and does not itself change any score"
+        ]
+      }
+    },
+    {
+      "decisionCloseTime": "2026-08-01T12:00:00.000Z",
+      "window": 2000,
+      "referenceDayCoverage": "from-UTC-open",
+      "windowDayCoverage": "from-UTC-open",
+      "comparison": {
+        "changedComponents": [],
+        "referenceStart": 1782864000000,
+        "windowStart": 1784985600000,
+        "referenceBars": 9072,
+        "windowBars": 2000,
+        "referenceAtr": 14.456651453875194,
+        "metrics": {
+          "ema13": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63069.20110618743,
+            "window": 63069.20110618743,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "ema50": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63067.567491518166,
+            "window": 63067.567491518166,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "ema200": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63115.61265686424,
+            "window": 63115.612656876234,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 1.1990778148174286e-08,
+            "absoluteDelta": 1.1990778148174286e-08,
+            "deltaInReferenceAtr": 8.294298431716069e-10,
+            "exceedsNumericTolerance": false
+          },
+          "ema800": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63664.706019352874,
+            "window": 63660.69433408631,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -4.0116852665669285,
+            "absoluteDelta": 4.0116852665669285,
+            "deltaInReferenceAtr": -0.27749754356093104,
+            "exceedsNumericTolerance": true
+          },
+          "atr14": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 14.456651453875194,
+            "window": 14.456651453875194,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "vwap": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63033.74826318161,
+            "window": 63033.74826318161,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "dayOpen": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 62887.88,
+            "window": 62887.88,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "rsi14": {
+            "unit": "RSI-points",
+            "referenceState": "ready",
+            "windowState": "ready",
+            "reference": 54.09325606524269,
+            "window": 54.09325606524269,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          }
+        },
+        "planMetrics": {
+          "LONG.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          }
+        },
+        "zones": {
+          "LONG": {
+            "referenceCount": 0,
+            "windowCount": 0,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": null,
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "unavailable",
+              "windowState": "unavailable",
+              "reference": null,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": false,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          },
+          "SHORT": {
+            "referenceCount": 0,
+            "windowCount": 0,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": null,
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "unavailable",
+              "windowState": "unavailable",
+              "reference": null,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": false,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          }
+        },
+        "disagreements": {
+          "scoreComponents": false,
+          "scoreTotals": false,
+          "selectedDirection": false,
+          "selectedSide": false,
+          "eligibility": false,
+          "geometryEligibility": false,
+          "planAvailability": false,
+          "planPrices": false,
+          "planRiskReward": false,
+          "planGeometry": false,
+          "decisionValidity": false,
+          "volumeClass": false,
+          "dayCoverage": false,
+          "eligibleTargetState": false,
+          "mwState": false,
+          "stoppingVolumeState": false
+        },
+        "referenceVotes": [
+          [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false
+          ]
+        ],
+        "windowVotes": [
+          [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false
+          ]
+        ],
+        "referenceSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": true,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "windowSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": true,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "referenceSide": "WAIT",
+        "windowSide": "WAIT",
+        "referenceEligibility": [
+          false,
+          false
+        ],
+        "windowEligibility": [
+          false,
+          false
+        ],
+        "causes": [
+          "EMA800 availability/drift is context-only and does not itself change any score"
+        ]
+      }
+    },
+    {
+      "decisionCloseTime": "2026-08-15T12:00:00.000Z",
+      "window": 4000,
+      "referenceDayCoverage": "from-UTC-open",
+      "windowDayCoverage": "from-UTC-open",
+      "comparison": {
+        "changedComponents": [],
+        "referenceStart": 1782864000000,
+        "windowStart": 1785595200000,
+        "referenceBars": 13104,
+        "windowBars": 4000,
+        "referenceAtr": 14.7306036402791,
+        "metrics": {
+          "ema13": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63028.785356224515,
+            "window": 63028.785356224515,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "ema50": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63032.77612648893,
+            "window": 63032.77612648893,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "ema200": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63037.51029090598,
+            "window": 63037.51029090598,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "ema800": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63286.437007477645,
+            "window": 63286.41381804648,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": -0.023189431165519636,
+            "absoluteDelta": 0.023189431165519636,
+            "deltaInReferenceAtr": -0.0015742349554576888,
+            "exceedsNumericTolerance": true
+          },
+          "atr14": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 14.7306036402791,
+            "window": 14.7306036402791,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "vwap": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63058.27309062836,
+            "window": 63058.27309062836,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "dayOpen": {
+            "unit": "price",
+            "referenceState": "available",
+            "windowState": "available",
+            "reference": 63043.56,
+            "window": 63043.56,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": 0,
+            "exceedsNumericTolerance": false
+          },
+          "rsi14": {
+            "unit": "RSI-points",
+            "referenceState": "ready",
+            "windowState": "ready",
+            "reference": 47.763908377249365,
+            "window": 47.763908377249365,
+            "comparable": true,
+            "availabilityChanged": false,
+            "delta": 0,
+            "absoluteDelta": 0,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          }
+        },
+        "planMetrics": {
+          "LONG.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "LONG.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.entry": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.stop": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp1": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.tp2": {
+            "unit": "price",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          },
+          "SHORT.rr": {
+            "unit": "dimensionless",
+            "referenceState": "unavailable",
+            "windowState": "unavailable",
+            "reference": null,
+            "window": null,
+            "comparable": false,
+            "availabilityChanged": false,
+            "delta": null,
+            "absoluteDelta": null,
+            "deltaInReferenceAtr": null,
+            "exceedsNumericTolerance": false
+          }
+        },
+        "zones": {
+          "LONG": {
+            "referenceCount": 0,
+            "windowCount": 0,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": null,
+            "windowSelected": null,
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "unavailable",
+              "windowState": "unavailable",
+              "reference": null,
+              "window": null,
+              "comparable": false,
+              "availabilityChanged": false,
+              "delta": null,
+              "absoluteDelta": null,
+              "deltaInReferenceAtr": null,
+              "exceedsNumericTolerance": false
+            }
+          },
+          "SHORT": {
+            "referenceCount": 1,
+            "windowCount": 1,
+            "missingIds": [],
+            "additionalIds": [],
+            "referenceSelected": "1786785300000:up",
+            "windowSelected": "1786785300000:up",
+            "commonGeometryChanged": [],
+            "selectedMidpoint": {
+              "unit": "price",
+              "referenceState": "available",
+              "windowState": "available",
+              "reference": 62966.13,
+              "window": 62966.13,
+              "comparable": true,
+              "availabilityChanged": false,
+              "delta": 0,
+              "absoluteDelta": 0,
+              "deltaInReferenceAtr": 0,
+              "exceedsNumericTolerance": false
+            }
+          }
+        },
+        "disagreements": {
+          "scoreComponents": false,
+          "scoreTotals": false,
+          "selectedDirection": false,
+          "selectedSide": false,
+          "eligibility": false,
+          "geometryEligibility": false,
+          "planAvailability": false,
+          "planPrices": false,
+          "planRiskReward": false,
+          "planGeometry": false,
+          "decisionValidity": false,
+          "volumeClass": false,
+          "dayCoverage": false,
+          "eligibleTargetState": false,
+          "mwState": false,
+          "stoppingVolumeState": false
+        },
+        "referenceVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            false,
+            true,
+            false
+          ]
+        ],
+        "windowVotes": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            true,
+            false,
+            true,
+            false
+          ]
+        ],
+        "referenceSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "windowSelection": {
+          "policy": "higher-score-short-on-tie-before-eligibility",
+          "selected": "SHORT",
+          "tied": false,
+          "suppressedOther": false,
+          "reason": "below-threshold"
+        },
+        "referenceSide": "WAIT",
+        "windowSide": "WAIT",
+        "referenceEligibility": [
+          false,
+          false
+        ],
+        "windowEligibility": [
+          false,
+          false
+        ],
+        "causes": [
+          "EMA800 availability/drift is context-only and does not itself change any score"
+        ]
+      }
+    }
+  ],
+  "fullLocalEvidence": {
+    "path": ".qa-results/calculation-readiness-v1/q3-audit.json",
+    "sha256": "d35db2d34dbc76f285b0f32e35668478b90e1b48323c9ff8569b9e938528fd97",
+    "bytes": 3140956,
+    "notRequiredByCi": true
+  },
+  "protocolUnchangedSinceFirstRun": true
+}

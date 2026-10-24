@@ -8,12 +8,13 @@
   },
   "scripts": {
     "check:source": "node scripts/check-source.cjs",
-    "test": "npm run check:source && npm run test:app && npm run test:research",
+    "test": "npm run check:source && npm run test:app && npm run test:research && npm run test:audit",
     "test:app": "node scripts/run-qa.cjs app",
     "test:research": "node scripts/run-qa.cjs research",
     "test:browser": "node scripts/run-qa.cjs browser",
     "qa:browser:install": "playwright install --with-deps chromium",
-    "qa:browser:local": "node scripts/install-local-browser-deps.cjs"
+    "qa:browser:local": "node scripts/install-local-browser-deps.cjs",
+    "test:audit": "node scripts/run-qa.cjs audit"
   },
   "devDependencies": {
     "@napi-rs/canvas": "1.0.13",

@@ -1,0 +1,7 @@
+{
+  "research/readiness-audit.cjs": "90f486a3b937c51dffbfc4a32fb3ebc83668b7b579fea2e0db62edcf305ca5b5",
+  "research/audit/adapter.cjs": "cd6f89222bb571c91b5f7b39f65b75bd69e2045208334f59dc85fb9ee1aa6daf",
+  "research/audit/protocol.json": "50cf2d98d57af48ad53631cc0787432fdbc453d920d8667bd4b8d972b175e9e6",
+  "research/audit/README.md": "0ac966de2dfb52415cc7d098e90d676a69fcbe6c4c67e02fe38ef4155c1b0754",
+  "tests/readiness-audit.cjs": "573272853a535a3f01696535ace133b2dddc530f40a3dfc0044b41b9f6bdf494"
+}

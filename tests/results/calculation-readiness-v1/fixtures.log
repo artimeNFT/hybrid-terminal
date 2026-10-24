@@ -1,0 +1,17 @@
+✔ adapter uses hash-checked actual functions without bootstrap/storage/backtest and target capture preserves decisions (191.529155ms)
+✔ same timestamps, not local array indices, align finite volume/UTC metrics and eligible zone identities (86.401436ms)
+✔ UTC boundaries distinguish a midnight close from a new-day opening candle and partial-day origins (77.791393ms)
+✔ known recursive-origin sensitivity separates minimum availability, flat-RSI state and context-only EMA800 (279.51732ms)
+✔ short history loses eligible old targets without a future leak (96.022058ms)
+✔ M/W confirmation and future supersession are projected as known at t, not raw future caches (57.891901ms)
+✔ causality detector flags deliberately altered votes/values, separately from seed drift (60.131077ms)
+✔ compact generated synthetic audit covers every window, fixed-origin future checks, and bounded sampling (1645.732437ms)
+✔ the real-data command validates CLI schema/hash before analysis and never accepts fabricated input (1.061203ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2725.576125
