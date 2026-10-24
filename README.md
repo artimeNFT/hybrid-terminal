@@ -1,5 +1,7 @@
 # Hybrid System 0.4.3
 
+**Current direction and task order:** read the current sections at the top of [STATUS.md](STATUS.md). The extra preparation-review utility is deferred; the next bounded product increment is the 0.4.4 presentation release candidate, including explicit separation of frozen research source references from the evolving app. No 0.4.4 application has been delivered yet. Historical research instructions below document reproducibility, not additional active tasks.
+
 Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Binance spot REST/WebSocket access is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
 
 Chart/header/inspector text is English; the analysis panel and Help are Hebrew. On narrow screens the chart has its own usable height and the main area scrolls to the analysis panel.
@@ -40,7 +42,7 @@ node research/prepare.cjs verify --out .qa-results/preparation-v1/q3-new
 npm run test:preparation
 ```
 
-Full features/pairs/day spans and runtime metadata remain ignored; tracked compact evidence is in `tests/results/preparation-v1/`. Method, symmetry/equality/exclusion order, exact matching/ties, fixed pre-match SMD denominators, missing states, resource bounds and limits: `research/preparation/README.md`. A poor match or residual imbalance is a finding; no automatic retuning or inference is performed. Next action remains independent feasibility/dependence review before a separate frozen outcome/inference protocol. Q3 is exploratory, not an untouched holdout.
+Full features/pairs/day spans and runtime metadata remain ignored; tracked compact evidence is in `tests/results/preparation-v1/`. Method, symmetry/equality/exclusion order, exact matching/ties, fixed pre-match SMD denominators, missing states, resource bounds and limits: `research/preparation/README.md`. A poor match or residual imbalance is a finding; no automatic retuning or inference is performed. Focused independent engineering/fixture/pair review is recorded in STATUS; comparison/inference suitability remains unresolved. Further research diagnostics and outcomes are deferred under the current product roadmap. Q3 is exploratory, not an untouched holdout.
 
 ## Offline calculation contract 1.0.0
 
@@ -69,7 +71,7 @@ The real-data command first applies CLI 1.0.1 schema/hash/quality validation to 
 
 Observed at the 24 fixed points: 60/100-bar windows changed component votes at 6/2 points, with no action-side/eligibility flips; plan prices changed at five points in each short window. The 300-bar plan flag is only tiny RR drift. At 1000+ bars, sampled score/plan/target/MW results matched the finite longest reference, while EMA800 still drifted even at 4000 (max 0.053216 price / 0.001574 reference ATR). **EMA800 is context-only.** Five hundred same-origin future-append checks had zero differences. The nine synthetic audit fixtures include an actual old-target LONG/WAIT origin disagreement and flat-tail RSI availability drift, so neither the real sample's side agreement nor a 1000-bar core-input candidate is a universal guarantee.
 
-See `tests/results/calculation-readiness-v1/REPORT.md`, `findings.json` and `research/audit/README.md` for per-feature availability/error units, timestamp-aligned examples, source/data identities, projection assumptions and provisional warm-up guidance. The longest history is a reference, not absolute convergence. The focused independent adapter/protocol check is recorded in STATUS; the subsequent contract above is predeclared and awaits its own review. Episode generation and matched-control work remain queued. `npm test` and the deterministic Actions job include the synthetic audit group.
+See `tests/results/calculation-readiness-v1/REPORT.md`, `findings.json` and `research/audit/README.md` for per-feature availability/error units, timestamp-aligned examples, source/data identities, projection assumptions and provisional warm-up guidance. The longest history is a reference, not absolute convergence. The focused independent adapter/protocol check and finite-origin contract acceptance are recorded in STATUS. Outcome-blind episode/matching preparation 1.0.0 has since been delivered; its limited retained sample does not establish trading performance. Current task order is maintained only in STATUS. `npm test` and the deterministic Actions job include the synthetic audit group.
 
 ## Frozen research data — tool 1.0.1 / schema 1
 
