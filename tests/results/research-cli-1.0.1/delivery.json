@@ -1,0 +1,43 @@
+{
+  "reviewedCommit": "c7dbee4e463ac9bc28dc164f807fda3efc6fcb28",
+  "findingSource": "User-supplied independent external review finding; reproduced locally with mocked responses",
+  "toolVersion": "1.0.1",
+  "schemaVersion": 1,
+  "applicationVersion": "0.4.3",
+  "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "researchToolSha256": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+  "verifiedAt": "2026-10-24T14:27:51.024654+00:00",
+  "localChecks": {
+    "npmTestExitCode": 0,
+    "applicationSuites": 9,
+    "researchCases": 18,
+    "legacyProducerVersionsExercised": [
+      "1.0.0",
+      "1.0.1"
+    ],
+    "noFilesystemOrNetworkOnInvalidAcquisition": true,
+    "recomputedMalformedPayloadHashesRejected": true,
+    "validLegacyCheckpointResumePassed": true,
+    "retainedFrozenDatasetAndCheckpointBytesUnchanged": true,
+    "historicalManifestsUnchanged": true
+  },
+  "artifacts": {
+    "research/klines.cjs": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+    "research/SCHEMA.md": "041a8f3841ebb3859f8c1e680ddcb0a29e5ee846828372841785721f2e61a74a",
+    "baseline/research-klines.1.0.0.cjs": "7200e575ba74206dc70a82cdfb7159e9d9596fc5d01e8b0c75215ce30d30d1c5",
+    "tests/research-data.cjs": "19ee2ad4a52cd575a50bcf2e83125adca5a1b503209335f68d27269a3c667a42",
+    "qa/source-checksums.json": "6eb67ae8053979a36d41f01ba285b39c2ffbeecbc62ac0d9d63adf9b361e3397",
+    "qa/research-cli-1.0.1-sha256.json": "513e6357d9ce1aff3737c7c5526c76370a701a5018ed0cd406d899717d8ea23b",
+    "README.md": "4154bc7dc49931162184ec9cf6cd02cd4ef12c394d21992003def6aafd0ff5a2",
+    "STATUS.md": "8f26d51f7aec099163c7d2e99bc0a59842609520a7a111a732b56b8cfa92ac8a",
+    "SOURCE_PROVENANCE.md": "1146e4d0e05306b1068872769bfb35de1c49a3b28034b389115668383492369b"
+  },
+  "evidence": {
+    "app-manifest.json": "284411d36cbfb4d67c705b9d762f5f295f8fd201af650e2a92bc6c3f9f9830a6",
+    "focused-tests.log": "735381de6a78c252b3e9b4b5bd5dbfa737de0f212ab07b2780d1b6e4c99caf24",
+    "npm-test.log": "8b0592252dfcc87f2babe58d750293943e16a2caa1fdc938d851fbfe986152a1",
+    "preservation-and-compatibility.json": "9bdfb42d372acfb079a18de53cfd2eb387017743bc6941aef701e203b49250f2",
+    "research-manifest.json": "0a0c7d37baadef5e4b114ac99776ccb80ad8e597f2e10ffede0f753d5b178667"
+  },
+  "ciVerification": "Actual release-commit Actions run is checked after push; URL/result delivered in final report and ignored .qa-results/research-cli-1.0.1/ci-verification.json."
+}

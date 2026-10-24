@@ -1,0 +1,6 @@
+{
+  "research/klines.cjs": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+  "research/SCHEMA.md": "041a8f3841ebb3859f8c1e680ddcb0a29e5ee846828372841785721f2e61a74a",
+  "tests/research-data.cjs": "19ee2ad4a52cd575a50bcf2e83125adca5a1b503209335f68d27269a3c667a42",
+  "baseline/research-klines.1.0.0.cjs": "7200e575ba74206dc70a82cdfb7159e9d9596fc5d01e8b0c75215ce30d30d1c5"
+}

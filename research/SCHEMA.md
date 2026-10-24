@@ -1,6 +1,14 @@
 # Hybrid Spot frozen research dataset — schema 1
 
-Tool: `research/klines.cjs`, **1.0.0**, Node.js >=22, built-ins only. The application remains **0.4.3**. This tool neither loads nor changes the terminal, journal, indicators or research-snapshot export.
+Tool: `research/klines.cjs`, **1.0.1**, Node.js >=22, built-ins only. The application remains **0.4.3**. This tool neither loads nor changes the terminal, journal, indicators or research-snapshot export.
+
+## Tool 1.0.1 validation patch (schema unchanged)
+
+The external review of commit `c7dbee4e463ac9bc28dc164f807fda3efc6fcb28` identified that tool 1.0.0 used a prototype-chain lookup for timeframe validation. An inherited name such as `constructor` could publish zero candles as complete with non-finite counts serialized to null; an array such as `["5m"]` was coerced into an accepted key. The reviewed source is preserved in `baseline/research-klines.1.0.0.cjs` for mocked regression/compatibility tests, not as the current entry point.
+
+Tool 1.0.1 requires **a primitive string plus explicit own-key membership** in the frozen four-entry interval map: `5m`, `15m`, `1h`, `4h`. No key coercion or inherited property lookup is permitted. Acquisition validates configuration before output-path access, filesystem operations or requests; canonical payload validation, quality, offline verification, comparison and stored checkpoint configuration use the same validation. Requested/coverage counts must be finite nonnegative safe integers, the nominal grid must be nonempty, and complete requires the exact positive requested number of valid unique rows with no missing or extra rows. Valid empty acquisitions remain incomplete.
+
+Schema 1, canonical payload bytes, decimal normalization and data hashes are unchanged for valid inputs. Offline validation/comparison explicitly accepts producer versions **1.0.0 and 1.0.1**; both undergo identical current validation, including when a malformed payload has a recomputed hash. Valid resumable checkpoints from either version are supported with the original cutoff/configuration/data; a successful resume writes producer 1.0.1. Malformed legacy checkpoints are rejected without rewriting their contents or requesting data. Unknown producer versions remain unsupported. Existing frozen 1.0.0 datasets are neither re-versioned nor rewritten.
 
 ## Source contract
 

@@ -3,8 +3,8 @@
 // Independent data tool. Never imports or executes the terminal application.
 const fs=require('node:fs/promises'),path=require('node:path'),crypto=require('node:crypto');
 const {setTimeout:sleep}=require('node:timers/promises');
-const TOOL_VERSION='1.0.0',SCHEMA_VERSION=1;
-const STEPS={'5m':300000,'15m':900000,'1h':3600000,'4h':14400000};
+const TOOL_VERSION='1.0.1',SCHEMA_VERSION=1,COMPATIBLE_TOOL_VERSIONS=['1.0.0',TOOL_VERSION];
+const STEPS=Object.freeze({'5m':300000,'15m':900000,'1h':3600000,'4h':14400000});
 const BASES=['https://data-api.binance.vision','https://api.binance.com'];
 const SOURCE={venue:'BINANCE',market:'SPOT',endpoint:'/api/v3/klines',timeZone:'UTC',timestampUnit:'ms',normalization:'decimal-text-v1'};
 const MAX_ROWS=1000000,DECIMAL=/^(0|[1-9]\d*)(\.\d+)?$/;
@@ -13,11 +13,12 @@ const iso=t=>new Date(t).toISOString();
 function fail(message,code='VALIDATION'){throw Object.assign(new Error(message),{code})}
 function keys(v,wanted){return v&&typeof v==='object'&&!Array.isArray(v)&&JSON.stringify(Object.keys(v).sort())===JSON.stringify([...wanted].sort())}
 function utc(value){if(typeof value!=='string'||!/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d{3})?Z$/.test(value))fail('Use explicit UTC ISO timestamps ending in Z');const n=Date.parse(value);if(!Number.isSafeInteger(n)||iso(n)!==value.replace(/Z$/,value.includes('.')?'Z':'.000Z'))fail('Invalid UTC date');return n}
+function timeframeStep(timeframe){if(typeof timeframe!=='string'||!Object.hasOwn(STEPS,timeframe))fail('Supported timeframes require a primitive string: 5m/15m/1h/4h');return STEPS[timeframe]}
 function config({symbol,timeframe,start,end,baseUrl=BASES[0]}){
- if(!['BTCUSDT','ETHUSDT','SOLUSDT'].includes(symbol)||!STEPS[timeframe])fail('Supported symbols: BTCUSDT/ETHUSDT/SOLUSDT; timeframes: 5m/15m/1h/4h');
- const a=typeof start==='string'?utc(start):start,b=typeof end==='string'?utc(end):end,step=STEPS[timeframe];
+ const step=timeframeStep(timeframe);if(!['BTCUSDT','ETHUSDT','SOLUSDT'].includes(symbol))fail('Supported symbols: BTCUSDT/ETHUSDT/SOLUSDT; timeframes: 5m/15m/1h/4h');
+ const a=typeof start==='string'?utc(start):start,b=typeof end==='string'?utc(end):end;
  if(!Number.isSafeInteger(a)||!Number.isSafeInteger(b)||a<Date.UTC(2017,0,1)||b>Date.UTC(2100,0,1)||b<=a||a%step||b%step)fail('Require increasing, interval-aligned UTC boundaries in [2017,2100]');
- if((b-a)/step>MAX_ROWS)fail(`Range exceeds ${MAX_ROWS} candles`);if(!BASES.includes(baseUrl))fail('Unsupported public Binance Spot base URL');
+ const count=(b-a)/step;if(!Number.isSafeInteger(count)||count<=0||count>MAX_ROWS)fail(`Range must contain 1 to ${MAX_ROWS} whole candles`);if(!BASES.includes(baseUrl))fail('Unsupported public Binance Spot base URL');
  return{symbol,timeframe,startInclusive:a,endExclusive:b,baseUrl,pageSize:1000};
 }
 function decimal(s){if(typeof s!=='string'||s.length>128||!DECIMAL.test(s))fail('Expected nonnegative plain decimal string (<=128 characters)');const [i,f='']=s.split('.');return{n:BigInt(i+f),scale:f.length}}
@@ -35,7 +36,7 @@ function canonical(p){if(!keys(p,['schemaVersion','source','symbol','timeframe',
  const c=config({symbol:p.symbol,timeframe:p.timeframe,start:p.range.startInclusive,end:p.range.endExclusive});return JSON.stringify(payload(c,p.candles));
 }
 function quality(p,cutoff){canonical(p);if(!Number.isSafeInteger(cutoff)||cutoff<Date.UTC(2017,0,1)||cutoff>=Date.UTC(2100,0,1))fail('Invalid trusted acquisition cutoff');
- const step=STEPS[p.timeframe],{startInclusive:start,endExclusive:end}=p.range,seen=new Map(),validTimes=new Set(),issues=[],duplicates=[];let issueCount=0,previous=-1,duplicateRows=0,conflictingTimestamps=0;
+ const step=timeframeStep(p.timeframe),{startInclusive:start,endExclusive:end}=p.range,seen=new Map(),validTimes=new Set(),issues=[],duplicates=[];let issueCount=0,previous=-1,duplicateRows=0,conflictingTimestamps=0;
  const issue=(index,message)=>{issueCount++;if(issues.length<1000)issues.push({index,message})};
  p.candles.forEach((r,i)=>{const errors=rowErrors(r,step);errors.forEach(e=>issue(i,e));if(!Array.isArray(r)||!Number.isSafeInteger(r[0]))return;const t=r[0];
   if(t<previous)issue(i,'timestamps out of order');previous=t;if(t<start||t>=end)issue(i,'outside requested range');if(r[6]>=cutoff)issue(i,'developing/future candle in frozen data');
@@ -45,9 +46,10 @@ function quality(p,cutoff){canonical(p);if(!Number.isSafeInteger(cutoff)||cutoff
  const times=[...validTimes].sort((a,b)=>a-b),gaps=[];let cursor=start;
  for(const t of times){if(t>cursor)gaps.push({startInclusive:cursor,endExclusive:t,missingRows:(t-cursor)/step});cursor=t+step}if(cursor<end)gaps.push({startInclusive:cursor,endExclusive:end,missingRows:(end-cursor)/step});
  const expectedRows=(end-start)/step,missingRows=gaps.reduce((s,g)=>s+g.missingRows,0),eligibleEnd=Math.max(start,Math.min(end,Math.floor(cutoff/step)*step));
- return{state:issueCount?'invalid':missingRows?'incomplete':'complete',rowCount:p.candles.length,uniqueTimestampCount:seen.size,validUniqueRows:times.length,expectedRows,eligibleRowsAtCutoff:(eligibleEnd-start)/step,excludedDevelopingOrFutureRows:(end-eligibleEnd)/step,missingRows,duplicateRows,conflictingTimestamps,duplicates,gaps,coverage:{firstOpenTime:times[0]??null,lastOpenTime:times.at(-1)??null,endExclusive:times.length?times.at(-1)+step:null,contiguous:times.length>0&&gaps.length===0},issueCount,issues,issuesTruncated:issueCount>issues.length};
+ const counts=[expectedRows,missingRows,(eligibleEnd-start)/step,(end-eligibleEnd)/step,p.candles.length,seen.size,times.length,duplicateRows,conflictingTimestamps,issueCount];if(expectedRows<=0||!counts.every(n=>Number.isSafeInteger(n)&&n>=0)||times.length+missingRows!==expectedRows)fail('Invalid coverage counts');
+ return{state:issueCount?'invalid':times.length===expectedRows&&p.candles.length===expectedRows&&missingRows===0?'complete':'incomplete',rowCount:p.candles.length,uniqueTimestampCount:seen.size,validUniqueRows:times.length,expectedRows,eligibleRowsAtCutoff:(eligibleEnd-start)/step,excludedDevelopingOrFutureRows:(end-eligibleEnd)/step,missingRows,duplicateRows,conflictingTimestamps,duplicates,gaps,coverage:{firstOpenTime:times[0]??null,lastOpenTime:times.at(-1)??null,endExclusive:times.length?times.at(-1)+step:null,contiguous:times.length>0&&gaps.length===0},issueCount,issues,issuesTruncated:issueCount>issues.length};
 }
-function verify(d){if(!keys(d,['kind','toolVersion','payload','dataHash','quality','acquisition'])||d.kind!=='hybrid-frozen-spot-dataset'||d.toolVersion!==TOOL_VERSION)fail('Not a supported frozen dataset (checkpoints are not datasets)');
+function verify(d){if(!keys(d,['kind','toolVersion','payload','dataHash','quality','acquisition'])||d.kind!=='hybrid-frozen-spot-dataset'||!COMPATIBLE_TOOL_VERSIONS.includes(d.toolVersion))fail('Not a supported frozen dataset (checkpoints are not datasets)');
  const actualHash=hash(canonical(d.payload));if(!/^[a-f0-9]{64}$/.test(d.dataHash)||d.dataHash!==actualHash)fail('Data hash mismatch: possible tampering');
  const q=quality(d.payload,d.acquisition?.cutoffServerTime);if(JSON.stringify(d.quality)!==JSON.stringify(q))fail('Stored quality differs from independently recomputed quality');
  return{dataHash:actualHash,...q};
@@ -70,11 +72,12 @@ async function acquire(input,deps={}){
  const check=()=>{if(signal?.aborted)throw signal.reason||Object.assign(new Error('Cancelled'),{name:'AbortError'})};
  const persist=()=>save(cp,cpFile);
  try{
-  if(input.resume){const saved=JSON.parse(await fs.readFile(cpFile,'utf8'));if(saved.kind!=='hybrid-acquisition-checkpoint'||saved.toolVersion!==TOOL_VERSION||saved.checkpointHash!==checkpointHash(saved)||JSON.stringify(saved.config)!==JSON.stringify(c))fail('Checkpoint integrity/configuration mismatch');
+  if(input.resume){const saved=JSON.parse(await fs.readFile(cpFile,'utf8'));if(saved.kind!=='hybrid-acquisition-checkpoint'||!COMPATIBLE_TOOL_VERSIONS.includes(saved.toolVersion)||saved.checkpointHash!==checkpointHash(saved))fail('Checkpoint integrity/configuration mismatch');
+   config({symbol:saved.config?.symbol,timeframe:saved.config?.timeframe,start:saved.config?.startInclusive,end:saved.config?.endExclusive,baseUrl:saved.config?.baseUrl});if(JSON.stringify(saved.config)!==JSON.stringify(c))fail('Checkpoint integrity/configuration mismatch');
    if(saved.cutoffServerTime!==null){const q=quality(payload(c,saved.rows),saved.cutoffServerTime);if(q.issueCount)fail('Checkpoint contains invalid rows');}
-   if(!Number.isSafeInteger(saved.cursor)||saved.cursor<c.startInclusive||saved.cursor>c.endExclusive||saved.cursor%STEPS[c.timeframe]||saved.rows.some(r=>r[0]>=saved.cursor))fail('Invalid checkpoint cursor');
+   if(!Number.isSafeInteger(saved.cursor)||saved.cursor<c.startInclusive||saved.cursor>c.endExclusive||saved.cursor%timeframeStep(c.timeframe)||saved.rows.some(r=>r[0]>=saved.cursor))fail('Invalid checkpoint cursor');
    if(saved.rejectedPages.length)fail('Checkpoint has rejected source pages; retain evidence and restart at a new output path');
-   cp=saved;cp.resumes++;cp.status='in-progress';
+   cp=saved;cp.toolVersion=TOOL_VERSION;cp.resumes++;cp.status='in-progress';
   }else{if(await exists(cpFile))fail('Checkpoint exists; use --resume with exactly the same configuration','EXISTS');cp={kind:'hybrid-acquisition-checkpoint',toolVersion:TOOL_VERSION,config:c,status:'in-progress',createdAt:iso(clock()),updatedAt:iso(clock()),cutoffServerTime:null,cursor:c.startInclusive,rows:[],pages:0,resumes:0,requests:[],retryNotBefore:0,rejectedPages:[]}}
   await persist();
   async function request(endpoint,params={}){
@@ -94,7 +97,7 @@ async function acquire(input,deps={}){
    }
   }
   if(cp.cutoffServerTime===null){const time=await request('/api/v3/time');if(!Number.isSafeInteger(time?.serverTime)||time.serverTime<Date.UTC(2017,0,1)||time.serverTime>=Date.UTC(2100,0,1))fail('Trusted server time unavailable');cp.cutoffServerTime=time.serverTime;await persist()}
-  const step=STEPS[c.timeframe],effectiveEnd=Math.max(c.startInclusive,Math.min(c.endExclusive,Math.floor(cp.cutoffServerTime/step)*step)),pageBudget=Math.ceil((effectiveEnd-c.startInclusive)/step)+1;
+  const step=timeframeStep(c.timeframe),effectiveEnd=Math.max(c.startInclusive,Math.min(c.endExclusive,Math.floor(cp.cutoffServerTime/step)*step)),pageBudget=Math.ceil((effectiveEnd-c.startInclusive)/step)+1;
   while(cp.cursor<effectiveEnd){check();if(cp.pages>=pageBudget)fail('Page budget exhausted');const start=cp.cursor,end=Math.min(effectiveEnd,start+1000*step),rows=await request('/api/v3/klines',{symbol:c.symbol,interval:c.timeframe,timeZone:'0',startTime:start,endTime:end-1,limit:1000});
    let errors=[];if(!Array.isArray(rows)||rows.length>1000)errors=['Invalid page structure/size'];else{rows.forEach((r,i)=>{rowErrors(r,step).forEach(e=>errors.push(`row ${i}: ${e}`));if(Array.isArray(r)&&(r[0]<start||r[0]>=end||r[6]>=cp.cutoffServerTime))errors.push(`row ${i}: outside page bounds/cutoff`);if(i&&Array.isArray(r)&&Array.isArray(rows[i-1])&&r[0]<=rows[i-1][0])errors.push(`row ${i}: duplicate/conflicting/unordered timestamps`)});}
    const next=Array.isArray(rows)&&rows.length?rows.at(-1)?.[0]+step:end;if(!Number.isSafeInteger(next)||next<=start||next>end)errors.push('No valid strict forward progress');

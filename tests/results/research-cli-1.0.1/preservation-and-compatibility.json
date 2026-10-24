@@ -1,0 +1,29 @@
+{
+  "verifiedAt": "2026-10-24T14:24:49.272553+00:00",
+  "scope": "Local retained 1.0.0 datasets are optional, excluded from CI, and read only. Required regressions generate legacy-version fixtures with mocked responses.",
+  "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "allRetainedDatasetAndCheckpointBytesUnchanged": true,
+  "offlineCompatibilityChecks": [
+    {
+      "file": "research/datasets/btcusdt-5m-2026-07-01-repeat-a.json",
+      "state": "complete",
+      "rows": 288,
+      "dataHash": "2912a020aaff86d529f1cc5af148478c48bf99c617c84a9db89b93abb166e34c",
+      "exitCode": 0
+    },
+    {
+      "file": "research/datasets/btcusdt-5m-2026-07-01-repeat-b.json",
+      "state": "complete",
+      "rows": 288,
+      "dataHash": "2912a020aaff86d529f1cc5af148478c48bf99c617c84a9db89b93abb166e34c",
+      "exitCode": 0
+    },
+    {
+      "file": "research/datasets/btcusdt-5m-2026-q3.json",
+      "state": "complete",
+      "rows": 26496,
+      "dataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+      "exitCode": 0
+    }
+  ]
+}

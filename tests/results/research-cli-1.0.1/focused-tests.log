@@ -1,0 +1,26 @@
+✔ UTC configuration/alignment and exact twelve-field decimal validation (16.552701ms)
+✔ bounded pagination: 1000/200 rows, endTime exclusive conversion, offline process and no overwrite (312.232016ms)
+✔ short pages continue, empty windows advance and explicitly report gaps (329.127807ms)
+✔ developing candle exclusion uses fixed trusted cutoff and UTC boundaries (107.570018ms)
+✔ duplicates/conflicts/order/gaps and exact precision remain visible to offline quality (1.257952ms)
+✔ bad/duplicate/backward pages stop; raw rejected rows survive without a frozen output (209.487478ms)
+✔ hashes exclude metadata, preserve raw decimal text and detect changed/tampered data/quality/schema (187.635701ms)
+✔ 429 Retry-After and 5xx retries obey bounded waits; 418 stops immediately (269.607399ms)
+✔ request timeouts and cancellation/resumption preserve pages, cutoff and configuration (247.635519ms)
+✔ offline CLI detects edited files and original app remains untouched (159.800764ms)
+✔ checkpoint tampering and concurrent writer locks cannot resume or overwrite work (56.983432ms)
+✔ actual compare/invalid-quality CLI exit codes and absent trusted server clock (210.428359ms)
+✔ external finding reproduces on reviewed 1.0.0 and reopened dataset is rejected by 1.0.1 (109.230031ms)
+✔ invalid timeframe input fails before any filesystem/network call, without coercion, including resume (2.960102ms)
+✔ canonical/quality/verify/comparison reject forged timeframe payloads even with recomputed hashes for both producers (459.003241ms)
+✔ all four timeframes retain valid 1.0.0 hashes/quality, and empty ranges of data are finite incomplete states (5.213573ms)
+✔ valid cancelled 1.0.0 checkpoint resumes as 1.0.1 with identical rows/hash and original cutoff (183.782403ms)
+✔ malformed checksummed checkpoints from either producer reject stored timeframe before network and retain original bytes (109.340375ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3146.335856

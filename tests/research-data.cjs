@@ -50,3 +50,90 @@ test('actual compare/invalid-quality CLI exit codes and absent trusted server cl
  const invalid=dataset(tool.config(f.input),[row(START),row(START)]);await fs.writeFile(fileB,JSON.stringify(invalid));const checked=spawnSync(process.execPath,['research/klines.cjs','validate','--file',fileB],{encoding:'utf8'});assert.ifError(checked.error);assert.equal(checked.status,1);assert.equal(JSON.parse(checked.stdout).state,'invalid');
  const g=await fixture(2);try{g.deps.fetch=async()=>response({});await assert.rejects(tool.acquire(g.input,g.deps),/Trusted server time unavailable/);await assert.rejects(fs.access(g.input.out))}finally{await g.clean()}
  }finally{await f.clean()}});
+
+// External review regression: never use inherited object keys or coerce a timeframe.
+const legacyTool=require('../baseline/research-klines.1.0.0.cjs');
+const inheritedTimeframes=['constructor','toString','__proto__','hasOwnProperty','valueOf','isPrototypeOf','propertyIsEnumerable','__defineGetter__','**proto**'];
+const serializableBadTimeframes=[...inheritedTimeframes,['5m'],['constructor'],{},null,5,true];
+const checkpointDigest=cp=>{const {checkpointHash,...state}=cp;return tool.hash(state)};
+
+test('external finding reproduces on reviewed 1.0.0 and reopened dataset is rejected by 1.0.1',async()=>{
+ const f=await fixture(2);try{
+  const d=await legacyTool.acquire({...f.input,timeframe:'constructor'},f.deps);
+  assert.equal(d.payload.candles.length,0);assert.equal(d.quality.state,'complete');
+  assert.equal(f.requests.length,1);assert.ok(f.requests[0].endsWith('/api/v3/time'));
+  const reopened=JSON.parse(await fs.readFile(f.input.out,'utf8'));
+  assert.equal(reopened.quality.expectedRows,null);assert.equal(legacyTool.verify(reopened).state,'complete');
+  await fs.writeFile(f.input.out,JSON.stringify({...reopened,dataHash:tool.hash(JSON.stringify(reopened.payload))}));
+  const result=spawnSync(process.execPath,['research/klines.cjs','validate','--file',f.input.out],{encoding:'utf8'});
+  assert.ifError(result.error);assert.equal(result.status,1);assert.match(result.stderr,/primitive string/);
+ }finally{await f.clean()}
+});
+
+test('invalid timeframe input fails before any filesystem/network call, without coercion, including resume',async()=>{
+ let coerced=0,network=0;const filesystem=[];
+ const bad=[...serializableBadTimeframes,undefined,0,false,NaN,Infinity,5n,Symbol('5m'),()=>{},new String('5m'),Object.create(null),{toString(){coerced++;return'5m'}},{[Symbol.toPrimitive](){coerced++;return'5m'}}];
+ const names=['mkdir','access','open','readFile','writeFile','rename','link','rm'],original=Object.fromEntries(names.map(n=>[n,fs[n]]));
+ try{
+  for(const name of names)fs[name]=async()=>{filesystem.push(name);throw Error('Unexpected filesystem call')};
+  for(const timeframe of bad)for(const resume of [false,true]){
+   const input={symbol:'BTCUSDT',timeframe,start:START,end:START+STEP,out:'unused-invalid-timeframe/data.json',resume};
+   assert.throws(()=>tool.config(input),/primitive string/);
+   await assert.rejects(tool.acquire(input,{fetch:async()=>{network++;throw Error('Unexpected network call')}}),/primitive string/);
+  }
+ }finally{for(const name of names)fs[name]=original[name]}
+ assert.deepEqual(filesystem,[]);assert.equal(network,0);assert.equal(coerced,0);
+});
+
+test('canonical/quality/verify/comparison reject forged timeframe payloads even with recomputed hashes for both producers',()=>{
+ const valid=dataset(c,rows(1200));
+ for(const producer of ['1.0.0','1.0.1'])for(const timeframe of serializableBadTimeframes){
+  const forged=JSON.parse(JSON.stringify({...valid,toolVersion:producer,payload:{...valid.payload,timeframe,candles:[]},quality:{...valid.quality,state:'complete',rowCount:0,expectedRows:null,eligibleRowsAtCutoff:null,excludedDevelopingOrFutureRows:null}}));
+  forged.dataHash=tool.hash(JSON.stringify(forged.payload));
+  assert.throws(()=>tool.canonical(forged.payload),/primitive string/);
+  assert.throws(()=>tool.quality(forged.payload,END),/primitive string/);
+  assert.throws(()=>tool.verify(forged),/primitive string/);
+  assert.throws(()=>tool.diff(valid,forged),/primitive string/);
+  assert.throws(()=>tool.diff(forged,valid),/primitive string/);
+ }
+});
+
+test('all four timeframes retain valid 1.0.0 hashes/quality, and empty ranges of data are finite incomplete states',()=>{
+ assert.equal(tool.TOOL_VERSION,'1.0.1');assert.equal(tool.SCHEMA_VERSION,1);
+ for(const [timeframe,step]of Object.entries(tool.STEPS)){
+  const cfg=tool.config({symbol:'BTCUSDT',timeframe,start:START,end:START+2*step});
+  const data=[row(START,{6:START+step-1}),row(START+step,{6:START+2*step-1})];
+  const p=legacyTool.payload(cfg,data),old={kind:'hybrid-frozen-spot-dataset',toolVersion:'1.0.0',payload:p,dataHash:legacyTool.hash(legacyTool.canonical(p)),quality:legacyTool.quality(p,cfg.endExclusive),acquisition:{cutoffServerTime:cfg.endExclusive}};
+  const current=dataset(cfg,data);assert.equal(current.dataHash,old.dataHash);assert.deepEqual(tool.verify(old),tool.verify(current));assert.equal(tool.diff(old,current).identical,true);
+  for(const cutoff of [START-step,START+step-1,cfg.endExclusive]){
+   const q=tool.quality(tool.payload(cfg,[]),cutoff);assert.equal(q.state,'incomplete');assert.equal(q.rowCount,0);assert.equal(q.expectedRows,2);assert.equal(q.missingRows,2);
+   for(const field of ['expectedRows','missingRows','eligibleRowsAtCutoff','excludedDevelopingOrFutureRows','rowCount','validUniqueRows'])assert.ok(Number.isSafeInteger(q[field])&&q[field]>=0);
+   const claimed=dataset(cfg,[],cutoff);claimed.quality.state='complete';claimed.quality.expectedRows=null;assert.throws(()=>tool.verify(claimed),/quality differs/);
+  }
+ }
+ assert.throws(()=>{tool.STEPS.constructor=300000},TypeError);
+});
+
+test('valid cancelled 1.0.0 checkpoint resumes as 1.0.1 with identical rows/hash and original cutoff',async()=>{
+ const f=await fixture(1200),abort=new AbortController();try{
+  f.deps.signal=abort.signal;f.deps.onPage=()=>abort.abort(new Error('legacy pause'));
+  await assert.rejects(legacyTool.acquire(f.input,f.deps),/legacy pause/);
+  const cpFile=f.input.out+'.checkpoint.json',old=JSON.parse(await fs.readFile(cpFile));assert.equal(old.toolVersion,'1.0.0');assert.equal(old.rows.length,1000);
+  delete f.deps.signal;delete f.deps.onPage;f.setNow(START+2000*STEP);
+  const d=await tool.acquire({...f.input,resume:true},f.deps),cp=JSON.parse(await fs.readFile(cpFile));
+  assert.equal(d.toolVersion,'1.0.1');assert.equal(cp.toolVersion,'1.0.1');assert.equal(d.quality.state,'complete');assert.equal(d.acquisition.cutoffServerTime,old.cutoffServerTime);assert.equal(d.acquisition.resumes,1);
+  assert.deepEqual(d.payload.candles,rows(1200));assert.equal(d.dataHash,legacyTool.hash(legacyTool.canonical(legacyTool.payload(tool.config(f.input),rows(1200)))));
+ }finally{await f.clean()}
+});
+
+test('malformed checksummed checkpoints from either producer reject stored timeframe before network and retain original bytes',async()=>{
+ const f=await fixture(2),abort=new AbortController();try{
+  f.deps.signal=abort.signal;f.deps.onPage=()=>abort.abort(new Error('pause'));
+  await assert.rejects(tool.acquire(f.input,f.deps),/pause/);
+  const file=f.input.out+'.checkpoint.json',saved=JSON.parse(await fs.readFile(file));delete f.deps.signal;delete f.deps.onPage;
+  for(const producer of ['1.0.0','1.0.1'])for(const timeframe of serializableBadTimeframes){
+   const cp={...saved,toolVersion:producer,config:{...saved.config,timeframe}};cp.checkpointHash=checkpointDigest(cp);const bytes=JSON.stringify(cp);await fs.writeFile(file,bytes);
+   const before=f.requests.length;await assert.rejects(tool.acquire({...f.input,resume:true},f.deps),/primitive string/);assert.equal(f.requests.length,before);assert.equal(await fs.readFile(file,'utf8'),bytes);await assert.rejects(fs.access(f.input.out));
+  }
+ }finally{await f.clean()}
+});

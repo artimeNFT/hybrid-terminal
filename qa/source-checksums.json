@@ -1,10 +1,11 @@
 {
   "hybrid-terminal.html": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
-  "research/klines.cjs": "7200e575ba74206dc70a82cdfb7159e9d9596fc5d01e8b0c75215ce30d30d1c5",
-  "research/SCHEMA.md": "d4698d2ca8351a67293c53842b5ba0fc6cec31c3b888d1ab7fae19afd2198a72",
+  "research/klines.cjs": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+  "research/SCHEMA.md": "041a8f3841ebb3859f8c1e680ddcb0a29e5ee846828372841785721f2e61a74a",
   "baseline/hybrid-terminal.0.3.1.html": "940e951deaea0474a575a4ba859c43333aed9b5996441ab6975f22f5beba793e",
   "baseline/hybrid-terminal.0.4.0.html": "0593c0096957d295628d267f1f3b16dd90a6478832d61bf39d2e9ed1959bc7d9",
   "baseline/hybrid-terminal.0.4.1.html": "7ebb7bf88cc2721722b5e4d6769a6938a5b48478f03452919e50259f2512caf4",
   "baseline/hybrid-terminal.0.4.2.html": "d91b92a0105e4c35aa8357d19ac123a2c73918cf093a7e905b1aa4941df7b6ed",
-  "baseline/hybrid-terminal.original.html": "88bbfd418aeddb437240f517173d4581badda8f45ef8100c240555efafc3d533"
+  "baseline/hybrid-terminal.original.html": "88bbfd418aeddb437240f517173d4581badda8f45ef8100c240555efafc3d533",
+  "baseline/research-klines.1.0.0.cjs": "7200e575ba74206dc70a82cdfb7159e9d9596fc5d01e8b0c75215ce30d30d1c5"
 }

@@ -17,7 +17,7 @@ npm run qa:browser:install
 npm run test:browser
 ```
 
-`npm test` runs the reviewed tracked-source hashes, nine deterministic app suites and the 12-case research suite. Browser QA runs the existing five mocked Chromium scripts with synthetic REST/WebSocket fixtures, a guard rejecting unmocked external requests, and per-context traces. Test logs, screenshots, traces and manifests go to ignored `.qa-results/`. Open a trace with `npx playwright show-trace .qa-results/browser/browser-navigation/trace-1.zip`. Neither required CI group uses public Binance, acquired datasets, browser journals, credentials or WSL-specific paths. Legacy direct script commands remain available; the npm runner supplies nonhistorical output directories.
+`npm test` runs the reviewed tracked-source hashes, nine deterministic app suites and the 18-case research suite. Browser QA runs the existing five mocked Chromium scripts with synthetic REST/WebSocket fixtures, a guard rejecting unmocked external requests, and per-context traces. Test logs, screenshots, traces and manifests go to ignored `.qa-results/`. Open a trace with `npx playwright show-trace .qa-results/browser/browser-navigation/trace-1.zip`. Neither required CI group uses public Binance, acquired datasets, browser journals, credentials or WSL-specific paths. Legacy direct script commands remain available; the npm runner supplies nonhistorical output directories.
 
 On a minimal **Ubuntu 24.04 x64 WSL host without passwordless sudo**, use `npm run qa:browser:local` instead of `qa:browser:install`. It installs the pinned Chromium and downloads/extracts the three missing Ubuntu NSS/NSPR/ALSA packages under ignored `.tools/browser-libs`; the runner discovers these local libraries. Other operating systems should use Playwright's normal dependency setup. This fallback requires Ubuntu apt metadata/access but no system writes. No old `/tmp/hybrid-qa-tools` package/library path is used by the normal QA runner.
 
@@ -27,7 +27,9 @@ Git tracks source, schema, tests, required baselines, documentation, package loc
 
 **STATUS.md contains the only maintained task board. Every completed increment must update it.** Local test success and a local independent Python oracle are distinct from a GitHub Actions run and independent external review. Repository publication/remote run status and any remaining login action are recorded there.
 
-## Frozen research data — tool 1.0.0 / schema 1
+## Frozen research data — tool 1.0.1 / schema 1
+
+CLI **1.0.1** fixes the externally reproduced timeframe-validation defect: only primitive strings `5m`, `15m`, `1h`, `4h` are accepted through an own-key check. Inherited names and coercible non-strings fail before acquisition filesystem/network activity. Valid 1.0.0 datasets/checkpoints remain compatible; malformed payloads are rejected for both producers even if rehashed. Schema 1 and valid-data hashes are unchanged. See `research/SCHEMA.md` and the resolution/evidence on STATUS's single task board.
 
 `research/klines.cjs` is a separate dependency-free Node.js >=22 command-line tool. **The authoritative HTML remains byte-for-byte 0.4.3**, SHA-256 `fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9`. The CLI never imports the terminal, chart cache, indicators or journal. It acquires public Binance Spot klines, preserves all 12 fields and decimal-string precision, validates closed UTC coverage, saves immutable outputs and independently reloads/verifies them offline. Tool/schema are versioned separately from the app.
 
@@ -45,12 +47,12 @@ node research/klines.cjs acquire --symbol BTCUSDT --timeframe 5m --start 2026-07
 node research/klines.cjs validate --file research/datasets/btcusdt-5m-2026-q3.json
 node research/klines.cjs compare --first research/datasets/btcusdt-5m-2026-07-01-repeat-a.json --second research/datasets/btcusdt-5m-2026-07-01-repeat-b.json
 node --test tests/research-data.cjs
-sha256sum -c RESEARCH_DATA_SHA256SUMS.txt
+node scripts/check-source.cjs
 ```
 
 To repeat the small check with a fresh file, use the acquisition command with end `2026-07-02T00:00:00Z` and a new output name, then compare with `research/datasets/btcusdt-5m-2026-07-01-repeat-a.json`. If `data-api.binance.vision` is unavailable, an explicit `--base-url https://api.binance.com` is supported; a resumed acquisition must keep its original host.
 
-Adjacent `.checkpoint.json` files are resumable work states, **not frozen datasets**; the offline dataset validator rejects them. Request timeout is 15 seconds, pages at most 1,000, retries at most three, with pacing, Retry-After and immediate HTTP 418 stop. Missing/developing rows remain gaps and produce `incomplete`; invalid/conflicting source pages block and remain in checkpoint evidence. Exit 0 means complete/identical, 2 valid incomplete/different, 1 error/invalid, 130 cancelled. See `research/SCHEMA.md` for exact field order/units, canonical bytes, precision/quality rules, rate policy, lock recovery and resource bounds. Data hashes exclude volatile acquisition metadata; file checksums protect the delivered bytes separately.
+Adjacent `.checkpoint.json` files are resumable work states, **not frozen datasets**; the offline dataset validator rejects them. Request timeout is 15 seconds, pages at most 1,000, retries at most three, with pacing, Retry-After and immediate HTTP 418 stop. Missing/developing rows remain gaps and produce `incomplete`; invalid/conflicting source pages block and remain in checkpoint evidence. Exit 0 means complete/identical, 2 valid incomplete/different, 1 error/invalid, 130 cancelled. See `research/SCHEMA.md` for exact field order/units, canonical bytes, precision/quality rules, rate policy, lock recovery and resource bounds. Data hashes exclude volatile acquisition metadata; file checksums protect delivered bytes separately. `RESEARCH_DATA_SHA256SUMS.txt` and earlier delivery manifests remain historical **1.0.0** records; use the reviewed historical commit/original delivery to check them. Current mandatory source checks are `qa/source-checksums.json` via `npm run check:source`; CLI 1.0.1 source/test/schema checks are also recorded in `qa/research-cli-1.0.1-sha256.json`.
 
 Evidence and provenance: `tests/results/research-data-v1/`, `SOURCE_PROVENANCE.md`, `STATUS.md`. No app dependency, UI, strategy, research-snapshot export, archive ingestion, indicator or paper-trade feature changed. Prior app browser/live evidence remains historical; no new UTC-midnight or long-session observation was performed.
 
