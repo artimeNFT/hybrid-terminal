@@ -27,7 +27,7 @@ The preparation cutoff is an engineering choice made **after** the sensitivity a
 
 `node research/calculation-contract.cjs` verified declaration consistency and all five pinned source hashes on Node 24. It read no acquired data and executed no application bootstrap. `git diff --check` passed. Preservation checks verified **24 protected tracked files byte-for-byte** and all **six retained dataset/checkpoint byte hashes** against their historical manifest. The app remains 0.4.3 and CLI 1.0.1/schema 1. The original audit/source/protocol/results, package lock and historical manifests are unchanged. Evidence: `fixtures.log`, `local-manifest.json`, `preservation-and-validation.json`; new-only source hashes: `qa/calculation-contract-v1-sha256.json`.
 
-No completed real Q3 audit, application/research/browser suite or market acquisition was repeated locally. Existing mandatory Actions jobs run automatically for the publication with the new contract group; actual fixed implementation/run evidence is recorded in STATUS after verification. No success is inferred from workflow configuration alone.
+No completed real Q3 audit, application/research/browser suite or market acquisition was repeated locally. Actual publication commit `f6236523fd5e560bdd6beeed3b0fcf956434d514` passed [Actions run 40116748389](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40116748389), both jobs: nine app suites, 18 research cases, nine audit fixtures, nine contract fixtures and five mocked Chromium suites. Metadata and filtered passing logs are tracked alongside this report. No success is inferred from workflow configuration alone.
 
 ## Exact next action and limitations
 

@@ -1,0 +1,31 @@
+{
+  "conclusion": "success",
+  "createdAt": "2026-10-24T17:34:37Z",
+  "databaseId": 40116748389,
+  "headSha": "f6236523fd5e560bdd6beeed3b0fcf956434d514",
+  "jobs": [
+    {
+      "completedAt": "2026-10-24T17:35:44Z",
+      "conclusion": "success",
+      "databaseId": 120939495398,
+      "name": "Node 24 deterministic QA",
+      "startedAt": "2026-10-24T17:34:40Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/artimeNFT/hybrid-terminal/actions/runs/40116748389/job/120939495398"
+    },
+    {
+      "completedAt": "2026-10-24T17:35:48Z",
+      "conclusion": "success",
+      "databaseId": 120939495707,
+      "name": "Node 24 mocked Chromium QA",
+      "startedAt": "2026-10-24T17:34:40Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/artimeNFT/hybrid-terminal/actions/runs/40116748389/job/120939495707"
+    }
+  ],
+  "status": "completed",
+  "updatedAt": "2026-10-24T17:35:49Z",
+  "url": "https://github.com/artimeNFT/hybrid-terminal/actions/runs/40116748389"
+}
