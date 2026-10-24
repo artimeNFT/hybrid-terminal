@@ -6,6 +6,59 @@ Date: 2026-10-24, Asia/Jerusalem.
 **Independent CLI tool 1.0.1 / dataset schema 1:** `research/klines.cjs`.
 Final tool SHA-256: `50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d`.
 
+## Start here — handoff and roadmap
+
+**Purpose:** build an accessible, auditable market-context and research terminal, and test whether vector zones add information beyond comparable ordinary levels. Trading advantage remains unestablished.
+
+**Project:** https://github.com/artimeNFT/hybrid-terminal (private). Authoritative WSL root: `/mnt/c/users/shlom/desktop/the hybrid-terminal`, separate from VECTOR LAB. Current implementation checkpoint: `ffa1d61a45376dd949b3bf9916e18e5dc160f41b`; app **0.4.3**, acquisition CLI **1.0.1 / schema 1**, readiness audit **1.0.0**. Git HEAD also includes subsequent documentation updates.
+
+Read this section and the maintained task board first, then the specific task's source/report. README covers operation. Historical sections below preserve earlier evidence. Keep one active implementation task: the existing VS Code/WSL Codex session implements code; this conversation reviews evidence, prioritizes work and maintains shared documentation.
+
+### Roadmap sequence
+
+The maintained task board below holds detailed statuses and evidence.
+
+| Stage | Deliverable | Position |
+| --- | --- | --- |
+| 1. Usable terminal and reproducible work | Readable chart/navigation, honest data states, preserved journal, private Git and CI | Implemented; actual midnight/long-session/physical-touch observations remain open |
+| 2. Data and calculation reliability | Frozen validated inputs, causal checks and measured history-origin sensitivity | CLI 1.0.1 and audit 1.0.0 delivered; focused independent check recorded below |
+| 3. Calculation contract | Predeclare fixed origin, burn-in/exclusions, feature error budgets and M/W retained-state policy; separate score inputs from context | **Next bounded task** |
+| 4. Vector-specific pilot | Define deterministic episodes, comparable ordinary-zone controls, event ordering, horizon/censoring, untouched chronological holdout and costs before evaluating outcomes | Queued after the calculation contract |
+| 5. Evidence and trader workflow | Assess effect sizes/uncertainty, dependence, cost-adjusted net R and stability; present supported findings in a concise setup card | Queued; insufficient evidence remains inconclusive |
+
+Readability, data freshness and real-session reliability continue as focused tasks throughout. Preserve BTC/ETH/SOL and 5m/15m/1h/4h, English chart/controls and Hebrew panel/Help, independent palette/body controls and text/shape cues. A condition count is not a probability. Additional indicators, derivatives and new timeframe choices stay deferred until a defined use justifies separate scope.
+
+### Short completion checklist
+
+- [ ] Confirm project root, branch/HEAD and local changes; preserve unfinished work.
+- [ ] Read the active task and define one bounded result.
+- [ ] Reuse completed work/evidence; run checks appropriate to changes or unresolved concerns.
+- [ ] Preserve app/data/journal identities unless explicitly changed by the task.
+- [ ] Update this STATUS with changes, checks, limitations, commit and actual CI result.
+- [ ] Record the exact next unfinished action before pausing or handing off.
+
+### Resume after a limit or interrupted reply
+
+An incomplete reply does not establish whether edits, tests or a push completed. Inspect `git status`, branch/HEAD, recent commits, uncommitted changes and relevant test/CI evidence before repeating work. At meaningful pause points, record completed edits/checks, remaining work and the next command; preserve coherent partial work with a local checkpoint where appropriate.
+
+When remote documentation has advanced, fetch and fast-forward before editing if the local tree is clean. If it contains changes, inspect and preserve them; never reset or discard work to make a pull succeed.
+
+Portable instruction for an existing or new coding chat:
+
+> Continue Hybrid Terminal from https://github.com/artimeNFT/hybrid-terminal. Read STATUS.md's start-here section and task board, then inspect the local root, git status, branch, HEAD, recent commits and uncommitted changes. Identify the last completed checkpoint and resume only the recorded unfinished task. Preserve existing work; do not restart completed implementation or repeat successful checks without a relevant change or unresolved concern. If no implementation task is active, identify the next bounded task before starting another increment.
+
+### Review handoff
+
+Normally send a short completion summary, commit SHA and Actions URL. Tracked files can be read from authorized GitHub access. Attach screenshots, relevant errors, external-model feedback or local/uncommitted files when unavailable there. Acquired datasets and full local audit output are intentionally ignored and cannot be read through GitHub. Request specific evidence when needed. This reduces duplicate handoffs; numerical quota savings are not guaranteed.
+
+### Independent check — 2026-10-24, Asia/Jerusalem
+
+Verified implementation commit `ffa1d61a45376dd949b3bf9916e18e5dc160f41b` and its [successful Actions run](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40114788983), including both jobs. Reviewed the adapter/protocol/report and independently reran all **nine synthetic audit fixtures** in this ChatGPT workspace on Node 24. App and acquisition-CLI blob identities match the previously reviewed source. The real Q3 run was not repeated here; its dataset remains local.
+
+The report records 24 timestamps, 144 origin comparisons and 500 future-append comparisons with zero observed causal differences. Short histories changed votes/targets/plans; there were no action-side or eligibility flips in those real sampled points, only five of which were non-WAIT. EMA800 drift is context-only. These finite checks establish neither universal convergence nor strategy performance.
+
+No code task is active at this documentation checkpoint. **Next:** predeclare the calculation-origin/burn-in/error-budget/state contract; episode generation remains queued.
+
 ## Maintained task board
 
 This is the project's **single task board**. Keep one active implementation task. Every completed increment must update its status, next action and evidence/limitations here; do not create a competing roadmap.
@@ -17,7 +70,7 @@ This is the project's **single task board**. Keep one active implementation task
 | P0 | External timeframe-validation finding | **Resolved — CLI 1.0.1 / schema 1; 18 mocked cases passing** | Retain strict validation and legacy compatibility; episode work stays queued | Reviewed commit `c7dbee4e463ac9bc28dc164f807fda3efc6fcb28`; `tests/results/research-cli-1.0.1/`; [main CI](https://github.com/artimeNFT/hybrid-terminal/actions/workflows/ci.yml?query=branch%3Amain) |
 | P0 | Git / private GitHub / reproducible CI | **Implemented — private repository published; actual CI green** | Maintain the scoped checks and single board on future authorized increments | [Successful GitHub run](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40095837948); `tests/results/ci-publication/` |
 | P1 | CLI credential storage | Follow-up queued — plaintext CLI configuration, file mode `0600` | Migrate to an OS-backed credential store when available; keep secrets out of repository/chat | Publication receipt records storage type only; no credential values are displayed or committed |
-| P0 | Offline calculation-readiness audit | **Implemented — audit 1.0.0; 24 fixed points / 144 origin comparisons / 500 causal comparisons** | Independent adapter/protocol review, then predeclare stable-origin/burn-in/error-budget and M/W carry-state contract before episodes | `tests/results/calculation-readiness-v1/REPORT.md`, `findings.json`; real sample is finite, not performance or absolute-convergence evidence |
+| P0 | Offline calculation-readiness audit | **Implemented — audit 1.0.0; focused independent review and nine-fixture rerun completed** | Predeclare stable-origin/burn-in/error-budget and M/W carry-state contract before episodes | `tests/results/calculation-readiness-v1/REPORT.md`, `findings.json`; real sample is finite, not performance or absolute-convergence evidence |
 | P2 | Episode definitions and matched-control pilot | Queued — origin-sensitivity audit completed separately | Settle/review the calculation-origin contract first; define episodes/controls in a later authorized increment | Readiness report gives assumptions/limits, not trading outcomes; no generation started |
 | P2 | Actual UTC-midnight rollover / one-hour reconnect-storage / physical touch check | Pending observations | Run the bounded observations in their real windows; use a physical device for touch | README bounded-observation commands; `tests/browser-observe-context.cjs`; deterministic/emulated results do not complete these observations |
 | P3 | Additional indicators and derivatives/context features | Deferred | Resolve source/configuration/parity requirements in a separate increment | README follow-up requirements; no approximations or score changes authorized here |
