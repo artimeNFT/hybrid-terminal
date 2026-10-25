@@ -1,0 +1,20 @@
+{
+  "tests/results/planning-costs-0.4.7/REPORT.md": "31da50bd39cd9282b8b566c9fafa9dd24034976d44e53ba13919774f6252feef",
+  "tests/results/planning-costs-0.4.7/app-manifest.json": "5ed669328477c487607089d8536f9a707930091bd6f5ca3ae1b553786056caf6",
+  "tests/results/planning-costs-0.4.7/audit-manifest.json": "d10b466c2cc12d5479efc172997c696e098b4889e3b6026e6cc4acdd7c131113",
+  "tests/results/planning-costs-0.4.7/browser-evidence.json": "b358211a4e680f2933f56e91d53a5f6c8b0cfc64d1568a54b6699eaffd21c7da",
+  "tests/results/planning-costs-0.4.7/browser-focused.log": "e5e231e10128c9f85ad093b638bf19ddbbf0bc293f4ee98cb0bc6f3f30ded256",
+  "tests/results/planning-costs-0.4.7/browser-manifest.json": "18c76c8af1dfac8aa0359946cfa197d07d5bb625af5fb9898f783aea544021af",
+  "tests/results/planning-costs-0.4.7/browser-network-guard.json": "ea36747d47f27883febd0e2f05802d22831fcc75c13870391b665246c343634b",
+  "tests/results/planning-costs-0.4.7/browser-test.log": "1d999104f32f2eec53bdccb8370a3781e2cff9999e857f8f3c3f44b8e0c3320c",
+  "tests/results/planning-costs-0.4.7/contract-manifest.json": "22511720d35df17271da3056ffe8907b58bb87080445c05ec7bb66b153378f55",
+  "tests/results/planning-costs-0.4.7/focused.log": "0d1584cbf3c95c27b30c4f6a162794ea1cdf62dde112e7c431a228deead74611",
+  "tests/results/planning-costs-0.4.7/frozen-check.log": "cc02d63ace9777b7c7a3707c97563f145052f2c6c58e217519a9e54cc06c1a41",
+  "tests/results/planning-costs-0.4.7/npm-test.log": "64d823e45e974c29493fd52400258c68f099347fb960c5ab362b793af4ac78bb",
+  "tests/results/planning-costs-0.4.7/preparation-manifest.json": "50f3609bebe9595fc22b5e34da608da66aa2a882ccc6b4a5c7129f1b658ff72e",
+  "tests/results/planning-costs-0.4.7/presentation-manifest.json": "58ce0367cd350778ebc17fd9965d6c1f3c54c89d6e6f52a1db8c4387f0ab05e9",
+  "tests/results/planning-costs-0.4.7/preservation.json": "6d46638accddbbb5c074da91f6cb626abfad82843bd14fe53b71c1316d1ef7d5",
+  "tests/results/planning-costs-0.4.7/research-manifest.json": "292f61be925923a5c4651d930af943780c106097ca35d7813e48a80dbbb92513",
+  "tests/results/planning-costs-0.4.7/screenshots.json": "e5ae7c612b8cb8cc874d2be13be06094c1dd9109797d8bb07186ba944d992e31",
+  "tests/results/planning-costs-0.4.7/start.json": "5a291d0192ec8dcb15b3dea2ab0d655f9d5c36e58934b7cbee1e65d209b1853d"
+}

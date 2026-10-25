@@ -1,0 +1,21 @@
+{
+  "hybrid-terminal.html": "4bafacddf8d726fc48601471c7a7fe713c2fb2038f0908264131ba864f7aa8e8",
+  "baseline/hybrid-terminal.0.4.6.html": "7c12ba003d8a03bff8322c7d9143c8bc926aa6847b62dbaf065d80b3d55e5195",
+  "baseline/README.md": "778e4877639486f75d15d1ef00f0bb723ac97fd46150a3494064b2b055fe2cc2",
+  "qa/source-checksums.0.4.7.json": "0cd71fa80f2b41c5be29046db2d457cce0e145bb29051e69bd385deae23ceed8",
+  "scripts/check-source.cjs": "53bc42fdcd07c052d00f56abbe9ea2433bda80e1d6a720761a99d68ebe2132ec",
+  "scripts/run-qa.cjs": "927167324d36772c2bcfdf8cda280b3d182096ef0474461cb037a769caaf192a",
+  "tests/planning-costs.cjs": "bec3afe0efae6131b2406b851a8a199f9e30582160c0d069fae79c3a42226d0a",
+  "tests/browser-planning-costs.cjs": "26ae3982e3953ccec3af4c1d5c8034afaf53c6711244b1b693aca9d42075ff9b",
+  "tests/presentation.cjs": "69744f2fd9a5e2f66ea9b1bc31fa7062af89faac0f2f1cfac3a454cc773638e0",
+  "tests/ui-smoke.cjs": "c8941c504a5c748d3c25201f3adb57399c40e69fa6a8070e74cdf2d49e78f58a",
+  "tests/browser-presentation.cjs": "99399f8408f068aa5e4b2cd59f418dce4eeb623fab78994086556be5c84d1ac5",
+  "tests/browser-target-path.cjs": "d2093a188037a862102993d08ed45711973ab698a89a0ec73094aa6e87d9a663",
+  "tests/browser-provenance-readability.cjs": "b196b1720d3c4e3c273e34fa243d8df90bbc6d3e818628b667d8ead1ad3617f3",
+  "tests/browser-observe-context.cjs": "4cdc73e4e9654de1faab7791959d88efaebd9ce28bd53cbab338103ce303c05d",
+  "README.md": "89bbaea72ddcf93d2ff4e46de2beab98e3bdb8232e7a11a22bc5f226a0bba28d",
+  "SOURCE_PROVENANCE.md": "53a71493da64b719efe06eb23b5cab42a0d5e5ff149da38a362291c49728473c",
+  "package.json": "87f5365887dcb339ada56c6b7738e18f428876acfe6e196cd6a90e7c85028266",
+  "package-lock.json": "374d100adb3538281bb9e68e46631a864ae68d82fcc7c61c88e8236ca74dfee0",
+  ".github/workflows/ci.yml": "2be0bc5469288fac5e879d55576459da44dd8177909b28f4d3384dc71e6237a9"
+}

@@ -1,0 +1,176 @@
+{
+  "version": "0.4.7",
+  "sourceSha256": "4bafacddf8d726fc48601471c7a7fe713c2fb2038f0908264131ba864f7aa8e8",
+  "checks": [
+    {
+      "layout": "desktop",
+      "side": "LONG",
+      "baseline": {
+        "state": "available",
+        "basis": "confirmed-decision-close-planning-only",
+        "entry": 96,
+        "stop": 94.74999982583034,
+        "tp2": 103.5,
+        "direction": "LONG",
+        "distance": 1.2500001741696565,
+        "frictionAmount": 0.096,
+        "gapAmount": 0,
+        "gapDirection": "below-stop",
+        "netTP2R": 5.923199174686747,
+        "ordinaryStopR": -1.0767999892990179,
+        "gapStopR": -1.0767999892990179
+      },
+      "stressed": {
+        "state": "available",
+        "basis": "confirmed-decision-close-planning-only",
+        "entry": 96,
+        "stop": 94.74999982583034,
+        "tp2": 103.5,
+        "direction": "LONG",
+        "distance": 1.2500001741696565,
+        "frictionAmount": 0.192,
+        "gapAmount": 0.9474999982583034,
+        "gapDirection": "below-stop",
+        "netTP2R": 5.84639918538773,
+        "ordinaryStopR": -1.1535999785980355,
+        "gapStopR": -1.9115998715882134
+      },
+      "invalidClearsOutput": true,
+      "restoresInputs": true,
+      "inputFocusSurvivesProvisional": true,
+      "baselineAndEngineUnchanged": true,
+      "dimensions": {
+        "width": 359,
+        "scroll": 359
+      }
+    },
+    {
+      "layout": "desktop",
+      "side": "SHORT",
+      "baseline": {
+        "state": "available",
+        "basis": "confirmed-decision-close-planning-only",
+        "entry": 104,
+        "stop": 105.25000017416966,
+        "tp2": 96.5,
+        "direction": "SHORT",
+        "distance": 1.2500001741696565,
+        "frictionAmount": 0.10400000000000001,
+        "gapAmount": 0,
+        "gapDirection": "above-stop",
+        "netTP2R": 5.916799175578496,
+        "ordinaryStopR": -1.0831999884072694,
+        "gapStopR": -1.0831999884072694
+      },
+      "stressed": {
+        "state": "available",
+        "basis": "confirmed-decision-close-planning-only",
+        "entry": 104,
+        "stop": 105.25000017416966,
+        "tp2": 96.5,
+        "direction": "SHORT",
+        "distance": 1.2500001741696565,
+        "frictionAmount": 0.20800000000000002,
+        "gapAmount": 1.0525000017416966,
+        "gapDirection": "above-stop",
+        "netTP2R": 5.8335991871712265,
+        "ordinaryStopR": -1.1663999768145386,
+        "gapStopR": -2.0083998608872315
+      },
+      "invalidClearsOutput": true,
+      "restoresInputs": true,
+      "inputFocusSurvivesProvisional": true,
+      "baselineAndEngineUnchanged": true,
+      "dimensions": {
+        "width": 359,
+        "scroll": 359
+      }
+    },
+    {
+      "layout": "narrow",
+      "side": "LONG",
+      "baseline": {
+        "state": "available",
+        "basis": "confirmed-decision-close-planning-only",
+        "entry": 96,
+        "stop": 94.74999982583034,
+        "tp2": 103.5,
+        "direction": "LONG",
+        "distance": 1.2500001741696565,
+        "frictionAmount": 0.096,
+        "gapAmount": 0,
+        "gapDirection": "below-stop",
+        "netTP2R": 5.923199174686747,
+        "ordinaryStopR": -1.0767999892990179,
+        "gapStopR": -1.0767999892990179
+      },
+      "stressed": {
+        "state": "available",
+        "basis": "confirmed-decision-close-planning-only",
+        "entry": 96,
+        "stop": 94.74999982583034,
+        "tp2": 103.5,
+        "direction": "LONG",
+        "distance": 1.2500001741696565,
+        "frictionAmount": 0.192,
+        "gapAmount": 0.9474999982583034,
+        "gapDirection": "below-stop",
+        "netTP2R": 5.84639918538773,
+        "ordinaryStopR": -1.1535999785980355,
+        "gapStopR": -1.9115998715882134
+      },
+      "invalidClearsOutput": true,
+      "restoresInputs": true,
+      "inputFocusSurvivesProvisional": true,
+      "baselineAndEngineUnchanged": true,
+      "dimensions": {
+        "width": 368,
+        "scroll": 368
+      }
+    },
+    {
+      "layout": "narrow",
+      "side": "SHORT",
+      "baseline": {
+        "state": "available",
+        "basis": "confirmed-decision-close-planning-only",
+        "entry": 104,
+        "stop": 105.25000017416966,
+        "tp2": 96.5,
+        "direction": "SHORT",
+        "distance": 1.2500001741696565,
+        "frictionAmount": 0.10400000000000001,
+        "gapAmount": 0,
+        "gapDirection": "above-stop",
+        "netTP2R": 5.916799175578496,
+        "ordinaryStopR": -1.0831999884072694,
+        "gapStopR": -1.0831999884072694
+      },
+      "stressed": {
+        "state": "available",
+        "basis": "confirmed-decision-close-planning-only",
+        "entry": 104,
+        "stop": 105.25000017416966,
+        "tp2": 96.5,
+        "direction": "SHORT",
+        "distance": 1.2500001741696565,
+        "frictionAmount": 0.20800000000000002,
+        "gapAmount": 1.0525000017416966,
+        "gapDirection": "above-stop",
+        "netTP2R": 5.8335991871712265,
+        "ordinaryStopR": -1.1663999768145386,
+        "gapStopR": -2.0083998608872315
+      },
+      "invalidClearsOutput": true,
+      "restoresInputs": true,
+      "inputFocusSurvivesProvisional": true,
+      "baselineAndEngineUnchanged": true,
+      "dimensions": {
+        "width": 368,
+        "scroll": 368
+      }
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Chromium desktop/narrow with synthetic confirmed/provisional feed; optional planning scenarios only, not account execution or live-session acceptance"
+}

@@ -1,0 +1,113 @@
+{
+  "applicationVersion": "0.4.7",
+  "sourceSha256": "4bafacddf8d726fc48601471c7a7fe713c2fb2038f0908264131ba864f7aa8e8",
+  "viewports": {
+    "desktop": [
+      1440,
+      1100
+    ],
+    "narrowTouchEmulation": [
+      390,
+      844
+    ]
+  },
+  "feed": "Synthetic REST/WebSocket, actual Chromium Canvas; not physical-device acceptance",
+  "images": [
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/desktop-long-baseline.png",
+      "sha256": "c322dbd8620ecb96aa129cb0c87bb28ebb32a265c54ebe801ead82395efdb1f0",
+      "bytes": 178526,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/desktop-long-card.png",
+      "sha256": "101184bb0fa434bb953d21e133961ce9e73e9d19c74d95457d6058221331b8e7",
+      "bytes": 50029,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/desktop-long-invalid.png",
+      "sha256": "a8b8e5af71ff4b554a9df135e6061ea20ed7afe60e335f72dddfa92d8c45c5da",
+      "bytes": 38850,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/desktop-long-stress.png",
+      "sha256": "423000e619b19b9f14d5084aad43f9401e8dceac9872c9bd8020863fc4bbb8db",
+      "bytes": 47960,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/desktop-short-baseline.png",
+      "sha256": "2d0637daf3c8a722e232d63b3e41fc1412bfc6ee53d1ea4726fedac18e825f1f",
+      "bytes": 183262,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/desktop-short-card.png",
+      "sha256": "893a1a971e69388fa47cee352255f6f0bf36236f6d7cfdcf2eeb7e50c00c3d59",
+      "bytes": 51959,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/desktop-short-invalid.png",
+      "sha256": "1d4fd6ff1c0cc53c4d7b61f5a025c021a04769f6f0a0290ed02e8dda2ef26c9e",
+      "bytes": 38858,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/desktop-short-stress.png",
+      "sha256": "b3cf663bdeead364a9c99f4a2b55174b263db07b2b625f3780db738f549434a2",
+      "bytes": 49875,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/narrow-long-baseline.png",
+      "sha256": "14b588452caadcb582e8f4fd7c76b6e2358e82fc60fdd1652679a356e8d41107",
+      "bytes": 73433,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/narrow-long-card.png",
+      "sha256": "94d132f2b8b4c5dd3522ec765fd3c474ab6e3d6682aeb903883216e564423ce1",
+      "bytes": 46203,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/narrow-long-invalid.png",
+      "sha256": "16914139e27b9c2ee9960cecbb4c6479aff3cc7e903fe210b0ae0ec39c6a58a8",
+      "bytes": 37470,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/narrow-long-stress.png",
+      "sha256": "1a5977f0b7b20ea5bdcb2313b111beb1e1223334251843a3919e508a0d048905",
+      "bytes": 46229,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/narrow-short-baseline.png",
+      "sha256": "47c032be710d52ddc5ece488c87a8707edab6f20a5577e4af5694c32501ef68d",
+      "bytes": 75252,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/narrow-short-card.png",
+      "sha256": "c3a684c38e14fe4af312484f3863aaa588e66b07caaa7c411357744c99de4e66",
+      "bytes": 47965,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/narrow-short-invalid.png",
+      "sha256": "16914139e27b9c2ee9960cecbb4c6479aff3cc7e903fe210b0ae0ec39c6a58a8",
+      "bytes": 37470,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/planning-costs-0.4.7/browser-focused/narrow-short-stress.png",
+      "sha256": "5f2ec456716b1e7ae2f04ea670194a855bc6f041f9301ea068f277b9ffcbf722",
+      "bytes": 48183,
+      "visuallyInspected": false
+    }
+  ]
+}

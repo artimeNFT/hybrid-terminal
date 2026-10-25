@@ -1,0 +1,15 @@
+✔ LONG/SHORT zero-cost identities and total 10-bps baseline arithmetic are symmetric (115.426529ms)
+✔ opening-gap shock uses stop notional, moves adversely on each side and affects only stressed stop R (67.574647ms)
+✔ nonfinite/negative/excessive/coercible assumptions and invalid directional geometry produce no numeric R (89.711098ms)
+✔ confirmed anchor survives provisional/view changes and assumptions never mutate decisions, baseline risk, sizing or journal (110.194757ms)
+✔ separate assumptions restore without changing old preferences or journal, including explicit recovery from malformed saved input (432.737977ms)
+✔ invalid typing clears previous output and quota-style scenario storage failure stays session-only (73.61158ms)
+✔ every existing 0.4.6 function except panel and all rule/execution/RSI identities remain exact (140.581038ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1125.728673

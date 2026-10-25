@@ -7,3 +7,5 @@ The only active user application is **`../hybrid-terminal.html`**. HTML files in
 `hybrid-terminal.0.4.4.html` preserves the accepted pre-target-path 0.4.4 bytes, SHA-256 `f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa`. Its soak and user readability acceptance remain attributed to that exact source, not later UI versions.
 
 `hybrid-terminal.0.4.5.html` preserves exact pre-provenance 0.4.5 source, SHA-256 `ec03f24021ac71008ee8196927c2c188b98c9bf0105e89f7e25902c951f561ba`; it is an internal historical reference only.
+
+`hybrid-terminal.0.4.6.html` preserves exact pre-planning-cost 0.4.6 source, SHA-256 `7c12ba003d8a03bff8322c7d9143c8bc926aa6847b62dbaf065d80b3d55e5195`, as an internal historical reference only.

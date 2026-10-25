@@ -1,0 +1,11 @@
+{
+  "startedAtUtc": "2026-10-25T14:39:36.401894+00:00",
+  "primaryRoot": "/mnt/c/users/shlom/desktop/the hybrid-terminal",
+  "internalWorktree": "/tmp/hybrid-planning-costs-0.4.7",
+  "baseCommit": "e3f4ec3d1a31cf9879ba2adb36d5ec5ad364e3b5",
+  "publishedApplicationVersion": "0.4.6",
+  "publishedApplicationSha256": "7c12ba003d8a03bff8322c7d9143c8bc926aa6847b62dbaf065d80b3d55e5195",
+  "promotionDeadlineUtc": "2026-10-25T23:45:00Z",
+  "sourcePromotionGuardUtc": "2026-10-25T23:40:00Z",
+  "midnightScheduleUnchanged": true
+}
