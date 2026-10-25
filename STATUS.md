@@ -6,7 +6,7 @@ Updated: 2026-10-25, Asia/Jerusalem.
 
 **Product objective:** a practical, readable decision-support terminal based on the Hybrid framework: show trustworthy market context, explain the current setup or WAIT, quantify planned risk/targets and preserve decisions for review. Statistical trading advantage is a separate research question; product usefulness does not depend on proving profitability.
 
-**Alignment decision:** the unissued preparation-review utility prompt from the previous chat response is **superseded and deferred**. It was technically relevant to research, but it is not a prerequisite for improving the terminal. Stop extending the research-diagnostic chain by default. The single bounded **0.4.4 presentation release candidate** is now published and verified, including only the necessary separation of frozen research source references from the evolving application. The bounded one-hour real-session soak is now measured and verified below. Desktop perceived readability was accepted by the user on 2026-10-25, with a current screenshot. Separate midnight-mode and physical-device touch remain unfinished; no feature/research implementation is active.
+**Alignment decision:** the unissued preparation-review utility prompt from the previous chat response is **superseded and deferred**. It was technically relevant to research, but it is not a prerequisite for improving the terminal. Stop extending the research-diagnostic chain by default. The single bounded **0.4.4 presentation release candidate** is now published and verified, including only the necessary separation of frozen research source references from the evolving application. The bounded one-hour real-session soak is now measured and verified below. Desktop perceived readability was accepted by the user on 2026-10-25, with a current screenshot. Separate midnight-mode and physical-device touch remain unfinished. They do not block daytime development. The next authorized, not-yet-implemented product increment is a compact confirmed-plan target-path context view, scoped below.
 
 **Authority:** this section, the current roadmap and the current board below supersede all older “next task” instructions inside the historical checkpoint archive. Keep one active code task in the existing VS Code/WSL Codex session; this conversation reviews and prioritizes. Preserve local changes, fetch/fast-forward only when safe, and do not restart completed work after an interrupted reply.
 
@@ -25,10 +25,25 @@ Updated: 2026-10-25, Asia/Jerusalem.
 | --- | --- | --- |
 | Delivered RC | App 0.4.4 presentation release candidate | Primary hierarchy/risk/display work complete; local checks and actual published-commit CI successful |
 | Partial measured acceptance | Bounded real-session acceptance | One-hour soak accepted; next is separate midnight mode during 2026-10-25 23:57–23:59 UTC. Physical touch remains pending; desktop readability is user-accepted |
+| Next product increment | Confirmed-plan target-path context | Reuse existing valid levels, show directional ordering and guarded distances, preserve decisions/journal; user can identify the first reference level before TP1/TP2 without scanning the chart |
 | Later | One explicit research decision | Resume only with a concrete question, relevant population, fixed outcome/dependence/cost protocol and stopping decision; keep Q3 exploratory and preserve the first preparation result |
 | Conditional | Indicators, derivatives and closer TR_MAIN context | Add only for a named workflow/research use and verified source/configuration; not as an automatic feature backlog |
 
 Research review is not a new mandatory gate before each UI improvement. A new audit must identify the concrete unresolved risk and the decision its result can change. Reuse existing successful evidence unless code changes or unresolved concerns justify new checks.
+
+## Daytime development scope — target-path context
+
+Decision 2026-10-25: continue useful product development before midnight. The user's desktop readability acceptance stands. The existing nearest-day-level card is already delivered; extend the eligible-plan workflow rather than duplicating that card.
+
+**One next implementation:** a compact Hebrew “רמות בדרך ליעד” section for the existing eligible confirmed plan. Use existing validated PDH/PDL/PP/R1/S1 and confirmed EMA50/EMA200/UTC VWAP only. Respect existing display-layer semantics and disclose disabled/unavailable/partial coverage. Freeze the anchor to the confirmed decision close, its ATR, plan and valid context identity; provisional ticks, crosshair and chart panning must not change that anchor.
+
+For E=plan entry, T=TP2, d=sign(T-E), retain a valid reference L strictly between them: 0 < d*(L-E) < abs(T-E). Order by d*(L-E), report price, guarded distance in percent/ATR/R and whether before TP1, at TP1 or between TP1 and TP2. Entry/TP2 equalities are endpoint coincidences, not intervening levels. Group truly equal prices and retain all labels; do not merge distinct values solely because their rounded labels match. Missing/zero/nonfinite denominators remain unavailable; preserve available distances independently. No intervening levels among a partial source set must not be described as a clear path. Dynamic averages are decision-time references, not future fixed barriers. This is descriptive geometry, not measured resistance, independent confluence votes or a probability.
+
+Show a short summary/first few rows with expandable detail and no new always-on chart clutter. WAIT has no valid path/alternate plan. Preserve strategy selection, scoring, target choice, sizing, execution, backtest and journal semantics, and all frozen research identities. No new feed, indicator, framework or cohort run. Use focused arithmetic/state fixtures and actual desktop/narrow browser checks plus required CI; preserve completed soak evidence without rerunning it automatically.
+
+**Midnight provenance:** retain the separate 420-second actual-window observation. Inspect the application version/hash actually loaded. If a newer release is tested, attribute acceptance to that release and record what remains unobserved for older releases; never relabel an old run. No all-day model waiting or automatic repeat of the hour soak.
+
+**Prioritized later candidates, not concurrent tasks:** (1) explicit live calculation coverage/origin visibility, without claiming that 4000 bars guarantees convergence; (2) a separate user-controlled fee/slippage scenario view that does not rewrite baseline backtests; (3) a decision-review workflow using preserved journal records, with no fabricated historical context; (4) broader engine separation only when a measured maintenance/performance need justifies it. Vector outcome research remains deferred until a concrete inference decision. New indicators are not automatic milestones.
 
 ## Completed bounded increment — 0.4.4 presentation
 
@@ -44,12 +59,13 @@ Research review is not a new mandatory gate before each UI improvement. A new au
 
 | Priority | Task | State / next action |
 | --- | --- | --- |
-| P0 | Product alignment and work continuity | Current instructions are here; old next-task text below is historical. 0.4.4 is complete; no additional implementation task started |
+| P0 | Product alignment and work continuity | Current instructions are here; old next-task text below is historical. 0.4.4 is complete; target-path context is authorized next, not yet implemented; midnight observation is time-bound and does not block development |
 | P1 | 0.4.4 presentation release candidate | **Published; focused independent review complete** — `2d04184`; [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40139978132), five presentation fixtures independently passed. Next: bounded real-session acceptance; screenshots remain locally reported rather than independently viewed here. |
 | P1 | Actual one-hour reconnect/storage soak | **Measured and accepted** — 3600.018 s; 12 real confirmed closes; final feed/context healthy; prior signatures preserved, no duplicate IDs/configuration-candle keys. `tests/results/real-session-0.4.4/` |
 | P1 | Separate midnight acceptance | **Pending** — next start 2026-10-25 23:57–23:59 UTC; recommended 23:58 UTC = 2026-10-26 01:58 Asia/Jerusalem. The soak crossing midnight is not counted |
 | P1 | Desktop perceived readability | **User-accepted 2026-10-25** — user says interface feels comfortable; current 0.4.4 RC desktop screenshot reviewed, Standard palette / Filled body. This does not establish physical-touch or narrow-device acceptance |
 | P1 | Physical-device touch | Pending when a physical touch device is available; browser emulation is separate evidence |
+| P1 | Confirmed-plan target-path context | **Authorized next, not yet implemented** — one scoped product increment; see daytime development scope below |
 | P2 | Vector-versus-ordinary research | Preparation 1.0.0 preserved; outcome inference and the extra support-diagnostic utility deferred, not silently completed |
 | P2 | CLI credential storage | Queued follow-up; current plaintext CLI credential storage is recorded, values never included in chat/repository |
 | P3 | MACD, OI/funding, extra sessions/ADR and other additions | Deferred until a concrete use and source definition justify one bounded increment |
