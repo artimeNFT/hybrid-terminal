@@ -6,14 +6,14 @@ Updated: 2026-10-25, Asia/Jerusalem.
 
 **Product objective:** a practical, readable decision-support terminal based on the Hybrid framework: show trustworthy market context, explain the current setup or WAIT, quantify planned risk/targets and preserve decisions for review. Statistical trading advantage is a separate research question; product usefulness does not depend on proving profitability.
 
-**Alignment decision:** the unissued preparation-review utility prompt from the previous chat response is **superseded and deferred**. It was technically relevant to research, but it is not a prerequisite for improving the terminal. Stop extending the research-diagnostic chain by default. The single bounded **0.4.4 presentation release candidate** is now published and verified, including only the necessary separation of frozen research source references from the evolving application. The bounded one-hour real-session soak is now measured and verified below. Separate midnight-mode, physical-device touch and user-perceived readability acceptance remain unfinished; no feature/research implementation is active.
+**Alignment decision:** the unissued preparation-review utility prompt from the previous chat response is **superseded and deferred**. It was technically relevant to research, but it is not a prerequisite for improving the terminal. Stop extending the research-diagnostic chain by default. The single bounded **0.4.4 presentation release candidate** is now published and verified, including only the necessary separation of frozen research source references from the evolving application. The bounded one-hour real-session soak is now measured and verified below. Desktop perceived readability was accepted by the user on 2026-10-25, with a current screenshot. Separate midnight-mode and physical-device touch remain unfinished; no feature/research implementation is active.
 
 **Authority:** this section, the current roadmap and the current board below supersede all older “next task” instructions inside the historical checkpoint archive. Keep one active code task in the existing VS Code/WSL Codex session; this conversation reviews and prioritizes. Preserve local changes, fetch/fast-forward only when safe, and do not restart completed work after an interrupted reply.
 
 ## Verified current state
 
 - Private repository: https://github.com/artimeNFT/hybrid-terminal. WSL root: `/mnt/c/users/shlom/desktop/the hybrid-terminal`. VECTOR LAB is separate.
-- Active app **0.4.4 presentation RC**, sole user application `hybrid-terminal.html`, SHA-256 `f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa`. Exact internal 0.4.3 reference is `baseline/hybrid-terminal.0.4.3.html`, SHA-256 `fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9`. One actual 3600-second reconnect/storage soak is accepted below. Separate midnight-mode acceptance, physical touch and user-perceived readability remain pending.
+- Active app **0.4.4 presentation RC**, sole user application `hybrid-terminal.html`, SHA-256 `f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa`. Exact internal 0.4.3 reference is `baseline/hybrid-terminal.0.4.3.html`, SHA-256 `fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9`. One actual 3600-second reconnect/storage soak is accepted below. Desktop perceived readability is user-accepted; separate midnight-mode acceptance and physical touch remain pending.
 - CLI **1.0.1 / schema 1**, causal/history audit **1.0.0**, finite-origin calculation contract **1.0.0**, and outcome-blind preparation **1.0.0** delivered. Preparation publication `c0997dfb07f2ceae23a112ba5aa4fbef14c42ec9`, [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40123436079).
 - Frozen Q3 input: 26,496 complete BTCUSDT 5m candles; canonical hash `436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1`.
 - Preparation retained **99/964 V (10.27%)**, with conditional SMD flags and overlapping windows. Engineering scope has focused independent acceptance; comparison/inference suitability remains unresolved. No outcomes, profitability estimate or retuning.
@@ -24,7 +24,7 @@ Updated: 2026-10-25, Asia/Jerusalem.
 | Order | Deliverable | Completion rule |
 | --- | --- | --- |
 | Delivered RC | App 0.4.4 presentation release candidate | Primary hierarchy/risk/display work complete; local checks and actual published-commit CI successful |
-| Partial measured acceptance | Bounded real-session acceptance | One-hour soak accepted; next is separate midnight mode during 2026-10-25 23:57–23:59 UTC. Physical touch/readability remain pending |
+| Partial measured acceptance | Bounded real-session acceptance | One-hour soak accepted; next is separate midnight mode during 2026-10-25 23:57–23:59 UTC. Physical touch remains pending; desktop readability is user-accepted |
 | Later | One explicit research decision | Resume only with a concrete question, relevant population, fixed outcome/dependence/cost protocol and stopping decision; keep Q3 exploratory and preserve the first preparation result |
 | Conditional | Indicators, derivatives and closer TR_MAIN context | Add only for a named workflow/research use and verified source/configuration; not as an automatic feature backlog |
 
@@ -47,10 +47,14 @@ Research review is not a new mandatory gate before each UI improvement. A new au
 | P0 | Product alignment and work continuity | Current instructions are here; old next-task text below is historical. 0.4.4 is complete; no additional implementation task started |
 | P1 | 0.4.4 presentation release candidate | **Published; focused independent review complete** — `2d04184`; [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40139978132), five presentation fixtures independently passed. Next: bounded real-session acceptance; screenshots remain locally reported rather than independently viewed here. |
 | P1 | Actual one-hour reconnect/storage soak | **Measured and accepted** — 3600.018 s; 12 real confirmed closes; final feed/context healthy; prior signatures preserved, no duplicate IDs/configuration-candle keys. `tests/results/real-session-0.4.4/` |
-| P1 | Separate midnight / physical touch / perceived readability | **Pending** — next midnight start 2026-10-25 23:57–23:59 UTC, recommended 23:58 UTC. The soak crossing midnight is not counted as midnight acceptance |
+| P1 | Separate midnight acceptance | **Pending** — next start 2026-10-25 23:57–23:59 UTC; recommended 23:58 UTC = 2026-10-26 01:58 Asia/Jerusalem. The soak crossing midnight is not counted |
+| P1 | Desktop perceived readability | **User-accepted 2026-10-25** — user says interface feels comfortable; current 0.4.4 RC desktop screenshot reviewed, Standard palette / Filled body. This does not establish physical-touch or narrow-device acceptance |
+| P1 | Physical-device touch | Pending when a physical touch device is available; browser emulation is separate evidence |
 | P2 | Vector-versus-ordinary research | Preparation 1.0.0 preserved; outcome inference and the extra support-diagnostic utility deferred, not silently completed |
 | P2 | CLI credential storage | Queued follow-up; current plaintext CLI credential storage is recorded, values never included in chat/repository |
 | P3 | MACD, OI/funding, extra sessions/ADR and other additions | Deferred until a concrete use and source definition justify one bounded increment |
+
+**User acceptance update — 2026-10-25 morning:** the user reports that the interface now feels comfortable and supplied a current desktop screenshot. Desktop perceived readability is accepted for that observed view. No application change is required from this feedback. The one-hour run and publication were already completed despite the interrupted chat reply. Midnight remains pending because its separate actual window has not yet been observed; do not restart the soak or issue a pending-only publication.
 
 ## Current 0.4.4 evidence and exact next action
 
