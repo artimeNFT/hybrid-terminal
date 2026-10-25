@@ -31,6 +31,16 @@ Updated: 2026-10-25, Asia/Jerusalem.
 
 Research review is not a new mandatory gate before each UI improvement. A new audit must identify the concrete unresolved risk and the decision its result can change. Reuse existing successful evidence unless code changes or unresolved concerns justify new checks.
 
+## Visual/source review — user attachment 2026-10-25
+
+User-supplied active HTML SHA-256 `ec03f24021ac71008ee8196927c2c188b98c9bf0105e89f7e25902c951f561ba` matches published 0.4.5. Its desktop screenshot shows BTCUSDT 15m, feed live, chart in historical review, a confirmed 08:00 UTC WAIT with 2/5 LONG and 0/5 SHORT, and no eligible plan. Suppressing target-path in this WAIT state is correct, but this screenshot **does not visually accept the new target-path card**. User judgment of that card remains pending until an eligible plan is visible; do not infer a bug or induce a setup to create a screenshot.
+
+**Observed polish defect:** the Daily UTC inspector/banner and near-level detail expose full floating-point pivot strings (for example 13+ decimal places), competing with price, validity and the current decision. Existing `dayPrice` intentionally expands any rounded value; keep full internal precision and distinguish genuinely distinct near-equal prices, but use concise chart-facing formatting with exact underlying value available on deliberate inspection. Do not round analytical inputs to the exchange tick or merge levels by display text. Review the compact/expanded header on narrow screens.
+
+**Next calculation-integrity priority:** the live decision initially uses 1,000 bars; the `History +1,000` control adds chart-only bars. The historical fixed-origin research comparison is not interchangeable with that live origin. The BTCUSDT 5m audit found 1,000-bar vote/plan matches in its 24 sampled points while EMA800 context still drifted; it did not validate the pictured 15m state or universal convergence. Make the decision-origin/coverage limits legible before claiming live/research equivalence or adding indicator votes. A scoped later increment can combine honest origin disclosure with the pivot-label polish; keep its arithmetic and any later fixed-origin comparison separate. No observed screenshot defect justifies altering strategy thresholds.
+
+**Order:** leave the time-bounded 0.4.5 midnight acceptance next. Do not overwrite its source identity with an unobserved new version. Physical-device touch and actual user readability of an eligible target-path card remain separate. No consultation with another model is required to diagnose this screenshot; request outside statistical critique only for a precise inference decision.
+
 ## Daytime development scope — target-path context
 
 Decision 2026-10-25: continue useful product development before midnight. The user's desktop readability acceptance stands. The existing nearest-day-level card is already delivered; extend the eligible-plan workflow rather than duplicating that card.
