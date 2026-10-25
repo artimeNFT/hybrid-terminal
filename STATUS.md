@@ -2,6 +2,26 @@
 
 Updated: 2026-10-25, Asia/Jerusalem.
 
+## Current handoff — 2026-10-25 evening
+
+GitHub access restored in the review conversation. Remote main `4771027a6acc7d5af2771984c38ddf163c901c27` and its Actions run `40205155341` were independently checked: completed/success. This is not a new test run or a live WSL inspection.
+
+**User feedback:** filled candles are readable and preferred; retain Hollow up as an option. Vector tags help. The user expects green/up and red/down intuitively. Standard already provides that mapping; High contrast uses blue/orange intentionally. Clarify palette names/legend before introducing another palette. Preserve saved choices; do not silently reset defaults. This feedback does not accept every new card or physical-touch behavior.
+
+**Immediate local task:** safely synchronize this documentation checkpoint, then verify the existing WSL timer/service and wrapper in place. The tracked registration receipt is not proof that the timer remains active now. Confirm the next trigger is 2026-10-25 23:58 UTC / 2026-10-26 01:58 Asia/Jerusalem, observer 420 seconds, bounded service, then-active clean/published source, and available dependencies. Do not start midnight mode early, create duplicate timers, rerun the hour soak, or wait in the model session until night. If the timer is already healthy, leave it unchanged. Report any concrete blocker. Review actual version/hash-bound evidence after 2026-10-26 00:08 UTC / 02:08 Israel.
+
+**Next implementation:** one bounded readability/Help increment: clear palette semantics, preserve independent Filled/Hollow and vector tags, Hebrew/English Help selector with equivalent concise explanations of existing features, confirmed versus provisional decisions, data coverage, WAIT, target path and planning-cost assumptions. English chart controls and Hebrew panel remain. No strategy, indicator, journal, execution or preference reset. Implementation may proceed separately from midnight; do not edit the active source during the observation.
+
+**Ordered product backlog (one active implementation at a time):**
+1. Readability and bilingual Help as above.
+2. Volume pane height/vertical scale with visible zero and reset; horizontal pan remains synchronized with price. Closed-bar relative volume using an explicit past-only reference; label provisional volume separately.
+3. Candle-close countdown (elapsed clock is not feed-confirmed closure), UTC Daily Open, and ADR from previous complete UTC days with descriptive today-range/ADR. Psy High/Low requires exact source/session/timezone/DST definition first.
+4. Close-price Line display without changing OHLC calculations; manual trend lines anchored to time/price.
+5. Verified venue-specific taker-flow fields and explicitly causal divergence definitions; improve LONG/SHORT comparison before any separately tested selection-policy change.
+6. Consider daily context and 1m viewing first; 30-second aggregation, seconds and monthly views deferred pending clear use and interval/history validation.
+
+No new model consultation is required for the current UI scope. Existing research limitations, credential-storage follow-up, physical touch and new-card user acceptance remain open. Historical evidence and the archive below remain unchanged.
+
 ## Read this first — current decision
 
 **Product objective:** a practical, readable decision-support terminal based on the Hybrid framework: show trustworthy market context, explain the current setup or WAIT, quantify planned risk/targets and preserve decisions for review. Statistical trading advantage is a separate research question; product usefulness does not depend on proving profitability.
@@ -145,7 +165,7 @@ Started on clean main, fetched and fast-forwarded safely from `3e9f65b` to curre
 
 | Priority | Task | State / next action |
 | --- | --- | --- |
-| P0 | Product alignment and work continuity | Single 0.4.7 planning-card increment delivered and CI-verified; no further code/research task active. Midnight remains a separate actual-window observation |
+| P0 | Product alignment and work continuity | 0.4.7 published. Current task: verify existing local midnight timer without duplicate scheduling. Next implementation: readability and bilingual Help; ordered backlog in Current handoff above |
 | P1 | Optional cost / stop-gap planning 0.4.7 | **Completed and published** — `4a99263`; [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40204872330), both jobs. Seven focused cases and nine mocked Chromium suites; source/evidence above |
 | P1 | Decision provenance and chart readability 0.4.6 | **Completed and published** — `2221e98`; [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40201641235), both jobs. Exact-window, density and precision checks passed; eight Chromium suites. Evidence above |
 | P1 | 0.4.4 presentation release candidate | **Published; focused independent review complete** — `2d04184`; [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40139978132), five presentation fixtures independently passed. Next: bounded real-session acceptance; screenshots remain locally reported rather than independently viewed here. |
@@ -156,7 +176,7 @@ Started on clean main, fetched and fast-forwarded safely from `3e9f65b` to curre
 | P1 | Confirmed-plan target-path context 0.4.5 | **Completed and published** — `d15300f`; [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40173894616), both jobs. Six focused fixtures and seven mocked Chromium suites passed. No strategy/journal changes; source/evidence below |
 | P2 | Vector-versus-ordinary research | Preparation 1.0.0 preserved; outcome inference and the extra support-diagnostic utility deferred, not silently completed |
 | P2 | CLI credential storage | Queued follow-up; current plaintext CLI credential storage is recorded, values never included in chat/repository |
-| P3 | MACD, OI/funding, extra sessions/ADR and other additions | Deferred until a concrete use and source definition justify one bounded increment |
+| P3 | Additional context and chart tools | Ordered backlog in Current handoff above; ADR/Daily Open follow volume work. Psy requires exact definition; MACD and derivatives remain conditional, with no automatic score changes |
 
 **User acceptance update — 2026-10-25 morning:** the user reports that the interface now feels comfortable and supplied a current desktop screenshot. Desktop perceived readability is accepted for that observed view. No application change is required from this feedback. The one-hour run and publication were already completed despite the interrupted chat reply. Midnight remains pending because its separate actual window has not yet been observed; do not restart the soak or issue a pending-only publication.
 
