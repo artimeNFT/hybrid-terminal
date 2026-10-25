@@ -1,5 +1,5 @@
 {
-  "tests/results/planning-costs-0.4.7/REPORT.md": "31da50bd39cd9282b8b566c9fafa9dd24034976d44e53ba13919774f6252feef",
+  "tests/results/planning-costs-0.4.7/REPORT.md": "28362ebea7651ac38472a2d7de6fbf6c68c7a0d2319c103ce585fd281cb8b6ef",
   "tests/results/planning-costs-0.4.7/app-manifest.json": "5ed669328477c487607089d8536f9a707930091bd6f5ca3ae1b553786056caf6",
   "tests/results/planning-costs-0.4.7/audit-manifest.json": "d10b466c2cc12d5479efc172997c696e098b4889e3b6026e6cc4acdd7c131113",
   "tests/results/planning-costs-0.4.7/browser-evidence.json": "b358211a4e680f2933f56e91d53a5f6c8b0cfc64d1568a54b6699eaffd21c7da",
@@ -10,6 +10,8 @@
   "tests/results/planning-costs-0.4.7/contract-manifest.json": "22511720d35df17271da3056ffe8907b58bb87080445c05ec7bb66b153378f55",
   "tests/results/planning-costs-0.4.7/focused.log": "0d1584cbf3c95c27b30c4f6a162794ea1cdf62dde112e7c431a228deead74611",
   "tests/results/planning-costs-0.4.7/frozen-check.log": "cc02d63ace9777b7c7a3707c97563f145052f2c6c58e217519a9e54cc06c1a41",
+  "tests/results/planning-costs-0.4.7/implementation-run.json": "004c37d87895ca118625b06e5a694896ab4512e5b41fcee5bb732247b7b52bdd",
+  "tests/results/planning-costs-0.4.7/implementation-test-summary.log": "ea75a043fea303a149290d8f5f9d91e147b04f0da592a9c3f2a677b14fd01f0d",
   "tests/results/planning-costs-0.4.7/npm-test.log": "64d823e45e974c29493fd52400258c68f099347fb960c5ab362b793af4ac78bb",
   "tests/results/planning-costs-0.4.7/preparation-manifest.json": "50f3609bebe9595fc22b5e34da608da66aa2a882ccc6b4a5c7129f1b658ff72e",
   "tests/results/planning-costs-0.4.7/presentation-manifest.json": "58ce0367cd350778ebc17fd9965d6c1f3c54c89d6e6f52a1db8c4387f0ab05e9",

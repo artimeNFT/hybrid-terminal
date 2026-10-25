@@ -22,7 +22,7 @@ Finite nonnegative primitive numeric assumptions only; fee/slippage each <=100 b
 - Actual images inspected: desktop LONG full layout and card, narrow LONG full layout/stress/error, narrow SHORT card. All 16 screenshots are identified by hashes in `screenshots.json`; only inspected images carry that flag. Raw images/traces are ignored, retained locally under the paths in that registry; compact evidence is tracked.
 - Read-only frozen source/audit/preparation seal/payload verification; six dataset/checkpoint byte hashes, old manifests/research/evidence and historical STATUS archive unchanged. No cohort, outcome, acquisition or hour-soak rerun. See `preservation.json` and `frozen-check.log`.
 
-The local tests ran against this same repository's isolated worktree before byte-identical fast-forward promotion to the authoritative root. All runner manifest exit codes are zero. Publication/actual Actions commit evidence is recorded separately after push; local pass is not remote CI.
+The local tests ran against this same repository's isolated worktree before byte-identical fast-forward promotion to the authoritative root. All runner manifest exit codes are zero. Implementation `4a99263e85bf52204563ed59edc1d309ce0c32a4` was pushed without force at approximately 15:00 UTC, before the 23:45 UTC settle deadline. Actual [Actions run 40204872330](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40204872330) completed successfully with both jobs; remote logs confirm all seven QA groups, four presentation suites and nine browser scripts. Receipts: `implementation-run.json`, `implementation-test-summary.log`. Final documentation/evidence commit receives separate actual CI verification; source bytes remain identical.
 
 ## Limits and independent next action
 
