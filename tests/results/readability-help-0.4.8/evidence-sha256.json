@@ -1,5 +1,5 @@
 {
-  "tests/results/readability-help-0.4.8/REPORT.md": "83e50c4bd22865e33a2a4974074fc375ddac3be63c45875726f1ce9612e14561",
+  "tests/results/readability-help-0.4.8/REPORT.md": "23354e3ab73b79bc3f5ecc03626da88aec3d33e4d5a5cc6d74dfdaf85ba92b2d",
   "tests/results/readability-help-0.4.8/app-manifest.json": "404971c740ba2a36325423529a2234dcd0e967df60371746a4d1ea48f582f527",
   "tests/results/readability-help-0.4.8/audit-manifest.json": "71361fe1daa1e4688c2c8e74dd4eb065b8adcd15dcd4d6fec93cc8076f9c537d",
   "tests/results/readability-help-0.4.8/browser-evidence.json": "a93178b9469704944bb64b985ba6a19a48860c6fcae446e6b5712300d563715e",
@@ -12,6 +12,8 @@
   "tests/results/readability-help-0.4.8/final-source-check.log": "618c62023eebf44251a682f47e662da9231fc8ac2a88193b57d4d83bddf4e233",
   "tests/results/readability-help-0.4.8/focused.log": "f1f35b3664ba69be9917bf4c27e731c12bd699fc9c575bddbcc7132aa33cf187",
   "tests/results/readability-help-0.4.8/frozen-check.log": "d47510bbfd8da7c0e244ee3e4a14804dc1adfbb7dea1edebf033fdc5dd7a04cb",
+  "tests/results/readability-help-0.4.8/implementation-run.json": "eec49c064e2da2e2ed8b46c1a78fb804e51ae9319369607a307ef2bb8bc63c8e",
+  "tests/results/readability-help-0.4.8/implementation-test-summary.log": "1d8cdc563b7e23f07b2ec335396bbd5db04f62fc3bd4e4ab121d956d78d7d782",
   "tests/results/readability-help-0.4.8/npm-test.log": "057e7ea53804f04f8d05e0e4b9e1a4d474e91ee3b360cd8cddcb4c00adca27f6",
   "tests/results/readability-help-0.4.8/preparation-manifest.json": "9caef29bd2a3cc4d34e5e97bbf066882e2b17ad6461d7c85a9ed8e3383e1ced1",
   "tests/results/readability-help-0.4.8/presentation-manifest.json": "c7397ddcb3c761832683538051918509d3fc040bc7a5821cac35c7ab1f98bf1c",

@@ -1,0 +1,30 @@
+{
+  "commit": "68a05f3f4a8d6cb16c6248ae8ae48a905f67563e",
+  "branch": "candidate/readability-help-0.4.8",
+  "event": "workflow_dispatch",
+  "url": "https://github.com/artimeNFT/hybrid-terminal/actions/runs/40232991730",
+  "runId": 40232991730,
+  "status": "completed",
+  "conclusion": "success",
+  "createdAt": "2026-10-25T20:54:55Z",
+  "updatedAt": "2026-10-25T20:56:47Z",
+  "candidateVersion": "0.4.8",
+  "candidateSourceSha256": "49267248f1808133c52e2331fa9d6f7b325be7580a71867177c5dd5d12323858",
+  "candidateIntegrated": false,
+  "authoritativeAppVersion": "0.4.7",
+  "authoritativeSourceSha256": "4bafacddf8d726fc48601471c7a7fe713c2fb2038f0908264131ba864f7aa8e8",
+  "jobs": [
+    {
+      "id": 121288513456,
+      "name": "Node 24 mocked Chromium QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 121288513582,
+      "name": "Node 24 deterministic QA",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ]
+}
