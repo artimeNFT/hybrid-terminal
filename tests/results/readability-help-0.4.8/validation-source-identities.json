@@ -1,0 +1,15 @@
+{
+  "fullLocalBrowserSourceSha256": "5f0b5358d5c629288a246be4d5780e7589a81150c540a96683a174bb8f6e4cb9",
+  "finalFocusedBrowserSourceSha256": "49267248f1808133c52e2331fa9d6f7b325be7580a71867177c5dd5d12323858",
+  "finalFocusedUnitCases": 6,
+  "localSuiteCounts": {
+    "app": 9,
+    "research": 1,
+    "audit": 1,
+    "contract": 1,
+    "preparation": 1,
+    "presentation": 5,
+    "browser": 10
+  },
+  "note": "Full local groups passed before final Help-only LTR bounds/equation-layout refinements; final source check and focused unit/browser checks reran after them. Published-candidate CI runs all required groups on its exact final source. No calculation/source-function change in those final text refinements."
+}

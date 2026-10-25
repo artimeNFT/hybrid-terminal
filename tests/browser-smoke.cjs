@@ -61,8 +61,9 @@ const { replacementFixture } = require('./regression.cjs');
     await page.locator('#displaybtn').click();
     await page.locator('#hq').click();
     assert.equal(await page.locator('#hp').isVisible(),true);
+    await page.locator('[data-help-section="decisions"] > summary').click();
     assert.ok((await page.locator('#hp').innerText()).includes('נר האישור'));
-    await page.locator('#hp button').click();
+    await page.locator('#helpclose').click();
     assert.equal(await page.locator('#hp').isVisible(),false);
     const screenshot = process.env.HYBRID_QA_SCREENSHOT;
     if (screenshot) {

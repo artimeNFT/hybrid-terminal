@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hybrid Terminal · 0.4.7 RC</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hybrid Terminal · 0.4.8 RC</title>
 <style>
 :root{--bg:#0b0e14;--p:#131722;--b:#252a38;--t:#d1d4dc;--m:#7d8597;--g:#26d97f;--r:#ff4d5e;--bl:#3b82f6}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:13px system-ui,sans-serif;height:100vh;display:flex;flex-direction:column}
@@ -32,25 +32,25 @@ aside{width:386px;flex-shrink:0;padding:12px}.card{padding:12px;border-radius:10
 .target-path{border-top:1px solid var(--b);margin-top:10px;padding-top:10px;color:var(--t)}.target-path h4{margin-bottom:4px}.target-path ol{margin:7px 0;padding-inline-start:23px}.target-path li{padding:5px 0;border-bottom:1px solid #2a2e3977}.target-path li bdi{font-weight:600;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.target-path li small{font-size:11px}.target-path li div small{display:inline;margin-inline-start:6px}.target-path>small{font-size:11px}.target-path details small{overflow-wrap:anywhere}
 #dailydetails{margin:0;padding:2px 10px;border-bottom:1px solid var(--b);background:#171b26;direction:ltr}#dailydetails>summary{display:flex;align-items:baseline;justify-content:space-between;gap:8px;font-size:11px;list-style:disclosure-closed}#dailydetails[open]>summary{list-style:disclosure-open}#dailydetails #contextstatus{display:inline;padding:0;min-height:20px}#dailydetails>summary>span{flex-shrink:0;color:#b6c9e9}#dailyexact{display:block;padding:6px 0;font-size:11px;line-height:1.6;overflow-wrap:anywhere}#dailydetails small{font-size:11px;direction:ltr}.decision-window{color:var(--t);border-block:1px solid var(--b);padding:6px 0;margin-top:7px}.decision-window small{font-size:11px}.decision-window bdi{font-variant-numeric:tabular-nums}.decision-window details{margin-top:3px}.decision-window summary{font-size:11px}
 .planning-costs[hidden]{display:none}.planning-costs>summary{font-weight:600;font-size:12px;color:#c8d8ed}.planning-costs label{display:block;margin-top:8px;font-size:11px;color:var(--m)}.planning-costs input{width:100%;max-width:140px;direction:ltr;font-variant-numeric:tabular-nums}.planning-costs small{margin:6px 0;font-size:11px;overflow-wrap:anywhere}.planning-costs button{font-size:11px;margin:7px 0}.planning-costs .row{padding:5px 0;border-bottom:1px solid var(--b)}.planning-costs .row bdi{font-weight:600;font-variant-numeric:tabular-nums}#planningstorage{color:#b9cbe5}
+
+#chartbar .mode-label{min-width:0}#palette{max-width:100%}#candlelegend .palette-note{color:#c9d4e7}
+#hp>div{direction:inherit;padding:0;width:min(760px,calc(100% - 24px));max-width:760px;max-height:88vh;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;line-height:1.65}
+.help-toolbar{position:sticky;top:0;z-index:1;display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:12px 16px;background:var(--p);border-bottom:1px solid var(--b)}.help-toolbar h2{font-size:16px;margin:0;flex:1 1 200px}.help-toolbar button{min-height:34px}.help-language{display:flex;gap:5px}.help-language button[aria-pressed=true]{border-color:#73b5ff;background:#29466c}.help-toolbar small{flex:1 1 100%;margin:0;color:#c4d1e3}.help-toolbar small:empty{display:none}
+#helpcontent{padding:12px 18px 18px;overflow-wrap:anywhere}#helpcontent p{margin:9px 0}#helpcontent details{border:1px solid var(--b);border-radius:7px;margin-top:10px;padding:10px 12px}#helpcontent summary{font-weight:600;color:#b7d4ff;cursor:pointer}#helpcontent h3{font-size:15px;margin:0 0 7px}#helpcontent ol{padding-inline-start:23px}#helpcontent li{margin:7px 0}#helpcontent bdi[dir=ltr]{display:inline-block;max-width:100%;font-family:ui-monospace,monospace;direction:ltr;unicode-bidi:isolate;vertical-align:middle;overflow-wrap:anywhere}#hp :focus-visible{outline:2px solid #83bdff;outline-offset:3px}#helpstartheading{scroll-margin-top:145px}
+@media(max-width:800px){#hp>div{max-height:92dvh;margin:8px;width:calc(100% - 16px)}.help-toolbar{padding:10px;gap:6px}.help-toolbar h2{flex-basis:190px;font-size:15px}#helpcontent{padding:10px 12px 14px}#helpcontent details{padding:9px}}
 </style></head><body>
-<header><span class="brand">HYBRID <span>TERMINAL</span> <small class="version">v0.4.7 RC</small></span><select id="sym" aria-label="Market"><option>BTCUSDT</option><option>ETHUSDT</option><option>SOLUSDT</option></select>
+<header><span class="brand">HYBRID <span>TERMINAL</span> <small class="version">v0.4.8 RC</small></span><select id="sym" aria-label="Market"><option>BTCUSDT</option><option>ETHUSDT</option><option>SOLUSDT</option></select>
 <button data-tf="5m" class="on">5m</button><button data-tf="15m">15m</button><button data-tf="1h">1h</button><button data-tf="4h">4h</button>
-<select id="ms" class="lb" title="Minimum signal condition count; not a probability" aria-label="Minimum signal condition count"><option value="3">Score ≥3</option><option value="4">Score ≥4</option><option value="5">Score 5</option></select><button id="bl" class="lb">🔔 Alerts</button><button id="hq" aria-label="Open Hebrew Help">? Help</button><span class="source-mode">BINANCE SPOT · RESEARCH / SIMULATION</span><span id="st"></span></header>
-<main><div id="cw"><div id="chartbar" aria-label="Chart navigation and candle appearance"><label class="mode-label">Candles <select id="palette" aria-label="Candle display mode"><option value="accessible">High contrast</option><option value="standard">Standard</option><option value="pvsra">PVSRA</option></select></label><label class="mode-label">Body <select id="body" aria-label="Candle body"><option value="filled">Filled</option><option value="hollow">Hollow up</option></select></label><button id="back" title="Pan to earlier candles" aria-label="Pan to earlier candles">←</button><button id="forward" title="Pan to later candles" aria-label="Pan to later candles">→</button><button id="zoomout" title="Zoom out" aria-label="Zoom out">−</button><button id="zoomin" title="Zoom in" aria-label="Zoom in">+</button><button id="reset" title="Reset to 150 bars, latest time and automatic price fitting" aria-label="Reset default chart view">Reset</button><button id="livebtn" class="on" title="Return to latest time; preserve manual price position">Live</button><button id="autoscale" class="on" title="Restore automatic price fitting (Escape)">Auto scale</button><button id="historybtn" title="Load up to 1,000 older candles for the chart">History +1,000</button><button id="displaybtn" aria-expanded="false" aria-controls="displaysettings" title="Layers, lower pane, day levels and timezone">Display</button><button id="reload" title="Reload market data">Refresh</button><span id="chartmeta"></span><span id="candlebadge" class="badge"></span></div>
+<select id="ms" class="lb" title="Minimum signal condition count; not a probability" aria-label="Minimum signal condition count"><option value="3">Score ≥3</option><option value="4">Score ≥4</option><option value="5">Score 5</option></select><button id="bl" class="lb">🔔 Alerts</button><button id="hq" aria-label="Open Help in Hebrew or English" aria-haspopup="dialog" aria-controls="hp" aria-expanded="false">? Help</button><span class="source-mode">BINANCE SPOT · RESEARCH / SIMULATION</span><span id="st"></span></header>
+<main><div id="cw"><div id="chartbar" aria-label="Chart navigation and candle appearance"><label class="mode-label">Candles <select id="palette" aria-label="Candle palette; body is independent" title="Up compares close with open: Standard green/red, High contrast blue/orange; PVSRA adds volume classification"><option value="accessible">High contrast · Blue ↑ / Orange ↓</option><option value="standard">Standard · Green ↑ / Red ↓</option><option value="pvsra">PVSRA · Direction + volume</option></select></label><label class="mode-label">Body <select id="body" aria-label="Candle body"><option value="filled">Filled</option><option value="hollow">Hollow up</option></select></label><button id="back" title="Pan to earlier candles" aria-label="Pan to earlier candles">←</button><button id="forward" title="Pan to later candles" aria-label="Pan to later candles">→</button><button id="zoomout" title="Zoom out" aria-label="Zoom out">−</button><button id="zoomin" title="Zoom in" aria-label="Zoom in">+</button><button id="reset" title="Reset to 150 bars, latest time and automatic price fitting" aria-label="Reset default chart view">Reset</button><button id="livebtn" class="on" title="Return to latest time; preserve manual price position">Live</button><button id="autoscale" class="on" title="Restore automatic price fitting (Escape)">Auto scale</button><button id="historybtn" title="Load up to 1,000 older candles for the chart">History +1,000</button><button id="displaybtn" aria-expanded="false" aria-controls="displaysettings" title="Layers, lower pane, day levels and timezone">Display</button><button id="reload" title="Reload market data">Refresh</button><span id="chartmeta"></span><span id="candlebadge" class="badge"></span></div>
 <div id="displaysettings" hidden><fieldset><legend>Chart layers</legend><button data-l="z" class="on lb">Vectors</button><button data-l="e" class="on lb">EMA / VWAP</button><button data-l="p" class="on lb">Round levels</button><button data-l="m" class="on lb">Markers / Plan</button><button id="daylevels" aria-pressed="false" title="Previous completed UTC day high / low">Day levels</button><button id="pivots" aria-pressed="false" title="Traditional PP / R1 / S1 from previous completed UTC day">Pivots</button></fieldset><fieldset><legend>Annotations</legend><label class="mode-label">Annotation density <select id="annotations" aria-label="Chart annotation density" title="Full keeps all existing annotations. Focus shows only the latest active confirmed M and W labels; decisions and plans are unchanged."><option value="full">Full</option><option value="focus">Focus</option></select></label></fieldset><fieldset><legend>Pane and time</legend><label class="mode-label">Pane <select id="pane" aria-label="Lower pane"><option value="volume">Volume</option><option value="rsi">RSI14</option><option value="none">None</option></select></label><label class="mode-label">Timezone <select id="tz" title="Chart timezone" aria-label="Chart timezone"><option value="Asia/Jerusalem">Jerusalem</option><option value="UTC">UTC</option></select></label><label><input id="volumetags" type="checkbox"> Volume tags (◆ vector / ● rising volume)</label></fieldset><small>Hollow up: rising bodies hollow, falling bodies filled. Direction compares close with the same candle's open. Display choices preserve signals and journal decisions.</small></div><div id="candlelegend"></div><details id="dailydetails"><summary aria-label="Daily UTC status and exact level details"><span id="contextstatus" role="status" aria-live="polite"></span><span>Details · exact values</span></summary><output id="dailyexact" aria-label="Exact unrounded daily reference values"></output><small>Computed reference prices, not order ticks. Compact labels retain distinct numeric values; collision bundles are labels, not merged price levels.</small></details><output id="inspect" aria-label="Selected candle details">Hover over a candle for details</output><small id="historynote" hidden></small><div id="plot"><canvas id="cv" tabindex="0" aria-label="Candlestick chart. Drag the price plot to pan time and price. Left/Right pan time, Up/Down move candles vertically, plus/minus zoom, End returns to latest time keeping manual price position, Escape restores automatic price fitting." title="Drag price plot to pan time and price; drag lower pane to pan time only. Drag price axis to scale, time axis to zoom. Up/Down move candles; Escape fits price. Reset restores defaults."></canvas></div></div><aside lang="he" dir="rtl" aria-label="מצב נתונים והחלטה מאושרת"><div id="systemstatus" role="status"></div><div id="pn"></div><details class="card planning-costs" id="planningcosts" hidden><summary>עלויות ופער סטופ · תכנון בלבד · אופציונלי</summary><small>תרחישי החלטה במחיר הסגירה, לפי התוכנית המאושרת שמעל. אינם מחירי ביצוע, עמלות חשבון מאומתות או תוצאות בדיקה היסטורית.</small><label for="planningfee">עמלה כוללת לסיבוב · bps מהכניסה (0–100)</label><input id="planningfee" aria-label="Planning total round-trip fee in entry basis points" type="number" min="0" max="100" step="any" inputmode="decimal"><label for="planningslippage">החלקה שלילית כוללת בכניסה/יציאה · bps מהכניסה (0–100)</label><input id="planningslippage" aria-label="Planning total adverse entry and exit slippage in entry basis points" type="number" min="0" max="100" step="any" inputmode="decimal"><label for="planninggap">הלם פתיחה מעבר לסטופ · bps ממחיר הסטופ (0–1000; אפס ללא הלם)</label><input id="planninggap" aria-label="Planning adverse opening gap beyond stop in stop basis points" type="number" min="0" max="1000" step="any" inputmode="decimal"><small>1 bps = 0.01%. אלה גבולות קלט לתכנון, לא אומדן לעלויות שוק.</small><button id="planningreset" type="button">אפס הנחות ל־10 / 0 / 0</button><small id="planningstorage"></small><div id="planningresult" aria-live="polite"></div><small>R לפי מרחק הכניסה המאושרת מהסטופ. הבדיקה ההיסטורית נכנסת בפתיחת הנר הבא; אין הבטחת זהות מספרית לתרחיש זה. TP1 נשאר נתון מגע, לא יציאה חלקית. SHORT נשאר מחקר/סימולציה, לא הוראת Spot מאושרת. עלות הבסיס ו־R:R ברוטו בתוכנית אינם משתנים.</small></details><div id="provisional"></div><div class="card" id="sz"><h4>אומדן גאומטרי נומינלי · לא כמות לביצוע</h4><div class="row"><span>הון ייחוס (USDT)</span><input id="acc" type="number" value="1000" min="0" step="1"></div><div class="row"><span>סיכון לעסקה (%)</span><input id="rk" type="number" value="1" min="0.01" max="100" step=".25"></div><details id="sizingdetails"><summary>הנחות מזומן ומגבלות ביצוע</summary><label for="sizeproduct">תרחיש כיסוי מזומן</label><select id="sizeproduct"><option value="unconfigured">לא מוגדר</option><option value="cash-spot-long">Cash-only Spot LONG · הנחה בלבד</option></select><label for="cashbalance">יתרת מזומן מונחת (USDT)</label><input id="cashbalance" type="number" min="0" step="any" placeholder="לא הוגדר"></details><div id="szo"></div></div><div id="journal" class="card"><h4>יומן החלטות מאושרות</h4><div id="journalstatus"></div><button id="exportjournal">הורד יומן JSON</button></div><div id="levelcontext" aria-live="polite"></div><div id="pn2"></div></aside></main>
-<div id="hp" lang="he" dir="rtl" hidden><div><button style="float:left">✕ סגור</button><b style="font-size:15px">איך קוראים את הטרמינל</b>
-<h3>תרחיש עלויות ופער סטופ · תכנון בלבד</h3><p>בתוכנית מאושרת אפשר לפתוח כרטיס אופציונלי עם עמלה כוללת לסיבוב, סך החלקה שלילית בכניסה/יציאה ופתיחה מעבר לסטופ. עמלה והחלקה נמדדות ב־bps ממחיר הכניסה המאושר; הלם הפער ב־bps ממחיר הסטופ. ברירת המחדל היא 10 / 0 / 0 — הנחת בסיס 0.1%, לא עמלת חשבון ידועה. ההנחות נשמרות בנפרד במכשיר ואינן משנות החלטות, יומן או בדיקה היסטורית.</p><p>לפי E כניסה, S סטופ, T יעד 2, D=|E−S| וכיוון d: החיכוך F=E×(עמלה+החלקה)/10000 והלם הפער G=S×פער/10000. יעד נטו: (d×(T−E)−F)/D; סטופ רגיל: −1−F/D; סטופ לחוץ: −1−(F+G)/D. אלה תרחישים במחיר סגירת ההחלטה בלבד, לא מחירים לביצוע ולא תוצאות היסטוריות. הבדיקה ההיסטורית נכנסת בפתיחה הבאה ולכן עשויה להיות שונה. TP1 הוא מגע בלבד, לא מימוש חלקי; SHORT אינו אישור למכירת Spot בחסר. WAIT או תוכנית לא תקינה אינם מקבלים תוכנית חלופית. קלט חסר, שלילי, לא סופי או מעל הגבולות אינו מפיק תוצאה מספרית.</p><h3>חלון החלטה, היסטוריית גרף וצפיפות תוויות</h3><p>ליד ההחלטה מוצגים הסמל/טווח הזמן, מספר נרות הקלט הסגורים ופתיחת הנר הראשון ב־UTC; זמן סגירת ההחלטה מוצג מעל. זהו חלון החישוב הקיים, לא מדד לבריאות הזרם ולא הוכחת התכנסות או שקילות למחקר מתחילת מקור קבוע. History +1,000 מוסיף נרות לגרף בלבד; הוא אינו מאריך את חלון ההחלטה. מחווני הגרף עשויים להשתמש בהיסטוריה הנוספת.</p><p>ב־Display, צפיפות Annotation density: Full היא ברירת המחדל ושומרת את כל התוויות הקיימות. Focus מציגה רק את תווית M ואת תווית W הפעילות והמאושרות האחרונות הידועות בזמן ההחלטה. זהו סינון תצוגה בלבד: ההחלטה, התוכנית, המחיר, בדיקת הרמות והחישובים אינם משתנים. ניתן לחזור ל־Full; ההעדפה נשמרת.</p><p>שורת Daily UTC ותוויות הרמות מקוצרות לעיון. פתח Details · exact values כדי לראות מחירי מקור לא מעוגלים ותקפות מלאה. קיבוץ תוויות צפופות אינו מיזוג מחירים: מחירים שונים נשמרים בנפרד גם כשעיגולם זהה. מחירי חישוב אינם מוצמדים לטיק פקודה.</p><h3>רמות בדרך ליעד</h3><p>בתוכנית מאושרת בלבד מוצגות עד שלוש קבוצות רמות בין הכניסה ליעד 2, לפי כיוון התוכנית, עם יחס ליעד 1 ומרחקי אחוזים, ATR ו־R. הרחבה מציגה רמות נוספות, שוויון לקצוות וכיסוי כל שמונת המקורות. רק שכבות גלויות ומקורות תקפים נכללים; VWAP ללא פתיחת יום UTC מלאה אינו נכלל. העוגן הוא הנר המאושר, לא הסמן או הנר המתהווה. EMA/VWAP אינם מחסומים עתידיים קבועים; היעדר רמות מוצגות אינו אישור לדרך פנויה או שינוי לציון.</p><h3>1. נרות ומצבי תצוגה</h3><ul><li>מעל הגרף, ליד <b>Candles</b>, אפשר להחליף מיד בין שלושה מצבי צבע. זו החלפת תצוגה באותה גרסה, ללא שינוי בחישובים.</li><li><b>High contrast</b> — ברירת המחדל: <b style="color:#73c8ff">כחול = עולה ↑</b>, <b style="color:#ffbc70">כתום = יורד ↓</b>. שני צבעי כיוון בלבד, לכל דרגות הנפח.</li><li><b>Standard</b> — <b style="color:#4de6a4">ירוק בהיר = עולה ↑</b>, <b style="color:#ff7085">אדום בהיר = יורד ↓</b>. שני צבעי כיוון בלבד.</li><li><b>PVSRA</b> — שישה שילובי צבע של כיוון ונפח: נר רגיל בירוק בהיר / אדום בהיר; וקטור בירוק עז / אדום עז; נפח מוגבר בכחול / סגול. זהו מצב מתקדם לבחירה.</li><li>בקרת <b>Body</b> נפרדת מהצבע: <b>Filled</b> ממלאת את שני הכיוונים; <b>Hollow up</b> מציגה גוף חלול בעלייה ומלא בירידה. ההגדרה לפי פתיחת הנר עצמו, ללא השוואת צבע לסגירה הקודמת. עולה פירושו סגירה מעל <b>פתיחת אותו נר</b>; יורד פירושו סגירה מתחת לפתיחתו. נר יכול להיות עולה גם כשהוא נמוך מהנר הקודם. נר ללא שינוי (Doji) אפור.</li><li>סוג הנפח מופיע בפרטי הנר כשמצביעים עליו. אפשר להוסיף סימני נפח דרך <b>Display → Volume tags</b>: ◆ וקטור, ● נפח מוגבר. ברירת המחדל כבויה כדי לצמצם עומס.</li><li>וקטור: נפח של 200% ומעלה מממוצע 10 הנרות הקודמים, או נפח×טווח הגבוה ביותר ב-10. נפח מוגבר: 150% ומעלה, כשאין סיווג וקטור. הסיווג אינו מזהה את כוונת המשתתפים.</li><li>מסגרת מקווקוות מציינת נר מתהווה. המקרא ושורת הפרטים מציגים את משמעות הצבע והמצב. בחירת התצוגה ואזור הזמן נשמרים כשהדפדפן מאפשר זאת.</li></ul>
-<h3>2. אזורי וקטור</h3><ul><li>המלבן הוא טווח נר הווקטור. הוא נשאר עד שהמחיר חוזר ונוגע בצדו השני.</li><li>הקו המקווקו הוא 50%. רמת ייחוס במודל; אין בכך הבטחה לחזרה או לתגובה במחיר.</li><li>וקטור פתוח הוא אזור למעקב. השימוש בו כיעד חזרה הוא כלל של המודל הנוכחי, שעדיין נדרש לבדוק.</li></ul>
-<h3>3. סדר קריאה מומלץ</h3><ol><li><b>סביבה:</b> אילו וקטורים פתוחים, והאם המחיר מעל או מתחת ל-EMA50.</li><li><b>מתיחה:</b> מרחק של 2 ATR ומעלה מ-EMA50 הוא תנאי במודל הנוכחי; הוא אינו תחזית או אומדן הסתברות.</li><li><b>המתן לסימן חולשה:</b> נר נפח עוצר (▼▲ כתום) או מבנה M / W. לא רודפים אחרי הווקטור.</li><li><b>כניסה וניהול:</b> בכיוון הווקטור, סטופ מעבר לקצה של 20 הנרות האחרונים (ולפחות 1 ATR מהכניסה), יעד 1 במגע, יעד 2 ב-50%.</li><li>המודל בוחן וקטורים במרחק של עד 6 ATR. זהו סף שנבחר לניסוי, ולא אומדן של זמן החזרה.</li></ol>
-<h3>4. הפאנל · נתונים, החלטה וסיכון</h3><ul><li>קודם בודקים את מצב הנתונים ואת זמן סגירת הנר המאושר. LONG / SHORT / WAIT והסיבה המרכזית מופיעים בראש. ספירת תנאים אינה הסתברות הצלחה. כלל הבחירה והשוויון נשמר.</li><li>תוכנית מוצגת רק כשההחלטה המאושרת כשירה. WAIT אינו מקבל תוכנית חלופית. מרחקי הסטופ ויעדי TP1/TP2 מוצגים גם ביחידות ATR של נר ההחלטה המאושר, לצד המחירים והאחוזים. R:R הוא יחס גאומטרי ברוטו.</li><li>עלות המודל ב־R היא 0.1% ממחיר סגירת ההחלטה חלקי מרחק הסטופ. זו הנחת עלות לסיבוב מהמודל הקיים, לא עמלות חשבון מאומתות ולא עלות ביצוע כוללת. נתון חסר, אפס או לא סופי מסומן לא זמין. האומדן הנומינלי נשאר ללא עלויות ואינו כמות לביצוע.</li><li>בדיקת הנר המתהווה נמצאת בנפרד במסגרת צהובה מקווקוות; היא זמנית ואינה מחליפה החלטה או תוכנית מאושרת. פירוט המועמדים, ההקשר והסטטיסטיקה נפתחים לפי הצורך. אלה תיאורי ההיסטוריה הטעונה, לא הוכחת יתרון או תנאי לשימושיות הכלי.</li><li>יומן ההחלטות וכפתור ההורדה נשארים זמינים. בקרות Candles ו־Body וניווט הגרף נגישים תמיד. שכבות, Pane, רמות יום ואזור זמן נמצאים תחת Display.</li></ul>
-<h3>5. קווים</h3><ul><li>EMA13 אדום, EMA50 סגול, EMA200 לבן, EMA800 צהוב.</li><li>VWAP תכלת מקווקו, מתאפס כל יום ב-UTC. DO (אפור) הוא פתיחת היום ב-UTC.</li><li>הקווים העדינים המנוקדים הם מספרים עגולים, לא רמות ה-Psy של Traders Reality (שמבוססות על שיא ושפל של סשן סידני).</li></ul>
-<h3>תצוגת RSI ורמות Pivot</h3><ul><li><b>Pane</b> בוחרת חלונית תחתונה אחת: <b>Volume</b>, <b>RSI14</b> או <b>None</b>. RSI משתמש בחישוב הקיים ובספי 35/65 של הציון; 50 הוא קו אמצע. 14 שינויי מחיר נדרשים לתצוגה. ערך בנר מתהווה מסומן Provisional ואינו החלטה מאושרת.</li><li><b>Pivots</b> מפעילה PP/R1/S1 מסורתיים: PP=(H+L+C)/3, R1=2×PP−L, S1=2×PP−H, מנתוני יום Binance spot מלא קודם ב־UTC. כל קטע תקף ביום העוקב בלבד. נתון חסר מוצג כלא זמין; אזור הזמן משנה תצוגה בלבד. אין טענה להתאמה להגדרות TR_MAIN.</li></ul><h3>6. שליטה</h3><p style="margin:0">גרירה בתוך חלון המחיר מזיזה את הנרות עם הסמן בזמן ובמחיר; גרירה אלכסונית מזיזה בשני הכיוונים בלי לשנות את טווח המחיר. תזוזה אנכית מתחילה ב־4 פיקסלים לפחות וב־10% לפחות מהתנועה האופקית; קליק וגרירה כמעט אופקית משאירים התאמת מחיר אוטומטית. בחלונית Volume/RSI הגרירה אופקית בלבד. גלגלת = זום סביב הסמן; Shift וגלגלת = גלילה אופקית. גרירת ציר המחיר = שינוי קנה מידה; גרירת ציר הזמן = זום. מיקום מחיר ידני נשמר בעדכוני נתונים. Auto scale או Escape מחזירים התאמת מחיר אוטומטית; גם לחיצה כפולה בציר המחיר. Live ו-End חוזרים לזמן האחרון ושומרים את מיקום המחיר הידני. Reset או לחיצה כפולה בגרף מחזירים 150 נרות, זמן אחרון ומחיר אוטומטי. כשהגרף ממוקד: חצים שמאלה/ימינה לגלילה בזמן, למעלה/למטה להזזת הנרות ב־10% מגובה חלון המחיר, +/− לזום ו-Home לתחילת הנתונים. גרירת מגע באצבע אחת נתמכת. אזור הזמן ניתן לבחירה.</p>
-<h3>7. בדיקה היסטורית ותוצאות</h3><ul><li>מריץ את אותם כללי אות על כל ההיסטוריה הטעונה. כניסה בפתיחת הנר הבא, יציאה ביעד 2 או בסטופ (אם שניהם בנר אחד, הסטופ קודם), פער פתיחה דרך סטופ של עסקה פתוחה מתמלא במחיר הפתיחה, ללא החלקה נוספת במודל. יעד מוגבל למחיר היעד גם בפער חיובי; כניסה לא תקפה מעבר לסטופ או ליעד נדחית. עלות קבועה של 0.1% משווי הכניסה לסיבוב, עד 120 נרות.</li><li>TP1 נספר כמגע בלבד; הסימולציה אינה מממשת בו חלק מהפוזיציה ואינה מזיזה בעקבותיו את הסטופ.</li><li>אחוז ההצלחה מוצג עם טווח ביטחון של 95%. עם פחות מ-30 עסקאות הטווח רחב והתוצאה חלשה סטטיסטית.</li><li>R הוא מכפלה של הסיכון. ממוצע R חיובי ו-Profit Factor מעל 1 הם תנאי מינימום, לא הוכחה.</li></ul>
-<h3>8. עוד כלים</h3><ul><li>גודל פוזיציה: לפי גודל חשבון ואחוז סיכון (נשמר בדפדפן).</li><li>מגמה בטיימפריים גבוה: נרות סגורים, הקשר בלבד, לא חלק מהציון.</li><li>🔔 Alerts: שינוי כיוון האות נבדק פעם אחת בסגירת נר. טעינה ראשונית אינה מפיקה התראה היסטורית.</li><li>אות מאושר ותוכנית מחושבים על הנר הסגור האחרון. כרטיס צהוב מציג בדיקה זמנית לנר המתהווה, ללא התראה.</li><li>גלילה לעבר משנה את התצוגה; הפאנל ממשיך להציג את הניתוח העדכני. זו אינה הרצת Replay.</li><li>📋 העתק דוח: כולל מועד הנר המאושר ומצב התצוגה.</li><li>הספירה לאחור מתחת למחיר היא הזמן עד סגירת הנר.</li></ul>
-<h3>רמות יום והקשר קרוב</h3><ul><li><b>Day levels</b> מפעיל PDH/PDL — שיא ושפל יום UTC קודם מלא מנתוני Binance Spot. המתג נפרד מ־<b>Pivots</b>, ונתוני המקור והבקשות משותפים. PDH מסומן בקווים ארוכים ו־PDL בנקודות; רמות קרובות ממוזגות או מופנות לשורת הפרטים.</li><li>כל קטע תקף רק ביום UTC העוקב, בטווח [תחילה, סוף). הסמן מציג מקור ותקפות של היום שעליו מצביעים. תוויות מחיר מתועדפות ליום הנבדק; רמות מחוץ למסך אינן מרחיבות את סולם המחיר.</li><li>כרטיס הרמות הקרובות מעוגן למחיר, ATR וזמן <b>הסגירה המאושרת</b>, ללא תלות בסמן או בגלילה. מוצגת לכל היותר רמה אחת מעל ומתחת, וגם שוויון למחיר אם קיים. שמות באותו מחיר מקובצים. מרחק ATR חסר או אפס הוא לא זמין.</li><li>בסגירה בדיוק בחצות UTC מתחילה תקופה חדשה, גם לפני עדכון נר הפתיחה. עד שמקור היום שהושלם מתקבל ומאומת, הכרטיס מציג טעינה או חוסר נתונים; רמות היום הישן אינן מקבלות תאריך חדש. אלה רמות ייחוס בלבד, לא תחזית יעד ולא תוספת לציון.</li></ul><h3>שלמות, sizing ומצבי נתונים</h3><ul><li>המקור הוא <b>BINANCE SPOT</b>, והמצב הוא <b>RESEARCH / SIMULATION</b>. SHORT הוא השערת מחקר, לא מכירת Spot ללא השאלה.</li><li>פתח את אבחון המועמדים כדי לראות LONG ו־SHORT, יעד, גאומטריה וכשירות. נשמר הכלל הקודם: הציון הגבוה נבחר, ובשוויון SHORT נבחר לפני בדיקת יעד; לכן ייתכן WAIT גם כש־LONG כשיר. אין החלפה אוטומטית. הציון הוא מספר תנאים ולא הסתברות.</li><li>אין עסקאות: שיעור רווח וטווח Wilson אינם זמינים. אין הפסדים: PF לא מוגדר, ללא 99; כל תוצאות אפס גם הן יחס לא מוגדר. הירידה היא R נטו ממומש בעסקאות סגורות, לא שווי החשבון.</li><li>ה־sizing הוא תקציב סיכון חלקי מרחק הסטופ בלבד. השווי והיחס להון אינם מינוף מאושר או כמות לביצוע. אפשר לבחור <b>Cash-only Spot LONG</b> ולהזין יתרת מזומן ב־USDT כדי לבדוק כיסוי שווי בלבד לפני עלויות; אין אומדן כמות ישימה, עיגול למסננים או בדיקת הרשאות חשבון.</li><li>האומדן אינו כולל עמלות, החלקה, פערים או מימון. עלות הבסיס בבקטסט נשארה 0.1% משווי הכניסה לסיבוב, ואינה עמלת חשבון ידועה. פער עלול לחרוג מתקציב הסיכון.</li><li>נתון חסר, ATR אפס או ייחוס נפח אפס אינם עדות לפעולה. RSI14 עם אפס רווח ואפס הפסד אינו מוגדר במדיניות המקומית; אין הצבת 50 או טענת התאמה ל־Pine. גרסת הכללים החדשה מופיעה בדוח וברשומות החדשות; רשומות קודמות נשמרות.</li><li>ביום הראשון שטעון חלקית, VWAP משתמש רק בנרות שנטענו ו־DO* הוא פתיחת הנר הראשון שנטען. זהו HLC3 משוקלל בנפח בסיס, לא מחיר ממוצע עסקאות מלא.</li><li><b>הורד תמונת מחקר JSON</b> שומר את מצבי הסטטיסטיקה, המועמדים וההנחות הנוכחיות בנפרד מיומן ההחלטות.</li></ul><h3>9. מגבלות</h3><ul><li>M / W ונר נפח עוצר מזוהים בקירוב משלי.</li><li>סימון M / W מוצג לאחר סגירת נר האישור, 3 נרות לאחר נקודת הקיצון. מבנה שהוחלף נשאר באפור עם ×. הניקוד ההיסטורי משתמש במצב שהיה ידוע בכל נר.</li><li>יומן מקומי שומר עד 1,000 החלטות מאושרות, עם אפשרות הורדה. שמירה במכשיר אינה גיבוי חיצוני.</li><li>כפתור History +1,000 טוען עד 5,000 נרות ישנים נוספים לתצוגה. האות והבקטסט נשארים בחלון המחקר המקורי, כדי לשמור על עקביות ההחלטות.</li><li>הנפח הוא של Binance spot בלבד. בכלי הרשמי הנפח עשוי להיות מבורסה או סימבול אחר.</li><li>זו מסגרת קבלת החלטות ולא ייעוץ השקעות.</li></ul></div></div>
+<div id="hp" lang="he" dir="rtl" hidden><div id="helpdialog" role="dialog" aria-modal="true" aria-labelledby="helptitle" lang="he" dir="rtl">
+<div class="help-toolbar"><h2 id="helptitle">עזרה · Hybrid Terminal</h2><button id="helpclose" aria-label="סגירת העזרה">✕ סגירה</button><div class="help-language" role="group" aria-label="Help language / שפת העזרה"><button id="helplanghe" lang="he" dir="rtl" aria-pressed="true">עברית</button><button id="helplangen" lang="en" dir="ltr" aria-pressed="false">English</button></div><button id="helpstart">מתחילים כאן</button><small id="helpstorage" role="status"></small></div>
+<div id="helpcontent"></div></div></div>
+
 <script>
 const $=id=>document.getElementById(id),S={sym:'BTCUSDT',tf:'5m',k:[],ws:null,n:150,off:-18,follow:true,right:18,price:null,zone:'Asia/Jerusalem',palette:'accessible',body:'filled',annotationDensity:'full',pane:'volume',pivots:false,dayLevels:false,dailyCoverage:[],dailyPending:null,dailyController:null,dailyRetryAt:0,dailyRevision:0,pivotDays:new Map(),pivotSeq:0,pivotStatus:'off',volumeTags:false,history:[],chart:null,historyBusy:false,historyError:'',historyDone:false,phase:'loading',connected:false,lastMessageAt:0,connectedAt:0,epoch:0,revision:0,z:[],sv:[],mw:[],e:[],sig:null,preview:null,st:null,closedIndex:-1,mouse:null};
-const EXECUTION_VERSION='ohlc-market-stop-v2-gap-open',APP_VERSION='0.4.7',RULE_VERSION='hybrid-v2-validity-closed',JOURNAL_KEY='hybridTerminal.journal.v1',VIEW_KEY='hybridTerminal.view.v2',LEGACY_VIEW_KEY='hybridTerminal.view.v1';
+const EXECUTION_VERSION='ohlc-market-stop-v2-gap-open',APP_VERSION='0.4.8',RULE_VERSION='hybrid-v2-validity-closed',JOURNAL_KEY='hybridTerminal.journal.v1',VIEW_KEY='hybridTerminal.view.v2',LEGACY_VIEW_KEY='hybridTerminal.view.v1';
 const cv=$('cv'),cx=cv.getContext('2d'),TFMS={'5m':3e5,'15m':9e5,'1h':36e5,'4h':144e5,'1d':864e5},HTFM={'5m':'1h','15m':'4h','1h':'4h','4h':'1d'};
 const nice=(lo,hi,t)=>{const r=(hi-lo)/t,m=Math.pow(10,Math.floor(Math.log10(r))),f=r/m;return(f>5?10:f>2?5:f>1?2:1)*m};
 const finite=v=>Number.isFinite(v),positive=v=>finite(v)&&v>0,nullable=v=>finite(v)?v:null;
@@ -227,8 +227,246 @@ function updateSystemUI(){const health=feedHealth();$('st').textContent=(health.
  $('systemstatus').innerHTML=`<div class="card health ${health.ready?'':'warn'}"><h4>מצב הנתונים</h4><strong>${health.ready?'●':'◷'} ${health.label}</strong><small>${health.detail}</small>${S.clockTrusted===false?'<small>זמן השרת אינו זמין; נר REST אחרון נשאר זמני.</small>':''}</div>`;
  if(!S.journal)return;const j=S.journal;$('journalstatus').textContent=`${j.records.length} רשומות במכשיר · עד 1,000 נשמרות${j.retiredCount?' · '+j.retiredCount+' ישנות יצאו מהחלון':''}${S.journalPersistent?'':' · השמירה אינה זמינה; הורד גיבוי'}${S.journalConflict?' · זוהתה אי־התאמה בשחזור; הרשומה המקורית נשמרה':''}`;$('exportjournal').disabled=j.records.length===0;
 }
+
+const HELP_LANGUAGE_KEY='hybridTerminal.helpLanguage.v1';
+const HELP_CONTENT={
+ "start": {
+  "title": {
+   "he": "מתחילים כאן",
+   "en": "Start here"
+  },
+  "steps": [
+   {
+    "id": "check-data",
+    "he": "בחר סמל וטווח זמן. בדוק את מצב הנתונים ואת זמן הסגירה המאושר; מחיר חי אינו החלטה חדשה.",
+    "en": "Choose a symbol and timeframe. Check feed health and the confirmed close time; a live price is not a new decision."
+   },
+   {
+    "id": "read-decision",
+    "he": "קרא LONG / SHORT / WAIT והסיבה העיקרית. בתוכנית כשירה בדוק סטופ, יעדים, כיסוי רמות והנחות סיכון; אין כאן אישור לפקודה.",
+    "en": "Read LONG / SHORT / WAIT and the main reason. For an eligible plan inspect stop, targets, level coverage and risk assumptions; this is not order approval."
+   },
+   {
+    "id": "inspect-and-save",
+    "he": "בחר Candles ו־Body בנפרד; פתח Display לפרטי תצוגה. בדוק מקורות וערכים מדויקים במכוון וייצא גיבוי יומן לפני מחיקת נתוני הדפדפן.",
+    "en": "Choose Candles and Body independently; open Display for display options. Deliberately inspect sources and exact values, and export a journal backup before clearing browser data."
+   }
+  ]
+ },
+ "sections": [
+  {
+   "id": "health",
+   "title": {
+    "he": "נתונים, זמן מאושר וחלון החישוב",
+    "en": "Data health, confirmed time and calculation window"
+   },
+   "facts": [
+    {
+     "id": "feed-health",
+     "he": "מצב הזרם נפרד מההחלטה: Market data live דורש חיבור ועדכון נר תקין ב־15 השניות האחרונות. במצב מנותק/ישן הניתוח עשוי להציג החלטה קודמת; התראות מושהות. Refresh טוען מחדש.",
+     "en": "Feed health is separate from the decision: Market data live requires a connection and a valid candle update within the last 15 seconds. Offline/stale views may retain a previous decision; alerts are paused. Refresh reloads data."
+    },
+    {
+     "id": "decision-window",
+     "he": "חלון ההחלטה מציג סמל/טווח, מספר נרות סגורים, פתיחת נר הקלט הראשון וסגירת ההחלטה ב־UTC. זה אינו מדד לבריאות הזרם, חימום מלא, התכנסות או שקילות למחקר ממקור קבוע.",
+     "en": "The decision window identifies symbol/timeframe, closed input count, first input candle-open and decision-close UTC times. It is not feed health, full warm-up, convergence or equivalence to fixed-origin research."
+    },
+    {
+     "id": "existing-countdown",
+     "he": "הספירה לאחור כבר מוצגת מתחת לתווית המחיר האחרון כשהמחיר בטווח הגרף. היא מבוססת על סוף הנר ושעון המחשב עם היסט שרת כשזמין. 0:00 אינו אישור סגירה מהזרם; Closed מציין שהנר מסומן סגור. אם שעון השרת חסר, נר REST האחרון נשאר זמני.",
+     "en": "The existing countdown appears below the last-price label when that price is inside the plot. It uses candle end and the computer clock with server offset when available. 0:00 is not feed-confirmed closure; Closed means the candle is marked closed. Without server time, the latest REST candle stays provisional."
+    }
+   ]
+  },
+  {
+   "id": "decisions",
+   "title": {
+    "he": "מאושר, זמני ו־LONG / SHORT / WAIT",
+    "en": "Confirmed, provisional and LONG / SHORT / WAIT"
+   },
+   "facts": [
+    {
+     "id": "confirmed-provisional",
+     "he": "ההחלטה המאושרת, התוכנית והיומן מתייחסים לנר סגור. כרטיס זמני נפרד יכול להשתנות תוך כדי הנר ואינו מחליף את התוכנית המאושרת. מבני M/W זמינים רק לאחר נר האישור, ולא מתאריך הפיבוט לבדו.",
+     "en": "The confirmed decision, plan and journal refer to a closed candle. The separate provisional card can change during a candle and does not replace the confirmed plan. M/W structures become available only after their confirmation candle, not from the pivot date alone."
+    },
+    {
+     "id": "score-selection",
+     "he": "הציון הוא מספר תנאים מתוך 5, לא הסתברות. נבחר הציון הגבוה; בשוויון נבחר SHORT לפני בדיקת הכשירות. רק אחר כך נבדקים סף Score, נתונים, יעד וגאומטריה. לכן WAIT אפשרי גם אם הכיוון האחר כשיר; אין החלפה אוטומטית או תוכנית חלופית.",
+     "en": "Score counts conditions out of 5; it is not a probability. The higher score is selected, with SHORT on a tie before eligibility is checked. Only then are the Score threshold, data, target and geometry checked. WAIT can therefore occur while the other side is eligible; there is no automatic fallback or substitute plan."
+    },
+    {
+     "id": "spot-scope",
+     "he": "LONG ו־SHORT הם כיווני מחקר/סימולציה. SHORT אינו אישור למכירת Spot בחסר; אין חיבור חשבון, השאלה או שליחת פקודות.",
+     "en": "LONG and SHORT are research/simulation directions. SHORT is not an approved Spot short order; there is no account connection, borrowing or order submission."
+    }
+   ]
+  },
+  {
+   "id": "candles",
+   "title": {
+    "he": "צבעי נרות, גוף ונפח",
+    "en": "Candle palettes, body and volume"
+   },
+   "facts": [
+    {
+     "id": "palette-mapping",
+     "he": "Standard: ירוק לעלייה ואדום לירידה. High contrast: כחול לעלייה וכתום לירידה. PVSRA: צבעים לפי כיוון וסיווג נפח, כפי שמראה המקרא. למעלה/למטה משווה סגירה לפתיחה של אותו נר; Doji ניטרלי כששתיהן שוות. בחירה שמורה נשמרת; אין החלפת ברירת מחדל.",
+     "en": "Standard: green up and red down. High contrast: blue up and orange down. PVSRA: direction plus volume classification, as shown in the legend. Up/down compares the same candle’s close with its open; Doji is neutral when equal. Saved choices are retained; the default is not changed."
+    },
+    {
+     "id": "body-tags",
+     "he": "Body נבחר בנפרד מהצבע: Filled ממלא גופים; Hollow up משאיר גוף עולה חלול וגוף יורד מלא. ב־Display אפשר להוסיף ◆ Vector ו־● Rising volume כשיש מקום. אלה רמזים גם ללא צבע, לא תנאי ציון נוספים.",
+     "en": "Body is independent of palette: Filled fills bodies; Hollow up leaves rising bodies hollow and falling bodies filled. Display optionally adds ◆ Vector and ● Rising volume where there is room. These are non-color cues, not extra score conditions."
+    },
+    {
+     "id": "volume-classification",
+     "he": "כשייחוס הנפח זמין, הוא מבוסס על 10 נרות קודמים בלבד: Vector אם הנפח לפחות פי 2 מהממוצע או שמכפלת נפח×טווח מגיעה לשיא החיובי הקודם; אחרת Rising volume אם הנפח לפחות פי 1.5. השאר Normal. נפח בנר מתפתח וסיווגו זמניים; נפח הוא נתון OHLCV, לא הוכחת ספיגה או זרימת פקודות.",
+     "en": "When available, the volume reference uses only the prior 10 candles: Vector if volume is at least 2× their mean or volume×range reaches their positive maximum product; otherwise Rising volume if at least 1.5× the mean. The rest is Normal. Developing-candle volume and classification are provisional; OHLCV volume is not proof of absorption or order flow."
+    }
+   ]
+  },
+  {
+   "id": "navigation",
+   "title": {
+    "he": "ניווט, Display ו־Full / Focus",
+    "en": "Navigation, Display and Full / Focus"
+   },
+   "facts": [
+    {
+     "id": "plot-gestures",
+     "he": "גרירה בתוך גרף המחיר מזיזה זמן ומחיר; גרירה באלכסון מזיזה את שניהם. תזוזה אנכית של 4 פיקסלים נדרשת לפני מעבר למיקום ידני. גרירת חלונית נפח/RSI מזיזה זמן בלבד. ציר המחיר משנה קנה מידה, ציר הזמן משנה זום. נגיעה מדומה אינה קבלת מכשיר פיזי.",
+     "en": "Drag inside the price plot to pan time and price; diagonal dragging moves both. A 4-pixel vertical movement is required before manual price positioning starts. Volume/RSI-pane dragging pans time only. The price axis scales price; the time axis zooms. Emulated touch is not physical-device acceptance."
+    },
+    {
+     "id": "navigation-controls",
+     "he": "Live חוזר לזמן האחרון ושומר מיקום מחיר ידני. Auto scale או Escape בגרף משחזרים התאמת מחיר אוטומטית; Reset מחזיר 150 נרות, זמן אחרון וסולם אוטומטי. כשהגרף ממוקד: חצים ימינה/שמאלה לזמן, למעלה/למטה למחיר, +/− לזום, End ל־Live. קיצורי הגרף אינם ניווט דף מחוץ למיקודו.",
+     "en": "Live returns to the latest time while keeping manual price positioning. Auto scale or Escape on the chart restores automatic price fitting; Reset restores 150 bars, latest time and auto scale. With chart focus: Left/Right pan time, Up/Down pan price, +/− zoom, End selects Live. Chart shortcuts do not replace page navigation outside chart focus."
+    },
+    {
+     "id": "density-history",
+     "he": "Display מרכז שכבות, חלונית תחתונה, אזור זמן ותגי נפח. Full היא ברירת המחדל ושומרת את כל תוויות M/W; Focus משאירה רק את M ואת W הפעילים והמאושרים האחרונים הידועים בזמן ההחלטה. אין שינוי בהחלטה, בתוכנית או בחישוב; אפשר לחזור ל־Full. History +1,000 מוסיף נרות לגרף בלבד ואינו מאריך את חלון ההחלטה; למחוון בגרף עשוי להיות מקור מוקדם יותר.",
+     "en": "Display groups layers, lower pane, timezone and volume tags. Full is the default and retains all M/W labels; Focus retains only the latest active confirmed M and W known at the decision time. Decisions, plans and calculations are unchanged; return to Full at any time. History +1,000 adds chart-only candles without extending the decision window; chart indicators may have an older origin."
+    }
+   ]
+  },
+  {
+   "id": "context",
+   "title": {
+    "he": "מחוונים ורמות יום UTC",
+    "en": "Indicators and UTC day levels"
+   },
+   "facts": [
+    {
+     "id": "indicators",
+     "he": "המחוונים הקיימים הם EMA13/50/200/800, ATR14, RSI14, VWAP ופתיחת יום. EMA800 הוא הקשר בלבד, לא הצבעה נוספת. RSI14 דורש 14 שינויי מחיר; מצב ללא עליות וללא ירידות אינו מוגדר ולא מוחלף ב־50. רמות 35/50/65 מוצגות בחלונית RSI; אין שינוי במדיניות החישוב.",
+     "en": "Existing indicators are EMA13/50/200/800, ATR14, RSI14, VWAP and Daily Open. EMA800 is context-only, not an extra vote. RSI14 needs 14 price changes; a no-gains/no-losses state is undefined and is not replaced by 50. The RSI pane shows 35/50/65; calculation policy is unchanged."
+    },
+    {
+     "id": "utc-coverage",
+     "he": "VWAP משקלל HLC3 בנפח בסיס ומתאפס בחצות UTC. DO הוא פתיחת היום; DO* הוא רק פתיחת הנר הראשון שנטען ביום חלקי, לא פתיחת יום מלאה ומאומתת. גם VWAP חלקי מסומן כך. חפש את קו DO בשכבת EMA / VWAP ואת הכיסוי בפרטים/סמן; חלון ראשון שמתחיל באמצע יום אינו מקבל כיסוי מלא בדיעבד.",
+     "en": "VWAP weights HLC3 by base volume and resets at UTC midnight. DO is Daily Open; DO* is only the first loaded candle’s open in a partial day, not an authenticated full-day open. Partial VWAP is also disclosed. Inspect the DO line under EMA / VWAP and coverage in details/inspection; a first window starting mid-day does not acquire full coverage retrospectively."
+    },
+    {
+     "id": "previous-day-levels",
+     "he": "Day levels מציג PDH/PDL, ו־Pivots מציג PP/R1/S1 מסורתיים מהיום הקודם המלא ב־UTC. אלה מתגים נפרדים עם מקור משותף, וכל קטע תקף ביום UTC העוקב בלבד. רמות מחוץ למסך אינן מרחיבות את סולם המחיר. Details · exact values מציג ערכים ותקפות מדויקים; קיבוץ תוויות אינו מיזוג מחירים שונים או הצמדה לטיק פקודה.",
+     "en": "Day levels shows PDH/PDL; Pivots shows traditional PP/R1/S1 from the previous complete UTC day. The toggles share a source but are independent; each segment is valid only on the following UTC day. Off-screen levels do not expand the price scale. Details · exact values exposes precise values and validity; label grouping neither merges distinct prices nor snaps calculations to order ticks."
+    }
+   ]
+  },
+  {
+   "id": "risk",
+   "title": {
+    "he": "יעדים, ATR/R, כיסוי, גודל ועלויות",
+    "en": "Targets, ATR/R, coverage, sizing and costs"
+   },
+   "facts": [
+    {
+     "id": "risk-coordinates",
+     "he": "התוכנית משתמשת בסגירת ההחלטה המאושרת ככניסה E, בסטופ S וביעדים. R הוא מרחק הסיכון <bdi dir='ltr'>D = |E − S|</bdi>; מרחקי ATR משתמשים ב־ATR בזמן ההחלטה. מחנה לא תקין מבטל רק את המדד התלוי בו. TP1 הוא נתון מגע, לא יציאה חלקית; RR ברוטו אינו נטו לאחר עלויות.",
+     "en": "The plan uses the confirmed decision-close as entry E, stop S and targets. R uses risk distance <bdi dir='ltr'>D = |E − S|</bdi>; ATR distances use decision-time ATR. An invalid denominator disables only its own metric. TP1 is a touch statistic, not a partial exit; gross RR is not net of costs."
+    },
+    {
+     "id": "target-path",
+     "he": "רמות בדרך ליעד מציג עד שלוש קבוצות בין הכניסה ל־TP2 לפי הכיוון, עם הרחבה לרמות נוספות וכיסוי שמונת המקורות: PDH/PDL/PP/R1/S1, EMA50/200 ו־UTC VWAP. שכבה כבויה, מקור חסר או VWAP חלקי אינם נכללים ומוצהרים. שוויון לכניסה/TP2 הוא קצה; רק מחירים שווים באמת מקובצים. היעדר רמות זמינות אינו מסלול פנוי. EMA/VWAP הם ייחוס בזמן ההחלטה, לא מחסומים עתידיים מוכחים או הצבעות נוספות.",
+     "en": "Target-path context shows up to three directional groups between entry and TP2, with expandable extra levels and coverage of eight sources: PDH/PDL/PP/R1/S1, EMA50/200 and UTC VWAP. Disabled layers, missing sources and partial VWAP are excluded and disclosed. Entry/TP2 coincidences are endpoints; only truly equal prices group. No available levels does not mean a clear path. EMA/VWAP are decision-time references, not proven future barriers or extra votes."
+    },
+    {
+     "id": "nominal-sizing",
+     "he": "אומדן הגודל מחלק סיכון כספי מונח במרחק הסטופ; הוא נומינלי ואינו כמות לביצוע. תרחיש מזומן אופציונלי בודק הנחות כיסוי בלבד; חסרים דיוק כמויות, מגבלות זירה ועלויות חשבון. אין אישור למינוף או ל־SHORT ב־Spot.",
+     "en": "Nominal sizing divides assumed cash risk by stop distance; it is not an executable quantity. The optional cash scenario checks coverage assumptions only; quantity precision, venue constraints and account costs are missing. It approves neither leverage nor a Spot SHORT."
+    },
+    {
+     "id": "cost-assumptions",
+     "he": "עלות הבסיס נותרת <bdi dir='ltr'>costR = 0.001 × E / D</bdi>, הנחת סיבוב 0.1% מהכניסה, לא עמלת חשבון מאומתת. כרטיס התרחישים האופציונלי מתחיל ב־10 bps עמלה כוללת, 0 החלקה כוללת ו־0 פער; עמלה/החלקה הן מהכניסה ופער ממחיר הסטופ. הגבולות <bdi dir='ltr'>100 / 100 / 1,000 bps</bdi> הם מגבלות קלט, לא אומדן שוק או גבול להפסד אמיתי. הנחות נשמרות בנפרד; קלט חסר/שלילי/לא סופי/מוגזם אינו מפיק מספר.",
+     "en": "Baseline cost remains <bdi dir='ltr'>costR = 0.001 × E / D</bdi>, an assumed 0.1% round trip on entry notional, not verified account fees. The optional scenario card starts at 10 bps total fee, 0 total slippage and 0 gap; fee/slippage use entry notional, gap uses stop notional. Bounds of <bdi dir='ltr'>100 / 100 / 1,000 bps</bdi> are input guards, not market estimates or a cap on real loss. Assumptions save separately; missing/negative/nonfinite/excessive inputs produce no number."
+    },
+    {
+     "id": "cost-formulas",
+     "he": "ל־TP2 נסמן T; הכיוון <bdi dir='ltr'>d = +1 LONG / −1 SHORT</bdi>. חיכוך והלם פער: <bdi dir='ltr'>F = E × (feeBps + slippageBps) / 10000</bdi>; <bdi dir='ltr'>G = S × gapBps / 10000</bdi>. יעד נטו היפותטי: <bdi dir='ltr'>(d × (T − E) − F) / D</bdi>. סטופ רגיל: <bdi dir='ltr'>−1 − F / D</bdi>. סטופ בהלם: <bdi dir='ltr'>−1 − (F + G) / D</bdi>. ההלם הוא מתחת לסטופ ב־LONG ומעליו ב־SHORT. אלה תרחישים במחיר סגירת ההחלטה, לא מחירים לביצוע או תוצאות היסטוריות; הבדיקה ההיסטורית נכנסת בפתיחה הבאה ולכן אינה זהה מספרית. אין שינוי בעלות הבסיס, בגודל או ביומן.",
+     "en": "Let T be TP2 and direction <bdi dir='ltr'>d = +1 LONG / −1 SHORT</bdi>. Friction and gap shock: <bdi dir='ltr'>F = E × (feeBps + slippageBps) / 10000</bdi>; <bdi dir='ltr'>G = S × gapBps / 10000</bdi>. Hypothetical net TP2: <bdi dir='ltr'>(d × (T − E) − F) / D</bdi>. Ordinary stop: <bdi dir='ltr'>−1 − F / D</bdi>. Gap-stressed stop: <bdi dir='ltr'>−1 − (F + G) / D</bdi>. Shock is below the LONG stop and above the SHORT stop. These are decision-close planning scenarios, not executable prices or historical results; the backtest enters at the next open and is not numerically identical. Baseline cost, sizing and journal are unchanged."
+    }
+   ]
+  },
+  {
+   "id": "records",
+   "title": {
+    "he": "יומן, ייצוא, סימולציה ומגבלות",
+    "en": "Journal, export, historical simulation and limits"
+   },
+   "facts": [
+    {
+     "id": "journal-export",
+     "he": "יומן החלטות מאושרות שומר רשומה ראשונה לכל תצורה ונר סגור במכשיר, כולל WAIT; אותו מזהה אינו נכתב מחדש. עד 1,000 רשומות נשמרות; מחיקת נתוני הדפדפן עלולה למחוק אותן. ייצוא יומן JSON הוא גיבוי מקומי. דוח/ייצוא מחקר מתוך פרטי הסטטיסטיקה הוא תמונת מצב נפרדת, לא מערך מחקר קפוא או רישום ביצועים בחשבון.",
+     "en": "The confirmed-decision journal keeps the first record per configuration and closed candle on this device, including WAIT; the same ID is not rewritten. Up to 1,000 records are retained; clearing browser data can remove them. Journal JSON export is a local backup. The report/research export in statistics details is a separate current snapshot, not a frozen research dataset or account execution ledger."
+    },
+    {
+     "id": "simulation-policy",
+     "he": "הסימולציה ההיסטורית משתמשת ב־OHLC: כניסה בפתיחה הבאה, סטופ קודם כשסטופ ויעד באותו נר, סטופ בפער במחיר הפתיחה, יעד במחיר הגבול, עד 120 נרות, ו־0.1% מעלות הכניסה לסיבוב ללא החלקה נוספת. עסקאות לא פתורות בקצה אינן תוצאות מושלמות. TP1 הוא מגע בלבד. העקומה היא R נטו של עסקאות סגורות, לא הון חשבון. כשאין הפסדים במדגם, PF אינו מוגדר ולא הוכחה ליתרון; כשאין עסקאות, ממוצע ואחוזים אינם זמינים.",
+     "en": "Historical OHLC simulation enters at the next open, resolves stop before target in the same bar, fills a gapped stop at the open and a target at its limit, allows up to 120 bars, and deducts 0.1% entry-notional round-trip cost without extra slippage. Unresolved edge trades are not completed outcomes. TP1 is touch-only. The curve is closed-trade net R, not account equity. With no losses in the sample, PF is undefined and does not establish an edge; with no trades, means and percentages are unavailable."
+    },
+    {
+     "id": "limitations",
+     "he": "נתונים חסרים, כיסוי יום חלקי, מקור היסטוריה וחימום מחוונים עשויים להגביל את ההקשר. המדגם, שיעורי ההצלחה והטווחים הסטטיסטיים אינם הוכחה לרווחיות או תחזית הסתברות לעסקה הבאה. אין כאן ייעוץ השקעות, מנוע ביצוע, הוכחת זרימת פקודות או שקילות מלאה לכלי חיצוני. בדיקת דפדפן אינה קבלת מגע פיזי או תצפית חיה ממושכת.",
+     "en": "Missing data, partial-day coverage, history origin and indicator warm-up can limit context. Samples, historical hit rates and statistical intervals do not prove profitability or give a probability for the next trade. This is not investment advice, an execution engine, proof of order flow or full parity with an external tool. Browser QA is not physical-touch or long-session live acceptance."
+    }
+   ]
+  }
+ ]
+};
+function validHelpLanguage(value){return typeof value==='string'&&(value==='he'||value==='en')}
+function renderHelp(){
+ const language=S.helpLanguage,he=language==='he',open=new Set(Array.from(document.querySelectorAll('#helpcontent details[open]')).map(el=>el.dataset.helpSection));
+ for(const id of ['hp','helpdialog']){$(id).lang=language;$(id).dir=he?'rtl':'ltr'}
+ $('helptitle').textContent=he?'עזרה · Hybrid Terminal':'Hybrid Terminal · Help';$('helpclose').textContent=he?'✕ סגירה':'✕ Close';$('helpclose').setAttribute('aria-label',he?'סגירת העזרה':'Close Help');$('helpstart').textContent=HELP_CONTENT.start.title[language];
+ $('helplanghe').setAttribute('aria-pressed',String(he));$('helplangen').setAttribute('aria-pressed',String(!he));
+ const status={defaults:['',''],saved:['שפת העזרה נשמרה במכשיר.','Help language saved on this device.'],'invalid-saved':['העדפת השפה השמורה אינה תקינה; מוצגת עברית. בחר שפה כדי לשמור מחדש.','Saved Help language is invalid; Hebrew is used. Choose a language to save again.'],'session-only':['שמירת השפה אינה זמינה; הבחירה תקפה לסשן בלבד.','Language storage is unavailable; this choice applies to this session only.']};
+ $('helpstorage').textContent=(status[S.helpStorage]||status.defaults)[he?0:1];
+ $('helpcontent').innerHTML=`<section aria-labelledby="helpstartheading"><h3 id="helpstartheading" tabindex="-1">${HELP_CONTENT.start.title[language]}</h3><ol>${HELP_CONTENT.start.steps.map(f=>`<li data-help-fact="${f.id}">${f[language]}</li>`).join('')}</ol></section>`+HELP_CONTENT.sections.map(section=>`<details data-help-section="${section.id}"${open.has(section.id)?' open':''}><summary>${section.title[language]}</summary>${section.facts.map(f=>`<p data-help-fact="${f.id}">${f[language]}</p>`).join('')}</details>`).join('');
+}
+function selectHelpLanguage(language,persist=true){
+ if(!validHelpLanguage(language))return false;S.helpLanguage=language;
+ if(persist){try{localStorage[HELP_LANGUAGE_KEY]=JSON.stringify({schemaVersion:1,language});S.helpStorage='saved'}catch{S.helpStorage='session-only'}}
+ renderHelp();return true;
+}
+function openHelp(){
+ if(!$('hp').hidden)return;S.helpReturnFocus=document.activeElement;S.helpBackground=Array.from(document.querySelectorAll('body > header, body > main')).map(el=>({el,inert:el.inert}));for(const item of S.helpBackground)item.el.inert=true;
+ $('hp').hidden=false;$('hq').setAttribute('aria-expanded','true');$('helpclose').focus();
+}
+function closeHelp(){
+ if($('hp').hidden)return;$('hp').hidden=true;for(const item of S.helpBackground||[])item.el.inert=item.inert;S.helpBackground=[];$('hq').setAttribute('aria-expanded','false');
+ const target=S.helpReturnFocus?.isConnected&&!S.helpReturnFocus.disabled?S.helpReturnFocus:$('hq');target.focus();S.helpReturnFocus=null;
+}
+function initHelp(){
+ S.helpLanguage='he';S.helpStorage='defaults';
+ try{const bytes=localStorage[HELP_LANGUAGE_KEY];if(bytes!=null){let saved;try{saved=JSON.parse(bytes)}catch{}if(saved&&saved.schemaVersion===1&&validHelpLanguage(saved.language)){S.helpLanguage=saved.language;S.helpStorage='saved'}else S.helpStorage='invalid-saved'}}catch{S.helpStorage='session-only'}
+ renderHelp();$('hq').onclick=openHelp;$('helpclose').onclick=closeHelp;$('hp').onclick=e=>{if(e.target===$('hp'))closeHelp()};
+ $('helplanghe').onclick=()=>selectHelpLanguage('he');$('helplangen').onclick=()=>selectHelpLanguage('en');$('helpstart').onclick=()=>{$('helpstartheading').focus();$('helpstartheading').scrollIntoView?.({block:'start'})};
+ $('hp').onkeydown=e=>{if($('hp').hidden)return;if(e.key==='Escape'){e.preventDefault();e.stopPropagation();closeHelp();return}if(e.key==='Tab'){const items=Array.from($('helpdialog').querySelectorAll('button:not([disabled]), summary')).filter(el=>el.getClientRects().length),first=items[0],last=items.at(-1);if(!first)return;if(!items.includes(document.activeElement)||e.shiftKey&&document.activeElement===first||!e.shiftKey&&document.activeElement===last){e.preventDefault();(e.shiftKey?last:first).focus()}}};
+}
+
 function updateLegend(){const p=PALETTES[S.palette],swatch=(label,color)=>`<span style="color:${color}"><i class="swatch" style="background:${S.body==='hollow'&&label.includes('↑')?'transparent':color}"></i>${label}</span>`;
- $('candlelegend').innerHTML=(S.palette==='pvsra'?swatch('Normal ↑',p.up)+swatch('Normal ↓',p.down)+swatch('Vector ↑',p.vectorUp)+swatch('Vector ↓',p.vectorDown)+swatch('Rising vol ↑',p.risingUp)+swatch('Rising vol ↓',p.risingDown):swatch('Up · C > O',p.up)+swatch('Down · C < O',p.down))+swatch('Doji · C = O',p.flat)+`<span>Body: ${S.body==='hollow'?'Hollow up / filled down':'Filled'}</span>`+(S.volumeTags?'<span>◆ Vector / ● Rising volume</span>':'');
+ $('candlelegend').innerHTML=`<span class="palette-note">${S.palette==='standard'?'Standard · Green up / Red down':S.palette==='accessible'?'High contrast · Blue up / Orange down':'PVSRA · Direction + volume'}</span>`+(S.palette==='pvsra'?swatch('Normal ↑',p.up)+swatch('Normal ↓',p.down)+swatch('Vector ↑',p.vectorUp)+swatch('Vector ↓',p.vectorDown)+swatch('Rising vol ↑',p.risingUp)+swatch('Rising vol ↓',p.risingDown):swatch('↑ Up · C > O',p.up)+swatch('↓ Down · C < O',p.down))+swatch('Doji · C = O',p.flat)+`<span>Body: ${S.body==='hollow'?'Hollow up / filled down':'Filled'}</span>`+(S.volumeTags?'<span>◆ Vector / ● Rising volume</span>':'');
 }
 function loadDisplayPrefs(){try{const saved=JSON.parse(localStorage[VIEW_KEY]||'null'),legacy=saved?null:JSON.parse(localStorage[LEGACY_VIEW_KEY]||'null'),prefs=saved?.schemaVersion===2?saved:legacy;
  if(prefs){if(['standard','pvsra','accessible'].includes(prefs.palette))S.palette=prefs.palette;if(typeof prefs.volumeTags==='boolean')S.volumeTags=prefs.volumeTags;
@@ -604,7 +842,7 @@ $('sym').onchange=e=>{S.sym=e.target.value;load()};
 document.querySelectorAll('[data-tf]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tf]').forEach(x=>x.classList.remove('on'));b.classList.add('on');S.tf=b.dataset.tf;load()});
 S.l={z:1,e:1,p:1,m:1};S.hv=null;
 document.querySelectorAll('[data-l]').forEach(b=>b.onclick=()=>{S.l[b.dataset.l]=S.l[b.dataset.l]?0:1;b.classList.toggle('on');sched()});
-$('hq').onclick=()=>$('hp').hidden=!$('hp').hidden;$('hp').onclick=e=>{if(e.target.id==='hp'||e.target.tagName==='BUTTON')$('hp').hidden=true};
+initHelp();
 bindChart();
 S.min=3;S.al=false;initJournal();loadDisplayPrefs();loadSizingPrefs();bindSystem();initPlanningCosts();
 $('ms').onchange=e=>{S.min=+e.target.value;calc();sched()};

@@ -1,0 +1,139 @@
+{
+  "candidateVersion": "0.4.8",
+  "candidateSourceSha256": "49267248f1808133c52e2331fa9d6f7b325be7580a71867177c5dd5d12323858",
+  "evidenceRoot": "/tmp/hybrid-readability-help-0.4.8",
+  "authoritativeRootUnchangedVersion": "0.4.7",
+  "viewports": {
+    "desktop": [
+      1440,
+      1100
+    ],
+    "narrowTouchEmulation": [
+      390,
+      844
+    ]
+  },
+  "feed": "Synthetic REST/WebSocket with network guard; actual Chromium Canvas",
+  "images": [
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/desktop-existing-countdown-do.png",
+      "sha256": "ed40f6d6abb7674fa1f2d0b1ca086fdb6f9fa81ccd84f2453416bffde526404f",
+      "bytes": 165238,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/desktop-help-blocked.png",
+      "sha256": "8e9589604990d3445efec9323869a0ae6226092f5bb1fbf84f223ca93ce00e1f",
+      "bytes": 212230,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/desktop-help-en-formulas.png",
+      "sha256": "478dc10cb6a72f9c5ea9a39bc17eefe28809b8970409fcf6d39218ef9c64efcd",
+      "bytes": 314506,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/desktop-help-en-start.png",
+      "sha256": "ad7ac3342146aec51b0a985a71563cb2e1d43d2848cacf9c9bd538133c6c0719",
+      "bytes": 300049,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/desktop-help-he-formulas.png",
+      "sha256": "92edc521c5c7968dffc36fedf6103b7de0bc6ea99d124ea6a6f9ebb98b749f8b",
+      "bytes": 272781,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/desktop-help-he-start.png",
+      "sha256": "0fbf72383cbe2f54823d39f33ded4a0828944e341e1bfc7c80e7e9a576f7bef8",
+      "bytes": 193043,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/desktop-help-malformed.png",
+      "sha256": "c0d5d4b053abcc0ffa8b89430afb3a8c4053561703e78d41ed6601a5734c72d4",
+      "bytes": 210554,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/desktop-palette-accessible.png",
+      "sha256": "ea42958421c20ffd785ece7900205538797abe11a52054763a8aeebfedb1cff9",
+      "bytes": 172053,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/desktop-palette-pvsra.png",
+      "sha256": "fb08879f1ce058592fc2eead6cd6888d4c382c14f37b02339796038ad05669cf",
+      "bytes": 173481,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/desktop-palette-standard.png",
+      "sha256": "6976e7d7843fdd746780d1ee4a2dd55eed97be324f3f89e1f65beccef52f22f5",
+      "bytes": 170912,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/narrow-existing-countdown-do.png",
+      "sha256": "4815888c2c09aa27b793180a01e5ed0a710f9ef33f67dfb60d828114499037ab",
+      "bytes": 72225,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/narrow-help-blocked.png",
+      "sha256": "d2687471b73c842e3939c4cec0e16cead60146b3f5f6bd2bf0aceb1eb6957b9b",
+      "bytes": 71165,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/narrow-help-en-formulas.png",
+      "sha256": "e8bd5ad9e340fb14e76a66bd31de5d8f11ca1e00dc1cc68a4db1e581e7977387",
+      "bytes": 86152,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/narrow-help-en-start.png",
+      "sha256": "d68ea54e771ba1555bac8ec5ec4d12b08e6ad86730dcf5f1faf63b2b23331c86",
+      "bytes": 70724,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/narrow-help-he-formulas.png",
+      "sha256": "5d5f63faa244bff7fc592486f684060164895bf34731baa2bc0c29ebcd0d9477",
+      "bytes": 74537,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/narrow-help-he-start.png",
+      "sha256": "feae06c5856bc3aa3c902a1d8aee892dd2918f9190ecd8f753d7b2034e3106ce",
+      "bytes": 56756,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/narrow-help-malformed.png",
+      "sha256": "2941a4b9980d6a79cd9910752de752b905ace0777a80ec6a2bbf0299a8028d35",
+      "bytes": 69946,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/narrow-palette-accessible.png",
+      "sha256": "4300a6061d1676595cc7068629adc2bb743f785c39c02472accc446fc00f7bea",
+      "bytes": 67745,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/narrow-palette-pvsra.png",
+      "sha256": "c3d762ddb433edba27382c0bf1848e07c6c62a4f8e0f864d8cb5ad616bd5d89d",
+      "bytes": 68800,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/readability-help-0.4.8/browser-focused/narrow-palette-standard.png",
+      "sha256": "a872b260a7cf9a78d3dd223a9aa783710c84092a928595be5d6fd6a7a129b11b",
+      "bytes": 66824,
+      "visuallyInspected": true
+    }
+  ]
+}

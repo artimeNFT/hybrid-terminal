@@ -1,0 +1,110 @@
+{
+  "applicationVersion": "0.4.8",
+  "sourceSha256": "49267248f1808133c52e2331fa9d6f7b325be7580a71867177c5dd5d12323858",
+  "checks": [
+    {
+      "layout": "desktop",
+      "language": "he",
+      "dimensions": {
+        "width": 743,
+        "scroll": 743
+      },
+      "formulaDirection": "ltr",
+      "openSectionPreserved": true
+    },
+    {
+      "layout": "desktop",
+      "language": "en",
+      "dimensions": {
+        "width": 743,
+        "scroll": 743
+      },
+      "formulaDirection": "ltr",
+      "openSectionPreserved": true
+    },
+    {
+      "layout": "desktop",
+      "kind": "malformed",
+      "isolatedStorage": true,
+      "engineAndJournalUnchanged": true
+    },
+    {
+      "layout": "desktop",
+      "kind": "blocked",
+      "isolatedStorage": true,
+      "engineAndJournalUnchanged": true
+    },
+    {
+      "layout": "narrow",
+      "language": "he",
+      "dimensions": {
+        "width": 372,
+        "scroll": 372
+      },
+      "formulaDirection": "ltr",
+      "openSectionPreserved": true
+    },
+    {
+      "layout": "narrow",
+      "language": "en",
+      "dimensions": {
+        "width": 372,
+        "scroll": 372
+      },
+      "formulaDirection": "ltr",
+      "openSectionPreserved": true
+    },
+    {
+      "layout": "narrow",
+      "kind": "malformed",
+      "isolatedStorage": true,
+      "engineAndJournalUnchanged": true
+    },
+    {
+      "layout": "narrow",
+      "kind": "blocked",
+      "isolatedStorage": true,
+      "engineAndJournalUnchanged": true
+    }
+  ],
+  "existingFeatureInventory": [
+    {
+      "layout": "desktop",
+      "partialDay": true,
+      "doLabel": {
+        "text": "DO*",
+        "x": 342,
+        "y": 55
+      },
+      "pw": 968,
+      "doLegendAnchorOutsideClip": false,
+      "countdown": {
+        "text": "4:59",
+        "x": 977,
+        "y": 362.07
+      },
+      "manualPriceOutsidePlotHidesCountdown": true,
+      "newFeatureAdded": false
+    },
+    {
+      "layout": "narrow",
+      "partialDay": true,
+      "doLabel": {
+        "text": "DO*",
+        "x": 342,
+        "y": 55
+      },
+      "pw": 304,
+      "doLegendAnchorOutsideClip": true,
+      "countdown": {
+        "text": "4:59",
+        "x": 313,
+        "y": 114
+      },
+      "manualPriceOutsidePlotHidesCountdown": true,
+      "newFeatureAdded": false
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Chromium with synthetic feed, isolated profiles; candidate only. No active-root integration, live soak or midnight observation."
+}

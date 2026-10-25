@@ -1,0 +1,22 @@
+{
+  "tests/results/readability-help-0.4.8/REPORT.md": "83e50c4bd22865e33a2a4974074fc375ddac3be63c45875726f1ce9612e14561",
+  "tests/results/readability-help-0.4.8/app-manifest.json": "404971c740ba2a36325423529a2234dcd0e967df60371746a4d1ea48f582f527",
+  "tests/results/readability-help-0.4.8/audit-manifest.json": "71361fe1daa1e4688c2c8e74dd4eb065b8adcd15dcd4d6fec93cc8076f9c537d",
+  "tests/results/readability-help-0.4.8/browser-evidence.json": "a93178b9469704944bb64b985ba6a19a48860c6fcae446e6b5712300d563715e",
+  "tests/results/readability-help-0.4.8/browser-focused.log": "4aabf38d41b6a972bd07df63401ec412f8ec983704980a1226cd81a7b92ea374",
+  "tests/results/readability-help-0.4.8/browser-manifest.json": "b374deb2c3d153ea3d556bc08b5956897c0431786a8ab2e446239d9ea2fc0b7e",
+  "tests/results/readability-help-0.4.8/browser-network-guard.json": "ea36747d47f27883febd0e2f05802d22831fcc75c13870391b665246c343634b",
+  "tests/results/readability-help-0.4.8/browser-test.log": "c8fce0257a905b9b85bcedd918992302dc740f650fbd95a2cdc0e66d8ea79cac",
+  "tests/results/readability-help-0.4.8/contract-manifest.json": "0883c687ab15aa4e86930cac85ac13bdea2e1fe7bea82d2977c858ac44d6448f",
+  "tests/results/readability-help-0.4.8/existing-feature-inventory.json": "80d9cc5b9baee5c6fef3a65ce5dda6261967557b893d2c866a427f8f3c02178c",
+  "tests/results/readability-help-0.4.8/final-source-check.log": "618c62023eebf44251a682f47e662da9231fc8ac2a88193b57d4d83bddf4e233",
+  "tests/results/readability-help-0.4.8/focused.log": "f1f35b3664ba69be9917bf4c27e731c12bd699fc9c575bddbcc7132aa33cf187",
+  "tests/results/readability-help-0.4.8/frozen-check.log": "d47510bbfd8da7c0e244ee3e4a14804dc1adfbb7dea1edebf033fdc5dd7a04cb",
+  "tests/results/readability-help-0.4.8/npm-test.log": "057e7ea53804f04f8d05e0e4b9e1a4d474e91ee3b360cd8cddcb4c00adca27f6",
+  "tests/results/readability-help-0.4.8/preparation-manifest.json": "9caef29bd2a3cc4d34e5e97bbf066882e2b17ad6461d7c85a9ed8e3383e1ced1",
+  "tests/results/readability-help-0.4.8/presentation-manifest.json": "c7397ddcb3c761832683538051918509d3fc040bc7a5821cac35c7ab1f98bf1c",
+  "tests/results/readability-help-0.4.8/preservation.json": "ac47832c10107178b2b8d9c13316f13678d7acfaab969343f3b8414568296c87",
+  "tests/results/readability-help-0.4.8/research-manifest.json": "fd80c85c4bcb3b415715ca2926899369dc14c7676fb1b3dc6dae52c452d78d7f",
+  "tests/results/readability-help-0.4.8/screenshots.json": "383dcf644df7996479097c2d30d7fe2309a497baeed2595e1372b8fe3caa0769",
+  "tests/results/readability-help-0.4.8/validation-source-identities.json": "c4f0f971ca4f68ad041672091039f31a53d21d8fdfe2f0a033cf8344bb4112df"
+}

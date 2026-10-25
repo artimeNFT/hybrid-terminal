@@ -1,0 +1,46 @@
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+{
+  "context": {
+    "contextId": "hybrid-html-0.4.3-context-v1",
+    "bindingVersion": 1,
+    "logicalSource": "hybrid-terminal.html",
+    "physicalSource": "baseline/hybrid-terminal.0.4.3.html",
+    "sha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "reviewedCheckpoint": "ae45baf74efc58698afe35d5981df87006d16bad",
+    "scope": "Explicit historical research process only; root HTML outside this context is the active user application. Original declarations/seals/payloads remain unchanged.",
+    "bindingSha256": "0741c6a89a8f07818d1a393c19b597c19a14c8fa8b543babe71e7909d970521e",
+    "loaderSha256": "a34fc16753e3138fc866e3a9929e24b9930f5000273e361dcaf80835b23614b3",
+    "nodeVersion": "v24.15.0",
+    "activeApplicationSha256": "49267248f1808133c52e2331fa9d6f7b325be7580a71867177c5dd5d12323858",
+    "physicalSourceSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9"
+  },
+  "historicalManifestVerified": true,
+  "contract": {
+    "contractVersion": "1.0.0",
+    "contractSha256": "04d2c9dbbba6fb3d84b692c4410496f03e280dad82bb8357b44a443527b66156",
+    "status": "predeclared-awaiting-independent-review",
+    "sourceChecksums": {
+      "hybrid-terminal.html": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+      "research/klines.cjs": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+      "research/audit/adapter.cjs": "cd6f89222bb571c91b5f7b39f65b75bd69e2045208334f59dc85fb9ee1aa6daf",
+      "research/readiness-audit.cjs": "90f486a3b937c51dffbfc4a32fb3ebc83668b7b579fea2e0db62edcf305ca5b5",
+      "research/audit/protocol.json": "50cf2d98d57af48ad53631cc0787432fdbc453d920d8667bd4b8d972b175e9e6"
+    },
+    "canonicalDataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+    "firstPermittedDecisionClose": "2026-07-14T21:20:00Z",
+    "acquiredDataRead": false,
+    "applicationBootstrapExecuted": false
+  },
+  "existing": {
+    "preparation": {
+      "state": "canonical-payloads-verified",
+      "featureHash": "e33d77e76ac53f0511664528ef87bc145f497c4380db4f20c055859bc9877e5d",
+      "pairHash": "9a5184f61bba731ff90f946c331f2de5e2c7aa69325b7a537e9775c6e497b575"
+    },
+    "audit": {
+      "originalBytesAndSourceIdentityVerified": true,
+      "canonicalDataHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1"
+    }
+  },
+  "scope": "Read-only source/seal/existing-payload verification; no dataset calculation or cohort generation"
+}

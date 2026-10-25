@@ -1,0 +1,14 @@
+✔ paired Help facts cover actual policies in both languages and isolate readable formulas (63.830774ms)
+✔ language and internal navigation keep Help open; only explicit close/backdrop/Escape close and restore focus/background (25.33343ms)
+✔ Hebrew fresh default never writes; isolated language restores and preserves unrelated preferences and old journal bytes (82.275794ms)
+✔ malformed or unsupported saved language falls back without clearing bytes; storage read/write failures remain session-only (238.426453ms)
+✔ palette option values/colors/defaults/body/tags and all existing calculation behavior match 0.4.7 (322.421298ms)
+✔ existing countdown and partial-day Daily Open are retained as original draw/calculation behavior (57.929276ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 860.5743

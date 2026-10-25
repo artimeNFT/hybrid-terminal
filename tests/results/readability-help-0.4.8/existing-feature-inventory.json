@@ -1,0 +1,43 @@
+{
+  "candidateSourceSha256": "49267248f1808133c52e2331fa9d6f7b325be7580a71867177c5dd5d12323858",
+  "drawAndAnalyzeSourceUnchanged": true,
+  "inventory": [
+    {
+      "layout": "desktop",
+      "partialDay": true,
+      "doLabel": {
+        "text": "DO*",
+        "x": 342,
+        "y": 55
+      },
+      "pw": 968,
+      "doLegendAnchorOutsideClip": false,
+      "countdown": {
+        "text": "4:59",
+        "x": 977,
+        "y": 362.07
+      },
+      "manualPriceOutsidePlotHidesCountdown": true,
+      "newFeatureAdded": false
+    },
+    {
+      "layout": "narrow",
+      "partialDay": true,
+      "doLabel": {
+        "text": "DO*",
+        "x": 342,
+        "y": 55
+      },
+      "pw": 304,
+      "doLegendAnchorOutsideClip": true,
+      "countdown": {
+        "text": "4:59",
+        "x": 313,
+        "y": 114
+      },
+      "manualPriceOutsidePlotHidesCountdown": true,
+      "newFeatureAdded": false
+    }
+  ],
+  "scope": "Synthetic partial-day browser fixture only; no new countdown/DO feature or midnight acceptance"
+}
