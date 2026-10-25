@@ -1,0 +1,10 @@
+{
+  "startedUtc": "2026-10-24T22:59:50.131457+00:00",
+  "sourceSha256": "f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa",
+  "reviewedCheckpoint": "7e5134940f3bb2139184c3f76b3977433e26af7c",
+  "mode": "soak",
+  "seconds": 3600,
+  "frozenContext": false,
+  "output": ".qa-results/observations/soak-0.4.4-2026-10-24T22-59-50Z",
+  "command": "node tests/browser-observe-context.cjs"
+}

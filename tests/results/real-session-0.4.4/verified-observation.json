@@ -1,0 +1,1312 @@
+{
+  "reviewedCheckpoint": "7e5134940f3bb2139184c3f76b3977433e26af7c",
+  "sourceSha256": "f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa",
+  "applicationVersion": "0.4.4",
+  "observerSha256": "4cdc73e4e9654de1faab7791959d88efaebd9ce28bd53cbab338103ce303c05d",
+  "nodeVersion": "v24.15.0",
+  "rawEvidence": {
+    "localDirectory": ".qa-results/observations/soak-0.4.4-2026-10-24T22-59-50Z",
+    "path": ".qa-results/observations/soak-0.4.4-2026-10-24T22-59-50Z/evidence.json",
+    "bytes": 4758917,
+    "sha256": "236e3ed7ac3204bc33b73e57ee93caa807031f257d3aadbaffb4f6ed1a93ba99",
+    "logSha256": "4cd7fb029f041156c05b56bcef7f3a058775e71e0b086a3159578c989d2fd004",
+    "finalScreenshotSha256": "57a8e808cf0aecc6fc20d0c98da1d05632c7e6e40b19c2ef3455930d3b1d4c27"
+  },
+  "verification": {
+    "samplingElapsedSecondsRecorded": 3600.018,
+    "samplingUtcElapsedSeconds": 3600.019,
+    "samplingStarted": {
+      "utc": "2026-10-24T23:00:07.262Z",
+      "zone": "Asia/Jerusalem",
+      "local": "Sunday, 25 October 2026 at 01:00:07 GMT+2",
+      "offset": "01h GMT+02:00"
+    },
+    "samplingFinal": {
+      "utc": "2026-10-25T00:00:07.281Z",
+      "zone": "Asia/Jerusalem",
+      "local": "Sunday, 25 October 2026 at 02:00:07 GMT+2",
+      "offset": "02h GMT+02:00"
+    },
+    "sampleCount": 733,
+    "journalSnapshotsVerified": 735,
+    "runtimeVersions": [
+      "0.4.4"
+    ],
+    "realClosedFrames": 12,
+    "realCloseFrameSequenceComplete": true,
+    "frameReceiptFirstUtc": "2026-10-24T23:05:00.872Z",
+    "frameReceiptLastUtc": "2026-10-25T00:00:01.211Z",
+    "initialConfirmedCloseUtc": "2026-10-24T22:55:00Z",
+    "postReconnectConfirmedCloseUtc": "2026-10-24T23:00:00Z",
+    "finalConfirmedCloseUtc": "2026-10-25T00:00:00Z",
+    "confirmedCandleCountInitial": 999,
+    "confirmedCandleCountFinal": 1011,
+    "allFramesMatchedConfirmedStateAndJournal": true,
+    "feedUnhealthySamplingSnapshots": 0,
+    "dailyContextTransientLoadingSnapshots": 1,
+    "dailyLoadingSeenAt": "2026-10-25T00:00:01.239Z",
+    "dailyReadySeenAgainAt": "2026-10-25T00:00:05.284Z",
+    "dailyContextFinalHealthy": true,
+    "initialJournalRecords": 1,
+    "postReconnectJournalRecords": 2,
+    "finalJournalRecords": 14,
+    "priorSignatureStringsPreservedAcrossAllSnapshots": true,
+    "duplicateJournalIds": 0,
+    "duplicateConfigurationCandleKeys": 0,
+    "configurationKeyFields": [
+      "symbol",
+      "timeframe",
+      "ruleVersion",
+      "minimumScore",
+      "executionVersion",
+      "candleCloseTime"
+    ],
+    "configurationEvidence": "Composite IDs encode symbol/timeframe/candle-open/rule/minimum; candleCloseTime and executionVersion are recorded separately. The source and fixed configuration were unchanged throughout this isolated run.",
+    "journalConflictSnapshots": 0,
+    "pageErrors": [],
+    "consoleErrors": [],
+    "expectedNetworkFault": "Explicit context.setOffline(true)/false before sampling; offline health false, epoch 1 -> 3, resync health and daily context ready.",
+    "expectedStorageFault": {
+      "kind": "Injected quota-style failure/recovery in isolated temporary context, not an observed storage-full incident",
+      "failure": {
+        "persistent": false,
+        "storageUnchanged": true,
+        "status": "2 רשומות במכשיר · עד 1,000 נשמרות · השמירה אינה זמינה; הורד גיבוי"
+      },
+      "recovery": {
+        "persistent": true,
+        "idsUnchanged": true,
+        "storageUnchanged": true,
+        "status": "2 רשומות במכשיר · עד 1,000 נשמרות"
+      }
+    },
+    "unexplainedErrors": [],
+    "sourceAndObserverUnchanged": true,
+    "midnightAcceptance": {
+      "status": "pending-window-unavailable",
+      "checkedAtUtc": "2026-10-25T06:22:15.467442+00:00",
+      "nextStartWindowUtc": {
+        "from": "2026-10-25T23:57:00+00:00",
+        "through": "2026-10-25T23:59:00+00:00"
+      },
+      "nextUtcMidnight": "2026-10-26T00:00:00+00:00",
+      "recommendedStartUtc": "2026-10-25T23:58:00+00:00",
+      "modeNotRun": true,
+      "reason": "No separate midnight-mode run began in its actual UTC start window. Soak crossed midnight, but does not count as midnight acceptance. No indefinite wait."
+    },
+    "physicalDeviceTouch": "pending; not checked",
+    "userPerceivedReadability": "pending; not checked",
+    "observationLimitations": [
+      "One isolated headless Chromium BTCUSDT 5m session; no ordinary user profile or account orders.",
+      "Supervision was intermittent: progress was polled during the first 14 minutes, the background observer completed at its fixed deadline, and saved evidence was verified after continuation.",
+      "The soak includes only approximately seven seconds after UTC midnight; observedMidnight=true is retained as raw data, not accepted as the separate midnight-mode observation.",
+      "The sampled daily context was briefly loading at rollover and recovered by the following sample; sampling does not prove continuous availability between snapshots."
+    ]
+  },
+  "evidenceExcerpts": {
+    "initial": {
+      "label": "initial validated context",
+      "time": {
+        "utc": "2026-10-24T22:59:59.739Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:59:59 GMT+3",
+        "offset": "01h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.4",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 1,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792882500000,
+          "price": 80589.24,
+          "atr": 50.09809611195101,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 665.1966666666558,
+            "percent": 0.8254162300905875,
+            "atr": 13.277883159076213
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 76.24000000000524,
+            "percent": 0.09460320012945306,
+            "atr": 1.5218143186446964
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792882799621
+        },
+        "firstDailySegment": {
+          "pp": 82555.71666666666,
+          "r1": 83911.43333333332,
+          "s1": 81672.43333333332,
+          "sourceStart": 1792454400000,
+          "validFrom": 1792540800000,
+          "validTo": 1792627200000,
+          "pdh": 83439,
+          "pdl": 81200,
+          "observedAt": 1792882799621
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792882799621
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 0,
+            "right": 929.28,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792882200000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792882200000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.7 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792882500000
+            }
+          ]
+        },
+        "storedJournalBytes": 2104
+      }
+    },
+    "offline": {
+      "label": "network offline",
+      "time": {
+        "utc": "2026-10-24T22:59:59.839Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:59:59 GMT+3",
+        "offset": "01h GMT+03:00"
+      },
+      "data": {
+        "version": "0.4.4",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 1,
+        "health": {
+          "ready": false,
+          "label": "אין חיבור לרשת",
+          "header": "Offline",
+          "detail": "הניתוח המוצג נשמר מהעדכון האחרון. התראות מושהות."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792882500000,
+          "price": 80589.24,
+          "atr": 50.09809611195101,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 665.1966666666558,
+            "percent": 0.8254162300905875,
+            "atr": 13.277883159076213
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 76.24000000000524,
+            "percent": 0.09460320012945306,
+            "atr": 1.5218143186446964
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792882799621
+        },
+        "firstDailySegment": {
+          "pp": 82555.71666666666,
+          "r1": 83911.43333333332,
+          "s1": 81672.43333333332,
+          "sourceStart": 1792454400000,
+          "validFrom": 1792540800000,
+          "validTo": 1792627200000,
+          "pdh": 83439,
+          "pdl": 81200,
+          "observedAt": 1792882799621
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792882799621
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 0,
+            "right": 929.28,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792882200000,
+        "journal": {
+          "count": 1,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792882200000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.7 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792882500000
+            }
+          ]
+        },
+        "storedJournalBytes": 2104
+      }
+    },
+    "resync": {
+      "label": "online and guarded reload",
+      "time": {
+        "utc": "2026-10-24T23:00:07.240Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:00:07 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "data": {
+        "version": "0.4.4",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 3,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792882800000,
+          "price": 80605.6,
+          "atr": 49.062517818240636,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 648.8366666666552,
+            "percent": 0.8049523440885685,
+            "atr": 13.224691587789415
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 92.60000000000582,
+            "percent": 0.11488035570730297,
+            "atr": 1.8873878495811454
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792882806447
+        },
+        "firstDailySegment": {
+          "pp": 82555.71666666666,
+          "r1": 83911.43333333332,
+          "s1": 81672.43333333332,
+          "sourceStart": 1792454400000,
+          "validFrom": 1792540800000,
+          "validTo": 1792627200000,
+          "pdh": 83439,
+          "pdl": 81200,
+          "observedAt": 1792882806447
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792882806447
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 0,
+            "right": 922.8266666666666,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 999,
+        "closedCandleTime": 1792882500000,
+        "journal": {
+          "count": 2,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792882200000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.7 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792882500000
+            },
+            {
+              "id": "BTCUSDT|5m|1792882500000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.9 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 62 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792882800000
+            }
+          ]
+        },
+        "storedJournalBytes": 4148
+      }
+    },
+    "rolloverBefore": {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-24T23:59:56.229Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:59:56 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "data": {
+        "version": "0.4.4",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 3,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 1 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792886100000,
+          "price": 80925.69,
+          "atr": 57.73430341905311,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PP"
+            ],
+            "price": 81254.43666666666,
+            "distance": 328.7466666666587,
+            "percent": 0.40623276325065466,
+            "atr": 5.69413065020488
+          },
+          "below": {
+            "names": [
+              "PDL"
+            ],
+            "price": 80513,
+            "distance": 412.6900000000023,
+            "percent": 0.509961669773841,
+            "atr": 7.148090053231836
+          },
+          "equal": null,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "sourceObservedAt": 1792882806447
+        },
+        "firstDailySegment": {
+          "pp": 82555.71666666666,
+          "r1": 83911.43333333332,
+          "s1": 81672.43333333332,
+          "sourceStart": 1792454400000,
+          "validFrom": 1792540800000,
+          "validTo": 1792627200000,
+          "pdh": 83439,
+          "pdl": 81200,
+          "observedAt": 1792882806447
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792882806447
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 0,
+            "right": 851.8399999999999,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 1010,
+        "closedCandleTime": 1792885800000,
+        "journal": {
+          "count": 13,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792882200000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.7 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792882500000
+            },
+            {
+              "id": "BTCUSDT|5m|1792882500000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.9 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 62 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792882800000
+            },
+            {
+              "id": "BTCUSDT|5m|1792882800000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (3.3 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 64 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792883100000
+            },
+            {
+              "id": "BTCUSDT|5m|1792883100000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (3.6 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 65 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792883400000
+            },
+            {
+              "id": "BTCUSDT|5m|1792883400000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.7 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792883700000
+            },
+            {
+              "id": "BTCUSDT|5m|1792883700000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":0,\"items\":[[\"מתיחה מעל EMA50 (1.5 ATR)\",false],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 53 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792884000000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884000000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.0 ATR)\",false],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 55 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792884300000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884300000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מעל EMA50 (3.0 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792884600000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884600000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":3,\"items\":[[\"מתיחה מעל EMA50 (5.8 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 73 מעל 65\",true]],\"plan\":null}",
+              "candleCloseTime": 1792884900000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (6.1 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 75 מעל 65\",true]],\"plan\":{\"entry\":80887.24,\"stop\":80946.8793666736,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":2.499188175752205}}",
+              "candleCloseTime": 1792885200000
+            },
+            {
+              "id": "BTCUSDT|5m|1792885200000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (5.5 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 72 מעל 65\",true]],\"plan\":{\"entry\":80860.01,\"stop\":80941.02268071621,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":1.5037152075824127}}",
+              "candleCloseTime": 1792885500000
+            },
+            {
+              "id": "BTCUSDT|5m|1792885500000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (6.0 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 74 מעל 65\",true]],\"plan\":{\"entry\":80910.05,\"stop\":80969.65924983591,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":2.883109592439087}}",
+              "candleCloseTime": 1792885800000
+            },
+            {
+              "id": "BTCUSDT|5m|1792885800000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (6.3 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 75 מעל 65\",true]],\"plan\":{\"entry\":80925.69,\"stop\":80983.42430341906,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":3.2476359615713712}}",
+              "candleCloseTime": 1792886100000
+            }
+          ]
+        },
+        "storedJournalBytes": 27657
+      }
+    },
+    "rolloverLoading": {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-25T00:00:01.239Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 02:00:01 GMT+2",
+        "offset": "02h GMT+02:00"
+      },
+      "data": {
+        "version": "0.4.4",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 3,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "loading previous completed UTC days",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792886400000,
+          "price": 80888.16,
+          "atr": 56.29256746054953,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "loading",
+          "above": null,
+          "below": null,
+          "equal": null,
+          "sourceStart": null,
+          "validFrom": 1792886400000,
+          "validTo": 1792972800000,
+          "sourceObservedAt": null
+        },
+        "firstDailySegment": {
+          "pp": 82555.71666666666,
+          "r1": 83911.43333333332,
+          "s1": 81672.43333333332,
+          "sourceStart": 1792454400000,
+          "validFrom": 1792540800000,
+          "validTo": 1792627200000,
+          "pdh": 83439,
+          "pdl": 81200,
+          "observedAt": 1792882806447
+        },
+        "lastDailySegment": {
+          "pp": 81254.43666666666,
+          "r1": 81995.87333333332,
+          "s1": 80447.99333333332,
+          "sourceStart": 1792713600000,
+          "validFrom": 1792800000000,
+          "validTo": 1792886400000,
+          "pdh": 82060.88,
+          "pdl": 80513,
+          "observedAt": 1792882806447
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 0,
+            "right": 851.8399999999999,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 1011,
+        "closedCandleTime": 1792886100000,
+        "journal": {
+          "count": 14,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792882200000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.7 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792882500000
+            },
+            {
+              "id": "BTCUSDT|5m|1792882500000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.9 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 62 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792882800000
+            },
+            {
+              "id": "BTCUSDT|5m|1792882800000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (3.3 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 64 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792883100000
+            },
+            {
+              "id": "BTCUSDT|5m|1792883100000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (3.6 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 65 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792883400000
+            },
+            {
+              "id": "BTCUSDT|5m|1792883400000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.7 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792883700000
+            },
+            {
+              "id": "BTCUSDT|5m|1792883700000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":0,\"items\":[[\"מתיחה מעל EMA50 (1.5 ATR)\",false],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 53 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792884000000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884000000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.0 ATR)\",false],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 55 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792884300000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884300000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מעל EMA50 (3.0 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792884600000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884600000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":3,\"items\":[[\"מתיחה מעל EMA50 (5.8 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 73 מעל 65\",true]],\"plan\":null}",
+              "candleCloseTime": 1792884900000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (6.1 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 75 מעל 65\",true]],\"plan\":{\"entry\":80887.24,\"stop\":80946.8793666736,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":2.499188175752205}}",
+              "candleCloseTime": 1792885200000
+            },
+            {
+              "id": "BTCUSDT|5m|1792885200000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (5.5 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 72 מעל 65\",true]],\"plan\":{\"entry\":80860.01,\"stop\":80941.02268071621,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":1.5037152075824127}}",
+              "candleCloseTime": 1792885500000
+            },
+            {
+              "id": "BTCUSDT|5m|1792885500000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (6.0 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 74 מעל 65\",true]],\"plan\":{\"entry\":80910.05,\"stop\":80969.65924983591,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":2.883109592439087}}",
+              "candleCloseTime": 1792885800000
+            },
+            {
+              "id": "BTCUSDT|5m|1792885800000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (6.3 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 75 מעל 65\",true]],\"plan\":{\"entry\":80925.69,\"stop\":80983.42430341906,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":3.2476359615713712}}",
+              "candleCloseTime": 1792886100000
+            },
+            {
+              "id": "BTCUSDT|5m|1792886100000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (5.5 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 70 מעל 65\",true]],\"plan\":{\"entry\":80888.16,\"stop\":80950.44777023816,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":2.4076957551474965}}",
+              "candleCloseTime": 1792886400000
+            }
+          ]
+        },
+        "storedJournalBytes": 29971
+      }
+    },
+    "rolloverRecovered": {
+      "label": "sample",
+      "time": {
+        "utc": "2026-10-25T00:00:05.284Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 02:00:05 GMT+2",
+        "offset": "02h GMT+02:00"
+      },
+      "data": {
+        "version": "0.4.4",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 3,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 1 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792886400000,
+          "price": 80888.16,
+          "atr": 56.29256746054953,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PDH"
+            ],
+            "price": 81213.64,
+            "distance": 325.4799999999959,
+            "percent": 0.40238274674562496,
+            "atr": 5.781935603276508
+          },
+          "below": {
+            "names": [
+              "PP"
+            ],
+            "price": 80440.84666666666,
+            "distance": 447.31333333333896,
+            "percent": 0.55300223584433,
+            "atr": 7.9462236936842725
+          },
+          "equal": null,
+          "sourceStart": 1792800000000,
+          "validFrom": 1792886400000,
+          "validTo": 1792972800000,
+          "sourceObservedAt": 1792886404045
+        },
+        "firstDailySegment": {
+          "pp": 82555.71666666666,
+          "r1": 83911.43333333332,
+          "s1": 81672.43333333332,
+          "sourceStart": 1792454400000,
+          "validFrom": 1792540800000,
+          "validTo": 1792627200000,
+          "pdh": 83439,
+          "pdl": 81200,
+          "observedAt": 1792882806447
+        },
+        "lastDailySegment": {
+          "pp": 80440.84666666666,
+          "r1": 81660.95333333332,
+          "s1": 79668.05333333333,
+          "sourceStart": 1792800000000,
+          "validFrom": 1792886400000,
+          "validTo": 1792972800000,
+          "pdh": 81213.64,
+          "pdl": 79220.74,
+          "observedAt": 1792886404045
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 0,
+            "right": 845.3866666666667,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792886400000,
+            "validTo": 1792972800000,
+            "left": 845.3866666666667,
+            "right": 968,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 1011,
+        "closedCandleTime": 1792886100000,
+        "journal": {
+          "count": 14,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792882200000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.7 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792882500000
+            },
+            {
+              "id": "BTCUSDT|5m|1792882500000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.9 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 62 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792882800000
+            },
+            {
+              "id": "BTCUSDT|5m|1792882800000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (3.3 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 64 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792883100000
+            },
+            {
+              "id": "BTCUSDT|5m|1792883100000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (3.6 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 65 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792883400000
+            },
+            {
+              "id": "BTCUSDT|5m|1792883400000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.7 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792883700000
+            },
+            {
+              "id": "BTCUSDT|5m|1792883700000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":0,\"items\":[[\"מתיחה מעל EMA50 (1.5 ATR)\",false],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 53 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792884000000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884000000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.0 ATR)\",false],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 55 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792884300000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884300000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מעל EMA50 (3.0 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792884600000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884600000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":3,\"items\":[[\"מתיחה מעל EMA50 (5.8 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 73 מעל 65\",true]],\"plan\":null}",
+              "candleCloseTime": 1792884900000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (6.1 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 75 מעל 65\",true]],\"plan\":{\"entry\":80887.24,\"stop\":80946.8793666736,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":2.499188175752205}}",
+              "candleCloseTime": 1792885200000
+            },
+            {
+              "id": "BTCUSDT|5m|1792885200000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (5.5 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 72 מעל 65\",true]],\"plan\":{\"entry\":80860.01,\"stop\":80941.02268071621,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":1.5037152075824127}}",
+              "candleCloseTime": 1792885500000
+            },
+            {
+              "id": "BTCUSDT|5m|1792885500000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (6.0 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 74 מעל 65\",true]],\"plan\":{\"entry\":80910.05,\"stop\":80969.65924983591,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":2.883109592439087}}",
+              "candleCloseTime": 1792885800000
+            },
+            {
+              "id": "BTCUSDT|5m|1792885800000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (6.3 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 75 מעל 65\",true]],\"plan\":{\"entry\":80925.69,\"stop\":80983.42430341906,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":3.2476359615713712}}",
+              "candleCloseTime": 1792886100000
+            },
+            {
+              "id": "BTCUSDT|5m|1792886100000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (5.5 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 70 מעל 65\",true]],\"plan\":{\"entry\":80888.16,\"stop\":80950.44777023816,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":2.4076957551474965}}",
+              "candleCloseTime": 1792886400000
+            }
+          ]
+        },
+        "storedJournalBytes": 29971
+      }
+    },
+    "final": {
+      "label": "final",
+      "time": {
+        "utc": "2026-10-25T00:00:07.281Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 02:00:07 GMT+2",
+        "offset": "02h GMT+02:00"
+      },
+      "data": {
+        "version": "0.4.4",
+        "rule": "hybrid-v2-validity-closed",
+        "execution": "ohlc-market-stop-v2-gap-open",
+        "epoch": 3,
+        "health": {
+          "ready": true,
+          "label": "נתוני שוק עדכניים",
+          "header": "Market data live",
+          "detail": "עדכון תקין לפני 0 שניות · אות מאושר בנר סגור בלבד."
+        },
+        "dailyStatus": "ready",
+        "context": {
+          "kind": "reference-only-no-score-vote",
+          "anchor": "latest-confirmed-close",
+          "asOf": 1792886400000,
+          "price": 80888.16,
+          "atr": 56.29256746054953,
+          "enabled": {
+            "dayLevels": true,
+            "pivots": true
+          },
+          "state": "ready",
+          "above": {
+            "names": [
+              "PDH"
+            ],
+            "price": 81213.64,
+            "distance": 325.4799999999959,
+            "percent": 0.40238274674562496,
+            "atr": 5.781935603276508
+          },
+          "below": {
+            "names": [
+              "PP"
+            ],
+            "price": 80440.84666666666,
+            "distance": 447.31333333333896,
+            "percent": 0.55300223584433,
+            "atr": 7.9462236936842725
+          },
+          "equal": null,
+          "sourceStart": 1792800000000,
+          "validFrom": 1792886400000,
+          "validTo": 1792972800000,
+          "sourceObservedAt": 1792886404045
+        },
+        "firstDailySegment": {
+          "pp": 82555.71666666666,
+          "r1": 83911.43333333332,
+          "s1": 81672.43333333332,
+          "sourceStart": 1792454400000,
+          "validFrom": 1792540800000,
+          "validTo": 1792627200000,
+          "pdh": 83439,
+          "pdl": 81200,
+          "observedAt": 1792882806447
+        },
+        "lastDailySegment": {
+          "pp": 80440.84666666666,
+          "r1": 81660.95333333332,
+          "s1": 79668.05333333333,
+          "sourceStart": 1792800000000,
+          "validFrom": 1792886400000,
+          "validTo": 1792972800000,
+          "pdh": 81213.64,
+          "pdl": 79220.74,
+          "observedAt": 1792886404045
+        },
+        "visibleDailySegments": [
+          {
+            "validFrom": 1792800000000,
+            "validTo": 1792886400000,
+            "left": 0,
+            "right": 845.3866666666667,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          },
+          {
+            "validFrom": 1792886400000,
+            "validTo": 1792972800000,
+            "left": 845.3866666666667,
+            "right": 968,
+            "names": [
+              "PDH",
+              "PDL",
+              "PP",
+              "R1",
+              "S1"
+            ]
+          }
+        ],
+        "closedCandleCount": 1011,
+        "closedCandleTime": 1792886100000,
+        "journal": {
+          "count": 14,
+          "retiredCount": 0,
+          "persistent": true,
+          "conflict": false,
+          "records": [
+            {
+              "id": "BTCUSDT|5m|1792882200000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.7 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792882500000
+            },
+            {
+              "id": "BTCUSDT|5m|1792882500000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.9 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 62 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792882800000
+            },
+            {
+              "id": "BTCUSDT|5m|1792882800000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (3.3 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 64 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792883100000
+            },
+            {
+              "id": "BTCUSDT|5m|1792883100000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (3.6 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 65 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792883400000
+            },
+            {
+              "id": "BTCUSDT|5m|1792883400000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.7 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792883700000
+            },
+            {
+              "id": "BTCUSDT|5m|1792883700000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":0,\"items\":[[\"מתיחה מעל EMA50 (1.5 ATR)\",false],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",false],[\"RSI 53 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792884000000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884000000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":1,\"items\":[[\"מתיחה מעל EMA50 (2.0 ATR)\",false],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 55 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792884300000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884300000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":2,\"items\":[[\"מתיחה מעל EMA50 (3.0 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 60 מעל 65\",false]],\"plan\":null}",
+              "candleCloseTime": 1792884600000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884600000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"WAIT\",\"score\":3,\"items\":[[\"מתיחה מעל EMA50 (5.8 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",false],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 73 מעל 65\",true]],\"plan\":null}",
+              "candleCloseTime": 1792884900000
+            },
+            {
+              "id": "BTCUSDT|5m|1792884900000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (6.1 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 75 מעל 65\",true]],\"plan\":{\"entry\":80887.24,\"stop\":80946.8793666736,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":2.499188175752205}}",
+              "candleCloseTime": 1792885200000
+            },
+            {
+              "id": "BTCUSDT|5m|1792885200000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (5.5 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 72 מעל 65\",true]],\"plan\":{\"entry\":80860.01,\"stop\":80941.02268071621,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":1.5037152075824127}}",
+              "candleCloseTime": 1792885500000
+            },
+            {
+              "id": "BTCUSDT|5m|1792885500000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (6.0 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 74 מעל 65\",true]],\"plan\":{\"entry\":80910.05,\"stop\":80969.65924983591,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":2.883109592439087}}",
+              "candleCloseTime": 1792885800000
+            },
+            {
+              "id": "BTCUSDT|5m|1792885800000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (6.3 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 75 מעל 65\",true]],\"plan\":{\"entry\":80925.69,\"stop\":80983.42430341906,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":3.2476359615713712}}",
+              "candleCloseTime": 1792886100000
+            },
+            {
+              "id": "BTCUSDT|5m|1792886100000|hybrid-v2-validity-closed|3",
+              "signature": "{\"side\":\"SHORT\",\"score\":4,\"items\":[[\"מתיחה מעל EMA50 (5.5 ATR)\",true],[\"וקטור ירוק פתוח מתחת (עד 6 ATR)\",true],[\"נר נפח עוצר בשיא\",false],[\"מבנה M\",true],[\"RSI 70 מעל 65\",true]],\"plan\":{\"entry\":80888.16,\"stop\":80950.44777023816,\"tp1\":80848.47,\"tp2\":80738.19,\"rr\":2.4076957551474965}}",
+              "candleCloseTime": 1792886400000
+            }
+          ]
+        },
+        "storedJournalBytes": 29971
+      }
+    }
+  },
+  "realConfirmedCloseFrames": [
+    {
+      "time": {
+        "utc": "2026-10-24T23:05:00.872Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:05:00 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "candleOpen": 1792882800000,
+      "close": "80626.00000000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-24T23:10:00.518Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:10:00 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "candleOpen": 1792883100000,
+      "close": "80642.01000000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-24T23:15:00.854Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:15:00 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "candleOpen": 1792883400000,
+      "close": "80606.32000000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-24T23:20:00.237Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:20:00 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "candleOpen": 1792883700000,
+      "close": "80554.70000000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-24T23:25:01.062Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:25:01 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "candleOpen": 1792884000000,
+      "close": "80577.64000000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-24T23:30:00.134Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:30:00 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "candleOpen": 1792884300000,
+      "close": "80627.92000000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-24T23:35:00.779Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:35:00 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "candleOpen": 1792884600000,
+      "close": "80846.50000000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-24T23:40:00.795Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:40:00 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "candleOpen": 1792884900000,
+      "close": "80887.24000000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-24T23:45:00.788Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:45:00 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "candleOpen": 1792885200000,
+      "close": "80860.01000000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-24T23:50:01.378Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:50:01 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "candleOpen": 1792885500000,
+      "close": "80910.05000000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-24T23:55:00.327Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:55:00 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "candleOpen": 1792885800000,
+      "close": "80925.69000000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-25T00:00:01.211Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 02:00:01 GMT+2",
+        "offset": "02h GMT+02:00"
+      },
+      "candleOpen": 1792886100000,
+      "close": "80888.16000000"
+    }
+  ],
+  "dailyRequests": [
+    {
+      "time": {
+        "utc": "2026-10-24T22:59:59.323Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:59:59 GMT+3",
+        "offset": "01h GMT+03:00"
+      },
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1792454400000&endTime=1792799999999&limit=1000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-24T23:00:01.515Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:00:01 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1792454400000&endTime=1792799999999&limit=1000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-24T23:00:05.495Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 01:00:05 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1792454400000&endTime=1792799999999&limit=1000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-25T00:00:01.226Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Sunday, 25 October 2026 at 02:00:01 GMT+2",
+        "offset": "02h GMT+02:00"
+      },
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1792800000000&endTime=1792886399999&limit=1000"
+    }
+  ],
+  "rawToolPassed": true,
+  "rawToolObservedMidnight": true,
+  "acceptedSoak": true,
+  "acceptedMidnight": false
+}

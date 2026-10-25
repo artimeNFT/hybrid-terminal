@@ -1,0 +1,2 @@
+Bounded live sampling started: 2026-10-24T23:00:07.262Z mode: soak seconds: 3600 output: /mnt/c/users/shlom/desktop/the hybrid-terminal/.qa-results/observations/soak-0.4.4-2026-10-24T22-59-50Z
+PASS: actual feed day levels/pivots, shared requests, bounded samples, network disconnect/resync and separately tagged isolated storage fixture. Midnight: true long session: true close frame: true

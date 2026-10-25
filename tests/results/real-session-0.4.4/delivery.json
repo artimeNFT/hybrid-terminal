@@ -1,0 +1,19 @@
+{
+  "reviewedCheckpoint": "7e5134940f3bb2139184c3f76b3977433e26af7c",
+  "applicationVersion": "0.4.4",
+  "applicationSha256": "f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa",
+  "observerSha256": "4cdc73e4e9654de1faab7791959d88efaebd9ce28bd53cbab338103ce303c05d",
+  "sourceUnchanged": true,
+  "rawEvidenceSha256": "236e3ed7ac3204bc33b73e57ee93caa807031f257d3aadbaffb4f6ed1a93ba99",
+  "acceptedSoak": true,
+  "acceptedMidnight": false,
+  "artifacts": {
+    "REPORT.md": "f6a94cd8ec39526901eac0f320df2661da8b0ee6fbfc70b44ce69675ebba4b1f",
+    "launch.json": "a6a759890483f8958cf064ddc6de894edb38bea307677b134782e0864b9beaa1",
+    "midnight-pending.json": "6c29cd610e4b0fc2b8e6ba55d9565690178d786250c7073a11ec08b700260f76",
+    "observation.log": "4cd7fb029f041156c05b56bcef7f3a058775e71e0b086a3159578c989d2fd004",
+    "sample-checks.csv": "fccb268fcac38266db466119c39a4d61c63f138d8620f576864fec9d1886e955",
+    "verified-observation.json": "7ca247fc607011243687302123e11e482242eb8e5012ae4654b78d4990f50ec7"
+  },
+  "publication": "Non-force push and actual resulting CI verified before final reply; post-push receipt ignored to avoid self-reference."
+}

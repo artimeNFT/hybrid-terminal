@@ -1,0 +1,12 @@
+{
+  "status": "pending-window-unavailable",
+  "checkedAtUtc": "2026-10-25T06:22:15.467442+00:00",
+  "nextStartWindowUtc": {
+    "from": "2026-10-25T23:57:00+00:00",
+    "through": "2026-10-25T23:59:00+00:00"
+  },
+  "nextUtcMidnight": "2026-10-26T00:00:00+00:00",
+  "recommendedStartUtc": "2026-10-25T23:58:00+00:00",
+  "modeNotRun": true,
+  "reason": "No separate midnight-mode run began in its actual UTC start window. Soak crossed midnight, but does not count as midnight acceptance. No indefinite wait."
+}
