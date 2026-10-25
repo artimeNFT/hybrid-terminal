@@ -11,7 +11,7 @@ Started on clean main, safely fetched/fast-forwarded to review documentation `7e
 | Active source | `hybrid-terminal.html`, runtime **0.4.4**, SHA-256 `f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa` |
 | Existing observer SHA-256 | `4cdc73e4e9654de1faab7791959d88efaebd9ce28bd53cbab338103ce303c05d` |
 | Sampling | **2026-10-24 23:00:07.262Z → 2026-10-25 00:00:07.281Z** |
-| Elapsed | Tool records **3600.018 s**; UTC timestamps independently give **3600.019 s** (millisecond rounding differs) |
+| Elapsed | Tool records **3600.018 s**; UTC timestamps independently give **3600.019 s** to the final snapshot |
 | Samples | 733 regular/initial/final snapshots; 735 journal snapshots checked including offline/resync |
 | Actual confirmed frames | **12** unique consecutive BTCUSDT 5m closes, 23:05 through 00:00 UTC, all matched to confirmed state and retained journal records |
 | Confirmed state | Latest close 22:55 UTC initially, 23:00 after reconnect, 00:00 finally; loaded closed-candle count 999 → 1011 |
