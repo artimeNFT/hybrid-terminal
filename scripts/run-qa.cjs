@@ -6,8 +6,8 @@ const root=path.resolve(__dirname,'..'),group=process.argv[2],suites={
  audit:['readiness-audit'],
  contract:['calculation-contract'],
  preparation:['preparation'],
- presentation:['presentation'],
- browser:['browser-smoke','browser-increment','browser-integrity','browser-day-context','browser-navigation','browser-presentation']
+ presentation:['presentation','target-path'],
+ browser:['browser-smoke','browser-increment','browser-integrity','browser-day-context','browser-navigation','browser-presentation','browser-target-path']
 }[group];
 if(!suites){console.error('Usage: node scripts/run-qa.cjs app|research|audit|contract|preparation|presentation|browser');process.exit(1)}
 const output=path.join(root,'.qa-results',group);fs.mkdirSync(output,{recursive:true});

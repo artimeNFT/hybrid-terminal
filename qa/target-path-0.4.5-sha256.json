@@ -1,0 +1,19 @@
+{
+  "hybrid-terminal.html": "ec03f24021ac71008ee8196927c2c188b98c9bf0105e89f7e25902c951f561ba",
+  "baseline/hybrid-terminal.0.4.4.html": "f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa",
+  "baseline/README.md": "bc424cc326b39f20628134058fa95228c32f44a48086dde5b147ed2edffa5457",
+  "qa/source-checksums.0.4.5.json": "f47853d26f1abf0344a1dbd8b81e48fbf088a4b9276aa0c635433c3255428075",
+  "scripts/check-source.cjs": "ad3b23f26e6561a3208f5d9e1aabe1e6e620029c3aa7acaa4ccdd42d2c18c122",
+  "scripts/run-qa.cjs": "8691800390fb031de5861bb538239d694465721abeafbfba60770207441283a3",
+  "tests/target-path.cjs": "1c0135b791af4af97abca5ba4acf509f896443d867415d671180c18025071a2e",
+  "tests/target-path-fixtures.cjs": "fdd74fedf5cd8ad9dfc723599b6604d5b23747b9c6678fec6b3d7035e7bf06b4",
+  "tests/browser-target-path.cjs": "7dc9d3a2fae9b2dd5701dd8012b7d3631323f1e1daa6d2c04cf0be120adfddde",
+  "tests/presentation.cjs": "7d922b929ba3cdb60e76adfabf4cf10834a83820ccc55def290a23c6cfb8daff",
+  "tests/browser-presentation.cjs": "2f0f8e392b8881e08a2520c2db310b31416a4824d7639a4137d4d861b41fdbb4",
+  "tests/ui-smoke.cjs": "65e0a377cb777efae2fabb45f9f331d149b8bb3ec8c6f7459d0d1b5707398b4f",
+  "package.json": "87f5365887dcb339ada56c6b7738e18f428876acfe6e196cd6a90e7c85028266",
+  "package-lock.json": "374d100adb3538281bb9e68e46631a864ae68d82fcc7c61c88e8236ca74dfee0",
+  ".github/workflows/ci.yml": "2be0bc5469288fac5e879d55576459da44dd8177909b28f4d3384dc71e6237a9",
+  "README.md": "59fb6e78e01705928b3f43c91c6e2bcab838d863c00255c6c6341c03de216ede",
+  "SOURCE_PROVENANCE.md": "90d840c95a41f009d824ee66f25d25d17cd8e5a432884db4889a27d9dc522bdf"
+}

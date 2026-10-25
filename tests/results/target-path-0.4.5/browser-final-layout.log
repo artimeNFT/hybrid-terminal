@@ -1,0 +1,3 @@
+Expanded layout desktop {"client":335,"scroll":335,"document":1440,"viewport":1440}
+Expanded layout narrow {"client":344,"scroll":344,"document":390,"viewport":390}
+PASS: target-path desktop/narrow rows/details, exact equal endpoints, source exclusions, actual pointer/provisional anchor stability, WAIT isolation and journal/engine invariance.

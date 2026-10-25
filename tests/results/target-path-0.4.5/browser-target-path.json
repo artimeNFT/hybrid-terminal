@@ -1,0 +1,72 @@
+{
+  "version": "0.4.5",
+  "sourceSha256": "ec03f24021ac71008ee8196927c2c188b98c9bf0105e89f7e25902c951f561ba",
+  "checks": [
+    {
+      "layout": "desktop",
+      "levels": 5,
+      "sourceCount": 8,
+      "anchor": {
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "epoch": 1,
+        "asOf": 1792604400000,
+        "entry": 96,
+        "tp1": 102.5,
+        "tp2": 103.5,
+        "stop": 94.74999982583034,
+        "atr": 1.250000174169659,
+        "rule": "hybrid-v2-validity-closed",
+        "minimumScore": 3,
+        "daily": {
+          "sourceStart": 1792454400000,
+          "validFrom": 1792540800000,
+          "validTo": 1792627200000,
+          "observedAt": 1792913862056
+        }
+      },
+      "actualPointerAndProvisionalAnchorStable": true,
+      "journalAndEngineUnchanged": true,
+      "disabledAndPartialDisclosed": true,
+      "waitNoSubstitute": true,
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "layout": "narrow",
+      "levels": 5,
+      "sourceCount": 8,
+      "anchor": {
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "epoch": 1,
+        "asOf": 1792604400000,
+        "entry": 96,
+        "tp1": 102.5,
+        "tp2": 103.5,
+        "stop": 94.74999982583034,
+        "atr": 1.250000174169659,
+        "rule": "hybrid-v2-validity-closed",
+        "minimumScore": 3,
+        "daily": {
+          "sourceStart": 1792454400000,
+          "validFrom": 1792540800000,
+          "validTo": 1792627200000,
+          "observedAt": 1792913866089
+        }
+      },
+      "actualPointerAndProvisionalAnchorStable": true,
+      "journalAndEngineUnchanged": true,
+      "disabledAndPartialDisclosed": true,
+      "waitNoSubstitute": true,
+      "dimensions": {
+        "width": 390,
+        "document": 390
+      }
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Chromium desktop/narrow with synthetic REST/WebSocket, pointer gestures and isolated coverage fixture; not physical or live acceptance"
+}

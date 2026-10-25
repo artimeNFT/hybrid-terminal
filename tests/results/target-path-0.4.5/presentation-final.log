@@ -1,0 +1,36 @@
+
+> hybrid-terminal-qa@1.0.0 test:presentation
+> node scripts/run-qa.cjs presentation
+
+
+Running presentation
+✔ frozen reference is exact, explicit context verifies old sources, and unbound research rejects the active UI (1051.579044ms)
+✔ all existing nonpresentation functions remain source-identical to frozen 0.4.3 (240.131718ms)
+✔ synthetic calculation/decision/backtest behavior matches 0.4.3 across thresholds and degenerate inputs (934.09154ms)
+✔ presentation risk uses confirmed coordinates, independent ATR availability and guarded arithmetic (36.554275ms)
+✔ upgrade preserves old journal bytes/identities and display/sizing preferences (94.728566ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2515.79023
+
+Running target-path
+✔ directional geometry sorts LONG/SHORT, groups exact equality, keeps rounded-near prices distinct and excludes endpoints (149.195525ms)
+✔ invalid geometry and levels stay unavailable; invalid denominators affect only their own distance metrics (85.939862ms)
+✔ confirmed sources obey independent layers, full UTC coverage, availability and validated daily identity without changing decisions (127.865092ms)
+✔ anchor and distances remain confirmed through provisional ticks, pointer/view/history changes; WAIT and mismatched entries have no substitute (165.671128ms)
+✔ missing clock/daily response stays excluded, while stale symbol/timeframe responses cannot publish path sources (663.736493ms)
+✔ all pre-existing 0.4.4 nonrendering function bodies and legacy journal bytes remain unchanged (193.274101ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1574.389517
+PASS presentation: 2 suites

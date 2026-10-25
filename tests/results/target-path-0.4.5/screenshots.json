@@ -1,0 +1,66 @@
+{
+  "applicationVersion": "0.4.5",
+  "sourceSha256": "ec03f24021ac71008ee8196927c2c188b98c9bf0105e89f7e25902c951f561ba",
+  "feed": "Synthetic REST/WebSocket; isolated partial-coverage fixture",
+  "viewports": {
+    "desktop": [
+      1440,
+      1100
+    ],
+    "narrowTouchEmulation": [
+      390,
+      844
+    ]
+  },
+  "images": [
+    {
+      "path": ".qa-results/browser/browser-target-path/desktop-disabled.png",
+      "sha256": "57e3363518a37a7d7e2b9552a01e1e8370df2ea6663359a4e67a4eff1fd64b84",
+      "bytes": 171133,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/browser/browser-target-path/desktop-expanded.png",
+      "sha256": "30d4c34abf32954e1eb4040dbb0127f319b5ba7aec52448b78d5eed011b057fd",
+      "bytes": 65429,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/browser/browser-target-path/desktop-partial.png",
+      "sha256": "d1cc69443edc58bd30e5b8c27029065995e09750ec42441b633429ff40c553e7",
+      "bytes": 44165,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/browser/browser-target-path/desktop.png",
+      "sha256": "df9b50fc4e0b613b317773142b1499c5e34a4ac93dfa0b29913c76482af34a2a",
+      "bytes": 183270,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/browser/browser-target-path/narrow-disabled.png",
+      "sha256": "d40fc6729bd21ed6b29f09682c464fc64701b9d9356f518f29a1dc8e1331ac01",
+      "bytes": 63906,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/browser/browser-target-path/narrow-expanded.png",
+      "sha256": "5b365cd7705c82276e86b7ba0482f093a0e86575485df06fc6c251d5f5c87600",
+      "bytes": 61416,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/browser/browser-target-path/narrow-partial.png",
+      "sha256": "fec3484782469a66705895195753c06be7b0b0a830c0b3a029622da39e66ac26",
+      "bytes": 40830,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/browser/browser-target-path/narrow.png",
+      "sha256": "a2c1424914b31dde8997c9b22f3a8343551485416a8897a7f913743aa2931365",
+      "bytes": 71972,
+      "visuallyInspected": true
+    }
+  ],
+  "physicalAndUserReadabilityAcceptance": "pending; not inferred from screenshots"
+}
