@@ -1,0 +1,31 @@
+{
+  "registeredAtUtc": "2026-10-25T14:21:27.349004+00:00",
+  "unit": "hybrid-terminal-midnight-20261025.timer",
+  "service": "hybrid-terminal-midnight-20261025.service",
+  "calendarUtc": "2026-10-25 23:58:00 UTC",
+  "actualNextElapseUtc": "2026-10-25T23:58:00+00:00",
+  "actualNextElapseUsec": 1792972680000000,
+  "timerState": "active/waiting",
+  "accuracySeconds": 1,
+  "randomizedDelaySeconds": 0,
+  "serviceRuntimeLimitSeconds": 600,
+  "observer": "tests/browser-observe-context.cjs",
+  "observerSha256": "4cdc73e4e9654de1faab7791959d88efaebd9ce28bd53cbab338103ce303c05d",
+  "observerSamplingSeconds": 420,
+  "applicationAtRegistration": "0.4.6",
+  "applicationSha256AtRegistration": "7c12ba003d8a03bff8322c7d9143c8bc926aa6847b62dbaf065d80b3d55e5195",
+  "loadThenActiveSettledPublishedSource": true,
+  "frozenContext": false,
+  "wrapper": "/mnt/c/users/shlom/desktop/the hybrid-terminal/.qa-results/observations/midnight-20261025/run_once.py",
+  "wrapperSha256": "227cb39e3cf2317d7d85d852c1f884675a91570e6665da1116cd35db7bc194bd",
+  "resultReceipt": "/mnt/c/users/shlom/desktop/the hybrid-terminal/.qa-results/observations/midnight-20261025/run-result.json",
+  "output": "Fresh .qa-results/observations/midnight-<actual-start-UTC>/",
+  "observed": false,
+  "acceptance": "pending actual execution and evidence review",
+  "conditions": [
+    "WSL user service manager and network available",
+    "Actual 2026-10-25 23:57\u201323:59 UTC start window",
+    "Root app and observer clean, published HEAD, source settled >=10s; bounded 30s settling only"
+  ],
+  "timerProperties": "TimersCalendar={ OnCalendar=2026-10-25 23:58:00 UTC ; next_elapse=Mon 2026-10-26 01:58:00 IST }\nNextElapseUSecRealtime=Mon 2026-10-26 01:58:00 IST\nAccuracyUSec=1s\nRandomizedDelayUSec=0\nActiveState=active\nSubState=waiting\n"
+}
