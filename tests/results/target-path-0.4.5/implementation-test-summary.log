@@ -1,0 +1,64 @@
+Actual push run: https://github.com/artimeNFT/hybrid-terminal/actions/runs/40173894616
+Commit: d15300f93d58abe92e0a7a334f401fe4c7934c3e
+Both jobs completed successfully. Full log retained in ignored .qa-results/target-path-0.4.5/implementation-actions.log
+
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1771719Z PASS source SHA-256: hybrid-terminal.html
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1772685Z PASS source SHA-256: research/klines.cjs
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1791709Z PASS source SHA-256: research/SCHEMA.md
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1792558Z PASS source SHA-256: baseline/hybrid-terminal.0.3.1.html
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1793442Z PASS source SHA-256: baseline/hybrid-terminal.0.4.0.html
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1794330Z PASS source SHA-256: baseline/hybrid-terminal.0.4.1.html
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1795192Z PASS source SHA-256: baseline/hybrid-terminal.0.4.2.html
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1801970Z PASS source SHA-256: baseline/hybrid-terminal.original.html
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1812041Z PASS source SHA-256: baseline/research-klines.1.0.0.cjs
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1813419Z PASS source SHA-256: baseline/hybrid-terminal.0.4.3.html
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1814525Z PASS source SHA-256: research/run-frozen.cjs
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1815327Z PASS source SHA-256: research/source-context/preload.cjs
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1816129Z PASS source SHA-256: research/source-context/check.cjs
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1816989Z PASS source SHA-256: research/source-context/html-0.4.3-v1.json
+Node 24 deterministic QA	Run npm run check:source	2026-10-25T07:44:18.1817845Z PASS source SHA-256: baseline/hybrid-terminal.0.4.4.html
+Node 24 deterministic QA	Run npm run test:app	2026-10-25T07:45:05.7951608Z PASS app: 9 suites
+Node 24 deterministic QA	Run npm run test:research	2026-10-25T07:45:07.7462684Z ℹ tests 18
+Node 24 deterministic QA	Run npm run test:research	2026-10-25T07:45:07.7463980Z ℹ pass 18
+Node 24 deterministic QA	Run npm run test:research	2026-10-25T07:45:07.7464747Z ℹ fail 0
+Node 24 deterministic QA	Run npm run test:research	2026-10-25T07:45:07.7558754Z PASS research: 1 suites
+Node 24 deterministic QA	Run npm run test:audit	2026-10-25T07:45:10.8721218Z ℹ tests 9
+Node 24 deterministic QA	Run npm run test:audit	2026-10-25T07:45:10.8732436Z ℹ pass 9
+Node 24 deterministic QA	Run npm run test:audit	2026-10-25T07:45:10.8733054Z ℹ fail 0
+Node 24 deterministic QA	Run npm run test:audit	2026-10-25T07:45:10.8809475Z PASS audit: 1 suites
+Node 24 deterministic QA	Run npm run test:contract	2026-10-25T07:45:14.1002406Z ℹ tests 9
+Node 24 deterministic QA	Run npm run test:contract	2026-10-25T07:45:14.1022271Z ℹ pass 9
+Node 24 deterministic QA	Run npm run test:contract	2026-10-25T07:45:14.1022940Z ℹ fail 0
+Node 24 deterministic QA	Run npm run test:contract	2026-10-25T07:45:14.1080583Z PASS contract: 1 suites
+Node 24 deterministic QA	Run npm run test:preparation	2026-10-25T07:45:15.8152366Z ℹ tests 13
+Node 24 deterministic QA	Run npm run test:preparation	2026-10-25T07:45:15.8172449Z ℹ pass 13
+Node 24 deterministic QA	Run npm run test:preparation	2026-10-25T07:45:15.8173078Z ℹ fail 0
+Node 24 deterministic QA	Run npm run test:preparation	2026-10-25T07:45:15.8233078Z PASS preparation: 1 suites
+Node 24 deterministic QA	Run npm run test:presentation	2026-10-25T07:45:17.2192352Z ℹ tests 5
+Node 24 deterministic QA	Run npm run test:presentation	2026-10-25T07:45:17.2204272Z ℹ pass 5
+Node 24 deterministic QA	Run npm run test:presentation	2026-10-25T07:45:17.2204955Z ℹ fail 0
+Node 24 deterministic QA	Run npm run test:presentation	2026-10-25T07:45:18.5211777Z ℹ tests 6
+Node 24 deterministic QA	Run npm run test:presentation	2026-10-25T07:45:18.5232687Z ℹ pass 6
+Node 24 deterministic QA	Run npm run test:presentation	2026-10-25T07:45:18.5241369Z ℹ fail 0
+Node 24 deterministic QA	Run npm run test:presentation	2026-10-25T07:45:18.5272014Z PASS presentation: 2 suites
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5118091Z PASS source SHA-256: hybrid-terminal.html
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5121802Z PASS source SHA-256: research/klines.cjs
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5122959Z PASS source SHA-256: research/SCHEMA.md
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5124965Z PASS source SHA-256: baseline/hybrid-terminal.0.3.1.html
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5126913Z PASS source SHA-256: baseline/hybrid-terminal.0.4.0.html
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5129593Z PASS source SHA-256: baseline/hybrid-terminal.0.4.1.html
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5132013Z PASS source SHA-256: baseline/hybrid-terminal.0.4.2.html
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5133181Z PASS source SHA-256: baseline/hybrid-terminal.original.html
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5134807Z PASS source SHA-256: baseline/research-klines.1.0.0.cjs
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5137908Z PASS source SHA-256: baseline/hybrid-terminal.0.4.3.html
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5139345Z PASS source SHA-256: research/run-frozen.cjs
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5149918Z PASS source SHA-256: research/source-context/preload.cjs
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5151241Z PASS source SHA-256: research/source-context/check.cjs
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5152393Z PASS source SHA-256: research/source-context/html-0.4.3-v1.json
+Node 24 mocked Chromium QA	Run npm run check:source	2026-10-25T07:44:50.5153488Z PASS source SHA-256: baseline/hybrid-terminal.0.4.4.html
+Node 24 mocked Chromium QA	Run npm run test:browser	2026-10-25T07:44:54.2317591Z PASS layout desktop {"width":1440,"height":1000,"canvasHeight":656.546875}
+Node 24 mocked Chromium QA	Run npm run test:browser	2026-10-25T07:44:54.3357528Z PASS layout narrow {"width":430,"height":1000,"canvasHeight":280}
+Node 24 mocked Chromium QA	Run npm run test:browser	2026-10-25T07:44:54.4354767Z PASS layout phone {"width":390,"height":844,"canvasHeight":280}
+Node 24 mocked Chromium QA	Run npm run test:browser	2026-10-25T07:44:59.5331664Z PASS labels/layout desktop-collision [{"text":"PDH/PDL/PP/R1/S1 · inspector","names":["PDH","PDL","PP","R1","S1"],"x":769.42236328125,"y":217.55820933165387,"width":194.57763671875,"height":16,"validFrom":1792627200000}]
+Node 24 mocked Chromium QA	Run npm run test:browser	2026-10-25T07:44:59.6475987Z PASS labels/layout phone-collision [{"text":"Levels ×5","names":["PDH","PDL","PP","R1","S1"],"x":229.88134765625,"y":74.18602755795936,"width":70.11865234375,"height":16,"validFrom":1792627200000}]
+Node 24 mocked Chromium QA	Run npm run test:browser	2026-10-25T07:45:21.5423173Z PASS browser: 7 suites
