@@ -1,0 +1,34 @@
+{
+  "browser-day-context": {
+    "unexpected": [],
+    "scope": "All public HTTP/WebSocket requests must be fulfilled by the existing synthetic page routes"
+  },
+  "browser-increment": {
+    "unexpected": [],
+    "scope": "All public HTTP/WebSocket requests must be fulfilled by the existing synthetic page routes"
+  },
+  "browser-integrity": {
+    "unexpected": [],
+    "scope": "All public HTTP/WebSocket requests must be fulfilled by the existing synthetic page routes"
+  },
+  "browser-navigation": {
+    "unexpected": [],
+    "scope": "All public HTTP/WebSocket requests must be fulfilled by the existing synthetic page routes"
+  },
+  "browser-presentation": {
+    "unexpected": [],
+    "scope": "All public HTTP/WebSocket requests must be fulfilled by the existing synthetic page routes"
+  },
+  "browser-provenance-readability": {
+    "unexpected": [],
+    "scope": "All public HTTP/WebSocket requests must be fulfilled by the existing synthetic page routes"
+  },
+  "browser-smoke": {
+    "unexpected": [],
+    "scope": "All public HTTP/WebSocket requests must be fulfilled by the existing synthetic page routes"
+  },
+  "browser-target-path": {
+    "unexpected": [],
+    "scope": "All public HTTP/WebSocket requests must be fulfilled by the existing synthetic page routes"
+  }
+}

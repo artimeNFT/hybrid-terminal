@@ -1,0 +1,74 @@
+{
+  "version": "0.4.6",
+  "sourceSha256": "7c12ba003d8a03bff8322c7d9143c8bc926aa6847b62dbaf065d80b3d55e5195",
+  "checks": [
+    {
+      "layout": "desktop",
+      "initialWindow": {
+        "state": "available",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "closedCandles": 500,
+        "inputCandles": 500,
+        "firstCandleOpen": 1792454400000,
+        "decisionClose": 1792604400000
+      },
+      "fullMW": 13,
+      "focusMW": 2,
+      "fullPixelRestore": true,
+      "historyOnly": 1000,
+      "preciseDistinctLevels": [
+        100.00005,
+        99.99995,
+        100.00000999999999,
+        100.00006999999998,
+        99.99996999999998
+      ],
+      "transitionWindow": {
+        "state": "available",
+        "symbol": "ETHUSDT",
+        "timeframe": "15m",
+        "closedCandles": 200,
+        "inputCandles": 200,
+        "firstCandleOpen": 1792454400000,
+        "decisionClose": 1792634400000
+      },
+      "engineAndJournalUnchangedByDisplay": true
+    },
+    {
+      "layout": "narrow",
+      "initialWindow": {
+        "state": "available",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "closedCandles": 500,
+        "inputCandles": 500,
+        "firstCandleOpen": 1792454400000,
+        "decisionClose": 1792604400000
+      },
+      "fullMW": 13,
+      "focusMW": 2,
+      "fullPixelRestore": true,
+      "historyOnly": 1000,
+      "preciseDistinctLevels": [
+        100.00005,
+        99.99995,
+        100.00000999999999,
+        100.00006999999998,
+        99.99996999999998
+      ],
+      "transitionWindow": {
+        "state": "available",
+        "symbol": "ETHUSDT",
+        "timeframe": "15m",
+        "closedCandles": 200,
+        "inputCandles": 200,
+        "firstCandleOpen": 1792454400000,
+        "decisionClose": 1792634400000
+      },
+      "engineAndJournalUnchangedByDisplay": true
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Chromium desktop/narrow, deterministic synthetic feed and Canvas pixels; no physical-device/live-session acceptance"
+}

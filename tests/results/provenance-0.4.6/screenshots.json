@@ -1,0 +1,78 @@
+{
+  "applicationVersion": "0.4.6",
+  "sourceSha256": "7c12ba003d8a03bff8322c7d9143c8bc926aa6847b62dbaf065d80b3d55e5195",
+  "viewports": {
+    "desktop": [
+      1440,
+      1100
+    ],
+    "narrowTouchEmulation": [
+      390,
+      844
+    ]
+  },
+  "feed": "Deterministic synthetic REST/WebSocket; actual Chromium Canvas",
+  "images": [
+    {
+      "path": ".qa-results/provenance-0.4.6/browser-focused/desktop-eligible.png",
+      "sha256": "8ef6e6ca49c6af050a274b38641ed2ac890d6e4325a91eec8155aece802160d2",
+      "bytes": 168610,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/provenance-0.4.6/browser-focused/desktop-exact.png",
+      "sha256": "40a59ecb1abb2a93b3fd999a2977e8e46ec65a787bf080f4a6481bf12df15698",
+      "bytes": 227047,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/provenance-0.4.6/browser-focused/desktop-focus.png",
+      "sha256": "2a17c458b30f01deb30e0f082e727dc868d1b183ad88a305bd01d325b3e7457a",
+      "bytes": 201128,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/provenance-0.4.6/browser-focused/desktop-full.png",
+      "sha256": "94568346d38172fd46b5efaaeec715ba2c1ace204752f39aa5d9277aaef2d354",
+      "bytes": 204050,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/provenance-0.4.6/browser-focused/desktop-window-history.png",
+      "sha256": "d10e0fb63890b2278a2bcc801187935abd2300869dd177728c5d0e2d1eb3980f",
+      "bytes": 237584,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/provenance-0.4.6/browser-focused/narrow-eligible.png",
+      "sha256": "0038a6d077b6dd701489130c886ef55f659d2337fddda518538b48d09185811f",
+      "bytes": 66326,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/provenance-0.4.6/browser-focused/narrow-exact.png",
+      "sha256": "fcdf3aa96885a49f5138859603b39f276f16b705be678b1b2775ba7a78657105",
+      "bytes": 94215,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/provenance-0.4.6/browser-focused/narrow-focus.png",
+      "sha256": "4944cdfc37cb6e81b26e5bd9517dc8589d111491e85e9f1e25684967f4226406",
+      "bytes": 85255,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/provenance-0.4.6/browser-focused/narrow-full.png",
+      "sha256": "fec4cd7ca338d744edad46efa38e92410c3afd86460d7a3582a508d8d3023341",
+      "bytes": 87156,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/provenance-0.4.6/browser-focused/narrow-window-history.png",
+      "sha256": "cadbdeb5c437d03648679024a33c2e871d4686f7ce85cd78125924c0ccda649d",
+      "bytes": 66268,
+      "visuallyInspected": true
+    }
+  ],
+  "physicalAndUserReadabilityAcceptance": "pending"
+}

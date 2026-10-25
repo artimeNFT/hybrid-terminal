@@ -20,8 +20,8 @@ const DAY=86400000,step=300000,day=Date.UTC(2026,9,20),bars=randomBars(8,600).ma
  });
  await page.goto('file://'+path.resolve('hybrid-terminal.html'));await page.waitForFunction(()=>S.k.length===600&&S.sig);
  const original=await page.evaluate(()=>({sig:S.sig,bt:S.bt,journal:localStorage[JOURNAL_KEY]}));
- await page.locator('#palette').selectOption('pvsra');await page.locator('#body').selectOption('hollow');await page.locator('#displaybtn').click();await page.locator('#pane').selectOption('rsi');await page.locator('#pivots').click();await page.waitForFunction(()=>S.pivotStatus==='ready'&&document.getElementById('contextstatus').textContent.includes('PP 100.00'));
- assert.match(await page.locator('#contextstatus').innerText(),/PP 100.00/);assert.deepEqual(await page.evaluate(()=>({sig:S.sig,bt:S.bt,journal:localStorage[JOURNAL_KEY]})),original);
+ await page.locator('#palette').selectOption('pvsra');await page.locator('#body').selectOption('hollow');await page.locator('#displaybtn').click();await page.locator('#pane').selectOption('rsi');await page.locator('#pivots').click();await page.waitForFunction(()=>S.pivotStatus==='ready'&&document.getElementById('dailyexact').textContent.includes('PP 100.00'));
+ await page.locator('#dailydetails > summary').click();assert.match(await page.locator('#dailyexact').innerText(),/PP 100.00/);await page.locator('#dailydetails > summary').click();assert.deepEqual(await page.evaluate(()=>({sig:S.sig,bt:S.bt,journal:localStorage[JOURNAL_KEY]})),original);
  await page.locator('#cv').hover({position:{x:500,y:300}});await page.mouse.wheel(0,-140);await page.locator('#back').click();assert.equal(await page.evaluate(()=>S.follow),false);
  await page.locator('#cv').focus();await page.keyboard.press('Home');await page.keyboard.press('End');assert.equal(await page.evaluate(()=>S.follow),true);
  await page.locator('#hq').click();assert.match(await page.locator('#hp').innerText(),/Hollow up/);assert.match(await page.locator('#hp').innerText(),/RSI14/);await page.locator('#hp button').click();

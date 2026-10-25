@@ -1,0 +1,15 @@
+✔ exact participating closed count/origin/decision time exclude provisional bars and advance only at confirmation (212.642803ms)
+✔ actual chart-only history load leaves decision-window coordinates, computations and journal unchanged (151.613399ms)
+✔ pending symbol/timeframe transitions clear old provenance and reject obsolete main-data responses (90.502572ms)
+✔ Full retains every original M/W annotation; Focus selects only latest active confirmed M/W without changing other rendering or engine (174.747592ms)
+✔ annotation preference restores independently and preserves legacy preferences, unknown fields and journal bytes (219.265168ms)
+✔ concise daily/nearest labels keep every exact price and deliberate inspection without snapping or rounded-value merging (94.522304ms)
+✔ all nonpresentation 0.4.5 function bodies and rule/execution/indicator policies remain identical (209.52249ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1337.636384

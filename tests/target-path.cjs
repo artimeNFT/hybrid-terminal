@@ -46,8 +46,8 @@ test('missing clock/daily response stays excluded, while stale symbol/timeframe 
   for(const item of pending.splice(0)){item.resolve(dailyRows(item.req.url));await settle(a)}v=a.read('confirmedTargetPath()');assert.equal(v.sources[0].status,'available');assert.equal(v.anchor.symbol,a.read('S.sym'));assert.equal(v.anchor.timeframe,a.read('S.tf'));assert.ok(!v.sources.some(s=>s.value===999));
  }
 });
-test('all pre-existing 0.4.4 nonrendering function bodies and legacy journal bytes remain unchanged',async()=>{
+test('all pre-existing 0.4.4 calculation function bodies and legacy journal bytes remain unchanged',async()=>{
  const old=await openApp({file:'baseline/hybrid-terminal.0.4.4.html',bars:bars()}),stored=old.localStorage['hybridTerminal.journal.v1'],a=await live({localStorage:old.localStorage});const fs=require('node:fs'),names=[...fs.readFileSync('baseline/hybrid-terminal.0.4.4.html','utf8').matchAll(/^(?:async )?function (\w+)\(/gm)].map(m=>m[1]);
- for(const name of names.filter(n=>n!=='panel'))assert.equal(a.read(name+'.toString()'),old.read(name+'.toString()'),name);
+ for(const name of names.filter(n=>!['panel','draw','dailyLabelLayout','loadDisplayPrefs','saveDisplayPrefs','bindSystem','dailyContextHTML'].includes(n)))assert.equal(a.read(name+'.toString()'),old.read(name+'.toString()'),name);
  await enable(a);a.exec('S.l.e=0;S.panelKey=null;panel()');assert.equal(a.localStorage['hybridTerminal.journal.v1'],stored);assert.deepEqual(a.read('S.sig'),old.read('S.sig'));assert.deepEqual(a.read('S.bt'),old.read('S.bt'));
 });
