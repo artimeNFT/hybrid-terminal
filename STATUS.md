@@ -12,10 +12,16 @@ GitHub access restored in the review conversation. Remote main `4771027a6acc7d5a
 
 **Next implementation:** one bounded readability/Help increment: clear palette semantics, preserve independent Filled/Hollow and vector tags, Hebrew/English Help selector with equivalent concise explanations of existing features, confirmed versus provisional decisions, data coverage, WAIT, target path and planning-cost assumptions. English chart controls and Hebrew panel remain. No strategy, indicator, journal, execution or preference reset. Implementation may proceed separately from midnight; do not edit the active source during the observation.
 
+**Readiness update:** the user relayed the local Codex READY verdict: existing timer active/waiting, service loaded awaiting trigger, runtime/browser/dependencies and REST reachability checked, observer/wrapper unchanged, clean published 0.4.7. This is a relayed local result, not direct WSL access from this conversation.
+
+**Active implementation authorized now:** prepare the readability/bilingual-Help candidate in an isolated Hybrid worktree/branch. Keep the authoritative active root and midnight timer on the existing settled 0.4.7 through the observation; publish the tested candidate branch without switching that root or waiting in a model session. This is parallel product progress, not a project-wide freeze. Integrate the finished candidate after recording actual midnight evidence against the observed version, or reassess separately if the observation cannot run. No new manual project setup is required from the user.
+
+**Inventory correction from direct 0.4.7 source review:** candle-close countdown already renders beneath last price using candle end and server-clock offset; Daily Open already has an `A.dop` series and DO/DO* chart legend with partial-first-day disclosure. Do not implement duplicates. First verify their visibility, source binding and limitations: zero on the timer is not feed confirmation; DO* is the first loaded open, not an authenticated full-day open. Backlog items for countdown/DO now mean discoverability/coverage review, not missing-feature claims. The current Help close handler also closes on any BUTTON inside the overlay; a language-button implementation must replace that blanket behavior with explicit close handling.
+
 **Ordered product backlog (one active implementation at a time):**
 1. Readability and bilingual Help as above.
 2. Volume pane height/vertical scale with visible zero and reset; horizontal pan remains synchronized with price. Closed-bar relative volume using an explicit past-only reference; label provisional volume separately.
-3. Candle-close countdown (elapsed clock is not feed-confirmed closure), UTC Daily Open, and ADR from previous complete UTC days with descriptive today-range/ADR. Psy High/Low requires exact source/session/timezone/DST definition first.
+3. Review visibility/coverage of the EXISTING countdown and DO/DO*; add ADR from previous complete UTC days with descriptive today-range/ADR. Psy High/Low requires exact source/session/timezone/DST definition first.
 4. Close-price Line display without changing OHLC calculations; manual trend lines anchored to time/price.
 5. Verified venue-specific taker-flow fields and explicitly causal divergence definitions; improve LONG/SHORT comparison before any separately tested selection-policy change.
 6. Consider daily context and 1m viewing first; 30-second aggregation, seconds and monthly views deferred pending clear use and interval/history validation.
