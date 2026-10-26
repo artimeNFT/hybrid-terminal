@@ -1,0 +1,18 @@
+{
+  "finalNpmSourceSha256": "5dded54c4a79ab7f38c13a793e359969b2b507497d6a062ea241e882ca540fd2",
+  "fullLocalTwelveBrowserSourceSha256": "6ab27fb95a19f10ec208082cdea82a2b8f479c31d7bb7d067e5a27322356c06e",
+  "finalFocusedBrowserSourceSha256": "5dded54c4a79ab7f38c13a793e359969b2b507497d6a062ea241e882ca540fd2",
+  "note": "The only subsequent production change was a dark backing behind the observed low-contrast Partial label. Fresh full npm and focused rendered-browser checks passed on final source. Exact published CI verifies all groups on final source.",
+  "suiteCounts": {
+    "app": 9,
+    "research": 1,
+    "audit": 1,
+    "contract": 1,
+    "preparation": 1,
+    "presentation": 7,
+    "browser": 12
+  },
+  "newFocusedCases": 5,
+  "finalPresentationSourceSha256": "5dded54c4a79ab7f38c13a793e359969b2b507497d6a062ea241e882ca540fd2",
+  "priorJournalFixtureVersion": "0.4.9"
+}

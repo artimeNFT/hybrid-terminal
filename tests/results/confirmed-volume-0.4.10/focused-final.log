@@ -1,0 +1,13 @@
+✔ existing prior-ten mean excludes current volume; exact Normal/Rising/Vector class and own direction are reused (95.886016ms)
+✔ warm-up, zero reference, zero volume and invalid arithmetic retain actual availability states, never a fabricated ratio (66.686092ms)
+✔ confirmed anchor ignores hover, history-only candles and provisional volume, then advances only on real confirmation (35.664401ms)
+✔ responsive summary reserves only needed header space, preserves zero, time/price geometry and RSI/None behavior (660.547525ms)
+✔ presentation keeps prior journal/preferences bytes and every non-view 0.4.9 function, including actual reference/classification, identical (48.116162ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 982.074874

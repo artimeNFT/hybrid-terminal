@@ -1,0 +1,119 @@
+
+> hybrid-terminal-qa@1.0.0 test:presentation
+> node scripts/run-qa.cjs presentation
+
+
+Running presentation
+✔ frozen reference is exact, explicit context verifies old sources, and unbound research rejects the active UI (246.023209ms)
+✔ all existing nonpresentation functions remain source-identical to frozen 0.4.3 (92.040144ms)
+✔ synthetic calculation/decision/backtest behavior matches 0.4.3 across thresholds and degenerate inputs (633.879432ms)
+✔ presentation risk uses confirmed coordinates, independent ATR availability and guarded arithmetic (20.184429ms)
+✔ upgrade preserves old journal bytes/identities and display/sizing preferences (33.057143ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1104.739064
+
+Running target-path
+✔ directional geometry sorts LONG/SHORT, groups exact equality, keeps rounded-near prices distinct and excludes endpoints (102.782666ms)
+✔ invalid geometry and levels stay unavailable; invalid denominators affect only their own distance metrics (72.195402ms)
+✔ confirmed sources obey independent layers, full UTC coverage, availability and validated daily identity without changing decisions (87.315293ms)
+✔ anchor and distances remain confirmed through provisional ticks, pointer/view/history changes; WAIT and mismatched entries have no substitute (130.673666ms)
+✔ missing clock/daily response stays excluded, while stale symbol/timeframe responses cannot publish path sources (467.118178ms)
+✔ all pre-existing 0.4.4 calculation function bodies and legacy journal bytes remain unchanged (144.810685ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1074.632575
+
+Running provenance-readability
+✔ exact participating closed count/origin/decision time exclude provisional bars and advance only at confirmation (167.31294ms)
+✔ actual chart-only history load leaves decision-window coordinates, computations and journal unchanged (129.86157ms)
+✔ pending symbol/timeframe transitions clear old provenance and reject obsolete main-data responses (73.769888ms)
+✔ Full retains every original M/W annotation; Focus selects only latest active confirmed M/W without changing other rendering or engine (139.105794ms)
+✔ annotation preference restores independently and preserves legacy preferences, unknown fields and journal bytes (154.594409ms)
+✔ concise daily/nearest labels keep every exact price and deliberate inspection without snapping or rounded-value merging (76.862219ms)
+✔ all nonpresentation 0.4.5 function bodies and rule/execution/indicator policies remain identical (113.166633ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 916.887482
+
+Running planning-costs
+✔ LONG/SHORT zero-cost identities and total 10-bps baseline arithmetic are symmetric (103.841705ms)
+✔ opening-gap shock uses stop notional, moves adversely on each side and affects only stressed stop R (64.335841ms)
+✔ nonfinite/negative/excessive/coercible assumptions and invalid directional geometry produce no numeric R (73.992729ms)
+✔ confirmed anchor survives provisional/view changes and assumptions never mutate decisions, baseline risk, sizing or journal (89.316429ms)
+✔ separate assumptions restore without changing old preferences or journal, including explicit recovery from malformed saved input (362.201542ms)
+✔ invalid typing clears previous output and quota-style scenario storage failure stays session-only (58.543256ms)
+✔ every nonpresentation 0.4.6 function except panel/legend and all rule/execution/RSI identities remain exact (216.866418ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1061.761858
+
+Running readability-help
+✔ paired Help facts cover actual policies in both languages and isolate readable formulas (60.773422ms)
+✔ language and internal navigation keep Help open; only explicit close/backdrop/Escape close and restore focus/background (20.18083ms)
+✔ Hebrew fresh default never writes; isolated language restores and preserves unrelated preferences and old journal bytes (63.566113ms)
+✔ malformed or unsupported saved language falls back without clearing bytes; storage read/write failures remain session-only (194.753601ms)
+✔ palette option values/colors/defaults/body/tags and all existing calculation behavior match 0.4.7 (269.161289ms)
+✔ existing countdown and partial-day Daily Open are retained as original draw/calculation behavior (40.054306ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 720.614571
+
+Running volume-legend
+✔ fresh volume view preserves 0.4.8 default heights, price geometry, linear bar scaling and does not write preferences (406.55987ms)
+✔ actual captured divider events use drag-start geometry, enforce pane limits and leave all market state unchanged (125.780867ms)
+✔ volume-axis drag scales a nonnegative linear range from visible zero; reversal, clipping, wheel/auto/reset are independent of price (61.508792ms)
+✔ Volume/RSI/None transitions preserve the RSI scale/legacy geometry, shared horizontal mapping and stored volume settings (153.866927ms)
+✔ isolated view settings restore with viewport bounds; malformed/unsupported values never clear old storage or journal (773.857866ms)
+✔ invalid settings and storage failures remain guarded/session-only, without touching calculation/journal/preference keys (240.809066ms)
+✔ responsive indicator layout keeps all six exact names in bounds, preserves desktop spacing and guards label collisions (56.275485ms)
+✔ only six chart-view functions change from exact 0.4.8; Help typo/QA wording fixed and bilingual controls documented (133.587289ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2034.170884
+
+Running confirmed-volume
+✔ existing prior-ten mean excludes current volume; exact Normal/Rising/Vector class and own direction are reused (95.886016ms)
+✔ warm-up, zero reference, zero volume and invalid arithmetic retain actual availability states, never a fabricated ratio (66.686092ms)
+✔ confirmed anchor ignores hover, history-only candles and provisional volume, then advances only on real confirmation (35.664401ms)
+✔ responsive summary reserves only needed header space, preserves zero, time/price geometry and RSI/None behavior (660.547525ms)
+✔ presentation keeps prior journal/preferences bytes and every non-view 0.4.9 function, including actual reference/classification, identical (48.116162ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 982.074874
+PASS presentation: 7 suites

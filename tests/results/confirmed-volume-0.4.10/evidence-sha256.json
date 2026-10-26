@@ -1,0 +1,21 @@
+{
+  "tests/results/confirmed-volume-0.4.10/REPORT.md": "5121dbf2c20daf221a28e72430e9f0749c85b4fabb91513f6143c937c6723c4d",
+  "tests/results/confirmed-volume-0.4.10/app-manifest.json": "ba91c81d1554edf1065384cd202b82e69dada8a2b95f408f82b709539d492ac8",
+  "tests/results/confirmed-volume-0.4.10/audit-manifest.json": "fd2c83ea19f42185d9ae11e9cacbda33e5e218f5e0533e4a1155ed0e909bb4eb",
+  "tests/results/confirmed-volume-0.4.10/browser-evidence.json": "a103b4c01dbaed156d15a5543c132b73aa8f1af7f34d85562aa52297465d0e64",
+  "tests/results/confirmed-volume-0.4.10/browser-final.log": "6c99e98006e3a1963fbc2214434735c4bef2df7385ce4cbf38145616e9ddb929",
+  "tests/results/confirmed-volume-0.4.10/browser-manifest.json": "a655e6157fea733289144b2a568b6e410027afefcb769d367c7c48693b526e50",
+  "tests/results/confirmed-volume-0.4.10/browser-network-guard.json": "ea36747d47f27883febd0e2f05802d22831fcc75c13870391b665246c343634b",
+  "tests/results/confirmed-volume-0.4.10/browser-test.log": "a6b540f126f12e001f0cb7231d950a6aca9ce0dd5ae18bb5de8ba7518b39b69a",
+  "tests/results/confirmed-volume-0.4.10/contract-manifest.json": "c0dfd2f4d075de15fe8073e178da7f24ba69fba4e23f1a484b5004828f7383ff",
+  "tests/results/confirmed-volume-0.4.10/final-presentation.log": "0b8beec7224b67004b69cf7e9faf6fd175809b2c184102d5793c1958ca82a11e",
+  "tests/results/confirmed-volume-0.4.10/final-source-check.log": "ca48a38adc011f3e3fd5a23c360712f2bcf9f19d28dffdcba0fbe48dae68b4a4",
+  "tests/results/confirmed-volume-0.4.10/focused-final.log": "23541e915cd7511764ffb289c140300bc1fece610b7afa0b3a4c64b6d5569599",
+  "tests/results/confirmed-volume-0.4.10/npm-test.log": "6df30061a2ac6f6057e7248b52cb906f34659b56ddafd4dc588f201329fa5c00",
+  "tests/results/confirmed-volume-0.4.10/preparation-manifest.json": "c160a9c752029cac8b5f7b0c00d1d5c79932c6022c631dec510d99101f848ee3",
+  "tests/results/confirmed-volume-0.4.10/presentation-manifest.json": "4fd48e2ff942a4ababeeff60119fb685b194f7fc6941f6a684fdaafb272771a9",
+  "tests/results/confirmed-volume-0.4.10/preservation.json": "5f20f8177e59e4b94c6d9e8de86ea6a27006b6812cc1b68cf215fa55830c252b",
+  "tests/results/confirmed-volume-0.4.10/research-manifest.json": "2532e32538e1c3e4352585372a350377e483d4f245f07645beeeac0c34dbb1c3",
+  "tests/results/confirmed-volume-0.4.10/screenshots.json": "c167703bf375e3629261c9dac328ad3b9d08a07d13c9cd9a4cf2169f5f010f75",
+  "tests/results/confirmed-volume-0.4.10/validation-source-identities.json": "5072fb0338bf09e451b595b4057835d33988c1e86e530bfddac337fcd686bcb5"
+}

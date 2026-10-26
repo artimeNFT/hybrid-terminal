@@ -1,0 +1,123 @@
+{
+  "version": "0.4.10",
+  "sourceSha256": "5dded54c4a79ab7f38c13a793e359969b2b507497d6a062ea241e882ca540fd2",
+  "evidenceRoot": "/tmp/hybrid-confirmed-volume-0.4.10",
+  "viewports": [
+    [
+      1440,
+      1100
+    ],
+    [
+      430,
+      900
+    ],
+    [
+      390,
+      900
+    ],
+    [
+      320,
+      900
+    ]
+  ],
+  "feed": "Synthetic REST/WebSocket; actual Chromium/Canvas/pointer controls. Not physical touch or live acceptance.",
+  "images": [
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/desktop-confirmed.png",
+      "sha256": "5a825488439f6e5ec367caad5a21e347169b2ea42e5480fd1ab59e67c01e6c4c",
+      "bytes": 163695,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/desktop-developing-separate.png",
+      "sha256": "76ed5ebed886c7daf47e4163d617efc3ece1f2bb2d74a7c6f02b190c51390842",
+      "bytes": 175836,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/desktop-manual-scale.png",
+      "sha256": "c1cb187aba4804f727152082cefd11a0c76ece5a91fca0deee3bf4ecb705cc6a",
+      "bytes": 182298,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/narrow-320-confirmed.png",
+      "sha256": "9343a8062e287cbb6160dbb1dbdb75b993cead1d72685acce5d126bf98d496a7",
+      "bytes": 77233,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/narrow-320-developing-separate.png",
+      "sha256": "81596e2c39083151f6ca8a817f4078dbf48b16994b86cf922df1e5f13d5c1c31",
+      "bytes": 78260,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/narrow-320-manual-scale.png",
+      "sha256": "a0a64f7854e06dc2619ef2fc55a89092333fca53640cd8ae1231ef77538f31f9",
+      "bytes": 79972,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/narrow-390-confirmed.png",
+      "sha256": "f8d765a9e3e671a90fffaff326028c4e41529ee3ff9c731d1707cb2613f183bb",
+      "bytes": 84600,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/narrow-390-developing-separate.png",
+      "sha256": "8d30ab191b9c0184bef0a39e31af6b80728c864bd57d4cc82da12320d56694b1",
+      "bytes": 86786,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/narrow-390-manual-scale.png",
+      "sha256": "c873a143e2d4165b094da43e40127293bb06bb624fd5e6214ab0dbc7ff7d9ff7",
+      "bytes": 89789,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/narrow-430-confirmed.png",
+      "sha256": "18afa13988ddbd0153d08ee880415b13d6c8fcde3214d8164d180960a1d3aca9",
+      "bytes": 87189,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/narrow-430-developing-separate.png",
+      "sha256": "ea455aa0f3032a64400198461c7996b7fbe40a0165612f51a6055554f0c9f73b",
+      "bytes": 89150,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/narrow-430-manual-scale.png",
+      "sha256": "79aadc43edf7a3adbd29a6e66e37320d7101a9b77737f128a9ea19ccf617ffbc",
+      "bytes": 92324,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/narrow-help-en.png",
+      "sha256": "105a5111a12aab7eab7a139a491fd6cbdd565fdea07d35857ac2f7d28d5355b5",
+      "bytes": 96315,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/narrow-help-he.png",
+      "sha256": "97c0a416ba60281502ae3f37293b8e26c766d454ce4861c5481b37213359a4ee",
+      "bytes": 90376,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/narrow-warm-up.png",
+      "sha256": "570836c79b2fa36227f9ab3487456fa5dd270a125b4ac5d66a396377e4118b3a",
+      "bytes": 80052,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/confirmed-volume-0.4.10/browser-final/narrow-zero-reference.png",
+      "sha256": "0333b116d87462de97e71434588fb6b531bbcbd8f5b21ae51dd889de3004e086",
+      "bytes": 83834,
+      "visuallyInspected": false
+    }
+  ],
+  "traces": 7
+}
