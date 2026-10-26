@@ -1,0 +1,27 @@
+2026-10-26T00:58:07.0856752Z PASS app: 9 suites
+2026-10-26T00:58:09.0227429Z PASS research: 1 suites
+2026-10-26T00:58:12.1972873Z PASS audit: 1 suites
+2026-10-26T00:58:15.3979305Z PASS contract: 1 suites
+2026-10-26T00:58:17.0931253Z PASS preparation: 1 suites
+2026-10-26T00:58:25.7240060Z PASS presentation: 6 suites
+Running browser-navigation
+2026-10-26T01:02:19.9550718Z AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+2026-10-26T01:02:19.9552456Z + actual - expected
+2026-10-26T01:02:19.9552841Z 
+2026-10-26T01:02:19.9553070Z + [
+2026-10-26T01:02:19.9553560Z +   95.85599984429804,
+2026-10-26T01:02:19.9554384Z +   101.86936160166384
+2026-10-26T01:02:19.9554843Z + ]
+2026-10-26T01:02:19.9555254Z - null
+2026-10-26T01:02:19.9555575Z 
+2026-10-26T01:02:19.9556256Z     at /home/runner/work/hybrid-terminal/hybrid-terminal/tests/browser-navigation.cjs:40:188 {
+2026-10-26T01:02:19.9557357Z   generatedMessage: true,
+2026-10-26T01:02:19.9558016Z   code: 'ERR_ASSERTION',
+2026-10-26T01:02:19.9558567Z   actual: [Array],
+2026-10-26T01:02:19.9559049Z   expected: null,
+2026-10-26T01:02:19.9559554Z   operator: 'strictEqual',
+2026-10-26T01:02:19.9560057Z   diff: 'simple'
+2026-10-26T01:02:19.9560520Z }
+2026-10-26T01:02:19.9750733Z 
+2026-10-26T01:02:19.9751598Z 
+2026-10-26T01:03:16.2212654Z PASS: bounded divider/axis controls, rasterized zero/clipping and shared geometry, RSI/None transitions, restoration/faults, visible legends at widths 1440/430/390/320, unchanged decisions/journal.

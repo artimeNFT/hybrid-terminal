@@ -38,7 +38,7 @@ test('palette option values/colors/defaults/body/tags and all existing calculati
   const a=await openApp({bars:series}),old=await openApp({bars:series,file});assert.deepEqual(a.read('PALETTES'),old.read('PALETTES'));assert.deepEqual(a.read('[S.palette,S.body,S.volumeTags]'),['accessible','filled',false]);
   for(const mode of ['standard','accessible','pvsra']){a.element('palette').onchange({target:{value:mode}});assert.match(a.element('candlelegend').innerHTML,/C &gt; O|C > O|Normal ↑/);assert.match(a.element('candlelegend').innerHTML,mode==='standard'?/Green up \/ Red down/:mode==='accessible'?/Blue up \/ Orange down/:/Direction \+ volume/)}
   assert.deepEqual(a.read('S.sig'),old.read('S.sig'));assert.deepEqual(a.read('S.bt'),old.read('S.bt'));
-  const names=[...fs.readFileSync(file,'utf8').matchAll(/^(?:async )?function (\w+)\(/gm)].map(m=>m[1]);for(const name of names.filter(n=>!['updateLegend','draw','chartGeometry','bindChart','endChartDrag','dailyLabelLayout'].includes(n)))assert.equal(a.read(name+'.toString()'),old.read(name+'.toString()'),name);for(const name of ['RULE_VERSION','EXECUTION_VERSION','RSI_POLICY'])assert.equal(a.read(name),old.read(name));
+  const names=[...fs.readFileSync(file,'utf8').matchAll(/^(?:async )?function (\w+)\(/gm)].map(m=>m[1]);for(const name of names.filter(n=>!['updateLegend','draw','chartGeometry','bindChart','endChartDrag','dailyLabelLayout','bindSystem'].includes(n)))assert.equal(a.read(name+'.toString()'),old.read(name+'.toString()'),name);for(const name of ['RULE_VERSION','EXECUTION_VERSION','RSI_POLICY'])assert.equal(a.read(name),old.read(name));
  }
 });
 test('existing countdown and partial-day Daily Open are retained as original draw/calculation behavior',async()=>{

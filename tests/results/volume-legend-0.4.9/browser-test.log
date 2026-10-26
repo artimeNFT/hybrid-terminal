@@ -43,5 +43,5 @@ Running browser-readability-help
 PASS: bilingual Help, explicit close/navigation/language buttons, keyboard focus/Escape, persistence/faults, unchanged preferences/engine/journal, palettes and desktop/narrow formulas. Existing countdown/DO inventory recorded separately.
 
 Running browser-volume-legend
-PASS: bounded divider/axis controls, rasterized zero/clipping and shared geometry, RSI/None transitions, restoration/faults, all legends at desktop/430/390/320, unchanged decisions/journal.
+PASS: bounded divider/axis controls, rasterized zero/clipping and shared geometry, RSI/None transitions, restoration/faults, visible legends at widths 1440/430/390/320, unchanged decisions/journal.
 PASS browser: 11 suites

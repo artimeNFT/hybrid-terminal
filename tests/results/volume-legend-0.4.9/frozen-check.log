@@ -11,7 +11,7 @@
     "bindingSha256": "0741c6a89a8f07818d1a393c19b597c19a14c8fa8b543babe71e7909d970521e",
     "loaderSha256": "a34fc16753e3138fc866e3a9929e24b9930f5000273e361dcaf80835b23614b3",
     "nodeVersion": "v24.15.0",
-    "activeApplicationSha256": "043f952a58166e5bdeced32efa2d38a5857c2166b009da9eeb4898f5d745b64a",
+    "activeApplicationSha256": "3d8cc67d458d24f8bc20870aa24078ad32749b8c95fc500c6f311bdfe0fd6139",
     "physicalSourceSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9"
   },
   "historicalManifestVerified": true,

@@ -1,0 +1,24 @@
+{
+  "commit": "9ec138ff03f6a179f351ba0e6b60e8eafeb6fa50",
+  "sourceSha256": "043f952a58166e5bdeced32efa2d38a5857c2166b009da9eeb4898f5d745b64a",
+  "runId": 40251806932,
+  "url": "https://github.com/artimeNFT/hybrid-terminal/actions/runs/40251806932",
+  "event": "workflow_dispatch",
+  "conclusion": "failure",
+  "jobs": [
+    {
+      "id": 121345142382,
+      "name": "Node 24 mocked Chromium QA",
+      "conclusion": "failure"
+    },
+    {
+      "id": 121345142699,
+      "name": "Node 24 deterministic QA",
+      "conclusion": "success"
+    }
+  ],
+  "finding": "Existing browser-navigation lower-pane-origin isolation failed at line 40: manual price bounds were set instead of remaining automatic.",
+  "cause": "Volume controls hid on a later redraw, changing canvas layout after measurement during a pane transition.",
+  "resolution": "Update pane visibility synchronously; prepare control layout before measuring canvas; redraw invalid-input notices. Keep original navigation assertion and add synchronous change-event assertions.",
+  "resolutionSourceSha256": "3d8cc67d458d24f8bc20870aa24078ad32749b8c95fc500c6f311bdfe0fd6139"
+}

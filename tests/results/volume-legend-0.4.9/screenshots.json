@@ -1,6 +1,6 @@
 {
   "successorVersion": "0.4.9",
-  "successorSourceSha256": "043f952a58166e5bdeced32efa2d38a5857c2166b009da9eeb4898f5d745b64a",
+  "successorSourceSha256": "3d8cc67d458d24f8bc20870aa24078ad32749b8c95fc500c6f311bdfe0fd6139",
   "evidenceRoot": "/tmp/hybrid-volume-legend-0.4.9",
   "viewports": [
     [
@@ -24,8 +24,8 @@
   "images": [
     {
       "path": ".qa-results/volume-legend-0.4.9/browser-final/desktop-controls.png",
-      "sha256": "f0f0e10213caa5eb576c331588df3b289c6a1f2624a700d1b9ad383fc425be48",
-      "bytes": 225490,
+      "sha256": "fc577b4c1377a732bc37e36a6355784fbc11ae0dd19a967761598add14f5d9be",
+      "bytes": 225427,
       "visuallyInspected": true
     },
     {
@@ -54,14 +54,14 @@
     },
     {
       "path": ".qa-results/volume-legend-0.4.9/browser-final/narrow-320-controls.png",
-      "sha256": "f25d23b412b3d44622880737176d125157c6d3cc01c9e1b5eac40edd0ebaa025",
-      "bytes": 71404,
+      "sha256": "8c414b294961ce56ad5b0096517d97b9cf4f44886ea0f181ce7c28b21a1e335b",
+      "bytes": 71402,
       "visuallyInspected": false
     },
     {
       "path": ".qa-results/volume-legend-0.4.9/browser-final/narrow-320-default-legend.png",
-      "sha256": "f11e7e9c48c9853a77197a4f3170d1a8ee30a484356c7bf5d42d59c88842dcad",
-      "bytes": 82489,
+      "sha256": "727c01c86bb565b1f85a7decf6e61493e3a94b9f73ae60e0d23ae3bec6e7d279",
+      "bytes": 82451,
       "visuallyInspected": false
     },
     {
@@ -78,14 +78,14 @@
     },
     {
       "path": ".qa-results/volume-legend-0.4.9/browser-final/narrow-320-resized.png",
-      "sha256": "ab48ad8e9186de236b2268251453b53603fa0ebc1cde0435b41cdc31e2d1ac86",
-      "bytes": 85068,
+      "sha256": "83d49f4d13ca8932d9fa38a6e20c478db70ffbe432c1c57ba5b92448dfd7ddaf",
+      "bytes": 85066,
       "visuallyInspected": false
     },
     {
       "path": ".qa-results/volume-legend-0.4.9/browser-final/narrow-390-controls.png",
-      "sha256": "12b23e5f643c0679c9002d2fac3391f49968c5fef632977942b79e4b32a93e51",
-      "bytes": 79194,
+      "sha256": "b4f192cd5881b009089c9c023045d44916e97dd4f31a60445faa3b9011b75711",
+      "bytes": 79195,
       "visuallyInspected": true
     },
     {
@@ -102,14 +102,14 @@
     },
     {
       "path": ".qa-results/volume-legend-0.4.9/browser-final/narrow-390-manual-clipped.png",
-      "sha256": "cb42cbe09231225c05cc1de7ed252119562728000a31f2481c9ea0e30cb9ada2",
-      "bytes": 88140,
+      "sha256": "31023ab473dd07942de0fb3a2c532af9cf27e15ee3051a421a8e316f9b97374c",
+      "bytes": 88138,
       "visuallyInspected": false
     },
     {
       "path": ".qa-results/volume-legend-0.4.9/browser-final/narrow-390-resized.png",
-      "sha256": "10a975c2da31b48970fdb2aacdafb7ed7acb8b200ea2998cf3468c99047b7072",
-      "bytes": 91151,
+      "sha256": "877c904c26ebed0f18ccd4aefc2c02b01536bd07a0bbb596dd8baa956c3698ea",
+      "bytes": 91149,
       "visuallyInspected": false
     },
     {
@@ -126,8 +126,8 @@
     },
     {
       "path": ".qa-results/volume-legend-0.4.9/browser-final/narrow-430-levels-legend.png",
-      "sha256": "0e58d331aed6f0a7742aa74487e1dee48742160c4ff87390428160c8f8b2d88d",
-      "bytes": 95163,
+      "sha256": "4a87303a1977b25501850a39f1081a804f5e2b51f2be711b5dd4b07cdb0eea9a",
+      "bytes": 95146,
       "visuallyInspected": false
     },
     {
@@ -138,14 +138,14 @@
     },
     {
       "path": ".qa-results/volume-legend-0.4.9/browser-final/narrow-430-resized.png",
-      "sha256": "2307d706a9e2a2ec8d4b41d4761a6fc8b7a8984fe8dcae690e23e81bf44943fc",
-      "bytes": 94740,
+      "sha256": "b0864da4328e1cb2735101af017b8b59570f52284b1e5c264a2397e276e578e9",
+      "bytes": 94697,
       "visuallyInspected": false
     },
     {
       "path": ".qa-results/volume-legend-0.4.9/browser-final/narrow-blocked.png",
-      "sha256": "d5c0bec0624190731884a42d853e82efe2cd8962dd35982b845582d3f568e892",
-      "bytes": 79908,
+      "sha256": "d21eb575a39e7559dc63a5a96b6af9ec012a8adfcc36adde193ff1f443bec7ef",
+      "bytes": 79906,
       "visuallyInspected": false
     },
     {
@@ -162,8 +162,8 @@
     },
     {
       "path": ".qa-results/volume-legend-0.4.9/browser-final/narrow-malformed.png",
-      "sha256": "367a7794bfcc06a2962f49a553acdf29aa1ce8617a2d4234a16fe0d17aee3c02",
-      "bytes": 79431,
+      "sha256": "aacf5679fcc70ee93e1e764e6ce5adfa6c47a127f75e830cbd314a6c30a31c06",
+      "bytes": 79429,
       "visuallyInspected": false
     }
   ]

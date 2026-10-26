@@ -1,7 +1,7 @@
 {
   "group": "app",
   "node": "v24.15.0",
-  "startedAt": "2026-10-26T00:39:45.764Z",
+  "startedAt": "2026-10-26T01:09:06.873Z",
   "scope": "Synthetic/mocked QA only; no acquired datasets or public market access",
   "checks": [
     {
@@ -50,5 +50,5 @@
       "signal": null
     }
   ],
-  "finishedAt": "2026-10-26T00:40:24.925Z"
+  "finishedAt": "2026-10-26T01:09:54.534Z"
 }

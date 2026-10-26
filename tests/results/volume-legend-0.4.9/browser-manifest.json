@@ -1,7 +1,7 @@
 {
   "group": "browser",
   "node": "v24.15.0",
-  "startedAt": "2026-10-26T00:36:56.420Z",
+  "startedAt": "2026-10-26T01:09:07.541Z",
   "scope": "Synthetic/mocked QA only; no acquired datasets or public market access",
   "checks": [
     {
@@ -60,5 +60,5 @@
       "signal": null
     }
   ],
-  "finishedAt": "2026-10-26T00:39:08.163Z"
+  "finishedAt": "2026-10-26T01:11:25.823Z"
 }

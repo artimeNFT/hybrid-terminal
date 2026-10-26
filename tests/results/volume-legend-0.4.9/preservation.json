@@ -1,9 +1,9 @@
 {
   "startingPredecessorCommit": "30432aba73c3b6a5112999f2d0448e9835dfdeaa",
-  "verifiedUtc": "2026-10-26T00:55:28.626434+00:00",
+  "verifiedUtc": "2026-10-26T01:15:06.523437+00:00",
   "successorBranch": "candidate/volume-legend-0.4.9",
   "successorWorktree": "/tmp/hybrid-volume-legend-0.4.9",
-  "successorSourceSha256": "043f952a58166e5bdeced32efa2d38a5857c2166b009da9eeb4898f5d745b64a",
+  "successorSourceSha256": "3d8cc67d458d24f8bc20870aa24078ad32749b8c95fc500c6f311bdfe0fd6139",
   "predecessorSourceSha256": "49267248f1808133c52e2331fa9d6f7b325be7580a71867177c5dd5d12323858",
   "predecessorWorktreeUnchanged": true,
   "authoritativeRoot": "/mnt/c/users/shlom/desktop/the hybrid-terminal",
@@ -421,13 +421,14 @@
     "research/datasets/btcusdt-5m-2026-q3.json.checkpoint.json": "777cfe0bd19823db246e564f0be52b57e34ccd9eacb21a088dc2f0aca1af8242"
   },
   "historicalStatusArchiveSha256": "3e59f07fc2d0e6fe17a43f039f1fc9864c15a5dcfc1a15fddcc0e65e2769d2e6",
-  "sourceIdenticalPriorFunctionBodies": 100,
+  "sourceIdenticalPriorFunctionBodies": 99,
   "changedPriorFunctions": [
     "chartGeometry",
     "draw",
     "bindChart",
     "endChartDrag",
-    "dailyLabelLayout"
+    "dailyLabelLayout",
+    "bindSystem"
   ],
   "observerSha256": "4cdc73e4e9654de1faab7791959d88efaebd9ce28bd53cbab338103ce303c05d",
   "wrapperSha256": "227cb39e3cf2317d7d85d852c1f884675a91570e6665da1116cd35db7bc194bd",

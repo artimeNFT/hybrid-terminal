@@ -2,7 +2,7 @@
 
 Predecessor: preserved published `30432aba73c3b6a5112999f2d0448e9835dfdeaa`, 0.4.8 SHA-256 `49267248f1808133c52e2331fa9d6f7b325be7580a71867177c5dd5d12323858`.
 Successor branch: `candidate/volume-legend-0.4.9`, worktree `/tmp/hybrid-volume-legend-0.4.9`.
-Successor HTML SHA-256: `043f952a58166e5bdeced32efa2d38a5857c2166b009da9eeb4898f5d745b64a`.
+Successor HTML SHA-256: `3d8cc67d458d24f8bc20870aa24078ad32749b8c95fc500c6f311bdfe0fd6139`.
 Authoritative root remains clean published 0.4.7 / `4bafacddf8d726fc48601471c7a7fe713c2fb2038f0908264131ba864f7aa8e8`. Neither candidate integrated. Existing timer/observer/wrapper unchanged.
 
 ## Delivered scope
@@ -19,15 +19,17 @@ Hebrew typo מחנה → מכנה; QA-only emulated/physical acceptance wording 
 
 ## Checks actually performed
 
-Full local `npm test` passed: nine app suites; explicit frozen-context 18 CLI/nine audit/nine contract/13 preparation fixtures; six presentation suites (5+6+7+7+6+8). All eleven mocked Chromium suites passed. Final Help-only LTR range refinement received a fresh source check, 14 focused cases (eight Volume/legend + six prior Help) and final new browser suite across all four widths. Local full/final-focused source identities remain distinct in `validation-source-identities.json`; exact published-source CI is required after push.
+Full local `npm test` passed: nine app suites; explicit frozen-context 18 CLI/nine audit/nine contract/13 preparation fixtures; six presentation suites (5+6+7+7+6+8). All eleven mocked Chromium suites passed. After the initial exact CI exposed delayed Volume-controls visibility during pane changes, layout is now synchronized before measurement and in the change handler. The unchanged navigation test and full local groups reran. New change-event assertions require synchronous visibility. Local source identities remain measured in `validation-source-identities.json`; exact fixed-source CI is required after push.
 
 Actual Chromium mouse/axis wheel/keyboard/native range controls and narrow touch-emulated divider gestures verify min/max height, capture/cancel, drag-start geometry, zero-baseline raster, linear/clipped bar bounds and cap pixels, Auto/reset, shared 32px horizontal displacement with price/volume pixels after pan/zoom, crosshair identity, actual 20px price-candle displacement after resizing, pane transitions, stored/faulted settings, provisional updates and unchanged decision/backtest/journal bytes. DO and DO* glyph pixels and all legend bounds verified at 1440/430/390/320px; daily labels stay below headers. No console/page errors or unexpected external requests.
 
 Initial test refinements addressed native slider 1px quantization, fractional CSS pointer rounding and anti-aliased cap pixels; application calculations were not changed to satisfy those assertions. The original regression DOM stub needed only a bounding-box method for the new UI initialization; formulas/fixtures stayed unchanged. The actual 320px divider miss was traced to layout shift and fixed in production interaction code, then rechecked.
 
+The initial CI run `40251806932` at `9ec138f` failed only the existing lower-pane navigation isolation assertion; deterministic and new Volume suites passed. Volume controls had hidden during a later redraw, moving the canvas after measurement. The fix prepares layout before geometry, updates pane visibility synchronously and redraws invalid-input notices. The existing navigation test remains unchanged. See `ci-layout-failure.json` / `ci-layout-failure.log`.
+
 `browser-evidence.json` records measured geometry/pixels; `screenshots.json` identifies 24 source-bound current images. Inspected desktop controls, narrow controls/clip/legend and both Help languages; only viewed images carry inspection flags. Raw images/traces remain ignored in this successor worktree. Emulation is not physical touch; screen-reader, user perceived readability and physical acceptance remain pending.
 
-Only five prior chart-view functions change (`chartGeometry`, `draw`, `bindChart`, `endChartDrag`, `dailyLabelLayout`); all other 100 prior function bodies, rule/execution/RSI versions and calculations/decisions/feed/sizing/backtest/journal functions stay identical. Preserved predecessor, frozen manifests/evidence/baselines/seals/payloads, six acquired dataset/checkpoint hashes and historical STATUS archive verify unchanged. Read-only original audit/preparation verification passed in frozen0.4.3 context; no acquisition/cohort/live-soak rerun.
+Only six prior chart-view functions change (`chartGeometry`, `draw`, `bindChart`, `endChartDrag`, `dailyLabelLayout`, `bindSystem`); all other 99 prior function bodies, rule/execution/RSI versions and calculations/decisions/feed/sizing/backtest/journal functions stay identical. Preserved predecessor, frozen manifests/evidence/baselines/seals/payloads, six acquired dataset/checkpoint hashes and historical STATUS archive verify unchanged. Read-only original audit/preparation verification passed in frozen0.4.3 context; no acquisition/cohort/live-soak rerun.
 
 ## Publication and integration order
 
