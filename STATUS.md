@@ -2,6 +2,28 @@
 
 Updated: 2026-10-27, Asia/Jerusalem.
 
+## Current working method — 2026-10-27
+
+**Process decision:** keep one active implementation owner, but batch related changes by a user-visible outcome rather than issuing a release for every control. The latest user instruction is that the wheel-zoom usability fix is the active task in the existing Codex session; this activity is user-reported, not observable through GitHub. Finish that task without restarting it or mixing in the next feature.
+
+**Delivery policy from this checkpoint:**
+- A normal work package may contain 2–4 tightly related items, shared Help and relevant tests, with one concrete completion condition. Split strategy/data-source/execution changes from unrelated rendering; do not collect the entire backlog into one implementation.
+- During development, use focused checks. Once final code and documentation are ready, run required full checks and exact-published CI. Repeat suites when code changes, failures or concrete concerns justify it; do not repeat a completed source-identical observation/cohort by default.
+- Prepare release documentation with the implementation. Avoid a separate publication/CI/evidence cycle merely to record that the previous cycle passed. Use existing ignored post-push receipts and the delivery message for final run evidence; never invent a green status for an unverified SHA.
+- CI optimization is a queued engineering change, NOT already implemented: the current workflow still runs deterministic and Chromium jobs for every main push, including documentation. A scoped future improvement should distinguish documentation-only from code/test/workflow changes while preserving required-check behavior and actual release validation. Do not weaken, bypass or rewrite existing checks during the active wheel fix.
+- Keep one compact current snapshot/task board as the entry state. STATUS currently also contains extensive dated evidence; move historical material only in a separately checked documentation cleanup, preserving bytes/links and compatibility. Do not keep appending another full roadmap at each reply.
+- New ideas enter the existing backlog with expected benefit, data need, risk and next decision. User-observed usability/data defects can preempt the queue. A feature is not promoted merely because it is available to build.
+
+**Priorities / work packages:**
+1. Active: gentler normalized wheel zoom + speed choice + clear Help, preserving drawings/navigation/calculations. Wait for this delivery, not a new coding thread.
+2. Next user outcome: recorded-decision review. Bundle read-only journal browsing/filtering, one-record detail with recorded version/time/reasons/plan, and matching Help. Inspect actual legacy fields first; missing historical context stays unavailable. No trade outcomes, invented as-of levels or journal rewriting.
+3. Later analytical context: choose one price/volume question and related metrics, e.g. existing relative activity with body/range and close-location description. Guard zero ranges and retain causal closed inputs. No absorption/probability or extra-score claims.
+4. Conditional: same-time-of-day volume (needs adequate intraday history), exact Psy/TR definitions, richer taker/derivatives data or extra timeframes. Preserve existing research limitations and evidence; no automatic resumption.
+
+**Evidence motivating this change:** inspected recent Actions and current workflow. Code-delivery runs were followed by full documentation-only handoff runs (for example Line source7565e66 then docs599cd64); main pushes always select both jobs. STATUS had181,395 characters at this checkpoint. These are process/reading costs, not evidence that functional checks should be removed. No precise quota savings or faster delivery guarantee is asserted.
+
+Only documentation changes in this process checkpoint. Active app remains0.4.14 RC with source f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334 until the active wheel task is actually delivered.
+
 ## Current delivery — basic manual trend lines, 0.4.14 RC
 
 **One bounded increment:** clean published starting main **599cd640615452cc5ea23501789322fa91a0e766**, safely fetched with no divergence or unfinished tracked work. The preceding Line release's final [actual CI40405064556](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40405064556) completed successfully; not restarted as unfinished work. Implementation isolated in `/tmp/hybrid-manual-trend-lines-0.4.14`, branch `work/manual-trend-lines-0.4.14`. Exact pre-edit0.4.13 **8c114fc604d9b7478334e01fee4ea7ea5c84f38cfc6b08f5524ab8a5e39157f4** preserved as an internal baseline. Published active **0.4.14 RC / `f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334`**; root HTML is the sole active user application. No VECTOR LAB, research acquisition/cohort, hour/midnight rerun or other feature.
@@ -368,7 +390,7 @@ Started on clean main, fetched and fast-forwarded safely from `3e9f65b` to curre
 
 | Priority | Task | State / next action |
 | --- | --- | --- |
-| P0 | Product alignment and work continuity | **0.4.14 Manual drawings published; corrected exact CI success** —7b69c74/run40410474853; evidence/limits above. Finish final documentation-only CI verification and stop |
+| P0 | Product alignment and work continuity | User-reported active task: wheel-zoom usability. Next package: recorded-decision review. Batch related UI/Help/tests; working-method policy at top |
 | P1 | Volume pane / narrow legend 0.4.9 successor | **Integrated once through the checked successor** — exact source `3d8cc6…`; includes 0.4.8, checkpoints preserved. Candidate/final-main CI evidence above; physical-device acceptance pending |
 | P1 | Readability / bilingual Help 0.4.8 candidate | **Integrated through 0.4.9**, no independent second merge; preserved predecessor `30432ab`, language/palette/preferences unchanged from tested candidate |
 | P2 | Existing countdown / DO visibility | Narrow indicator legend fix is active in 0.4.9; no duplicate feature. Countdown remains tied to visible last-price label. Broader coverage review stays queued |

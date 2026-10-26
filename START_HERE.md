@@ -29,6 +29,9 @@ If GitHub access fails, state the exact limitation and request only the missing 
 
 ## 3. The living checkpoint — in STATUS only
 
+Batch 2–4 tightly related implementation items around one user outcome. Keep one implementation owner. Use focused checks during development and required release checks/actual CI on final code. Do not add a second release/evidence cycle solely to announce the first passed. CI documentation-only routing is a queued change; do not assume it exists or bypass current requirements. Read the latest working-method section in STATUS. Keep current handoff concise and retain detailed dated evidence separately when safely archived.
+
+
 At each completed bounded increment, significant decision, interruption or requested handoff, update the current section with:
 
 - As-of date/time and authoritative branch/commit/application version/hash.
