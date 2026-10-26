@@ -1,0 +1,24 @@
+{
+  "commit": "4e3d7e39c1ca019a0aa5540be727569601a94b35",
+  "sourceSha256": "5dded54c4a79ab7f38c13a793e359969b2b507497d6a062ea241e882ca540fd2",
+  "runId": 40311766925,
+  "url": "https://github.com/artimeNFT/hybrid-terminal/actions/runs/40311766925",
+  "status": "completed",
+  "conclusion": "failure",
+  "jobs": [
+    {
+      "id": 121534429233,
+      "name": "Node 24 deterministic QA",
+      "conclusion": "success"
+    },
+    {
+      "id": 121534429843,
+      "name": "Node 24 mocked Chromium QA",
+      "conclusion": "failure"
+    }
+  ],
+  "finding": "New browser-confirmed-volume compared stale rendered zero 544.859375 against resized geometry zero 857.140625 immediately after closing Display.",
+  "cause": "The test read chart metrics before the application's scheduled redraw; its screenshot/geometry read mixed frames.",
+  "resolution": "Wait for rendered metrics and backing canvas dimensions to match current layout; keep the geometry assertion. Add delayed Display redraw fixture. No application source change.",
+  "applicationChanged": false
+}

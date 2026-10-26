@@ -1,0 +1,25 @@
+2026-10-26T11:05:28.1315754Z 
+2026-10-26T11:05:28.1320890Z Running browser-confirmed-volume
+2026-10-26T11:05:30.1610047Z AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+2026-10-26T11:05:30.1611211Z + actual - expected
+2026-10-26T11:05:30.1611566Z 
+2026-10-26T11:05:30.1611797Z + 544.859375
+2026-10-26T11:05:30.1612318Z - 857.140625
+2026-10-26T11:05:30.1612726Z 
+2026-10-26T11:05:30.1613558Z     at /home/runner/work/hybrid-terminal/hybrid-terminal/tests/browser-confirmed-volume.cjs:26:417 {
+2026-10-26T11:05:30.1614701Z   generatedMessage: true,
+2026-10-26T11:05:30.1615324Z   code: 'ERR_ASSERTION',
+2026-10-26T11:05:30.1615910Z   actual: 544.859375,
+2026-10-26T11:05:30.1616418Z   expected: 857.140625,
+2026-10-26T11:05:30.1616948Z   operator: 'strictEqual',
+2026-10-26T11:05:30.1617501Z   diff: 'simple'
+2026-10-26T11:05:30.1617995Z }
+2026-10-26T11:05:30.1807229Z QA failed; diagnostics: /home/runner/work/hybrid-terminal/hybrid-terminal/.qa-results/browser
+2026-10-26T11:05:30.1950171Z ##[error]Process completed with exit code 1.
+2026-10-26T11:05:30.2042459Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-10-26T11:05:30.2042897Z with:
+2026-10-26T11:05:30.2043103Z   name: chromium-failure
+2026-10-26T11:05:30.2043344Z   path: .qa-results/
+2026-10-26T11:05:30.2043573Z   include-hidden-files: true
+2026-10-26T11:05:30.2043826Z   if-no-files-found: ignore
+2026-10-26T11:05:30.2044068Z   retention-days: 3
