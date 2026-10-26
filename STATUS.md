@@ -2,6 +2,12 @@
 
 Updated: 2026-10-26, Asia/Jerusalem.
 
+## Continuity entry point — 2026-10-26
+
+[START_HERE.md](START_HERE.md) is the stable new-chat/reviewer entry point. This STATUS remains the single living task board and source of current release/evidence/resume state. README links to the protocol. No application, workflow, dependency, frozen evidence or local project file changes were made for this documentation-only preparation.
+
+Latest user instruction says the separately scoped manual-trend-line task is running in the existing VS Code/WSL Codex session. That local activity is user-reported, not directly observable through GitHub. Do not launch a second writer or infer that remote main's unchanged source means the task is idle. Existing implementation should safely reconcile this documentation checkpoint before promotion. A replacement chat first verifies ownership, actual source/branch and exact CI, then resumes the existing authorized work.
+
 ## Current delivery — Candles / Line (Close), 0.4.13 RC
 
 **Single bounded increment:** clean main safely fetched/fast-forwarded to latest planning checkpoint **8e4652c076315d2e1b2a7347980ad1f94b06dbe2**. No active persistence investigation or unfinished tracked work was found; accepted user reload observation below is retained verbatim, not repeated. One Hybrid worktree `/tmp/hybrid-line-close-0.4.13`, branch `work/line-close-0.4.13`. Exact pre-edit0.4.12 internal baseline **`f477eae1b50e435023e4f0a15e4e9a04601aadc800870fd978f9669aece02e37`**. Published active **0.4.13 RC / `8c114fc604d9b7478334e01fee4ea7ea5c84f38cfc6b08f5524ab8a5e39157f4`** at implementation **`7565e663cb1683e4f3c1f5ef23ca956e059c0d6c`**; authoritative root remains the sole user application. No VECTOR LAB, observation, research acquisition/cohort or manual drawing work.

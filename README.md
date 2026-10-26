@@ -1,5 +1,7 @@
 # Hybrid Terminal 0.4.13 RC
 
+**New chat or reviewer:** start with [START_HERE.md](START_HERE.md), then the latest current section and task board in [STATUS.md](STATUS.md). Resume existing work; do not create a duplicate implementation session.
+
 **Current direction and task order:** read CURRENT [STATUS.md](STATUS.md). Release 0.4.13 adds **Chart → Candles / Line (Close)**, preserving original OHLCV calculations and price fitting. Source SHA-256 `8c114fc604d9b7478334e01fee4ea7ea5c84f38cfc6b08f5524ab8a5e39157f4`. Strategy/feed/indicators/sizing/backtest/journal, Volume/ADR20/regional context and all prior preferences are preserved. Accepted user reload evidence is retained without repetition; no active persistence investigation was found or restarted. Old observations remain exact-source-specific. No live soak, midnight observation, research acquisition or cohort rerun. Manual trend lines are next, separately scoped; stop after Line publication/CI.
 
 Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Binance spot REST/WebSocket access is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
