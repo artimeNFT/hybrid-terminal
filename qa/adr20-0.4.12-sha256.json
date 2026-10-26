@@ -1,0 +1,17 @@
+{
+  "hybrid-terminal.html": "f477eae1b50e435023e4f0a15e4e9a04601aadc800870fd978f9669aece02e37",
+  "baseline/hybrid-terminal.0.4.11.html": "22ef701f791907fa8f92a1b9f3ae2ac2d139734db475d47270e1122784c0b3f3",
+  "README.md": "855ed3cc4f3c27206c5492bde4fd3e030b9b267af92e2b1ffb5ab86395aa3997",
+  "SOURCE_PROVENANCE.md": "d3cf7c06d3320d5039fd1cb141660b599ea65479741aa8147373c1fc755c5438",
+  "baseline/README.md": "d520cceaedc0b6d69bafc1122ace5a0fde77be8442db692851e7517fbf148f29",
+  "scripts/check-source.cjs": "b1e487dcca76aac992268f5b60ecd2ea1cdd4bd3ba3e3d87d1fabf9b7b54390f",
+  "scripts/run-qa.cjs": "56d5c6d86c6e0470fad1e8c1cc056d69ec051cc046f3b188e0df6d37d8f3ccde",
+  "qa/source-checksums.0.4.12.json": "c4845b9e9e8ac69b032ad28b40a85dc67a50bb522cd037ece0084335b5486fcb",
+  "tests/browser-day-context.cjs": "e9ee85fb01afe2dbcad1b7afb3f70193060469196199cce437fc180a3b540aa0",
+  "tests/browser-navigation.cjs": "9e26bdd21b51e95db740681f3966c92a9fde9f55e7797c7a7189975f216fc21e",
+  "tests/presentation.cjs": "1773f39b029194bd686a19c08c03f0f121f9cc8709dde534d4bc1a7c22b418a4",
+  "tests/adr20.cjs": "8055a92d18b754ae2387a94f049fb0194e00f05f5ef590690f8f2a9d8450d60a",
+  "tests/regional-windows.cjs": "bcd8cd7241de1295756a5b5a8565c5f15b211b9129221ef8efa9e07ee32f6c6b",
+  "tests/browser-adr20.cjs": "ed8903d8d80dbb179a4ea6d123092d76a6922de2114fe8542fefa0069586ee33",
+  "tests/results/adr20-0.4.12/evidence-sha256.json": "7127ccad0d3b9dbf8be6222df65352731620401172a65030d9bcf78e0f738b5c"
+}

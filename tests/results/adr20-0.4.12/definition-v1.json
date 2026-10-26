@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "anchor": "UTC day D containing confirmedAsOf() close",
+  "period": 20,
+  "source": "Binance Spot /api/v3/klines interval=1d, UTC default; explicit start/end",
+  "sourceDays": "exact D-20 through D-1 inclusive, consecutive UTC days including weekends",
+  "adr": "sum(high-low)/20",
+  "today": "max high - min low over continuous closed S.k prefix in D from UTC open to confirmed anchor",
+  "ratioPercent": "100*today/ADR, valid coverage and finite positive ADR only",
+  "midnight": "new D has zero confirmed candles: wait, never reuse old day",
+  "cacheKeySemantics": "source open +1d for pivot validity; ADR uses explicit source open",
+  "enabledPreference": "hybridTerminal.adr20.v1/schema1; off by default",
+  "missingPolicy": "no forward fill or shortened period; historical negative cache refreshed explicitly, existing failed/latest source retry15s"
+}

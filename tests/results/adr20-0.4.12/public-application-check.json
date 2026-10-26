@@ -1,0 +1,30 @@
+{
+  "applicationVersion": "0.4.12",
+  "scope": "Actual parseCompleteDaily/shared lifecycle/ADR20 consumed saved unmodified public response; independent Python Decimal oracle, no additional public request.",
+  "coverage": 20,
+  "adr20": 2074.584999999999,
+  "expectedIndependentDecimal": "2074.58500000",
+  "sourceDates": [
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11",
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-14",
+    "2026-10-15",
+    "2026-10-16",
+    "2026-10-17",
+    "2026-10-18",
+    "2026-10-19",
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-22",
+    "2026-10-23",
+    "2026-10-24",
+    "2026-10-25"
+  ],
+  "sourceSha256": "f477eae1b50e435023e4f0a15e4e9a04601aadc800870fd978f9669aece02e37"
+}

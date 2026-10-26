@@ -1,0 +1,30 @@
+{
+  "startedAt": "2026-10-26T16:12:35.680706+00:00",
+  "scope": "Bounded public Binance Spot source check, not synthetic QA, research acquisition, a live soak or strategy evidence. Two requests maximum; 12s timeout each.",
+  "requests": [
+    {
+      "url": "https://api.binance.com/api/v3/time",
+      "status": 200,
+      "rawSha256": "266639cf7b30d0670586c6c31b30f7cef4550423713e77c1307b6f42e0949e99",
+      "elapsedSeconds": 0.4671465349965729
+    },
+    {
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1791244800000&endTime=1792972799999&limit=1000",
+      "status": 200,
+      "rawSha256": "0cb4c6e62aa3e8f43a1e5051d9c82fdce41ca7f9a34b44814fb39c56e8849c52",
+      "elapsedSeconds": 0.42297468602191657
+    }
+  ],
+  "state": "PASS",
+  "anchorUtcDay": "2026-10-26T00:00:00+00:00",
+  "sourceCount": 20,
+  "firstOpen": 1791244800000,
+  "lastOpen": 1792886400000,
+  "independentDecimalADR": "2074.58500000",
+  "checks": [
+    true,
+    true,
+    true
+  ],
+  "finishedAt": "2026-10-26T16:12:36.585202+00:00"
+}

@@ -1,0 +1,17 @@
+✔ off default; exact independently specified 20-day arithmetic, weekends and cache source/key semantics (62.188211ms)
+✔ missing, duplicate, invalid, nonconsecutive or unfinished source cannot silently shorten or fill ADR20 (156.99389ms)
+✔ explicit zero ADR and finite arithmetic guards keep only the affected ratio unavailable (47.58471ms)
+✔ today uses continuous closed decision history from UTC open, never chart-only, daily or provisional data (70.405306ms)
+✔ exact midnight moves D and source window; waits for first close without old-day reuse (127.081198ms)
+✔ one shared cache coexists with chart consumers, cancels all-off and rejects obsolete symbol/timeframe/range responses (123.448716ms)
+✔ confirmed anchor independent of hover/history/timezone/NOW and all decision sides; no clock-only fetch or engine write (16.089381ms)
+✔ isolated preference restoration, malformed bytes and storage read/write failures retain all other state (179.652834ms)
+✔ engine source and ordinary decisions/backtests remain exact to 0.4.11; Hebrew/English facts equivalent and isolated (29.945105ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 880.456407

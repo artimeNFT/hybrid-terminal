@@ -1,0 +1,5 @@
+page.waitForFunction: TypeError: Cannot read properties of undefined (reading 'length')
+    at /tmp/hybrid-adr20-0.4.12/tests/browser-day-context.cjs:30:348 {
+AssertionError [ERR_ASSERTION]: 220.5 != 140.5 (tol 1.1)
+    at near (/tmp/hybrid-adr20-0.4.12/tests/browser-navigation.cjs:6:35)
+    at /tmp/hybrid-adr20-0.4.12/tests/browser-navigation.cjs:37:82 {

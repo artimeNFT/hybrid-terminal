@@ -1,0 +1,67 @@
+{
+  "sourceSha256": "f477eae1b50e435023e4f0a15e4e9a04601aadc800870fd978f9669aece02e37",
+  "root": "/tmp/hybrid-adr20-0.4.12/.qa-results/browser/browser-adr20",
+  "scope": "Actual Chromium synthetic fixture screenshots; not physical-device or live-session acceptance. Marked images were visually inspected; others are generated evidence only.",
+  "images": [
+    {
+      "file": "desktop-confirmed.png",
+      "sha256": "a07f81e537981c1708bbef76cd7edcaf469d3840b8bad0409f3027f4f10de0ab",
+      "visuallyInspected": true
+    },
+    {
+      "file": "desktop-exact-details.png",
+      "sha256": "ea26ab08db55b730095ddae63545ab4a78deb1a404f26cf7fc48496f0609a200",
+      "visuallyInspected": true
+    },
+    {
+      "file": "narrow-320-confirmed.png",
+      "sha256": "337da219158b1229b8844150871062172b9d750f16b967e0bc6a372e6ef3ee49",
+      "visuallyInspected": true
+    },
+    {
+      "file": "narrow-320-exact-details.png",
+      "sha256": "cc5d4498a2fbc240a0d6e8ea1008a2e6deaba6d56931941fb4d0c993c59124cc",
+      "visuallyInspected": false
+    },
+    {
+      "file": "narrow-390-confirmed.png",
+      "sha256": "546fa35078d7f05705a5382352500fdba333e50e2a8f94a4ec5add584f310b34",
+      "visuallyInspected": false
+    },
+    {
+      "file": "narrow-390-exact-details.png",
+      "sha256": "a4ff0f0cb86f7d633a66cbacdd5e08abefa5c7a169528c87dc70725630971e05",
+      "visuallyInspected": false
+    },
+    {
+      "file": "narrow-help-en.png",
+      "sha256": "59a5dad8bdc0dcf91eeb55242d67dfedf0eb042de99bf58889e11c34b9262e61",
+      "visuallyInspected": true
+    },
+    {
+      "file": "narrow-help-he.png",
+      "sha256": "72765a651da17513346e5b21e91f7f526a5e4434ec2930b6a0feefac6976d698",
+      "visuallyInspected": true
+    },
+    {
+      "file": "narrow-midnight-waiting.png",
+      "sha256": "8260aa034dd1cff71e2fecbdd6d7a1efe879d43af045afcb24417524af608e9a",
+      "visuallyInspected": true
+    },
+    {
+      "file": "narrow-missing.png",
+      "sha256": "6428621d9c69049b2fe0b849c11724142ce9df2e984561eb83a4e3026cf020d3",
+      "visuallyInspected": false
+    },
+    {
+      "file": "narrow-partial.png",
+      "sha256": "b0518f8ae4ef5f12136d332d4ef3fcb6c0ebd833135bf0373f1c57573a241ecb",
+      "visuallyInspected": true
+    },
+    {
+      "file": "narrow-zero.png",
+      "sha256": "b9a5e7b9e7bc43001cd8adf0c9e74302e5c5e21f2348b2f47f506c0f478ac887",
+      "visuallyInspected": false
+    }
+  ]
+}

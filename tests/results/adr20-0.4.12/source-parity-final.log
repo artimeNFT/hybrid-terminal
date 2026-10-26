@@ -1,0 +1,21 @@
+✔ frozen reference is exact, explicit context verifies old sources, and unbound research rejects the active UI (300.714195ms)
+✔ preserved calculation/journal functions remain exact to frozen 0.4.3 with scoped presentation/daily-source hooks (110.637407ms)
+✔ synthetic calculation/decision/backtest behavior matches 0.4.3 across thresholds and degenerate inputs (788.485924ms)
+✔ presentation risk uses confirmed coordinates, independent ATR availability and guarded arithmetic (33.439707ms)
+✔ upgrade preserves old journal bytes/identities and display/sizing preferences (44.001906ms)
+✔ fresh volume view preserves 0.4.8 default heights, price geometry, linear bar scaling and does not write preferences (540.258103ms)
+✔ actual captured divider events use drag-start geometry, enforce pane limits and leave all market state unchanged (162.482481ms)
+✔ volume-axis drag scales a nonnegative linear range from visible zero; reversal, clipping, wheel/auto/reset are independent of price (122.23313ms)
+✔ Volume/RSI/None transitions preserve the RSI scale/legacy geometry, shared horizontal mapping and stored volume settings (223.136038ms)
+✔ isolated view settings restore with viewport bounds; malformed/unsupported values never clear old storage or journal (831.288788ms)
+✔ invalid settings and storage failures remain guarded/session-only, without touching calculation/journal/preference keys (224.667556ms)
+✔ responsive indicator layout keeps all six exact names in bounds, preserves desktop spacing and guards label collisions (57.088899ms)
+✔ scoped chart-view/daily-source hooks preserve 0.4.8 engine; Help typo and bilingual controls documented (105.118187ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2507.205244
