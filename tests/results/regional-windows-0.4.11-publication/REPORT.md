@@ -1,0 +1,9 @@
+# Regional windows 0.4.11 — publication verified
+
+Implementation `c3ef0dc9b3457c0663b87f7cd5b5e93bc8ec16e5`, [actual push run 40321711618](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40321711618), completed successfully: both Node 24 jobs. Decoded logs verify nine app suites, frozen-context 18 CLI / nine audit / nine contract / 13 preparation fixtures, eight presentation suites (52 cases) and thirteen mocked Chromium scripts. New regional Native IANA/timer/resume, no extra engine/storage/network work, default-off/restore, preserved Volume, configuration independence and bilingual layout checks passed on exact HTML `22ef701f791907fa8f92a1b9f3ae2ac2d139734db475d47270e1122784c0b3f3`.
+
+The browser installer was slow but completed; no setup/test-source change or assertion weakening was used to pass CI. Main was safely fast-forwarded from `5db5e71` and pushed without force. Original local evidence/source bindings remain unchanged in the sibling regional-windows-0.4.11 directory. This report and actual logs/receipt bind the publication separately.
+
+Final STATUS/documentation handoff receives its own exact pushed-head CI check before final delivery, with ignored root `.qa-results/regional-windows-0.4.11/ci-verification.json` and `ci-test-summary.log` to avoid self-reference. Current document binding is `qa/regional-windows-0.4.11-publication-sha256.json`. No further implementation active; no ADR or other feature starts.
+
+Physical touch, human bilingual/screen-reader review, subjective readability and broader live acceptance remain unobserved. Native timezone data and device/last-server-offset estimates bound time accuracy. These chosen weekday references do not handle official holidays or verify exchange/TR_MAIN hours/liquidity. Prior acceptance stays with exact observed versions; no observation/cohort/acquisition rerun.

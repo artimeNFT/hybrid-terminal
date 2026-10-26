@@ -1,0 +1,13 @@
+{
+  "hybrid-terminal.html": "22ef701f791907fa8f92a1b9f3ae2ac2d139734db475d47270e1122784c0b3f3",
+  "STATUS.md": "b0fce32d0178da6b5d2d3e0845214c96213fb3289139f2fad4c95861421fe6fb",
+  "tests/regional-windows.cjs": "f78a2d3105e6e4b17493467052ccc3f9ffd0bfa78b5f4e85d0e57adc92a5280d",
+  "tests/browser-regional-windows.cjs": "1d1278b472cc9e9887d770b853a984970f21bdabfd2a8896882910be801a4fee",
+  "qa/source-checksums.0.4.11.json": "10fd203db3a8025dc9ed978e70a82c083f4ed20ae82d0632cb151d942b9a33c0",
+  "qa/regional-windows-0.4.11-sha256.json": "f1f03b869f22588966d06686210d7916f9e146668638bf86ddaa24e21dd62a68",
+  "tests/results/regional-windows-0.4.11/evidence-sha256.json": "d96750b011bf3972031c74359229220a36cb5ef69be5c6595f597d07423792cb",
+  "tests/results/regional-windows-0.4.11-publication/REPORT.md": "7cdbc7e9aa541d1445f83ee09ecdd764e079713862274ea754959d1c8e05981a",
+  "tests/results/regional-windows-0.4.11-publication/evidence-sha256.json": "7976c3c2da4be67a5bbea26d27ad915bef95453294fcdb5a46cbd9f968711ee7",
+  "tests/results/regional-windows-0.4.11-publication/implementation-run.json": "ef812ba850f4dd92a0a9383f886950cf44b2111fa9ba10574c6731cff42b49ca",
+  "tests/results/regional-windows-0.4.11-publication/implementation-test-summary.log": "a44f18950f50cedbe7c153ea992d6107a1eb7cadb3b41cef213f89d6fb20b640"
+}
