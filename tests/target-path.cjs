@@ -48,6 +48,6 @@ test('missing clock/daily response stays excluded, while stale symbol/timeframe 
 });
 test('all pre-existing 0.4.4 calculation function bodies and legacy journal bytes remain unchanged',async()=>{
  const old=await openApp({file:'baseline/hybrid-terminal.0.4.4.html',bars:bars()}),stored=old.localStorage['hybridTerminal.journal.v1'],a=await live({localStorage:old.localStorage});const fs=require('node:fs'),names=[...fs.readFileSync('baseline/hybrid-terminal.0.4.4.html','utf8').matchAll(/^(?:async )?function (\w+)\(/gm)].map(m=>m[1]);
- for(const name of names.filter(n=>!['panel','draw','dailyLabelLayout','loadDisplayPrefs','saveDisplayPrefs','bindSystem','dailyContextHTML','updateLegend'].includes(n)))assert.equal(a.read(name+'.toString()'),old.read(name+'.toString()'),name);
+ for(const name of names.filter(n=>!['panel','draw','dailyLabelLayout','loadDisplayPrefs','saveDisplayPrefs','bindSystem','dailyContextHTML','updateLegend','chartGeometry','bindChart','endChartDrag'].includes(n)))assert.equal(a.read(name+'.toString()'),old.read(name+'.toString()'),name);
  await enable(a);a.exec('S.l.e=0;S.panelKey=null;panel()');assert.equal(a.localStorage['hybridTerminal.journal.v1'],stored);assert.deepEqual(a.read('S.sig'),old.read('S.sig'));assert.deepEqual(a.read('S.bt'),old.read('S.bt'));
 });

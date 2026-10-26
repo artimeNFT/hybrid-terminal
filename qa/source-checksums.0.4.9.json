@@ -1,0 +1,21 @@
+{
+  "hybrid-terminal.html": "043f952a58166e5bdeced32efa2d38a5857c2166b009da9eeb4898f5d745b64a",
+  "research/klines.cjs": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+  "research/SCHEMA.md": "041a8f3841ebb3859f8c1e680ddcb0a29e5ee846828372841785721f2e61a74a",
+  "baseline/hybrid-terminal.0.3.1.html": "940e951deaea0474a575a4ba859c43333aed9b5996441ab6975f22f5beba793e",
+  "baseline/hybrid-terminal.0.4.0.html": "0593c0096957d295628d267f1f3b16dd90a6478832d61bf39d2e9ed1959bc7d9",
+  "baseline/hybrid-terminal.0.4.1.html": "7ebb7bf88cc2721722b5e4d6769a6938a5b48478f03452919e50259f2512caf4",
+  "baseline/hybrid-terminal.0.4.2.html": "d91b92a0105e4c35aa8357d19ac123a2c73918cf093a7e905b1aa4941df7b6ed",
+  "baseline/hybrid-terminal.original.html": "88bbfd418aeddb437240f517173d4581badda8f45ef8100c240555efafc3d533",
+  "baseline/research-klines.1.0.0.cjs": "7200e575ba74206dc70a82cdfb7159e9d9596fc5d01e8b0c75215ce30d30d1c5",
+  "baseline/hybrid-terminal.0.4.3.html": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "research/run-frozen.cjs": "acdff58bef5d06b95ab50ba25cd2f7485772ee1876437513636c3af5f1f32004",
+  "research/source-context/preload.cjs": "a34fc16753e3138fc866e3a9929e24b9930f5000273e361dcaf80835b23614b3",
+  "research/source-context/check.cjs": "d66f15a05b8bd13cd1200dd72887798851eecfbc4d39fe7a03568cb64c201e0c",
+  "research/source-context/html-0.4.3-v1.json": "0741c6a89a8f07818d1a393c19b597c19a14c8fa8b543babe71e7909d970521e",
+  "baseline/hybrid-terminal.0.4.4.html": "f89f6f48a725d3f3e354a651b7a627e60ad7c1270105f6936b44803030f51cfa",
+  "baseline/hybrid-terminal.0.4.5.html": "ec03f24021ac71008ee8196927c2c188b98c9bf0105e89f7e25902c951f561ba",
+  "baseline/hybrid-terminal.0.4.6.html": "7c12ba003d8a03bff8322c7d9143c8bc926aa6847b62dbaf065d80b3d55e5195",
+  "baseline/hybrid-terminal.0.4.7.html": "4bafacddf8d726fc48601471c7a7fe713c2fb2038f0908264131ba864f7aa8e8",
+  "baseline/hybrid-terminal.0.4.8.html": "49267248f1808133c52e2331fa9d6f7b325be7580a71867177c5dd5d12323858"
+}

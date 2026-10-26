@@ -1,0 +1,317 @@
+
+> hybrid-terminal-qa@1.0.0 test
+> npm run check:source && npm run test:app && npm run test:research && npm run test:audit && npm run test:contract && npm run test:preparation && npm run test:presentation
+
+
+> hybrid-terminal-qa@1.0.0 check:source
+> node scripts/check-source.cjs
+
+PASS source SHA-256: hybrid-terminal.html
+PASS source SHA-256: research/klines.cjs
+PASS source SHA-256: research/SCHEMA.md
+PASS source SHA-256: baseline/hybrid-terminal.0.3.1.html
+PASS source SHA-256: baseline/hybrid-terminal.0.4.0.html
+PASS source SHA-256: baseline/hybrid-terminal.0.4.1.html
+PASS source SHA-256: baseline/hybrid-terminal.0.4.2.html
+PASS source SHA-256: baseline/hybrid-terminal.original.html
+PASS source SHA-256: baseline/research-klines.1.0.0.cjs
+PASS source SHA-256: baseline/hybrid-terminal.0.4.3.html
+PASS source SHA-256: research/run-frozen.cjs
+PASS source SHA-256: research/source-context/preload.cjs
+PASS source SHA-256: research/source-context/check.cjs
+PASS source SHA-256: research/source-context/html-0.4.3-v1.json
+PASS source SHA-256: baseline/hybrid-terminal.0.4.4.html
+PASS source SHA-256: baseline/hybrid-terminal.0.4.5.html
+PASS source SHA-256: baseline/hybrid-terminal.0.4.6.html
+PASS source SHA-256: baseline/hybrid-terminal.0.4.7.html
+PASS source SHA-256: baseline/hybrid-terminal.0.4.8.html
+Scope: tracked application/research source and required HTML baselines only; no claim about ignored delivery datasets or historical browser artifacts.
+
+> hybrid-terminal-qa@1.0.0 test:app
+> node scripts/run-qa.cjs app
+
+
+Running regression
+PASS: M replacement at pivot 97 preserves the decision at bar 93; supersession begins at 100.
+PASS: W replacement at pivot 97 preserves the decision at bar 93; supersession begins at 100.
+PASS: 4002 original/current-bar comparisons and 4185 append-only decision comparisons; 183 explicit flat-RSI unavailable cases across 15 datasets and all three score thresholds.
+PASS: complete event history reproduces every original prefix pattern set; backtest outputs are finite.
+Scope: synthetic completed candles with a fixed history origin. Live candle closure, rolling-window reseeding, feed isolation and market performance are not validated here.
+
+Running ui-smoke
+PASS: application startup, closed-candle panel, REST/WebSocket flow, canvas draw calls, M/W confirmation/supersession, help, layer toggle and report copy.
+Scope: DOM, canvas and network are test doubles; not full browser QA.
+
+Running live-chart
+PASS: 20 developing-candle changes leave confirmed signal, recovery statistics and backtest unchanged; confirmation occurs only on x=true; confirmed bars cannot be downgraded.
+PASS: real setup fixture emits no provisional alert, emits one close alert, suppresses duplicate closes and agrees with completed-candle replay.
+PASS: missing server time conservatively leaves the final REST candle provisional, independent of the local wall clock.
+PASS: an older BTC response cannot overwrite ETH; cache identity changes with the asset; mismatched stream symbols are ignored.
+PASS: higher-timeframe context refreshes on its close boundary using closed candles; a stream gap starts a guarded REST resynchronization.
+PASS: right margin, cursor-anchored zoom, full loaded-history navigation, clamped future pan, End/Home controls, consistent drag width, stable historical view on new candles, price scale reset, future crosshair and timezone selection.
+Scope: deterministic/mocked data and DOM/canvas test doubles. Live exchange connectivity and full browser layout remain separate checks.
+
+Running readability-reliability
+PASS: all three palettes meet >=3:1 against modeled chart backgrounds (minimum 5.05:1); default bodies are filled, own-bar direction is stable across volume classes, legacy settings migrate, display choices preserve decisions, and chart/header text is English.
+PASS: delayed/stale and offline feeds are visibly identified; returning to a stale tab resynchronizes; a hanging REST request reaches an explicit timeout error.
+PASS: journal captures closed decisions only, deduplicates, survives reload, exports, preserves a prior conflicting decision, reports unavailable storage, protects malformed stored data, and enforces explicit 1000-record retention.
+PASS: an offline confirmed setup cannot emit a notification; invalid account/risk inputs do not produce a position size.
+Scope: synthetic data and mocked DOM/network; contrast tests are not a claim of full WCAG conformance or human color-perception validation.
+
+Running history
+PASS: five dated pages add 5000 chart-only candles, enforce the cap and preserve all live-core bars, confirmed signal, statistics, backtest and journal snapshots; live appends retain the historical viewport.
+PASS: short history pages stop further loading; discontinuous history is rejected without touching live decisions; obsolete history responses cannot cross an asset switch.
+Scope: older data is for chart navigation. It does not extend research/backtest coverage or reseed the live decision engine.
+
+Running increment
+PASS: 54 palette/body/class/direction cases, neutral doji, own OHLC despite conflicting cached direction, v1/v2 preferences, unrelated view fields and byte-identical journal across appearance changes.
+PASS: displayed RSI reuses the original RSI14 array, hides seed/warm-up, follows selected candle/pan/zoom/crosshair, marks developing values provisional, preserves closed signals/backtest/journal and retains Volume/None choices.
+PASS: pivot 110/90/100 arithmetic, UTC boundaries/timezone invariance, separate complete daily source, missing/incomplete source rejection, stable history, <=1000-day pagination and obsolete symbol/timeframe/range response rejection.
+PASS: real baseline reproduces both optimistic gap fills; new long/short gross -2.5R and net -2.55R, ordinary ambiguous bars stop first, invalid gap entries skipped, explicit execution version, old journal records preserved.
+Scope: deterministic synthetic data and mocked DOM/network; browser/live-feed evidence is reported separately.
+
+Running integrity
+PASS: empty/all-zero/no-loss/all-loss/mixed net-R states agree in actual UI, copied report and serialized research export; known Wilson reference, ratio overflow and invalid outcomes; actual backtest no-loss/empty aggregation.
+PASS: reviewed 1000/1%/100/99.9 sizing, nominal 100 units/10000 notional/10x, explicit cash scenario and balance, insufficient/covered-before-costs/SHORT/unconfigured/invalid/overflow states; no feasible/executable quantity or venue approval invented.
+PASS: review tie fixture exposes eligible LONG but deliberately retains selected SHORT/WAIT; no fallback or threshold tuning, clear conflict reason and frozen confirmed versus provisional diagnostics.
+PASS: flat zero-volume has no vectors, zero ATR and undefined RSI are non-actionable, warm-up/invalid arithmetic/overflow are explicit, one-sided RSI remains 100, zero-product references are not strength and partial-day coverage is labeled without replacing VWAP.
+PASS: 6882 ordinary valid-input decisions exactly match actual 0.4.0 legacy fields, plans, items, thresholds and direction policy across 14 datasets; volume classes unchanged.
+PASS: prior journal record bytes/IDs/versions retained, new semantics identified separately, execution version/fees retained, sizing/appearance/export leave journal bytes unchanged and preference migration retains unrelated fields.
+Scope: synthetic fixtures and mocked DOM/network, distinct from real browser/live-close evidence.
+
+Running day-context
+PASS: known/distinct PDH/PDL periods, [from,to) boundaries, independent toggles and cache reuse, preserved preferences, historical chart versus frozen current context, no autoscale distortion and unchanged signal/backtest/journal bytes.
+PASS: exact nearest above/below/equal grouping, missing sides, finite positive price/ATR denominators and deterministic merged/overflow label placement.
+PASS: incomplete/truncated/invalid/duplicate/out-of-order/failed/missing daily source and missing trusted clock stay unavailable; failures use bounded retry instead of update-driven request floods.
+PASS: exact midnight close advances context before the next opening-bar update, delayed sources are unknown until validated, trusted clock lag is conservative, and late completion/provisional updates preserve frozen decisions/backtest/journal.
+PASS: one shared in-flight/cache path, independent layer rendering, all-off/reenable guards, obsolete asset/timeframe/range rejection and <=1000-day missing-range pagination.
+PASS: exact 0.4.1 signal/backtest/journal upgrade preservation, unchanged rule/execution versions, no context-induced journal write, and IANA Jerusalem DST-aware observation labels.
+Scope: deterministic synthetic/mocked data and DOM; no claim of an observed live UTC-midnight transition or long-session soak.
+
+Running navigation
+PASS: 80px vertical, same-gesture reversal and diagonal translation use drag-start bounds with constant span, correct time movement and unchanged market/indicator/signal/backtest/journal state.
+PASS: click/jitter and near-horizontal thresholds, Volume/RSI origin isolation, secondary-pointer isolation, cancel and lost-capture cleanup.
+PASS: axis scaling/time zoom, focused vertical keyboard controls and frozen drag-start geometry across resize.
+PASS: manual position survives provisional and confirmed stream updates; engine/journal match untouched control and 0.4.2 upgrade bytes. Live/Auto scale/Reset and invalid/empty/zero-size guards verified.
+PASS app: 9 suites
+
+> hybrid-terminal-qa@1.0.0 test:research
+> node scripts/run-qa.cjs research
+
+
+Running research-data
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+✔ UTC configuration/alignment and exact twelve-field decimal validation (3.314434ms)
+✔ bounded pagination: 1000/200 rows, endTime exclusive conversion, offline process and no overwrite (240.384896ms)
+✔ short pages continue, empty windows advance and explicitly report gaps (312.903464ms)
+✔ developing candle exclusion uses fixed trusted cutoff and UTC boundaries (73.99171ms)
+✔ duplicates/conflicts/order/gaps and exact precision remain visible to offline quality (2.318547ms)
+✔ bad/duplicate/backward pages stop; raw rejected rows survive without a frozen output (244.534376ms)
+✔ hashes exclude metadata, preserve raw decimal text and detect changed/tampered data/quality/schema (187.702731ms)
+✔ 429 Retry-After and 5xx retries obey bounded waits; 418 stops immediately (266.203425ms)
+✔ request timeouts and cancellation/resumption preserve pages, cutoff and configuration (252.957645ms)
+✔ offline CLI detects edited files and original app remains untouched (98.436666ms)
+✔ checkpoint tampering and concurrent writer locks cannot resume or overwrite work (60.153946ms)
+✔ actual compare/invalid-quality CLI exit codes and absent trusted server clock (218.209142ms)
+✔ external finding reproduces on reviewed 1.0.0 and reopened dataset is rejected by 1.0.1 (102.57091ms)
+✔ invalid timeframe input fails before any filesystem/network call, without coercion, including resume (1.911594ms)
+✔ canonical/quality/verify/comparison reject forged timeframe payloads even with recomputed hashes for both producers (381.43646ms)
+✔ all four timeframes retain valid 1.0.0 hashes/quality, and empty ranges of data are finite incomplete states (4.901676ms)
+✔ valid cancelled 1.0.0 checkpoint resumes as 1.0.1 with identical rows/hash and original cutoff (202.272393ms)
+✔ malformed checksummed checkpoints from either producer reject stored timeframe before network and retain original bytes (322.390568ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3053.809851
+PASS research: 1 suites
+
+> hybrid-terminal-qa@1.0.0 test:audit
+> node scripts/run-qa.cjs audit
+
+
+Running readiness-audit
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+✔ adapter uses hash-checked actual functions without bootstrap/storage/backtest and target capture preserves decisions (104.677399ms)
+✔ same timestamps, not local array indices, align finite volume/UTC metrics and eligible zone identities (55.198339ms)
+✔ UTC boundaries distinguish a midnight close from a new-day opening candle and partial-day origins (38.126345ms)
+✔ known recursive-origin sensitivity separates minimum availability, flat-RSI state and context-only EMA800 (251.516823ms)
+✔ short history loses eligible old targets without a future leak (64.320074ms)
+✔ M/W confirmation and future supersession are projected as known at t, not raw future caches (37.982339ms)
+✔ causality detector flags deliberately altered votes/values, separately from seed drift (43.11316ms)
+✔ compact generated synthetic audit covers every window, fixed-origin future checks, and bounded sampling (1627.969455ms)
+✔ the real-data command validates CLI schema/hash before analysis and never accepts fabricated input (1.088465ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2332.330312
+PASS audit: 1 suites
+
+> hybrid-terminal-qa@1.0.0 test:contract
+> node scripts/run-qa.cjs contract
+
+
+Running calculation-contract
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+✔ contract pins reviewed sources without reading acquired data or bootstrapping the app (5.909574ms)
+✔ 3999 is excluded and the full-origin 4000th candle is the first prepared decision (458.455272ms)
+✔ a warmed trailing window cannot impersonate fixed-origin history or retained parser state (335.021247ms)
+✔ UTC end coordinates allow the last closed candle but reject future or inconsistent coordinates (135.48532ms)
+✔ actual flat-RSI, zero-volume and zero-ATR inputs remain excluded after preparation (565.610515ms)
+✔ a valid WAIT is retained and readiness does not mutate decisions or add context score votes (170.67043ms)
+✔ exact budgets detect price, RSI, RR and state changes smaller than audit reporting tolerances (129.206916ms)
+✔ full-origin restart reproduces M/W with pivots older than a recent-event reporting window (81.786512ms)
+✔ future append parity is exact and cannot be mixed with changed-time comparisons (401.985287ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2421.114526
+PASS contract: 1 suites
+
+> hybrid-terminal-qa@1.0.0 test:preparation
+> node scripts/run-qa.cjs preparation
+
+
+Running preparation
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+[frozen research] hybrid-html-0.4.3-context-v1: hybrid-terminal.html -> baseline/hybrid-terminal.0.4.3.html (fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9)
+✔ real classification precedence, equality, reference availability and doji direction are preserved (76.752486ms)
+✔ ordinary/vector recovery symmetry, strict outside geometry and inclusive equality boundaries (0.540736ms)
+✔ first eligibility precedes tail/chronology exclusions and cannot resurrect in a later block (0.761114ms)
+✔ ATR percentile excludes t, uses empirical midrank, and calendar features use the close (0.28213ms)
+✔ memoized actual reference values equal uncached full replay and the reviewed adapter, including replay backwards (650.910965ms)
+✔ all eligible arms get decision-time plans/ranks without score/action filtering and future changes cannot affect them (106.153913ms)
+✔ one greedy attempt obeys exact strata, all calipers, no replacement and deterministic ties (1.665855ms)
+✔ unmatched reasons distinguish absent strata, time/caliper support, missing values and exhaustion (0.291615ms)
+✔ SMD keeps the pre-match denominator, flags equality at 0.1 and exposes missing/zero/insufficient states (4.97848ms)
+✔ overlap and full reserved UTC day spans use coordinates, not future prices (1.004187ms)
+✔ restart/full-prefix worker sharding reproduces canonical episodes, decisions and matching (275.64061ms)
+✔ protocol seal, reopened canonical hashes and volatile metadata stay separate; incomplete runs fail (10.019161ms)
+✔ preparation calculations run without network, browser storage, application bootstrap or backtest capabilities (53.934313ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1354.332018
+PASS preparation: 1 suites
+
+> hybrid-terminal-qa@1.0.0 test:presentation
+> node scripts/run-qa.cjs presentation
+
+
+Running presentation
+✔ frozen reference is exact, explicit context verifies old sources, and unbound research rejects the active UI (234.312099ms)
+✔ all existing nonpresentation functions remain source-identical to frozen 0.4.3 (97.979275ms)
+✔ synthetic calculation/decision/backtest behavior matches 0.4.3 across thresholds and degenerate inputs (755.713779ms)
+✔ presentation risk uses confirmed coordinates, independent ATR availability and guarded arithmetic (21.150118ms)
+✔ upgrade preserves old journal bytes/identities and display/sizing preferences (33.269309ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1218.850999
+
+Running target-path
+✔ directional geometry sorts LONG/SHORT, groups exact equality, keeps rounded-near prices distinct and excludes endpoints (118.576583ms)
+✔ invalid geometry and levels stay unavailable; invalid denominators affect only their own distance metrics (91.258043ms)
+✔ confirmed sources obey independent layers, full UTC coverage, availability and validated daily identity without changing decisions (92.34285ms)
+✔ anchor and distances remain confirmed through provisional ticks, pointer/view/history changes; WAIT and mismatched entries have no substitute (136.378653ms)
+✔ missing clock/daily response stays excluded, while stale symbol/timeframe responses cannot publish path sources (485.971563ms)
+✔ all pre-existing 0.4.4 calculation function bodies and legacy journal bytes remain unchanged (174.595399ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1168.926266
+
+Running provenance-readability
+✔ exact participating closed count/origin/decision time exclude provisional bars and advance only at confirmation (209.43743ms)
+✔ actual chart-only history load leaves decision-window coordinates, computations and journal unchanged (135.613448ms)
+✔ pending symbol/timeframe transitions clear old provenance and reject obsolete main-data responses (84.19881ms)
+✔ Full retains every original M/W annotation; Focus selects only latest active confirmed M/W without changing other rendering or engine (131.580513ms)
+✔ annotation preference restores independently and preserves legacy preferences, unknown fields and journal bytes (170.162514ms)
+✔ concise daily/nearest labels keep every exact price and deliberate inspection without snapping or rounded-value merging (90.483113ms)
+✔ all nonpresentation 0.4.5 function bodies and rule/execution/indicator policies remain identical (116.770708ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1008.98314
+
+Running planning-costs
+✔ LONG/SHORT zero-cost identities and total 10-bps baseline arithmetic are symmetric (120.35329ms)
+✔ opening-gap shock uses stop notional, moves adversely on each side and affects only stressed stop R (70.315686ms)
+✔ nonfinite/negative/excessive/coercible assumptions and invalid directional geometry produce no numeric R (79.844024ms)
+✔ confirmed anchor survives provisional/view changes and assumptions never mutate decisions, baseline risk, sizing or journal (123.481143ms)
+✔ separate assumptions restore without changing old preferences or journal, including explicit recovery from malformed saved input (436.101246ms)
+✔ invalid typing clears previous output and quota-style scenario storage failure stays session-only (61.321105ms)
+✔ every nonpresentation 0.4.6 function except panel/legend and all rule/execution/RSI identities remain exact (145.28587ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1117.612076
+
+Running readability-help
+✔ paired Help facts cover actual policies in both languages and isolate readable formulas (67.751403ms)
+✔ language and internal navigation keep Help open; only explicit close/backdrop/Escape close and restore focus/background (29.096497ms)
+✔ Hebrew fresh default never writes; isolated language restores and preserves unrelated preferences and old journal bytes (85.539379ms)
+✔ malformed or unsupported saved language falls back without clearing bytes; storage read/write failures remain session-only (215.828963ms)
+✔ palette option values/colors/defaults/body/tags and all existing calculation behavior match 0.4.7 (390.342456ms)
+✔ existing countdown and partial-day Daily Open are retained as original draw/calculation behavior (44.312567ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 911.860858
+
+Running volume-legend
+✔ fresh volume view preserves 0.4.8 default heights, price geometry, bar height and does not write preferences (428.914186ms)
+✔ actual captured divider events use drag-start geometry, enforce pane limits and leave all market state unchanged (123.003199ms)
+✔ volume-axis drag scales a nonnegative linear range from visible zero; reversal, clipping, wheel/auto/reset are independent of price (69.293819ms)
+✔ Volume/RSI/None transitions preserve the RSI scale/legacy geometry, shared horizontal mapping and stored volume settings (159.691617ms)
+✔ isolated view settings restore with viewport bounds; malformed/unsupported values never clear old storage or journal (824.530148ms)
+✔ invalid settings and storage failures remain guarded/session-only, without touching calculation/journal/preference keys (232.35686ms)
+✔ responsive indicator layout keeps all six exact names in bounds, preserves desktop spacing and guards label collisions (61.400803ms)
+✔ only five chart-view functions change from exact 0.4.8; Help typo/QA wording fixed and bilingual controls documented (169.60553ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2158.907506
+PASS presentation: 6 suites

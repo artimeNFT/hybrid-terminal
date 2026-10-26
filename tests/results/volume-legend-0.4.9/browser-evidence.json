@@ -1,0 +1,340 @@
+{
+  "applicationVersion": "0.4.9",
+  "sourceSha256": "043f952a58166e5bdeced32efa2d38a5857c2166b009da9eeb4898f5d745b64a",
+  "checks": [
+    {
+      "width": 1440,
+      "initialGeometry": {
+        "W": 1054,
+        "H": 913,
+        "pw": 968,
+        "ph": 674.14,
+        "vh": 200.86,
+        "cw": 6.453333333333333
+      },
+      "resizedGeometry": {
+        "W": 1054,
+        "H": 913,
+        "pw": 968,
+        "ph": 594.14,
+        "vh": 280.86,
+        "cw": 6.453333333333333
+      },
+      "zeroVisible": true,
+      "linearNonnegative": true,
+      "clippedCapRaster": true,
+      "sharedPanPixels": -32,
+      "keyboardControls": true,
+      "paneTransitions": true,
+      "restoresSettings": true,
+      "engineJournalUnchanged": true,
+      "legend": [
+        {
+          "name": "EMA13",
+          "color": "#ff6b6b",
+          "x": 12,
+          "y": 55,
+          "width": 34.51171875,
+          "height": 10,
+          "coloredPixels": 50
+        },
+        {
+          "name": "EMA50",
+          "color": "#b28af9",
+          "x": 78,
+          "y": 55,
+          "width": 34.51171875,
+          "height": 10,
+          "coloredPixels": 59
+        },
+        {
+          "name": "EMA200",
+          "color": "#e5e7eb",
+          "x": 144,
+          "y": 55,
+          "width": 40.8740234375,
+          "height": 10,
+          "coloredPixels": 82
+        },
+        {
+          "name": "EMA800",
+          "color": "#f5c84c",
+          "x": 210,
+          "y": 55,
+          "width": 40.8740234375,
+          "height": 10,
+          "coloredPixels": 67
+        },
+        {
+          "name": "VWAP",
+          "color": "#38bdf8",
+          "x": 276,
+          "y": 55,
+          "width": 29.052734375,
+          "height": 10,
+          "coloredPixels": 45
+        },
+        {
+          "name": "DO*",
+          "color": "#94a3b8",
+          "x": 342,
+          "y": 55,
+          "width": 20.5712890625,
+          "height": 10,
+          "coloredPixels": 36
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "initialGeometry": {
+        "W": 430,
+        "H": 280,
+        "pw": 344,
+        "ph": 178,
+        "vh": 64,
+        "cw": 2.2933333333333334
+      },
+      "resizedGeometry": {
+        "W": 430,
+        "H": 280,
+        "pw": 344,
+        "ph": 160,
+        "vh": 82,
+        "cw": 2.2933333333333334
+      },
+      "zeroVisible": true,
+      "linearNonnegative": true,
+      "clippedCapRaster": true,
+      "sharedPanPixels": -32,
+      "keyboardControls": true,
+      "paneTransitions": true,
+      "restoresSettings": true,
+      "engineJournalUnchanged": true,
+      "legend": [
+        {
+          "name": "EMA13",
+          "color": "#ff6b6b",
+          "x": 12,
+          "y": 55,
+          "width": 34.51171875,
+          "height": 10,
+          "coloredPixels": 51
+        },
+        {
+          "name": "EMA50",
+          "color": "#b28af9",
+          "x": 54.51171875,
+          "y": 55,
+          "width": 34.51171875,
+          "height": 10,
+          "coloredPixels": 47
+        },
+        {
+          "name": "EMA200",
+          "color": "#e5e7eb",
+          "x": 97.0234375,
+          "y": 55,
+          "width": 40.8740234375,
+          "height": 10,
+          "coloredPixels": 82
+        },
+        {
+          "name": "EMA800",
+          "color": "#f5c84c",
+          "x": 145.8974609375,
+          "y": 55,
+          "width": 40.8740234375,
+          "height": 10,
+          "coloredPixels": 67
+        },
+        {
+          "name": "VWAP",
+          "color": "#38bdf8",
+          "x": 194.771484375,
+          "y": 55,
+          "width": 29.052734375,
+          "height": 10,
+          "coloredPixels": 38
+        },
+        {
+          "name": "DO*",
+          "color": "#94a3b8",
+          "x": 231.82421875,
+          "y": 55,
+          "width": 20.5712890625,
+          "height": 10,
+          "coloredPixels": 36
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "initialGeometry": {
+        "W": 390,
+        "H": 280,
+        "pw": 304,
+        "ph": 178,
+        "vh": 64,
+        "cw": 2.026666666666667
+      },
+      "resizedGeometry": {
+        "W": 390,
+        "H": 280,
+        "pw": 304,
+        "ph": 160,
+        "vh": 82,
+        "cw": 2.026666666666667
+      },
+      "zeroVisible": true,
+      "linearNonnegative": true,
+      "clippedCapRaster": true,
+      "sharedPanPixels": -32,
+      "keyboardControls": true,
+      "paneTransitions": true,
+      "restoresSettings": true,
+      "engineJournalUnchanged": true,
+      "legend": [
+        {
+          "name": "EMA13",
+          "color": "#ff6b6b",
+          "x": 12,
+          "y": 55,
+          "width": 34.51171875,
+          "height": 10,
+          "coloredPixels": 51
+        },
+        {
+          "name": "EMA50",
+          "color": "#b28af9",
+          "x": 54.51171875,
+          "y": 55,
+          "width": 34.51171875,
+          "height": 10,
+          "coloredPixels": 47
+        },
+        {
+          "name": "EMA200",
+          "color": "#e5e7eb",
+          "x": 97.0234375,
+          "y": 55,
+          "width": 40.8740234375,
+          "height": 10,
+          "coloredPixels": 83
+        },
+        {
+          "name": "EMA800",
+          "color": "#f5c84c",
+          "x": 145.8974609375,
+          "y": 55,
+          "width": 40.8740234375,
+          "height": 10,
+          "coloredPixels": 69
+        },
+        {
+          "name": "VWAP",
+          "color": "#38bdf8",
+          "x": 194.771484375,
+          "y": 55,
+          "width": 29.052734375,
+          "height": 10,
+          "coloredPixels": 38
+        },
+        {
+          "name": "DO*",
+          "color": "#94a3b8",
+          "x": 231.82421875,
+          "y": 55,
+          "width": 20.5712890625,
+          "height": 10,
+          "coloredPixels": 36
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "initialGeometry": {
+        "W": 320,
+        "H": 280,
+        "pw": 234,
+        "ph": 178,
+        "vh": 64,
+        "cw": 1.56
+      },
+      "resizedGeometry": {
+        "W": 320,
+        "H": 280,
+        "pw": 234,
+        "ph": 160,
+        "vh": 82,
+        "cw": 1.56
+      },
+      "zeroVisible": true,
+      "linearNonnegative": true,
+      "clippedCapRaster": true,
+      "sharedPanPixels": -32,
+      "keyboardControls": true,
+      "paneTransitions": true,
+      "restoresSettings": true,
+      "engineJournalUnchanged": true,
+      "legend": [
+        {
+          "name": "EMA13",
+          "color": "#ff6b6b",
+          "x": 12,
+          "y": 55,
+          "width": 34.51171875,
+          "height": 10,
+          "coloredPixels": 50
+        },
+        {
+          "name": "EMA50",
+          "color": "#b28af9",
+          "x": 54.51171875,
+          "y": 55,
+          "width": 34.51171875,
+          "height": 10,
+          "coloredPixels": 47
+        },
+        {
+          "name": "EMA200",
+          "color": "#e5e7eb",
+          "x": 97.0234375,
+          "y": 55,
+          "width": 40.8740234375,
+          "height": 10,
+          "coloredPixels": 82
+        },
+        {
+          "name": "EMA800",
+          "color": "#f5c84c",
+          "x": 145.8974609375,
+          "y": 55,
+          "width": 40.8740234375,
+          "height": 10,
+          "coloredPixels": 68
+        },
+        {
+          "name": "VWAP",
+          "color": "#38bdf8",
+          "x": 194.771484375,
+          "y": 55,
+          "width": 29.052734375,
+          "height": 10,
+          "coloredPixels": 38
+        },
+        {
+          "name": "DO*",
+          "color": "#94a3b8",
+          "x": 12,
+          "y": 68,
+          "width": 20.5712890625,
+          "height": 10,
+          "coloredPixels": 36
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Chromium mouse, keyboard and touch-emulated interactions with synthetic feed. Isolated successor candidate only; not physical-touch, live-soak or midnight acceptance."
+}

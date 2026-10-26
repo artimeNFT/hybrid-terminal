@@ -1,0 +1,16 @@
+{
+  "fullLocalBrowserSourceSha256": "528d9c507df6b22921b8dc8a726028c4f84d8831fe7d2c92349f34c6dbfa7f66",
+  "finalFocusedBrowserSourceSha256": "043f952a58166e5bdeced32efa2d38a5857c2166b009da9eeb4898f5d745b64a",
+  "finalFocusedUnitCases": 14,
+  "newVolumeCases": 8,
+  "localSuiteCounts": {
+    "app": 9,
+    "research": 1,
+    "audit": 1,
+    "contract": 1,
+    "preparation": 1,
+    "presentation": 6,
+    "browser": 11
+  },
+  "note": "Full local groups passed before final Help-only 0–100 LTR markup. Source check plus both focused unit files and all new browser width/Help checks reran on final source. Exact published-candidate CI verifies all required groups."
+}

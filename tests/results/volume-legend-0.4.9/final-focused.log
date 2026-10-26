@@ -1,0 +1,22 @@
+✔ paired Help facts cover actual policies in both languages and isolate readable formulas (96.035375ms)
+✔ language and internal navigation keep Help open; only explicit close/backdrop/Escape close and restore focus/background (29.126ms)
+✔ Hebrew fresh default never writes; isolated language restores and preserves unrelated preferences and old journal bytes (83.19916ms)
+✔ malformed or unsupported saved language falls back without clearing bytes; storage read/write failures remain session-only (290.16691ms)
+✔ palette option values/colors/defaults/body/tags and all existing calculation behavior match 0.4.7 (408.123006ms)
+✔ existing countdown and partial-day Daily Open are retained as original draw/calculation behavior (79.064233ms)
+✔ fresh volume view preserves 0.4.8 default heights, price geometry, bar height and does not write preferences (558.598808ms)
+✔ actual captured divider events use drag-start geometry, enforce pane limits and leave all market state unchanged (208.43684ms)
+✔ volume-axis drag scales a nonnegative linear range from visible zero; reversal, clipping, wheel/auto/reset are independent of price (111.017673ms)
+✔ Volume/RSI/None transitions preserve the RSI scale/legacy geometry, shared horizontal mapping and stored volume settings (178.079293ms)
+✔ isolated view settings restore with viewport bounds; malformed/unsupported values never clear old storage or journal (833.952971ms)
+✔ invalid settings and storage failures remain guarded/session-only, without touching calculation/journal/preference keys (239.278486ms)
+✔ responsive indicator layout keeps all six exact names in bounds, preserves desktop spacing and guards label collisions (56.825027ms)
+✔ only five chart-view functions change from exact 0.4.8; Help typo/QA wording fixed and bilingual controls documented (119.802775ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2409.265099

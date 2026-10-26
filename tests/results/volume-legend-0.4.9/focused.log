@@ -1,0 +1,16 @@
+✔ fresh volume view preserves 0.4.8 default heights, price geometry, bar height and does not write preferences (428.914186ms)
+✔ actual captured divider events use drag-start geometry, enforce pane limits and leave all market state unchanged (123.003199ms)
+✔ volume-axis drag scales a nonnegative linear range from visible zero; reversal, clipping, wheel/auto/reset are independent of price (69.293819ms)
+✔ Volume/RSI/None transitions preserve the RSI scale/legacy geometry, shared horizontal mapping and stored volume settings (159.691617ms)
+✔ isolated view settings restore with viewport bounds; malformed/unsupported values never clear old storage or journal (824.530148ms)
+✔ invalid settings and storage failures remain guarded/session-only, without touching calculation/journal/preference keys (232.35686ms)
+✔ responsive indicator layout keeps all six exact names in bounds, preserves desktop spacing and guards label collisions (61.400803ms)
+✔ only five chart-view functions change from exact 0.4.8; Help typo/QA wording fixed and bilingual controls documented (169.60553ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2158.907506

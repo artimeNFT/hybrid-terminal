@@ -11,3 +11,5 @@ The only active user application is **`../hybrid-terminal.html`**. HTML files in
 `hybrid-terminal.0.4.6.html` preserves exact pre-planning-cost 0.4.6 source, SHA-256 `7c12ba003d8a03bff8322c7d9143c8bc926aa6847b62dbaf065d80b3d55e5195`, as an internal historical reference only.
 
 `hybrid-terminal.0.4.7.html` is the exact internal pre-edit 0.4.7 reference, SHA-256 `4bafacddf8d726fc48601471c7a7fe713c2fb2038f0908264131ba864f7aa8e8`. It is not another active user app. The isolated 0.4.8 Help candidate is not integrated into the authoritative 0.4.7 root.
+
+`hybrid-terminal.0.4.8.html` preserves exact predecessor candidate `30432aba73c3b6a5112999f2d0448e9835dfdeaa`, SHA-256 `49267248f1808133c52e2331fa9d6f7b325be7580a71867177c5dd5d12323858`. It is an internal reference. Successor 0.4.9 and predecessor 0.4.8 remain unmerged; authoritative root remains 0.4.7.

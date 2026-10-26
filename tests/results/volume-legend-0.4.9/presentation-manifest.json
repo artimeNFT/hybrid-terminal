@@ -1,0 +1,39 @@
+{
+  "group": "presentation",
+  "node": "v24.15.0",
+  "startedAt": "2026-10-26T00:40:33.745Z",
+  "scope": "Synthetic/mocked QA only; no acquired datasets or public market access",
+  "checks": [
+    {
+      "suite": "presentation",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "target-path",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "provenance-readability",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "planning-costs",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "readability-help",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "volume-legend",
+      "exitCode": 0,
+      "signal": null
+    }
+  ],
+  "finishedAt": "2026-10-26T00:40:41.592Z"
+}
