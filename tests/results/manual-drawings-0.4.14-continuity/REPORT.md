@@ -1,0 +1,5 @@
+# Continuity documentation reconciliation
+
+Implementation7766404985a80a6c7d79890e38905cf1f01f51d1 was already committed when the final safe fetch found newer legitimate main98d3f12614b933009f5c80272600296b4a1c747d. Clean authoritative main fast-forwarded to that documentation checkpoint. The same implementing worktree read START_HERE and merged origin/main without rewriting either history. README retained both its new continuity entry point and the current0.4.14 operation/source description; STATUS retained the full new continuity note and the single current manual-drawing task. START_HERE is byte-identical to98d3f12. No duplicate implementation, application/test/workflow/dependency change or repeat local suite. Exact final-source tests/evidence remain those of7766404; exact merged-main CI is checked after publication.
+
+The original qa/manual-drawings-0.4.14-sha256.json remains historical at7766404. New continuity binding records new README/STATUS/START_HERE identities honestly. Prior historical archive, accepted user reload section, frozen evidence/datasets and original observation inputs remain unchanged. No additional feature or observation.
