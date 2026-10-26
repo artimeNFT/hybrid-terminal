@@ -1,0 +1,210 @@
+{
+  "artifactSha256": "5075f23685fb2d9c10d3a0668da66f7fb401fe0f7b85dad0155beed2bfc32e57",
+  "artifactBytes": 206413873,
+  "manualTraceSha256": "49f6b2ba20adcb2adeea87027628151777d2f2a0aa4d90000c432d150f28a1aa",
+  "traceCrcVerified": true,
+  "context": "320px",
+  "failure": {
+    "type": "after",
+    "callId": "nztq@1440",
+    "endTime": 10650.44,
+    "error": {
+      "message": "Error: Native endpoint differs from stored epoch/price {\"actual\":[[\"moveTo\",70.98,88.53997802734382],[\"lineTo\",180.18,147.2800292968751]],\"expected\":[{\"x\":55.38,\"y\":76.53997802734376},{\"x\":164.58,\"y\":135.28002929687503}]}\n    at eval (eval at evaluate (:370:30), <anonymous>:4:351)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "stack": "Error: Error: Native endpoint differs from stored epoch/price {\"actual\":[[\"moveTo\",70.98,88.53997802734382],[\"lineTo\",180.18,147.2800292968751]],\"expected\":[{\"x\":55.38,\"y\":76.53997802734376},{\"x\":164.58,\"y\":135.28002929687503}]}\n    at eval (eval at evaluate (:370:30), <anonymous>:4:351)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at CRExecutionContext.evaluateWithArguments (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:36974:17)\n    at async LongStandingScope._race (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:3619:18)\n    at async evaluateExpression (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:20623:12)\n    at async _Frame._evaluateExpression (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:25000:24)\n    at async _Frame.evaluateExpression (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:24996:16)\n    at async _FrameDispatcher.evaluateExpression (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:56171:41)\n    at async _ProgressController.run (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:13018:27)\n    at async DispatcherConnection.dispatch (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:20191:27)",
+      "name": "Error"
+    }
+  },
+  "precedingCalls": [
+    {
+      "type": "before",
+      "callId": "nztq@1430",
+      "startTime": 10559.065,
+      "class": "Frame",
+      "method": "waitForTimeout",
+      "params": {
+        "waitTimeout": 30
+      }
+    },
+    {
+      "type": "after",
+      "callId": "nztq@1430",
+      "endTime": 10591.473
+    },
+    {
+      "type": "before",
+      "callId": "nztq@1432",
+      "startTime": 10593.734,
+      "class": "Frame",
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "()=>JSON.parse(JSON.stringify(manualLines()))",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      }
+    },
+    {
+      "type": "after",
+      "callId": "nztq@1432",
+      "endTime": 10595.614,
+      "result": {
+        "value": {
+          "a": [
+            {
+              "o": [
+                {
+                  "k": "id",
+                  "v": {
+                    "n": 1
+                  }
+                },
+                {
+                  "k": "a",
+                  "v": {
+                    "o": [
+                      {
+                        "k": "t",
+                        "v": {
+                          "n": 1792989900000
+                        }
+                      },
+                      {
+                        "k": "p",
+                        "v": {
+                          "n": 100.02966202825077
+                        }
+                      }
+                    ],
+                    "id": 3
+                  }
+                },
+                {
+                  "k": "b",
+                  "v": {
+                    "o": [
+                      {
+                        "k": "t",
+                        "v": {
+                          "n": 1793010900000
+                        }
+                      },
+                      {
+                        "k": "p",
+                        "v": {
+                          "n": 96.13655611424304
+                        }
+                      }
+                    ],
+                    "id": 4
+                  }
+                }
+              ],
+              "id": 2
+            }
+          ],
+          "id": 1
+        }
+      }
+    },
+    {
+      "type": "before",
+      "callId": "nztq@1434",
+      "startTime": 10597.017,
+      "class": "Frame",
+      "method": "click",
+      "params": {
+        "selector": "#drawundo",
+        "strict": true,
+        "timeout": 30000
+      }
+    },
+    {
+      "type": "after",
+      "callId": "nztq@1434",
+      "endTime": 10639.491
+    },
+    {
+      "type": "before",
+      "callId": "nztq@1436",
+      "startTime": 10641.318,
+      "class": "Frame",
+      "method": "waitForFunction",
+      "params": {
+        "expression": "()=>{const m=S.chartMetrics,g=chartGeometry();return m&&m.manual&&m.W===g.W&&m.H===g.H&&m.start===viewStart()&&m.ph===g.ph&&m.lo===visiblePrices(g)[0]&&m.hi===visiblePrices(g)[1]&&M.key===S.sym+':'+S.tf}",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 30000
+      }
+    },
+    {
+      "type": "after",
+      "callId": "nztq@1436",
+      "endTime": 10643.465,
+      "result": {
+        "handle": "<JSHandle>"
+      }
+    },
+    {
+      "type": "before",
+      "callId": "nztq@1438",
+      "startTime": 10644.929,
+      "class": "Frame",
+      "method": "waitForFunction",
+      "params": {
+        "expression": "()=>{const m=S.chartMetrics,g=chartGeometry();return m&&m.manual&&m.W===g.W&&m.H===g.H&&m.start===viewStart()&&m.ph===g.ph&&m.lo===visiblePrices(g)[0]&&m.hi===visiblePrices(g)[1]&&M.key===S.sym+':'+S.tf}",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 30000
+      }
+    },
+    {
+      "type": "after",
+      "callId": "nztq@1438",
+      "endTime": 10646.961,
+      "result": {
+        "handle": "<JSHandle>"
+      }
+    },
+    {
+      "type": "before",
+      "callId": "nztq@1440",
+      "startTime": 10648.289,
+      "class": "Frame",
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "()=>{\n const m=S.chartMetrics,k=chartBars(),step=TFMS[S.tf],paint=window.__manualStrokes.filter(s=>s.color==='#a9e4ff').at(-1),l=manualLines().find(l=>l.id===M.selected)||manualLines()[0];if(!l)return null;if(!paint)throw Error('No actual manual Canvas stroke');\n function index(t){let i=k.findIndex(b=>b.t>=t);if(i===0)return(t-k[0].t)/step;if(i<0)return k.length-1+(t-k.at(-1).t)/step;if(k[i].t===t)return i;return i-1+(t-k[i-1].t)/(k[i].t-k[i-1].t)}\n const expected=[l.a,l.b].map(q=>({x:(index(q.t)-m.start+.5)*m.cw,y:(m.hi-q.p)/(m.hi-m.lo)*m.ph}));const actual=paint.path.filter(q=>['moveTo','lineTo'].includes(q[0]));if(actual.length!==2)throw Error('Not a finite two-point segment');for(let i=0;i<2;i++)if(Math.abs(actual[i][1]-expected[i].x)>1e-6||Math.abs(actual[i][2]-expected[i].y)>1e-6)throw Error('Native endpoint differs from stored epoch/price '+JSON.stringify({actual,expected}));\n const mid={x:(expected[0].x+expected[1].x)/2,y:(expected[0].y+expected[1].y)/2};let pixels=0;if(mid.x>8&&mid.x<m.pw-8&&mid.y>8&&mid.y<m.ph-8){for(let dx=-3;dx<=3;dx++)for(let dy=-3;dy<=3;dy++){const q=cx.getImageData(Math.round((mid.x+dx)*devicePixelRatio),Math.round((mid.y+dy)*devicePixelRatio),1,1).data;if(q[2]>q[0]+40&&q[1]>q[0]+25&&q[2]>120)pixels++}if(!pixels)throw Error('No rendered segment pixels '+JSON.stringify({mid,expected,start:m.start,ph:m.ph,W:m.W,H:m.H,pane:S.pane,paint,mode:M.mode,selected:M.selected,metric:m.manual}))}\n const metric=m.manual.find(q=>q.id===l.id);if(!metric&&!((expected.every(q=>q.x<0)||expected.every(q=>q.x>m.pw))||(expected.every(q=>q.y<0)||expected.every(q=>q.y>m.ph))))throw Error('Visible segment missing its metrics');return{expected,actual,pixels,start:m.start,cw:m.cw,clip:{pw:m.pw,ph:m.ph},anchors:l};\n }",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      }
+    },
+    {
+      "type": "after",
+      "callId": "nztq@1440",
+      "endTime": 10650.44,
+      "error": {
+        "message": "Error: Native endpoint differs from stored epoch/price {\"actual\":[[\"moveTo\",70.98,88.53997802734382],[\"lineTo\",180.18,147.2800292968751]],\"expected\":[{\"x\":55.38,\"y\":76.53997802734376},{\"x\":164.58,\"y\":135.28002929687503}]}\n    at eval (eval at evaluate (:370:30), <anonymous>:4:351)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+        "stack": "Error: Error: Native endpoint differs from stored epoch/price {\"actual\":[[\"moveTo\",70.98,88.53997802734382],[\"lineTo\",180.18,147.2800292968751]],\"expected\":[{\"x\":55.38,\"y\":76.53997802734376},{\"x\":164.58,\"y\":135.28002929687503}]}\n    at eval (eval at evaluate (:370:30), <anonymous>:4:351)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at CRExecutionContext.evaluateWithArguments (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:36974:17)\n    at async LongStandingScope._race (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:3619:18)\n    at async evaluateExpression (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:20623:12)\n    at async _Frame._evaluateExpression (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:25000:24)\n    at async _Frame.evaluateExpression (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:24996:16)\n    at async _FrameDispatcher.evaluateExpression (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:56171:41)\n    at async _ProgressController.run (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:13018:27)\n    at async DispatcherConnection.dispatch (/home/runner/work/hybrid-terminal/hybrid-terminal/node_modules/playwright-core/lib/coreBundle.js:20191:27)",
+        "name": "Error"
+      }
+    }
+  ]
+}

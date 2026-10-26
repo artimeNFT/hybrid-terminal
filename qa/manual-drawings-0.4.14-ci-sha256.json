@@ -1,0 +1,9 @@
+{
+  "hybrid-terminal.html": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334",
+  "STATUS.md": "a47f4e089962b74e73209c4b483c053c8b9b220e001f69f6d753b995fd23ff28",
+  "tests/browser-manual-drawings.cjs": "beef1042b6dd07de5ffc6424ce878f9498dc4e01cf61aeeaad7874096b9871ac",
+  "qa/source-checksums.0.4.14.json": "8394f2ec442ffc102e897337e6105d5d0c8d12bfc37cd1fecac0aa1098e95477",
+  "qa/manual-drawings-0.4.14-sha256.json": "3a203c17489d758c99dbb37a78c1d8ecc3331408f68ee18a9a1fd1693a00223d",
+  "qa/manual-drawings-0.4.14-continuity-sha256.json": "569ddab27276864be64818daa33fbdc40c6c62a1f79e4335942b90d8244468b4",
+  "tests/results/manual-drawings-0.4.14-ci/evidence-sha256.json": "faaa0322c353531cfead9334ee49887f0842f2f1ea7ce40e1219cf91054d5c07"
+}

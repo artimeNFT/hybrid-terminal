@@ -1,0 +1,170 @@
+{
+  "version": "0.4.14",
+  "sourceSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334",
+  "checks": [
+    {
+      "width": 1440,
+      "actualEndpointPaint": {
+        "expected": [
+          {
+            "x": 235.54666666666665,
+            "y": 275.1225891113284
+          },
+          {
+            "x": 674.3733333333333,
+            "y": 486.2631835937499
+          }
+        ],
+        "actual": [
+          [
+            "moveTo",
+            235.54666666666665,
+            275.1225891113284
+          ],
+          [
+            "lineTo",
+            674.3733333333333,
+            486.2631835937499
+          ]
+        ],
+        "pixels": 29,
+        "start": 218,
+        "cw": 6.453333333333333,
+        "clip": {
+          "pw": 968,
+          "ph": 639.8199999999999
+        },
+        "anchors": {
+          "id": 1,
+          "a": {
+            "t": 1792987200000,
+            "p": 100.82498304363592
+          },
+          "b": {
+            "t": 1793007600000,
+            "p": 96.93188062934705
+          }
+        }
+      },
+      "createEditDeleteUndo": true,
+      "unselectedDragNavigates": true,
+      "lostCaptureNoWrite": true,
+      "historyPrependCoordinates": true,
+      "liveAppendResizeModeAnchors": true,
+      "paneControlsPreserved": true,
+      "nativeRestoreUnrelatedBytes": true,
+      "contextIsolation": true,
+      "touchEmulated": false
+    },
+    {
+      "width": 390,
+      "actualEndpointPaint": {
+        "expected": [
+          {
+            "x": 71.94666666666667,
+            "y": 76.53997802734376
+          },
+          {
+            "x": 213.81333333333336,
+            "y": 135.28002929687503
+          }
+        ],
+        "actual": [
+          [
+            "moveTo",
+            71.94666666666667,
+            76.53997802734376
+          ],
+          [
+            "lineTo",
+            213.81333333333336,
+            135.28002929687503
+          ]
+        ],
+        "pixels": 49,
+        "start": 218,
+        "cw": 2.026666666666667,
+        "clip": {
+          "pw": 304,
+          "ph": 178
+        },
+        "anchors": {
+          "id": 1,
+          "a": {
+            "t": 1792986900000,
+            "p": 100.82498429914442
+          },
+          "b": {
+            "t": 1793007900000,
+            "p": 96.93187838513668
+          }
+        }
+      },
+      "createEditDeleteUndo": true,
+      "unselectedDragNavigates": true,
+      "lostCaptureNoWrite": true,
+      "historyPrependCoordinates": true,
+      "liveAppendResizeModeAnchors": true,
+      "paneControlsPreserved": true,
+      "nativeRestoreUnrelatedBytes": true,
+      "contextIsolation": true,
+      "touchEmulated": true
+    },
+    {
+      "width": 320,
+      "actualEndpointPaint": {
+        "expected": [
+          {
+            "x": 55.38,
+            "y": 76.53997802734376
+          },
+          {
+            "x": 164.58,
+            "y": 135.28002929687503
+          }
+        ],
+        "actual": [
+          [
+            "moveTo",
+            55.38,
+            76.53997802734376
+          ],
+          [
+            "lineTo",
+            164.58,
+            135.28002929687503
+          ]
+        ],
+        "pixels": 49,
+        "start": 218,
+        "cw": 1.56,
+        "clip": {
+          "pw": 234,
+          "ph": 178
+        },
+        "anchors": {
+          "id": 1,
+          "a": {
+            "t": 1792986900000,
+            "p": 100.82498429914442
+          },
+          "b": {
+            "t": 1793007900000,
+            "p": 96.93187838513668
+          }
+        }
+      },
+      "createEditDeleteUndo": true,
+      "unselectedDragNavigates": true,
+      "lostCaptureNoWrite": true,
+      "historyPrependCoordinates": true,
+      "liveAppendResizeModeAnchors": true,
+      "paneControlsPreserved": true,
+      "nativeRestoreUnrelatedBytes": true,
+      "contextIsolation": true,
+      "touchEmulated": true
+    }
+  ],
+  "errors": [],
+  "scope": "Actual native Canvas paths/pixels and mouse/touch-emulated controls. Fully mocked stable origin/feeds and isolated browser profiles; no ordinary user profile, physical-device or live observation claim."
+}
