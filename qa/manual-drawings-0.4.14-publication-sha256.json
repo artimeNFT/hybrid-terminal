@@ -1,0 +1,12 @@
+{
+  "hybrid-terminal.html": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334",
+  "STATUS.md": "88587da82078103c12a7bf9f8489a3a526c5f59c95a5735c97bfe11e0d7a4fcc",
+  "START_HERE.md": "95635e2bd645c8a7ac79cdeed1c35467d25228c4535bd543036f10fc6fbc660c",
+  "README.md": "ba97d26a56714ee8e2885d70993af4eaaf1a49b1706d4d31bb0ea605b11ac8cd",
+  "tests/browser-manual-drawings.cjs": "beef1042b6dd07de5ffc6424ce878f9498dc4e01cf61aeeaad7874096b9871ac",
+  "qa/source-checksums.0.4.14.json": "8394f2ec442ffc102e897337e6105d5d0c8d12bfc37cd1fecac0aa1098e95477",
+  "qa/manual-drawings-0.4.14-sha256.json": "3a203c17489d758c99dbb37a78c1d8ecc3331408f68ee18a9a1fd1693a00223d",
+  "qa/manual-drawings-0.4.14-continuity-sha256.json": "569ddab27276864be64818daa33fbdc40c6c62a1f79e4335942b90d8244468b4",
+  "qa/manual-drawings-0.4.14-ci-sha256.json": "f4b0e8c1c40b1010b3ad665ceb917394e31ea95e3703e6d9d59b7c6c1a856178",
+  "tests/results/manual-drawings-0.4.14-publication/evidence-sha256.json": "9898f62f26ad257df3a83e066ebe639b6a559760dfcc6f3d0607dde7bbd16e02"
+}

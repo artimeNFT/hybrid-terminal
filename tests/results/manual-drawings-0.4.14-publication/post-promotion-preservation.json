@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-26T22:16:18.335975+00:00",
+  "head": "7b69c74bea3d78ccca05f2b4a587a9d724508e06",
+  "sourceVersion": "0.4.14 RC",
+  "sourceSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334",
+  "protectedTracked": 587,
+  "frozenFiles": 6,
+  "originalMidnightInputs": 3,
+  "historicalStatusArchiveUnchanged": true,
+  "acceptedUserReloadSectionUnchanged": true,
+  "newStartHereExact": true,
+  "currentSourceAndReconciledDocumentationBindingsVerified": true,
+  "currentSourceAndCiCorrectionBindingsVerified": true
+}

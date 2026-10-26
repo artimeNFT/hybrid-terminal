@@ -1,0 +1,305 @@
+JOB deterministic
+2026-10-26T22:11:31.6064749Z PASS source SHA-256: hybrid-terminal.html
+2026-10-26T22:11:31.6097185Z PASS source SHA-256: research/klines.cjs
+2026-10-26T22:11:31.6109443Z PASS source SHA-256: research/SCHEMA.md
+2026-10-26T22:11:31.6139328Z PASS source SHA-256: baseline/hybrid-terminal.0.3.1.html
+2026-10-26T22:11:31.6154124Z PASS source SHA-256: baseline/hybrid-terminal.0.4.0.html
+2026-10-26T22:11:31.6171561Z PASS source SHA-256: baseline/hybrid-terminal.0.4.1.html
+2026-10-26T22:11:31.6173743Z PASS source SHA-256: baseline/hybrid-terminal.0.4.2.html
+2026-10-26T22:11:31.6177395Z PASS source SHA-256: baseline/hybrid-terminal.original.html
+2026-10-26T22:11:31.6179413Z PASS source SHA-256: baseline/research-klines.1.0.0.cjs
+2026-10-26T22:11:31.6184293Z PASS source SHA-256: baseline/hybrid-terminal.0.4.3.html
+2026-10-26T22:11:31.6185497Z PASS source SHA-256: research/run-frozen.cjs
+2026-10-26T22:11:31.6186569Z PASS source SHA-256: research/source-context/preload.cjs
+2026-10-26T22:11:31.6188606Z PASS source SHA-256: research/source-context/check.cjs
+2026-10-26T22:11:31.6189646Z PASS source SHA-256: research/source-context/html-0.4.3-v1.json
+2026-10-26T22:11:31.6190645Z PASS source SHA-256: baseline/hybrid-terminal.0.4.4.html
+2026-10-26T22:11:31.6191632Z PASS source SHA-256: baseline/hybrid-terminal.0.4.5.html
+2026-10-26T22:11:31.6192972Z PASS source SHA-256: baseline/hybrid-terminal.0.4.6.html
+2026-10-26T22:11:31.6193912Z PASS source SHA-256: baseline/hybrid-terminal.0.4.7.html
+2026-10-26T22:11:31.6194847Z PASS source SHA-256: baseline/hybrid-terminal.0.4.8.html
+2026-10-26T22:11:31.6195748Z PASS source SHA-256: baseline/hybrid-terminal.0.4.9.html
+2026-10-26T22:11:31.6196670Z PASS source SHA-256: baseline/hybrid-terminal.0.4.10.html
+2026-10-26T22:11:31.6197648Z PASS source SHA-256: baseline/hybrid-terminal.0.4.11.html
+2026-10-26T22:11:31.6204239Z PASS source SHA-256: baseline/hybrid-terminal.0.4.12.html
+2026-10-26T22:11:31.6205338Z PASS source SHA-256: baseline/hybrid-terminal.0.4.13.html
+2026-10-26T22:11:31.9054480Z PASS: M replacement at pivot 97 preserves the decision at bar 93; supersession begins at 100.
+2026-10-26T22:11:31.9258354Z PASS: W replacement at pivot 97 preserves the decision at bar 93; supersession begins at 100.
+2026-10-26T22:12:07.0624579Z PASS: 4002 original/current-bar comparisons and 4185 append-only decision comparisons; 183 explicit flat-RSI unavailable cases across 15 datasets and all three score thresholds.
+2026-10-26T22:12:07.0627428Z PASS: complete event history reproduces every original prefix pattern set; backtest outputs are finite.
+2026-10-26T22:12:07.2590135Z PASS: application startup, closed-candle panel, REST/WebSocket flow, canvas draw calls, M/W confirmation/supersession, help, layer toggle and report copy.
+2026-10-26T22:12:07.4567103Z PASS: 20 developing-candle changes leave confirmed signal, recovery statistics and backtest unchanged; confirmation occurs only on x=true; confirmed bars cannot be downgraded.
+2026-10-26T22:12:07.6942566Z PASS: real setup fixture emits no provisional alert, emits one close alert, suppresses duplicate closes and agrees with completed-candle replay.
+2026-10-26T22:12:07.7197879Z PASS: missing server time conservatively leaves the final REST candle provisional, independent of the local wall clock.
+2026-10-26T22:12:07.7514904Z PASS: an older BTC response cannot overwrite ETH; cache identity changes with the asset; mismatched stream symbols are ignored.
+2026-10-26T22:12:07.7965061Z PASS: higher-timeframe context refreshes on its close boundary using closed candles; a stream gap starts a guarded REST resynchronization.
+2026-10-26T22:12:08.0322440Z PASS: right margin, cursor-anchored zoom, full loaded-history navigation, clamped future pan, End/Home controls, consistent drag width, stable historical view on new candles, price scale reset, future crosshair and timezone selection.
+2026-10-26T22:12:08.2477548Z PASS: all three palettes meet >=3:1 against modeled chart backgrounds (minimum 5.05:1); default bodies are filled, own-bar direction is stable across volume classes, legacy settings migrate, display choices preserve decisions, and chart/header text is English.
+2026-10-26T22:12:08.2855816Z PASS: delayed/stale and offline feeds are visibly identified; returning to a stale tab resynchronizes; a hanging REST request reaches an explicit timeout error.
+2026-10-26T22:12:14.5733328Z PASS: journal captures closed decisions only, deduplicates, survives reload, exports, preserves a prior conflicting decision, reports unavailable storage, protects malformed stored data, and enforces explicit 1000-record retention.
+2026-10-26T22:12:14.7566789Z PASS: an offline confirmed setup cannot emit a notification; invalid account/risk inputs do not produce a position size.
+2026-10-26T22:12:16.1725668Z PASS: five dated pages add 5000 chart-only candles, enforce the cap and preserve all live-core bars, confirmed signal, statistics, backtest and journal snapshots; live appends retain the historical viewport.
+2026-10-26T22:12:16.3262673Z PASS: short history pages stop further loading; discontinuous history is rejected without touching live decisions; obsolete history responses cannot cross an asset switch.
+2026-10-26T22:12:16.6734955Z PASS: 54 palette/body/class/direction cases, neutral doji, own OHLC despite conflicting cached direction, v1/v2 preferences, unrelated view fields and byte-identical journal across appearance changes.
+2026-10-26T22:12:16.7312005Z PASS: displayed RSI reuses the original RSI14 array, hides seed/warm-up, follows selected candle/pan/zoom/crosshair, marks developing values provisional, preserves closed signals/backtest/journal and retains Volume/None choices.
+2026-10-26T22:12:17.8130895Z PASS: pivot 110/90/100 arithmetic, UTC boundaries/timezone invariance, separate complete daily source, missing/incomplete source rejection, stable history, <=1000-day pagination and obsolete symbol/timeframe/range response rejection.
+2026-10-26T22:12:17.9328440Z PASS: real baseline reproduces both optimistic gap fills; new long/short gross -2.5R and net -2.55R, ordinary ambiguous bars stop first, invalid gap entries skipped, explicit execution version, old journal records preserved.
+2026-10-26T22:12:18.0591336Z PASS: empty/all-zero/no-loss/all-loss/mixed net-R states agree in actual UI, copied report and serialized research export; known Wilson reference, ratio overflow and invalid outcomes; actual backtest no-loss/empty aggregation.
+2026-10-26T22:12:18.1103224Z PASS: reviewed 1000/1%/100/99.9 sizing, nominal 100 units/10000 notional/10x, explicit cash scenario and balance, insufficient/covered-before-costs/SHORT/unconfigured/invalid/overflow states; no feasible/executable quantity or venue approval invented.
+2026-10-26T22:12:18.1505302Z PASS: review tie fixture exposes eligible LONG but deliberately retains selected SHORT/WAIT; no fallback or threshold tuning, clear conflict reason and frozen confirmed versus provisional diagnostics.
+2026-10-26T22:12:18.2856655Z PASS: flat zero-volume has no vectors, zero ATR and undefined RSI are non-actionable, warm-up/invalid arithmetic/overflow are explicit, one-sided RSI remains 100, zero-product references are not strength and partial-day coverage is labeled without replacing VWAP.
+2026-10-26T22:12:19.9468400Z PASS: 6882 ordinary valid-input decisions exactly match actual 0.4.0 legacy fields, plans, items, thresholds and direction policy across 14 datasets; volume classes unchanged.
+2026-10-26T22:12:19.9806242Z PASS: prior journal record bytes/IDs/versions retained, new semantics identified separately, execution version/fees retained, sizing/appearance/export leave journal bytes unchanged and preference migration retains unrelated fields.
+2026-10-26T22:12:20.2556253Z PASS: known/distinct PDH/PDL periods, [from,to) boundaries, independent toggles and cache reuse, preserved preferences, historical chart versus frozen current context, no autoscale distortion and unchanged signal/backtest/journal bytes.
+2026-10-26T22:12:20.2561974Z PASS: exact nearest above/below/equal grouping, missing sides, finite positive price/ATR denominators and deterministic merged/overflow label placement.
+2026-10-26T22:12:20.9523757Z PASS: incomplete/truncated/invalid/duplicate/out-of-order/failed/missing daily source and missing trusted clock stay unavailable; failures use bounded retry instead of update-driven request floods.
+2026-10-26T22:12:21.1967441Z PASS: exact midnight close advances context before the next opening-bar update, delayed sources are unknown until validated, trusted clock lag is conservative, and late completion/provisional updates preserve frozen decisions/backtest/journal.
+2026-10-26T22:12:21.5506812Z PASS: one shared in-flight/cache path, independent layer rendering, all-off/reenable guards, obsolete asset/timeframe/range rejection and <=1000-day missing-range pagination.
+2026-10-26T22:12:21.6505210Z PASS: exact 0.4.1 signal/backtest/journal upgrade preservation, unchanged rule/execution versions, no context-induced journal write, and IANA Jerusalem DST-aware observation labels.
+2026-10-26T22:12:22.0497988Z PASS: 80px vertical, same-gesture reversal and diagonal translation use drag-start bounds with constant span, correct time movement and unchanged market/indicator/signal/backtest/journal state.
+2026-10-26T22:12:22.0618247Z PASS: click/jitter and near-horizontal thresholds, Volume/RSI origin isolation, secondary-pointer isolation, cancel and lost-capture cleanup.
+2026-10-26T22:12:22.0686422Z PASS: axis scaling/time zoom, focused vertical keyboard controls and frozen drag-start geometry across resize.
+2026-10-26T22:12:22.3544755Z PASS: manual position survives provisional and confirmed stream updates; engine/journal match untouched control and 0.4.2 upgrade bytes. Live/Auto scale/Reset and invalid/empty/zero-size guards verified.
+2026-10-26T22:12:22.3673792Z PASS app: 9 suites
+2026-10-26T22:12:22.6739850Z ✔ UTC configuration/alignment and exact twelve-field decimal validation (4.453951ms)
+2026-10-26T22:12:22.8907610Z ✔ bounded pagination: 1000/200 rows, endTime exclusive conversion, offline process and no overwrite (223.324691ms)
+2026-10-26T22:12:23.0824578Z ✔ short pages continue, empty windows advance and explicitly report gaps (191.668313ms)
+2026-10-26T22:12:23.0989900Z ✔ developing candle exclusion uses fixed trusted cutoff and UTC boundaries (14.784665ms)
+2026-10-26T22:12:23.0991668Z ✔ duplicates/conflicts/order/gaps and exact precision remain visible to offline quality (0.859503ms)
+2026-10-26T22:12:23.3634094Z ✔ bad/duplicate/backward pages stop; raw rejected rows survive without a frozen output (51.344499ms)
+2026-10-26T22:12:23.3636218Z ✔ hashes exclude metadata, preserve raw decimal text and detect changed/tampered data/quality/schema (212.94694ms)
+2026-10-26T22:12:23.4169478Z ✔ 429 Retry-After and 5xx retries obey bounded waits; 418 stops immediately (54.140956ms)
+2026-10-26T22:12:23.5582454Z ✔ request timeouts and cancellation/resumption preserve pages, cutoff and configuration (140.813728ms)
+2026-10-26T22:12:23.6134844Z ✔ offline CLI detects edited files and original app remains untouched (55.001641ms)
+2026-10-26T22:12:23.6268878Z ✔ checkpoint tampering and concurrent writer locks cannot resume or overwrite work (13.843197ms)
+2026-10-26T22:12:23.7238363Z ✔ actual compare/invalid-quality CLI exit codes and absent trusted server clock (96.39552ms)
+2026-10-26T22:12:24.1971018Z ✔ external finding reproduces on reviewed 1.0.0 and reopened dataset is rejected by 1.0.1 (59.018747ms)
+2026-10-26T22:12:24.1977309Z ✔ invalid timeframe input fails before any filesystem/network call, without coercion, including resume (2.925101ms)
+2026-10-26T22:12:24.1981704Z ✔ canonical/quality/verify/comparison reject forged timeframe payloads even with recomputed hashes for both producers (405.999551ms)
+2026-10-26T22:12:24.1983871Z ✔ all four timeframes retain valid 1.0.0 hashes/quality, and empty ranges of data are finite incomplete states (4.420418ms)
+2026-10-26T22:12:24.3058386Z ✔ valid cancelled 1.0.0 checkpoint resumes as 1.0.1 with identical rows/hash and original cutoff (109.319062ms)
+2026-10-26T22:12:24.3677975Z ✔ malformed checksummed checkpoints from either producer reject stored timeframe before network and retain original bytes (62.247495ms)
+2026-10-26T22:12:24.3873604Z ℹ tests 18
+2026-10-26T22:12:24.3879607Z ℹ pass 18
+2026-10-26T22:12:24.3880412Z ℹ fail 0
+2026-10-26T22:12:24.3955953Z PASS research: 1 suites
+2026-10-26T22:12:27.5096050Z ✔ adapter uses hash-checked actual functions without bootstrap/storage/backtest and target capture preserves decisions (103.659482ms)
+2026-10-26T22:12:27.5118380Z ✔ same timestamps, not local array indices, align finite volume/UTC metrics and eligible zone identities (61.543084ms)
+2026-10-26T22:12:27.5141015Z ✔ UTC boundaries distinguish a midnight close from a new-day opening candle and partial-day origins (41.013107ms)
+2026-10-26T22:12:27.5154947Z ✔ known recursive-origin sensitivity separates minimum availability, flat-RSI state and context-only EMA800 (336.875128ms)
+2026-10-26T22:12:27.5193789Z ✔ short history loses eligible old targets without a future leak (85.132074ms)
+2026-10-26T22:12:27.5195842Z ✔ M/W confirmation and future supersession are projected as known at t, not raw future caches (35.442029ms)
+2026-10-26T22:12:27.5198002Z ✔ causality detector flags deliberately altered votes/values, separately from seed drift (41.265721ms)
+2026-10-26T22:12:27.5200376Z ✔ compact generated synthetic audit covers every window, fixed-origin future checks, and bounded sampling (2092.270627ms)
+2026-10-26T22:12:27.5203153Z ✔ the real-data command validates CLI schema/hash before analysis and never accepts fabricated input (0.958559ms)
+2026-10-26T22:12:27.5388181Z ℹ tests 9
+2026-10-26T22:12:27.5397210Z ℹ pass 9
+2026-10-26T22:12:27.5397979Z ℹ fail 0
+2026-10-26T22:12:27.5495658Z PASS audit: 1 suites
+2026-10-26T22:12:30.8034966Z ✔ contract pins reviewed sources without reading acquired data or bootstrapping the app (2.204458ms)
+2026-10-26T22:12:30.8048729Z ✔ 3999 is excluded and the full-origin 4000th candle is the first prepared decision (569.643534ms)
+2026-10-26T22:12:30.8063512Z ✔ a warmed trailing window cannot impersonate fixed-origin history or retained parser state (406.14705ms)
+2026-10-26T22:12:30.8072951Z ✔ UTC end coordinates allow the last closed candle but reject future or inconsistent coordinates (177.668196ms)
+2026-10-26T22:12:30.8074735Z ✔ actual flat-RSI, zero-volume and zero-ATR inputs remain excluded after preparation (735.488696ms)
+2026-10-26T22:12:30.8076587Z ✔ a valid WAIT is retained and readiness does not mutate decisions or add context score votes (213.852849ms)
+2026-10-26T22:12:30.8078530Z ✔ exact budgets detect price, RSI, RR and state changes smaller than audit reporting tolerances (179.399646ms)
+2026-10-26T22:12:30.8080318Z ✔ full-origin restart reproduces M/W with pivots older than a recent-event reporting window (89.372221ms)
+2026-10-26T22:12:30.8081984Z ✔ future append parity is exact and cannot be mixed with changed-time comparisons (555.803665ms)
+2026-10-26T22:12:30.8798470Z ℹ tests 9
+2026-10-26T22:12:30.8814763Z ℹ pass 9
+2026-10-26T22:12:30.8815668Z ℹ fail 0
+2026-10-26T22:12:30.8889141Z PASS contract: 1 suites
+2026-10-26T22:12:32.6185038Z ✔ real classification precedence, equality, reference availability and doji direction are preserved (56.442298ms)
+2026-10-26T22:12:32.6221213Z ✔ ordinary/vector recovery symmetry, strict outside geometry and inclusive equality boundaries (0.832523ms)
+2026-10-26T22:12:32.6235050Z ✔ first eligibility precedes tail/chronology exclusions and cannot resurrect in a later block (1.106527ms)
+2026-10-26T22:12:32.6236835Z ✔ ATR percentile excludes t, uses empirical midrank, and calendar features use the close (0.52239ms)
+2026-10-26T22:12:32.6238658Z ✔ memoized actual reference values equal uncached full replay and the reviewed adapter, including replay backwards (807.242828ms)
+2026-10-26T22:12:32.6240701Z ✔ all eligible arms get decision-time plans/ranks without score/action filtering and future changes cannot affect them (135.293756ms)
+2026-10-26T22:12:32.6242738Z ✔ one greedy attempt obeys exact strata, all calipers, no replacement and deterministic ties (2.779187ms)
+2026-10-26T22:12:32.6283799Z ✔ unmatched reasons distinguish absent strata, time/caliper support, missing values and exhaustion (0.410951ms)
+2026-10-26T22:12:32.6309859Z ✔ SMD keeps the pre-match denominator, flags equality at 0.1 and exposes missing/zero/insufficient states (1.139659ms)
+2026-10-26T22:12:32.6312144Z ✔ overlap and full reserved UTC day spans use coordinates, not future prices (0.642847ms)
+2026-10-26T22:12:32.6314022Z ✔ restart/full-prefix worker sharding reproduces canonical episodes, decisions and matching (321.363287ms)
+2026-10-26T22:12:32.6317960Z ✔ protocol seal, reopened canonical hashes and volatile metadata stay separate; incomplete runs fail (5.9397ms)
+2026-10-26T22:12:32.6319971Z ✔ preparation calculations run without network, browser storage, application bootstrap or backtest capabilities (67.080669ms)
+2026-10-26T22:12:32.6653661Z ℹ tests 13
+2026-10-26T22:12:32.6674106Z ℹ pass 13
+2026-10-26T22:12:32.6674687Z ℹ fail 0
+2026-10-26T22:12:32.6733116Z PASS preparation: 1 suites
+2026-10-26T22:12:33.2205920Z ✔ frozen reference is exact, explicit context verifies old sources, and unbound research rejects the active UI (209.174122ms)
+2026-10-26T22:12:33.2856320Z ✔ preserved calculation/journal functions remain exact to frozen 0.4.3 with scoped presentation/daily-source hooks (96.583951ms)
+2026-10-26T22:12:34.1506823Z ✔ synthetic calculation/decision/backtest behavior matches 0.4.3 across thresholds and degenerate inputs (875.236071ms)
+2026-10-26T22:12:34.1748783Z ✔ presentation risk uses confirmed coordinates, independent ATR availability and guarded arithmetic (26.616746ms)
+2026-10-26T22:12:34.2002690Z ✔ upgrade preserves old journal bytes/identities and display/sizing preferences (43.058656ms)
+2026-10-26T22:12:34.2203926Z ℹ tests 5
+2026-10-26T22:12:34.2205700Z ℹ pass 5
+2026-10-26T22:12:34.2208913Z ℹ fail 0
+2026-10-26T22:12:34.5339907Z ✔ directional geometry sorts LONG/SHORT, groups exact equality, keeps rounded-near prices distinct and excludes endpoints (131.862598ms)
+2026-10-26T22:12:34.6285612Z ✔ invalid geometry and levels stay unavailable; invalid denominators affect only their own distance metrics (86.045276ms)
+2026-10-26T22:12:34.7333131Z ✔ confirmed sources obey independent layers, full UTC coverage, availability and validated daily identity without changing decisions (105.519544ms)
+2026-10-26T22:12:34.9015122Z ✔ anchor and distances remain confirmed through provisional ticks, pointer/view/history changes; WAIT and mismatched entries have no substitute (177.634391ms)
+2026-10-26T22:12:35.4938635Z ✔ missing clock/daily response stays excluded, while stale symbol/timeframe responses cannot publish path sources (589.64402ms)
+2026-10-26T22:12:35.6074671Z ✔ all pre-existing 0.4.4 calculation function bodies and legacy journal bytes remain unchanged (193.563148ms)
+2026-10-26T22:12:35.6613179Z ℹ tests 6
+2026-10-26T22:12:35.6623528Z ℹ pass 6
+2026-10-26T22:12:35.6624185Z ℹ fail 0
+2026-10-26T22:12:36.0507624Z ✔ exact participating closed count/origin/decision time exclude provisional bars and advance only at confirmation (218.546872ms)
+2026-10-26T22:12:36.2257140Z ✔ actual chart-only history load leaves decision-window coordinates, computations and journal unchanged (173.104474ms)
+2026-10-26T22:12:36.3316458Z ✔ pending symbol/timeframe transitions clear old provenance and reject obsolete main-data responses (106.697662ms)
+2026-10-26T22:12:36.5093459Z ✔ Full retains every original M/W annotation; Focus selects only latest active confirmed M/W without changing other rendering or engine (183.76338ms)
+2026-10-26T22:12:36.7228680Z ✔ annotation preference restores independently and preserves legacy preferences, unknown fields and journal bytes (217.263141ms)
+2026-10-26T22:12:36.8346446Z ✔ concise daily/nearest labels keep every exact price and deliberate inspection without snapping or rounded-value merging (87.646561ms)
+2026-10-26T22:12:36.9056401Z ✔ all nonpresentation 0.4.5 function bodies and rule/execution/indicator policies remain identical (161.793247ms)
+2026-10-26T22:12:36.9289589Z ℹ tests 7
+2026-10-26T22:12:36.9291382Z ℹ pass 7
+2026-10-26T22:12:36.9291966Z ℹ fail 0
+2026-10-26T22:12:37.2414001Z ✔ LONG/SHORT zero-cost identities and total 10-bps baseline arithmetic are symmetric (127.516454ms)
+2026-10-26T22:12:37.3357195Z ✔ opening-gap shock uses stop notional, moves adversely on each side and affects only stressed stop R (87.714918ms)
+2026-10-26T22:12:37.4330820Z ✔ nonfinite/negative/excessive/coercible assumptions and invalid directional geometry produce no numeric R (89.988062ms)
+2026-10-26T22:12:37.5712461Z ✔ confirmed anchor survives provisional/view changes and assumptions never mutate decisions, baseline risk, sizing or journal (146.159002ms)
+2026-10-26T22:12:38.0875004Z ✔ separate assumptions restore without changing old preferences or journal, including explicit recovery from malformed saved input (527.052524ms)
+2026-10-26T22:12:38.2166888Z ✔ invalid typing clears previous output and quota-style scenario storage failure stays session-only (84.915809ms)
+2026-10-26T22:12:38.3166356Z ✔ every nonpresentation 0.4.6 function except panel/legend and all rule/execution/RSI identities remain exact (224.362708ms)
+2026-10-26T22:12:38.3427106Z ℹ tests 7
+2026-10-26T22:12:38.3435029Z ℹ pass 7
+2026-10-26T22:12:38.3435765Z ℹ fail 0
+2026-10-26T22:12:38.5485445Z ✔ paired Help facts cover actual policies in both languages and isolate readable formulas (66.905781ms)
+2026-10-26T22:12:38.5848016Z ✔ language and internal navigation keep Help open; only explicit close/backdrop/Escape close and restore focus/background (29.40683ms)
+2026-10-26T22:12:38.6672863Z ✔ Hebrew fresh default never writes; isolated language restores and preserves unrelated preferences and old journal bytes (87.013636ms)
+2026-10-26T22:12:38.9793658Z ✔ malformed or unsupported saved language falls back without clearing bytes; storage read/write failures remain session-only (248.11215ms)
+2026-10-26T22:12:39.2967870Z ✔ palette option values/colors/defaults/body/tags and all existing calculation behavior match 0.4.7 (388.808716ms)
+2026-10-26T22:12:39.3275251Z ✔ existing countdown and partial-day Daily Open are retained as original draw/calculation behavior (53.377717ms)
+2026-10-26T22:12:39.3490412Z ℹ tests 6
+2026-10-26T22:12:39.3509181Z ℹ pass 6
+2026-10-26T22:12:39.3510891Z ℹ fail 0
+2026-10-26T22:12:40.1037493Z ✔ fresh volume view preserves 0.4.8 default heights, price geometry, linear bar scaling and does not write preferences (576.642485ms)
+2026-10-26T22:12:40.2740900Z ✔ actual captured divider events use drag-start geometry, enforce pane limits and leave all market state unchanged (174.359416ms)
+2026-10-26T22:12:40.3634773Z ✔ volume-axis drag scales a nonnegative linear range from visible zero; reversal, clipping, wheel/auto/reset are independent of price (88.959719ms)
+2026-10-26T22:12:40.5733081Z ✔ Volume/RSI/None transitions preserve the RSI scale/legacy geometry, shared horizontal mapping and stored volume settings (200.345235ms)
+2026-10-26T22:12:41.6730343Z ✔ isolated view settings restore with viewport bounds; malformed/unsupported values never clear old storage or journal (1115.278339ms)
+2026-10-26T22:12:41.9899071Z ✔ invalid settings and storage failures remain guarded/session-only, without touching calculation/journal/preference keys (315.585901ms)
+2026-10-26T22:12:42.0709330Z ✔ responsive indicator layout keeps all six exact names in bounds, preserves desktop spacing and guards label collisions (74.047867ms)
+2026-10-26T22:12:42.1513435Z ✔ scoped chart-view/daily-source hooks preserve 0.4.8 engine; Help typo and bilingual controls documented (159.369158ms)
+2026-10-26T22:12:42.2029613Z ℹ tests 8
+2026-10-26T22:12:42.2045124Z ℹ pass 8
+2026-10-26T22:12:42.2045925Z ℹ fail 0
+2026-10-26T22:12:42.4280873Z ✔ existing prior-ten mean excludes current volume; exact Normal/Rising/Vector class and own direction are reused (115.258986ms)
+2026-10-26T22:12:42.5136623Z ✔ warm-up, zero reference, zero volume and invalid arithmetic retain actual availability states, never a fabricated ratio (82.808492ms)
+2026-10-26T22:12:43.0491753Z ✔ confirmed anchor ignores hover, history-only candles and provisional volume, then advances only on real confirmation (64.606189ms)
+2026-10-26T22:12:43.2865701Z ✔ responsive summary reserves only needed header space, preserves zero, time/price geometry and RSI/None behavior (709.252667ms)
+2026-10-26T22:12:43.3385371Z ✔ presentation keeps prior journal/preferences bytes and every non-view 0.4.9 function, including actual reference/classification, identical (67.544163ms)
+2026-10-26T22:12:43.3618657Z ℹ tests 5
+2026-10-26T22:12:43.3634680Z ℹ pass 5
+2026-10-26T22:12:43.3636786Z ℹ fail 0
+2026-10-26T22:12:43.5987070Z ✔ chosen v1 definitions/default-off persist, with scoped view/lifecycle hooks preserving calculation behavior (108.725695ms)
+2026-10-26T22:12:43.6286949Z ✔ exact starts are inclusive and ends exclusive in winter and summer, with native date-specific IANA offsets (29.313108ms)
+2026-10-26T22:12:43.6572807Z ✔ US/UK mismatch weeks use distinct offsets, and Monday conversion crosses spring/autumn weekend transitions correctly (30.095496ms)
+2026-10-26T22:12:43.6904958Z ✔ weekends use each regional date, including UTC rollover and chosen weekday windows on official holidays (24.80695ms)
+2026-10-26T22:12:43.7205196Z ✔ independent windows expose both overlaps without a combined score, and invalid clocks/zones remain unavailable (41.586093ms)
+2026-10-26T22:12:43.7442828Z ✔ clock quality uses last trusted server offset or discloses device estimation, independently of market feed (22.605979ms)
+2026-10-26T22:12:44.0260667Z ✔ isolated enabled preference restores, guards malformed/nonboolean values and storage faults without changing prior records/settings (282.174251ms)
+2026-10-26T22:12:44.0330348Z ✔ clock-only refresh and hidden resume mutate neither analysis/backtest/journal nor configuration-dependent regional time (25.746543ms)
+2026-10-26T22:12:44.0567571Z ℹ tests 8
+2026-10-26T22:12:44.0603798Z ℹ pass 8
+2026-10-26T22:12:44.0622799Z ℹ fail 0
+2026-10-26T22:12:44.2389154Z ✔ off default; exact independently specified 20-day arithmetic, weekends and cache source/key semantics (62.931676ms)
+2026-10-26T22:12:44.4141610Z ✔ missing, duplicate, invalid, nonconsecutive or unfinished source cannot silently shorten or fill ADR20 (179.864876ms)
+2026-10-26T22:12:44.4690397Z ✔ explicit zero ADR and finite arithmetic guards keep only the affected ratio unavailable (55.045564ms)
+2026-10-26T22:12:44.5809176Z ✔ today uses continuous closed decision history from UTC open, never chart-only, daily or provisional data (71.651933ms)
+2026-10-26T22:12:44.7114367Z ✔ exact midnight moves D and source window; waits for first close without old-day reuse (167.738877ms)
+2026-10-26T22:12:44.8462151Z ✔ one shared cache coexists with chart consumers, cancels all-off and rejects obsolete symbol/timeframe/range responses (135.485681ms)
+2026-10-26T22:12:44.8756900Z ✔ confirmed anchor independent of hover/history/timezone/NOW and all decision sides; no clock-only fetch or engine write (20.437369ms)
+2026-10-26T22:12:45.0374790Z ✔ isolated preference restoration, malformed bytes and storage read/write failures retain all other state (172.040172ms)
+2026-10-26T22:12:45.0651116Z ✔ engine source and ordinary decisions/backtests remain exact to 0.4.11; Hebrew/English facts equivalent and isolated (35.564691ms)
+2026-10-26T22:12:45.0891911Z ℹ tests 9
+2026-10-26T22:12:45.0898379Z ℹ pass 9
+2026-10-26T22:12:45.0899265Z ℹ fail 0
+2026-10-26T22:12:45.8074443Z ✔ default Candles has exact prior Canvas pixels, palettes/body/tags and journal bytes without a chart-type write (588.098056ms)
+2026-10-26T22:12:45.8287059Z ✔ literal confirmed close coordinates and disconnected singleton are rendered at source candle centers (22.496444ms)
+2026-10-26T22:12:45.8535822Z ✔ only latest developing value is provisional; no dashed bridge through an invalid, missing or unconfirmed predecessor (25.734661ms)
+2026-10-26T22:12:45.8845410Z ✔ invalid OHLCV/timestamps/end and duplicate/nonconsecutive bars break paths without modifying the source (21.81773ms)
+2026-10-26T22:12:45.9134826Z ✔ toggling retains manual price/time/crosshair, candle choices and every other stored byte; no engine or journal call (36.728173ms)
+2026-10-26T22:12:46.1944847Z ✔ additive chart-type storage restores Line with old preferences; malformed/read/write faults retain other data (282.191391ms)
+2026-10-26T22:12:46.4358138Z ✔ only draw/legend change from 0.4.12; old calculations, context, Volume and bilingual facts remain intact (259.572391ms)
+2026-10-26T22:12:46.4746116Z ℹ tests 7
+2026-10-26T22:12:46.4757719Z ℹ pass 7
+2026-10-26T22:12:46.4763227Z ℹ fail 0
+2026-10-26T22:12:46.4915485Z Running manual-drawings
+2026-10-26T22:12:47.2149260Z ✔ default Pointer has exact pre-edit candle pixels, old preferences and unchanged function/engine identities (604.635901ms)
+2026-10-26T22:12:47.2405864Z ✔ literal timestamp/price transforms use candle centers, deterministic half ties and no price snapping (23.43758ms)
+2026-10-26T22:12:47.2756440Z ✔ two deliberate clicks preview without storage, Escape/cancel discard, completion selects and returns Pointer (35.560333ms)
+2026-10-26T22:12:47.3270247Z ✔ selected endpoints/segment edit from drag start; create/move/delete undo; cancelled and secondary pointers never save (46.152102ms)
+2026-10-26T22:12:47.3944959Z ✔ unselected drags preserve navigation and axes/panes; selected editing leaves the viewport unchanged (51.588906ms)
+2026-10-26T22:12:47.5897177Z ✔ strict bounded collections reject invalid or inherited-like inputs and preserve malformed bytes/read failures (210.499063ms)
+2026-10-26T22:12:47.6750750Z ✔ restoration/write/external-tab faults keep other data and all contexts, with no draft or cancel writes (93.450345ms)
+2026-10-26T22:12:47.7175603Z ✔ stale gestures cannot commit across symbol/timeframe/epoch changes; undo and focused keys stay contextual (42.476523ms)
+2026-10-26T22:12:47.9453433Z ✔ caps are explicit, undo is bounded and view-only operations never invoke engine/journal functions; paired Help retained (246.728992ms)
+2026-10-26T22:12:47.9753758Z ℹ tests 9
+2026-10-26T22:12:47.9765823Z ℹ pass 9
+2026-10-26T22:12:47.9766502Z ℹ fail 0
+2026-10-26T22:12:47.9831607Z PASS presentation: 11 suites
+
+JOB chromium
+2026-10-26T22:11:57.3841048Z PASS source SHA-256: hybrid-terminal.html
+2026-10-26T22:11:57.3843825Z PASS source SHA-256: research/klines.cjs
+2026-10-26T22:11:57.3844989Z PASS source SHA-256: research/SCHEMA.md
+2026-10-26T22:11:57.3846912Z PASS source SHA-256: baseline/hybrid-terminal.0.3.1.html
+2026-10-26T22:11:57.3848464Z PASS source SHA-256: baseline/hybrid-terminal.0.4.0.html
+2026-10-26T22:11:57.3850916Z PASS source SHA-256: baseline/hybrid-terminal.0.4.1.html
+2026-10-26T22:11:57.3853332Z PASS source SHA-256: baseline/hybrid-terminal.0.4.2.html
+2026-10-26T22:11:57.3854803Z PASS source SHA-256: baseline/hybrid-terminal.original.html
+2026-10-26T22:11:57.3856397Z PASS source SHA-256: baseline/research-klines.1.0.0.cjs
+2026-10-26T22:11:57.3865506Z PASS source SHA-256: baseline/hybrid-terminal.0.4.3.html
+2026-10-26T22:11:57.3866884Z PASS source SHA-256: research/run-frozen.cjs
+2026-10-26T22:11:57.3868147Z PASS source SHA-256: research/source-context/preload.cjs
+2026-10-26T22:11:57.3870439Z PASS source SHA-256: research/source-context/check.cjs
+2026-10-26T22:11:57.3871691Z PASS source SHA-256: research/source-context/html-0.4.3-v1.json
+2026-10-26T22:11:57.3872782Z PASS source SHA-256: baseline/hybrid-terminal.0.4.4.html
+2026-10-26T22:11:57.3873868Z PASS source SHA-256: baseline/hybrid-terminal.0.4.5.html
+2026-10-26T22:11:57.3876162Z PASS source SHA-256: baseline/hybrid-terminal.0.4.6.html
+2026-10-26T22:11:57.3879012Z PASS source SHA-256: baseline/hybrid-terminal.0.4.7.html
+2026-10-26T22:11:57.3881929Z PASS source SHA-256: baseline/hybrid-terminal.0.4.8.html
+2026-10-26T22:11:57.3884756Z PASS source SHA-256: baseline/hybrid-terminal.0.4.9.html
+2026-10-26T22:11:57.3887960Z PASS source SHA-256: baseline/hybrid-terminal.0.4.10.html
+2026-10-26T22:11:57.3891045Z PASS source SHA-256: baseline/hybrid-terminal.0.4.11.html
+2026-10-26T22:11:57.3894326Z PASS source SHA-256: baseline/hybrid-terminal.0.4.12.html
+2026-10-26T22:11:57.3898044Z PASS source SHA-256: baseline/hybrid-terminal.0.4.13.html
+2026-10-26T22:11:57.6136844Z Running browser-smoke
+2026-10-26T22:11:59.6032777Z PASS: Chromium loads the actual HTML, renders the closed-candle panel and markers, replays mocked WebSocket updates, retains the decision at bar 93 after supersession at 100, controls history/live view, opens/closes help, and renders at desktop/mobile widths without page errors.
+2026-10-26T22:11:59.7560707Z Running browser-increment
+2026-10-26T22:12:01.8618712Z PASS layout desktop {"width":1440,"height":1000,"canvasHeight":434.375}
+2026-10-26T22:12:01.9895302Z PASS layout narrow {"width":430,"height":1000,"canvasHeight":280}
+2026-10-26T22:12:02.0917641Z PASS layout phone {"width":390,"height":844,"canvasHeight":280}
+2026-10-26T22:12:02.6152850Z PASS: actual Chromium/Canvas, independent appearance controls, synchronized RSI, daily pivot labels, desktop/430/390px layouts, navigation, Hebrew Help/panel, storage restoration, provisional WebSocket and older history; no page/console errors. Network data mocked.
+2026-10-26T22:12:02.8521571Z Running browser-integrity
+2026-10-26T22:12:04.7292279Z PASS: actual browser statistics states, Hebrew values, copied report (clipboard test double), actual JSON downloads and null empty intervals agree for five outcome cases.
+2026-10-26T22:12:05.7978363Z PASS: both-side conflict diagnostics retain WAIT, explicit cash-only assumption and nominal sizing labels, desktop/390px layouts, Help, preferences and untouched journal on sizing changes; no console/page errors. All feed/strategy fixtures in this suite are synthetic.
+2026-10-26T22:12:06.1280949Z Running browser-day-context
+2026-10-26T22:12:08.1416858Z PASS labels/layout desktop-collision [{"text":"PDH/PDL/PP/R1/S1 · distinct","names":["PDH","PDL","PP","R1","S1"],"x":780.8359375,"y":99.6487331224055,"width":183.1640625,"height":16,"validFrom":1792627200000}]
+2026-10-26T22:12:08.2567318Z PASS labels/layout phone-collision [{"text":"Levels ×5","names":["PDH","PDL","PP","R1","S1"],"x":229.88134765625,"y":74.18602755795936,"width":70.11865234375,"height":16,"validFrom":1792627200000}]
+2026-10-26T22:12:09.9499741Z PASS: real Chromium/Canvas pixel changes, independent shared-cache layers, deliberately colliding five levels with full-precision inspector, actual pan/zoom/drag/crosshair/End/history, frozen confirmed context/decisions/journal, desktop/390/430 layouts, Help and preference restoration. Feed/candidates are synthetic.
+2026-10-26T22:12:10.2585962Z Running browser-navigation
+2026-10-26T22:12:19.1489508Z PASS: actual mouse 80px/reverse/diagonal candle-pixel displacement, constant span, thresholds, axes/lower panes, capture/release, stream persistence, controls, keyboard/focus, layers/history and narrow emulated touch/cancel; no page/console errors. Synthetic feed; no physical-device or live-soak claim.
+2026-10-26T22:12:19.9750508Z Running browser-presentation
+2026-10-26T22:12:26.8401230Z PASS: current desktop/narrow WAIT, eligible-plan, unavailable and provisional screenshots; confirmed ATR/cost coordinates, no WAIT plan, independent provisional state, collapsed/persistent details, chart space, palette/body/pane preferences and journal invariance.
+2026-10-26T22:12:27.4923686Z Running browser-target-path
+2026-10-26T22:12:33.6811228Z PASS: target-path desktop/narrow rows/details, exact equal endpoints, source exclusions, actual pointer/provisional anchor stability, WAIT isolation and journal/engine invariance.
+2026-10-26T22:12:34.2096293Z Running browser-provenance-readability
+2026-10-26T22:12:42.2597711Z PASS: exact confirmed windows, chart-only history, Full/Focus Canvas differences and exact Full restoration, plan/current price preservation, precise distinct values, preferences and symbol/timeframe transitions.
+2026-10-26T22:12:43.2580844Z Running browser-planning-costs
+2026-10-26T22:12:51.7259868Z PASS: LONG/SHORT planning baseline/stress, invalid-input clearing, persisted assumptions, focused input through provisional frames, WAIT isolation, unchanged baseline/engine/journal, desktop/narrow screenshots.
+2026-10-26T22:12:52.4968368Z Running browser-readability-help
+2026-10-26T22:13:08.4374404Z PASS: bilingual Help, explicit close/navigation/language buttons, keyboard focus/Escape, persistence/faults, unchanged preferences/engine/journal, palettes and desktop/narrow formulas. Existing countdown/DO inventory recorded separately.
+2026-10-26T22:13:09.3995649Z Running browser-volume-legend
+2026-10-26T22:13:29.0177301Z PASS: bounded divider/axis controls, rasterized zero/clipping and shared geometry, RSI/None transitions, restoration/faults, visible legends at widths 1440/430/390/320, unchanged decisions/journal.
+2026-10-26T22:13:30.9562807Z Running browser-confirmed-volume
+2026-10-26T22:13:41.0150577Z PASS: confirmed-volume ratio/class/direction pixels, UTC anchor, actual hover/history/provisional/confirmation, scaling/restoration, RSI/None, stale symbol/timeframe, availability and bilingual narrow Help.
+2026-10-26T22:13:41.9199730Z Running browser-regional-windows
+2026-10-26T22:14:00.4901147Z PASS: optional NOW regional clocks/definitions at desktop/390/320, native DST/weekend boundaries, timer/resume without engine/storage/network work, chart/decision independence, preferences/faults, preserved Volume controls and bilingual Help.
+2026-10-26T22:14:01.6133089Z Running browser-adr20
+2026-10-26T22:14:22.8341857Z PASS: ADR20 confirmed arithmetic/coverage/default-off desktop/390/320, hover/history/provisional independence, shared daily cache, midnight waiting, stale config replies, isolated preferences/faults, preserved Volume/journal/engine and equivalent Help.
+2026-10-26T22:14:24.6271492Z Running browser-chart-type
+2026-10-26T22:14:45.7508191Z PASS: actual close-line coordinates/pixels, dashed provisional then solid confirmation, invalid/missing breaks, default Candles parity, native storage/journal retention, shared navigation/Volume and ADR/regional contexts, desktop/390/320 and bilingual Help.
+2026-10-26T22:14:47.5658505Z Running browser-manual-drawings
+2026-10-26T22:15:05.2049597Z PASS: actual manual segment Canvas coordinates/pixels, two-point preview/create/edit/cancel/delete/undo, navigation versus selection, history/live/resize/mode transforms, context isolation, native storage/faults, Volume/ADR/regional coexistence, desktop/390/320 and bilingual Help.
+2026-10-26T22:15:06.6002188Z PASS browser: 16 suites
