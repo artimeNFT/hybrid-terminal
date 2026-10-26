@@ -1,0 +1,47 @@
+{
+  "version": "0.4.12",
+  "sourceSha256": "f477eae1b50e435023e4f0a15e4e9a04601aadc800870fd978f9669aece02e37",
+  "checks": [
+    {
+      "width": 1440,
+      "adr": 10.5,
+      "range": 22,
+      "percent": 209.52380952380952,
+      "coverage": 20,
+      "candles": 12,
+      "chartGeometryUnchanged": true,
+      "priorPreferencesAndJournalRetained": true,
+      "hoverHistoryProvisionalTimezoneIndependent": true,
+      "cacheShared": true,
+      "volumePreserved": true
+    },
+    {
+      "width": 390,
+      "adr": 10.5,
+      "range": 22,
+      "percent": 209.52380952380952,
+      "coverage": 20,
+      "candles": 12,
+      "chartGeometryUnchanged": true,
+      "priorPreferencesAndJournalRetained": true,
+      "hoverHistoryProvisionalTimezoneIndependent": true,
+      "cacheShared": true,
+      "volumePreserved": true
+    },
+    {
+      "width": 320,
+      "adr": 10.5,
+      "range": 22,
+      "percent": 209.52380952380952,
+      "coverage": 20,
+      "candles": 12,
+      "chartGeometryUnchanged": true,
+      "priorPreferencesAndJournalRetained": true,
+      "hoverHistoryProvisionalTimezoneIndependent": true,
+      "cacheShared": true,
+      "volumePreserved": true
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Chromium layout/controls/mouse and native persistent storage on a fully mocked stable HTTP origin, isolated profiles with synthetic daily/intraday/clock/network/storage. Midnight is a deterministic boundary fixture, not a live observation. Separate bounded public-source receipt is not part of CI."
+}

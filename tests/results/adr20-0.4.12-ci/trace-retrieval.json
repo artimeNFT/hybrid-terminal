@@ -1,0 +1,10 @@
+{
+  "run": 40359768903,
+  "artifactId": 12666463874,
+  "member": "browser/browser-adr20/trace-3.zip",
+  "compressedBytes": 4428101,
+  "uncompressedBytes": 4450647,
+  "crc32Verified": true,
+  "memberSha256": "5885d0fb51b248930c71a2b7e0aee37dd3787b51deee550dcefb90d95420f13b",
+  "scope": "Bounded authenticated range retrieval of actual CI trace only; no token or signed URL saved."
+}

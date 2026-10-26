@@ -1,0 +1,26 @@
+{
+  "run": 40359768903,
+  "sourceCommit": "8378741e16eac8b8a1aea79c87144c0505efc42e",
+  "viewport": 320,
+  "failure": "new ADR browser test reload-restoration timeout",
+  "traceMember": "browser/browser-adr20/trace-3.zip",
+  "beforeReload": {
+    "adrChecked": true,
+    "notice": "Choice saved on this device.",
+    "chartTimezone": "UTC"
+  },
+  "afterReload": {
+    "adrChecked": false,
+    "notice": "Optional confirmed UTC context; off by default.",
+    "chartTimezone": "Asia/Jerusalem",
+    "dailyRequestAfterReload": false
+  },
+  "observation": "ADR and prior timezone returned to fresh defaults on this CI file:// reload. Exact native storage contents were not captured in the failing predicate; the DOM/network observation is not proof of a particular browser-internal cause.",
+  "sourceAudit": "No localStorage.clear/removeItem or cross-key deletion in the application; ADR writes only its own key. HTML unchanged.",
+  "correction": "Fully mocked stable HTTP origin; assert ADR saved true and compare every native storage key/byte, including sentinel/journal, across actual reload. No Storage proxy/reseed for this normal persistence check. Other malformed/read/write fault fixtures remain separate.",
+  "limitations": "Do not claim the observed CI file:// storage issue is fixed in production; file-origin persistence is browser-policy dependent and specific-device acceptance remains pending.",
+  "standards": [
+    "https://url.spec.whatwg.org/#origin",
+    "https://html.spec.whatwg.org/multipage/webstorage.html#the-localstorage-attribute"
+  ]
+}
