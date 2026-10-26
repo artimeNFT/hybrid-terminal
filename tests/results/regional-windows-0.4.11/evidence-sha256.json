@@ -1,0 +1,20 @@
+{
+  "tests/results/regional-windows-0.4.11/REPORT.md": "e834e8f14a0d54889f64b9b711d79c549ff09a2292fc2d23f032b60799a698f5",
+  "tests/results/regional-windows-0.4.11/app-manifest.json": "13eec82cdfd121785bbc294492aee3ce7fcd2c9eff55cd909854fbaeb737de79",
+  "tests/results/regional-windows-0.4.11/audit-manifest.json": "416dda488fd2065833659dcd57b0563ffbbeb0282cc56597e2980dd52b7ac733",
+  "tests/results/regional-windows-0.4.11/browser-evidence.json": "d07a1a200cd92dacf81eb2c414ec1948a9d249f7c7de8b079de9368ede724cfe",
+  "tests/results/regional-windows-0.4.11/browser-manifest.json": "6b078da43c6a2f473ee1b392eac064ad5c984980595f7674dfb333455affb45b",
+  "tests/results/regional-windows-0.4.11/browser-network-guard.json": "ea36747d47f27883febd0e2f05802d22831fcc75c13870391b665246c343634b",
+  "tests/results/regional-windows-0.4.11/browser-test.log": "a31d03760fce820c8fb0320dcd5f4753ad0daca28bf1dec18390bb0cc9963b03",
+  "tests/results/regional-windows-0.4.11/contract-manifest.json": "34fe322c3e98d6f7ab148d03b6bc9486f833c0b3856357310d98ff06ebb800da",
+  "tests/results/regional-windows-0.4.11/definitions-v1.json": "5e21626893e172402640cdf7fe7da7c7d47fd29ef91969627bc31be017b8805e",
+  "tests/results/regional-windows-0.4.11/focused.log": "ad8991751befd6ca69f26c3d7cad144b6996f293247540baf357547233737d31",
+  "tests/results/regional-windows-0.4.11/npm-test.log": "0f9b14481ada8a9a8b090156cec36fb35b7fe666a4d008f5d76e97fec70cd433",
+  "tests/results/regional-windows-0.4.11/preparation-manifest.json": "cee962a38d5c3e35d9056e383967e65bff85fa3b653e5c968f1e1fc1a8838f9e",
+  "tests/results/regional-windows-0.4.11/presentation-manifest.json": "6b6d1d0d30b6c68278a85abda0f83c5bbadb8510cfdc769498f84d0e15e18567",
+  "tests/results/regional-windows-0.4.11/preservation.json": "2fe5fcedd4d2f504c7cb2c4fdb9259df356c5ff3217d07278457d7b5100b8c05",
+  "tests/results/regional-windows-0.4.11/research-manifest.json": "325ee1f590aa7a4f433638b922d4f7faed916882080aeaf3a8388aebf9dd3968",
+  "tests/results/regional-windows-0.4.11/screenshots.json": "71d3bab9559a03ff951dda56cef26a75a24912213b691d6211b797a3237102b8",
+  "tests/results/regional-windows-0.4.11/source-check.log": "ec79e15516a509cd30694c5bd3f7404b7fc91f3416543a73f35297bae1df62a6",
+  "tests/results/regional-windows-0.4.11/validation-source-identities.json": "d13d600a1d0def5a4d6a56f72ccb919decd4ddef443ffe5530e0dc55fd47ad3b"
+}

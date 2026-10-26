@@ -1,0 +1,221 @@
+{
+  "version": "0.4.11",
+  "sourceSha256": "22ef701f791907fa8f92a1b9f3ae2ac2d139734db475d47270e1122784c0b3f3",
+  "checks": [
+    {
+      "width": 1440,
+      "geometry": {
+        "stripBottom": 200.765625,
+        "plotTop": 276.765625,
+        "scroll": 1440,
+        "width": 1440,
+        "rows": [
+          {
+            "width": 337,
+            "scroll": 337
+          },
+          {
+            "width": 337,
+            "scroll": 337
+          },
+          {
+            "width": 337,
+            "scroll": 337
+          }
+        ]
+      },
+      "overlap": [
+        {
+          "id": "tokyo",
+          "name": "Tokyo / Asia",
+          "zone": "Asia/Tokyo",
+          "state": "active",
+          "localDate": "2026-07-13",
+          "clock": "17:00:00",
+          "boundary": 1783933200000,
+          "boundaryKind": "end",
+          "remainingMs": 3600000
+        },
+        {
+          "id": "london",
+          "name": "London",
+          "zone": "Europe/London",
+          "state": "active",
+          "localDate": "2026-07-13",
+          "clock": "09:00:00",
+          "boundary": 1783958400000,
+          "boundaryKind": "end",
+          "remainingMs": 28800000
+        },
+        {
+          "id": "new-york",
+          "name": "New York",
+          "zone": "America/New_York",
+          "state": "next",
+          "localDate": "2026-07-13",
+          "clock": "04:00:00",
+          "boundary": 1783944000000,
+          "boundaryKind": "start",
+          "remainingMs": 14400000
+        }
+      ],
+      "clockTimerEngineCalls": 0,
+      "additionalClockRequests": 0,
+      "storageUnchangedOnTick": true,
+      "resumeCurrent": true,
+      "chartDecisionMarketIndependent": true,
+      "volumePreserved": true,
+      "dstBoundaries": [
+        1773648000000,
+        1773662400000,
+        1793001600000,
+        1793016000000,
+        1773057600000
+      ]
+    },
+    {
+      "width": 390,
+      "geometry": {
+        "stripBottom": 462.515625,
+        "plotTop": 553.515625,
+        "scroll": 390,
+        "width": 390,
+        "rows": [
+          {
+            "width": 370,
+            "scroll": 370
+          },
+          {
+            "width": 370,
+            "scroll": 370
+          },
+          {
+            "width": 370,
+            "scroll": 370
+          }
+        ]
+      },
+      "overlap": [
+        {
+          "id": "tokyo",
+          "name": "Tokyo / Asia",
+          "zone": "Asia/Tokyo",
+          "state": "active",
+          "localDate": "2026-07-13",
+          "clock": "17:00:00",
+          "boundary": 1783933200000,
+          "boundaryKind": "end",
+          "remainingMs": 3600000
+        },
+        {
+          "id": "london",
+          "name": "London",
+          "zone": "Europe/London",
+          "state": "active",
+          "localDate": "2026-07-13",
+          "clock": "09:00:00",
+          "boundary": 1783958400000,
+          "boundaryKind": "end",
+          "remainingMs": 28800000
+        },
+        {
+          "id": "new-york",
+          "name": "New York",
+          "zone": "America/New_York",
+          "state": "next",
+          "localDate": "2026-07-13",
+          "clock": "04:00:00",
+          "boundary": 1783944000000,
+          "boundaryKind": "start",
+          "remainingMs": 14400000
+        }
+      ],
+      "clockTimerEngineCalls": 0,
+      "additionalClockRequests": 0,
+      "storageUnchangedOnTick": true,
+      "resumeCurrent": true,
+      "chartDecisionMarketIndependent": true,
+      "volumePreserved": true,
+      "dstBoundaries": [
+        1773648000000,
+        1773662400000,
+        1793001600000,
+        1793016000000,
+        1773057600000
+      ]
+    },
+    {
+      "width": 320,
+      "geometry": {
+        "stripBottom": 471.515625,
+        "plotTop": 562.515625,
+        "scroll": 320,
+        "width": 320,
+        "rows": [
+          {
+            "width": 300,
+            "scroll": 300
+          },
+          {
+            "width": 300,
+            "scroll": 300
+          },
+          {
+            "width": 300,
+            "scroll": 300
+          }
+        ]
+      },
+      "overlap": [
+        {
+          "id": "tokyo",
+          "name": "Tokyo / Asia",
+          "zone": "Asia/Tokyo",
+          "state": "active",
+          "localDate": "2026-07-13",
+          "clock": "17:00:00",
+          "boundary": 1783933200000,
+          "boundaryKind": "end",
+          "remainingMs": 3600000
+        },
+        {
+          "id": "london",
+          "name": "London",
+          "zone": "Europe/London",
+          "state": "active",
+          "localDate": "2026-07-13",
+          "clock": "09:00:00",
+          "boundary": 1783958400000,
+          "boundaryKind": "end",
+          "remainingMs": 28800000
+        },
+        {
+          "id": "new-york",
+          "name": "New York",
+          "zone": "America/New_York",
+          "state": "next",
+          "localDate": "2026-07-13",
+          "clock": "04:00:00",
+          "boundary": 1783944000000,
+          "boundaryKind": "start",
+          "remainingMs": 14400000
+        }
+      ],
+      "clockTimerEngineCalls": 0,
+      "additionalClockRequests": 0,
+      "storageUnchangedOnTick": true,
+      "resumeCurrent": true,
+      "chartDecisionMarketIndependent": true,
+      "volumePreserved": true,
+      "dstBoundaries": [
+        1773648000000,
+        1773662400000,
+        1793001600000,
+        1793016000000,
+        1773057600000
+      ]
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Chromium IANA calendar, optional DOM strip, native controls/mouse and existing one-second timer; synthetic market/time/storage fixtures, not real-session or physical acceptance."
+}

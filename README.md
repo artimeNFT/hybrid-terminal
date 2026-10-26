@@ -1,10 +1,24 @@
-# Hybrid Terminal 0.4.10 RC
+# Hybrid Terminal 0.4.11 RC
 
-**Current direction and task order:** read CURRENT [STATUS.md](STATUS.md). Release 0.4.10 makes the existing relative-volume reference visible at the last confirmed candle, preserving integrated 0.4.9 controls and Help. Authoritative HTML SHA-256 `5dded54c4a79ab7f38c13a793e359969b2b507497d6a062ea241e882ca540fd2`. Historical midnight PASS stays specific to exact 0.4.7; hour soak stays specific to 0.4.4. No observation/research rerun or live acceptance transfer. Regional session windows remain queued. Actual publication/CI receipts and source-specific limits are in STATUS.
+**Current direction and task order:** read CURRENT [STATUS.md](STATUS.md). Release 0.4.11 adds optional default-off regional NOW reference clocks, preserving the confirmed Volume summary and all calculation/strategy behavior. Authoritative HTML SHA-256 `22ef701f791907fa8f92a1b9f3ae2ac2d139734db475d47270e1122784c0b3f3`. Historical 0.4.4 hour-soak and observed 0.4.7 midnight acceptance stay source-specific; no observation/cohort/acquisition rerun. Publication/CI and limitations are recorded in STATUS. No automatic ADR or further session feature.
 
 Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Binance spot REST/WebSocket access is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
 
 Chart/header/inspector text is English; the analysis panel is Hebrew. Help offers Hebrew and English, with Hebrew on a fresh installation. On narrow screens the chart has its own usable height and the main area scrolls to the analysis panel.
+
+## Optional Regional windows · Now — 0.4.11
+
+Enable **Display → Regional windows · Now**. It is disabled on a fresh installation and stores only its own enabled choice. The compact strip sits outside the candle canvas. Each region shows its local clock, **In window** or **Next window**, and time until its end/start.
+
+| Chosen v1 reference | Local weekdays and time | Native IANA zone |
+| --- | --- | --- |
+| Tokyo / Asia | Monday–Friday, 09:00–18:00 | Asia/Tokyo |
+| London | Monday–Friday, 08:00–17:00 | Europe/London |
+| New York | Monday–Friday, 08:00–17:00 | America/New_York |
+
+Starts are inclusive and ends exclusive. Weekends follow each regional calendar; official holidays are not handled. These deliberately chosen references are not official exchange hours, liquidity guarantees or verified TR_MAIN sessions. Simultaneous windows do not add a trading signal, score vote or strategy filter. Definitions are available in an accessible expander and both Help languages; no custom-hour editing.
+
+This is **NOW**, independent of chart history/hover, chart display timezone, confirmed decisions and market/timeframe. Native IANA date-specific offsets resolve each future boundary, including weekends crossing DST. It uses device time plus the last trusted server offset when available, otherwise a disclosed local-clock estimate. Clock context never establishes feed health. The existing one-second timer is reused; no extra polling or analysis/backtest/journal writes are introduced. Resume recomputes current time, while existing feed-resync behavior stays intact. Malformed preference bytes are preserved until explicit action; unavailable writing is session-only. No other preference or journal data is cleared. No chart shading, session boxes/ranges/extrema or new indicator. Browser timezone data and clock estimation are practical limits; physical/user acceptance remains separate.
 
 ## Confirmed Volume heading — 0.4.10
 
@@ -27,11 +41,11 @@ npm run qa:browser:install
 npm run test:browser
 ```
 
-`npm test` runs the active versioned source checks, nine deterministic app suites, the unchanged 18-case research / nine audit / nine contract / 13 preparation fixtures in an explicit frozen 0.4.3 context, and five presentation, six target-path, seven provenance/readability, seven planning-cost, six readability/Help, eight volume/legend and five confirmed-volume checks. Browser QA runs twelve mocked Chromium scripts with synthetic REST/WebSocket fixtures, a guard rejecting unmocked external requests, and per-context traces. Test logs, screenshots, traces and manifests go to ignored `.qa-results/`. Open a trace with `npx playwright show-trace .qa-results/browser/browser-navigation/trace-1.zip`. Neither required CI group uses public Binance, acquired datasets, browser journals, credentials or WSL-specific paths. Legacy direct script commands remain available; the npm runner supplies nonhistorical output directories.
+`npm test` runs the active versioned source checks, nine deterministic app suites, the unchanged 18-case research / nine audit / nine contract / 13 preparation fixtures in an explicit frozen 0.4.3 context, and five presentation, six target-path, seven provenance/readability, seven planning-cost, six readability/Help, eight volume/legend and five confirmed-volume and eight regional-window checks. Browser QA runs thirteen mocked Chromium scripts with synthetic REST/WebSocket fixtures, a guard rejecting unmocked external requests, and per-context traces. Test logs, screenshots, traces and manifests go to ignored `.qa-results/`. Open a trace with `npx playwright show-trace .qa-results/browser/browser-navigation/trace-1.zip`. Neither required CI group uses public Binance, acquired datasets, browser journals, credentials or WSL-specific paths. Legacy direct script commands remain available; the npm runner supplies nonhistorical output directories.
 
 On a minimal **Ubuntu 24.04 x64 WSL host without passwordless sudo**, use `npm run qa:browser:local` instead of `qa:browser:install`. It installs the pinned Chromium and downloads/extracts the three missing Ubuntu NSS/NSPR/ALSA packages under ignored `.tools/browser-libs`; the runner discovers these local libraries. Other operating systems should use Playwright's normal dependency setup. This fallback requires Ubuntu apt metadata/access but no system writes. No old `/tmp/hybrid-qa-tools` package/library path is used by the normal QA runner.
 
-Git tracks source, schema, tests, required baselines, documentation, package lock and small textual evidence. Acquired `research/datasets/`, dependencies/tools, release ZIPs and bulky generated browser artifacts remain on disk and are ignored. Frozen data and historical full-delivery manifests are provenance records; those full manifests require the retained local delivery and are **not** required checkout/CI checks. `npm run check:source` uses new `qa/source-checksums.0.4.10.json` for the active app, exact internal baseline, binding code and required tracked sources. The old `qa/source-checksums.json` remains an unchanged historical 0.4.3 manifest and is verified only in its explicit frozen context.
+Git tracks source, schema, tests, required baselines, documentation, package lock and small textual evidence. Acquired `research/datasets/`, dependencies/tools, release ZIPs and bulky generated browser artifacts remain on disk and are ignored. Frozen data and historical full-delivery manifests are provenance records; those full manifests require the retained local delivery and are **not** required checkout/CI checks. `npm run check:source` uses new `qa/source-checksums.0.4.11.json` for the active app, exact internal baseline, binding code and required tracked sources. The old `qa/source-checksums.json` remains an unchanged historical 0.4.3 manifest and is verified only in its explicit frozen context.
 
 `.github/workflows/ci.yml` uses Node 24 / standard Ubuntu 24.04, separate bounded deterministic and Chromium jobs, push/PR targeting main and manual dispatch. Action versions are pinned to verified official release SHAs. Permissions are read-only; only failure diagnostics from `.qa-results/` are uploaded, retained for three days. Required checks do not deploy, schedule collection, enable auto-merge or configure paid runners.
 

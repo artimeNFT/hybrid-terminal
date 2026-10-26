@@ -1,0 +1,4 @@
+{
+  "unexpected": [],
+  "scope": "All public HTTP/WebSocket requests must be fulfilled by the existing synthetic page routes"
+}

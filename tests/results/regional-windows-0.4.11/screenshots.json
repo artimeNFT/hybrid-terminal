@@ -1,0 +1,144 @@
+{
+  "version": "0.4.11",
+  "sourceSha256": "22ef701f791907fa8f92a1b9f3ae2ac2d139734db475d47270e1122784c0b3f3",
+  "evidenceRoot": "/tmp/hybrid-regional-windows-0.4.11",
+  "viewports": [
+    [
+      1440,
+      1100
+    ],
+    [
+      390,
+      900
+    ],
+    [
+      320,
+      900
+    ]
+  ],
+  "fixtureNow": "2026-07-13T08:00:00Z plus controlled increments",
+  "scope": "Actual native Chromium/DOM, mocked feed/time/storage; not physical or real-session acceptance",
+  "images": [
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/desktop-default-off.png",
+      "sha256": "5dbd7a45c3df2f9d6d7e393be554f91764f19dad49f3d7a12f4aca854ad17591",
+      "bytes": 198435,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/desktop-definitions.png",
+      "sha256": "8c18a564640ff6f8ef6835d20794a8b4fd216c0c0ac494272bc916866f769ebd",
+      "bytes": 274492,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/desktop-local-estimate.png",
+      "sha256": "bf365ce096ac4ff7261ed5e9d4db680e825e478198d221bd2da8f0256906bd8a",
+      "bytes": 275127,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/desktop-now-overlap.png",
+      "sha256": "8fcd63eb5590b11df01cbedc7a0c86f27de000c15f2107836e54ddf300a26902",
+      "bytes": 213441,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/desktop-volume-preserved.png",
+      "sha256": "d36acc1cd581427837ef97c44b8b3276bca2194b05250cf5b59e2b1aaf1c6d86",
+      "bytes": 238439,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-320-default-off.png",
+      "sha256": "78dfa1cc2f3b313f3f5d1ea3b8180a623bf7d8f256c5c786c241cc6b80b7a6c1",
+      "bytes": 85408,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-320-definitions.png",
+      "sha256": "a48d2d00467e1f6390885b89b8ec38082ac7c962feb67f502ed5a420be75a332",
+      "bytes": 87824,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-320-local-estimate.png",
+      "sha256": "d21aaa57892fbd5f46e541b60807e5f2c7ae3087ee0e93c09d601ba11ce88214",
+      "bytes": 88511,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-320-now-overlap.png",
+      "sha256": "69d5f281a369228ac0f5e3f007f148e3de00d05ab9f8084a079d5b9a5f852f59",
+      "bytes": 87177,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-320-volume-preserved.png",
+      "sha256": "981b38195efd64a714ff7ad924d7978f125626049a4e6faeb39c1d1c2b209347",
+      "bytes": 93727,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-390-default-off.png",
+      "sha256": "1eceb5f05a5df70ec37cba16a33fef093504cc4179eaf16ada064755aba62cf7",
+      "bytes": 92546,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-390-definitions.png",
+      "sha256": "fe6acfb33132f08c1370885ab7b56f91a435a6d28752642e0e5853c2fdc48e72",
+      "bytes": 100869,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-390-local-estimate.png",
+      "sha256": "7f2221a70e6c6eb4f9a67f0ba649f55069514f41c207b0ff11baa4a6d6e595b0",
+      "bytes": 101562,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-390-now-overlap.png",
+      "sha256": "473fafa70f163c85d59612073187532f50e84b65db3f8d6ba8eb952c1645c275",
+      "bytes": 93315,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-390-volume-preserved.png",
+      "sha256": "d0ca6c6680195b1c88b86297b7f2df58d95b3c122b97026bf9576e185a2df077",
+      "bytes": 102887,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-help-en.png",
+      "sha256": "61a34e73a451d6d4cfcdb4635d5fc3bf411f90ef33c856fda8838aca87eea43d",
+      "bytes": 95497,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-help-he.png",
+      "sha256": "6392c99ee2e2ba266ebf52fa1be0c8728d7e270e7c471cea6687ab7d15ad477c",
+      "bytes": 85347,
+      "visuallyInspected": true
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-storage-invalid.png",
+      "sha256": "cfd9298b4e71f0ad2bdc7d8f3b94da781e78c004e82ccb0e22eb1e8cc64d9830",
+      "bytes": 69857,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-storage-read.png",
+      "sha256": "cfd9298b4e71f0ad2bdc7d8f3b94da781e78c004e82ccb0e22eb1e8cc64d9830",
+      "bytes": 69857,
+      "visuallyInspected": false
+    },
+    {
+      "path": ".qa-results/regional-windows-0.4.11/browser-final/narrow-storage-write.png",
+      "sha256": "fb861a827a73c05cc6b0932d20e16beb11d3da4e3676a78434f30a298b2f381c",
+      "bytes": 67720,
+      "visuallyInspected": false
+    }
+  ],
+  "traces": 6
+}

@@ -1,0 +1,16 @@
+✔ chosen v1 definitions are frozen, opt-in is off with no write, and all prior functions except resume binding remain identical (100.955427ms)
+✔ exact starts are inclusive and ends exclusive in winter and summer, with native date-specific IANA offsets (23.720813ms)
+✔ US/UK mismatch weeks use distinct offsets, and Monday conversion crosses spring/autumn weekend transitions correctly (20.886041ms)
+✔ weekends use each regional date, including UTC rollover and chosen weekday windows on official holidays (25.942422ms)
+✔ independent windows expose both overlaps without a combined score, and invalid clocks/zones remain unavailable (30.052695ms)
+✔ clock quality uses last trusted server offset or discloses device estimation, independently of market feed (18.91852ms)
+✔ isolated enabled preference restores, guards malformed/nonboolean values and storage faults without changing prior records/settings (277.469655ms)
+✔ clock-only refresh and hidden resume mutate neither analysis/backtest/journal nor configuration-dependent regional time (23.338171ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 598.715378

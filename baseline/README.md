@@ -15,3 +15,5 @@ The only active user application is **`../hybrid-terminal.html`**. HTML files in
 `hybrid-terminal.0.4.8.html` preserves exact predecessor candidate `30432aba73c3b6a5112999f2d0448e9835dfdeaa`, SHA-256 `49267248f1808133c52e2331fa9d6f7b325be7580a71867177c5dd5d12323858`. It is an internal reference. Successor 0.4.9 and predecessor 0.4.8 remain unmerged; authoritative root remains 0.4.7.
 
 - `hybrid-terminal.0.4.9.html`: internal exact pre-edit 0.4.9 reference from published main `5cfa621`; SHA-256 `3d8cc67d458d24f8bc20870aa24078ad32749b8c95fc500c6f311bdfe0fd6139`. Not an active user application.
+
+- `hybrid-terminal.0.4.10.html`: internal exact pre-edit reference from published main `5db5e71`, SHA-256 `5dded54c4a79ab7f38c13a793e359969b2b507497d6a062ea241e882ca540fd2`. Not an active user application.
