@@ -1,0 +1,8 @@
+{
+  "hybrid-terminal.html": "f477eae1b50e435023e4f0a15e4e9a04601aadc800870fd978f9669aece02e37",
+  "STATUS.md": "7c3b3ec6d022bcba386edca39561c4809a8b510506742148158bae3eabf9ea78",
+  "qa/source-checksums.0.4.12.json": "c4845b9e9e8ac69b032ad28b40a85dc67a50bb522cd037ece0084335b5486fcb",
+  "qa/adr20-0.4.12-sha256.json": "cebd0e1318c628f9c10b112d161f22f4d42bcceeb951b0a3f1a5d8ad51f2d445",
+  "qa/adr20-0.4.12-ci-sha256.json": "d9285595bb424b5248905b5e55351b804374ec93409aa12805d6f6b5d4c58743",
+  "tests/results/adr20-0.4.12-publication/evidence-sha256.json": "74b66e3cbbb927946b01d5569a9da3d3018749db9a5048921376bea83091e523"
+}
