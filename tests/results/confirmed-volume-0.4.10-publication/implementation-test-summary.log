@@ -1,0 +1,95 @@
+2026-10-26T11:11:22.5518899Z PASS: M replacement at pivot 97 preserves the decision at bar 93; supersession begins at 100.
+2026-10-26T11:11:22.5751523Z PASS: W replacement at pivot 97 preserves the decision at bar 93; supersession begins at 100.
+2026-10-26T11:11:57.1767470Z PASS: 4002 original/current-bar comparisons and 4185 append-only decision comparisons; 183 explicit flat-RSI unavailable cases across 15 datasets and all three score thresholds.
+2026-10-26T11:11:57.1769629Z PASS: complete event history reproduces every original prefix pattern set; backtest outputs are finite.
+2026-10-26T11:11:57.3506139Z PASS: application startup, closed-candle panel, REST/WebSocket flow, canvas draw calls, M/W confirmation/supersession, help, layer toggle and report copy.
+2026-10-26T11:11:57.5370392Z PASS: 20 developing-candle changes leave confirmed signal, recovery statistics and backtest unchanged; confirmation occurs only on x=true; confirmed bars cannot be downgraded.
+2026-10-26T11:11:57.7620369Z PASS: real setup fixture emits no provisional alert, emits one close alert, suppresses duplicate closes and agrees with completed-candle replay.
+2026-10-26T11:11:57.7860343Z PASS: missing server time conservatively leaves the final REST candle provisional, independent of the local wall clock.
+2026-10-26T11:11:57.8158486Z PASS: an older BTC response cannot overwrite ETH; cache identity changes with the asset; mismatched stream symbols are ignored.
+2026-10-26T11:11:57.8558648Z PASS: higher-timeframe context refreshes on its close boundary using closed candles; a stream gap starts a guarded REST resynchronization.
+2026-10-26T11:11:58.0702680Z PASS: right margin, cursor-anchored zoom, full loaded-history navigation, clamped future pan, End/Home controls, consistent drag width, stable historical view on new candles, price scale reset, future crosshair and timezone selection.
+2026-10-26T11:11:58.2480768Z PASS: all three palettes meet >=3:1 against modeled chart backgrounds (minimum 5.05:1); default bodies are filled, own-bar direction is stable across volume classes, legacy settings migrate, display choices preserve decisions, and chart/header text is English.
+2026-10-26T11:11:58.2795066Z PASS: delayed/stale and offline feeds are visibly identified; returning to a stale tab resynchronizes; a hanging REST request reaches an explicit timeout error.
+2026-10-26T11:12:02.7628826Z PASS: journal captures closed decisions only, deduplicates, survives reload, exports, preserves a prior conflicting decision, reports unavailable storage, protects malformed stored data, and enforces explicit 1000-record retention.
+2026-10-26T11:12:02.9139567Z PASS: an offline confirmed setup cannot emit a notification; invalid account/risk inputs do not produce a position size.
+2026-10-26T11:12:04.2470102Z PASS: five dated pages add 5000 chart-only candles, enforce the cap and preserve all live-core bars, confirmed signal, statistics, backtest and journal snapshots; live appends retain the historical viewport.
+2026-10-26T11:12:04.3779982Z PASS: short history pages stop further loading; discontinuous history is rejected without touching live decisions; obsolete history responses cannot cross an asset switch.
+2026-10-26T11:12:04.7066076Z PASS: 54 palette/body/class/direction cases, neutral doji, own OHLC despite conflicting cached direction, v1/v2 preferences, unrelated view fields and byte-identical journal across appearance changes.
+2026-10-26T11:12:04.7600841Z PASS: displayed RSI reuses the original RSI14 array, hides seed/warm-up, follows selected candle/pan/zoom/crosshair, marks developing values provisional, preserves closed signals/backtest/journal and retains Volume/None choices.
+2026-10-26T11:12:05.7592218Z PASS: pivot 110/90/100 arithmetic, UTC boundaries/timezone invariance, separate complete daily source, missing/incomplete source rejection, stable history, <=1000-day pagination and obsolete symbol/timeframe/range response rejection.
+2026-10-26T11:12:05.8699748Z PASS: real baseline reproduces both optimistic gap fills; new long/short gross -2.5R and net -2.55R, ordinary ambiguous bars stop first, invalid gap entries skipped, explicit execution version, old journal records preserved.
+2026-10-26T11:12:05.9859656Z PASS: empty/all-zero/no-loss/all-loss/mixed net-R states agree in actual UI, copied report and serialized research export; known Wilson reference, ratio overflow and invalid outcomes; actual backtest no-loss/empty aggregation.
+2026-10-26T11:12:06.0324303Z PASS: reviewed 1000/1%/100/99.9 sizing, nominal 100 units/10000 notional/10x, explicit cash scenario and balance, insufficient/covered-before-costs/SHORT/unconfigured/invalid/overflow states; no feasible/executable quantity or venue approval invented.
+2026-10-26T11:12:06.0620026Z PASS: review tie fixture exposes eligible LONG but deliberately retains selected SHORT/WAIT; no fallback or threshold tuning, clear conflict reason and frozen confirmed versus provisional diagnostics.
+2026-10-26T11:12:06.1944621Z PASS: flat zero-volume has no vectors, zero ATR and undefined RSI are non-actionable, warm-up/invalid arithmetic/overflow are explicit, one-sided RSI remains 100, zero-product references are not strength and partial-day coverage is labeled without replacing VWAP.
+2026-10-26T11:12:07.7918684Z PASS: 6882 ordinary valid-input decisions exactly match actual 0.4.0 legacy fields, plans, items, thresholds and direction policy across 14 datasets; volume classes unchanged.
+2026-10-26T11:12:07.8259143Z PASS: prior journal record bytes/IDs/versions retained, new semantics identified separately, execution version/fees retained, sizing/appearance/export leave journal bytes unchanged and preference migration retains unrelated fields.
+2026-10-26T11:12:08.0861984Z PASS: known/distinct PDH/PDL periods, [from,to) boundaries, independent toggles and cache reuse, preserved preferences, historical chart versus frozen current context, no autoscale distortion and unchanged signal/backtest/journal bytes.
+2026-10-26T11:12:08.0878721Z PASS: exact nearest above/below/equal grouping, missing sides, finite positive price/ATR denominators and deterministic merged/overflow label placement.
+2026-10-26T11:12:08.7234300Z PASS: incomplete/truncated/invalid/duplicate/out-of-order/failed/missing daily source and missing trusted clock stay unavailable; failures use bounded retry instead of update-driven request floods.
+2026-10-26T11:12:08.9530961Z PASS: exact midnight close advances context before the next opening-bar update, delayed sources are unknown until validated, trusted clock lag is conservative, and late completion/provisional updates preserve frozen decisions/backtest/journal.
+2026-10-26T11:12:09.2608388Z PASS: one shared in-flight/cache path, independent layer rendering, all-off/reenable guards, obsolete asset/timeframe/range rejection and <=1000-day missing-range pagination.
+2026-10-26T11:12:09.3583759Z PASS: exact 0.4.1 signal/backtest/journal upgrade preservation, unchanged rule/execution versions, no context-induced journal write, and IANA Jerusalem DST-aware observation labels.
+2026-10-26T11:12:09.7403718Z PASS: 80px vertical, same-gesture reversal and diagonal translation use drag-start bounds with constant span, correct time movement and unchanged market/indicator/signal/backtest/journal state.
+2026-10-26T11:12:09.7559909Z PASS: click/jitter and near-horizontal thresholds, Volume/RSI origin isolation, secondary-pointer isolation, cancel and lost-capture cleanup.
+2026-10-26T11:12:09.7649239Z PASS: axis scaling/time zoom, focused vertical keyboard controls and frozen drag-start geometry across resize.
+2026-10-26T11:12:10.0243532Z PASS: manual position survives provisional and confirmed stream updates; engine/journal match untouched control and 0.4.2 upgrade bytes. Live/Auto scale/Reset and invalid/empty/zero-size guards verified.
+2026-10-26T11:12:10.0343366Z PASS app: 9 suites
+2026-10-26T11:12:12.0068688Z ℹ tests 18
+2026-10-26T11:12:12.0069592Z ℹ pass 18
+2026-10-26T11:12:12.0069975Z ℹ fail 0
+2026-10-26T11:12:12.0140520Z PASS research: 1 suites
+2026-10-26T11:12:15.2503233Z ℹ tests 9
+2026-10-26T11:12:15.2515638Z ℹ pass 9
+2026-10-26T11:12:15.2516325Z ℹ fail 0
+2026-10-26T11:12:15.2589988Z PASS audit: 1 suites
+2026-10-26T11:12:18.5418814Z ℹ tests 9
+2026-10-26T11:12:18.5449360Z ℹ pass 9
+2026-10-26T11:12:18.5449722Z ℹ fail 0
+2026-10-26T11:12:18.5498627Z PASS contract: 1 suites
+2026-10-26T11:12:20.2583413Z ℹ tests 13
+2026-10-26T11:12:20.2599198Z ℹ pass 13
+2026-10-26T11:12:20.2608303Z ℹ fail 0
+2026-10-26T11:12:20.2679787Z PASS preparation: 1 suites
+2026-10-26T11:12:21.7569839Z ℹ tests 5
+2026-10-26T11:12:21.7589612Z ℹ pass 5
+2026-10-26T11:12:21.7590324Z ℹ fail 0
+2026-10-26T11:12:23.1436957Z ℹ tests 6
+2026-10-26T11:12:23.1444837Z ℹ pass 6
+2026-10-26T11:12:23.1445551Z ℹ fail 0
+2026-10-26T11:12:24.3661798Z ℹ tests 7
+2026-10-26T11:12:24.3688477Z ℹ pass 7
+2026-10-26T11:12:24.3689131Z ℹ fail 0
+2026-10-26T11:12:25.6914751Z ℹ tests 7
+2026-10-26T11:12:25.6929207Z ℹ pass 7
+2026-10-26T11:12:25.6929983Z ℹ fail 0
+2026-10-26T11:12:26.6058680Z ℹ tests 6
+2026-10-26T11:12:26.6061443Z ℹ pass 6
+2026-10-26T11:12:26.6061927Z ℹ fail 0
+2026-10-26T11:12:29.2926057Z ℹ tests 8
+2026-10-26T11:12:29.2938122Z ℹ pass 8
+2026-10-26T11:12:29.2948603Z ℹ fail 0
+2026-10-26T11:12:30.1495904Z ℹ tests 5
+2026-10-26T11:12:30.1518962Z ℹ pass 5
+2026-10-26T11:12:30.1519330Z ℹ fail 0
+2026-10-26T11:12:30.1569059Z PASS presentation: 7 suites
+2026-10-26T11:11:53.5541788Z PASS: Chromium loads the actual HTML, renders the closed-candle panel and markers, replays mocked WebSocket updates, retains the decision at bar 93 after supersession at 100, controls history/live view, opens/closes help, and renders at desktop/mobile widths without page errors.
+2026-10-26T11:11:55.6091848Z PASS layout desktop {"width":1440,"height":1000,"canvasHeight":590.75}
+2026-10-26T11:11:55.7154294Z PASS layout narrow {"width":430,"height":1000,"canvasHeight":280}
+2026-10-26T11:11:55.8100735Z PASS layout phone {"width":390,"height":844,"canvasHeight":280}
+2026-10-26T11:11:56.3116855Z PASS: actual Chromium/Canvas, independent appearance controls, synchronized RSI, daily pivot labels, desktop/430/390px layouts, navigation, Hebrew Help/panel, storage restoration, provisional WebSocket and older history; no page/console errors. Network data mocked.
+2026-10-26T11:11:58.2762991Z PASS: actual browser statistics states, Hebrew values, copied report (clipboard test double), actual JSON downloads and null empty intervals agree for five outcome cases.
+2026-10-26T11:11:59.1941587Z PASS: both-side conflict diagnostics retain WAIT, explicit cash-only assumption and nominal sizing labels, desktop/390px layouts, Help, preferences and untouched journal on sizing changes; no console/page errors. All feed/strategy fixtures in this suite are synthetic.
+2026-10-26T11:12:01.1603458Z PASS labels/layout desktop-collision [{"text":"PDH/PDL/PP/R1/S1 · distinct","names":["PDH","PDL","PP","R1","S1"],"x":780.8359375,"y":158.70674012416507,"width":183.1640625,"height":16,"validFrom":1792627200000}]
+2026-10-26T11:12:01.2580697Z PASS labels/layout phone-collision [{"text":"Levels ×5","names":["PDH","PDL","PP","R1","S1"],"x":229.88134765625,"y":74.18602755795936,"width":70.11865234375,"height":16,"validFrom":1792627200000}]
+2026-10-26T11:12:02.7299108Z PASS: real Chromium/Canvas pixel changes, independent shared-cache layers, deliberately colliding five levels with full-precision inspector, actual pan/zoom/drag/crosshair/End/history, frozen confirmed context/decisions/journal, desktop/390/430 layouts, Help and preference restoration. Feed/candidates are synthetic.
+2026-10-26T11:12:10.4966336Z PASS: actual mouse 80px/reverse/diagonal candle-pixel displacement, constant span, thresholds, axes/lower panes, capture/release, stream persistence, controls, keyboard/focus, layers/history and narrow emulated touch/cancel; no page/console errors. Synthetic feed; no physical-device or live-soak claim.
+2026-10-26T11:12:17.0640570Z PASS: current desktop/narrow WAIT, eligible-plan, unavailable and provisional screenshots; confirmed ATR/cost coordinates, no WAIT plan, independent provisional state, collapsed/persistent details, chart space, palette/body/pane preferences and journal invariance.
+2026-10-26T11:12:22.8677822Z PASS: target-path desktop/narrow rows/details, exact equal endpoints, source exclusions, actual pointer/provisional anchor stability, WAIT isolation and journal/engine invariance.
+2026-10-26T11:12:30.3638229Z PASS: exact confirmed windows, chart-only history, Full/Focus Canvas differences and exact Full restoration, plan/current price preservation, precise distinct values, preferences and symbol/timeframe transitions.
+2026-10-26T11:12:38.2608253Z PASS: LONG/SHORT planning baseline/stress, invalid-input clearing, persisted assumptions, focused input through provisional frames, WAIT isolation, unchanged baseline/engine/journal, desktop/narrow screenshots.
+2026-10-26T11:12:48.7544016Z PASS: bilingual Help, explicit close/navigation/language buttons, keyboard focus/Escape, persistence/faults, unchanged preferences/engine/journal, palettes and desktop/narrow formulas. Existing countdown/DO inventory recorded separately.
+2026-10-26T11:13:06.6864256Z PASS: bounded divider/axis controls, rasterized zero/clipping and shared geometry, RSI/None transitions, restoration/faults, visible legends at widths 1440/430/390/320, unchanged decisions/journal.
+2026-10-26T11:13:16.9778116Z PASS: confirmed-volume ratio/class/direction pixels, UTC anchor, actual hover/history/provisional/confirmation, scaling/restoration, RSI/None, stale symbol/timeframe, availability and bilingual narrow Help.
+2026-10-26T11:13:17.7440764Z PASS browser: 12 suites
