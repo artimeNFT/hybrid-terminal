@@ -2,6 +2,29 @@
 
 Updated: 2026-10-26, Asia/Jerusalem.
 
+## Current priorities and authorized next increment — 2026-10-26
+
+This section is the latest product direction. The active app remains 0.4.12 RC with source SHA-256 f477eae1b50e435023e4f0a15e4e9a04601aadc800870fd978f9669aece02e37. No application code changes in this planning update.
+
+**Decision:** implement Close-price Line display next as one bounded chart task. The user's reload observation is accepted for that tested context; do not request the same manual check again. If the separately issued bounded persistence investigation is already active, finish/report its concrete findings without discarding work or expanding it into a general audit. Do not restart it automatically merely because its historical CI limitation remains listed.
+
+**Line acceptance contract:** always-visible Chart selector, Candles default / Line (Close). Render final closes as a solid line; at most the latest developing connection/point may be dashed and explicitly Provisional. Do not connect across missing/invalid bars or turn provisional values into confirmed ones. Line is presentation only and hides candle open/high/low geometry. Preserve the existing OHLC-based price fitting, shared time/pan/zoom/crosshair, history separation and all indicators/zones/plan layer semantics. Palette/Body preferences stay intact; disable or explain candle-only controls in Line and restore their prior behavior on return to Candles. Volume classification is still based on source candles, never line slope. No strategy/indicator/feed/score/execution/backtest/journal arithmetic change, runtime dependency, new timeframe or research rerun. Update bilingual Help and verify actual Canvas geometry at desktop/narrow, toggling/storage/unavailable/provisional behavior and preserved decisions/journal.
+
+**Ordered active roadmap (one implementation at a time):**
+1. Now: Candles / Line rendering switch.
+2. Next: basic manual trend lines anchored to epoch time/price, scoped by symbol/timeframe; clear editing versus chart-pan gestures, undo/delete and safe persistence.
+3. Then: decision/journal review workflow using actually recorded as-of information; unknown historical context remains unavailable rather than reconstructed from today's state.
+4. Later bounded context question: time-of-day relative activity, effort/result description, or cost-to-target burden. Choose ONE after checking data availability and user value.
+5. Conditional: exact Psy/session/TR_MAIN definitions, richer venue-specific taker flow and derivatives context, or daily/1m views. New timeframes must state history/coverage limitations; seconds/30s/monthly remain deferred.
+
+**Calculation candidates, not approved implementations or extra votes:**
+- Same-time-of-day volume: closed bar volume / explicitly defined historical mean or median for the same interval; disclose reference population, sample count, missing days and weekday/weekend choice. The current prior-ten ratio stays unchanged. Requires sufficient intraday history, not merely the daily ADR source.
+- Effort/result: combine existing relative volume with normalized candle body/range and close location, with zero-range guards. Descriptive price/volume geometry only, not proof of absorption or measured buy/sell flow.
+- Cost-to-target burden: modeled total friction F / positive gross entry-to-target price distance, under the existing declared scenario assumptions. No double counting of round-trip costs or extra score.
+- Any historical hit-rate/expectancy/probability layer still requires a separately fixed population, causal outcomes, dependence and cost protocol. Existing research preparation is not a performance result.
+
+**Retained work:** ADR20, regional clocks, Volume controls/confirmed ratio, bilingual Help/palettes, target-path context and cost scenarios are delivered. Physical touch, screen-reader/human translation and current-version readability remain bounded acceptance items, not automatic gates for all development. User profile persistence/credential-storage findings remain distinct; no migration or origin switch without preserving user data. Historical one-hour and midnight evidence stay exact-source-specific and are not repeated by default. Vector-versus-ordinary inference is deferred with its 99/964 retention and dependence limitations intact. Do not silently drop these items or launch new indicator/research work as part of Line.
+
 ## User reload check — 2026-10-26
 
 The user supplied a screenshot explicitly taken after browser refresh and a journal export. Screenshot shows exact app 0.4.12 RC, ADR20 checked, Timezone UTC, and other non-default view settings. This is positive evidence that the tested settings survived this user reload in that browser context. The browser address bar is outside the screenshot, so the exact URL/origin is not independently verified.
@@ -307,7 +330,7 @@ Started on clean main, fetched and fast-forwarded safely from `3e9f65b` to curre
 
 | Priority | Task | State / next action |
 | --- | --- | --- |
-| P0 | Product alignment and work continuity | **0.4.12 ADR20 published; actual CI successful** — `70c5e26`, [run 40362531142](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40362531142); final handoff receipt above. Stop; no active implementation |
+| P0 | Product alignment and work continuity | Active implementation authorized: Candles / Line (Close) display; acceptance contract and ordered roadmap at top. App remains 0.4.12 until delivery |
 | P1 | Volume pane / narrow legend 0.4.9 successor | **Integrated once through the checked successor** — exact source `3d8cc6…`; includes 0.4.8, checkpoints preserved. Candidate/final-main CI evidence above; physical-device acceptance pending |
 | P1 | Readability / bilingual Help 0.4.8 candidate | **Integrated through 0.4.9**, no independent second merge; preserved predecessor `30432ab`, language/palette/preferences unchanged from tested candidate |
 | P2 | Existing countdown / DO visibility | Narrow indicator legend fix is active in 0.4.9; no duplicate feature. Countdown remains tied to visible last-price label. Broader coverage review stays queued |
@@ -324,9 +347,10 @@ Started on clean main, fetched and fast-forwarded safely from `3e9f65b` to curre
 | P1 | Confirmed UTC daily range / ADR20 0.4.12 | **Completed and published** — exact twenty prior complete UTC days, strict confirmed intraday coverage, optional/default off; [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40362531142),61presentation cases/14browser suites. Source/evidence/limitations above; no old live-acceptance transfer |
 | P2 | Vector-versus-ordinary research | Preparation 1.0.0 preserved; outcome inference and the extra support-diagnostic utility deferred, not silently completed |
 | P2 | CLI credential storage | Queued follow-up; current plaintext CLI credential storage is recorded, values never included in chat/repository |
-| P3 | Additional context and chart tools | ADR20 completed above; session extrema/shading, custom hours and further context remain deferred. No automatic next feature |
+| P1 | Chart tools | Line now; manual trend lines next; preserve calculations/preferences and distinguish editing from panning |
+| P2 | Later context and decision review | Recorded as-of journal review, then one explicitly scoped calculation candidate. ADR20/regional clocks delivered; exact Psy/session extrema and richer feeds conditional |
 
-**User acceptance update — 2026-10-25 morning:** the user reports that the interface now feels comfortable and supplied a current desktop screenshot. Desktop perceived readability is accepted for that observed view. No application change is required from this feedback. The one-hour run and publication were already completed despite the interrupted chat reply. Midnight remains pending because its separate actual window has not yet been observed; do not restart the soak or issue a pending-only publication.
+**Historical acceptance note — superseded by the current delivery and user reload sections above:** the user reports that the interface now feels comfortable and supplied a current desktop screenshot. Desktop perceived readability is accepted for that observed view. No application change is required from this feedback. The one-hour run and publication were already completed despite the interrupted chat reply. Midnight remains pending because its separate actual window has not yet been observed; do not restart the soak or issue a pending-only publication.
 
 ## Current 0.4.4 evidence and exact next action
 
