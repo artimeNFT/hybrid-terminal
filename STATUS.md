@@ -2,6 +2,16 @@
 
 Updated: 2026-10-26, Asia/Jerusalem.
 
+## User reload check — 2026-10-26
+
+The user supplied a screenshot explicitly taken after browser refresh and a journal export. Screenshot shows exact app 0.4.12 RC, ADR20 checked, Timezone UTC, and other non-default view settings. This is positive evidence that the tested settings survived this user reload in that browser context. The browser address bar is outside the screenshot, so the exact URL/origin is not independently verified.
+
+The supplied pre-refresh export parses as schema1/app0.4.12, contains 183 records, no duplicate IDs and no missing signature strings, and retains records from earlier application versions. User reports 183 records in the interface. No post-refresh journal export was supplied: exact before/after signature preservation is not independently established by this check. Personal journal contents remain outside GitHub.
+
+Screenshot ADR arithmetic is consistent: 1476.03 / 2074.585 * 100 = 71.1482055%; displayed 71.1482%. Intraday coverage209/209 matches a 17:25 UTC confirmed close on5m; daily coverage20/20 is displayed. Source code/calculation was not modified.
+
+**Decision:** accept this bounded user reload observation; do not ask the user to repeat the same manual procedure. This does not resolve the historical CI file-origin reset or establish persistence in every browser/restart/origin. If the separate bounded QA investigation is already running, retain its findings without expanding it into another audit chain. No storage migration or change of opening URL is justified by this screenshot alone. Next product candidate is Close-price Line display, preserving OHLC-based calculations and saved candle settings; manual trend lines remain later.
+
 ## Current delivery — 2026-10-26 confirmed UTC daily range / ADR20 0.4.12
 
 **One bounded increment:** clean published starting main `9ee16d0152eb66ce265638918fd0944c942c9296`, safely fetched; isolated Hybrid worktree `/tmp/hybrid-adr20-0.4.12`, branch `work/adr20-0.4.12`. Exact pre-edit 0.4.11 baseline `22ef701f791907fa8f92a1b9f3ae2ac2d139734db475d47270e1122784c0b3f3` is retained as internal `baseline/hybrid-terminal.0.4.11.html`. New root HTML **0.4.12 RC / `f477eae1b50e435023e4f0a15e4e9a04601aadc800870fd978f9669aece02e37`**. Only the root HTML is the active application. No VECTOR LAB, live midnight/hour observation, research acquisition/cohort or other feature.
