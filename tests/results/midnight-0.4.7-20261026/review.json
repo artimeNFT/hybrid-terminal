@@ -1,0 +1,127 @@
+{
+  "verdict": "PASS",
+  "scope": "Observed isolated-profile BTCUSDT 5m midnight behavior on exact 0.4.7 only; no acceptance transferred to 0.4.8/0.4.9",
+  "reviewedUtc": "2026-10-26T06:28:43.469957+00:00",
+  "sourceVersion": "0.4.7",
+  "sourceSha256": "4bafacddf8d726fc48601471c7a7fe713c2fb2038f0908264131ba864f7aa8e8",
+  "commitAtLaunch": "c1c43d3748b32ea9bf8e5253be72ac15ee3346da",
+  "inputs": {
+    ".qa-results/observations/midnight-20261025/run-result.json": "1130f43d0715c1eefb49fcd3af4c44cae0ef8c83c994fc9ecc5c22268747599a",
+    ".qa-results/observations/midnight-2026-10-25T23-58-01Z/launch.json": "d6fc1d3216c3adc235fb47dbec83bea7531105448438709d024d1f2f1204532f",
+    ".qa-results/observations/midnight-2026-10-25T23-58-01Z/evidence.json": "0c38c384c2bb33806825b33b7791278b76c89e19ba0f422c4e1789515dd645dc",
+    ".qa-results/observations/midnight-2026-10-25T23-58-01Z/observation.log": "de7a2c996dac214904f39a361f0d83188fcf00f9c7acae8cb3838a221ccef9f8",
+    ".qa-results/observations/midnight-2026-10-25T23-58-01Z/final.png": "a11b7dc1aa1fcff514e792db20914ce7c2bdaee4a08ed9376cefea8834f24ab5",
+    "tests/browser-observe-context.cjs": "4cdc73e4e9654de1faab7791959d88efaebd9ce28bd53cbab338103ce303c05d",
+    ".qa-results/observations/midnight-20261025/run_once.py": "227cb39e3cf2317d7d85d852c1f884675a91570e6665da1116cd35db7bc194bd"
+  },
+  "launchUtc": "2026-10-25T23:58:01.193444+00:00",
+  "wrapperFinishedUtc": "2026-10-26T00:05:13.775345+00:00",
+  "samplingStartedUtc": "2026-10-25T23:58:13.460Z",
+  "finalSampleUtc": "2026-10-26T00:05:13.467Z",
+  "recordedElapsedSeconds": 420.006,
+  "independentlyMeasuredSampleUtcDeltaSeconds": 420.007,
+  "regularSnapshots": 89,
+  "totalSnapshotsIncludingDisconnectResync": 91,
+  "runtimeVersions": [
+    "0.4.7"
+  ],
+  "boundaryUtc": "2026-10-26T00:00:00Z",
+  "lastBeforeBoundaryUtc": "2026-10-25T23:59:59.462Z",
+  "firstReadyNewContextSampleUtc": "2026-10-26T00:00:04.472Z",
+  "newSourceObservedAtUtc": "2026-10-26T00:00:02.046000Z",
+  "newSourceStartUtc": "2026-10-25T00:00:00Z",
+  "newValidFromUtc": "2026-10-26T00:00:00Z",
+  "newValidToUtc": "2026-10-27T00:00:00Z",
+  "dailyRequests": [
+    {
+      "time": {
+        "utc": "2026-10-25T23:58:09.515Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Monday, 26 October 2026 at 01:58:09 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1792540800000&endTime=1792886399999&limit=1000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-25T23:58:11.535Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Monday, 26 October 2026 at 01:58:11 GMT+2",
+        "offset": "01h GMT+02:00"
+      },
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1792540800000&endTime=1792886399999&limit=1000"
+    },
+    {
+      "time": {
+        "utc": "2026-10-26T00:00:01.349Z",
+        "zone": "Asia/Jerusalem",
+        "local": "Monday, 26 October 2026 at 02:00:01 GMT+2",
+        "offset": "02h GMT+02:00"
+      },
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1792886400000&endTime=1792972799999&limit=1000"
+    }
+  ],
+  "sharedSecondConsumerExtraRequests": 0,
+  "confirmedFrames": [
+    {
+      "receivedUtc": "2026-10-26T00:00:01.347Z",
+      "candleOpenUtc": "2026-10-25T23:55:00Z",
+      "confirmedCloseUtc": "2026-10-26T00:00:00Z",
+      "close": "80154.09000000",
+      "firstMatchingSnapshotUtc": "2026-10-26T00:00:04.472Z"
+    },
+    {
+      "receivedUtc": "2026-10-26T00:05:00.531Z",
+      "candleOpenUtc": "2026-10-26T00:00:00Z",
+      "confirmedCloseUtc": "2026-10-26T00:05:00Z",
+      "close": "80022.01000000",
+      "firstMatchingSnapshotUtc": "2026-10-26T00:05:01.606Z"
+    }
+  ],
+  "initialConfirmedCandleCount": 999,
+  "finalConfirmedCandleCount": 1001,
+  "initialConfirmedCloseUtc": "2026-10-25T23:55:00Z",
+  "finalConfirmedCloseUtc": "2026-10-26T00:05:00Z",
+  "finalFeedContextHealthy": true,
+  "unhealthyRegularSnapshots": 0,
+  "dailyUnavailableRegularSnapshots": 0,
+  "journal": {
+    "initialCount": 1,
+    "finalCount": 3,
+    "allPriorSeenSignaturesRetainedInEverySnapshot": true,
+    "duplicateIds": 0,
+    "duplicateConfigurationConfirmedCandleKeys": 0,
+    "signatureChanges": 0,
+    "missingPriorRecords": 0,
+    "retiredOrConflictSnapshots": 0
+  },
+  "injectedFaults": {
+    "offlineSnapshotUtc": "2026-10-25T23:58:09.993Z",
+    "recoveredUtc": "2026-10-25T23:58:13.438Z",
+    "epochFrom": 1,
+    "epochTo": 2,
+    "storageFixture": {
+      "kind": "Injected quota-style failure/recovery in isolated temporary context, not an observed storage-full incident",
+      "failure": {
+        "persistent": false,
+        "storageUnchanged": true,
+        "status": "1 רשומות במכשיר · עד 1,000 נשמרות · השמירה אינה זמינה; הורד גיבוי"
+      },
+      "recovery": {
+        "persistent": true,
+        "idsUnchanged": true,
+        "storageUnchanged": true,
+        "status": "1 רשומות במכשיר · עד 1,000 נשמרות"
+      }
+    }
+  },
+  "pageErrors": [],
+  "consoleErrors": [],
+  "limitations": [
+    "About five-second regular snapshots do not resolve all intermediate states; daily loading/retry transient was not sampled.",
+    "Daily HTTP response bodies are not archived. Review checks app-validated source metadata/levels, actual request bounds and matching daily-final 5m close; not a separate exchange-data authentication.",
+    "Journal snapshots retain IDs/signatures/confirmed times and byte lengths, not every historical storage byte; the isolated synchronous storage fixture explicitly verifies byte preservation.",
+    "Temporary profile only; no user journal or physical touch, screen-reader or subjective-readability acceptance.",
+    "Midnight acceptance applies only to 0.4.7; prior hour soak remains specific to 0.4.4."
+  ]
+}

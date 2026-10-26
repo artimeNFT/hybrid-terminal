@@ -1,0 +1,25 @@
+{
+  "kind": "One-shot actual-window midnight observation",
+  "startedUtc": "2026-10-25T23:58:01.193444+00:00",
+  "acceptance": "pending evidence review",
+  "mode": "midnight",
+  "seconds": 420,
+  "sourceSha256": "4bafacddf8d726fc48601471c7a7fe713c2fb2038f0908264131ba864f7aa8e8",
+  "applicationVersionAtLaunch": "0.4.7",
+  "commitAtLaunch": "c1c43d3748b32ea9bf8e5253be72ac15ee3346da",
+  "observerSha256": "4cdc73e4e9654de1faab7791959d88efaebd9ce28bd53cbab338103ce303c05d",
+  "output": "/mnt/c/users/shlom/desktop/the hybrid-terminal/.qa-results/observations/midnight-2026-10-25T23-58-01Z",
+  "samplingRequestedSeconds": 420,
+  "status": "observer-finished",
+  "finishedUtc": "2026-10-26T00:05:13.775345+00:00",
+  "observerExitCode": 0,
+  "recordedSourceSha256": "4bafacddf8d726fc48601471c7a7fe713c2fb2038f0908264131ba864f7aa8e8",
+  "runtimeVersions": [
+    "0.4.7"
+  ],
+  "sourceUnchangedThroughRun": true,
+  "evidenceSha256": "0c38c384c2bb33806825b33b7791278b76c89e19ba0f422c4e1789515dd645dc",
+  "rawToolPassed": true,
+  "rawObservedMidnight": true,
+  "samplingElapsedSeconds": 420.006
+}

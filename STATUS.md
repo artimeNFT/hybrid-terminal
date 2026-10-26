@@ -2,6 +2,20 @@
 
 Updated: 2026-10-26, Asia/Jerusalem.
 
+## Current integration — 2026-10-26 midnight review / 0.4.9
+
+**One bounded active task:** review completed midnight evidence and integrate the already-tested successor if checks permit. No new feature, observation, research run, data acquisition or VECTOR LAB work. Clean main was inspected at `c1c43d3`; safe fetch found main unchanged and successor roadmap-only `960c219928b96d379a04e5bb0c978e48248acf0f`. The clean successor fast-forwarded from `a28b1d1` to that checkpoint. No unfinished work was discarded; published checkpoints remain ancestors. Latest session-window design below is preserved verbatim and remains queued alongside closed-bar relative volume.
+
+**Midnight verdict — PASS, exact 0.4.7 only:** active/launch/baseline source `4bafacddf8d726fc48601471c7a7fe713c2fb2038f0908264131ba864f7aa8e8`, all **91** snapshots runtime **0.4.7**. Wrapper **2026-10-25 23:58:01.193444 → 2026-10-26 00:05:13.775345 UTC**; sampling **23:58:13.460 → 00:05:13.467**, independently **420.007s**, recorded **420.006s**. Actual UTC day changed. Two real confirmed 5m frames match subsequent context and journal; confirmed close advanced **23:55 → 00:00 → 00:05**, count **999 → 1001**. New source day October 25 is valid **[October 26, October 27)**; request **00:00:01.349**, validated source observed **00:00:02.046**, first sampled ready **00:00:04.472**. All 89 regular snapshots and final feed/context healthy. All prior signatures retained across 91 snapshots; journal **1 → 3**, duplicate IDs/configuration-candle keys **0**, changed/missing signatures **0**, conflicts/retirements **0**. Page/console errors **0**. Tagged offline/reconnect and isolated quota-style failure/recovery are expected injections, not unexplained errors or a real storage-full incident.
+
+**Evidence and bounds:** `tests/results/midnight-0.4.7-20261026/{REPORT.md,review.json,selected-evidence.json}` plus unchanged copied launch/receipt/log; actual raw input remains root `.qa-results/observations/midnight-2026-10-25T23-58-01Z/`, evidence SHA-256 `0c38c384c2bb33806825b33b7791278b76c89e19ba0f422c4e1789515dd645dc`. Final real-run screenshot inspected. About five-second snapshots do not resolve every loading transient; raw daily HTTP bodies are absent. The existing observer/wrapper/timer and original raw evidence are unchanged. Prior 0.4.4 hour-soak acceptance and this 0.4.7 midnight acceptance stay source-specific; **no live acceptance of 0.4.8/0.4.9 is implied**.
+
+**Integration state:** source-identical tested **0.4.9 / `3d8cc67d458d24f8bc20870aa24078ad32749b8c95fc500c6f311bdfe0fd6139`** includes 0.4.8 once. Existing independent Help then Volume reviews found no release-blocking defect; current checks verify source/manifests, protected history/data and fast-forward ancestry. Documentation/evidence only are reconciled now. Authoritative root remains clean 0.4.7 until the resulting successor's required CI passes. Then fast-forward main to that exact candidate, publish without force and verify final main CI. No independent merge of the two candidates, source rewrite or force.
+
+**Exact next action:** finish source-bound integration checks and actual successor CI, fast-forward/publish main if green, verify exact main CI and stop. Physical touch, screen-reader/human bilingual review and user-perceived readability of 0.4.9 remain pending. Relative volume and session windows are queued, not an automatically active feature.
+
+Earlier dated handoffs below preserve the preparation state; this section and the single Current task board govern the current integration.
+
 ## Focused review and next action — 2026-10-26
 
 Exact candidate `a28b1d1ddf615b9454b87fa046de5c0eec2eff3b` / Actions `40253805793` independently checked: both jobs successful. Review covered Volume preferences, geometry/scaling, pointer handling, eight focused fixtures and tracked report. No blocking defect identified in this limited review. No independent local rerun, physical-touch check or viewing of ignored candidate screenshots was performed here. Manual absolute base-volume ceiling persists across markets/timeframes; Auto refits the current view.
@@ -102,7 +116,7 @@ No new model consultation is required for the current UI scope. Existing researc
 | Order | Deliverable | Completion rule |
 | --- | --- | --- |
 | Delivered RC | App 0.4.4 presentation release candidate | Primary hierarchy/risk/display work complete; local checks and actual published-commit CI successful |
-| Partial measured acceptance | Bounded real-session acceptance | One-hour soak accepted; next is separate midnight mode during 2026-10-25 23:57–23:59 UTC. Physical touch remains pending; desktop readability is user-accepted |
+| Source-bound measured acceptance | Bounded real-session acceptance | One-hour soak accepted only on 0.4.4; actual midnight PASS only on 0.4.7. Physical touch and newer-version readability remain pending |
 | Delivered RC | Confirmed-plan target-path context 0.4.5 | Confirmed directional ordering, independently guarded metrics and explicit coverage; deterministic/desktop/narrow checks and actual published-commit CI passed |
 | Delivered candidate | Decision provenance and chart readability 0.4.6 | Actual confirmed window, Full/Focus and exact-value details delivered; local checks and actual published-commit CI passed |
 | Delivered candidate | Optional decision-plan cost stress 0.4.7 | Seven focused cases, nine Chromium suites and actual pushed-commit CI passed; baseline behavior unchanged |
@@ -225,7 +239,7 @@ Started on clean main, fetched and fast-forwarded safely from `3e9f65b` to curre
 
 | Priority | Task | State / next action |
 | --- | --- | --- |
-| P0 | Product alignment and work continuity | Root stays clean published 0.4.7; 0.4.8 preserved. 0.4.9 successor published/CI-verified and unmerged; no further implementation active |
+| P0 | Product alignment and work continuity | Single active task: reviewed midnight PASS on exact 0.4.7; verify reconciled successor CI, fast-forward/publish main and verify exact final CI; no new feature |
 | P1 | Volume pane / narrow legend 0.4.9 successor | **Published; actual CI successful** — `7995337`, [run 40253528898](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40253528898); based on `30432ab`, branch `candidate/volume-legend-0.4.9`; unmerged, integration order above |
 | P1 | Readability / bilingual Help 0.4.8 candidate | **Published candidate; not integrated** — branch `candidate/readability-help-0.4.8`, implementation `68a05f3`; [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40232991730), both jobs. Root remains 0.4.7; later integration steps above |
 | P2 | Existing countdown / DO visibility | Narrow indicator legend fixed in unmerged 0.4.9; no duplicate feature. Countdown remains tied to visible last-price label. Broader coverage review remains queued |
@@ -233,10 +247,12 @@ Started on clean main, fetched and fast-forwarded safely from `3e9f65b` to curre
 | P1 | Decision provenance and chart readability 0.4.6 | **Completed and published** — `2221e98`; [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40201641235), both jobs. Exact-window, density and precision checks passed; eight Chromium suites. Evidence above |
 | P1 | 0.4.4 presentation release candidate | **Published; focused independent review complete** — `2d04184`; [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40139978132), five presentation fixtures independently passed. Next: bounded real-session acceptance; screenshots remain locally reported rather than independently viewed here. |
 | P1 | Actual one-hour reconnect/storage soak — exact 0.4.4 | **Measured and accepted** — 3600.018 s; 12 real confirmed closes; final feed/context healthy; prior signatures preserved, no duplicate IDs/configuration-candle keys. `tests/results/real-session-0.4.4/` |
-| P1 | Separate midnight acceptance | **Observer finished; acceptance review pending** — receipt says 420.006s on exact 0.4.7, raw rollover/pass true; do not count as reviewed acceptance. Historical registration: — native one-shot verified for 2026-10-25 23:58 UTC = 2026-10-26 01:58 Asia/Jerusalem. Existing 420s observer loads then-active settled root/version/hash; WSL/user services/network must remain available. Receipt above; review output after execution |
+| P1 | Separate midnight acceptance — exact 0.4.7 | **PASS after actual raw-evidence review** — recorded 420.006s / independently 420.007s; real UTC/source validity rollover, two confirmed closes, healthy final state, preserved signatures and zero duplicates/unexplained recorded errors. `tests/results/midnight-0.4.7-20261026/`; no transfer to 0.4.9 |
 | P1 | Desktop perceived readability | **User-accepted 2026-10-25** — user says interface feels comfortable; observed 0.4.4 RC desktop screenshot reviewed, Standard palette / Filled body. This does not establish physical-touch or narrow-device acceptance |
 | P1 | Physical-device touch | Pending when a physical touch device is available; browser emulation is separate evidence |
 | P1 | Confirmed-plan target-path context 0.4.5 | **Completed and published** — `d15300f`; [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40173894616), both jobs. Six focused fixtures and seven mocked Chromium suites passed. No strategy/journal changes; source/evidence below |
+| P2 | Closed-bar relative-volume context | Queued; no formula/indicator/score change in this integration. Require a separate bounded authorization |
+| P2 | Regional session-window design | Queued after integration/relative volume; preserve IANA/DST, causal availability and reference-only caveats in the latest review above; no implementation now |
 | P2 | Vector-versus-ordinary research | Preparation 1.0.0 preserved; outcome inference and the extra support-diagnostic utility deferred, not silently completed |
 | P2 | CLI credential storage | Queued follow-up; current plaintext CLI credential storage is recorded, values never included in chat/repository |
 | P3 | Additional context and chart tools | Ordered backlog in Current handoff above; ADR/Daily Open follow volume work. Psy requires exact definition; MACD and derivatives remain conditional, with no automatic score changes |

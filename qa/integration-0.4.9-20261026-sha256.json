@@ -1,0 +1,19 @@
+{
+  "hybrid-terminal.html": "3d8cc67d458d24f8bc20870aa24078ad32749b8c95fc500c6f311bdfe0fd6139",
+  "README.md": "1f51e7358b84eedb13959f01816f2cc3a86e93ca5d1ebe23e7534c2d641b9c25",
+  "SOURCE_PROVENANCE.md": "1171dc3bf4325bca3761cf8cffe880e6318181a57d714b76869553829db6d359",
+  "STATUS.md": "01a9eeb177b9633963ba2d769d9c5ced858e3dd090ff82491a990cbfef8c6693",
+  "qa/source-checksums.0.4.9.json": "6d1e308267ba062a73da708c197e97f76e859efaa9ae4b48197eac344c7ec59a",
+  "tests/results/integration-0.4.9-20261026/REPORT.md": "70e8b4d43b8d4e81736963b8fdd85f2cb298a3a6ea78474bd11a8e76503313b8",
+  "tests/results/integration-0.4.9-20261026/evidence-sha256.json": "38fce0920b1cb1f7eabb68f2b2d7378430a19f006d91e5a74b100d9b9fef7669",
+  "tests/results/integration-0.4.9-20261026/focused.log": "d19db4b6987561310fa1d5cf8b702432ebb8a14c27796387706c229b66dcb11a",
+  "tests/results/integration-0.4.9-20261026/preservation.json": "74fbbe31bcbe872b97fc78ca35e4e59ee6c72e27f9fb6301dca98aaa696d14e9",
+  "tests/results/integration-0.4.9-20261026/source-check.log": "783002a422770682b1dd7d7cb7808a6aaa9c00dfaef1b3f733e50c7447b3763c",
+  "tests/results/midnight-0.4.7-20261026/REPORT.md": "5ec197b5cedd8483f6caa315edc13e83c36115d68bf549aee751674919581ebe",
+  "tests/results/midnight-0.4.7-20261026/evidence-sha256.json": "a1316bcbec565e240e0b34cfbfe4bd1eadd3cd8793ce2fd571ced7e9629a99a6",
+  "tests/results/midnight-0.4.7-20261026/launch.json": "d6fc1d3216c3adc235fb47dbec83bea7531105448438709d024d1f2f1204532f",
+  "tests/results/midnight-0.4.7-20261026/observation.log": "de7a2c996dac214904f39a361f0d83188fcf00f9c7acae8cb3838a221ccef9f8",
+  "tests/results/midnight-0.4.7-20261026/review.json": "e7740c18fb120dcc8c864d1fb6f282daa4b7b404d4975900f2f82307789a9538",
+  "tests/results/midnight-0.4.7-20261026/run-result.json": "1130f43d0715c1eefb49fcd3af4c44cae0ef8c83c994fc9ecc5c22268747599a",
+  "tests/results/midnight-0.4.7-20261026/selected-evidence.json": "fb83afde76635176633f49841635afd12e8b52b9e994ac09c83b7add32d89161"
+}

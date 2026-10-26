@@ -1,0 +1,2 @@
+Bounded live sampling started: 2026-10-25T23:58:13.460Z mode: midnight seconds: 420 output: /mnt/c/users/shlom/desktop/the hybrid-terminal/.qa-results/observations/midnight-2026-10-25T23-58-01Z
+PASS: actual feed day levels/pivots, shared requests, bounded samples, network disconnect/resync and separately tagged isolated storage fixture. Midnight: true long session: false close frame: true
