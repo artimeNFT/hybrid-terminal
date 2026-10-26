@@ -1,0 +1,23 @@
+{
+  "finalVersion": "0.4.14 RC",
+  "finalHtmlSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334",
+  "preEditVersion": "0.4.13 RC",
+  "preEditHtmlSha256": "8c114fc604d9b7478334e01fee4ea7ea5c84f38cfc6b08f5524ab8a5e39157f4",
+  "fullPreFinalBrowserSource": "31a432e3b6c78a1dd078b46133f77fb24eee8319455ffea12339eb370c8e9dc3",
+  "finalChecks": [
+    "check:source",
+    "npm test (all groups)",
+    "focused Chromium manual-drawings at1440/390/320"
+  ],
+  "preFinalChecks": [
+    "full16-script Chromium group; separate source identity before final title/Help/status/nearest-handle refinement"
+  ],
+  "priorFunctionBodies": 147,
+  "unchangedPriorFunctionBodies": 146,
+  "changedPriorFunctionBodies": [
+    "draw"
+  ],
+  "newNamedViewAnnotationHelpers": 27,
+  "ruleExecutionRsiCliSchemaUnchanged": true,
+  "finalExactPublishedCi": "pending at source commit; publication receipt records actual result"
+}

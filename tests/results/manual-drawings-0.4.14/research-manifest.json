@@ -1,0 +1,14 @@
+{
+  "group": "research",
+  "node": "v24.15.0",
+  "startedAt": "2026-10-26T22:00:03.062Z",
+  "scope": "Synthetic/mocked QA only; no acquired datasets or public market access",
+  "checks": [
+    {
+      "suite": "research-data",
+      "exitCode": 0,
+      "signal": null
+    }
+  ],
+  "finishedAt": "2026-10-26T22:00:07.518Z"
+}

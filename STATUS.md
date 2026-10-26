@@ -1,6 +1,22 @@
 # Hybrid Terminal — current direction and task board
 
-Updated: 2026-10-26, Asia/Jerusalem.
+Updated: 2026-10-27, Asia/Jerusalem.
+
+## Current delivery — basic manual trend lines, 0.4.14 RC
+
+**One bounded increment:** clean published starting main **599cd640615452cc5ea23501789322fa91a0e766**, safely fetched with no divergence or unfinished tracked work. The preceding Line release's final [actual CI40405064556](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40405064556) completed successfully; not restarted as unfinished work. Implementation isolated in `/tmp/hybrid-manual-trend-lines-0.4.14`, branch `work/manual-trend-lines-0.4.14`. Exact pre-edit0.4.13 **8c114fc604d9b7478334e01fee4ea7ea5c84f38cfc6b08f5524ab8a5e39157f4** preserved as an internal baseline. Candidate **0.4.14 RC / `f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334`**; root HTML is the sole active user application. No VECTOR LAB, research acquisition/cohort, hour/midnight rerun or other feature.
+
+**Behavior / coordinate contract:** compact Manual controls **Pointer / Trend line / Undo / Delete selected**. Pointer defaults; two deliberate price-plot clicks/taps create a finite segment, with dashed preview after the first, Escape cancellation/no draft save and return to Pointer. Manual text and square handles identify selected annotations. Only selected line/endpoint edits consume a drag; ordinary drags, axes and lower panes retain existing navigation. Anchors are epoch milliseconds and positive finite prices per symbol/timeframe, never index/pixel. Nearest candle-center time, ties later; price never snaps. Existing transforms preserve anchors through pan/zoom/history/live/resize/Candles-Line, with price-plot clipping and no effect on automatic fitting. History deliberately navigates to older bars; an out-of-view annotation is not moved/reanchored. Focused Escape cancels/deselects first, Delete/Backspace deletes selected, Undo/Ctrl-Command+Z reverses committed actions. Pointer cancel/lost capture, stale epoch/config and resize during edit prevent incomplete commits. Reset affects view, not drawings.
+
+**Persistence / preservation:** isolated schema1 `hybridTerminal.manualDrawings.v1`;64 lines/context,32 contexts,256 total,128KiB, undo20 snapshots in current context/session. No silent eviction, bulk clear, default/draft/cancel write, sync or journal export. Malformed/read-failed/external-changed collections retain bytes and block overwrite; new work is session-only. Write faults are marked unsaved; later successful edits can persist the session collection. No ordinary profile access/migration. Only prior **draw** changes; **146/147** prior named functions exact. All calculation/feed/indicator seeds/selection/targets/sizing/execution/backtest/journal/navigation/Volume/regional/ADR/Line functions and rule/execution/CLI/schema versions retain identity. Manual drawings are annotations, not validated levels, votes or signals. Historical user reload section and all frozen sources/seals/evidence remain intact.
+
+**Validation actually performed:** nine new deterministic cases; full final `npm test` passed: app9, frozen CLI18/audit9/contract9/preparation13, eleven presentation suites/**77 cases**. Full local **16 Chromium suites** passed on the separately identified preliminary functional source31a432e…; final header/title, paired Help/status-text/modifier refinements received source-bound focused deterministic/browser checks. Exact published CI will verify all final suites before delivery. Native Canvas paths/pixels independently match stored timestamps/prices before/after real pan, zoom,1,000-bar History, confirmed append, resize and mode/pane changes. Real create/edit/delete/undo/cancel/lost capture plus touch-emulated creation/edit/touchCancel; native isolated-origin reload, context switching, malformed/read/write/external-change preservation, default candle-pixel parity and unchanged engine/journal verified. Desktop/390/320 and paired Help screenshots inspected. Regression DOM/style, legacy report metadata, existing History navigation/plot-height changes and thin-line antialias fixture corrections are recorded. No live market acceptance claim.
+
+**Evidence / publication:** `tests/results/manual-drawings-0.4.14/`, ignored raw screenshots/traces in this worktree `.qa-results/manual-final/`; new `qa/source-checksums.0.4.14.json` and `qa/manual-drawings-0.4.14-sha256.json`. Historical seals remain original. Local checks complete; safe publication and actual exact-commit CI are pending, never inferred from queued status. After publication record actual run/logs/preservation, verify final documentation-only CI and stop.
+
+**Exact next action / limitations:** publish the tested bounded result without force, verify exact CI, record it and stop. Next roadmap task is decision/journal review using actually recorded as-of information; not started automatically. Physical-device touch, human bilingual/screen-reader/readability, file-origin portability and extended0.4.14 live acceptance remain separate. Undo is context/session-local and drawings are browser-local; no cross-browser persistence/sync promise. Previous midnightPASS exact0.4.7 and hour soak exact0.4.4 remain unchanged, not repeated/transferred.
+
+This section and the single Current board supersede historical next-task instructions below.
 
 ## Current delivery — Candles / Line (Close), 0.4.13 RC
 
@@ -20,16 +36,16 @@ This delivery section and the single current board govern the scoped work; retai
 
 ## Current priorities and authorized next increment — 2026-10-26
 
-This ordered roadmap is retained from checkpoint8e4652c. Current Line delivery/source **0.4.13 RC/8c114fc604d9b7478334e01fee4ea7ea5c84f38cfc6b08f5524ab8a5e39157f4** and publication state are above; the reviewed pre-edit0.4.12 reference remains intact.
+This ordered roadmap is retained from checkpoint8e4652c; the current manual-drawing increment supersedes its prior active Line stage. Current Line delivery/source **0.4.13 RC/8c114fc604d9b7478334e01fee4ea7ea5c84f38cfc6b08f5524ab8a5e39157f4** and publication state are above; the reviewed pre-edit0.4.12 reference remains intact.
 
-**Decision:** scoped Close-price Line source delivery and implementation CI are complete; finish the documentation-only CI handoff and stop; basic manual trend lines remain next, separately authorized. The user's reload observation is accepted for that tested context; do not request the same manual check again. If the separately issued bounded persistence investigation is already active, finish/report its concrete findings without discarding work or expanding it into a general audit. Do not restart it automatically merely because its historical CI limitation remains listed.
+**Decision:** complete only the authorized manual trend-line increment above, publish/verify it and stop. The accepted user reload observation is preserved; no persistence investigation, observation or research chain is restarted.
 
 **Line acceptance contract:** always-visible Chart selector, Candles default / Line (Close). Render final closes as a solid line; at most the latest developing connection/point may be dashed and explicitly Provisional. Do not connect across missing/invalid bars or turn provisional values into confirmed ones. Line is presentation only and hides candle open/high/low geometry. Preserve the existing OHLC-based price fitting, shared time/pan/zoom/crosshair, history separation and all indicators/zones/plan layer semantics. Palette/Body preferences stay intact; disable or explain candle-only controls in Line and restore their prior behavior on return to Candles. Volume classification is still based on source candles, never line slope. No strategy/indicator/feed/score/execution/backtest/journal arithmetic change, runtime dependency, new timeframe or research rerun. Update bilingual Help and verify actual Canvas geometry at desktop/narrow, toggling/storage/unavailable/provisional behavior and preserved decisions/journal.
 
 **Ordered active roadmap (one implementation at a time):**
-1. Delivered: Candles / Line rendering switch, published implementation and actual CI above; verify final documentation-only CI and stop.
-2. Next: basic manual trend lines anchored to epoch time/price, scoped by symbol/timeframe; clear editing versus chart-pan gestures, undo/delete and safe persistence.
-3. Then: decision/journal review workflow using actually recorded as-of information; unknown historical context remains unavailable rather than reconstructed from today's state.
+1. Delivered: Candles / Line0.4.13, including successful final main CI40405064556.
+2. Current: basic manual trend lines0.4.14 above; finish publication/CI and stop.
+3. Next, separately scoped: decision/journal review workflow using actually recorded as-of information; unknown historical context remains unavailable rather than reconstructed from today's state.
 4. Later bounded context question: time-of-day relative activity, effort/result description, or cost-to-target burden. Choose ONE after checking data availability and user value.
 5. Conditional: exact Psy/session/TR_MAIN definitions, richer venue-specific taker flow and derivatives context, or daily/1m views. New timeframes must state history/coverage limitations; seconds/30s/monthly remain deferred.
 
@@ -346,7 +362,7 @@ Started on clean main, fetched and fast-forwarded safely from `3e9f65b` to curre
 
 | Priority | Task | State / next action |
 | --- | --- | --- |
-| P0 | Product alignment and work continuity | **0.4.13 Line published; implementation CI success** —7565e66/run40404445835; source/contract/evidence above. Finish final documentation-only CI verification and stop |
+| P0 | Product alignment and work continuity | **0.4.14 Manual drawings local validation complete; publication/CI pending** — one bounded task, evidence/limits above. Verify exact published CI and stop |
 | P1 | Volume pane / narrow legend 0.4.9 successor | **Integrated once through the checked successor** — exact source `3d8cc6…`; includes 0.4.8, checkpoints preserved. Candidate/final-main CI evidence above; physical-device acceptance pending |
 | P1 | Readability / bilingual Help 0.4.8 candidate | **Integrated through 0.4.9**, no independent second merge; preserved predecessor `30432ab`, language/palette/preferences unchanged from tested candidate |
 | P2 | Existing countdown / DO visibility | Narrow indicator legend fix is active in 0.4.9; no duplicate feature. Countdown remains tied to visible last-price label. Broader coverage review stays queued |
@@ -363,7 +379,7 @@ Started on clean main, fetched and fast-forwarded safely from `3e9f65b` to curre
 | P1 | Confirmed UTC daily range / ADR20 0.4.12 | **Completed and published** — exact twenty prior complete UTC days, strict confirmed intraday coverage, optional/default off; [actual CI successful](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40362531142),61presentation cases/14browser suites. Source/evidence/limitations above; no old live-acceptance transfer |
 | P2 | Vector-versus-ordinary research | Preparation 1.0.0 preserved; outcome inference and the extra support-diagnostic utility deferred, not silently completed |
 | P2 | CLI credential storage | Queued follow-up; current plaintext CLI credential storage is recorded, values never included in chat/repository |
-| P1 | Chart tools | **Candles / Line 0.4.13 published; actual implementation CI success**. Manual trend lines next as a separate bounded task, not started |
+| P1 | Chart tools | **Line0.4.13 delivered; basic manual trend lines0.4.14 local validation complete; publication/CI pending**. No additional drawing tools or automatic next task |
 | P2 | Later context and decision review | Recorded as-of journal review, then one explicitly scoped calculation candidate. ADR20/regional clocks delivered; exact Psy/session extrema and richer feeds conditional |
 
 **Historical acceptance note — superseded by the current delivery and user reload sections above:** the user reports that the interface now feels comfortable and supplied a current desktop screenshot. Desktop perceived readability is accepted for that observed view. No application change is required from this feedback. The one-hour run and publication were already completed despite the interrupted chat reply. Midnight remains pending because its separate actual window has not yet been observed; do not restart the soak or issue a pending-only publication.

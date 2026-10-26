@@ -1,0 +1,89 @@
+{
+  "group": "browser",
+  "node": "v24.15.0",
+  "startedAt": "2026-10-26T21:53:52.930Z",
+  "scope": "Synthetic/mocked QA only; no acquired datasets or public market access",
+  "checks": [
+    {
+      "suite": "browser-smoke",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-increment",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-integrity",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-day-context",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-navigation",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-presentation",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-target-path",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-provenance-readability",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-planning-costs",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-readability-help",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-volume-legend",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-confirmed-volume",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-regional-windows",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-adr20",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-chart-type",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "browser-manual-drawings",
+      "exitCode": 0,
+      "signal": null
+    }
+  ],
+  "finishedAt": "2026-10-26T21:58:49.117Z"
+}

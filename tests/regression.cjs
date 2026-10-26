@@ -17,7 +17,7 @@ function engine(file) {
   const document = {
     getElementById(id) {
       if (!elements.has(id)) elements.set(id, {
-        value: '', setAttribute() {}, getContext: () => ({}), getBoundingClientRect: () => ({width: 900, height: 750, left: 0, top: 0}), classList: { toggle() {} }
+        value: '', style: {}, setAttribute() {}, getContext: () => ({}), getBoundingClientRect: () => ({width: 900, height: 750, left: 0, top: 0}), classList: { toggle() {} }
       });
       return elements.get(id);
     },

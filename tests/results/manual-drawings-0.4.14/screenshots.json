@@ -1,0 +1,90 @@
+[
+  {
+    "path": "/tmp/hybrid-manual-trend-lines-0.4.14/.qa-results/manual-final/desktop-restored.png",
+    "sha256": "1288a226d1d0790f29c67c2515e02d6a5094a772dde18bcd05439aa0ec5f9fb0",
+    "width": 1200,
+    "height": 980,
+    "visuallyInspected": true,
+    "sourceSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334"
+  },
+  {
+    "path": "/tmp/hybrid-manual-trend-lines-0.4.14/.qa-results/manual-final/desktop-selected.png",
+    "sha256": "2c3836f53391b342e24b8f7be96527048b3081da6be360817285395a8bd0f61a",
+    "width": 1440,
+    "height": 1100,
+    "visuallyInspected": true,
+    "sourceSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334"
+  },
+  {
+    "path": "/tmp/hybrid-manual-trend-lines-0.4.14/.qa-results/manual-final/narrow-320-restored.png",
+    "sha256": "f637edd0cddc4f51f459505dd2723f91c04ae942bce664e2d829e523e7c8c8a1",
+    "width": 320,
+    "height": 1060,
+    "visuallyInspected": false,
+    "sourceSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334"
+  },
+  {
+    "path": "/tmp/hybrid-manual-trend-lines-0.4.14/.qa-results/manual-final/narrow-320-selected.png",
+    "sha256": "43c0fa012b242bb55ec837963b009f99d80573d5fa34c71c5d64f98e67ac1f40",
+    "width": 320,
+    "height": 980,
+    "visuallyInspected": true,
+    "sourceSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334"
+  },
+  {
+    "path": "/tmp/hybrid-manual-trend-lines-0.4.14/.qa-results/manual-final/narrow-390-restored.png",
+    "sha256": "79ec53981c4813f599f93bd75c97afe01e56fa77e43ba5ba0c34269d7fc0889a",
+    "width": 390,
+    "height": 1060,
+    "visuallyInspected": true,
+    "sourceSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334"
+  },
+  {
+    "path": "/tmp/hybrid-manual-trend-lines-0.4.14/.qa-results/manual-final/narrow-390-selected.png",
+    "sha256": "155ef9c02bbb8d15efc8ebdc7256b345c8d9b32b5624eef033045fc6309990f5",
+    "width": 390,
+    "height": 980,
+    "visuallyInspected": false,
+    "sourceSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334"
+  },
+  {
+    "path": "/tmp/hybrid-manual-trend-lines-0.4.14/.qa-results/manual-final/narrow-help-en.png",
+    "sha256": "3d2ae7add268a3d3b8916a6cda6b3682f298f5f13b79c725d4483d2b8d6bfbab",
+    "width": 320,
+    "height": 1060,
+    "visuallyInspected": true,
+    "sourceSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334"
+  },
+  {
+    "path": "/tmp/hybrid-manual-trend-lines-0.4.14/.qa-results/manual-final/narrow-help-he.png",
+    "sha256": "20a01cf87fe45b502495c9c2de05fa4522be6472fcda7dd5fd9510ac9e8b4228",
+    "width": 320,
+    "height": 1060,
+    "visuallyInspected": true,
+    "sourceSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334"
+  },
+  {
+    "path": "/tmp/hybrid-manual-trend-lines-0.4.14/.qa-results/manual-final/narrow-storage-invalid.png",
+    "sha256": "dfe465009e4e0cf30f09d72aaa7efa9944b5dccd1868ad6b849920e85c6d9f34",
+    "width": 320,
+    "height": 980,
+    "visuallyInspected": false,
+    "sourceSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334"
+  },
+  {
+    "path": "/tmp/hybrid-manual-trend-lines-0.4.14/.qa-results/manual-final/narrow-storage-read.png",
+    "sha256": "dfe465009e4e0cf30f09d72aaa7efa9944b5dccd1868ad6b849920e85c6d9f34",
+    "width": 320,
+    "height": 980,
+    "visuallyInspected": false,
+    "sourceSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334"
+  },
+  {
+    "path": "/tmp/hybrid-manual-trend-lines-0.4.14/.qa-results/manual-final/narrow-storage-write.png",
+    "sha256": "dfe465009e4e0cf30f09d72aaa7efa9944b5dccd1868ad6b849920e85c6d9f34",
+    "width": 320,
+    "height": 980,
+    "visuallyInspected": false,
+    "sourceSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334"
+  }
+]
