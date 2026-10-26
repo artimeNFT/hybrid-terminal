@@ -1,4 +1,4 @@
-# 0.4.9 successor integration — prepared
+# 0.4.9 successor integration — completed
 
 Starting clean authoritative main `c1c43d3748b32ea9bf8e5253be72ac15ee3346da`, observed 0.4.7; successor safely fast-forwarded from tested `a28b1d1ddf615b9454b87fa046de5c0eec2eff3b` to roadmap-only `960c219928b96d379a04e5bb0c978e48248acf0f`. No local work discarded. Latest regional-window design is retained, not implemented.
 
@@ -7,3 +7,7 @@ Existing actual midnight observation reviewed **PASS only on exact 0.4.7**: `../
 Required resulting-candidate CI precedes one authorized fast-forward of main to the successor, which already contains 0.4.8. No separate merges, force, reset/stash, feature or test weakening. Final main publication gets its own exact CI verification. Old declarations/source seals/reports/manifests retain their historical bytes; new integration checksums bind updated documents separately. Checks/promotion receipts are recorded here or in ignored `.qa-results/integration-0.4.9-20261026/` when final-head self-reference would arise.
 
 Remaining: actual physical touch, screen reader/human translation and user-perceived readability of 0.4.9. Prior hour-soak acceptance stays 0.4.4, midnight acceptance stays 0.4.7. Relative-volume context and session-window design stay queued; stop after integration/CI.
+
+Actual resulting-candidate CI [40280482404](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40280482404) at `6f1b134d51ad599760194f1dd6103bddff0b0fcf` completed successfully, both jobs; decoded logs confirm all required groups and eleven browser suites. Authoritative main fast-forwarded to that exact commit once, with unchanged 0.4.9 source. `candidate-ci.json`, filtered log and `promotion.json` retain the pre-promotion verification and actual promotion. The final main handoff is published without force and exact push CI is checked before delivery; ignored root `.qa-results/integration-0.4.9-20261026/ci-verification.json` and `ci-test-summary.log` hold the post-push receipt without self-reference. No active implementation remains.
+
+After promotion, the actual authoritative file loaded as runtime 0.4.9 in isolated Chromium, with its exact 3d8cc6… source hash and zero page errors. Network was deliberately blocked: this verifies active-file/bootstrap identity, not live-feed acceptance. `active-root-browser.json` and `final-source-check.log` record this focused path check. No full successful local suite was repeated; required candidate/final-main CI supplies full groups.

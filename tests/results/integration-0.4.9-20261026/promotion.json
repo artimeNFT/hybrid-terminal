@@ -1,0 +1,20 @@
+{
+  "stage": "Authorized local fast-forward completed; final publication/CI receipt stored separately after push",
+  "promotedUtc": "2026-10-26T06:43:38.139397+00:00",
+  "previousMainCommit": "c1c43d3748b32ea9bf8e5253be72ac15ee3346da",
+  "fastForwardTarget": "6f1b134d51ad599760194f1dd6103bddff0b0fcf",
+  "candidateCiRun": 40280482404,
+  "candidateCiUrl": "https://github.com/artimeNFT/hybrid-terminal/actions/runs/40280482404",
+  "candidateCiConclusion": "success",
+  "root": "/mnt/c/users/shlom/desktop/the hybrid-terminal",
+  "activeVersion": "0.4.9",
+  "activeSourceSha256": "3d8cc67d458d24f8bc20870aa24078ad32749b8c95fc500c6f311bdfe0fd6139",
+  "applicationSourceChangedFromTestedCandidate": false,
+  "predecessorCheckpoint": "30432aba73c3b6a5112999f2d0448e9835dfdeaa",
+  "testedSuccessorCheckpoint": "a28b1d1ddf615b9454b87fa046de5c0eec2eff3b",
+  "latestRoadmapCheckpoint": "960c219928b96d379a04e5bb0c978e48248acf0f",
+  "independentCandidateMerges": false,
+  "forcePush": false,
+  "observedMidnightVersion": "0.4.7",
+  "liveAcceptanceTransferred": false
+}

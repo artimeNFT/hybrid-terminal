@@ -1,6 +1,11 @@
 {
-  "tests/results/integration-0.4.9-20261026/REPORT.md": "70e8b4d43b8d4e81736963b8fdd85f2cb298a3a6ea78474bd11a8e76503313b8",
+  "tests/results/integration-0.4.9-20261026/REPORT.md": "f3914e470c0e260be3672303c84983beb92d67e8274ad30d48327019746e1b7a",
+  "tests/results/integration-0.4.9-20261026/active-root-browser.json": "12c2aeab569f7a3d9c0394864f99e132d90653a105d25929168602060a3e0129",
+  "tests/results/integration-0.4.9-20261026/candidate-ci-test-summary.log": "704c5a93cdc2d048e33f99f62ed246b7057620f7536941c320acd92eb1d2e40a",
+  "tests/results/integration-0.4.9-20261026/candidate-ci.json": "809bfe4c4a0690ad8f08104e44a8cb38d66dd94eba147678b8ceb413588f4eb8",
+  "tests/results/integration-0.4.9-20261026/final-source-check.log": "783002a422770682b1dd7d7cb7808a6aaa9c00dfaef1b3f733e50c7447b3763c",
   "tests/results/integration-0.4.9-20261026/focused.log": "d19db4b6987561310fa1d5cf8b702432ebb8a14c27796387706c229b66dcb11a",
   "tests/results/integration-0.4.9-20261026/preservation.json": "74fbbe31bcbe872b97fc78ca35e4e59ee6c72e27f9fb6301dca98aaa696d14e9",
+  "tests/results/integration-0.4.9-20261026/promotion.json": "42896499b7fbb416a22edc5041ec365cefcc60eb32482bd721a165a42e0c4ba3",
   "tests/results/integration-0.4.9-20261026/source-check.log": "783002a422770682b1dd7d7cb7808a6aaa9c00dfaef1b3f733e50c7447b3763c"
 }

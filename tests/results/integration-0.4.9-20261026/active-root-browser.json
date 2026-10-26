@@ -1,0 +1,28 @@
+{
+  "verifiedUtc": "2026-10-26T06:44:14.147Z",
+  "file": "/mnt/c/users/shlom/desktop/the hybrid-terminal/hybrid-terminal.html",
+  "url": "file:///mnt/c/users/shlom/desktop/the%20hybrid-terminal/hybrid-terminal.html",
+  "sourceSha256": "3d8cc67d458d24f8bc20870aa24078ad32749b8c95fc500c6f311bdfe0fd6139",
+  "runtime": {
+    "version": "0.4.9",
+    "rule": "hybrid-v2-validity-closed",
+    "execution": "ohlc-market-stop-v2-gap-open",
+    "pane": "volume",
+    "volumeView": {
+      "heightRatio": null,
+      "ceiling": null
+    },
+    "helpLanguage": "he",
+    "header": "HYBRID TERMINAL v0.4.9 RCBTCUSDTETHUSDTSOLUSDT\n5m15m1h4h\nScore ≥3Score ≥4Score 5🔔 Alerts? HelpBINANCE SPOT · RESEARCH / SIMULATION◷ Data load failed",
+    "geometry": {
+      "W": 1054,
+      "H": 813,
+      "pw": 968,
+      "ph": 596.14,
+      "vh": 178.86,
+      "cw": 6.453333333333333
+    }
+  },
+  "pageErrors": [],
+  "network": "Blocked intentionally; isolated temporary profile; active-file/browser startup check only, not live-feed acceptance"
+}
