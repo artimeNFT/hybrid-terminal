@@ -1,0 +1,40 @@
+{
+  "version": "0.4.13",
+  "sourceSha256": "8c114fc604d9b7478334e01fee4ea7ea5c84f38cfc6b08f5524ab8a5e39157f4",
+  "startingCommit": "8e4652c076315d2e1b2a7347980ad1f94b06dbe2",
+  "preEditVersion": "0.4.12",
+  "preEditSha256": "f477eae1b50e435023e4f0a15e4e9a04601aadc800870fd978f9669aece02e37",
+  "priorFunctions": 141,
+  "unchangedPriorFunctions": 139,
+  "changedPriorFunctions": [
+    "updateLegend",
+    "draw"
+  ],
+  "newFunctions": [
+    "closeLinePaths",
+    "drawCloseLine",
+    "validChartTypePrefs",
+    "updateChartTypeControls",
+    "setChartType",
+    "initChartType"
+  ],
+  "ruleVersion": "hybrid-v2-validity-closed",
+  "executionVersion": "ohlc-market-stop-v2-gap-open",
+  "rsiPolicy": "wilder14-local-undefined-zero-change-v1",
+  "cliVersion": "1.0.1",
+  "researchSchema": 1,
+  "frozenReferenceSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "counts": {
+    "appSuites": 9,
+    "cliCases": 18,
+    "auditCases": 9,
+    "contractCases": 9,
+    "preparationCases": 13,
+    "presentationSuites": 10,
+    "presentationCases": 68,
+    "newChartTypeCases": 7,
+    "browserSuites": 15
+  },
+  "supplementalFocusedBrowser": "Same final application source; extra existing eligible LONG fixture and rendered SL/TP assertions added after full group, then final focused script rerun. Published CI verifies final exact tests.",
+  "noObservationResearchAcquisitionOrNewDependency": true
+}

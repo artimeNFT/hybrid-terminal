@@ -1,0 +1,97 @@
+{
+  "sourceSha256": "8c114fc604d9b7478334e01fee4ea7ea5c84f38cfc6b08f5524ab8a5e39157f4",
+  "root": "/tmp/hybrid-line-close-0.4.13/.qa-results/line-close-0.4.13/browser-final",
+  "scope": "Actual Chromium synthetic fixtures, not physical-device/live acceptance. Inspection tracked per image; matching pixel hashes reuse inspected images.",
+  "images": [
+    {
+      "file": "desktop-contexts.png",
+      "sha256": "fdb166f1a5a3d30a86ca3ef271a9e6fa74451207e64ee5be84076286077115d4",
+      "visuallyInspected": false
+    },
+    {
+      "file": "desktop-eligible-layers.png",
+      "sha256": "a3f456ebd8c4657295aca02d808844d50aa350ef79808c08b7c758e4460d3d7b",
+      "visuallyInspected": true
+    },
+    {
+      "file": "desktop-invalid-break.png",
+      "sha256": "9846a540489edbd60e9580e48ebaa4b80fb8f9c02de040422a443cab294b8a8a",
+      "visuallyInspected": true
+    },
+    {
+      "file": "desktop-line.png",
+      "sha256": "a3130ab054c74be3e7de85f4059dc64fced9cbc4a41c264d0c082b9463f9e4c8",
+      "visuallyInspected": true
+    },
+    {
+      "file": "desktop-missing-break.png",
+      "sha256": "9c4d675daf2dd9b548fe1acbf2d1d7798d4331a672523e658f538862ba26fab2",
+      "visuallyInspected": false
+    },
+    {
+      "file": "desktop-provisional.png",
+      "sha256": "f208b2f093d1dc852748875f08b13d38ab4fd8a80debc6c4d0b7b3e310c48791",
+      "visuallyInspected": true
+    },
+    {
+      "file": "narrow-320-contexts.png",
+      "sha256": "bebd35a0e6a7a0d1bff3ee76ee24c3fdeb63e58d56de283f8d86604332795489",
+      "visuallyInspected": false
+    },
+    {
+      "file": "narrow-320-line.png",
+      "sha256": "05b89716e8ee2ebaf73e23c13100cdce71b4decab2a7a099c4e00528062b6df4",
+      "visuallyInspected": true
+    },
+    {
+      "file": "narrow-320-provisional.png",
+      "sha256": "53515d8441bce3a7fdb9a57fb5a005a5033acc9f4f245b7e969f73f7b00c05c2",
+      "visuallyInspected": true
+    },
+    {
+      "file": "narrow-390-contexts.png",
+      "sha256": "beab4a9e98f9d0483c219fec5ac8bc817acd8669898d2c70915978ca6e5daf9c",
+      "visuallyInspected": false
+    },
+    {
+      "file": "narrow-390-line.png",
+      "sha256": "43b59b3a2f9fe69769f53c445ac89787726f6917d3a44da15a7e2959703f7ab1",
+      "visuallyInspected": true
+    },
+    {
+      "file": "narrow-390-provisional.png",
+      "sha256": "0a2f61419c7f1855cb4c66e321793477d8ff89a9d28018736eb1c1023431d830",
+      "visuallyInspected": false
+    },
+    {
+      "file": "narrow-help-en.png",
+      "sha256": "dd2b6cd40074e9f01c150f67e61662149e501e9096aa7a99d491526325c3af6f",
+      "visuallyInspected": true
+    },
+    {
+      "file": "narrow-help-he.png",
+      "sha256": "b9770efee55a08b74c3c278c17249684614ecbbfcb508fddf0721c678522a24d",
+      "visuallyInspected": true
+    },
+    {
+      "file": "narrow-storage-invalid.png",
+      "sha256": "7d70ae0e2b40eaa76a817db5c137c9e9c5bb70940f641e1b65bc890b122406ea",
+      "visuallyInspected": false
+    },
+    {
+      "file": "narrow-storage-read.png",
+      "sha256": "7d70ae0e2b40eaa76a817db5c137c9e9c5bb70940f641e1b65bc890b122406ea",
+      "visuallyInspected": false
+    },
+    {
+      "file": "narrow-storage-write.png",
+      "sha256": "50a783fcacb208c2758ee49d75c38de93d63b0041ddf622c5e744164f43b7663",
+      "visuallyInspected": false
+    },
+    {
+      "file": "narrow-unavailable.png",
+      "sha256": "28397deb10a41b6fd26fb0ad41a5f4c360bce9f66c5068f655d646a81eea6095",
+      "visuallyInspected": false
+    }
+  ]
+}

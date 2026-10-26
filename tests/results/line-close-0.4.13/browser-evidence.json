@@ -1,0 +1,68 @@
+{
+  "version": "0.4.13",
+  "sourceSha256": "8c114fc604d9b7478334e01fee4ea7ea5c84f38cfc6b08f5524ab8a5e39157f4",
+  "checks": [
+    {
+      "width": 1440,
+      "raster": {
+        "vertices": 133,
+        "rawPrice": 106,
+        "x": 822.8,
+        "y": 303.91113619670915,
+        "pixels": 3
+      },
+      "defaultCandlePixelsRestored": true,
+      "sourceVolumeDirection": "↓ Down (C < O)",
+      "modeChangeEngineCalls": 0,
+      "diagonalX": 32,
+      "diagonalY": 20,
+      "sharedVolumeX": true,
+      "hoverHistoryConfirmedAnchor": true,
+      "provisionalDashedThenConfirmed": true,
+      "optionalContextsPreserved": true,
+      "nativeStorageAndJournalBytesRetained": true
+    },
+    {
+      "width": 390,
+      "raster": {
+        "vertices": 133,
+        "rawPrice": 106,
+        "x": 258.4,
+        "y": 82.93144602639006,
+        "pixels": 3
+      },
+      "defaultCandlePixelsRestored": true,
+      "sourceVolumeDirection": "↓ Down (C < O)",
+      "modeChangeEngineCalls": 0,
+      "diagonalX": 32.000007629394474,
+      "diagonalY": 20,
+      "sharedVolumeX": true,
+      "hoverHistoryConfirmedAnchor": true,
+      "provisionalDashedThenConfirmed": true,
+      "optionalContextsPreserved": true,
+      "nativeStorageAndJournalBytesRetained": true
+    },
+    {
+      "width": 320,
+      "raster": {
+        "vertices": 133,
+        "rawPrice": 106,
+        "x": 198.9,
+        "y": 82.93144602639006,
+        "pixels": 9
+      },
+      "defaultCandlePixelsRestored": true,
+      "sourceVolumeDirection": "↓ Down (C < O)",
+      "modeChangeEngineCalls": 0,
+      "diagonalX": 31.99999999999997,
+      "diagonalY": 20,
+      "sharedVolumeX": true,
+      "hoverHistoryConfirmedAnchor": true,
+      "provisionalDashedThenConfirmed": true,
+      "optionalContextsPreserved": true,
+      "nativeStorageAndJournalBytesRetained": true
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Canvas stroke coordinates and raster pixels, native Chart controls/gestures/reload on a fully mocked stable HTTP origin; invalid/gap copies are explicit renderer fixtures. No production origin migration, live observation, acquired dataset or physical-device acceptance."
+}
