@@ -1,5 +1,5 @@
 # Hybrid Terminal — START HERE
-Continuity protocol v1.0 · adopted 2026-10-26
+Continuity protocol v1.1 · updated 2026-10-27
 
 This is the stable entry point for a new chat, reviewer or coding agent. It is not a second task board. Current release identities, work-in-progress, evidence and next actions belong in [STATUS.md](STATUS.md). Read that file from the live repository rather than a remembered copy.
 
@@ -18,7 +18,7 @@ Build a practical, readable Hybrid-framework decision-support terminal: trustwor
 ## 2. Resume in this order
 
 1. Read this file and any applicable repository/ancestor instructions.
-2. Read the newest delivery/direction section at the top of STATUS and its exact "Current task board". Read older dated sections only when needed to resolve evidence. The historical archive and old HYBRID_NEXT_TASK* files do not select today's next task.
+2. Read the complete short STATUS.md and its Current task board. Read STATUS_HISTORY.md or a named result report only when needed to resolve evidence. Historical files and old HYBRID_NEXT_TASK* files do not select today's next task.
 3. Use README for current operation, then inspect only the source/tests/reports relevant to the task.
 4. Read actual main HEAD and the reported commit. Verify application version/source identity and the latest relevant Actions run's head SHA and job conclusions; a queued run or old successful SHA is not current validation. A documentation-only HEAD can legitimately contain unchanged application bytes.
 5. If working locally, inspect exact project root, branch, dirty state and remote relation before changes. Preserve local work. Safely fetch/fast-forward when possible; never reset, discard, force-push or erase work to manufacture a clean state.
@@ -29,7 +29,7 @@ If GitHub access fails, state the exact limitation and request only the missing 
 
 ## 3. The living checkpoint — in STATUS only
 
-Batch 2–4 tightly related implementation items around one user outcome. Keep one implementation owner. Use focused checks during development and required release checks/actual CI on final code. Do not add a second release/evidence cycle solely to announce the first passed. CI documentation-only routing is a queued change; do not assume it exists or bypass current requirements. Read the latest working-method section in STATUS. Keep current handoff concise and retain detailed dated evidence separately when safely archived.
+Batch 2–4 tightly related implementation items around one user outcome. Keep one implementation owner. Use focused checks during development and required release checks/actual CI on final code. Do not add a second release/evidence cycle solely to announce the first passed. CI scope routing is described in STATUS and .github/workflows/ci.yml: only four operational documents qualify for the short path; all other or uncertain comparisons use full QA. A skipped app/browser job is not an executed test. Read current STATUS; use STATUS_HISTORY.md only for historical evidence.
 
 
 At each completed bounded increment, significant decision, interruption or requested handoff, update the current section with:
@@ -42,7 +42,7 @@ At each completed bounded increment, significant decision, interruption or reque
 - ONE exact next action and completion condition. Mark superseded plans explicitly.
 - Location and availability of required evidence, especially ignored/local-only material.
 
-Do not duplicate a rolling version/hash/task list here. Keep the current STATUS concise; preserve dated evidence below it. Quota recovery begins by inspecting what already exists, not by reimplementing it. Documentation updates must be reconciled with a concurrently prepared code branch before integration.
+Do not duplicate a rolling version/hash/task list here. Keep STATUS concise by replacing its current snapshot; preserve dated evidence in STATUS_HISTORY.md or existing source-bound result reports. Quota recovery begins by inspecting what already exists, not by reimplementing it. Documentation updates must be reconciled with a concurrently prepared code branch before integration.
 
 ## 4. Preserve these boundaries
 

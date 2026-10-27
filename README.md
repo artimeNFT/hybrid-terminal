@@ -2,6 +2,8 @@
 
 **New chat or reviewer:** start with [START_HERE.md](START_HERE.md), then the latest current section and task board in [STATUS.md](STATUS.md). Resume existing work; do not create a duplicate implementation session.
 
+**CI / handoff:** operational-document-only changes receive scope regression checks; all other/uncertain changes and manual dispatch receive full QA. See current [STATUS.md](STATUS.md); [STATUS_HISTORY.md](STATUS_HISTORY.md) retains earlier checkpoints.
+
 **Current direction and task order:** read CURRENT [STATUS.md](STATUS.md). Release0.4.14 adds basic **Manual** trend-line annotations, preserving the delivered Candles/Line display and all calculation/feed/execution/journal semantics. Active source SHA-256 `f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334`. Prior live observations remain exact-source-specific; no repeat soak, midnight, acquisition or research cohort. Stop after this increment; decision/journal review remains separately queued.
 
 Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Binance spot REST/WebSocket access is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
