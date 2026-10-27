@@ -13,13 +13,13 @@ Start with [START_HERE.md](START_HERE.md). Earlier dated plans are historical, n
 ## Active ownership and next action
 **User correction, 2026-10-27:** the wheel-zoom prompt has NOT been given to Codex. It is **queued, not running**. Earlier statements that it was active are superseded.
 CI/documentation maintenance is delivered and its full run passed at 9d56334f1ba100ce7446caf8f5611997211cf82d: [run40442554371](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40442554371). No new app feature is running based on the latest user report; verify local state before writes rather than inferring it from GitHub.
-**Next:** after this maintenance checkpoint is checked, issue ONE consolidated English prompt for wheel usability + clearer drawing-control explanations. Do not send a second overlapping task.
+**Next:** issue ONE consolidated Chart usability prompt: gentle wheel zoom, right-click Reset menu, context-correct Volume auto scale, compact price labels, and matching Help. This supersedes prior wheel-only drafts. Still queued/not issued; no overlapping task.
 
 ## Current task board
 | Priority | Work package | State / completion rule |
 | --- | --- | --- |
 | P0 | CI and concise handoff | Completed: eight scope regression cases; actual full maintenance CI40442554371 passed. Old STATUS archived byte-identically. Documentation-only jobs may be intentionally skipped, never described as executed. |
-| P1 | Wheel usability and drawing explanation | Queued, NOT issued. Slow default/Standard choice; normalized plot wheel units, cursor anchor, bounded response; explain Manual/selected/Pointer in Help; preserve drawings, all engine/journal behavior. |
+| P1 | Chart usability package | Queued, NOT issued. Slow/Standard wheel zoom; right-click menu invoking existing Reset semantics; Volume Auto for unvisited symbol/timeframe with scoped manual overrides and shared height; compact price labels with deliberate exact-value access; drawing-control Help. Preserve source calculations/drawings/journal. |
 | P1 | Recorded-decision review | Next package: read-only browsing/filtering + recorded details/reasons/versions + Help. Inspect legacy fields first; absent as-of context remains unavailable. No outcome calculation or journal rewrite. |
 | P2 | One analytical-context question | Choose one useful price/volume or cost-to-target description; confirm required data/zero-denominator handling before building. No automatic extra score. |
 | P2 | Data/source parity | Exact Psy/TR/session configuration, richer taker/derivatives feeds and daily/1m views remain conditional. Seconds/30s/monthly deferred. |
@@ -42,6 +42,12 @@ CI/documentation maintenance is delivered and its full run passed at 9d56334f1ba
 - Preserve frozen0.4.3 source context, CLI1.0.1/schema1 and26496-row BTC5m Q3 dataset hash `436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1`.
 - Preserve app/rules/execution/old records for display work. Distinguish verified source/public/live/user evidence; scores are not probabilities, OHLCV is not true order flow, unavailable is not zero.
 - UI language: English chart/header, Hebrew panel, bilingual Help. Discuss in Hebrew with exact steps, short checklist and final מעקב line.
+
+## Chart usability scope — 2026-10-27
+- Right-click should OPEN a small menu with Reset chart view, not reset immediately. Its action reuses current Reset behavior (150 bars/latest/auto price); committed drawings, indicator layers, chart type and preferences stay. Existing Reset remains accessible.
+- Volume is already based on the selected timeframe's source candles. The defect is manual scale reuse across symbol/timeframe. New contexts default to Auto; explicit manual ceilings belong only to their own symbol/timeframe, while pane height remains shared. Do not infer the context of an old unscoped saved ceiling or silently erase legacy bytes.
+- Compact daily status already exists. Raw pivot decimals remain intentionally available in dailyInspector/exact details via dayPrice. Audit the actual display path before editing: normal labels/summaries should be concise/adaptive, while deliberate exact details/tooltips/export preserve underlying values. Example normal display: PP101.19 / R1102.49 / S199.64. Never round analytical values, tick-snap computed pivots, or merge distinct levels by rounded text.
+- This package and its Help/tests are one release. Journal review remains next, not part of this package.
 
 ## Recorded-journal inventory for the next package
 The user-supplied 183-record export was inspected read-only outside GitHub. Every record contains the five selected-side condition items, recorded side/score/plan field, app/rule version, observation/close time, source OHLCV and basic window coverage. No record contains a full two-side candidate diagnosis; old execution/RSI policy fields are absent in some versions. Historical review must show only recorded data, retain unavailable/version-specific states and never recompute old decisions using current inputs. No user journal records, prices or signatures were uploaded to GitHub.
