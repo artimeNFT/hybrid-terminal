@@ -10,7 +10,7 @@ test('directional geometry sorts LONG/SHORT, groups exact equality, keeps rounde
  a.set('__levels',levels);let v=a.read('targetPathGeometry({entry:100,tp1:105,tp2:110,stop:98},2,__levels)');
  assert.equal(v.state,'ready');assert.deepEqual(v.levels.map(x=>x.price),[101,105,105.000000001,109]);assert.deepEqual(v.levels[1].names,['B','D']);assert.deepEqual(v.levels.map(x=>x.position),['before-tp1','at-tp1','after-tp1','after-tp1']);assert.deepEqual(v.endpoints.map(x=>x.position),['entry','tp2']);assert.equal(v.outside.length,2);assert.equal(v.levels[0].percent,1);assert.equal(v.levels[0].atr,.5);assert.equal(v.levels[0].r,.5);
  assert.notEqual(a.read('dayPrice(105)'),a.read('dayPrice(105.000000001)'));
- a.set('__display',{...a.read('confirmedTargetPath()'),...v});const rendered=a.exec('targetPathHTML(__display)');assert.ok(rendered.includes('B / D · 105'));assert.ok(rendered.includes('C · 105.000000001'));assert.equal((rendered.match(/data-path-price=/g)||[]).length,4);
+ a.set('__display',{...a.read('confirmedTargetPath()'),...v});const rendered=a.exec('targetPathHTML(__display)');assert.ok(rendered.includes('B / D · 105'));assert.ok(rendered.includes('C · 105.00 · ערכים נפרדים'));assert.ok(rendered.includes('title="105.000000001"'));assert.ok(rendered.includes('data-path-price="105.000000001"'));assert.equal((rendered.match(/data-path-price=/g)||[]).length,4);
  a.set('__levels',levels.map(x=>({...x,value:200-x.value})));v=a.read('targetPathGeometry({entry:100,tp1:95,tp2:90,stop:102},2,__levels)');assert.equal(v.direction,'SHORT');assert.deepEqual(v.levels.map(x=>x.names),[['A'],['B','D'],['C'],['F']]);assert.deepEqual(v.levels.map(x=>x.position),['before-tp1','at-tp1','after-tp1','after-tp1']);assert.equal(v.levels[0].percent,1);
 });
 test('invalid geometry and levels stay unavailable; invalid denominators affect only their own distance metrics',async()=>{
@@ -48,6 +48,6 @@ test('missing clock/daily response stays excluded, while stale symbol/timeframe 
 });
 test('all pre-existing 0.4.4 calculation function bodies and legacy journal bytes remain unchanged',async()=>{
  const old=await openApp({file:'baseline/hybrid-terminal.0.4.4.html',bars:bars()}),stored=old.localStorage['hybridTerminal.journal.v1'],a=await live({localStorage:old.localStorage});const fs=require('node:fs'),names=[...fs.readFileSync('baseline/hybrid-terminal.0.4.4.html','utf8').matchAll(/^(?:async )?function (\w+)\(/gm)].map(m=>m[1]);
- for(const name of names.filter(n=>!['panel','draw','dailyLabelLayout','loadDisplayPrefs','saveDisplayPrefs','bindSystem','refreshPivots','dailyContextHTML','updateLegend','chartGeometry','bindChart','endChartDrag'].includes(n)))assert.equal(a.read(name+'.toString()'),old.read(name+'.toString()'),name);
+ for(const name of names.filter(n=>![...require('./chart-usability-fixtures.cjs').changedView,'panel','draw','dailyLabelLayout','loadDisplayPrefs','saveDisplayPrefs','bindSystem','refreshPivots','dailyContextHTML','updateLegend','chartGeometry','bindChart','endChartDrag'].includes(n)))assert.equal(a.read(name+'.toString()'),old.read(name+'.toString()'),name);
  await enable(a);a.exec('S.l.e=0;S.panelKey=null;panel()');assert.equal(a.localStorage['hybridTerminal.journal.v1'],stored);assert.deepEqual(a.read('S.sig'),old.read('S.sig'));assert.deepEqual(a.read('S.bt'),old.read('S.bt'));
 });

@@ -1,0 +1,162 @@
+[
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/desktop-context.png",
+    "sha256": "ec5ba28ad4070df9601f4f23f077c865ed347b825a6db172132917634558c0b7",
+    "width": 1440,
+    "height": 1100,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": true
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/desktop-menu.png",
+    "sha256": "2201f7f2a0094b3f67d0f00af7ef8ec6e61726c03efe3593c8ae9afc4ca3345d",
+    "width": 1440,
+    "height": 1100,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": true
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/desktop-precision-details.png",
+    "sha256": "bf542a90d73ad3cfa4919cf8749bc8ad15051a6f8846f63372f896fc7770a374",
+    "width": 1440,
+    "height": 1100,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": false
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/narrow-320-context.png",
+    "sha256": "f38b986314f817f5c8b549a1f10d45ef71a9f415dbb858afcf5457ec2d5af491",
+    "width": 320,
+    "height": 1080,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": false
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/narrow-320-menu.png",
+    "sha256": "a2cc26ff470622c7dd0b121bc9d8a105232f6b38a9a809d2548925ed7443685b",
+    "width": 320,
+    "height": 1080,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": true
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/narrow-320-precision-details.png",
+    "sha256": "b3ac5b08fc661e9bd9de4d3ceca9629e28a4e312f9774d9347eafd0f3280a757",
+    "width": 320,
+    "height": 1080,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": false
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/narrow-390-context.png",
+    "sha256": "eeaf509fdaafa79502190359b433666fb3bc0d11083b408e01e275f62e255a7b",
+    "width": 390,
+    "height": 1080,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": false
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/narrow-390-menu.png",
+    "sha256": "5df8cc5e63ccf003df5527c4dfb6b7f25cd3b5da5c452977b671f455319f10a8",
+    "width": 390,
+    "height": 1080,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": false
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/narrow-390-precision-details.png",
+    "sha256": "ac1b49dd94e7a42e2b55f06feb85e0f0ba9b05724e4ec11453bccd8862401b3a",
+    "width": 390,
+    "height": 1080,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": false
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/narrow-help-en.png",
+    "sha256": "ed487fb9d1e0cfb0873f5e4591611697588f1ba21df28c98c6705175a941df6d",
+    "width": 320,
+    "height": 1080,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": true
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/narrow-help-he.png",
+    "sha256": "ac1aff3684935bcdafcf17fb66176a51e892a4c9fab15190b7d21608fb08d8ff",
+    "width": 320,
+    "height": 1080,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": true
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/narrow-storage-legacy.png",
+    "sha256": "171d3392ea2a7d489d6f95c0b0051eefb41483ab14044fb7b9355d18b20b8e76",
+    "width": 320,
+    "height": 1080,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": false
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/narrow-storage-malformed.png",
+    "sha256": "65c410dff9161c07a55b55fcd990c484b3b2a6ca4eff8fce2b5b358a18abc4ad",
+    "width": 320,
+    "height": 1080,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": false
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/narrow-storage-read.png",
+    "sha256": "65c410dff9161c07a55b55fcd990c484b3b2a6ca4eff8fce2b5b358a18abc4ad",
+    "width": 320,
+    "height": 1080,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": false
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/narrow-storage-write.png",
+    "sha256": "65c410dff9161c07a55b55fcd990c484b3b2a6ca4eff8fce2b5b358a18abc4ad",
+    "width": 320,
+    "height": 1080,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": false
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-chart-usability/narrow-tiny-prices.png",
+    "sha256": "8bb5652a39f6bb1573017ce4e15db3ae1df4ae42f797c58c749bfe9d8372d2e2",
+    "width": 320,
+    "height": 1080,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": true
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-day-context/desktop-collision.png",
+    "sha256": "a05d14e3303cc695c4c32b42a48c1b67a64170f2f0831f787538530736e5819c",
+    "width": 1440,
+    "height": 1000,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": true
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-day-context/history.png",
+    "sha256": "36cd7af48e33d0a95c09cf8f55e73e9995c477531802b60e0fd4e976b1ee3231",
+    "width": 1440,
+    "height": 1000,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": false
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-day-context/narrow-history.png",
+    "sha256": "8577833a018a749c1a8929153d73d7e2b0b0a4ef1f78246d21752c8e48e3a4db",
+    "width": 430,
+    "height": 1000,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": false
+  },
+  {
+    "path": "/tmp/hybrid-chart-usability-0.4.15/.qa-results/browser/browser-day-context/phone-collision.png",
+    "sha256": "ba8838f000f7f7b7718127d5621d3a6d025c68c291d1b73b9114380689cf7ed6",
+    "width": 390,
+    "height": 844,
+    "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+    "visuallyInspected": true
+  }
+]

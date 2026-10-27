@@ -1,0 +1,33 @@
+{
+  "version": "0.4.15 RC",
+  "htmlSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+  "preEditVersion": "0.4.14 RC",
+  "preEditHtmlSha256": "f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334",
+  "baseCommit": "f64756a52c94dd0ac7e507473b49f003ce530915",
+  "initialLocalLayoutSourceSha256": "d9495e9f2ee3dc3df35c0e095265d703b425f12c3ad75dd7a4508858ad782a42",
+  "priorNamedFunctions": 174,
+  "unchangedPriorNamedFunctions": 162,
+  "changedViewFunctions": [
+    "dailyContextHTML",
+    "volumeRange",
+    "saveVolumePanePrefs",
+    "setVolumeHeight",
+    "setVolumeCeiling",
+    "resetVolumePane",
+    "updateVolumeControls",
+    "initVolumePane",
+    "draw",
+    "bindChart",
+    "targetPathHTML",
+    "panel"
+  ],
+  "otherChangedDeclaration": "fmt: display strings only",
+  "sourceExactDeliberatePaths": [
+    "dayPrice",
+    "dailyInspector"
+  ],
+  "newNamedViewHelpers": 12,
+  "newTimersOrDependencies": 0,
+  "ruleExecutionRsiCliSchemaUnchanged": true,
+  "ciPolicy": "Code/tests/evidence select full scope; actual exact published run checked before final delivery, receipt ignored to avoid announcement-only publication."
+}

@@ -1,0 +1,71 @@
+{
+  "version": "0.4.15",
+  "sourceSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+  "checks": [
+    {
+      "width": 1440,
+      "slowTrustedWheel": true,
+      "slowFactor": 1.0832870676749586,
+      "cursorAnchoredNativeCloseX": 390.3938629744584,
+      "pixelModeTrusted": true,
+      "linePageDomEvents": true,
+      "standardPriorResponse": true,
+      "menuBounded": {
+        "x": 1052,
+        "y": 506,
+        "width": 131,
+        "height": 44
+      },
+      "menuOnlyResetAndDraftCancel": true,
+      "drawingsPreserved": true,
+      "contexts": 12,
+      "sharedHeight": 0.16157153563961973,
+      "nativePreferenceAndJournalRestoration": true,
+      "unchangedSourceVolume": true
+    },
+    {
+      "width": 390,
+      "slowTrustedWheel": true,
+      "slowFactor": 1.0832870676749586,
+      "cursorAnchoredNativeCloseX": 122.56617802578363,
+      "pixelModeTrusted": true,
+      "linePageDomEvents": true,
+      "standardPriorResponse": true,
+      "menuBounded": {
+        "x": 255,
+        "y": 746,
+        "width": 131,
+        "height": 44
+      },
+      "menuOnlyResetAndDraftCancel": true,
+      "drawingsPreserved": true,
+      "contexts": 12,
+      "sharedHeight": null,
+      "nativePreferenceAndJournalRestoration": true,
+      "unchangedSourceVolume": true
+    },
+    {
+      "width": 320,
+      "slowTrustedWheel": true,
+      "slowFactor": 1.0832870676749586,
+      "cursorAnchoredNativeCloseX": 94.35078421162689,
+      "pixelModeTrusted": true,
+      "linePageDomEvents": true,
+      "standardPriorResponse": true,
+      "menuBounded": {
+        "x": 185,
+        "y": 817,
+        "width": 131,
+        "height": 44
+      },
+      "menuOnlyResetAndDraftCancel": true,
+      "drawingsPreserved": true,
+      "contexts": 12,
+      "sharedHeight": null,
+      "nativePreferenceAndJournalRestoration": true,
+      "unchangedSourceVolume": true
+    }
+  ],
+  "errors": [],
+  "scope": "Trusted Chromium pixel-wheel input and native DOM line/page WheelEvents, real right-click/keyboard/control/reset/native reload, context-specific source fixtures. Isolated profiles/fully mocked feed; no ordinary profile, physical touch, live observation, research cohort or profitability claim."
+}

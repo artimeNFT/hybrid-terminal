@@ -23,3 +23,5 @@ The only active user application is **`../hybrid-terminal.html`**. HTML files in
 `hybrid-terminal.0.4.12.html` preserves exact pre-Line 0.4.12 source, SHA-256 `f477eae1b50e435023e4f0a15e4e9a04601aadc800870fd978f9669aece02e37`. Immutable internal comparison only; the root HTML remains the sole active app.
 
 - `hybrid-terminal.0.4.13.html`: exact pre-edit0.4.13 RC, SHA-256 `8c114fc604d9b7478334e01fee4ea7ea5c84f38cfc6b08f5524ab8a5e39157f4`. Internal immutable manual-drawing comparison only; root `hybrid-terminal.html` is the sole active user application.
+
+- `hybrid-terminal.0.4.14.html`: exact pre-edit0.4.14 RC / `f6b072c4ef074cc3a12184bc1b759d1d009a525dab1e2ca6cf07d200be9bb334`. Internal chart-usability comparison only; root HTML is the sole active application.
