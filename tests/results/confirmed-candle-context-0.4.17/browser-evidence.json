@@ -1,0 +1,131 @@
+{
+  "version": "0.4.17",
+  "sourceSha256": "a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a",
+  "checks": [
+    {
+      "width": 1440,
+      "independentExpected": {
+        "rangeATR": 2,
+        "bodyPct": 50,
+        "closePositionPct": 75,
+        "priorATR": 4,
+        "volumeRatio": 1.5
+      },
+      "initiallyCollapsed": true,
+      "keyboardExpandersAndExactRegion": true,
+      "anchorStableThroughHoverHistoryJournalProvisional": true,
+      "chartOnlyHistory": 1000,
+      "confirmation": {
+        "priorATR": 4.285714285714286,
+        "rangeATR": 1.8666666666666667,
+        "bodyPct": 25,
+        "closePositionPct": 50,
+        "volumeRatio": 0
+      },
+      "openStatePreserved": true,
+      "staleSymbolAndTimeframeCleared": true,
+      "newContext": {
+        "symbol": "SOLUSDT",
+        "timeframe": "4h",
+        "asOf": 1793577600000
+      },
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "independentExpected": {
+        "rangeATR": 2,
+        "bodyPct": 50,
+        "closePositionPct": 75,
+        "priorATR": 4,
+        "volumeRatio": 1.5
+      },
+      "initiallyCollapsed": true,
+      "keyboardExpandersAndExactRegion": true,
+      "anchorStableThroughHoverHistoryJournalProvisional": true,
+      "chartOnlyHistory": 1000,
+      "confirmation": {
+        "priorATR": 4.285714285714286,
+        "rangeATR": 1.8666666666666667,
+        "bodyPct": 25,
+        "closePositionPct": 50,
+        "volumeRatio": 0
+      },
+      "openStatePreserved": true,
+      "staleSymbolAndTimeframeCleared": true,
+      "newContext": {
+        "symbol": "SOLUSDT",
+        "timeframe": "4h",
+        "asOf": 1793577600000
+      },
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 320,
+      "independentExpected": {
+        "rangeATR": 2,
+        "bodyPct": 50,
+        "closePositionPct": 75,
+        "priorATR": 4,
+        "volumeRatio": 1.5
+      },
+      "initiallyCollapsed": true,
+      "keyboardExpandersAndExactRegion": true,
+      "anchorStableThroughHoverHistoryJournalProvisional": true,
+      "chartOnlyHistory": 1000,
+      "confirmation": {
+        "priorATR": 4.285714285714286,
+        "rangeATR": 1.8666666666666667,
+        "bodyPct": 25,
+        "closePositionPct": 50,
+        "volumeRatio": 0
+      },
+      "openStatePreserved": true,
+      "staleSymbolAndTimeframeCleared": true,
+      "newContext": {
+        "symbol": "SOLUSDT",
+        "timeframe": "4h",
+        "asOf": 1793577600000
+      },
+      "noHorizontalOverflow": true
+    },
+    {
+      "state": "zero-range",
+      "metrics": {
+        "rangeATR": 0,
+        "bodyPct": null,
+        "closePositionPct": null,
+        "volume": 0
+      }
+    },
+    {
+      "state": "warm-up",
+      "metrics": {
+        "rangeATR": null,
+        "bodyPct": 50,
+        "closePositionPct": 75,
+        "volume": null
+      }
+    },
+    {
+      "state": "zero-prior-ATR",
+      "metrics": {
+        "rangeATR": null,
+        "bodyPct": 50,
+        "closePositionPct": 75,
+        "volume": 1.5
+      }
+    },
+    {
+      "state": "zero-reference",
+      "metrics": {
+        "rangeATR": 2,
+        "bodyPct": 50,
+        "closePositionPct": 75,
+        "volume": null
+      }
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Chromium keyboard/DOM/source arithmetic with synthetic REST/WebSocket, old synthetic record selection and isolated storage. No personal journal, public feed, physical-device/live acceptance or research cohort."
+}

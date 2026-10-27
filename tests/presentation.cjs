@@ -9,7 +9,7 @@ const sha = b => crypto.createHash('sha256').update(b).digest('hex');
 
 test('frozen reference is exact, explicit context verifies old sources, and unbound research rejects the active UI', () => {
   assert.equal(sha(fs.readFileSync(oldFile)), expected);
-  const activeExpected = require('../qa/source-checksums.0.4.16.json')['hybrid-terminal.html'];
+  const activeExpected = require('../qa/source-checksums.0.4.17.json')['hybrid-terminal.html'];
   assert.equal(sha(fs.readFileSync(path.join(root, 'hybrid-terminal.html'))), activeExpected);
   assert.notEqual(activeExpected, expected);
   const outside = spawnSync(process.execPath, ['-e', "require('./research/audit/adapter.cjs').createAdapter()"], {cwd: root, encoding: 'utf8'});
@@ -35,7 +35,7 @@ test('preserved calculation/journal functions remain exact to frozen 0.4.3 with 
   const changedRendering = new Set([...require('./chart-usability-fixtures.cjs').changedView,'updateSystemUI', 'sizingHTML', 'candidateHTML', 'panel', 'draw', 'dailyLabelLayout', 'loadDisplayPrefs', 'saveDisplayPrefs', 'bindSystem','refreshPivots','dailyContextHTML','updateLegend','chartGeometry','bindChart','endChartDrag']);
   for (const name of names.filter(n => !changedRendering.has(n))) assert.equal(current.read(name + '.toString()'), old.read(name + '.toString()'), name);
   for (const name of ['RULE_VERSION', 'EXECUTION_VERSION', 'RSI_POLICY']) assert.equal(current.read(name), old.read(name));
-  assert.equal(current.read('APP_VERSION'), '0.4.16');
+  assert.equal(current.read('APP_VERSION'), '0.4.17');
 });
 
 test('synthetic calculation/decision/backtest behavior matches 0.4.3 across thresholds and degenerate inputs', async () => {

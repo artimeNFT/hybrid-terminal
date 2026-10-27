@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-27T17:38:02.152933+00:00",
+  "startingCommit": "b3768e604aa51b866b725ce78ca58e68e4826c4b",
+  "version": "0.4.17 RC",
+  "htmlSha256": "a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a",
+  "baselineSha256": "20fd3e34cd83b19081e2aa1c4237d872ec2074ef3407fcb9e24c9c2b911e0339",
+  "cliVersion": "1.0.1",
+  "schemaVersion": 1,
+  "cliSha256": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+  "ruleVersion": "hybrid-v2-validity-closed",
+  "executionVersion": "ohlc-market-stop-v2-gap-open",
+  "localValidation": {
+    "npm test": 0,
+    "npm run test:browser": 0,
+    "presentationSuites": 14,
+    "presentationCases": 109,
+    "newContextCases": 10,
+    "browserSuites": 19,
+    "finalCaptureFocusedBrowser": 0
+  },
+  "inspectedImages": [
+    "desktop-compact.png",
+    "desktop-exact.png",
+    "narrow-320-compact.png",
+    "narrow-320-confirmed-zero-volume.png",
+    "narrow-320-new-context.png",
+    "narrow-zero-range.png",
+    "narrow-warm-up.png",
+    "narrow-zero-prior-ATR.png",
+    "narrow-help-he.png",
+    "narrow-help-en.png"
+  ],
+  "data": "Synthetic fixtures and mocked REST/WebSocket. Retained frozen data only hashed, not analyzed. No personal journals.",
+  "developmentCorrection": "Provisional arrays legitimately extend; corrected first focused assertion to compare the confirmed prefix. Final full suites pass. Capture-only scrolling rerun after full browser suite, same HTML/assertions.",
+  "developmentRawLog": {
+    "path": "/tmp/hybrid-candle-focused.log",
+    "sha256": "1a0a7a664305905c1d70ccbb35cd89f7220454839f3cd7f2eea630942faa1ffe",
+    "trackedCopy": "initial-focused.log has trailing whitespace normalized; original raw log remains unchanged locally"
+  }
+}

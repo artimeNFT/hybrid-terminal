@@ -1,0 +1,243 @@
+✔ independent literal arithmetic reads previous ATR, excludes opening gaps and reuses exact Volume summary (124.129073ms)
+✔ close location is independent of own direction, including low/high endpoints and non-flat doji (48.586196ms)
+✔ zero range and genuine zero volume remain distinct from unavailable, including zero prior ATR (34.166601ms)
+✔ minimum fourteen prior closed valid contiguous candles are required only for the ATR metric (164.719519ms)
+✔ each arithmetic guard is independent and stable percentages avoid unnecessary intermediate overflow (147.253764ms)
+✔ finite-prefix dependence is retained rather than reseeding from fourteen or treating minimum history as convergence (26.316402ms)
+✖ anchor ignores hover, chart-only history, provisional updates and journal selection, and advances on confirmation (36.130251ms)
+✔ context identity rejects missing/stale confirmation and a mismatched Volume summary without affecting geometry (13.912135ms)
+✔ existing engine/feed/ATR/Volume/journal functions, data and pixels remain exact; view calls do not write or analyze (867.767372ms)
+✔ collapsed nested context uses existing expander preservation, exact details and equivalent Help without new storage/timers (18.083381ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1575.789411
+
+✖ failing tests:
+
+test at tests/confirmed-candle-context.cjs:30:1
+✖ anchor ignores hover, chart-only history, provisional updates and journal selection, and advances on confirmation (36.130251ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+
+    {
+      atr: [
+        4,
+        4,
+        4,
+  ...
+        4.285714285714286,
+  +     4.551020408163265
+      ],
+      bt: {
+        L: {
+          avg: null,
+          n: 0
+  ...
+          100.57142857142858,
+  +       101.06122448979593
+        ],
+        [
+          null,
+          null,
+          null,
+  ...
+          null,
+  +       null
+        ],
+        [
+          null,
+          null,
+          null,
+  ...
+          null,
+  +       null
+        ],
+        [
+          null,
+          null,
+          null,
+  ...
+          null,
+  +       null
+        ]
+      ],
+      journal: '{"schemaVersion":1,"retiredCount":0,"records":[{"id":"BTCUSDT|5m|1793154300000|hybrid-v2-validity-closed|3","signature":"{\\"side\\":\\"WAIT\\",\\"score\\":1,\\"items\\":[[\\"מתיחה מעל EMA50 (לא זמין ATR)\\",false],[\\"וקטור ירוק פתוח מתחת (עד 6 ATR)\\",false],[\\"נר נפח עוצר בשיא\\",false],[\\"מבנה M\\",false],[\\"RSI 100 מעל 65\\",true]],\\"plan\\":null}","observedAt":"2026-10-27T17:23:25.844Z","applicationVersion":"0.4.17","ruleVersion":"hybrid-v2-validity-closed","symbol":"BTCUSDT","timeframe":"5m","candleOpenTime":1793154300000,"candleCloseTime":1793154600000,"candidateDiagnostics":{"candidates":{"LONG":{"side":"LONG","score":0,"items":[["מתיחה מתחת ל-EMA50 (לא זמין ATR)",false],["וקטור אדום פתוח מעל (עד 6 ATR)",false],["נר נפח עוצר בשפל",false],["מבנה W",false],["RSI 100 מתחת ל-35",false]],"targetAvailable":false,"geometryEligible":false,"eligible":false,"reason":"data-unavailable","plan":null},"SHORT":{"side":"SHORT","score":1,"items":[["מתיחה מעל EMA50 (לא זמין ATR)",false],["וקטור ירוק פתוח מתחת (עד 6 ATR)",false],["נר נפח עוצר בשיא",false],["מבנה M",false],["RSI 100 מעל 65",true]],"targetAvailable":false,"geometryEligible":false,"eligible":false,"reason":"data-unavailable","plan":null}},"selection":{"policy":"higher-score-short-on-tie-before-eligibility","selected":"SHORT","tied":false,"suppressedOther":false,"reason":"data-unavailable"},"validity":{"ready":false,"reasons":["warm-up"],"raw":{"atr":4.285714285714286,"ema50":null,"rsi":100,"volumeMean":100,"relativeVolume":1.5},"rsiPolicy":"wilder14-local-undefined-zero-change-v1"}},"config":{"minimumScore":3,"roundTripFee":0.001,"executionVersion":"ohlc-market-stop-v2-gap-open","rsiPolicy":"wilder14-local-undefined-zero-change-v1"},"dataContext":{"firstCandle":1793145600000,"closedCandleCount":30},"reference":{"o":100,"h":106,"l":98,"c":104,"v":150},"feedPhase":"rest-snapshot","signal":{"side":"WAIT","score":1,"items":[["מתיחה מעל EMA50 (לא זמין ATR)",false],["וקטור ירוק פתוח מתחת (עד 6 ATR)",false],["נר נפח עוצר בשיא",false],["מבנה M",false],["RSI 100 מעל 65",true]],"plan":null}}]}',
+      k: [
+        {
+  ...
+        },
+  +     {
+  +       c: 104,
+  +       closed: false,
+  +       cls: 2,
+  +       end: 1793154899999,
+  +       h: 106,
+  +       l: 98,
+  +       o: 100,
+  +       t: 1793154600000,
+  +       up: true,
+  +       v: 500,
+  +       va: 4000,
+  +       volumeReference: {
+  +         maxProduct: 1200,
+  +         mean: 105,
+  +         relative: 4.761904761904762,
+  +         state: 'ready'
+  +       }
+  +     }
+      ],
+      mw: [],
+      rsi: [
+        null,
+        null,
+  ...
+        100,
+  +     100
+      ],
+      rules: [
+        'hybrid-v2-validity-closed',
+        'ohlc-market-stop-v2-gap-open',
+        'wilder14-local-undefined-zero-change-v1'
+  ...
+        100.1311475409836,
+  +     100.48826291079811
+      ]
+    }
+
+      at TestContext.<anonymous> (/tmp/hybrid-confirmed-candle-context-0.4.17/tests/confirmed-candle-context.cjs:32:140)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: {
+      k: [
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object]
+      ],
+      e: [ [Array], [Array], [Array], [Array] ],
+      atr: [
+                        4, 4,                 4,
+                        4, 4,                 4,
+                        4, 4,                 4,
+                        4, 4,                 4,
+                        4, 4,                 4,
+                        4, 4,                 4,
+                        4, 4,                 4,
+                        4, 4,                 4,
+                        4, 4,                 4,
+                        4, 4, 4.285714285714286,
+        4.551020408163265
+      ],
+      rsi: [
+        null, null, null, null, null,
+        null, null, null, null, null,
+        null, null, null, null, null,
+        null, null, null, null, null,
+        null, null, null, null, null,
+        null, null, null, null, 100,
+        100
+      ],
+      vw: [
+                       100,               100,
+                       100,               100,
+                       100,               100,
+                       100,               100,
+                       100,               100,
+                       100,               100,
+                       100,               100,
+                       100,               100,
+                       100,               100,
+                       100,               100,
+                       100,               100,
+                       100,               100,
+                       100,               100,
+                       100,               100,
+                       100, 100.1311475409836,
+        100.48826291079811
+      ],
+      mw: [],
+      sig: { side: 'WAIT', score: 1, items: [Array], plan: null, short: true, candidates: [Object], selection: [Object], validity: [Object], g: 1, r: 0 },
+      bt: { executionVersion: 'ohlc-market-stop-v2-gap-open', ruleVersion: 'hybrid-v2-validity-closed', statisticsVersion: 'net-r-states-v1', state: 'empty', N: 0, w: 0, wr: null, lo: null, hi: null, avg: null, pf: null, pfState: 'unavailable', gains: 0, losses: 0, dd: null, drawdownBasis: 'realized-closed-trade-net-R', cur: [Array], t1: null, L: [Object], S: [Object], trades: [] },
+      journal: '{"schemaVersion":1,"retiredCount":0,"records":[{"id":"BTCUSDT|5m|1793154300000|hybrid-v2-validity-closed|3","signature":"{\\"side\\":\\"WAIT\\",\\"score\\":1,\\"items\\":[[\\"מתיחה מעל EMA50 (לא זמין ATR)\\",false],[\\"וקטור ירוק פתוח מתחת (עד 6 ATR)\\",false],[\\"נר נפח עוצר בשיא\\",false],[\\"מבנה M\\",false],[\\"RSI 100 מעל 65\\",true]],\\"plan\\":null}","observedAt":"2026-10-27T17:23:25.844Z","applicationVersion":"0.4.17","ruleVersion":"hybrid-v2-validity-closed","symbol":"BTCUSDT","timeframe":"5m","candleOpenTime":1793154300000,"candleCloseTime":1793154600000,"candidateDiagnostics":{"candidates":{"LONG":{"side":"LONG","score":0,"items":[["מתיחה מתחת ל-EMA50 (לא זמין ATR)",false],["וקטור אדום פתוח מעל (עד 6 ATR)",false],["נר נפח עוצר בשפל",false],["מבנה W",false],["RSI 100 מתחת ל-35",false]],"targetAvailable":false,"geometryEligible":false,"eligible":false,"reason":"data-unavailable","plan":null},"SHORT":{"side":"SHORT","score":1,"items":[["מתיחה מעל EMA50 (לא זמין ATR)",false],["וקטור ירוק פתוח מתחת (עד 6 ATR)",false],["נר נפח עוצר בשיא",false],["מבנה M",false],["RSI 100 מעל 65",true]],"targetAvailable":false,"geometryEligible":false,"eligible":false,"reason":"data-unavailable","plan":null}},"selection":{"policy":"higher-score-short-on-tie-before-eligibility","selected":"SHORT","tied":false,"suppressedOther":false,"reason":"data-unavailable"},"validity":{"ready":false,"reasons":["warm-up"],"raw":{"atr":4.285714285714286,"ema50":null,"rsi":100,"volumeMean":100,"relativeVolume":1.5},"rsiPolicy":"wilder14-local-undefined-zero-change-v1"}},"config":{"minimumScore":3,"roundTripFee":0.001,"executionVersion":"ohlc-market-stop-v2-gap-open","rsiPolicy":"wilder14-local-undefined-zero-change-v1"},"dataContext":{"firstCandle":1793145600000,"closedCandleCount":30},"reference":{"o":100,"h":106,"l":98,"c":104,"v":150},"feedPhase":"rest-snapshot","signal":{"side":"WAIT","score":1,"items":[["מתיחה מעל EMA50 (לא זמין ATR)",false],["וקטור ירוק פתוח מתחת (עד 6 ATR)",false],["נר נפח עוצר בשיא",false],["מבנה M",false],["RSI 100 מעל 65",true]],"plan":null}}]}',
+      rules: [ 'hybrid-v2-validity-closed', 'ohlc-market-stop-v2-gap-open', 'wilder14-local-undefined-zero-change-v1' ]
+    },
+    expected: {
+      k: [
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object],
+        [Object], [Object], [Object]
+      ],
+      e: [ [Array], [Array], [Array], [Array] ],
+      atr: [
+        4,                 4,
+        4,                 4,
+        4,                 4,
+        4,                 4,
+        4,                 4,
+        4,                 4,
+        4,                 4,
+        4,                 4,
+        4,                 4,
+        4,                 4,
+        4,                 4,
+        4,                 4,
+        4,                 4,
+        4,                 4,
+        4, 4.285714285714286
+      ],
+      rsi: [
+        null, null, null, null, null,
+        null, null, null, null, null,
+        null, null, null, null, null,
+        null, null, null, null, null,
+        null, null, null, null, null,
+        null, null, null, null, 100
+      ],
+      vw: [
+        100,               100,
+        100,               100,
+        100,               100,
+        100,               100,
+        100,               100,
+        100,               100,
+        100,               100,
+        100,               100,
+        100,               100,
+        100,               100,
+        100,               100,
+        100,               100,
+        100,               100,
+        100,               100,
+        100, 100.1311475409836
+      ],
+      mw: [],
+      sig: { side: 'WAIT', score: 1, items: [Array], plan: null, short: true, candidates: [Object], selection: [Object], validity: [Object], g: 1, r: 0 },
+      bt: { executionVersion: 'ohlc-market-stop-v2-gap-open', ruleVersion: 'hybrid-v2-validity-closed', statisticsVersion: 'net-r-states-v1', state: 'empty', N: 0, w: 0, wr: null, lo: null, hi: null, avg: null, pf: null, pfState: 'unavailable', gains: 0, losses: 0, dd: null, drawdownBasis: 'realized-closed-trade-net-R', cur: [Array], t1: null, L: [Object], S: [Object], trades: [] },
+      journal: '{"schemaVersion":1,"retiredCount":0,"records":[{"id":"BTCUSDT|5m|1793154300000|hybrid-v2-validity-closed|3","signature":"{\\"side\\":\\"WAIT\\",\\"score\\":1,\\"items\\":[[\\"מתיחה מעל EMA50 (לא זמין ATR)\\",false],[\\"וקטור ירוק פתוח מתחת (עד 6 ATR)\\",false],[\\"נר נפח עוצר בשיא\\",false],[\\"מבנה M\\",false],[\\"RSI 100 מעל 65\\",true]],\\"plan\\":null}","observedAt":"2026-10-27T17:23:25.844Z","applicationVersion":"0.4.17","ruleVersion":"hybrid-v2-validity-closed","symbol":"BTCUSDT","timeframe":"5m","candleOpenTime":1793154300000,"candleCloseTime":1793154600000,"candidateDiagnostics":{"candidates":{"LONG":{"side":"LONG","score":0,"items":[["מתיחה מתחת ל-EMA50 (לא זמין ATR)",false],["וקטור אדום פתוח מעל (עד 6 ATR)",false],["נר נפח עוצר בשפל",false],["מבנה W",false],["RSI 100 מתחת ל-35",false]],"targetAvailable":false,"geometryEligible":false,"eligible":false,"reason":"data-unavailable","plan":null},"SHORT":{"side":"SHORT","score":1,"items":[["מתיחה מעל EMA50 (לא זמין ATR)",false],["וקטור ירוק פתוח מתחת (עד 6 ATR)",false],["נר נפח עוצר בשיא",false],["מבנה M",false],["RSI 100 מעל 65",true]],"targetAvailable":false,"geometryEligible":false,"eligible":false,"reason":"data-unavailable","plan":null}},"selection":{"policy":"higher-score-short-on-tie-before-eligibility","selected":"SHORT","tied":false,"suppressedOther":false,"reason":"data-unavailable"},"validity":{"ready":false,"reasons":["warm-up"],"raw":{"atr":4.285714285714286,"ema50":null,"rsi":100,"volumeMean":100,"relativeVolume":1.5},"rsiPolicy":"wilder14-local-undefined-zero-change-v1"}},"config":{"minimumScore":3,"roundTripFee":0.001,"executionVersion":"ohlc-market-stop-v2-gap-open","rsiPolicy":"wilder14-local-undefined-zero-change-v1"},"dataContext":{"firstCandle":1793145600000,"closedCandleCount":30},"reference":{"o":100,"h":106,"l":98,"c":104,"v":150},"feedPhase":"rest-snapshot","signal":{"side":"WAIT","score":1,"items":[["מתיחה מעל EMA50 (לא זמין ATR)",false],["וקטור ירוק פתוח מתחת (עד 6 ATR)",false],["נר נפח עוצר בשיא",false],["מבנה M",false],["RSI 100 מעל 65",true]],"plan":null}}]}',
+      rules: [ 'hybrid-v2-validity-closed', 'ohlc-market-stop-v2-gap-open', 'wilder14-local-undefined-zero-change-v1' ]
+    },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

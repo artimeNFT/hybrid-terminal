@@ -1,0 +1,112 @@
+{
+  "version": "0.4.17 RC",
+  "htmlSha256": "a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a",
+  "scope": "Actual final Chromium captures, synthetic source/mocked network. Images/traces ignored/local; no physical/human acceptance.",
+  "images": [
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/desktop-collapsed.png",
+      "sha256": "d902b893c57e48ec5b5fcc32d10ced29f3c8483d83907826d5cfba0f62114557",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/desktop-compact.png",
+      "sha256": "45f506d15c1f28e2f58d6b857f03ac513aadf4168913caec1c2f5c49fbfcafa0",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/desktop-confirmed-zero-volume.png",
+      "sha256": "7f7cf4d701c68f3a9c208bd6766d5394ba1bdb3106f6205d402d2436416dcd62",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/desktop-exact.png",
+      "sha256": "15e261178ef7bc075d8fc2f6cc7295c813c7c262c819e56a1a9b4c706f281b93",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/desktop-new-context.png",
+      "sha256": "6197b5ab8ef0d0d7e61c5dde0676bd29b5b92c62c4a9e7a2b2fcab3ee486d2dc",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-320-collapsed.png",
+      "sha256": "7fc778a863e522a72d7adbcf99476d165a212ba811394c1f9317642c1448becd",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-320-compact.png",
+      "sha256": "2e9deb43e195e1e2e471cfed1a72b68f656cc9030b0c9765d77ab738c0011bfc",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-320-confirmed-zero-volume.png",
+      "sha256": "7a19ba231f7706cdb2e3bba868816148122dde78aa3be83a5511a94ae67c00bf",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-320-exact.png",
+      "sha256": "0a7ec81973dc7d4d357d6ad5841ec38c03e2a9cde128c1aea2981199a9404cff",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-320-new-context.png",
+      "sha256": "bbc83e7273d5a3ffb3173063e9e04ba5a938b9658fcaa7f70f0be67a807302cc",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-390-collapsed.png",
+      "sha256": "ac9105bdac345aa877e16fc29c6096eaa5102bafcaaee4bdd142edfabdd787ac",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-390-compact.png",
+      "sha256": "7b0cc91294451879539f2d695e3de75e9ace22bd866aeb64a81e1c36ffb0736f",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-390-confirmed-zero-volume.png",
+      "sha256": "38e89d9997f2b3571d636d15315de41d4fd6b77ce82c37ea690c8b2124e13b8e",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-390-exact.png",
+      "sha256": "dae3f4e17e4d728937d61af2839b911f26fa659bafa002ea48c1819a00c5dbc5",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-390-new-context.png",
+      "sha256": "c03ec8ed67600433b3d7552f7c07e0a86b605be777e92c0cd5d37b8191244000",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-help-en.png",
+      "sha256": "0e76f5385f2cb1a35687bb0b03d12761da8eef8c37ce1557a49b107f5cb3ae6e",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-help-he.png",
+      "sha256": "c6a6302cfe001ce3e53ac6408bd6d198dc58db1008abd2bd59adbf5d7fe07200",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-warm-up.png",
+      "sha256": "a25fc589e72734553ca65796a924a0a54f6b77cedef50edc33f8341bd394a0c6",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-zero-prior-ATR.png",
+      "sha256": "47471668e573c14c59081bed630689615e5c223c89fdc33606d99dcf162aeedd",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-zero-range.png",
+      "sha256": "7a5ba8a1d23b928d2ad3e751b0920d2db5f6d741d5449082a6102e8d6b1462f1",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-confirmed-candle-context-0.4.17/.qa-results/browser/browser-confirmed-candle-context/narrow-zero-reference.png",
+      "sha256": "5d0358e4ba77a6da0d884f03eee5409c4b4c6acfa83810ed292204600b0453ec",
+      "inspected": false
+    }
+  ]
+}

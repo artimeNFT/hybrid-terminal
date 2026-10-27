@@ -1,0 +1,79 @@
+{
+  "group": "presentation",
+  "node": "v24.15.0",
+  "startedAt": "2026-10-27T17:29:31.135Z",
+  "scope": "Synthetic/mocked QA only; no acquired datasets or public market access",
+  "checks": [
+    {
+      "suite": "presentation",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "target-path",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "provenance-readability",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "planning-costs",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "readability-help",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "volume-legend",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "confirmed-volume",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "regional-windows",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "adr20",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "chart-type",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "manual-drawings",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "chart-usability",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "recorded-decision-review",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "suite": "confirmed-candle-context",
+      "exitCode": 0,
+      "signal": null
+    }
+  ],
+  "finishedAt": "2026-10-27T17:29:51.410Z"
+}
