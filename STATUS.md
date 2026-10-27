@@ -12,13 +12,13 @@ Start with [START_HERE.md](START_HERE.md). Earlier dated plans are historical, n
 
 ## Active ownership and next action
 **User correction, 2026-10-27:** the wheel-zoom prompt has NOT been given to Codex. It is **queued, not running**. Earlier statements that it was active are superseded.
-This review conversation is completing CI/documentation maintenance. No new app feature is running based on the latest user report; verify local state before writes rather than inferring it from GitHub.
+CI/documentation maintenance is delivered and its full run passed at 9d56334f1ba100ce7446caf8f5611997211cf82d: [run40442554371](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40442554371). No new app feature is running based on the latest user report; verify local state before writes rather than inferring it from GitHub.
 **Next:** after this maintenance checkpoint is checked, issue ONE consolidated English prompt for wheel usability + clearer drawing-control explanations. Do not send a second overlapping task.
 
 ## Current task board
 | Priority | Work package | State / completion rule |
 | --- | --- | --- |
-| P0 | CI and concise handoff | Conservative scope classifier/tests and this summary; exact prior STATUS preserved in STATUS_HISTORY.md. Verify actual maintenance CI; do not call skipped QA executed. |
+| P0 | CI and concise handoff | Completed: eight scope regression cases; actual full maintenance CI40442554371 passed. Old STATUS archived byte-identically. Documentation-only jobs may be intentionally skipped, never described as executed. |
 | P1 | Wheel usability and drawing explanation | Queued, NOT issued. Slow default/Standard choice; normalized plot wheel units, cursor anchor, bounded response; explain Manual/selected/Pointer in Help; preserve drawings, all engine/journal behavior. |
 | P1 | Recorded-decision review | Next package: read-only browsing/filtering + recorded details/reasons/versions + Help. Inspect legacy fields first; absent as-of context remains unavailable. No outcome calculation or journal rewrite. |
 | P2 | One analytical-context question | Choose one useful price/volume or cost-to-target description; confirm required data/zero-denominator handling before building. No automatic extra score. |
@@ -42,6 +42,9 @@ This review conversation is completing CI/documentation maintenance. No new app 
 - Preserve frozen0.4.3 source context, CLI1.0.1/schema1 and26496-row BTC5m Q3 dataset hash `436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1`.
 - Preserve app/rules/execution/old records for display work. Distinguish verified source/public/live/user evidence; scores are not probabilities, OHLCV is not true order flow, unavailable is not zero.
 - UI language: English chart/header, Hebrew panel, bilingual Help. Discuss in Hebrew with exact steps, short checklist and final מעקב line.
+
+## Recorded-journal inventory for the next package
+The user-supplied 183-record export was inspected read-only outside GitHub. Every record contains the five selected-side condition items, recorded side/score/plan field, app/rule version, observation/close time, source OHLCV and basic window coverage. No record contains a full two-side candidate diagnosis; old execution/RSI policy fields are absent in some versions. Historical review must show only recorded data, retain unavailable/version-specific states and never recompute old decisions using current inputs. No user journal records, prices or signatures were uploaded to GitHub.
 
 ## History and audit trail
 [STATUS_HISTORY.md](STATUS_HISTORY.md) preserves the complete previous STATUS byte-for-byte, including its original read-only archive, dated sources, hashes, links, decisions and superseded plans. Older root-relative links remain valid because the archive stays at repository root.
