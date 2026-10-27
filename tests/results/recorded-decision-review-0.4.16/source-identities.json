@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-27T14:01:21.612149+00:00",
+  "version": "0.4.16 RC",
+  "htmlSha256": "20fd3e34cd83b19081e2aa1c4237d872ec2074ef3407fcb9e24c9c2b911e0339",
+  "startingCommit": "81899ffea348d02e938005a675ccf2bc9cf0fdae",
+  "baselineSha256": "2e6d8b71ca08348c875723e1b82ce511726d11dd1b1220c2bfe6f1dcd0a4928a",
+  "cliVersion": "1.0.1",
+  "schemaVersion": 1,
+  "cliSha256": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+  "ruleVersion": "hybrid-v2-validity-closed",
+  "executionVersion": "ohlc-market-stop-v2-gap-open",
+  "data": "Synthetic records, hand-built app fixtures and mocked public endpoints. Frozen local data only hashed for preservation, not analyzed.",
+  "localValidation": {
+    "npm test": 0,
+    "npm run test:browser": 0,
+    "presentationSuites": 13,
+    "presentationCases": 99,
+    "newReviewCases": 12,
+    "browserSuites": 18
+  },
+  "inspectedImages": [
+    "desktop-list.png",
+    "desktop-legacy.png",
+    "desktop-wait.png",
+    "desktop-selected.png",
+    "narrow-320-list.png",
+    "narrow-320-selected.png",
+    "narrow-320-unavailable.png",
+    "narrow-help-he.png",
+    "narrow-help-en.png",
+    "narrow-fault-write.png"
+  ],
+  "initialFailure": "Old 0.4.15 report-version assertion; fixed expected metadata; final tests pass. Earlier mixed-source development checks are superseded."
+}

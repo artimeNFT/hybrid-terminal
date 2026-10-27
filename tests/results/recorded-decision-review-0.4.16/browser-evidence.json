@@ -1,0 +1,65 @@
+{
+  "version": "0.4.16",
+  "sourceSha256": "20fd3e34cd83b19081e2aa1c4237d872ec2074ef3407fcb9e24c9c2b911e0339",
+  "checks": [
+    {
+      "width": 1440,
+      "initialRecords": 29,
+      "pageSize": 10,
+      "filterCounts": true,
+      "keyboardSelectionAndFocus": true,
+      "displacedRowPaginationFocus": true,
+      "utcDecisionAndObservation": true,
+      "legacyMissingAndMalformed": true,
+      "safeTextAndOriginalExact": true,
+      "downloadRecordsExact": true,
+      "browseWrites": 0,
+      "realMockedConfirmations": 3,
+      "stableSelectionAndExpandedDetails": true,
+      "priorRecordsExact": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "initialRecords": 29,
+      "pageSize": 10,
+      "filterCounts": true,
+      "keyboardSelectionAndFocus": true,
+      "displacedRowPaginationFocus": true,
+      "utcDecisionAndObservation": true,
+      "legacyMissingAndMalformed": true,
+      "safeTextAndOriginalExact": true,
+      "downloadRecordsExact": true,
+      "browseWrites": 0,
+      "realMockedConfirmations": 3,
+      "stableSelectionAndExpandedDetails": true,
+      "priorRecordsExact": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 320,
+      "initialRecords": 29,
+      "pageSize": 10,
+      "filterCounts": true,
+      "keyboardSelectionAndFocus": true,
+      "displacedRowPaginationFocus": true,
+      "utcDecisionAndObservation": true,
+      "legacyMissingAndMalformed": true,
+      "safeTextAndOriginalExact": true,
+      "downloadRecordsExact": true,
+      "browseWrites": 0,
+      "realMockedConfirmations": 3,
+      "stableSelectionAndExpandedDetails": true,
+      "priorRecordsExact": true,
+      "noHorizontalOverflow": true
+    }
+  ],
+  "storageFaults": [
+    "malformed",
+    "unsupported",
+    "read",
+    "write"
+  ],
+  "errors": [],
+  "scope": "Synthetic records/REST/WebSocket only; isolated native storage, actual keyboard/filter/pagination/selection/download/DOM screenshots. No personal journal, live session, outcome or physical-device claim."
+}

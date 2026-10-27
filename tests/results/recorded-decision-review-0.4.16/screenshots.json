@@ -1,0 +1,142 @@
+{
+  "version": "0.4.16 RC",
+  "sourceSha256": "20fd3e34cd83b19081e2aa1c4237d872ec2074ef3407fcb9e24c9c2b911e0339",
+  "scope": "Actual Chromium screenshots; synthetic records and mocked feed, not physical/human acceptance. Images ignored/local only.",
+  "images": [
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/desktop-empty-filter.png",
+      "sha256": "9743d16ecf3a7b2e8f517ef99ae746a461d10a2792b781e6be00116c8c41923d",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/desktop-legacy.png",
+      "sha256": "9fa691719468de04688b545a107ae9f86cb4a75064221e72c61f5fc3269adcdd",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/desktop-list.png",
+      "sha256": "167425debcc5e29b52f9d07d57e03e88df0574fb3e70f476a2bfc2f71dc10853",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/desktop-selected.png",
+      "sha256": "dda4fc58ba39c1bac62c126111ab7572f7ae2e9cc7334d16b5ed36790787d7de",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/desktop-text.png",
+      "sha256": "a442a01cf8c348825e844f78394f3a3fbf5dc9229e01e06bf36d90b18adec895",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/desktop-unavailable.png",
+      "sha256": "ab02ff42092a3e089a067312acffb96dac2dfcb36133808266f43b8ec5c30106",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/desktop-wait.png",
+      "sha256": "2d91e0752b6346582fca5f3d97410641530111c2d1ef4b72402d3678b8d7317d",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-320-empty-filter.png",
+      "sha256": "e393bb0de9a9c67feb51bb0c25af5020286a1ee137eee94836f1500949046b5f",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-320-legacy.png",
+      "sha256": "2c6362fb3101d65f5740d3b4888bd0075263d7932aecba7d970276d5ba602422",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-320-list.png",
+      "sha256": "e2da64e5bf16f19ac29eca9f55a975495d9460dbee1c3d553f5fbc13791addfa",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-320-selected.png",
+      "sha256": "2f29f439ac05b21dc4f38ed92c3ad322ee89dac137040046f5d18d64732e320f",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-320-text.png",
+      "sha256": "4934accde4a8eb9f447114135fc0585a081a9db8a4a74b92f4a1ce6412717e4b",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-320-unavailable.png",
+      "sha256": "584cad0a706cd8045afc4fed21dbe04b2ffa2f95740519baf92867b70f572d9e",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-320-wait.png",
+      "sha256": "3731ff9229fa8cc9ac3c54e17135409c1682b026e186775ab17cfc11140b02d8",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-390-empty-filter.png",
+      "sha256": "30f3ebe116be63ba019da278009e148b48af0702d86191f143b76bf3b72c6f40",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-390-legacy.png",
+      "sha256": "114eb307c8ac8c640e84db604d4c0f0d6c55e88eee0bd5172da68945d85cd7e3",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-390-list.png",
+      "sha256": "dcc44b6c58accdc232ecdce31f325212570f39b20ec1eb794c2cbc6406975719",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-390-selected.png",
+      "sha256": "1b3012b5dacec45a15145fe84752ed0b717651da5879759ecb2c3dc31829a2ae",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-390-text.png",
+      "sha256": "50bcfe3fd1ed32637d1ea72d9e65aaddf27ec5c3f9523321497987075cb9c516",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-390-unavailable.png",
+      "sha256": "3dd344d2664e4543e8ef400be2ec5b8580510d4f4ae611752d13db30b0c78c05",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-390-wait.png",
+      "sha256": "e12cc4bef0ecd84823758841d9586616f8e747fdf31ef31a3770023b419aed15",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-fault-malformed.png",
+      "sha256": "3217b0334aa0dc57bd0f2141820b3f4c37254237c0464939062912af6f0a55b2",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-fault-read.png",
+      "sha256": "3217b0334aa0dc57bd0f2141820b3f4c37254237c0464939062912af6f0a55b2",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-fault-unsupported.png",
+      "sha256": "3217b0334aa0dc57bd0f2141820b3f4c37254237c0464939062912af6f0a55b2",
+      "inspected": false
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-fault-write.png",
+      "sha256": "451a0978a9f67743b5c96824be6f14050665591dd4bed6ee2a4bce18b9eb6b72",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-help-en.png",
+      "sha256": "384d3dc6e67cf6f5deac7d97c2f8bafdeca489830788aaa386f1646544a1dabc",
+      "inspected": true
+    },
+    {
+      "path": "/tmp/hybrid-recorded-decision-0.4.16/.qa-results/browser/browser-recorded-decision-review/narrow-help-he.png",
+      "sha256": "b4d9a73e24ba0581416ad34be192d300a68b2617bd02dd1c9240cc95b533435f",
+      "inspected": true
+    }
+  ]
+}
