@@ -1,5 +1,5 @@
 # Hybrid Terminal — current status
-Updated: 2026-10-27, Asia/Jerusalem. Single current task board; start with [START_HERE.md](START_HERE.md).
+Updated: 2026-10-28, Asia/Jerusalem. Single current task board; start with [START_HERE.md](START_HERE.md).
 
 ## Verified application and completed checkpoints
 - Repository [artimeNFT/hybrid-terminal](https://github.com/artimeNFT/hybrid-terminal), main; sole active file `/mnt/c/users/shlom/desktop/the hybrid-terminal/hybrid-terminal.html`. VECTOR LAB is separate.
@@ -8,21 +8,35 @@ Updated: 2026-10-27, Asia/Jerusalem. Single current task board; start with [STAR
 - Journal app commit **07cb0a48384d01d9687ed6e95a23ed5877eefbc9**, [full CI40517556276 passed](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40517556276), all3 jobs. User explicitly accepted navigation, readable conditions/details and selected-record clarity on their regular computer2026-10-27. Completed; do not repeat this task/acceptance.
 - Chart0.4.15 and CI/handoff maintenance remain completed. No research/observation/maintenance chain was restarted.
 
-## Active ownership and exact delivery action
-Single implementation owner: this Codex session, `/tmp/hybrid-confirmed-candle-context-0.4.17`, branch `work/confirmed-candle-context-0.4.17`.
-**Confirmed price/volume context is implemented in this one code/Help/STATUS package.** Local checks and source-bound report are `tests/results/confirmed-candle-context-0.4.17/`; screenshots/traces are ignored in that worktree `.qa-results/browser/browser-confirmed-candle-context/`.
-**Release gate:** safely fast-forward/push clean main without force; inspect actual exact published full CI and all3 job conclusions, save decoded-log/remote-main receipt in ignored root `.qa-results/confirmed-candle-context-0.4.17/ci-verification.json` and `ci-test-summary.log`, verify final preservation/clean main, then stop. No second publication solely to announce CI. Resumes inspect actual HEAD/run/receipt before treating the gate as unfinished; queued/skipped/older CI is not current validation.
+## Current package and exact next action
+**0.4.17 remains delivered and byte-for-byte unchanged:** application commit **1608a5d98bbed55839bec28c22880144cdcb01c0**, [prior app CI40552915409](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40552915409) attempt2 passed unchanged; attempt1 failed the existing regional reload wait. No application release in this package.
+**Test-only capture installed; cause unresolved and monitored.** This Codex session continued the authorized capture implementation, not the completed investigation. One init script now reads the regional raw property/access error after existing fixture preparation and before app initialization; the actual reload poll records `S.sig` and `S.regionalEnabled` separately. Failure JSON is saved before teardown and the same original error is rethrown. File URL, original predicate result/assertions/default30-second timeout and application/user storage remain unchanged.
+**Local evidence:** original focused regional browser check passed once at1440/390/320; new normal restoration and one controlled property-read-fault/30-second timeout passed, including saved-before-teardown evidence, original-error identity and intact backing bytes. Source checksum check passed. New tests select full CI, including20 browser suites, through the unchanged workflow; use this commit's [GitHub Checks](https://github.com/artimeNFT/hybrid-terminal/commits/main/) as the exact published result, not prior app CI. Post-push verification receipt: ignored `.qa-results/regional-reload-capture-20261028/ci-verification.json`.
+**One exact next action:** during ordinary future CI, if the regional reload fails, inspect that run's `chromium-failure` artifact and `browser/browser-regional-windows/*-reload.json` first; choose an app/fixture/environment correction only from the failing pre-app/key/operand evidence. Do not rerun merely for green or wait for recurrence. This package ends with capture installed, not a claimed persistence fix.
 
 ## Current task board
 | Priority | Work package | State / completion rule |
 | --- | --- | --- |
-| P0 | CI/concise handoff | Previously completed; classifier/workflow/START_HERE/archive unchanged. Full QA executes for this code package. |
+| P0 | CI/concise handoff | Previously completed; classifier/workflow/START_HERE/archive unchanged. Test-only capture package selects required full QA. |
 | P1 | Chart usability and recorded-decision review | Delivered; exact full CI verified, journal desktop usability accepted by user. Preserve records and historical evidence. |
-| P1 | Confirmed candle price/volume context | Implemented0.4.17: one collapsed nested section, existing Volume + three guarded geometry values, exact/formula details and equivalent Help. Final gate is exact published full CI at delivery. |
+| P1 | Confirmed candle price/volume context | Delivered0.4.17; exact published full CI40552915409 attempt2 passed unchanged. |
+| P1 | Regional reload capture | Installed and locally validated; cause unresolved and monitored. Completed diagnostic not repeated; no application fix/release. Inspect next naturally failing artifact before choosing a correction. |
 | P2 | Product acceptance | Next unfinished action after delivery: bounded ordinary-device readability review of this new section if desired. Existing journal acceptance stays complete. Physical touch, screen-reader/translation and extended current-source live behavior remain unverified. No automatic feature. |
 | P2 | Data/source parity | Exact Psy/TR/session configuration, richer feeds and daily/1m remain conditional; seconds/30s/monthly deferred. |
 | P2 | Research inference | Frozen preparation99/964 V retained; imbalance/overlap unresolved. No outcomes, threshold tuning or profitability result. |
 | P2 | CLI credential storage | Existing plaintext-storage follow-up retained; no credential display/global configuration change. |
+
+## Reload finding — evidence and uncertainty
+- Attempt1/job122361262353 timed out at test35:303 on `S.sig && S.regionalEnabled`. Reference-resolved trace DOM is on/saved0.877ms before reload; after the30-second timeout it renders120 closed candles/confirmed WAIT with regional checkbox unchecked, strip hidden and notice defaults/off. Source-correlated evidence points to the **regional restoration/enabled branch**, not persistent calculation-startup failure. Exact JavaScript operands at failed polls were not recorded; do not claim a direct runtime sample from DOM alone.
+- Confirmed calculations are distinct from feed health: post-reload header awaits an update, and the fixture does not await a fresh WebSocket candle/feed-ready state there. Mock REST completed; no unexpected network request. Default regional notice/journal count does not itself prove storage loss.
+- Last raw regional key snapshot was enabled=true at trace2594.173ms,2.874s before reload5468.151ms. No immediate pre-reload or app-init/post-reload key/access-error capture exists. Fixture/init timing, read/restore behavior and file-origin environment cannot be causally separated. Earlier wording implying lost persistence is **not established** by retained evidence; original receipts/artifacts remain unchanged.
+- Exactly3 isolated desktop-only runs, original assertions/wait unchanged, all passed. Read-only external probe captured unchanged enabled=true bytes before/at new-document init/after reload and `S.sig=true`, `S.regionalEnabled=true`, restoration=saved. Failure not reproduced; instrumentation can affect timing and WSL path/environment differs from CI. No general persistence guarantee or fix follows. Synthetic fault cases are deliberate and separate; no ordinary user profile/storage accessed.
+- Evidence is ignored/local `.qa-results/reload-diagnostic-20261028/`: `FINDING.md`, `resolved-dom.json`, `retained-analysis.json`, `reproduction.json`, `reproduction-summary.json`, `repro-*/probe.json`/logs and temporary probe/driver copies. Original failure trace SHA-256 `2c4997e950f19658b1bc61680464674e4b6784d0919ae90bdd1a8925ec0d2b66` retained. App HTML remains `a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a`; original test remains `d1f6700d5e2d1ba6f98272e4b995fe44ff974c97a25109f628fdc71b54475139`. That diagnostic changed only STATUS; its complete pre-implementation notes are preserved in `tests/results/regional-reload-capture/DIAGNOSTIC_STATUS_20261028.md`. This follow-up adds only test/capture/QA-registration/documentation files; no dependencies, application, journal, research, origin or historical manifest changes.
+
+## Capture implementation evidence
+- Source-bound report: `tests/results/regional-reload-capture/REPORT.md`; new scoped binding `qa/regional-reload-capture-sha256.json`. Historical manifests remain exact.
+- Ignored local output `.qa-results/regional-reload-capture-20261028/`: `regional/*-reload.json`, normal screenshots/traces, `validation-final/normal.json`, `controlled-failure.json`, `validation.json`. Synthetic only. The existing failure artifact upload already includes `.qa-results/`; no workflow change.
+- A new-test draft URL expectation was corrected to the browser-encoded file URL before final validation; navigation stayed unchanged. An optional local CI-scope invocation ended at its sandboxed test worker without subtest evidence; not treated as a pass or retried for green. Required exact-published scope/deterministic/browser jobs remain the CI gate.
 
 ## Delivered context contract and evidence
 - **הקשר · נרות סגורים → קריאת הנר המאושר · מחיר ונפח** starts collapsed. Existing `data-detail` expander preservation keeps section/exact details open during normal updates; no new setting/storage key, overlay, timer, request or dependency.
@@ -41,4 +55,4 @@ Single implementation owner: this Codex session, `/tmp/hybrid-confirmed-candle-c
 - English chart/header, Hebrew panel, bilingual Help and existing preferences/journal behavior preserved. Browser emulation does not establish physical-device acceptance.
 
 ## History
-[STATUS_HISTORY.md](STATUS_HISTORY.md) and START_HERE.md remain exact; dated source-bound reports and historical manifests are unchanged. This snapshot completes the selected context scope in this package; no further feature is started automatically.
+[STATUS_HISTORY.md](STATUS_HISTORY.md) and START_HERE.md remain exact; dated source-bound reports and historical manifests are unchanged. This snapshot completes the bounded test-only capture package; no further feature is started automatically.

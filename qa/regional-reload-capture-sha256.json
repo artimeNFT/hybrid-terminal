@@ -1,0 +1,10 @@
+{
+  "hybrid-terminal.html": "a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a",
+  "tests/regional-reload-capture.cjs": "64822674c1f85502d41a5d1f72a67080af4da8b04c09675a1e12294471812bfa",
+  "tests/browser-regional-windows.cjs": "2b5b4c5f15aff637dd2b22c191c113c0dbb8bf2515b0adda0e8d9d97e6f30f0a",
+  "tests/browser-regional-reload-capture.cjs": "72a52417e9cc0f9c923baf175bf68b0e8877607eacf7e7bc506c07fc057dd7cd",
+  "scripts/run-qa.cjs": "3cd850ae3b5960be1caa87ac661340fa3afc9d26e0ccdc33681d208eefd8c4a0",
+  "tests/results/regional-reload-capture/DIAGNOSTIC_STATUS_20261028.md": "4fc5116d10fe048891c6f5cec2a82779994154a13a9998849ec8a5ab1ccf645d",
+  "tests/results/regional-reload-capture/REPORT.md": "d0d4560b38feff5b273ed0e603011c54294a954f99ec74f3e8be811b92dd714b",
+  "STATUS.md": "fa1f97fce08b03decd6ccf29f1004849cfd8b5dba43c89370be94bbeb8ea9471"
+}
