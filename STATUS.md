@@ -1,60 +1,84 @@
 # Hybrid Terminal — current status
-Updated: 2026-10-29, Asia/Jerusalem. Single current task board; start with [START_HERE.md](START_HERE.md).
+Updated: 2026-10-29, Asia/Jerusalem. Single current task board; start with [START_HERE.md](START_HERE.md). Historical reports/next-step wording do not select today's task.
 
-## Verified checkpoint and completed work
-- Private repository [artimeNFT/hybrid-terminal](https://github.com/artimeNFT/hybrid-terminal), main. Sole active app: `/mnt/c/users/shlom/desktop/the hybrid-terminal/hybrid-terminal.html`; VECTOR LAB is separate.
-- App **0.4.17 RC remains byte-for-byte unchanged**, SHA-256 `a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a`; application commit `1608a5d98bbed55839bec28c22880144cdcb01c0`. No application release/feed/strategy change in this package.
-- Existing pilot `e5198f856d8829621aa16ff576c67c453e0fc63f`, [full CI40733330767](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40733330767), attempt 1 passed all 3 jobs/20 Chromium suites. One 906-trade run remains unchanged; no outcomes/replay in this package. [Report](tests/results/policy-pilot-v1/REPORT.md), [summary](tests/results/policy-pilot-v1/summary.json).
-- Read-only economics `fca5bf957a6be66f1d4941778e68719ebd3d1c12`, [documentation CI40767950669](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40767950669) passed scope/regression; deterministic/browser skipped. Accepted/closed: median stop 14.000168bps, modeled 10 bps median cost 0.714277R/ mean 1.013239R. Full table remains at that STATUS commit and ignored economics receipts; no diagnostic repeated.
-- Capture `1ea5eac40882178076688378edfd1434d4801c2e`/[CI40673156079](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40673156079) remains installed/monitored, cause unresolved. Chart/journal/context complete; user journal desktop acceptance 2026-10-27 retained.
+## Verified application and working arrangement
+- Private repository [artimeNFT/hybrid-terminal](https://github.com/artimeNFT/hybrid-terminal), main; sole active app `/mnt/c/users/shlom/desktop/the hybrid-terminal/hybrid-terminal.html`. VECTOR LAB and other projects are separate.
+- App **0.4.17 RC unchanged**, SHA256 `a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a`; application commit `1608a5d98bbed55839bec28c22880144cdcb01c0`.
+- This conversation reviews/plans; the existing VS Code/WSL Codex session implements. No new implementing session. Safely inspect/synchronize local branch/dirty state before writing; GitHub cannot prove WSL/browser state.
+- User priority: **contracts first, Spot secondary**. Binance/MEXC/Hyperliquid are candidates, no final account/fee tier/margin mode selected. Polymarket is a separate deferred workflow.
+- UI remains English chart/header, Hebrew panel, bilingual Help. Preserve Filled/Hollow choices, palette/noncolor cues and user journal. Journal desktop navigation/readability/selection accepted2026-10-27. Physical touch/accessibility/current-source live equivalence remain unverified.
 
-## Delivered — one derivatives gross/fee-only pilot
-**Completed single bounded run**, using existing verified BTCUSDT USDⓈ-M linear USDT-perpetual trade data only. Planning `6e839eba7d83000ef4af57610c067d232e6c16f5`; pre-outcome code/protocol/source/data checkpoint `b3604638109ef196c4e92578fed8016a4b6d76b4`. [Report](tests/results/derivatives-pilot-v1/REPORT.md), [whole/side/block summary](tests/results/derivatives-pilot-v1/summary.json), [delivery identities](tests/results/derivatives-pilot-v1/delivery.json), [complete reviewed contract](research/derivatives-pilot/REVIEW_CONTRACT.md).
+## Current decision and one next action
+**The five-condition5m policy is paused for further tuning/runs.** Its Spot and derivatives Q3 fee scenarios were negative. These correlated inspected-quarter studies are not independent confirmations; complete account returns remain unavailable. Keep the terminal's manual context/chart/risk/journal utility separate from strategy validation.
 
-**gross / after modeled fees, before funding and other unmodeled execution/account effects**
+**Next: ONE standalone exploratory taker-aggression incremental-information test, queued/not run.** Claude's relayed design is adopted with explicit time coordinates, split purging, training-only preprocessing and common-opportunity scoring below. This is independent of the old policy: no sixth vote, old entry filters, stops/targets or old-engine replay.
 
-| Population | Trades | Gross mean R | After 5bps | After 10bps | After 20bps |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Whole | 886 | 0.079982 | -0.389137 | -0.858256 | -1.796494 |
-| LONG | 413 | 0.068078 | -0.415786 | -0.899650 | -1.867379 |
-| SHORT | 473 | 0.090376 | -0.365869 | -0.822113 | -1.734601 |
-| Block 1 | 325 | 0.085404 | -0.436778 | -0.958961 | -2.003325 |
-| Block 2 | 287 | 0.045577 | -0.464335 | -0.974248 | -1.994074 |
-| Block 3 | 274 | 0.109587 | -0.253862 | -0.617312 | -1.344211 |
-
-All declared fee scenarios have negative means for the whole population, each side and every block. Exploratory description, no inference/retuning/advantage claim. Funding state **`not-applied: calendar completeness and account settlement timing unverified`**, value unavailable/null, never zero; fully adjusted return unavailable. No bound on omitted funding/account/execution effects. Median stop 14.175177 entry-notional bps; mean 10bps CostR 0.938238 explains the gross-to-fee-only deduction.
-
-**Protocol and preservation:** separate derivatives typed loader/calculation contract; no Spot loader/Spot contract identity, Mark volume or Mark fills. Full July1 past prefix, score3/original SHORT tie and all frozen rules/execution retained. Flat index3999 through26375; original expiry i+120→next i+122 and final-bar-hit→next i+121 retained. Three equal continuous blocks, no resets. Fixed5/10/20bps replace source10bps once. [Seal](research/derivatives-pilot/seal.json) UTC `2026-10-28T22:25:52.913Z`, canonical protocol `4944bd1c272a28b903b5c9b808a77c83e0207ad8850bbc47a8ddf813dba09ef8`, calculation contract `f740da9b9d456a789abba2e063c95583c52a32950f68d836196ae9fa06b8fe5f`. Runtime implementation unchanged after seal.
-
-**Data/output identity:** 26496 trade rows, payload `84a4396bd3534859f663c2b5d08ab2cc1221749eb461cd54d593c3ddf7669397`, bundle `8aa007d238f83d85506a46b733f3326d3571b2a385ea29769fb57dea6bc76844`; existing immutable intake preserved, no requests/reacquisition. Raw hash `4e87b085f3e2d6087fb05c958bdf4852349971adfcbcf334ca3c4d7d9ef213fc`, summary canonical hash `f2496a88dfde6a3a85b82582144d2a0269afac329e286e261b26df1c56a235bd`. Primary trace/receipts ignored at `.qa-results/derivatives-pilot-v1/run/`; acquired data remains ignored in its existing directory.
-
-**Measured checks:** exactly one run 332.914s /3600s, complete at `2026-10-28T22:32:48.504Z`. Scheduling partition 22377=11633 considered+10724 held+20 expiry skips;10747 WAIT/no-plan,886 selected/traded,0 invalid entries/unavailable calculations. Stops566/TP2 300/expiry20,0 stop-at-open,419 TP1 flags,1 both-touch,2 cross-block holdings. Stored verification without replay passed; independent Python67746 aggregate/identity checks passed. Ten focused synthetic fixtures passed, including actual tracked seal and original-engine/execution/scheduling/cost/missing-component checks. `npm test` passed all required groups; final focused seal assertion also passed. 755 existing protected files/receipts unchanged. Prior origin audit reused; no new broad parity audit.
-
-**Publication QA verified:** commit **045a6b4d7ce20dfbd4f2a400b50fb2aea9bf8bf8**, [exact CI40781160320](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40781160320) attempt1: scope/deterministic/Chromium jobs all actually succeeded, including20 browser suites. Independently inspected through GitHub. Receipt remains ignored at `.qa-results/derivatives-pilot-v1/run/ci-verification.json`. No rerun or application release.
+The existing Codex session should materialize/seal this protocol and its implementation before real training labels/fitting, validate focused synthetic fixtures, fit each model once, seal coefficients/scalers, and evaluate September once only if the predeclared training gate permits. Publish one package and stop. No additional general audit/model consultation required.
 
 ## Current task board
 | Priority | Work package | State / completion rule |
 | --- | --- | --- |
-| Done | Derivatives gross/fee-only pilot | One run/report/exact full CI40781160320 verified. Negative after every declared fee; no new run. |
-| P1 | Post-pilot decision | Current five-condition5m policy research paused. Next: one focused hypothesis-design challenge using existing retained inputs; design only, no implementation/outcomes. |
-| Done | Contract-matched intake | `34b76b47c1ab4592ca5eacdaf28caad9762080d7` / [CI40775631512](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40775631512) passed; trade/Mark26496 each, funding276 retrieved/calendar UNKNOWN. [Intake report](tests/results/derivatives-intake-v1/REPORT.md). |
-| Done | Spot pilot/economics and app/context | Historical sources/datasets/seals/reports and app0.4.17 preserved; no replay/release. |
-| Done / monitored | Regional reload capture | Installed; cause unresolved, inspect natural failure evidence only. |
-| P2 | Preserved gaps | Live initialization/append/reload equivalence, all-zone99/964 imbalance/overlap, physical touch/accessibility/Psy/TR parity unresolved. |
-| P2 | CLI credential storage | Plaintext-storage follow-up; no credential display/global changes. |
+| P1 | Taker-aggression increment test | Queued: exact contract below; one baseline and one augmented OLS, fixed30-minute horizon and10bps primary hurdle. Stop on declared failure; no search. |
+| Paused | Five-condition5m strategy research | Spot906 and derivatives886 trades did not survive modeled fees. No automatic stop/score/venue/timeframe changes to rescue results. |
+| Done | Derivatives price/fee-only pilot | `045a6b4d7ce20dfbd4f2a400b50fb2aea9bf8bf8`; [CI40781160320](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40781160320) attempt1 all3 jobs/20 browser suites succeeded, independently checked. |
+| Done | Intake and Spot pilot/economics | Sources, data, seals and reports retained; no replay/reacquisition. |
+| Done / monitored | Regional reload capture | Installed/validated; cause unresolved. Inspect next natural failure artifact only; not a research gate. |
+| P2 | Product/backlog and retained findings | Actual contract execution/funding/margin, live origin equivalence, all-zone99/964 imbalance, human touch/accessibility/Psy/TR parity and CLI plaintext storage remain scoped gaps. No automatic work. |
 
-## Independent interpretation and decision — 2026-10-29
-- Independently recomputed48 count/mean/linear-fee identities from the tracked whole/side/block aggregate summary; all passed. This is stored-summary arithmetic, not another pilot, raw execution replay or statistical inference.
-- Gross mean0.0799819193R; mean5bps deduction0.4691189660R. All whole/side/block means negative after each declared fee. Fully adjusted returns remain unavailable: funding may pay or charge, and missing effects are unbounded. Do not relabel fee-only findings as complete account losses/profitability.
-- Spot906 and derivatives886 trades cover the same inspected quarter and correlated underlying; they are not independent confirmations. No causal claim that changing the feed caused a performance difference. The unchanged rules have no demonstrated tradable edge under these tested assumptions.
-- Pause further runs/tuning of this five-condition5m policy. Do not automatically alter score/stop/target, prefer a subgroup, lower fees, try more venues/timeframes, or pursue funding as a way to rescue the outcome.
-- Keep the terminal's manual chart/context/risk/journal utility separate from strategy validation. Current app0.4.17 remains unchanged; no new feature or restriction is implemented by this decision. Existing UI/backlog priorities are preserved, not erased.
-- Existing candidate information: Binance official API documents taker-buy base and quote volume in fields9/10, already retained by the derivatives intake. A potential normalized imbalance is2*takerBuyBase/totalBase−1 with strict valid positive denominator; a mathematical description, not net money entering, actual absorption or predictive value. No such feature has been calculated or tested here. Source checked2026-10-29: https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data .
-- Any later test remains exploratory on Q3; an independent baseline and untouched-data design are required before a predictive-advantage claim. No new data acquisition or release now.
+## Exact new test contract — freeze before real labels/fits
+### Question and input
+- Hypothesis: current-bar taker-buy imbalance contributes positively to subsequent30-minute price-return forecasting beyond a fixed OHLCV baseline, enough to improve the fixed sign strategy after modeled fees. Proposed mechanism is aggression persistence; no absorption/intent/causal-flow claim.
+- Use existing Binance USDⓈ-M BTCUSDT USDT-perpetual5m Q3 trade dataset only: bundle `8aa007d238f83d85506a46b733f3326d3571b2a385ea29769fb57dea6bc76844`, trade payload `84a4396bd3534859f663c2b5d08ab2cc1221749eb461cd54d593c3ddf7669397`;26496 bars, `[2026-07-01,2026-10-01)`. Verify using the unchanged typed derivatives loader. No acquisition, Mark-volume substitution, old model replay or personal data.
+- This test has finite raw-bar features, no recursive indicators/MW/zone preparation. Do NOT inherit the old3999-bar exclusion, score or fixed-origin calculation contract. Existing raw history is retained for strictly past-only feature construction.
 
-## Limitations and exact next action
-Funding calendar/account settlement ordering, actual fees/spread/slippage, historical tick/lot/filter sizing, partial fills/latency and leverage/margin/liquidation/insurance effects remain unverified/unmodeled. Current metadata is not Q3 rules; 5m OHLC is not account execution. July1 finite-prefix calculations do not establish universal live equivalence or absolute convergence. No fully adjusted return or causal Spot-versus-futures advantage claimed; contracts remain priority, no final venue/account/fee tier selected.
+### Calendar and exact target
+- Opportunities: entry open T on every UTC :00/:30 clock boundary, fixed independently of prices/outcomes. Decision is the close of preceding5m candle i; entry O[i+1] at T, exit O[i+7] exactly30minutes later. Require both actual opens; do not substitute final-bar close or synthesize an Oct1 open.
+- Target y in entry-notional bps: `10000*(O[i+7]/O[i+1]-1)`. No stops/targets, old eligibility or position overlap; each30-minute holding ends at the next opportunity's entry.
+- Train: T in July–August, with exit strictly before `2026-09-01T00:00:00Z`. Exclude the Aug31 23:30 entry whose exit reaches September. Test: T in September, with observed exit inside available data. Earlier raw bars may prepare September features, never refit.
+- Structurally eligible counts, before invalid-data exclusions: **2973 train**, entries July1 01:00→Aug31 23:00; **1439 September**, entries Sep1 00:00→Sep30 23:00. Last exits Aug31/Sep30 23:30. Independently checked from the calendar alone. Report denominator/exclusion reasons separately; no resampling/clock shift.
 
-**Exact next action:** one focused independent hypothesis-design challenge, relayed by the user to Claude, then choose/reject one candidate before any implementation. No Codex task is active. A candidate is venue-specific taker-aggression information already retained in trade klines (total/base/quote volume and taker-buy base/quote), evaluated independently rather than automatically added as a sixth score vote. Ask for one falsifiable question, a geometry/volatility-aware baseline, cost feasibility and a bounded first test/stop rule. A recommendation to stop is acceptable. No general audit, parameter/venue/timeframe search, new feed/cohort or outcome computation is authorized by this planning update.
+### Features and validity
+For decision candle i, use raw final OHLCV only through i:
+1. Current candle return bps `10000*(C[i]/O[i]-1)`.
+2. Range/close `(H[i]-L[i])/C[i]`.
+3. Close position `(C[i]-L[i])/(H[i]-L[i])`.
+4. Relative volume `V[i]/mean(V[i-10:i])`, ten prior candles excluding i.
+5. Preceding30-minute return bps, excluding the current candle: `10000*(C[i-1]/C[i-7]-1)`.
+- Augmented model adds only `A[i]=2*B[i]/V[i]-1`, where B is taker-buy base volume, same units as V. No transformations/interactions/clipping/winsorization or additional lags.
+- Strict valid finite prices/source fields, H>L, positive current V and prior mean,0<=B<=V, contiguous necessary candles, no unavailable coercion/imputation. Both models use the same common-valid rows including valid A, even though baseline does not use A.
+- Coverage gate (planning judgment, fixed now): at least95% of structurally eligible opportunities valid in EACH partition. Below that is inconclusive; no coverage-rule adjustment. Report invalidity by reason/day. No outcome-based exclusions.
 
-Application 0.4.17, Spot1.0.1/schema1, all frozen source/data/seals and historical checksum manifests remain unchanged; no journal/profile/preference/feed/account/dependency access/change. Exact0.4.4 hour and0.4.7 midnight acceptance stay source-bound, not repeated/transferred. README correction already complete. [STATUS_HISTORY.md](STATUS_HISTORY.md), Git and historical reports preserve earlier evidence.
+### Two models, one fit and seals
+- Ordinary least squares WITH intercept: five features versus the same five plus A. Fit exactly once each on the common July–August rows, no regularization, CV, feature selection, refits or hyperparameter search.
+- Standardize predictors using training means and population SD only; apply those unchanged to September. y stays in bps. Baseline common-feature scalers equal augmented common-feature scalers. Constant/nonfinite scales or rank-deficient/nonestimable fits => inconclusive, no fallback learner.
+- Use a numerically stable QR/SVD least-squares solution with documented solver/version and fixed relative rank tolerance1e-12. Require full column ranks6/7 including intercept. No explicit normal-equation matrix inverse. Validate solver/scalers against independent literal synthetic expectations before real fitting; no application runtime dependency.
+- Protocol/code/data seal precedes real target computation/fitting. Coefficient/scaler/solver identity seal must be written and verified BEFORE generating/evaluating September targets/results. No test-set centering, model choice or inspection to decide coefficients.
+- Training gate: if augmented raw-unit A coefficient is <=0, stop the direction without evaluating September outcomes; report training rejection and test-not-evaluated, not zero test return. Report raw-unit and standardized coefficient. Failure of estimability/coverage is inconclusive.
+
+### Fixed scoring, primary decision and report
+- Forecast sign gives LONG(+1)/SHORT(−1); EXACT unrounded zero gives flat(0), no confidence/epsilon/threshold filter.
+- Payoff at cost b per common opportunity: `sign(prediction)*y - b*I(sign!=0)`. Flat contributes0 and pays0; do not divide primary means by only selected trades. Same fixed common-valid September opportunities for both models.
+- **Primary b=10bps round trip**.5/20bps are descriptive sensitivities on the SAME frozen forecasts, not selection criteria. Costs are fixed entry-notional assumptions, not account quotes/maker fills or leverage returns. No R denominator.
+- Report both models' gross/after-fee means per opportunity, paired augmented-minus-baseline mean at10bps, counts/coverage/long/short/flat, training coefficient, September forecast MSE diagnostically and daily descriptive totals. No confidence intervals/p-values or independence claim.
+- Stop this direction if training A coefficient<=0 OR augmented September mean after10bps<=0 OR its paired improvement over baseline<=0. Adequate coverage/estimability required. Passing means only worthy of a separately frozen untouched-data test; no app integration, predictive-edge or fully adjusted profitability claim.
+- Funding unapplied/unknown, never zero; fully adjusted return unavailable. Bid/ask/slippage/latency, intrabar/account fills, historical filters and margin/liquidation unmodeled. Q3 was already inspected; September is exploratory despite chronological fitting.
+
+### Delivery and limits
+- Synthetic fixtures: aggression signs/units/zero/range guards, exact open-to-open horizon, split/tail exclusions and calendar counts, common masks, train-only scaling, stable fit/rank detection, coefficient gate, zero forecast/payoff denominator/cost once, coefficient-seal-before-test and deterministic output. No real-data broad audit.
+- One real fit per model and at most one September evaluation, one worker,300-second wall cap. No reverse sign, alternate horizon/grid/features/model/fee, new venue/timeframe or winning subset after results.
+- Preserve current app0.4.17, old policy/calculation code, loaders/datasets/seals and all prior outputs. New isolated research entry point/protocol; no UI/strategy/journal/source migration, account connection or dependency upgrade.
+- Keep raw rows/predictions/receipts ignored; track compact protocol/seals/report/quality and source-bound checks. Code/Help-if-relevant/concise STATUS together; required final QA and exact published full CI once. No automatic follow-up or app release; stop after a rejected/inconclusive/passing exploratory report.
+
+## Completed evidence and boundaries
+- Derivatives pilot886 trades: gross +0.0799819193R; after5/10/20bps −0.389137/−0.858256/−1.796494R. Both sides/all3 blocks negative at each declared fee. [Report](tests/results/derivatives-pilot-v1/REPORT.md), [summary](tests/results/derivatives-pilot-v1/summary.json).48 independent aggregate identities passed in review; no replay/inference. Funding absent, fully adjusted return unavailable.
+- Spot pilot906 trades: gross+0.153283R; after5/10/20bps −0.353337/−0.859956/−1.873195R. [Report](tests/results/policy-pilot-v1/REPORT.md), [CI40733330767](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40733330767). Same inspected quarter/underlying, not independent confirmation or a causal feed comparison.
+- [Derivatives intake](tests/results/derivatives-intake-v1/REPORT.md): trade/Mark26496 each, funding276 returned/calendarUNKNOWN; current metadata not historical filters; Mark placeholders not traded volume. [CI40775631512](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40775631512). Old Spot CLI1.0.1/schema1 unchanged.
+- [Economics](https://github.com/artimeNFT/hybrid-terminal/blob/fca5bf957a6be66f1d4941778e68719ebd3d1c12/STATUS.md): small stop distances amplify entry-notional cost in R; close/open differences do not establish realistic execution. Complete; no repeated diagnostic.
+- [Origin audit](tests/results/calculation-readiness-v1/REPORT.md)/[contract](research/contract/README.md) remain historical.24 sampled timestamps/5 non-WAIT references are not universal live equivalence. [All-zone preparation](tests/results/preparation-v1/REPORT.md)99/964, imbalance/overlap remains separate and unresolved.
+- [Capture](tests/results/regional-reload-capture/REPORT.md), [CI40673156079](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40673156079): installed; cause unresolved, inspect next natural artifact only. Old exact0.4.4 hour/0.4.7 midnight observations remain source-specific and are not repeated/transferred.
+- Private journals/credentials remain outside GitHub. No real trading/account/wallet access. Never infer leverage/executable quantity/liquidation from this research.
+- Primary references checked: [Binance raw kline fields](https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data); [training-only preprocessing](https://scikit-learn.org/stable/common_pitfalls); [least squares/rank](https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html). Tool choice is implementation-specific; these do not validate a trading edge.
+
+## Continuity and delivery method
+One implementation owner, one bounded package. Reuse completed evidence; no repeated cohorts/soaks/general audits. Only operational-document allowlist changes may use short CI; new research/tests require full QA. Skipped is not executed.
+Replace this current snapshot rather than append full history. [STATUS_HISTORY.md](STATUS_HISTORY.md), Git and named source-bound reports retain previous boards/contracts/results. A new chat reads START_HERE and current STATUS, verifies live HEAD/CI/access and resumes the exact unfinished task.
