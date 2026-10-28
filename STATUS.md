@@ -14,13 +14,18 @@ Updated: 2026-10-28, Asia/Jerusalem. Single current task board; start with [STAR
 
 **Release and independent aggregate interpretation complete.** Exact application-independent publication **e5198f856d8829621aa16ff576c67c453e0fc63f**, [CI40733330767](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40733330767) attempt1: all3 jobs actually succeeded, including20 Chromium suites. Independently verified through GitHub. No pilot rerun.
 
-**One exact next action:** establish the intended trading venue and product (cash Spot versus derivatives) with the user before changing economic assumptions or choosing any new experiment. Actual maker/taker fees, spread/slippage and product constraints are not established by the spot data feed. No API keys, personal journal or authenticated exchange connection is required for this clarification. No automatic strategy retuning, all-zone matching revision, fresh-data acquisition or UI feature. Codex has no new implementation task pending this clarification.
+**Venue preferences — user report2026-10-28:** no final venue selected; usually Binance and “MAXC” (interpreted provisionally as MEXC), occasionally Polymarket, also Hyperliquid. Cash Spot versus perpetual/futures use is still unspecified. This is not a request to connect accounts or implement trading.
+
+**One exact next action:** clarify whether intended use is primarily Spot, perpetual/futures, or both; a permanent venue choice is not required. Plan to distinguish market-data source from execution venue/product and account-specific maker/taker fees. Current Binance Spot candles are not venue-matched derivatives history, funding, spread or fill evidence. Keep execution assumptions explicitly unconfigured until specified; do not reinterpret the completed Q3 result as another venue/product's performance.
+
+**Scope decision:** Binance/MEXC are primary venue candidates; Hyperliquid remains a supported planning candidate with distinct Spot/perpetual fee schedules and funding assumptions where applicable. Polymarket is a separate prediction-contract workflow and deferred scope; do not transplant the BTC OHLC stop/target/fee model to it. Official public references checked2026-10-28: Binance fee schedule (https://www.binance.com/en/fee/trading), MEXC fee page (https://www.mexc.com/fee), Hyperliquid fees/funding (https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees and /trading/funding), Polymarket fees (https://help.polymarket.com/en/articles/13364478-trading-fees). No account-specific fee rates have been verified. No new implementation, connector, dependency, study or fee-profile UI is authorized by this documentation update.
+
 
 ## Current task board
 | Priority | Work package | State / completion rule |
 | --- | --- | --- |
 | Done | Fixed-origin descriptive policy pilot | One sealed run complete; net mean negative at all declared costs. Stored outputs/report and exact full CI40733330767 verified. No further research starts automatically. |
-| P1 | Execution economics definition | Next: ask intended venue/product; then document actual fee model and product constraints before another experiment. Do not lower modeled fees merely to obtain a positive result. |
+| P1 | Execution economics definition | Venue candidates recorded; clarify Spot/perpetual/both next. Keep market-data source and execution profile distinct. No permanent venue selection or account connection required. No fee lowering to obtain positive results. |
 | Done | Chart/journal/context 0.4.15–0.4.17 | Source-bound QA retained; journal desktop acceptance complete. Application not modified by research. |
 | Done / monitored | Regional reload capture | Installed/validated; cause unresolved. On natural failure inspect the existing artifact first, without retry merely for green. Not a pilot gate. |
 | P2 | Product/runtime equivalence | Existing origin audit reused. Universal continuous live initialization/append/reload equivalence is not established. |
