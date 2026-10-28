@@ -12,18 +12,28 @@ Updated: 2026-10-28, Asia/Jerusalem. Single current task board; start with [STAR
 
 **Measured result:** 906 trades (LONG 422 / SHORT 484), 376.029s wall time within the hard 3600-second cap. All declared net mean R are negative: **5 bps −0.353337; 10 bps −0.859956; 20 bps −1.873195**. This is previously inspected single-quarter description, not live equivalence, independent confirmation or predictive advantage. [Compact report](tests/results/policy-pilot-v1/REPORT.md), [full-precision summary](tests/results/policy-pilot-v1/summary.json), [delivery binding](tests/results/policy-pilot-v1/delivery.json).
 
-**One exact next action:** stop after publication and exact-commit CI verification. Any independent interpretation/confirmatory design or product work needs a separately bounded scope; no automatic rerun, alternative schedule, retuning, cohort, indicator or capture task. No user data action required.
+**Release and independent aggregate interpretation complete.** Exact application-independent publication **e5198f856d8829621aa16ff576c67c453e0fc63f**, [CI40733330767](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40733330767) attempt1: all3 jobs actually succeeded, including20 Chromium suites. Independently verified through GitHub. No pilot rerun.
+
+**One exact next action:** establish the intended trading venue and product (cash Spot versus derivatives) with the user before changing economic assumptions or choosing any new experiment. Actual maker/taker fees, spread/slippage and product constraints are not established by the spot data feed. No API keys, personal journal or authenticated exchange connection is required for this clarification. No automatic strategy retuning, all-zone matching revision, fresh-data acquisition or UI feature. Codex has no new implementation task pending this clarification.
 
 ## Current task board
 | Priority | Work package | State / completion rule |
 | --- | --- | --- |
-| Done | Fixed-origin descriptive policy pilot | One sealed run complete; negative net mean in all 5/10/20 bps scenarios. Stored outputs verified, report delivered; exact published full QA is the release gate. No further research starts automatically. |
+| Done | Fixed-origin descriptive policy pilot | One sealed run complete; net mean negative at all declared costs. Stored outputs/report and exact full CI40733330767 verified. No further research starts automatically. |
+| P1 | Execution economics definition | Next: ask intended venue/product; then document actual fee model and product constraints before another experiment. Do not lower modeled fees merely to obtain a positive result. |
 | Done | Chart/journal/context 0.4.15–0.4.17 | Source-bound QA retained; journal desktop acceptance complete. Application not modified by research. |
 | Done / monitored | Regional reload capture | Installed/validated; cause unresolved. On natural failure inspect the existing artifact first, without retry merely for green. Not a pilot gate. |
 | P2 | Product/runtime equivalence | Existing origin audit reused. Universal continuous live initialization/append/reload equivalence is not established. |
 | P2 | Separate research question | All-zone preparation 99/964 matched; imbalance/overlap unresolved. Features/pairs/seals unchanged; not merged into this pilot. |
 | P2 | Product backlog | Human readability/touch/accessibility, exact Psy/TR parity, richer feeds/timeframes remain conditional. No automatic feature. |
 | P2 | CLI credential storage | Plaintext-storage follow-up retained; no credential display/global configuration changes. |
+
+## Independent aggregate interpretation — 2026-10-28
+- Published summary independently checked with48 count/mean/linear-cost identities across all/LONG/SHORT/three blocks; passed. This is arithmetic on existing aggregates, not another source/execution run or statistical inference.
+- Gross mean +0.1532827365R. Mean cost deduction at5bps=0.5066194113R and at10bps=1.0132388227R. Gross-to-net differences reconcile exactly with the declared entry-notional/risk formula. Costs are material relative to initial stop risk; no average stop-percent inference is made from an average inverse-risk measure.
+- Algebraic zero-mean cost for this fixed sample is approximately1.51279968bps round trip (0.0151279968%). Derived directly from the published gross/net means and linear cost identity; not an additional tested scenario, optimized assumption, attainable fee quote or validated trading threshold.
+- All declared-cost means are negative for both sides and each chronological block. This does not support profitability of this policy under those sample/model assumptions. Gross positive R alone establishes no predictive/vector edge; these906 serial trades are not claimed independent.
+- Retain the terminal's utility as a readable research/context/journal tool separately from strategy validation. No claim that all Hybrid/PVSRA variants fail, nor that UI improvements increased predictive accuracy. Published results remain unchanged; no fee/threshold/stop/symbol/timeframe change is selected from these outcomes.
 
 ## Protocol, source and data identities
 - Canonical protocol `632d2155944ec99941f116d583bc7b29e051cd8469b8de049ffb961f7aaa0898`; effective pre-outcome seal `932c93acb4a9fb77379b8238db0c615fa232a722255f0370429752a8f9d7b39a`, written 2026-10-28T11:21:30.223Z. Attempt began 11:21:58.791Z, completed 11:28:14.820Z. Initial whitespace-only pre-seal candidate is preserved locally; no policy change or outcome-informed reseal.
@@ -47,4 +57,4 @@ Updated: 2026-10-28, Asia/Jerusalem. Single current task board; start with [STAR
 - Capture [diagnostic](tests/results/regional-reload-capture/DIAGNOSTIC_STATUS_20261028.md)/[report](tests/results/regional-reload-capture/REPORT.md), [context report](tests/results/confirmed-candle-context-0.4.17/REPORT.md), [origin audit](tests/results/calculation-readiness-v1/REPORT.md), [separate preparation](tests/results/preparation-v1/REPORT.md) remain historical evidence, not active next tasks. User 0.4.12 reload inventory is user-specific; no universal file-origin persistence claim/repeated reload request.
 
 ## History
-[STATUS_HISTORY.md](STATUS_HISTORY.md), START_HERE and dated reports retain history. Corrected pre-outcome contract preserved in this package; prior blocker/correction checkpoints remain in Git. Stop after report and exact published CI.
+[STATUS_HISTORY.md](STATUS_HISTORY.md), START_HERE and dated reports retain history. Corrected pre-outcome contract preserved in this package; prior blocker/correction checkpoints remain in Git. Report and exact published CI are verified; next economics clarification is stated above.
