@@ -1,0 +1,1037 @@
+{
+  "all": {
+    "afterModeledFees": {
+      "5": {
+        "gainsR": 504.37957900384475,
+        "lossFraction": 0.6512415349887133,
+        "losses": 577,
+        "lossesR": 849.1550024046294,
+        "max": 7.673376217566641,
+        "mean": -0.3891370467277471,
+        "median": -1.2243079834154753,
+        "min": -4.773831198439927,
+        "n": 886,
+        "profitFactor": 0.593978222557186,
+        "profitFactorState": "defined",
+        "sumR": -344.77542340078395,
+        "winFraction": 0.34875846501128666,
+        "wins": 309,
+        "zeroFraction": 0,
+        "zeros": 0
+      },
+      "10": {
+        "gainsR": 393.43261094218093,
+        "lossFraction": 0.6941309255079007,
+        "losses": 615,
+        "lossesR": 1153.8474382436973,
+        "max": 6.970752095450751,
+        "mean": -0.8582560127556609,
+        "median": -1.4528519802553266,
+        "min": -8.547662396879854,
+        "n": 886,
+        "profitFactor": 0.34097454992926574,
+        "profitFactorState": "defined",
+        "sumR": -760.4148273015155,
+        "winFraction": 0.3058690744920993,
+        "wins": 271,
+        "zeroFraction": 0,
+        "zeros": 0
+      },
+      "20": {
+        "gainsR": 247.77226620849086,
+        "lossFraction": 0.7731376975169301,
+        "losses": 685,
+        "lossesR": 1839.465901311469,
+        "max": 5.5655038512189705,
+        "mean": -1.796493944811486,
+        "median": -1.9476005579468147,
+        "min": -16.09532479375971,
+        "n": 886,
+        "profitFactor": 0.13469793923977535,
+        "profitFactorState": "defined",
+        "sumR": -1591.6936351029767,
+        "winFraction": 0.22686230248307,
+        "wins": 201,
+        "zeroFraction": 0,
+        "zeros": 0
+      }
+    },
+    "components": {
+      "fullyAdjustedReturn": {
+        "state": "unavailable: missing components",
+        "valueR": null
+      },
+      "funding": {
+        "state": "not-applied: calendar completeness and account settlement timing unverified",
+        "valueR": null
+      },
+      "otherExecutionAccountEffects": {
+        "items": [
+          "spread/slippage",
+          "historical tick/lot/filter rounding",
+          "partial fills/latency",
+          "leverage/margin/liquidation/insurance fees"
+        ],
+        "state": "not-modeled",
+        "valueR": null
+      }
+    },
+    "costR": {
+      "5": {
+        "P10": 0.1425680008026571,
+        "P90": 0.8729115018138225,
+        "P99": 2.647123343910602,
+        "max": 3.7738311984399275,
+        "mean": 0.46911896602791414,
+        "median": 0.35272962179641476,
+        "min": 0.014945445893595304,
+        "n": 886,
+        "quantileConvention": "Hyndman-Fan type7"
+      },
+      "10": {
+        "P10": 0.2851360016053142,
+        "P90": 1.745823003627645,
+        "P99": 5.294246687821204,
+        "max": 7.547662396879855,
+        "mean": 0.9382379320558283,
+        "median": 0.7054592435928295,
+        "min": 0.029890891787190607,
+        "n": 886,
+        "quantileConvention": "Hyndman-Fan type7"
+      },
+      "20": {
+        "P10": 0.5702720032106284,
+        "P90": 3.49164600725529,
+        "P99": 10.588493375642408,
+        "max": 15.09532479375971,
+        "mean": 1.8764758641116566,
+        "median": 1.410918487185659,
+        "min": 0.059781783574381214,
+        "n": 886,
+        "quantileConvention": "Hyndman-Fan type7"
+      }
+    },
+    "crossBlockHoldings": 2,
+    "exitReasons": {
+      "TP2": 300,
+      "expiry": 20,
+      "stop": 566
+    },
+    "followupIntoTail": 0,
+    "gross": {
+      "gainsR": 638.2621431013271,
+      "lossFraction": 0.6422121896162528,
+      "losses": 569,
+      "lossesR": 567.3981626013787,
+      "max": 8.376000339682532,
+      "mean": 0.07998191930016636,
+      "median": -1,
+      "min": -1,
+      "n": 886,
+      "profitFactor": 1.124892862139445,
+      "profitFactorState": "defined",
+      "sumR": 70.8639804999474,
+      "winFraction": 0.3577878103837472,
+      "wins": 317,
+      "zeroFraction": 0,
+      "zeros": 0
+    },
+    "holdingBars": {
+      "max": 120,
+      "mean": 12.103837471783295,
+      "median": 4,
+      "min": 1,
+      "n": 886
+    },
+    "label": "gross / after modeled fees, before funding and other unmodeled execution/account effects",
+    "n": 886,
+    "riskBps": {
+      "P10": 5.727965935519066,
+      "P90": 35.071055833623305,
+      "P99": 77.94108297031387,
+      "max": 334.550072015094,
+      "mean": 18.697592286446458,
+      "median": 14.175177481340214,
+      "min": 1.3249135260917235,
+      "n": 886,
+      "quantileConvention": "Hyndman-Fan type7"
+    },
+    "sameBarStopTp2": 1,
+    "sameBarStopTp2Fraction": 0.001128668171557562,
+    "stopAtOpen": 0,
+    "tp1Touch": 419,
+    "tp1TouchFraction": 0.4729119638826185
+  },
+  "blocks": [
+    {
+      "afterModeledFees": {
+        "5": {
+          "gainsR": 187.2303634256623,
+          "lossFraction": 0.6615384615384615,
+          "losses": 215,
+          "lossesR": 329.1832621231911,
+          "max": 5.603146012419013,
+          "mean": -0.4367781498385503,
+          "median": -1.2475476111593478,
+          "min": -4.754209375669243,
+          "n": 325,
+          "profitFactor": 0.5687724285191468,
+          "profitFactorState": "defined",
+          "sumR": -141.95289869752884,
+          "winFraction": 0.3384615384615385,
+          "wins": 110,
+          "zeroFraction": 0,
+          "zeros": 0
+        },
+        "10": {
+          "gainsR": 145.31205224233295,
+          "lossFraction": 0.7138461538461538,
+          "losses": 232,
+          "lossesR": 456.97424261817326,
+          "max": 5.394740627500662,
+          "mean": -0.9589605857718158,
+          "median": -1.5024281941807045,
+          "min": -8.508418751338485,
+          "n": 325,
+          "profitFactor": 0.3179874021121778,
+          "profitFactorState": "defined",
+          "sumR": -311.6621903758401,
+          "winFraction": 0.28615384615384615,
+          "wins": 93,
+          "zeroFraction": 0,
+          "zeros": 0
+        },
+        "20": {
+          "gainsR": 88.88563797204564,
+          "lossFraction": 0.7846153846153846,
+          "losses": 255,
+          "lossesR": 739.966411704509,
+          "max": 4.977929857663958,
+          "mean": -2.003325457638347,
+          "median": -2.094525338731268,
+          "min": -16.01683750267697,
+          "n": 325,
+          "profitFactor": 0.12012117924014687,
+          "profitFactorState": "defined",
+          "sumR": -651.0807737324628,
+          "winFraction": 0.2153846153846154,
+          "wins": 70,
+          "zeroFraction": 0,
+          "zeros": 0
+        }
+      },
+      "block": 0,
+      "components": {
+        "fullyAdjustedReturn": {
+          "state": "unavailable: missing components",
+          "valueR": null
+        },
+        "funding": {
+          "state": "not-applied: calendar completeness and account settlement timing unverified",
+          "valueR": null
+        },
+        "otherExecutionAccountEffects": {
+          "items": [
+            "spread/slippage",
+            "historical tick/lot/filter rounding",
+            "partial fills/latency",
+            "leverage/margin/liquidation/insurance fees"
+          ],
+          "state": "not-modeled",
+          "valueR": null
+        }
+      },
+      "considered": 3953,
+      "costR": {
+        "5": {
+          "P10": 0.1817841445542968,
+          "P90": 1.068102439175685,
+          "P99": 2.500944069036841,
+          "max": 3.7542093756692423,
+          "mean": 0.5221824359332659,
+          "median": 0.39731688806968085,
+          "min": 0.07074746204761109,
+          "n": 325,
+          "quantileConvention": "Hyndman-Fan type7"
+        },
+        "10": {
+          "P10": 0.3635682891085936,
+          "P90": 2.13620487835137,
+          "P99": 5.001888138073682,
+          "max": 7.508418751338485,
+          "mean": 1.0443648718665317,
+          "median": 0.7946337761393617,
+          "min": 0.14149492409522219,
+          "n": 325,
+          "quantileConvention": "Hyndman-Fan type7"
+        },
+        "20": {
+          "P10": 0.7271365782171872,
+          "P90": 4.27240975670274,
+          "P99": 10.003776276147365,
+          "max": 15.01683750267697,
+          "mean": 2.0887297437330634,
+          "median": 1.5892675522787234,
+          "min": 0.28298984819044437,
+          "n": 325,
+          "quantileConvention": "Hyndman-Fan type7"
+        }
+      },
+      "crossBlockHoldings": 1,
+      "exitReasons": {
+        "TP2": 110,
+        "expiry": 3,
+        "stop": 212
+      },
+      "followupIntoTail": 0,
+      "gross": {
+        "gainsR": 239.75639298078252,
+        "lossFraction": 0.6523076923076923,
+        "losses": 212,
+        "lossesR": 212,
+        "max": 5.8115513973373645,
+        "mean": 0.08540428609471558,
+        "median": -1,
+        "min": -1,
+        "n": 325,
+        "profitFactor": 1.1309263819848232,
+        "profitFactorState": "defined",
+        "sumR": 27.756392980782564,
+        "winFraction": 0.3476923076923077,
+        "wins": 113,
+        "zeroFraction": 0,
+        "zeros": 0
+      },
+      "holdingBars": {
+        "max": 120,
+        "mean": 10.904615384615385,
+        "median": 4,
+        "min": 1,
+        "n": 325
+      },
+      "label": "gross / after modeled fees, before funding and other unmodeled execution/account effects",
+      "n": 325,
+      "range": [
+        3999,
+        11458
+      ],
+      "riskBps": {
+        "P10": 4.681204090512914,
+        "P90": 27.505184931983724,
+        "P99": 51.26382718733238,
+        "max": 70.6739133148711,
+        "mean": 15.23240411853847,
+        "median": 12.584413474825936,
+        "min": 1.3318383445538857,
+        "n": 325,
+        "quantileConvention": "Hyndman-Fan type7"
+      },
+      "sameBarStopTp2": 1,
+      "sameBarStopTp2Fraction": 0.003076923076923077,
+      "stopAtOpen": 0,
+      "tp1Touch": 155,
+      "tp1TouchFraction": 0.47692307692307695
+    },
+    {
+      "afterModeledFees": {
+        "5": {
+          "gainsR": 151.19318409596707,
+          "lossFraction": 0.6550522648083623,
+          "losses": 188,
+          "lossesR": 284.4574575070057,
+          "max": 6.301605544526344,
+          "mean": -0.464335447425222,
+          "median": -1.2001882766403735,
+          "min": -4.773831198439927,
+          "n": 287,
+          "profitFactor": 0.5315142215677134,
+          "profitFactorState": "defined",
+          "sumR": -133.26427341103872,
+          "winFraction": 0.34494773519163763,
+          "wins": 99,
+          "zeroFraction": 0,
+          "zeros": 0
+        },
+        "10": {
+          "gainsR": 113.45482620407824,
+          "lossFraction": 0.6968641114982579,
+          "losses": 200,
+          "lossesR": 393.0640448609423,
+          "max": 5.864584947527862,
+          "mean": -0.9742481486301888,
+          "median": -1.402671387153197,
+          "min": -8.547662396879854,
+          "n": 287,
+          "profitFactor": 0.2886420869255954,
+          "profitFactorState": "defined",
+          "sumR": -279.6092186568642,
+          "winFraction": 0.30313588850174217,
+          "wins": 87,
+          "zeroFraction": 0,
+          "zeros": 0
+        },
+        "20": {
+          "gainsR": 69.18357347980546,
+          "lossFraction": 0.7839721254355401,
+          "losses": 225,
+          "lossesR": 641.4826826283208,
+          "max": 5.00176060105183,
+          "mean": -1.9940735510401242,
+          "median": -1.9113558943725175,
+          "min": -16.09532479375971,
+          "n": 287,
+          "profitFactor": 0.10784947957806502,
+          "profitFactorState": "defined",
+          "sumR": -572.2991091485156,
+          "winFraction": 0.21602787456445993,
+          "wins": 62,
+          "zeroFraction": 0,
+          "zeros": 0
+        }
+      },
+      "block": 1,
+      "components": {
+        "fullyAdjustedReturn": {
+          "state": "unavailable: missing components",
+          "valueR": null
+        },
+        "funding": {
+          "state": "not-applied: calendar completeness and account settlement timing unverified",
+          "valueR": null
+        },
+        "otherExecutionAccountEffects": {
+          "items": [
+            "spread/slippage",
+            "historical tick/lot/filter rounding",
+            "partial fills/latency",
+            "leverage/margin/liquidation/insurance fees"
+          ],
+          "state": "not-modeled",
+          "valueR": null
+        }
+      },
+      "considered": 3754,
+      "costR": {
+        "5": {
+          "P10": 0.13264352471218505,
+          "P90": 0.9246844190269985,
+          "P99": 3.2383072541492113,
+          "max": 3.7738311984399275,
+          "mean": 0.5099127012049673,
+          "median": 0.31966099140997595,
+          "min": 0.014945445893595304,
+          "n": 287,
+          "quantileConvention": "Hyndman-Fan type7"
+        },
+        "10": {
+          "P10": 0.2652870494243701,
+          "P90": 1.849368838053997,
+          "P99": 6.476614508298423,
+          "max": 7.547662396879855,
+          "mean": 1.0198254024099347,
+          "median": 0.6393219828199519,
+          "min": 0.029890891787190607,
+          "n": 287,
+          "quantileConvention": "Hyndman-Fan type7"
+        },
+        "20": {
+          "P10": 0.5305740988487402,
+          "P90": 3.698737676107994,
+          "P99": 12.953229016596845,
+          "max": 15.09532479375971,
+          "mean": 2.0396508048198694,
+          "median": 1.2786439656399038,
+          "min": 0.059781783574381214,
+          "n": 287,
+          "quantileConvention": "Hyndman-Fan type7"
+        }
+      },
+      "crossBlockHoldings": 1,
+      "exitReasons": {
+        "TP2": 94,
+        "expiry": 10,
+        "stop": 183
+      },
+      "followupIntoTail": 0,
+      "gross": {
+        "gainsR": 196.9258246490537,
+        "lossFraction": 0.6445993031358885,
+        "losses": 185,
+        "lossesR": 183.84515281426684,
+        "max": 6.7386261415248265,
+        "mean": 0.04557725377974513,
+        "median": -1,
+        "min": -1,
+        "n": 287,
+        "profitFactor": 1.0711504852564804,
+        "profitFactorState": "defined",
+        "sumR": 13.080671834786852,
+        "winFraction": 0.3554006968641115,
+        "wins": 102,
+        "zeroFraction": 0,
+        "zeros": 0
+      },
+      "holdingBars": {
+        "max": 120,
+        "mean": 13.087108013937282,
+        "median": 5,
+        "min": 1,
+        "n": 287
+      },
+      "label": "gross / after modeled fees, before funding and other unmodeled execution/account effects",
+      "n": 287,
+      "range": [
+        11458,
+        18917
+      ],
+      "riskBps": {
+        "P10": 5.407838262621772,
+        "P90": 37.69514648435609,
+        "P99": 96.73921028174104,
+        "max": 334.550072015094,
+        "mean": 20.67244045592557,
+        "median": 15.64157070884928,
+        "min": 1.3249135260917235,
+        "n": 287,
+        "quantileConvention": "Hyndman-Fan type7"
+      },
+      "sameBarStopTp2": 0,
+      "sameBarStopTp2Fraction": 0,
+      "stopAtOpen": 0,
+      "tp1Touch": 130,
+      "tp1TouchFraction": 0.4529616724738676
+    },
+    {
+      "afterModeledFees": {
+        "5": {
+          "gainsR": 165.95603148221485,
+          "lossFraction": 0.635036496350365,
+          "losses": 174,
+          "lossesR": 235.5142827744314,
+          "max": 7.673376217566641,
+          "mean": -0.2538622309934909,
+          "median": -1.1894576634683358,
+          "min": -2.339308938893161,
+          "n": 274,
+          "profitFactor": 0.7046537879877232,
+          "profitFactorState": "defined",
+          "sumR": -69.55825129221651,
+          "winFraction": 0.36496350364963503,
+          "wins": 100,
+          "zeroFraction": 0,
+          "zeros": 0
+        },
+        "10": {
+          "gainsR": 134.66573249576953,
+          "lossFraction": 0.6678832116788321,
+          "losses": 183,
+          "lossesR": 303.80915076458047,
+          "max": 6.970752095450751,
+          "mean": -0.6173117455066096,
+          "median": -1.4027471708334263,
+          "min": -3.678617877786322,
+          "n": 274,
+          "profitFactor": 0.4432576575026242,
+          "profitFactorState": "defined",
+          "sumR": -169.14341826881105,
+          "winFraction": 0.33211678832116787,
+          "wins": 91,
+          "zeroFraction": 0,
+          "zeros": 0
+        },
+        "20": {
+          "gainsR": 89.70305475663979,
+          "lossFraction": 0.7481751824817519,
+          "losses": 205,
+          "lossesR": 458.01680697863964,
+          "max": 5.5655038512189705,
+          "mean": -1.3442107745328469,
+          "median": -1.8972039623309218,
+          "min": -6.357235755572644,
+          "n": 274,
+          "profitFactor": 0.1958510111198239,
+          "profitFactorState": "defined",
+          "sumR": -368.31375222200006,
+          "winFraction": 0.2518248175182482,
+          "wins": 69,
+          "zeroFraction": 0,
+          "zeros": 0
+        }
+      },
+      "block": 2,
+      "components": {
+        "fullyAdjustedReturn": {
+          "state": "unavailable: missing components",
+          "valueR": null
+        },
+        "funding": {
+          "state": "not-applied: calendar completeness and account settlement timing unverified",
+          "valueR": null
+        },
+        "otherExecutionAccountEffects": {
+          "items": [
+            "spread/slippage",
+            "historical tick/lot/filter rounding",
+            "partial fills/latency",
+            "leverage/margin/liquidation/insurance fees"
+          ],
+          "state": "not-modeled",
+          "valueR": null
+        }
+      },
+      "considered": 3926,
+      "costR": {
+        "5": {
+          "P10": 0.12062490065596139,
+          "P90": 0.6778762212376448,
+          "P99": 1.2597771213289628,
+          "max": 1.339308938893161,
+          "mean": 0.36344951451311847,
+          "median": 0.32175243058984704,
+          "min": 0.04154232723029058,
+          "n": 274,
+          "quantileConvention": "Hyndman-Fan type7"
+        },
+        "10": {
+          "P10": 0.24124980131192278,
+          "P90": 1.3557524424752896,
+          "P99": 2.5195542426579256,
+          "max": 2.678617877786322,
+          "mean": 0.7268990290262369,
+          "median": 0.6435048611796941,
+          "min": 0.08308465446058116,
+          "n": 274,
+          "quantileConvention": "Hyndman-Fan type7"
+        },
+        "20": {
+          "P10": 0.48249960262384556,
+          "P90": 2.711504884950579,
+          "P99": 5.039108485315851,
+          "max": 5.357235755572644,
+          "mean": 1.4537980580524739,
+          "median": 1.2870097223593882,
+          "min": 0.16616930892116233,
+          "n": 274,
+          "quantileConvention": "Hyndman-Fan type7"
+        }
+      },
+      "crossBlockHoldings": 0,
+      "exitReasons": {
+        "TP2": 96,
+        "expiry": 7,
+        "stop": 171
+      },
+      "followupIntoTail": 0,
+      "gross": {
+        "gainsR": 201.5799254714899,
+        "lossFraction": 0.6277372262773723,
+        "losses": 172,
+        "lossesR": 171.55300978711188,
+        "max": 8.376000339682532,
+        "mean": 0.1095872835196277,
+        "median": -1,
+        "min": -1,
+        "n": 274,
+        "profitFactor": 1.1750299555900525,
+        "profitFactorState": "defined",
+        "sumR": 30.02691568437799,
+        "winFraction": 0.3722627737226277,
+        "wins": 102,
+        "zeroFraction": 0,
+        "zeros": 0
+      },
+      "holdingBars": {
+        "max": 120,
+        "mean": 12.496350364963504,
+        "median": 4,
+        "min": 1,
+        "n": 274
+      },
+      "label": "gross / after modeled fees, before funding and other unmodeled execution/account effects",
+      "n": 274,
+      "range": [
+        18917,
+        26376
+      ],
+      "riskBps": {
+        "P10": 7.376033046388505,
+        "P90": 41.45522870482382,
+        "P99": 84.31084574414918,
+        "max": 120.35916939083403,
+        "mean": 20.739215388379264,
+        "median": 15.539915394356854,
+        "min": 3.7332685945724573,
+        "n": 274,
+        "quantileConvention": "Hyndman-Fan type7"
+      },
+      "sameBarStopTp2": 0,
+      "sameBarStopTp2Fraction": 0,
+      "stopAtOpen": 0,
+      "tp1Touch": 134,
+      "tp1TouchFraction": 0.48905109489051096
+    }
+  ],
+  "components": {
+    "fullyAdjustedReturn": {
+      "state": "unavailable: missing components",
+      "valueR": null
+    },
+    "funding": {
+      "state": "not-applied: calendar completeness and account settlement timing unverified",
+      "valueR": null
+    },
+    "otherExecutionAccountEffects": {
+      "items": [
+        "spread/slippage",
+        "historical tick/lot/filter rounding",
+        "partial fills/latency",
+        "leverage/margin/liquidation/insurance fees"
+      ],
+      "state": "not-modeled",
+      "valueR": null
+    }
+  },
+  "counts": {
+    "admissibleDecisionIndices": 22377,
+    "considered": 11633,
+    "expiryCursorSkippedIndices": 20,
+    "heldSkippedIndices": 10724,
+    "initialExcludedIndices": 3999,
+    "invalidNextOpenEntries": 0,
+    "selectedPlans": 886,
+    "tailExcludedIndices": 120,
+    "totalBars": 26496,
+    "trades": 886,
+    "unavailableCalculationDecisions": 0,
+    "waitOrNoPlan": 10747
+  },
+  "label": "gross / after modeled fees, before funding and other unmodeled execution/account effects",
+  "sides": {
+    "LONG": {
+      "afterModeledFees": {
+        "5": {
+          "gainsR": 235.95005164341205,
+          "lossFraction": 0.6658595641646489,
+          "losses": 275,
+          "lossesR": 407.6696589379254,
+          "max": 6.301605544526344,
+          "mean": -0.41578597407872486,
+          "median": -1.2293162834117939,
+          "min": -4.754209375669243,
+          "n": 413,
+          "profitFactor": 0.5787775628387871,
+          "profitFactorState": "defined",
+          "sumR": -171.71960729451337,
+          "winFraction": 0.3341404358353511,
+          "wins": 138,
+          "zeroFraction": 0,
+          "zeros": 0
+        },
+        "10": {
+          "gainsR": 185.3931167416125,
+          "lossFraction": 0.7046004842615012,
+          "losses": 291,
+          "lossesR": 556.9486479725081,
+          "max": 5.864584947527862,
+          "mean": -0.8996501966849777,
+          "median": -1.4603255161336393,
+          "min": -8.508418751338485,
+          "n": 413,
+          "profitFactor": 0.33287290922872265,
+          "profitFactorState": "defined",
+          "sumR": -371.5555312308958,
+          "winFraction": 0.29539951573849876,
+          "wins": 122,
+          "zeroFraction": 0,
+          "zeros": 0
+        },
+        "20": {
+          "gainsR": 118.35633606767692,
+          "lossFraction": 0.784503631961259,
+          "losses": 324,
+          "lossesR": 889.5837151713376,
+          "max": 5.00176060105183,
+          "mean": -1.8673786418974838,
+          "median": -1.9623587929045407,
+          "min": -16.01683750267697,
+          "n": 413,
+          "profitFactor": 0.13304687805001128,
+          "profitFactorState": "defined",
+          "sumR": -771.2273791036608,
+          "winFraction": 0.21549636803874092,
+          "wins": 89,
+          "zeroFraction": 0,
+          "zeros": 0
+        }
+      },
+      "components": {
+        "fullyAdjustedReturn": {
+          "state": "unavailable: missing components",
+          "valueR": null
+        },
+        "funding": {
+          "state": "not-applied: calendar completeness and account settlement timing unverified",
+          "valueR": null
+        },
+        "otherExecutionAccountEffects": {
+          "items": [
+            "spread/slippage",
+            "historical tick/lot/filter rounding",
+            "partial fills/latency",
+            "leverage/margin/liquidation/insurance fees"
+          ],
+          "state": "not-modeled",
+          "valueR": null
+        }
+      },
+      "costR": {
+        "5": {
+          "P10": 0.1358227653047733,
+          "P90": 0.8828754880161944,
+          "P99": 2.6950958112513907,
+          "max": 3.7542093756692423,
+          "mean": 0.48386422260625345,
+          "median": 0.3695176465641985,
+          "min": 0.04351934122204256,
+          "n": 413,
+          "quantileConvention": "Hyndman-Fan type7"
+        },
+        "10": {
+          "P10": 0.2716455306095466,
+          "P90": 1.7657509760323888,
+          "P99": 5.3901916225027815,
+          "max": 7.508418751338485,
+          "mean": 0.9677284452125069,
+          "median": 0.739035293128397,
+          "min": 0.08703868244408512,
+          "n": 413,
+          "quantileConvention": "Hyndman-Fan type7"
+        },
+        "20": {
+          "P10": 0.5432910612190932,
+          "P90": 3.5315019520647777,
+          "P99": 10.780383245005563,
+          "max": 15.01683750267697,
+          "mean": 1.9354568904250138,
+          "median": 1.478070586256794,
+          "min": 0.17407736488817024,
+          "n": 413,
+          "quantileConvention": "Hyndman-Fan type7"
+        }
+      },
+      "crossBlockHoldings": 1,
+      "exitReasons": {
+        "TP2": 131,
+        "expiry": 14,
+        "stop": 268
+      },
+      "followupIntoTail": 0,
+      "gross": {
+        "gainsR": 297.074511491005,
+        "lossFraction": 0.6537530266343826,
+        "losses": 270,
+        "lossesR": 268.9581948491358,
+        "max": 6.7386261415248265,
+        "mean": 0.06807824852752863,
+        "median": -1,
+        "min": -1,
+        "n": 413,
+        "profitFactor": 1.1045378693801846,
+        "profitFactorState": "defined",
+        "sumR": 28.11631664186932,
+        "winFraction": 0.34624697336561744,
+        "wins": 143,
+        "zeroFraction": 0,
+        "zeros": 0
+      },
+      "holdingBars": {
+        "max": 120,
+        "mean": 13.283292978208232,
+        "median": 4,
+        "min": 1,
+        "n": 413
+      },
+      "label": "gross / after modeled fees, before funding and other unmodeled execution/account effects",
+      "n": 413,
+      "riskBps": {
+        "P10": 5.6634579091260235,
+        "P90": 36.813450325407494,
+        "P99": 76.34019421065219,
+        "max": 114.89144503565,
+        "mean": 18.36970045992985,
+        "median": 13.53115350914999,
+        "min": 1.3318383445538857,
+        "n": 413,
+        "quantileConvention": "Hyndman-Fan type7"
+      },
+      "sameBarStopTp2": 1,
+      "sameBarStopTp2Fraction": 0.002421307506053269,
+      "stopAtOpen": 0,
+      "tp1Touch": 186,
+      "tp1TouchFraction": 0.45036319612590797
+    },
+    "SHORT": {
+      "afterModeledFees": {
+        "5": {
+          "gainsR": 268.4295273604321,
+          "lossFraction": 0.638477801268499,
+          "losses": 302,
+          "lossesR": 441.48534346670294,
+          "max": 7.673376217566641,
+          "mean": -0.36586853299422967,
+          "median": -1.220933521824548,
+          "min": -4.773831198439927,
+          "n": 473,
+          "profitFactor": 0.6080145837971112,
+          "profitFactorState": "defined",
+          "sumR": -173.05581610627064,
+          "winFraction": 0.36152219873150104,
+          "wins": 171,
+          "zeroFraction": 0,
+          "zeros": 0
+        },
+        "10": {
+          "gainsR": 208.03949420056827,
+          "lossFraction": 0.6849894291754757,
+          "losses": 324,
+          "lossesR": 596.8987902711879,
+          "max": 6.970752095450751,
+          "mean": -0.8221126766820703,
+          "median": -1.4474173929108771,
+          "min": -8.547662396879854,
+          "n": 473,
+          "profitFactor": 0.3485339518045431,
+          "profitFactorState": "defined",
+          "sumR": -388.8592960706193,
+          "winFraction": 0.3150105708245243,
+          "wins": 149,
+          "zeroFraction": 0,
+          "zeros": 0
+        },
+        "20": {
+          "gainsR": 129.41593014081394,
+          "lossFraction": 0.7632135306553911,
+          "losses": 361,
+          "lossesR": 949.882186140131,
+          "max": 5.5655038512189705,
+          "mean": -1.734600964057753,
+          "median": -1.9288167189526064,
+          "min": -16.09532479375971,
+          "n": 473,
+          "profitFactor": 0.13624419115248246,
+          "profitFactorState": "defined",
+          "sumR": -820.4662559993172,
+          "winFraction": 0.23678646934460887,
+          "wins": 112,
+          "zeroFraction": 0,
+          "zeros": 0
+        }
+      },
+      "components": {
+        "fullyAdjustedReturn": {
+          "state": "unavailable: missing components",
+          "valueR": null
+        },
+        "funding": {
+          "state": "not-applied: calendar completeness and account settlement timing unverified",
+          "valueR": null
+        },
+        "otherExecutionAccountEffects": {
+          "items": [
+            "spread/slippage",
+            "historical tick/lot/filter rounding",
+            "partial fills/latency",
+            "leverage/margin/liquidation/insurance fees"
+          ],
+          "state": "not-modeled",
+          "valueR": null
+        }
+      },
+      "costR": {
+        "5": {
+          "P10": 0.15071245139059064,
+          "P90": 0.8439090933151308,
+          "P99": 2.2640538081889203,
+          "max": 3.7738311984399275,
+          "mean": 0.456244143687841,
+          "median": 0.33147122634720283,
+          "min": 0.014945445893595304,
+          "n": 473,
+          "quantileConvention": "Hyndman-Fan type7"
+        },
+        "10": {
+          "P10": 0.3014249027811813,
+          "P90": 1.6878181866302615,
+          "P99": 4.528107616377841,
+          "max": 7.547662396879855,
+          "mean": 0.912488287375682,
+          "median": 0.6629424526944057,
+          "min": 0.029890891787190607,
+          "n": 473,
+          "quantileConvention": "Hyndman-Fan type7"
+        },
+        "20": {
+          "P10": 0.6028498055623626,
+          "P90": 3.375636373260523,
+          "P99": 9.056215232755681,
+          "max": 15.09532479375971,
+          "mean": 1.824976574751364,
+          "median": 1.3258849053888113,
+          "min": 0.059781783574381214,
+          "n": 473,
+          "quantileConvention": "Hyndman-Fan type7"
+        }
+      },
+      "crossBlockHoldings": 1,
+      "exitReasons": {
+        "TP2": 169,
+        "expiry": 6,
+        "stop": 298
+      },
+      "followupIntoTail": 0,
+      "gross": {
+        "gainsR": 341.18763161032103,
+        "lossFraction": 0.6321353065539113,
+        "losses": 299,
+        "lossesR": 298.43996775224286,
+        "max": 8.376000339682532,
+        "mean": 0.09037561069361114,
+        "median": -1,
+        "min": -1,
+        "n": 473,
+        "profitFactor": 1.1432370609742397,
+        "profitFactorState": "defined",
+        "sumR": 42.74766385807807,
+        "winFraction": 0.3678646934460888,
+        "wins": 174,
+        "zeroFraction": 0,
+        "zeros": 0
+      },
+      "holdingBars": {
+        "max": 120,
+        "mean": 11.073995771670191,
+        "median": 5,
+        "min": 1,
+        "n": 473
+      },
+      "label": "gross / after modeled fees, before funding and other unmodeled execution/account effects",
+      "n": 473,
+      "riskBps": {
+        "P10": 5.925303693760796,
+        "P90": 33.17619800654009,
+        "P99": 76.99856636282787,
+        "max": 334.550072015094,
+        "mean": 18.98389106943028,
+        "median": 15.08426554877708,
+        "min": 1.3249135260917235,
+        "n": 473,
+        "quantileConvention": "Hyndman-Fan type7"
+      },
+      "sameBarStopTp2": 0,
+      "sameBarStopTp2Fraction": 0,
+      "stopAtOpen": 0,
+      "tp1Touch": 233,
+      "tp1TouchFraction": 0.492600422832981
+    }
+  }
+}

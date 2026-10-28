@@ -74,6 +74,7 @@ test('continuous trace/blocks, explicit omitted components and costR/risk distri
 });
 test('all historical sources/seals are unchanged and new seal rejects identity tampering',()=>{
  const old=JSON.parse(fs.readFileSync('research/policy-pilot/seal.json','utf8'));for(const [file,h]of Object.entries(old.identities.implementationChecksums))assert.equal(D.sha(fs.readFileSync(file)),h,file);
+ validateSeal(JSON.parse(fs.readFileSync('research/derivatives-pilot/seal.json','utf8')));
  const sealed={identities:identities()};validateSeal(sealed);assert.notEqual(sealed.identities.calculationContractHash,old.identities.calculationContractHash);sealed.identities.dataTradeHash='wrong';assert.throws(()=>validateSeal(sealed));
  assert.equal(protocol.resources.maximumWallSeconds,3600);assert.equal(protocol.resources.realRuns,1);
 });

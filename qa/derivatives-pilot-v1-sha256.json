@@ -1,0 +1,20 @@
+{
+  "STATUS.md": "b90ee42b1fadeb358008f1a43913f8af596a4640ee11893d8439f71b0a8d7194",
+  "baseline/hybrid-terminal.0.4.3.html": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "hybrid-terminal.html": "a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a",
+  "package.json": "d27d4636a16a8a7157bc4a0303414d8e94551b8052b5a81dcea5a3d622c83f84",
+  "research/derivatives-pilot.cjs": "c5612883adfec2f4bca22e6bba8ee03f1b4a7a20e0171375234de9bd34506b7e",
+  "research/derivatives-pilot/REVIEW_CONTRACT.md": "01d3f56c547306e0d6bf848b8c749332f2385e3b0c59b580d2e95cfcfd2a2869",
+  "research/derivatives-pilot/calculations.cjs": "f237f09ef97613de1007e198ad91cdb1820d6549775c8032086e926833085e53",
+  "research/derivatives-pilot/contract.json": "f740da9b9d456a789abba2e063c95583c52a32950f68d836196ae9fa06b8fe5f",
+  "research/derivatives-pilot/input.cjs": "426c5d1f3503737d478817043a0dc3c3487de210c9d512d27dd7f3b7385ca789",
+  "research/derivatives-pilot/model.cjs": "c74c4455a6ec223583692b1306be866458b27c60f05a7f58b3e926fbf794ad1e",
+  "research/derivatives-pilot/protocol.json": "922e8043d100ff21af8ef03e0e2e400e9616539932c933236074d9f695fb1fb0",
+  "research/derivatives-pilot/seal.json": "b4c970bfb8ee7429f88eaf90281185be815523c3276fbc75eee9e76752bb56e5",
+  "research/derivatives-pilot/worker.cjs": "1ad9e58d7c5030b817c3d4d12c30a094b1faec2df0e865bf92454935f1b2e7f3",
+  "scripts/run-qa.cjs": "b1ca8a9ee64e04033202a0dfbe0903a13a397b6114185fc133ae04010e7fd99d",
+  "tests/derivatives-pilot.cjs": "ce538db2e10da486c4cf9f4cf295b6cce77f548af9936317aeb6d87c92c83972",
+  "tests/results/derivatives-pilot-v1/REPORT.md": "aaca1266deed2d18f8b90465c9710c10be944243ec25d6623d34f403e63aa646",
+  "tests/results/derivatives-pilot-v1/delivery.json": "3eb4d4e7e02a58d4866e298e47a910d3e14f58c71d06c3ffc78b90a9b3ea2952",
+  "tests/results/derivatives-pilot-v1/summary.json": "3c6b0118f9b92e9b395031c7f80b4847db2d485e250f4b7f13f56b7863c256a8"
+}
