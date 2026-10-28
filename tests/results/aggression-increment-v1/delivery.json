@@ -1,0 +1,98 @@
+{
+  "version": "1.0.0",
+  "verdict": "training-rejected",
+  "reviewCheckpoint": "df416deb8612c5e68661b73e74a3680677cff269",
+  "preLabelCommit": "eadcee364898b243b46c12433d8ed19fe2c5326a",
+  "preLabelSealHash": "88387eea5e00a1b6397e45fcae4b947348536fd01a9a73a242927f589b410e14",
+  "coefficientSealHash": "ad874dc82dbe2bba59623e40bb404b97d0758c6c13e98cb0240ed289c10569d7",
+  "identities": {
+    "bundleHash": "8aa007d238f83d85506a46b733f3326d3571b2a385ea29769fb57dea6bc76844",
+    "implementationChecksums": {
+      "research/aggression-increment.cjs": "61b5cec737e5a6554f3f53d7ee5ee5eef108e0888e8ddce45306e8b209ddb276",
+      "research/aggression-increment/CONTRACT.md": "0ca484ae2eb42ccefb2442991db65c7ab6e42d077f8ab2d9d24047bbf884f17a",
+      "research/aggression-increment/README.md": "685987d765b4ba6e7687cc19a2f7bb806e2ae7bec2a35e9e0550b2033c7fc34d",
+      "research/aggression-increment/design.cjs": "fc6e5194785eb3d9af1d6b8180f1a41693433d69d53c014313acb791e0dc6eca",
+      "research/aggression-increment/experiment.cjs": "69b937c8d3d288e0effa8645e665e17d7caea0c8955b18444f9b9416f929d58d",
+      "research/aggression-increment/input.cjs": "7783ab619b2bb302d40d0f0b3cc7a29e63aab7bc369fb3f4887efec613452cde",
+      "research/aggression-increment/ols.cjs": "5a221b8c492e98e29fef7d4b14daa5d2343f2faa477ddccd5c7232320d757fe8",
+      "research/aggression-increment/protocol.json": "641d4aefe36433f51fc7f4423930a54b4b16009403ab34ca21b9c849330ac730",
+      "research/derivatives-pilot/contract.json": "f740da9b9d456a789abba2e063c95583c52a32950f68d836196ae9fa06b8fe5f",
+      "research/derivatives-pilot/input.cjs": "426c5d1f3503737d478817043a0dc3c3487de210c9d512d27dd7f3b7385ca789",
+      "research/derivatives-pilot/protocol.json": "922e8043d100ff21af8ef03e0e2e400e9616539932c933236074d9f695fb1fb0",
+      "research/derivatives/schema.cjs": "9fd8f10f1c2a5f52a2038bb5a820d7ccdc1becb93ea3da9021ddaa9a6ca48b0f",
+      "research/klines.cjs": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d"
+    },
+    "kind": "standalone-aggression-increment-source-data-binding",
+    "protocolHash": "cef8bfcfa1a64e275793f4d1870cde0c57f004c42748468133d2134c27be7844",
+    "tradeHash": "84a4396bd3534859f663c2b5d08ab2cc1221749eb461cd54d593c3ddf7669397"
+  },
+  "data": {
+    "aggressionVolumeSource": "trade tuple[9]/tuple[5], both BTC; never Mark/quote substitution",
+    "bundleHash": "8aa007d238f83d85506a46b733f3326d3571b2a385ea29769fb57dea6bc76844",
+    "companionProvenance": {
+      "fundingCalendarCompleteness": "unknown",
+      "fundingHash": "952c9c0ae0c4aa7d50a00f57017d540c9e481e43a255872152fe23d4efec3f63",
+      "historicalRulesKnown": false,
+      "markHash": "f7ca6bf6677809e0644358a1f22c9a5a5574c69851c5d122203b7033d3c52925",
+      "metadataHash": "2e31f9c890cb2ddbe1ae94c154f16d7f3e37ae28e766aea8aca99d50001f0746",
+      "signalAndExecutionSeries": "trade only; Mark/funding rows never supplied to engine"
+    },
+    "contract": {
+      "baseAsset": "BTC",
+      "contractType": "PERPETUAL",
+      "contractUnit": "1 BTC",
+      "marginAsset": "USDT",
+      "market": "USD-M",
+      "pair": "BTCUSDT",
+      "payoff": "linear",
+      "priceUnit": "USDT/BTC",
+      "quantityUnit": "BTC",
+      "quoteAsset": "USDT",
+      "settlementAsset": "USDT",
+      "symbol": "BTCUSDT",
+      "venue": "BINANCE"
+    },
+    "conversion": "Verified original decimal strings/hash before binary Number conversion",
+    "dataHash": "84a4396bd3534859f663c2b5d08ab2cc1221749eb461cd54d593c3ddf7669397",
+    "fileSha256": "d3fe4e7db46ceccc6b17f35298577fc1072c1298602cf22c535ba0b7ec48bbca",
+    "range": {
+      "endExclusive": 1790812800000,
+      "startInclusive": 1782864000000
+    },
+    "rowCount": 26496,
+    "schema": "hybrid-binance-usdm-public/v1",
+    "series": "trade",
+    "volumeSource": "trade tuple[5] in BTC; never Mark placeholders"
+  },
+  "runtime": {
+    "completedAt": "2026-10-28T23:14:30.884Z",
+    "node": "v24.15.0",
+    "seconds": 2.1769248749999996,
+    "state": "complete"
+  },
+  "fits": {
+    "augmented": 1,
+    "baseline": 1
+  },
+  "trainingRawAggressionCoefficient": -2.8984289193956374,
+  "trainingStandardizedAggressionCoefficient": -0.7877281139992856,
+  "testState": "test-not-evaluated",
+  "testPerformance": null,
+  "testOpportunityCoverage": null,
+  "rawHash": "1fffb2700a42d75250af3ad93b6e3624f6f9b2a28fbaecd2c4265f144b51b073",
+  "summaryHash": "56e3e729a9c884e6f46a9aa69948d14d57a23f8ce60b8baecfdfa0ec030f065e",
+  "independentVerification": {
+    "state": "passed",
+    "checks": 55,
+    "scope": "Stored hashes/calendar/scale/coefficient/gate checks only; no model refit, new labels, September access or evaluation",
+    "verdict": "training-rejected",
+    "protocolHash": "cef8bfcfa1a64e275793f4d1870cde0c57f004c42748468133d2134c27be7844",
+    "rawHash": "1fffb2700a42d75250af3ad93b6e3624f6f9b2a28fbaecd2c4265f144b51b073",
+    "summaryHash": "56e3e729a9c884e6f46a9aa69948d14d57a23f8ce60b8baecfdfa0ec030f065e"
+  },
+  "activeApplication": {
+    "version": "0.4.17 RC",
+    "sha256": "a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a"
+  },
+  "primaryOutputIgnored": ".qa-results/aggression-increment-v1/run/raw.json"
+}

@@ -1,0 +1,22 @@
+{
+  "STATUS.md": "5194d2403cd498de8893010563fe7b6ac8d776558e7630b3556f3e5d37c4f614",
+  "baseline/hybrid-terminal.0.4.3.html": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+  "hybrid-terminal.html": "a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a",
+  "package.json": "a5441174103dccc3fabc946adb6e2c0386998cfd6122b4172969ff36586ec1a5",
+  "research/aggression-increment.cjs": "61b5cec737e5a6554f3f53d7ee5ee5eef108e0888e8ddce45306e8b209ddb276",
+  "research/aggression-increment/CONTRACT.md": "0ca484ae2eb42ccefb2442991db65c7ab6e42d077f8ab2d9d24047bbf884f17a",
+  "research/aggression-increment/README.md": "685987d765b4ba6e7687cc19a2f7bb806e2ae7bec2a35e9e0550b2033c7fc34d",
+  "research/aggression-increment/design.cjs": "fc6e5194785eb3d9af1d6b8180f1a41693433d69d53c014313acb791e0dc6eca",
+  "research/aggression-increment/experiment.cjs": "69b937c8d3d288e0effa8645e665e17d7caea0c8955b18444f9b9416f929d58d",
+  "research/aggression-increment/fit-seal.json": "ad874dc82dbe2bba59623e40bb404b97d0758c6c13e98cb0240ed289c10569d7",
+  "research/aggression-increment/input.cjs": "7783ab619b2bb302d40d0f0b3cc7a29e63aab7bc369fb3f4887efec613452cde",
+  "research/aggression-increment/ols.cjs": "5a221b8c492e98e29fef7d4b14daa5d2343f2faa477ddccd5c7232320d757fe8",
+  "research/aggression-increment/protocol.json": "641d4aefe36433f51fc7f4423930a54b4b16009403ab34ca21b9c849330ac730",
+  "research/aggression-increment/seal.json": "88387eea5e00a1b6397e45fcae4b947348536fd01a9a73a242927f589b410e14",
+  "scripts/run-qa.cjs": "b1ca8a9ee64e04033202a0dfbe0903a13a397b6114185fc133ae04010e7fd99d",
+  "tests/aggression-increment.cjs": "a84f056a43a1d7bdc8672c2979008e59a0aca857096ba57557dd6a116559bf02",
+  "tests/results/aggression-increment-v1/REPORT.md": "26afbc52085a359cdbb0dbfa968e17ca535b8266d713dd51bcd8630c9d267071",
+  "tests/results/aggression-increment-v1/delivery.json": "017774f627c672fa5b954cde0a5e99181bdbed9c9f9b07ba5467ad3ca34712c7",
+  "tests/results/aggression-increment-v1/quality.json": "2d1b4687851fa644b399a776cc89b85a65b0eb9d3c5ad7c3d23066c1eb3886b1",
+  "tests/results/aggression-increment-v1/summary.json": "6f3ed2e2a9a4b3264a3fb64b66ef612349cf9beada2ddaf6527569f41e95df77"
+}
