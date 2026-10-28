@@ -16,7 +16,7 @@
     "qa:browser:local": "node scripts/install-local-browser-deps.cjs",
     "test:audit": "node scripts/run-qa.cjs audit",
     "test:contract": "node scripts/run-qa.cjs contract",
-    "test:preparation": "node scripts/run-qa.cjs preparation",
+    "test:preparation": "node scripts/run-qa.cjs preparation && node --test tests/derivatives-pilot.cjs",
     "test:presentation": "node scripts/run-qa.cjs presentation"
   },
   "devDependencies": {

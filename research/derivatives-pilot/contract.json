@@ -1,0 +1,43 @@
+{
+  "kind": "hybrid-usdm-calculation-contract",
+  "version": "1.0.0",
+  "source": {
+    "engineFile": "baseline/hybrid-terminal.0.4.3.html",
+    "engineSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "backtestSha256": "bd37997efa97480c9ff8ab52374422a05be29238c70ae4a312d3d4c99bb0661e",
+    "ruleVersion": "hybrid-v2-validity-closed",
+    "executionVersion": "ohlc-market-stop-v2-gap-open",
+    "rsiPolicy": "wilder14-local-undefined-zero-change-v1",
+    "minimumScore": 3,
+    "functionBodiesSha256": "a936482db9a7448505401aab4bca93ee47d470e9d9c145bf3af7e28278d6f8b2"
+  },
+  "data": {
+    "schema": "hybrid-binance-usdm-public/v1",
+    "series": "trade",
+    "symbol": "BTCUSDT",
+    "market": "USD-M",
+    "contractType": "PERPETUAL",
+    "baseAsset": "BTC",
+    "quoteAsset": "USDT",
+    "marginAsset": "USDT",
+    "priceUnit": "USDT/BTC",
+    "volumeUnit": "BTC",
+    "startInclusive": 1782864000000,
+    "endExclusive": 1790812800000,
+    "stepMs": 300000,
+    "rows": 26496,
+    "tradeHash": "84a4396bd3534859f663c2b5d08ab2cc1221749eb461cd54d593c3ddf7669397",
+    "bundleHash": "8aa007d238f83d85506a46b733f3326d3571b2a385ea29769fb57dea6bc76844"
+  },
+  "state": {
+    "mode": "full-past-prefix-recompute",
+    "firstDecisionIndex": 3999,
+    "lastDecisionIndex": 26375,
+    "minimumPastBars": 4000,
+    "maximumBars": 30000,
+    "utcDayCoverage": "from-UTC-open",
+    "memo": "Existing pure immutable-input volumeReference memo only; no serialized indicator/parser state or rolling reseed",
+    "exactReplayBudget": 0
+  },
+  "identityBoundary": "Derivatives trade input only. Does not adopt the Spot data/loader/calculation-contract identity. Frozen source and pure execution/statistics helpers are reused unchanged."
+}

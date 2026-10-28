@@ -1,0 +1,161 @@
+{
+  "kind": "hybrid-usdm-gross-fee-descriptive-policy-pilot",
+  "version": "1.0.0",
+  "reviewCheckpoint": "6e839eba7d83000ef4af57610c067d232e6c16f5",
+  "label": "gross / after modeled fees, before funding and other unmodeled execution/account effects",
+  "calculationContractSha256": "f740da9b9d456a789abba2e063c95583c52a32950f68d836196ae9fa06b8fe5f",
+  "claim": "One exploratory inspected-Q3 descriptive existing-policy evaluation, not confirmation, independent baseline, causal Spot-versus-futures comparison, live/account realism or advantage",
+  "data": {
+    "schema": "hybrid-binance-usdm-public/v1",
+    "series": "trade",
+    "symbol": "BTCUSDT",
+    "market": "USD-M",
+    "contractType": "PERPETUAL",
+    "baseAsset": "BTC",
+    "quoteAsset": "USDT",
+    "marginAsset": "USDT",
+    "priceUnit": "USDT/BTC",
+    "volumeUnit": "BTC",
+    "startInclusive": 1782864000000,
+    "endExclusive": 1790812800000,
+    "stepMs": 300000,
+    "rows": 26496,
+    "tradeHash": "84a4396bd3534859f663c2b5d08ab2cc1221749eb461cd54d593c3ddf7669397",
+    "bundleHash": "8aa007d238f83d85506a46b733f3326d3571b2a385ea29769fb57dea6bc76844"
+  },
+  "source": {
+    "engineFile": "baseline/hybrid-terminal.0.4.3.html",
+    "engineSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "backtestSha256": "bd37997efa97480c9ff8ab52374422a05be29238c70ae4a312d3d4c99bb0661e",
+    "ruleVersion": "hybrid-v2-validity-closed",
+    "executionVersion": "ohlc-market-stop-v2-gap-open",
+    "rsiPolicy": "wilder14-local-undefined-zero-change-v1",
+    "minimumScore": 3,
+    "functionBodiesSha256": "a936482db9a7448505401aab4bca93ee47d470e9d9c145bf3af7e28278d6f8b2"
+  },
+  "measurement": {
+    "firstDecisionIndex": 3999,
+    "lastDecisionIndex": 26375,
+    "excludedInitialIndices": 3999,
+    "excludedTailIndices": 120,
+    "initialPosition": "flat",
+    "admissibleDecisionIndices": 22377,
+    "tailRule": "Require i<=N-121 even if an entry could resolve early; full prefix still begins July1",
+    "blocksHalfOpen": [
+      [
+        3999,
+        11458
+      ],
+      [
+        11458,
+        18917
+      ],
+      [
+        18917,
+        26376
+      ]
+    ],
+    "chronology": "One continuous schedule, no block resets; attribute by decision index, retain complete follow-up, report cross-block holdings and follow-up into tail"
+  },
+  "execution": {
+    "entry": "Next open with original directional validation; risk=abs(stop-nextOpenEntry)",
+    "selection": "Original higher-score selection, SHORT on tie before eligibility; WAIT has no substitute plan; no first-zone episode substitution; zone reuse allowed",
+    "stop": "Stop first, adverse gap at open (including equality), no favorable target improvement",
+    "target": "TP2 exit only; original TP1-touch flag, no partial exit",
+    "expiry": "Price at i+120 close when loop cursor reaches i+121; next decision i+122",
+    "hit": "Stop/TP2 break at j; next decision j+1, including hit exactly at i+120 => next i+121",
+    "scheduling": "WAIT/invalid entry increment by one; one position, preserve original cursor exactly; record exit index and next decision index separately",
+    "sameBar": "Exit candle touches both stop and TP2; diagnostic only, original stop-first policy retained; no target-first alternative"
+  },
+  "fees": {
+    "roundTripBps": [
+      5,
+      10,
+      20
+    ],
+    "feeOnlyR": "grossR-(bps/10000)*entry/risk",
+    "replacementNotAddition": true,
+    "entryBasis": "next-open entry notional; risk=abs(stop-nextOpenEntry)",
+    "assumedMakerFills": false
+  },
+  "components": {
+    "funding": {
+      "state": "not-applied: calendar completeness and account settlement timing unverified",
+      "valueR": null
+    },
+    "otherExecutionAccountEffects": {
+      "state": "not-modeled",
+      "valueR": null,
+      "items": [
+        "spread/slippage",
+        "historical tick/lot/filter rounding",
+        "partial fills/latency",
+        "leverage/margin/liquidation/insurance fees"
+      ]
+    },
+    "fullyAdjustedReturn": {
+      "state": "unavailable: missing components",
+      "valueR": null
+    }
+  },
+  "provenanceOnly": {
+    "markHash": "f7ca6bf6677809e0644358a1f22c9a5a5574c69851c5d122203b7033d3c52925",
+    "fundingHash": "952c9c0ae0c4aa7d50a00f57017d540c9e481e43a255872152fe23d4efec3f63",
+    "metadataHash": "2e31f9c890cb2ddbe1ae94c154f16d7f3e37ae28e766aea8aca99d50001f0746",
+    "fundingCalendarCompleteness": "unknown",
+    "historicalRulesKnown": false,
+    "signalAndExecutionSeries": "trade only; Mark/funding rows never supplied to engine"
+  },
+  "report": {
+    "populations": [
+      "whole",
+      "LONG",
+      "SHORT",
+      "three equal continuous decision-index blocks"
+    ],
+    "statistics": [
+      "counts/exclusions",
+      "gross and after modeled fees mean/median R",
+      "summed positive R and absolute negative R",
+      "profit factor",
+      "win/zero/loss counts/fractions",
+      "exit reasons and stop-at-open subset",
+      "inclusive holding bars",
+      "TP1-touch",
+      "same-bar stop/TP2 flags",
+      "cross-boundary holdings"
+    ],
+    "riskAndCostRDistribution": [
+      "min",
+      "P10",
+      "median",
+      "P90",
+      "P99",
+      "max",
+      "mean"
+    ],
+    "quantiles": "Hyndman-Fan type7, h=(n-1)*p, linear interpolation; equal-trade arithmetic mean; no trimming",
+    "feeLabels": "No unqualified net/funding-inclusive return; gross and after modeled fees only",
+    "missing": "Funding is absent/unapplied, never zero; no bound on omitted effects",
+    "comparisons": "No new Spot replay, pooled inference or feed-caused advantage claim",
+    "prohibited": [
+      "retuning",
+      "new fee scenarios",
+      "profitable-subset search",
+      "bootstrap/intervals/hypothesis tests",
+      "liquidation/account model",
+      "new data"
+    ]
+  },
+  "resources": {
+    "realRuns": 1,
+    "workers": 1,
+    "maximumBars": 30000,
+    "maximumWallSeconds": 3600,
+    "workerHeapMb": 512,
+    "vmCallTimeoutMs": 30000,
+    "failure": "Incomplete runtime only; no partial result publication, truncation, reseed or automatic retry"
+  },
+  "canonicalization": "Recursive sorted JSON, finite numbers only; deterministic raw/summary exclude runtime timestamps",
+  "stop": "One real run after seal/fixtures, hard3600s; incomplete rather than approximate/retry. Publish/report and stop."
+}
