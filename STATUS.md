@@ -8,16 +8,18 @@ Updated: 2026-10-28, Asia/Jerusalem. Single current task board; start with [STAR
 - Chart usability, recorded-decision review and confirmed price/volume context are delivered. User explicitly accepted journal navigation, readable conditions/details and selected-record clarity on their regular computer on2026-10-27. New-context perception, physical touch and assistive-technology acceptance remain unverified.
 
 ## Active ownership and one next action
-**The expiry scheduling conflict is resolved by preserving the frozen source, before sealing/outcomes.** Implementation checkpoint `aafe0c08368c6a27b47bad593a9f4e498cd25120` recorded the blocker honestly; [CI40676303656](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40676303656) attempt1 passed documentation-scope checks, with deterministic/browser jobs intentionally skipped. No pilot seal or real outcome run has occurred. Capture remains complete and monitored.
+**Existing pilot implementation in progress; corrected source scheduling retained.** This Codex session safely synchronized clean main to `8a7baa92d56bd45b70e1e491de82cb11b63ead31`. The original preflight is reused; capture and README midnight work are complete and not reopened. App0.4.17 remains unchanged.
 
-**One exact next action:** the existing Codex session resumes the already authorized pilot under the corrected scheduling rule below: materialize/seal the executable protocol before outcomes, finish focused fixtures and perform the one permitted Q3 run. Preserve the frozen simulator including its expiry exception; no application fix, alternate schedule or new general review. No additional user/model confirmation is needed for this correction.
+**Protocol sealed before Q3 outcomes:** `research/policy-pilot/protocol.json`, exact reviewed `REVIEW_CONTRACT.md` and tracked `seal.json`; canonical protocol `632d2155944ec99941f116d583bc7b29e051cd8469b8de049ffb961f7aaa0898`, seal `932c93acb4a9fb77379b8238db0c615fa232a722255f0370429752a8f9d7b39a`, written2026-10-28T11:21:30.223Z with zero real runs.15 focused synthetic fixtures passed before admission; no outcome-informed design change.
+
+**Exact resume point:** local pre-outcome checkpoint is not yet published. Start/inspect only the single run at ignored `.qa-results/policy-pilot-v1-q3/`; `attempt.json` is an exclusive run claim, `progress.jsonl` records calculation progress, and `runtime.json` distinguishes running/complete/incomplete. Do not restart a claimed run or change sealed code. One worker/512MiB heap/hard3600-second cap. After completion, verify stored trace/summary without recalculation, report, final QA and publish the package once. If incomplete, report that specific failure without retry/truncation.
 
 ## Current task board
 | Priority | Work package | State / completion rule |
 | --- | --- | --- |
 | Done | Chart/journal/context0.4.15–0.4.17 | Published and source-bound QA retained; journal desktop acceptance complete. No new UI feature in the pilot. |
 | Done / monitored | Regional reload capture | Installed and validated; cause unresolved. Inspect the next naturally failing artifact before selecting a correction. |
-| P1 | Fixed-origin descriptive policy pilot | Unblocked before seal/outcomes: frozen expiry cursor i+122 explicitly retained; stop/TP2 scheduling j+1 retained. Resume seal, remaining fixtures, one run and report. |
+| P1 | Fixed-origin descriptive policy pilot | In progress: corrected protocol/source/data sealed;15 synthetic fixtures passed. One bounded Q3 run, verification/report and exact published CI remain. No repeated real run or retuning. |
 | P2 | Product/runtime equivalence | Existing origin audit reused; continuous live initialization/reload equivalence is not established. Do not label fixed-origin findings as exact live-product performance. |
 | P2 | Deferred research question | All-zone vector/control specificity remains separate:99/964 matched, subgroup imbalance/overlap unresolved. Do not retune or merge into this pilot. |
 | P2 | Product backlog | Human readability/touch/accessibility, exact Psy/TR parity, richer feeds and additional timeframes remain conditional. No automatic indicator/score/threshold additions. |

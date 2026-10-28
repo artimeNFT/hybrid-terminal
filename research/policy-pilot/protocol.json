@@ -1,0 +1,55 @@
+{
+  "kind": "hybrid-fixed-origin-descriptive-policy-pilot",
+  "version": "1.0.0",
+  "reviewCheckpoint": "8a7baa92d56bd45b70e1e491de82cb11b63ead31",
+  "claim": "Exploratory descriptive existing-policy simulation on previously inspected Q3; not a live replay, causal vector study, confirmation or predictive advantage",
+  "data": {
+    "symbol": "BTCUSDT", "timeframe": "5m", "stepMs": 300000,
+    "startInclusive": "2026-07-01T00:00:00Z", "endExclusive": "2026-10-01T00:00:00Z",
+    "rows": 26496,
+    "canonicalHash": "436dc49807c729b27f917819cc808aff2d7ff6ef137ca566a0c78943bac232e1",
+    "fileSha256": "fc06545122b941f570c4cca001d0ae57306b3e0ca010130984c5f46156440ea3",
+    "validation": "Existing CLI1.0.1/schema1 verified loader; complete coverage before Number conversion; no reacquisition or rewrite"
+  },
+  "source": {
+    "applicationVersion": "0.4.3",
+    "applicationSha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "backtestSha256": "bd37997efa97480c9ff8ab52374422a05be29238c70ae4a312d3d4c99bb0661e",
+    "calculationContractSha256": "04d2c9dbbba6fb3d84b692c4410496f03e280dad82bb8357b44a443527b66156",
+    "ruleVersion": "hybrid-v2-validity-closed", "executionVersion": "ohlc-market-stop-v2-gap-open",
+    "rsiPolicy": "wilder14-local-undefined-zero-change-v1", "minimumScore": 3,
+    "calculation": "Reuse preparation/calculations.cjs: every considered decision recomputes complete past-only July1 prefix, original analyze/sigAt/MW/targets; existing pure volumeReference memo only, no rolling reseed or retained parser state",
+    "executionAdapter": "Extract frozen backtest; replace initial index and loop bound only for declared measurement window; append trace coordinates to trade literal. Original entry/stop/target/expiry/cursor/cost expressions stay exact. Existing 10bps R retained solely as a parity field; scenarios derive from grossR."
+  },
+  "measurement": {
+    "firstDecisionIndex": 3999, "lastDecisionIndex": 26375, "excludedInitialIndices": 3999,
+    "excludedTailIndices": 120, "initialPosition": "flat",
+    "admissibleDecisionIndices": 22377,
+    "tailRule": "Require i<=N-121 even if an entry could resolve early; full prefix still begins July1",
+    "blocksHalfOpen": [[3999,11458],[11458,18917],[18917,26376]],
+    "chronology": "One continuous schedule, no block resets; attribute by decision index, retain complete follow-up, report cross-block holdings and follow-up into tail"
+  },
+  "execution": {
+    "entry": "Next open with original directional validation; risk=abs(stop-nextOpenEntry)",
+    "selection": "Original higher-score selection, SHORT on tie before eligibility; WAIT has no substitute plan; no first-zone episode substitution; zone reuse allowed",
+    "stop": "Stop first, adverse gap at open (including equality), no favorable target improvement",
+    "target": "TP2 exit only; original TP1-touch flag, no partial exit",
+    "expiry": "Price at i+120 close when loop cursor reaches i+121; next decision i+122",
+    "hit": "Stop/TP2 break at j; next decision j+1, including hit exactly at i+120 => next i+121",
+    "scheduling": "WAIT/invalid entry increment by one; one position, preserve original cursor exactly; record exit index and next decision index separately",
+    "sameBar": "Exit candle touches both stop and TP2; diagnostic only, original stop-first policy retained; no target-first alternative"
+  },
+  "costs": {"roundTripBps": [5,10,20], "netR": "grossR-(bps/10000)*entry/risk", "replacement": true, "additionalSlippage": false, "profitable": "netR>0; exact zero separately"},
+  "report": {
+    "populations": ["all", "LONG", "SHORT", "three decision-index blocks"],
+    "statistics": ["counts/exclusions", "gross and net mean/median R", "summed positive R and absolute negative R", "profit factor", "win/zero/loss counts/fractions", "exit reasons and stop-at-open subset", "inclusive holding bars", "TP1-touch", "same-bar stop/TP2 flags", "cross-boundary holdings"],
+    "profitFactor": "positive sum / absolute negative sum; null with no-trades or no-loss-denominator state; never Infinity",
+    "holdingBars": "exitIndex-entryIndex+1, expiry=120",
+    "skips": "Position-held indices and the extra expiry-cursor index counted separately, intersected with admissible window",
+    "limitations": "Previously inspected single symbol/timeframe/quarter; no account/quantity/leverage model; no universal live equivalence; no confidence intervals, bootstrap, p-values, optimization or profitability claim",
+    "originAudit": "Reuse existing24-point audit; sampled1000-bar decision/zone agreement and only5 non-WAIT references do not prove live startup/append/reload equivalence"
+  },
+  "resources": {"realRuns": 1, "workers": 1, "maximumBars": 30000, "maximumWallSeconds": 3600, "workerHeapMb": 512, "vmCallTimeoutMs": 30000, "failure": "Incomplete runtime only; no partial result publication, truncation, reseed or automatic retry"},
+  "canonicalization": "Reuse existing recursive ASCII-key canonical JSON, finite numbers only, fixed chronological arrays; no timestamps/runtime fields in canonical payload",
+  "stop": "Report once; no retuning, new study, application change or further task"
+}

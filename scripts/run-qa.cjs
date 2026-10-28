@@ -5,7 +5,7 @@ const root=path.resolve(__dirname,'..'),group=process.argv[2],suites={
  research:['research-data'],
  audit:['readiness-audit'],
  contract:['calculation-contract'],
- preparation:['preparation'],
+ preparation:['preparation','policy-pilot'],
  presentation:['presentation','target-path','provenance-readability','planning-costs','readability-help','volume-legend','confirmed-volume','regional-windows','adr20','chart-type','manual-drawings','chart-usability','recorded-decision-review','confirmed-candle-context'],
  browser:['browser-smoke','browser-increment','browser-integrity','browser-day-context','browser-navigation','browser-presentation','browser-target-path','browser-provenance-readability','browser-planning-costs','browser-readability-help','browser-volume-legend','browser-confirmed-volume','browser-regional-windows','browser-regional-reload-capture','browser-adr20','browser-chart-type','browser-manual-drawings','browser-chart-usability','browser-recorded-decision-review','browser-confirmed-candle-context']
 }[group];
