@@ -1,0 +1,16 @@
+{
+  "hybrid-terminal.html": "a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a",
+  "scripts/run-qa.cjs": "b1ca8a9ee64e04033202a0dfbe0903a13a397b6114185fc133ae04010e7fd99d",
+  "research/policy-pilot.cjs": "987ce43c491635e8b5b4a1ca3b3abfd66bee31643b7ecd9e2900a9fcf027bba2",
+  "tests/policy-pilot.cjs": "cbd4b2afebe07a26ec90875f7cd8158180a7291122857615f4e273a616e2c91f",
+  "STATUS.md": "0a01d1a64f20342b885b646da1e031f90b6f8c5c3be13b07011f395533a66cc8",
+  "research/policy-pilot/REVIEW_CONTRACT.md": "a35a7ad371b38c1df55a8f43cbfae3c476a6b2490fd40819e649ca0e7edf367e",
+  "research/policy-pilot/execution.cjs": "ae0307f98b8b18d991be974f8f4d9e1d3054c0195b7c57753b36c92fe5cb2d45",
+  "research/policy-pilot/protocol.json": "da3baa7f4dae2a0123480643ec5b3a69f5869d4e9bdbb8ade43b987f26f9d6d8",
+  "research/policy-pilot/seal.json": "932c93acb4a9fb77379b8238db0c615fa232a722255f0370429752a8f9d7b39a",
+  "research/policy-pilot/summary.cjs": "356840f99429bd0a51f97dea795bea86089f15887bec5ec95ac021cc5c373254",
+  "research/policy-pilot/worker.cjs": "8c5dd2d58183384ae9d05b25cd151d6f867e33b1d4463183dcb3f10efed1b182",
+  "tests/results/policy-pilot-v1/REPORT.md": "31320dd33d24f2b081c9e75ae51da72c97aaf2c7409d37d696eb626a255b4056",
+  "tests/results/policy-pilot-v1/delivery.json": "bae2399b6db553a2d30ffda3a43f3c1af45bd69a1de512ac5e7a2e90daf94d20",
+  "tests/results/policy-pilot-v1/summary.json": "b60a6f3e806157a1e3aa6876349aa5d6c742cbeb4299bfaed5427afea2bdb650"
+}
