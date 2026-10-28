@@ -10,7 +10,7 @@
     "check:source": "node scripts/check-source.cjs",
     "test": "npm run check:source && npm run test:app && npm run test:research && npm run test:audit && npm run test:contract && npm run test:preparation && npm run test:presentation",
     "test:app": "node scripts/run-qa.cjs app",
-    "test:research": "node scripts/run-qa.cjs research",
+    "test:research": "node scripts/run-qa.cjs research && node --test tests/derivatives-intake.cjs",
     "test:browser": "node scripts/run-qa.cjs browser",
     "qa:browser:install": "playwright install --with-deps chromium",
     "qa:browser:local": "node scripts/install-local-browser-deps.cjs",

@@ -1,0 +1,108 @@
+{
+  "scope": "Current official public API probes before full intake; no account or policy execution",
+  "checkedAt": "2026-10-28T21:14:03.246185+00:00",
+  "contractDefinition": {
+    "venue": "BINANCE",
+    "family": "USD-M",
+    "symbol": "BTCUSDT",
+    "contractType": "PERPETUAL",
+    "baseAsset": "BTC",
+    "quoteAsset": "USDT",
+    "marginAsset": "USDT",
+    "payoff": "linear",
+    "quantityUnit": "BTC",
+    "priceUnit": "USDT/BTC",
+    "contractUnit": "1 BTC",
+    "notHistoricalQ3Rules": true
+  },
+  "sourceDocs": [
+    "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data",
+    "https://www.binance.com/en-AE/support/faq/detail/360033161972"
+  ],
+  "probes": [
+    {
+      "url": "https://fapi.binance.com/fapi/v1/time",
+      "status": 200,
+      "capturedAt": "2026-10-28T21:13:56.105414+00:00",
+      "responseSha256": "2ad92dea515bf3c05587177d010a1e478beea19d7f7b5f08098cb1543e77f446",
+      "bytes": 28
+    },
+    {
+      "url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+      "status": 200,
+      "capturedAt": "2026-10-28T21:13:58.138802+00:00",
+      "responseSha256": "263d283da211c35c3d1de45cb809ece47f4ff87a695e4b77fdb0ab9685349762",
+      "bytes": 1161998
+    },
+    {
+      "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=5m&startTime=1782864000000&endTime=1782864599999&limit=2",
+      "status": 200,
+      "capturedAt": "2026-10-28T21:13:59.870974+00:00",
+      "responseSha256": "2c88489780256d0cc96de41286a0b0f19ec40ab6a249a1238759636e31057b42",
+      "bytes": 274
+    },
+    {
+      "url": "https://fapi.binance.com/fapi/v1/markPriceKlines?symbol=BTCUSDT&interval=5m&startTime=1782864000000&endTime=1782864599999&limit=2",
+      "status": 200,
+      "capturedAt": "2026-10-28T21:14:01.562377+00:00",
+      "responseSha256": "ee33e9823c8d6e20ea7e68572dd8611b078365f2bc9b2bfd3c008b10bc1d54aa",
+      "bytes": 245
+    },
+    {
+      "url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1782864000000&endTime=1782950399999&limit=2",
+      "status": 200,
+      "capturedAt": "2026-10-28T21:14:03.246185+00:00",
+      "responseSha256": "e1d16b5827f1970bda1b6364ce336d90d75cfe763d3adb68fd6b28d35f1c08f4",
+      "bytes": 253
+    }
+  ],
+  "currentSnapshot": {
+    "capturedAt": "2026-10-28T21:30:54.818Z",
+    "cutoffServerTime": 1793223051845,
+    "metadataHash": "2e31f9c890cb2ddbe1ae94c154f16d7f3e37ae28e766aea8aca99d50001f0746",
+    "symbol": "BTCUSDT",
+    "futuresType": "U_MARGINED",
+    "contractType": "PERPETUAL",
+    "baseAsset": "BTC",
+    "quoteAsset": "USDT",
+    "marginAsset": "USDT",
+    "historicalQ3RulesKnown": false
+  },
+  "requestCounts": {
+    "preflight": 5,
+    "fullAcquisition": 57,
+    "tinyRepeat": 3,
+    "totalPublicApiCalls": 65
+  },
+  "shortRepeatChecks": [
+    {
+      "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=5m&startTime=1782864000000&endTime=1782864599999&limit=2",
+      "status": 200,
+      "sameDecodedFields": true,
+      "sameBodyBytes": true,
+      "firstSha256": "2c88489780256d0cc96de41286a0b0f19ec40ab6a249a1238759636e31057b42",
+      "repeatSha256": "2c88489780256d0cc96de41286a0b0f19ec40ab6a249a1238759636e31057b42",
+      "scope": "Short repeat only, not another Q3 acquisition"
+    },
+    {
+      "url": "https://fapi.binance.com/fapi/v1/markPriceKlines?symbol=BTCUSDT&interval=5m&startTime=1782864000000&endTime=1782864599999&limit=2",
+      "status": 200,
+      "sameDecodedFields": true,
+      "sameBodyBytes": true,
+      "firstSha256": "ee33e9823c8d6e20ea7e68572dd8611b078365f2bc9b2bfd3c008b10bc1d54aa",
+      "repeatSha256": "ee33e9823c8d6e20ea7e68572dd8611b078365f2bc9b2bfd3c008b10bc1d54aa",
+      "scope": "Short repeat only, not another Q3 acquisition"
+    },
+    {
+      "url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&startTime=1782864000000&endTime=1782950399999&limit=2",
+      "status": 200,
+      "sameDecodedFields": true,
+      "sameBodyBytes": true,
+      "firstSha256": "e1d16b5827f1970bda1b6364ce336d90d75cfe763d3adb68fd6b28d35f1c08f4",
+      "repeatSha256": "e1d16b5827f1970bda1b6364ce336d90d75cfe763d3adb68fd6b28d35f1c08f4",
+      "scope": "Short repeat only, not another Q3 acquisition"
+    }
+  ],
+  "requestReceiptFile": "research/datasets/binance-usdm-btcusdt-5m-2026-q3-v1/checkpoint.json",
+  "requestLogSha256": "ff0491050c973f7a0e39f8415f9da625384d8b7c525e9fe4f7ab74756e056ec5"
+}

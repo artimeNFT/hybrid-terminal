@@ -1,0 +1,52 @@
+{
+  "collectorVersion": "1.0.0",
+  "schema": "hybrid-binance-usdm-public/v1",
+  "reviewCheckpoint": "2339e8e9a13189483f49c2786bfc16334c131162",
+  "state": "verified",
+  "scope": "Public intake/provenance only; current metadata, funding calendar unknown; no strategy/outcomes/account/funding-PnL",
+  "rawDirectory": "research/datasets/binance-usdm-btcusdt-5m-2026-q3-v1",
+  "dataBundleHash": "8aa007d238f83d85506a46b733f3326d3571b2a385ea29769fb57dea6bc76844",
+  "metadataHash": "2e31f9c890cb2ddbe1ae94c154f16d7f3e37ae28e766aea8aca99d50001f0746",
+  "seriesDataHashes": {
+    "funding": "952c9c0ae0c4aa7d50a00f57017d540c9e481e43a255872152fe23d4efec3f63",
+    "mark": "f7ca6bf6677809e0644358a1f22c9a5a5574c69851c5d122203b7033d3c52925",
+    "trade": "84a4396bd3534859f663c2b5d08ab2cc1221749eb461cd54d593c3ddf7669397"
+  },
+  "counts": {
+    "funding": 276,
+    "mark": 26496,
+    "trade": 26496
+  },
+  "cutoffServerTime": 1793223051845,
+  "capturedAt": "2026-10-28T21:30:54.818Z",
+  "producerFingerprint": "a325d9a40578695a4ce272c3655345fb430448b7b0d3333c860463167919831b",
+  "sourceChecksums": {
+    "research/derivatives.cjs": "0f6175f379903cf9de2dd73c131eb9eacf708d7dab2199fe0fec947807ca7ce5",
+    "research/derivatives/schema.cjs": "9fd8f10f1c2a5f52a2038bb5a820d7ccdc1becb93ea3da9021ddaa9a6ca48b0f",
+    "research/derivatives/SCHEMA.md": "38e06e95b2f51829f395642bc94d900302a6e79c7c582dc4d297ce2170d06acd",
+    "tests/derivatives-intake.cjs": "9e537b3f59adaaa1b76548d71d7d88a626696fc005eaa01a379d95f1826e8db4",
+    "package.json": "8a0395ff14c32f364ac0f1789d252955222634af896aa6d3d596fefa8f4c273d",
+    "scripts/run-qa.cjs": "b1ca8a9ee64e04033202a0dfbe0903a13a397b6114185fc133ae04010e7fd99d"
+  },
+  "validation": {
+    "focusedMockedCases": 14,
+    "npmTestPassed": true,
+    "offlineVerificationPassed": true,
+    "finalResearchCommandPassed": true,
+    "historicalPilotSealVerified": true,
+    "independentChecks": 133106,
+    "collectorRequests": 57,
+    "fullQ3Acquisitions": 1,
+    "tinyRepeatChecks": 3,
+    "fundingCalendarCompleteness": "unknown",
+    "frozenSpotAndAppAndPilotPreserved": true,
+    "localNpmTestIntakeCases": 13,
+    "finalResearchIntakeCases": 14
+  },
+  "artifactChecksums": {
+    "REPORT.md": "9d8636f59eb31f58c691240e29c45ceba59c08dbb57afb89d6bdec2bcba042a9",
+    "quality.json": "5d748d6a4045db9aa5685ed718efec175a7d15fee445f6efa2c8a94c65a83f37",
+    "provenance.json": "ddb334ca30fb741c73926f2c5c0cef69abe08673ee4aa133655196b782300d9d"
+  },
+  "ci": "Verify exact published commit full QA after push; ignored QA ci-verification.json records actual result"
+}

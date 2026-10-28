@@ -1,0 +1,16 @@
+{
+  "hybrid-terminal.html": "a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a",
+  "research/klines.cjs": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
+  "research/SCHEMA.md": "041a8f3841ebb3859f8c1e680ddcb0a29e5ee846828372841785721f2e61a74a",
+  "research/derivatives.cjs": "0f6175f379903cf9de2dd73c131eb9eacf708d7dab2199fe0fec947807ca7ce5",
+  "research/derivatives/schema.cjs": "9fd8f10f1c2a5f52a2038bb5a820d7ccdc1becb93ea3da9021ddaa9a6ca48b0f",
+  "research/derivatives/SCHEMA.md": "38e06e95b2f51829f395642bc94d900302a6e79c7c582dc4d297ce2170d06acd",
+  "tests/derivatives-intake.cjs": "9e537b3f59adaaa1b76548d71d7d88a626696fc005eaa01a379d95f1826e8db4",
+  "package.json": "8a0395ff14c32f364ac0f1789d252955222634af896aa6d3d596fefa8f4c273d",
+  "scripts/run-qa.cjs": "b1ca8a9ee64e04033202a0dfbe0903a13a397b6114185fc133ae04010e7fd99d",
+  "STATUS.md": "5d931e7e1f4a8612b4a24fcec58dfe600e61589943b39f5c4637dd30051b3945",
+  "tests/results/derivatives-intake-v1/REPORT.md": "9d8636f59eb31f58c691240e29c45ceba59c08dbb57afb89d6bdec2bcba042a9",
+  "tests/results/derivatives-intake-v1/delivery.json": "842b577af35ec2576bdcb7d5e7ff8b136d5579025b4213131314f700d6568f8d",
+  "tests/results/derivatives-intake-v1/provenance.json": "ddb334ca30fb741c73926f2c5c0cef69abe08673ee4aa133655196b782300d9d",
+  "tests/results/derivatives-intake-v1/quality.json": "5d748d6a4045db9aa5685ed718efec175a7d15fee445f6efa2c8a94c65a83f37"
+}
