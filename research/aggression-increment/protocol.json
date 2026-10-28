@@ -1,0 +1,96 @@
+{
+  "kind": "hybrid-taker-aggression-increment",
+  "version": "1.0.0",
+  "reviewCheckpoint": "df416deb8612c5e68661b73e74a3680677cff269",
+  "data": {
+    "schema": "hybrid-binance-usdm-public/v1",
+    "series": "trade",
+    "symbol": "BTCUSDT",
+    "interval": "5m",
+    "rows": 26496,
+    "start": 1782864000000,
+    "split": 1788220800000,
+    "end": 1790812800000,
+    "stepMs": 300000,
+    "tradeHash": "84a4396bd3534859f663c2b5d08ab2cc1221749eb461cd54d593c3ddf7669397",
+    "bundleHash": "8aa007d238f83d85506a46b733f3326d3571b2a385ea29769fb57dea6bc76844"
+  },
+  "calendar": {
+    "entryIntervalMs": 1800000,
+    "priorBars": 10,
+    "horizonBars": 6,
+    "trainingStructural": 2973,
+    "testStructural": 1439,
+    "trainExitStrictlyBeforeSplit": true,
+    "observedExitBeforeEnd": true,
+    "minimumCoveragePercent": 95
+  },
+  "features": [
+    "10000*(C[i]/O[i]-1)",
+    "(H[i]-L[i])/C[i]",
+    "(C[i]-L[i])/(H[i]-L[i])",
+    "V[i]/mean(V[i-10:i])",
+    "10000*(C[i-1]/C[i-7]-1)"
+  ],
+  "aggression": "2*B[i]/V[i]-1; B=taker-buy base volume, V=total base volume",
+  "target": "10000*(O[i+7]/O[i+1]-1)",
+  "models": {
+    "intercept": true,
+    "baselineFeatures": 5,
+    "augmentedFeatures": 6,
+    "scaling": "training means/population SD only; common baseline scalers equal augmented first five",
+    "solver": "hybrid-householder-column-pivoted-qr/1.0.0",
+    "relativeRankTolerance": 1e-12,
+    "rankRule": "abs(Rkk)>1e-12*max(abs(diag(R))); full ranks6/7 or inconclusive",
+    "fitsPerModel": 1,
+    "regularization": false
+  },
+  "gates": {
+    "training": "raw-unit augmented aggression coefficient <=0 => training-rejected; September test-not-evaluated",
+    "primary": "after10bps augmented per-opportunity mean >0 AND paired augmented-minus-baseline mean >0",
+    "passMeaning": "only worthy of a separately frozen untouched-data test; no automatic follow-up"
+  },
+  "scoring": {
+    "forecast": "exact unrounded sign; exact zero flat",
+    "payoff": "sign(prediction)*y-b*I(sign!=0)",
+    "denominator": "all common-valid opportunities including flat",
+    "primaryRoundTripBps": 10,
+    "sensitivityBps": [
+      5,
+      20
+    ],
+    "mse": "diagnostic only",
+    "daily": "descriptive totals, no inference"
+  },
+  "components": {
+    "funding": {
+      "state": "not-applied: calendar completeness and account settlement timing unverified",
+      "valueBps": null
+    },
+    "otherExecutionAccountEffects": {
+      "state": "not-modeled",
+      "valueBps": null
+    },
+    "fullyAdjustedReturn": {
+      "state": "unavailable: missing components",
+      "valueBps": null
+    }
+  },
+  "label": "gross / after modeled fees, before funding and other unmodeled execution/account effects",
+  "resources": {
+    "realRuns": 1,
+    "workers": 1,
+    "wallSeconds": 300,
+    "workerHeapMb": 256,
+    "failure": "incomplete/inconclusive, no retry/refit/approximation"
+  },
+  "prohibitions": [
+    "acquisition",
+    "old engine replay",
+    "app changes",
+    "threshold/feature/horizon/model/sign/fee search",
+    "test-set preprocessing",
+    "funding-zero assumption",
+    "inference/advantage claim"
+  ]
+}
