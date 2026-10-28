@@ -35,7 +35,8 @@ The nonpositive coefficient triggered the prescribed stop. No sign reversal, ref
 ## Current task board
 | Priority | Work package | State / completion rule |
 | --- | --- | --- |
-| Done | Independent taker-aggression increment | Training-rejected; September not evaluated. Report/seals above; final gate exact published full CI, then STOP. |
+| Done | Independent taker-aggression increment | Training-rejected; September not evaluated; exact published full CI independently verified. Closed. |
+| Next / design only | Contracts-first market-data context | Optional perpetual mode/source isolation and provenance design; no implementation or new study started. |
 | Paused | Five-condition5m strategy research | Spot906/perpetual886 correlated inspected-Q3 studies failed all declared fee scenarios; no automatic rescue. |
 | Done | Derivatives gross/fee-only pilot | `045a6b4d7ce20dfbd4f2a400b50fb2aea9bf8bf8`; [CI40781160320](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40781160320) attempt1 all3 jobs/20 suites passed. [Report](tests/results/derivatives-pilot-v1/REPORT.md). |
 | Done | Intake/Spot/economics | [Intake](tests/results/derivatives-intake-v1/REPORT.md), [Spot pilot](tests/results/policy-pilot-v1/REPORT.md), preserved source/data/seals. No replay/reacquisition. |
@@ -45,6 +46,12 @@ The nonpositive coefficient triggered the prescribed stop. No sign reversal, ref
 ## Limitations and exact next action
 Taker aggregation cannot establish absorption/order-book delta/intent, resting depth, cancellations/replenishment or precise ordering. Funding settlement/calendar, spread/slippage/latency, intrabar/account fills, historical filters and margin/liquidation remain unknown/unmodeled. No account-fee tier or fully adjusted return. This negative training-gate result makes no predictive-edge/inference claim and licenses no reversed-sign test.
 
-**Exact next action:** verify this package's exact full CI, retain its receipt, then STOP at the declared training rejection. Further research/product work requires a separate bounded instruction.
+**Review completed:** independently read the published report, compact summary, coefficient seal and experiment control flow. Exact [CI40786887555](https://github.com/artimeNFT/hybrid-terminal/actions/runs/40786887555) matches implementation commit `9c735405a9535103275245cc051bc120689e2a5c`, attempt1, all3 jobs successful. The nonpositive-coefficient return precedes September feature/label preparation. Ignored raw rows/receipts and local WSL cleanliness were not independently inspected; no refit or real-data replay was performed.
+
+**Next recommended product milestone — source alignment, design queued:** the active HTML explicitly labels BINANCE SPOT and uses Spot REST/WebSocket/daily sources. Contracts-first use needs an explicit, coherent product context before a new predictive study. Plan an optional Binance USDⓈ-M perpetual market-data mode while preserving Spot. This is a data/context feature, not an execution/margin engine or a validated signal.
+
+Bound the design to three linked requirements: (1) identify trade-price/volume, daily levels, clock and stream sources and prevent cross-product cache/response mixing; (2) define product identity in new journal/export records and source-scoped preferences, preserving old journal bytes and classifying legacy provenance only when supported; (3) define fail-closed availability and synthetic/browser acceptance for source switching, stale responses and restore. Mark/funding stay distinct from trade OHLCV; account fees, sizing/margin/liquidation remain unconfigured. Preserve the frozen research engine/data/seals and unchanged strategy rules. No new account credentials or private trading API needed for design.
+
+**Exact next action:** this review conversation completes the bounded source-alignment design from current code before issuing one implementation handoff. Do not start another real-data study, re-evaluate September, reacquire Q3, reverse aggression, or launch an implementing session automatically. Application remains0.4.17; this board update is planning only.
 
 Application 0.4.17, Spot 1.0.1/schema 1, frozen calculation/execution sources, datasets, seals, historical manifests and prior outputs remain byte-identical. No journal/profile/preferences/feed/dependency/app release; no real-data old-engine replay. [Origin audit](tests/results/calculation-readiness-v1/REPORT.md)/[all-zone preparation](tests/results/preparation-v1/REPORT.md) and exact0.4.4 hour/0.4.7 midnight evidence stay historical/source-bound, not repeated. [STATUS_HISTORY.md](STATUS_HISTORY.md), Git and named reports retain earlier boards/evidence.
