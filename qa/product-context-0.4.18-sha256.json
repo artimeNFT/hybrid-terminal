@@ -34,5 +34,9 @@
   "tests/results/product-context-0.4.18/HANDOFF.md": "741378bb1b6d23690294adb753bca555e09b07d3f792ef6ec8f0b6c9df0ff5e0",
   "tests/results/product-context-0.4.18/REPORT.md": "932703467b25b5017bdbc8aeabd2bc503cffa8d1c258ef8b4b071772a9b52834",
   "tests/results/product-context-0.4.18/delivery.json": "058feace793fbe212e2f89f7c6977dc22c9b2d01ccfd9dd07964c5e2db905859",
+  "tests/results/product-context-0.4.18/desktop.png": "194bf4e48e0af7a44e4ad00bb25feaaff68e3d89f7731f5a347ff03a9c9cf30e",
+  "tests/results/product-context-0.4.18/help-en.png": "5ff8747b6f5f94f87d6eb6b0f880cc81ec3f129a0a3fc2e03cd48fe7c8afa76c",
+  "tests/results/product-context-0.4.18/help-he.png": "19b70973f61918e09b2598c450915ea399d342d91f30773a39df6a88a047765b",
+  "tests/results/product-context-0.4.18/narrow.png": "9002c43071927a5e8263718306e989684ea3b781680636bf9a3b0402acd90000",
   "tests/ui-smoke.cjs": "ccf2c695144b9f590c5cca91aedda068d0979f232258071efd691cd0c7ec6fda"
 }
