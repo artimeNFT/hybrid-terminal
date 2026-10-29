@@ -1,0 +1,44 @@
+{
+  "version": "0.4.19 RC",
+  "sourceSha256": "ba4832ff2c4b3c997a9926362d405d440858ccfcd64c1a7a29287a68a2cc6806",
+  "planningCheckpoint": "32ad6a2c4b77daf81b697a779ac12b60a1c8bfd2",
+  "baseline": {
+    "file": "baseline/hybrid-terminal.0.4.18.html",
+    "version": "0.4.18 RC",
+    "sha256": "a873886edf0137d1aa6a62eb2195e1ff1f0f749272e0f1b9fc60130dd0b76881"
+  },
+  "source": "selected-product S.k trade candles; never S.price",
+  "modifiedPreexistingFunctions": [
+    "updateSystemUI"
+  ],
+  "checks": {
+    "focusedCases": 8,
+    "browserWidths": [
+      1440,
+      320
+    ],
+    "publicSmokeRun": false,
+    "newTimersOrFeeds": false,
+    "priorProtectedIdentities": 140,
+    "headBaselineResearchQaIdentities": 129,
+    "npmTest": "pass",
+    "fullMockedBrowserSuites": 22,
+    "fullMockedBrowserResult": "pass",
+    "fullLocalRunRetries": 0
+  },
+  "screenshots": {
+    "desktop.png": "e0470832bed82fbee1d6f7c8efc0cc2a2481d6e480a11abc4a93bbbafec40dc3",
+    "narrow.png": "86139d5cc9d2ba3c54177dde36ae2251992f17c688eca49537bf6b61588e6540",
+    "narrow-stale.png": "09246f7aff5598d27cbeeccf6077240463103335233f78f037cda50838ac985e",
+    "narrow-loading.png": "516acfd1f03ac85dded42088cce1ed4d6d9cfc94d02237f185b9d431410e43c9",
+    "help-he.png": "7e7d748ae368a5456d11e1763fbfcec2a18265823ea5fe0b09818e9bc11d9995",
+    "help-en.png": "47399f69aa9df0e01301b738361a757e039805ba6eac22ffbd1f70e9307d93b8",
+    "narrow-perpetual.png": "f0d6b3a4dc51985ee49348ad5e00f15008c2881c9d7d2a552be7a9397303f2fc"
+  },
+  "limitations": [
+    "synthetic isolated browser evidence, no new public-feed observation",
+    "physical device, screen-reader and user-perceived readability unverified",
+    "no ordinary personal browser profile accessed",
+    "prior hour/midnight/public-smoke acceptance does not transfer"
+  ]
+}

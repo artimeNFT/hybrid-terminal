@@ -1,14 +1,22 @@
-# Hybrid Terminal 0.4.18 RC
+# Hybrid Terminal 0.4.19 RC
 
 **New chat or reviewer:** start with [START_HERE.md](START_HERE.md), then the latest current section and task board in [STATUS.md](STATUS.md). Resume existing work; do not create a duplicate implementation session.
 
 **CI / handoff:** operational-document-only changes receive scope regression checks; all other/uncertain changes and manual dispatch receive full QA. See current [STATUS.md](STATUS.md); [STATUS_HISTORY.md](STATUS_HISTORY.md) retains earlier checkpoints.
 
-**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.18 adds optional, coherent USDⓈ-M perpetual public-data context with Spot compatibility. Active SHA-256 `a873886edf0137d1aa6a62eb2195e1ff1f0f749272e0f1b9fc60130dd0b76881`. Strategy algorithms and frozen research remain unchanged; this is not predictive or account-execution validation. [Delivery evidence](tests/results/product-context-0.4.18/REPORT.md).
+**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.19 adds a prominent latest/confirmed candle-feed price card above feed health, independent of WAIT or a plan. Active SHA-256 `ba4832ff2c4b3c997a9926362d405d440858ccfcd64c1a7a29287a68a2cc6806`. Calculations, feeds, journal and frozen research remain unchanged. [Delivery evidence](tests/results/price-card-0.4.19/REPORT.md).
 
 Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Public Binance REST/WebSocket access for the selected Spot or USDⓈ-M perpetual product is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
 
 Chart/header/inspector text is English; the analysis panel is Hebrew. Help offers Hebrew and English, with Hebrew on a fresh installation. On narrow screens the chart has its own usable height and the main area scrolls to the analysis panel.
+
+## Latest / confirmed price —0.4.19
+
+1. Read **מחיר אחרון זמין · הזנת נרות** at the top of the Hebrew panel (below the chart on narrow screens). It shows the latest valid selected-product trade-candle close, product/symbol/timeframe and USDT, including during WAIT.
+2. Read **סגירה מאושרת אחרונה** separately with its explicit **UTC close**. Developing prices do not change that confirmed value. Expand **מחירים מדויקים, זמן ומגבלות** for exact prices, candle-open time and device stream-receive time.
+3. Check the wording: REST snapshot awaits streaming; stale/disconnected values are explicitly last received; switching source clears unavailable values. Device receive time is not exchange event time. Hover, History, manual price-axis bounds and journal selection do not move the card's source.
+
+This is not a tick quote, executable fill, Mark/index or bid/ask. No new feed, polling, timer, preference or journal write is added. Equivalent Hebrew/English Help and [synthetic desktop/320px evidence](tests/results/price-card-0.4.19/REPORT.md) are included. Current-source live and physical-device/user-readability acceptance remain separate; no new public smoke/soak/research run was performed.
 
 ## Market: Spot / USDⓈ-M Perpetual —0.4.18
 
@@ -16,7 +24,7 @@ Chart/header/inspector text is English; the analysis panel is Hebrew. Help offer
 2. Check the selected-product label, feed health and confirmed timestamp. Unavailable perpetual access stays unavailable, with no Spot fallback; **Refresh** is a deliberate retry.
 3. Existing History/HTF/day levels/Pivots/ADR use the selected trade source. Drawings and Volume settings are product-isolated and restore on return. In the journal, filter **מוצר שנרשם**; legacy missing source remains unavailable, with global rolling 1000 retention unchanged.
 
-Public data only: no Mark/funding substitution, orders, credentials or margin approval. Cash-Spot coverage is not perpetual margin; planning fees remain assumptions. A 4.527-second/5-REST/1-WS public smoke received one update on the exact source; it is not candle-close/long-session acceptance. Physical-device and ordinary-user-profile acceptance remain separate. Equivalent Hebrew/English Help explains source/storage limits. [Report/screenshots](tests/results/product-context-0.4.18/REPORT.md).
+Public data only: no Mark/funding substitution, orders, credentials or margin approval. Cash-Spot coverage is not perpetual margin; planning fees remain assumptions. A 4.527-second/5-REST/1-WS public smoke received one update on the exact historical0.4.18 source; it is not candle-close/long-session acceptance. Physical-device and ordinary-user-profile acceptance remain separate. Equivalent Hebrew/English Help explains source/storage limits. [Report/screenshots](tests/results/product-context-0.4.18/REPORT.md).
 
 ## Confirmed candle price/volume context — 0.4.17
 

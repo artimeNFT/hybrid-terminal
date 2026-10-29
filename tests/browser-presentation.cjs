@@ -95,7 +95,7 @@ function fixture(last = 96) {
       // Keep contexts until the QA hook saves their traces and closes the browser.
     }
     assert.deepEqual(errors, []);
-    fs.writeFileSync(path.join(output, 'presentation-evidence.json'), JSON.stringify({version: '0.4.18', checks: evidence,
+    fs.writeFileSync(path.join(output, 'presentation-evidence.json'), JSON.stringify({version: '0.4.19', checks: evidence,
       scope: 'Actual desktop and narrow/touch-emulated Chromium, mocked market data; no public-live, physical-device, midnight or long-session acceptance'}, null, 2) + '\n');
     console.log('PASS: current desktop/narrow WAIT, eligible-plan, unavailable and provisional screenshots; confirmed ATR/cost coordinates, no WAIT plan, independent provisional state, collapsed/persistent details, chart space, palette/body/pane preferences and journal invariance.');
   } finally { await browser.close(); }
