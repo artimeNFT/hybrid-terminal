@@ -1,0 +1,15 @@
+# Reviewed P0 handoff
+
+Checkpoint `9b46ccd6405412c512ad69e93553c51417670d82`; captured before editing.
+
+## P0 implementation handoff — ready scope
+Use explicit header **Market: Spot / USDⓈ-M Perpetual**, Spot compatibility default; restore a valid separately versioned preference without overwriting malformed/blocked storage. Products remain visibly labelled in header/panel/research export; English chart/header and Hebrew panel/bilingual Help.
+
+Route initial/resync/time/history/HTF/daily/Pivots/PDH/PDL/ADR and the kline stream through one explicit product definition. Maintain BTC/ETH/SOL and current four chart timeframes. Preserve confirmed/developing semantics, history-only boundaries and indicator algorithms. Product switch increments request epoch, aborts old requests, cancels stale reconnects/drawing drafts, clears product-derived caches/plans and waits for valid selected-product data; never silently fall back to Spot. Restore the old product's annotations and Volume context without copying them into the new product.
+
+Storage design should favor minimal separate product keys over a global rewrite: keep existing Spot journal IDs, records/signatures and drawing/Volume bytes compatible; use distinct new perpetual IDs/context keys and explicit new-record venue/product/source provenance. Product is included in duplicate/revision identity for perpetual records. Ordinary confirmed appends remain legitimate; merely switching/refreshing cannot produce duplicate records. Legacy missing provenance remains explicitly unavailable unless supported by the record's own evidence. Journal browse/export must distinguish source/product; existing global rolling1000 retention stays explicit. Account cash-Spot coverage must not become perpetual margin approval. Planning fees remain assumptions, not actual account rates.
+
+Verify the current official futures WebSocket routing before coding (the 2026 market/public URL architecture changed; do not assume replacing only the hostname is sufficient). Reference: https://www.binance.com/en-NG/support/announcement/detail/ebf9b0aa9eca4ff3804eef6fb09ba32a and official Binance developer docs. Public endpoints only; no credentials/orders/backend/runtime dependencies.
+
+Acceptance: Spot golden/preservation checks; product/source route and units checks; switch-away/back and delayed REST/daily/WS/reconnect guards; same-symbol/timeframe product storage and journal isolation; valid/invalid/blocked preference restore; desktop/narrow bilingual controls; all existing required final QA and exact published full CI. One bounded real public-feed smoke (at most120s, at most24 REST requests, at most2 WebSocket probes) for routing/native-browser access and stream update only; no claim of a real candle close/soak from this check, no retry loop, no research acquisition/replay. If the public route is blocked, publish the observed blocker and incomplete live acceptance instead of bypassing access controls or substituting data. Update application version only for implemented delivery; freeze historical app/research evidence unchanged.
+

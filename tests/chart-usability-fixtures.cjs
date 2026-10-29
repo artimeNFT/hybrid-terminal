@@ -1,7 +1,8 @@
 'use strict';
-// Explicit presentation-only exception list. The new package test checks this exact
-// list against 0.4.14; recorded-review adds only updateSystemUI, verified exactly
-// against 0.4.15 by its own test. All journal/engine functions remain protected.
+// Explicit view/source-routing/storage exceptions. Product-context golden checks
+// compare all algorithm bodies/outputs and legacy journal bytes against0.4.17.
+// No indicator, selection, plan or execution function is excepted.
+const productChanges=["updateSystemUI", "updateManualControls", "updateVolumeControls", "calc", "confirmedTargetPath", "jsonFetch", "serverClock", "load", "htf", "connect", "notify", "recordDecision", "jrQuery", "jrRecordHTML", "updateJournalReview", "initJournalReview", "bindSystem", "loadOlder", "dailyAt", "refreshPivots", "confirmedADR20", "adr20HTML", "dailyContextHTML", "saveVolumePanePrefs", "initVolumePane", "draw", "syncManualContext", "saveManualCollection", "manualPointerUp", "initManualDrawings", "syncChartMenu", "openChartMenu", "initChartUsability", "syncVolumeContext", "sizingSnapshot", "sizingHTML", "researchExport", "panel"];
 const changedView=['dailyContextHTML','volumeRange','saveVolumePanePrefs','setVolumeHeight','setVolumeCeiling','resetVolumePane','updateVolumeControls','initVolumePane','draw','bindChart','targetPathHTML','panel','updateSystemUI'];
 function candlePlotPixels(app){const g=app.read('S.chartMetrics'),top=Math.ceil(g.headerHeight+12),width=Math.floor(g.pw),height=Math.floor(g.ph)-top;return Buffer.from(app.nativeCanvas.getContext('2d').getImageData(0,top,width,height).data)}
-module.exports={changedView,candlePlotPixels};
+module.exports={productChanges,changedView:[...new Set([...changedView,...productChanges])],candlePlotPixels};

@@ -1,0 +1,47 @@
+{
+  "version": "0.4.18 RC",
+  "sourceSha256": "a873886edf0137d1aa6a62eb2195e1ff1f0f749272e0f1b9fc60130dd0b76881",
+  "baseline": {
+    "version": "0.4.17 RC",
+    "file": "baseline/hybrid-terminal.0.4.17.html",
+    "sha256": "a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a"
+  },
+  "planningCheckpoint": "9b46ccd6405412c512ad69e93553c51417670d82",
+  "defaultProduct": "spot",
+  "products": [
+    "spot",
+    "usdm"
+  ],
+  "publicSmoke": {
+    "result": "pass",
+    "elapsedSeconds": 4.527143938999999,
+    "restRequests": 5,
+    "webSockets": 1,
+    "messages": 1,
+    "sourceSha256": "a873886edf0137d1aa6a62eb2195e1ff1f0f749272e0f1b9fc60130dd0b76881",
+    "phase": "live",
+    "clockTrusted": true,
+    "daily": "ready",
+    "witnessedCandleCloseAcceptance": false,
+    "receiptIgnored": ".qa-results/product-context-0.4.18/public-smoke-20261029/receipt.json"
+  },
+  "checks": {
+    "focusedCases": 8,
+    "combinations": 12,
+    "mockedBrowserSuites": 21,
+    "protectedFrozenIdentities": 140
+  },
+  "screenshots": {
+    "desktop.png": "194bf4e48e0af7a44e4ad00bb25feaaff68e3d89f7731f5a347ff03a9c9cf30e",
+    "help-en.png": "5ff8747b6f5f94f87d6eb6b0f880cc81ec3f129a0a3fc2e03cd48fe7c8afa76c",
+    "help-he.png": "19b70973f61918e09b2598c450915ea399d342d91f30773a39df6a88a047765b",
+    "narrow.png": "9002c43071927a5e8263718306e989684ea3b781680636bf9a3b0402acd90000"
+  },
+  "limitations": [
+    "physical-device/assistive-technology acceptance pending",
+    "only BTCUSDT5m public smoke; broader availability unproven",
+    "no0.4.18 soak/midnight/candle-close acceptance",
+    "no ordinary browser profile inspected",
+    "not account execution or predictive validation"
+  ]
+}

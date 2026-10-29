@@ -1,14 +1,22 @@
-# Hybrid Terminal 0.4.17 RC
+# Hybrid Terminal 0.4.18 RC
 
 **New chat or reviewer:** start with [START_HERE.md](START_HERE.md), then the latest current section and task board in [STATUS.md](STATUS.md). Resume existing work; do not create a duplicate implementation session.
 
 **CI / handoff:** operational-document-only changes receive scope regression checks; all other/uncertain changes and manual dispatch receive full QA. See current [STATUS.md](STATUS.md); [STATUS_HISTORY.md](STATUS_HISTORY.md) retains earlier checkpoints.
 
-**Current direction and task order:** read the short CURRENT [STATUS.md](STATUS.md). Release0.4.17 adds one collapsed confirmed candle price/volume section inside existing context. Source SHA-256 `a059f1f3433f5780da7639e92287aaaa5b84cff1cca8e3864a43c1cecd713f5a`. Journal0.4.16 delivery/full CI and reported desktop acceptance are complete. ATR/Volume definitions, decisions, journal/storage, charts and frozen research remain unchanged. Code/Help/STATUS are one package; exact final full CI receipt stays ignored and is reported at delivery.
+**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.18 adds optional, coherent USDⓈ-M perpetual public-data context with Spot compatibility. Active SHA-256 `a873886edf0137d1aa6a62eb2195e1ff1f0f749272e0f1b9fc60130dd0b76881`. Strategy algorithms and frozen research remain unchanged; this is not predictive or account-execution validation. [Delivery evidence](tests/results/product-context-0.4.18/REPORT.md).
 
-Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Binance spot REST/WebSocket access is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
+Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Public Binance REST/WebSocket access for the selected Spot or USDⓈ-M perpetual product is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
 
 Chart/header/inspector text is English; the analysis panel is Hebrew. Help offers Hebrew and English, with Hebrew on a fresh installation. On narrow screens the chart has its own usable height and the main area scrolls to the analysis panel.
+
+## Market: Spot / USDⓈ-M Perpetual —0.4.18
+
+1. Open the same root HTML. Use **Market** in the header to choose **Spot** or **USDⓈ-M Perpetual**. Spot is the fresh-install default; a valid saved explicit choice restores.
+2. Check the selected-product label, feed health and confirmed timestamp. Unavailable perpetual access stays unavailable, with no Spot fallback; **Refresh** is a deliberate retry.
+3. Existing History/HTF/day levels/Pivots/ADR use the selected trade source. Drawings and Volume settings are product-isolated and restore on return. In the journal, filter **מוצר שנרשם**; legacy missing source remains unavailable, with global rolling 1000 retention unchanged.
+
+Public data only: no Mark/funding substitution, orders, credentials or margin approval. Cash-Spot coverage is not perpetual margin; planning fees remain assumptions. A 4.527-second/5-REST/1-WS public smoke received one update on the exact source; it is not candle-close/long-session acceptance. Physical-device and ordinary-user-profile acceptance remain separate. Equivalent Hebrew/English Help explains source/storage limits. [Report/screenshots](tests/results/product-context-0.4.18/REPORT.md).
 
 ## Confirmed candle price/volume context — 0.4.17
 
