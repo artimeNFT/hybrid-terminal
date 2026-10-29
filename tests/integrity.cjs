@@ -44,7 +44,7 @@ const day=Date.UTC(2026,9,20),flat=Array.from({length:100},(_,i)=>({t:day+i*3000
  // Extreme intermediate overflow is conservatively unavailable, never a fabricated finite quantity.
  assert.equal(s.read("nominalSizing({entry:1,stop:1e-308},'LONG',1e308,100,'cash-spot-long','1000').state"),'invalid-arithmetic');
  assert.equal(s.read("nominalSizing({entry:100,stop:99.99},'LONG',1e308,100,'cash-spot-long','1000').state"),'invalid-arithmetic');
- s.exec("S.sig={...S.sig,side:'LONG',short:false,plan:__plan};S.panelKey=null");s.element('sizeproduct').value='cash-spot-long';s.element('cashbalance').value='1000';s.element('sizeproduct').onchange();await s.flush();
+ s.exec("Object.assign(S.k[S.closedIndex],{o:100,h:101,l:99,c:100,closed:true});S.sig={...S.sig,side:'LONG',short:false,plan:__plan,validity:{ready:true},candidates:{...S.sig.candidates,LONG:{...S.sig.candidates?.LONG,eligible:true}}};S.panelKey=null");s.element('sizeproduct').value='cash-spot-long';s.element('cashbalance').value='1000';s.element('sizeproduct').onchange();await s.flush();
  assert.match(s.element('szo').innerHTML,/insufficient-cash/);assert.match(s.element('szo').innerHTML,/10.0×/);assert.match(s.element('szo').innerHTML,/לא נבדקו/);assert.equal(s.read('researchExport().sizing.executableQuantity'),null);
  const restored=await openApp({localStorage:s.localStorage});assert.equal(restored.element('sizeproduct').value,'cash-spot-long');assert.equal(restored.element('cashbalance').value,'1000');
  console.log('PASS: reviewed 1000/1%/100/99.9 sizing, nominal 100 units/10000 notional/10x, explicit cash scenario and balance, insufficient/covered-before-costs/SHORT/unconfigured/invalid/overflow states; no feasible/executable quantity or venue approval invented.');

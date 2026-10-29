@@ -1,0 +1,70 @@
+{
+  "version": "0.4.20 RC",
+  "sourceSha256": "1d82240258ec208f384474ecd512ee907523795a5c139ff061fd784e9acecd98",
+  "planningCheckpoint": "bae11de4f8cb0f9b894e905504fa47f8dbc2c44f",
+  "baseline": {
+    "file": "baseline/hybrid-terminal.0.4.19.html",
+    "sha256": "ba4832ff2c4b3c997a9926362d405d440858ccfcd64c1a7a29287a68a2cc6806"
+  },
+  "preexistingFunctionsChanged": [
+    "updatePlanningCosts",
+    "panel"
+  ],
+  "unchangedAlgorithms": [
+    "planningCostScenario",
+    "nominalSizing",
+    "plannedRiskDisplay",
+    "targetPathDistances",
+    "targetPathGeometry",
+    "confirmedTargetPath",
+    "confirmedPlanningCostPlan",
+    "sizingSnapshot",
+    "researchExport",
+    "all indicator/strategy/selection/feed/journal functions"
+  ],
+  "checks": {
+    "focusedWorkspaceGroups": 7,
+    "browserWorkspaceCases": 8,
+    "widths": [
+      1440,
+      320
+    ],
+    "npmTest": "pass",
+    "localBrowserCoverage": {
+      "originalGroup": {
+        "passed": 19,
+        "failed": 1,
+        "failure": "presentation fixture innerText for deliberately collapsed baseline"
+      },
+      "correctedPresentation": "pass, unchanged numeric assertion",
+      "appendedProductPriceWorkspace": "pass",
+      "totalSuitesValidated": 23,
+      "economicTextBounds": "pass within row at desktop/320"
+    },
+    "protectedTrackedIdentities": 132,
+    "priorProtectedIdentities": 140,
+    "newPublicOrResearchRun": false
+  },
+  "screenshots": {
+    "desktop.png": "e3ac0094a59eeec3e32914e9a767f1a1d1e8b5ea57c147c12a353ec4e7e4e223",
+    "desktop-short.png": "370debfdf2259fd9209f60fd4b78df7449f4c208fc8b558e1fe1b8b9669a1cde",
+    "desktop-wait.png": "9ec370d36fa5320bf591eb5b65ac0a819441375ecf31f8d2bcbba441a4d1f4b7",
+    "desktop-unavailable.png": "c1c147d5e27cd52ea5f3499cc53357c459a41dc6ea0bc0f771df85c9db3103b2",
+    "overview.png": "ac6c5598a1ec89aa0e37e2490ae6c332b8115816b4ff437d2272431e17737b62",
+    "narrow.png": "f9285cc4c8825e9f7afb27f515376bc71849e2bb8cec0fe904ba894084e8dbf7",
+    "narrow-short.png": "992742c7de4416e7823faee85988b69b3e990d5055d28d3dbf161268ac8a1987",
+    "narrow-wait.png": "6a023ff8967974f62e180d430e0c3823e1e3c89b7c537da1c13b3d789784c35b",
+    "narrow-unavailable.png": "95edf817bc700be0d8962d3deae0f3b470bbeeec8213dd267278ee6ce7f37f28",
+    "negative-payoff.png": "8dee0b77d830861f20428b4163e9a3a810b42524c85ac80c649597828ce151b7",
+    "invalid-scenario.png": "83bd9715b8293fc0f3e6fc4766a4eb5752b838c7f6c04ad6b909e55113eed24e",
+    "partial-input.png": "75ace36e1ad21ade215b8833cf8e17082afd5cfac4e0d11e034344f162b034a1",
+    "help-he.png": "55b3786c97d2ba781301bcd9a96d014e9a6fe7b200c88a43c6ae8ac7459f9260",
+    "help-en.png": "e0b9f85a2fd6c111048c529abec18adf8d7569a971b4a31a992ab0705a886e39"
+  },
+  "limits": [
+    "synthetic isolated QA only; one expected503 fixture",
+    "no current-source live observation or research replay",
+    "ordinary personal profile, physical hardware and human readability unverified",
+    "price readability already accepted; three workspace questions only"
+  ]
+}

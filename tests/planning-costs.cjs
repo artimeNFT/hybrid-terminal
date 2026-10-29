@@ -28,11 +28,11 @@ test('nonfinite/negative/excessive/coercible assumptions and invalid directional
 test('confirmed anchor survives provisional/view changes and assumptions never mutate decisions, baseline risk, sizing or journal',async()=>{
  const a=await open(),before=engine(a),context=a.read('confirmedPlanningCostPlan()');assert.equal(context.side,'LONG');assert.equal(a.element('planningcosts').hidden,false);
  for(const [id,value]of [['planningfee','15'],['planningslippage','5'],['planninggap','100']]){a.element(id).value=value;a.element(id).oninput()}
- assert.deepEqual(engine(a),before);assert.deepEqual(a.read('confirmedPlanningCostPlan()'),context);const result=a.element('planningresult').innerHTML;assert.match(result,/netTP2/);
+ assert.deepEqual(engine(a),before);assert.deepEqual(a.read('confirmedPlanningCostPlan()'),context);const result=a.element('planningresult').innerHTML;assert.match(result,/ordinaryStop/);assert.equal(a.element('planpayoff').textContent,Number(a.read('planningCostScenario(S.sig.plan,S.sig.side,readPlanningCostInputs()).netTP2R').toPrecision(5)).toString());
  const b=bars().at(-1);a.sockets[0].receive({...b,t:b.t+step,o:b.c,h:110,l:90,c:108},false);await settle(a);assert.deepEqual(engine(a),before);assert.equal(a.element('planningresult').innerHTML,result);
  a.exec('S.mouse={x:100,y:120};S.follow=false;S.price=[80,120];S.off=10;panel()');assert.deepEqual(a.read('confirmedPlanningCostPlan()'),context);assert.deepEqual(engine(a),before);
- a.exec('S.sig.side="WAIT";panel()');assert.equal(a.element('planningcosts').hidden,true);assert.equal(a.element('planningresult').innerHTML,'');assert.equal(a.read('confirmedPlanningCostPlan()'),null);
- a.exec('S.sig.side="LONG";S.sig.plan.stop=S.sig.plan.entry;panel()');assert.equal(a.element('planningcosts').hidden,true);assert.equal(a.element('planningresult').innerHTML,'');
+ a.exec('S.sig.side="WAIT";panel()');assert.equal(a.element('planningcosts').hidden,false);assert.equal(a.element('planpayoff').textContent,'לא זמין');assert.equal(a.element('plangeometry').innerHTML,'');assert.equal(a.element('planningresult').innerHTML,'');assert.equal(a.read('confirmedPlanningCostPlan()'),null);
+ a.exec('S.sig.side="LONG";S.sig.plan.stop=S.sig.plan.entry;panel()');assert.equal(a.element('planningcosts').hidden,false);assert.equal(a.element('planpayoff').textContent,'לא זמין');assert.equal(a.element('plangeometry').innerHTML,'');assert.equal(a.element('planningresult').innerHTML,'');
 });
 test('separate assumptions restore without changing old preferences or journal, including explicit recovery from malformed saved input',async()=>{
  const old=await openApp({bars:bars(),file:'baseline/hybrid-terminal.0.4.6.html'}),storage=old.localStorage,bytes=storage['hybridTerminal.journal.v1'];storage['hybridTerminal.view.v2']=JSON.stringify({schemaVersion:2,palette:'pvsra',body:'hollow',annotationDensity:'focus',other:19});const other=storage['hybridTerminal.view.v2'];

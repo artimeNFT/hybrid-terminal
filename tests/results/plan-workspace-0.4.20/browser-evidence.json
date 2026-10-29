@@ -1,0 +1,228 @@
+{
+  "version": "0.4.20 RC",
+  "sourceSha256": "1d82240258ec208f384474ecd512ee907523795a5c139ff061fd784e9acecd98",
+  "checks": [
+    {
+      "width": 1440,
+      "side": "LONG",
+      "original": {
+        "context": {
+          "plan": {
+            "entry": 96,
+            "stop": 94.74999982583034,
+            "tp1": 102.5,
+            "tp2": 103.5,
+            "rr": 5.999999163985765
+          },
+          "side": "LONG",
+          "symbol": "BTCUSDT",
+          "timeframe": "5m",
+          "epoch": 1,
+          "asOf": 1792604400000
+        },
+        "payoff": "5.9232",
+        "gross": "6.00",
+        "geometry": "<div data-confirmed-plan=\"true\"><div class=\"row\"><span>מחיר סגירת ההחלטה · כניסת מודל</span><b class=\"\" title=\"96\" data-plan-price=\"entry\">96.00</b></div><div class=\"row\"><span>סטופ (1.30%)<small class=\"risk-unit\">מרחק: <span data-risk=\"stopAtr\">1.000</span> ATR</small></span><b class=\"S\" title=\"94.74999982583034\" data-plan-price=\"stopAtr\">94.75</b></div><div class=\"row\"><span>יעד 1 · קצה קרוב · מגע בלבד (6.77%)<small class=\"risk-unit\">מרחק: <span data-risk=\"tp1Atr\">5.200</span> ATR</small></span><b class=\"L\" title=\"102.5\" data-plan-price=\"tp1Atr\">102.50</b></div><div class=\"row\"><span>יעד 2 · אמצע אזור הווקטור (7.81%)<small class=\"risk-unit\">מרחק: <span data-risk=\"tp2Atr\">6.000</span> ATR</small></span><b class=\"L\" title=\"103.5\" data-plan-price=\"tp2Atr\">103.50</b></div><small>מרחקי ATR בנר ההחלטה המאושר. TP1 הוא מגע בלבד, ללא יציאה חלקית; TP2 הוא אמצע אזור הווקטור, לא תחזית.</small></div>",
+        "anchor": "BINANCE SPOT · BTCUSDT · 5m · 2026-10-21 17:40:00 UTC"
+      },
+      "expected": {
+        "state": "available",
+        "basis": "confirmed-decision-close-planning-only",
+        "entry": 96,
+        "stop": 94.74999982583034,
+        "tp2": 103.5,
+        "direction": "LONG",
+        "distance": 1.2500001741696565,
+        "frictionAmount": 0.096,
+        "gapAmount": 0,
+        "gapDirection": "below-stop",
+        "netTP2R": 5.923199174686747,
+        "ordinaryStopR": -1.0767999892990179,
+        "gapStopR": -1.0767999892990179
+      },
+      "partialBadInputAndFocusRetained": true,
+      "stableNodesAndListeners": true,
+      "capitalPartialInputAndFocusRetained": true,
+      "pathFocusAndOpenRetainedOnConfirmation": true,
+      "zeroAndNegativePayoff": true,
+      "baselineSeparate": true,
+      "panHistoryJournalInvariant": true,
+      "sourceSwitchAndLateCallback": true,
+      "isolatedReloadRestore": true,
+      "allDataMocked": true
+    },
+    {
+      "width": 1440,
+      "side": "SHORT",
+      "original": {
+        "context": {
+          "plan": {
+            "entry": 104,
+            "stop": 105.25000017416966,
+            "tp1": 97.5,
+            "tp2": 96.5,
+            "rr": 5.999999163985765
+          },
+          "side": "SHORT",
+          "symbol": "BTCUSDT",
+          "timeframe": "5m",
+          "epoch": 1,
+          "asOf": 1792604400000
+        },
+        "payoff": "5.9168",
+        "gross": "6.00",
+        "geometry": "<div data-confirmed-plan=\"true\"><div class=\"row\"><span>מחיר סגירת ההחלטה · כניסת מודל</span><b class=\"\" title=\"104\" data-plan-price=\"entry\">104.00</b></div><div class=\"row\"><span>סטופ (1.20%)<small class=\"risk-unit\">מרחק: <span data-risk=\"stopAtr\">1.000</span> ATR</small></span><b class=\"S\" title=\"105.25000017416966\" data-plan-price=\"stopAtr\">105.25</b></div><div class=\"row\"><span>יעד 1 · קצה קרוב · מגע בלבד (6.25%)<small class=\"risk-unit\">מרחק: <span data-risk=\"tp1Atr\">5.200</span> ATR</small></span><b class=\"L\" title=\"97.5\" data-plan-price=\"tp1Atr\">97.50</b></div><div class=\"row\"><span>יעד 2 · אמצע אזור הווקטור (7.21%)<small class=\"risk-unit\">מרחק: <span data-risk=\"tp2Atr\">6.000</span> ATR</small></span><b class=\"L\" title=\"96.5\" data-plan-price=\"tp2Atr\">96.50</b></div><small>מרחקי ATR בנר ההחלטה המאושר. TP1 הוא מגע בלבד, ללא יציאה חלקית; TP2 הוא אמצע אזור הווקטור, לא תחזית.</small></div>",
+        "anchor": "BINANCE SPOT · BTCUSDT · 5m · 2026-10-21 17:40:00 UTC"
+      },
+      "expected": {
+        "state": "available",
+        "basis": "confirmed-decision-close-planning-only",
+        "entry": 104,
+        "stop": 105.25000017416966,
+        "tp2": 96.5,
+        "direction": "SHORT",
+        "distance": 1.2500001741696565,
+        "frictionAmount": 0.10400000000000001,
+        "gapAmount": 0,
+        "gapDirection": "above-stop",
+        "netTP2R": 5.916799175578496,
+        "ordinaryStopR": -1.0831999884072694,
+        "gapStopR": -1.0831999884072694
+      },
+      "partialBadInputAndFocusRetained": true,
+      "stableNodesAndListeners": true,
+      "capitalPartialInputAndFocusRetained": true,
+      "pathFocusAndOpenRetainedOnConfirmation": true,
+      "zeroAndNegativePayoff": true,
+      "baselineSeparate": true,
+      "panHistoryJournalInvariant": true,
+      "sourceSwitchAndLateCallback": true,
+      "isolatedReloadRestore": true,
+      "allDataMocked": true
+    },
+    {
+      "width": 1440,
+      "side": "WAIT",
+      "noResidualPlan": true,
+      "settingsAccessible": true
+    },
+    {
+      "width": 1440,
+      "side": "unavailable",
+      "noResidualPlan": true,
+      "settingsAccessible": true
+    },
+    {
+      "width": 320,
+      "side": "LONG",
+      "original": {
+        "context": {
+          "plan": {
+            "entry": 96,
+            "stop": 94.74999982583034,
+            "tp1": 102.5,
+            "tp2": 103.5,
+            "rr": 5.999999163985765
+          },
+          "side": "LONG",
+          "symbol": "BTCUSDT",
+          "timeframe": "5m",
+          "epoch": 1,
+          "asOf": 1792604400000
+        },
+        "payoff": "5.9232",
+        "gross": "6.00",
+        "geometry": "<div data-confirmed-plan=\"true\"><div class=\"row\"><span>מחיר סגירת ההחלטה · כניסת מודל</span><b class=\"\" title=\"96\" data-plan-price=\"entry\">96.00</b></div><div class=\"row\"><span>סטופ (1.30%)<small class=\"risk-unit\">מרחק: <span data-risk=\"stopAtr\">1.000</span> ATR</small></span><b class=\"S\" title=\"94.74999982583034\" data-plan-price=\"stopAtr\">94.75</b></div><div class=\"row\"><span>יעד 1 · קצה קרוב · מגע בלבד (6.77%)<small class=\"risk-unit\">מרחק: <span data-risk=\"tp1Atr\">5.200</span> ATR</small></span><b class=\"L\" title=\"102.5\" data-plan-price=\"tp1Atr\">102.50</b></div><div class=\"row\"><span>יעד 2 · אמצע אזור הווקטור (7.81%)<small class=\"risk-unit\">מרחק: <span data-risk=\"tp2Atr\">6.000</span> ATR</small></span><b class=\"L\" title=\"103.5\" data-plan-price=\"tp2Atr\">103.50</b></div><small>מרחקי ATR בנר ההחלטה המאושר. TP1 הוא מגע בלבד, ללא יציאה חלקית; TP2 הוא אמצע אזור הווקטור, לא תחזית.</small></div>",
+        "anchor": "BINANCE SPOT · BTCUSDT · 5m · 2026-10-21 17:40:00 UTC"
+      },
+      "expected": {
+        "state": "available",
+        "basis": "confirmed-decision-close-planning-only",
+        "entry": 96,
+        "stop": 94.74999982583034,
+        "tp2": 103.5,
+        "direction": "LONG",
+        "distance": 1.2500001741696565,
+        "frictionAmount": 0.096,
+        "gapAmount": 0,
+        "gapDirection": "below-stop",
+        "netTP2R": 5.923199174686747,
+        "ordinaryStopR": -1.0767999892990179,
+        "gapStopR": -1.0767999892990179
+      },
+      "partialBadInputAndFocusRetained": true,
+      "stableNodesAndListeners": true,
+      "capitalPartialInputAndFocusRetained": true,
+      "pathFocusAndOpenRetainedOnConfirmation": true,
+      "zeroAndNegativePayoff": true,
+      "baselineSeparate": true,
+      "panHistoryJournalInvariant": true,
+      "sourceSwitchAndLateCallback": true,
+      "isolatedReloadRestore": true,
+      "allDataMocked": true
+    },
+    {
+      "width": 320,
+      "side": "SHORT",
+      "original": {
+        "context": {
+          "plan": {
+            "entry": 104,
+            "stop": 105.25000017416966,
+            "tp1": 97.5,
+            "tp2": 96.5,
+            "rr": 5.999999163985765
+          },
+          "side": "SHORT",
+          "symbol": "BTCUSDT",
+          "timeframe": "5m",
+          "epoch": 1,
+          "asOf": 1792604400000
+        },
+        "payoff": "5.9168",
+        "gross": "6.00",
+        "geometry": "<div data-confirmed-plan=\"true\"><div class=\"row\"><span>מחיר סגירת ההחלטה · כניסת מודל</span><b class=\"\" title=\"104\" data-plan-price=\"entry\">104.00</b></div><div class=\"row\"><span>סטופ (1.20%)<small class=\"risk-unit\">מרחק: <span data-risk=\"stopAtr\">1.000</span> ATR</small></span><b class=\"S\" title=\"105.25000017416966\" data-plan-price=\"stopAtr\">105.25</b></div><div class=\"row\"><span>יעד 1 · קצה קרוב · מגע בלבד (6.25%)<small class=\"risk-unit\">מרחק: <span data-risk=\"tp1Atr\">5.200</span> ATR</small></span><b class=\"L\" title=\"97.5\" data-plan-price=\"tp1Atr\">97.50</b></div><div class=\"row\"><span>יעד 2 · אמצע אזור הווקטור (7.21%)<small class=\"risk-unit\">מרחק: <span data-risk=\"tp2Atr\">6.000</span> ATR</small></span><b class=\"L\" title=\"96.5\" data-plan-price=\"tp2Atr\">96.50</b></div><small>מרחקי ATR בנר ההחלטה המאושר. TP1 הוא מגע בלבד, ללא יציאה חלקית; TP2 הוא אמצע אזור הווקטור, לא תחזית.</small></div>",
+        "anchor": "BINANCE SPOT · BTCUSDT · 5m · 2026-10-21 17:40:00 UTC"
+      },
+      "expected": {
+        "state": "available",
+        "basis": "confirmed-decision-close-planning-only",
+        "entry": 104,
+        "stop": 105.25000017416966,
+        "tp2": 96.5,
+        "direction": "SHORT",
+        "distance": 1.2500001741696565,
+        "frictionAmount": 0.10400000000000001,
+        "gapAmount": 0,
+        "gapDirection": "above-stop",
+        "netTP2R": 5.916799175578496,
+        "ordinaryStopR": -1.0831999884072694,
+        "gapStopR": -1.0831999884072694
+      },
+      "partialBadInputAndFocusRetained": true,
+      "stableNodesAndListeners": true,
+      "capitalPartialInputAndFocusRetained": true,
+      "pathFocusAndOpenRetainedOnConfirmation": true,
+      "zeroAndNegativePayoff": true,
+      "baselineSeparate": true,
+      "panHistoryJournalInvariant": true,
+      "sourceSwitchAndLateCallback": true,
+      "isolatedReloadRestore": true,
+      "allDataMocked": true
+    },
+    {
+      "width": 320,
+      "side": "WAIT",
+      "noResidualPlan": true,
+      "settingsAccessible": true
+    },
+    {
+      "width": 320,
+      "side": "unavailable",
+      "noResidualPlan": true,
+      "settingsAccessible": true
+    }
+  ],
+  "errors": [],
+  "scope": "Isolated native Chromium/file URL, synthetic REST/WS and explicit presentation-only zero/negative coordinates; one injected503 unavailable-source fixture. No public feed, physical-device, ordinary profile or research run."
+}

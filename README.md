@@ -1,14 +1,22 @@
-# Hybrid Terminal 0.4.19 RC
+# Hybrid Terminal 0.4.20 RC
 
 **New chat or reviewer:** start with [START_HERE.md](START_HERE.md), then the latest current section and task board in [STATUS.md](STATUS.md). Resume existing work; do not create a duplicate implementation session.
 
 **CI / handoff:** operational-document-only changes receive scope regression checks; all other/uncertain changes and manual dispatch receive full QA. See current [STATUS.md](STATUS.md); [STATUS_HISTORY.md](STATUS_HISTORY.md) retains earlier checkpoints.
 
-**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.19 adds a prominent latest/confirmed candle-feed price card above feed health, independent of WAIT or a plan. Active SHA-256 `ba4832ff2c4b3c997a9926362d405d440858ccfcd64c1a7a29287a68a2cc6806`. Calculations, feeds, journal and frozen research remain unchanged. [Delivery evidence](tests/results/price-card-0.4.19/REPORT.md).
+**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.20 consolidates existing confirmed-plan geometry, economics, target-path, cost assumptions and nominal sizing in one Hebrew workspace. Active SHA-256 `1d82240258ec208f384474ecd512ee907523795a5c139ff061fd784e9acecd98`. Strategy, feeds, journal and frozen research remain unchanged. [Delivery evidence](tests/results/plan-workspace-0.4.20/REPORT.md).
 
 Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Public Binance REST/WebSocket access for the selected Spot or USDⓈ-M perpetual product is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
 
 Chart/header/inspector text is English; the analysis panel is Hebrew. Help offers Hebrew and English, with Hebrew on a fresh installation. On narrow screens the chart has its own usable height and the main area scrolls to the analysis panel.
+
+## Confirmed planning workspace —0.4.20
+
+1. Below the confirmed decision/reason, read **תוכנית מאושרת · תכנון בלבד**. Source and UTC anchor precede **מחיר סגירת ההחלטה · כניסת מודל**, stop, TP1 near-edge touch only and **יעד2 · אמצע אזור הווקטור**. Developing prices do not replace model entry.
+2. Read gross TP2 reward/risk separately from hypothetical TP2 payoff after the editable assumptions, expressed in **original risk units**. It is not a net reward/risk ratio with enlarged loss, expected value or probability. Zero/negative payoff stays visible; invalid inputs clear scenario output while valid gross geometry remains. Existing target-path levels/coverage follow.
+3. Expand **עלויות והנחות** for existing fee/slippage/gap inputs, reset10/0/0, stop scenarios and formulas. Fixed10bps baseline cost stays separately labelled in details, not deducted again. Expand **גודל נומינלי והנחות הון · לא כמות לביצוע** for existing account/risk/cash assumptions. No maximum loss, executable quantity or perpetual margin approval is established.
+
+WAIT/unavailable data gets one no-plan explanation with settings still accessible. Inputs, focus and open sections persist during updates. Planning uses decision close; historical simulation enters next open. TP1 is touch-only; funding and other unmodeled effects remain unknown. [Report and synthetic desktop/320px evidence](tests/results/plan-workspace-0.4.20/REPORT.md). The accepted price card and journal remain intact; no manual plan editing, new feeds, timers or research run.
 
 ## Latest / confirmed price —0.4.19
 

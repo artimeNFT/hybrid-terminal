@@ -54,7 +54,7 @@ function fixture(last = 96) {
       } else {
         assert.equal(await page.evaluate(() => S.sig.side), 'LONG'); assert.equal(await page.locator('[data-confirmed-plan]').count(), 1);
         const expected = await page.evaluate(() => plannedRiskDisplay(S.sig.plan, S.k[S.closedIndex].c, S.atr[S.closedIndex]));
-        for (const [key, value] of Object.entries(expected)) assert.equal(await page.locator(`[data-risk="${key}"]`).innerText(), value.toFixed(3));
+        for (const [key, value] of Object.entries(expected)) assert.equal(key === 'costR' ? await page.locator(`[data-risk="${key}"]`).textContent() : await page.locator(`[data-risk="${key}"]`).innerText(), value.toFixed(3));
         if (state === 'provisional') {
           const before = await page.evaluate(() => ({sig: S.sig, bt: S.bt, journal: localStorage[JOURNAL_KEY], risk: plannedRiskDisplay(S.sig.plan, S.k[S.closedIndex].c, S.atr[S.closedIndex])}));
           const b = bars.at(-1); socket.send(JSON.stringify({s: 'BTCUSDT', k: {t: b.t + step, T: b.t + 2 * step - 1, o: '' + b.c, h: '106', l: '94', c: '104', v: '1200', x: false, s: 'BTCUSDT', i: '5m'}}));
@@ -95,7 +95,7 @@ function fixture(last = 96) {
       // Keep contexts until the QA hook saves their traces and closes the browser.
     }
     assert.deepEqual(errors, []);
-    fs.writeFileSync(path.join(output, 'presentation-evidence.json'), JSON.stringify({version: '0.4.19', checks: evidence,
+    fs.writeFileSync(path.join(output, 'presentation-evidence.json'), JSON.stringify({version: '0.4.20', checks: evidence,
       scope: 'Actual desktop and narrow/touch-emulated Chromium, mocked market data; no public-live, physical-device, midnight or long-session acceptance'}, null, 2) + '\n');
     console.log('PASS: current desktop/narrow WAIT, eligible-plan, unavailable and provisional screenshots; confirmed ATR/cost coordinates, no WAIT plan, independent provisional state, collapsed/persistent details, chart space, palette/body/pane preferences and journal invariance.');
   } finally { await browser.close(); }

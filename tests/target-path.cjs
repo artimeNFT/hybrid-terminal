@@ -34,7 +34,7 @@ test('anchor and distances remain confirmed through provisional ticks, pointer/v
  const a=await live();await enable(a);const before=unchanged(a),v=a.read('confirmedTargetPath()');const b=bars().at(-1);a.sockets[0].receive({...b,t:b.t+step,o:b.c,c:104,h:106,l:94},false);await settle(a);assert.deepEqual(a.read('confirmedTargetPath()'),v);assert.deepEqual(unchanged(a),before);
  a.exec('S.mouse={x:100,y:120};S.off=37;S.follow=false;S.price=[80,120];sched()');await settle(a);assert.deepEqual(a.read('confirmedTargetPath()'),v);
  a.exec('S.history=[{...S.k[0],t:S.k[0].t-86400000}];refreshChart()');await a.exec('refreshPivots()');await settle(a);assert.deepEqual(a.read('confirmedTargetPath()'),v);assert.deepEqual(unchanged(a),before);
- a.exec('S.sig.side="WAIT";S.panelKey=null;panel()');assert.equal(a.read('confirmedTargetPath().state'),'unavailable');assert.ok(!a.element('pn').innerHTML.includes('data-target-path'));
+ a.exec('S.sig.side="WAIT";S.panelKey=null;panel()');assert.equal(a.read('confirmedTargetPath().state'),'unavailable');assert.equal(a.element('planpath').innerHTML,'');
  a.exec('S.sig.side="LONG";S.sig.plan.entry++');assert.equal(a.read('confirmedTargetPath().state'),'unavailable');
 });
 test('missing clock/daily response stays excluded, while stale symbol/timeframe responses cannot publish path sources',async()=>{
