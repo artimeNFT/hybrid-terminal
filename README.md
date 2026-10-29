@@ -1,14 +1,22 @@
-# Hybrid Terminal 0.4.20 RC
+# Hybrid Terminal 0.4.21 RC
 
 **New chat or reviewer:** start with [START_HERE.md](START_HERE.md), then the latest current section and task board in [STATUS.md](STATUS.md). Resume existing work; do not create a duplicate implementation session.
 
 **CI / handoff:** operational-document-only changes receive scope regression checks; all other/uncertain changes and manual dispatch receive full QA. See current [STATUS.md](STATUS.md); [STATUS_HISTORY.md](STATUS_HISTORY.md) retains earlier checkpoints.
 
-**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.20 consolidates existing confirmed-plan geometry, economics, target-path, cost assumptions and nominal sizing in one Hebrew workspace. Active SHA-256 `1d82240258ec208f384474ecd512ee907523795a5c139ff061fd784e9acecd98`. Strategy, feeds, journal and frozen research remain unchanged. [Delivery evidence](tests/results/plan-workspace-0.4.20/REPORT.md).
+**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.21 exposes the existing candle-close estimate beside the chart candle-state badge and shares one read-only projection with the tiny axis text. Active SHA-256 `c93e8776f3f6e2ec594c861a755f414232b24b4b13f6994bc21cead5e430c957`. Existing strategy, feeds, prices, plan, journal and frozen research remain unchanged. [Delivery evidence](tests/results/countdown-0.4.21/REPORT.md).
 
 Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Public Binance REST/WebSocket access for the selected Spot or USDⓈ-M perpetual product is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
 
 Chart/header/inspector text is English; the analysis panel is Hebrew. Help offers Hebrew and English, with Hebrew on a fresh installation. On narrow screens the chart has its own usable height and the main area scrolls to the analysis panel.
+
+## Candle-close countdown —0.4.21
+
+Read **Closes in** beside the chart candle-state badge: MM:SS for5m/15m, HH:MM:SS for1h/4h. The estimate uses the latest selected-source candle's exclusive opening-time-plus-timeframe boundary and rounds seconds up;1ms remaining shows00:01, not premature zero. The same projection supplies the tiny axis text where visible. Candles/Line, hover, History, panning and journal selection do not change its source.
+
+**Awaiting close update** means the scheduled boundary passed without confirmation; **Awaiting next candle** means the latest source candle is already closed and no next candle arrived. Loading/missing/invalid/clock-before-bar states explicitly wait or show unavailable. Elapsed time never confirms/creates candles, writes journal, runs strategy or emits alerts; source data determines confirmation.
+
+Check **Last server-offset estimate** or **Local-clock estimate** and separate **Feed:** status. Offset may be old; local-only has no server alignment. Open the summary for source and UTC details/limitations. No timing-accuracy, healthy-feed, execution or predictive claim. Existing scheduling only: no new timer, polling, subscription or preference. [Synthetic desktop/320px evidence and Help](tests/results/countdown-0.4.21/REPORT.md); no public or live-midnight run.
 
 ## Confirmed planning workspace —0.4.20
 

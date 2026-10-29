@@ -1,0 +1,95 @@
+{
+  "version": "0.4.21 RC",
+  "sourceSha256": "c93e8776f3f6e2ec594c861a755f414232b24b4b13f6994bc21cead5e430c957",
+  "checks": [
+    {
+      "width": 1440,
+      "first": {
+        "state": "counting",
+        "label": "Closes in 00:01",
+        "axisText": "00:01",
+        "remainingSeconds": 1,
+        "open": 1793490900000,
+        "boundary": 1793491200000,
+        "now": 1793491199999,
+        "clockSource": "server-offset-estimate",
+        "clockLabel": "Last server-offset estimate",
+        "feedLabel": "Connected · awaiting update",
+        "context": {
+          "epoch": 1,
+          "venue": "BINANCE",
+          "product": "spot",
+          "symbol": "BTCUSDT",
+          "timeframe": "5m"
+        }
+      },
+      "formats": {
+        "15m": "00:01",
+        "1h": "00:00:01",
+        "4h": "00:00:01"
+      },
+      "axis": [
+        {
+          "text": "05:00",
+          "x": 977,
+          "y": 404.76013829502216
+        }
+      ],
+      "oneExistingInterval": true,
+      "clockOnlyEngineJournalStorageAlertsUnchanged": true,
+      "sourceConfirmationAndNextRequired": true,
+      "clockJumpsAndResume": true,
+      "detailsFocusRetained": true,
+      "navigationHistoryJournalAndChartTypeIndependent": true,
+      "manualPriceOnlyHidesAxis": true,
+      "feedAndClockDisclosures": true,
+      "sourceSwitchAndOldCallbackGuard": true,
+      "scope": "All market responses mocked; midnight is timestamp arithmetic, not live observation."
+    },
+    {
+      "width": 320,
+      "first": {
+        "state": "counting",
+        "label": "Closes in 00:01",
+        "axisText": "00:01",
+        "remainingSeconds": 1,
+        "open": 1793490900000,
+        "boundary": 1793491200000,
+        "now": 1793491199999,
+        "clockSource": "server-offset-estimate",
+        "clockLabel": "Last server-offset estimate",
+        "feedLabel": "Connected · awaiting update",
+        "context": {
+          "epoch": 1,
+          "venue": "BINANCE",
+          "product": "spot",
+          "symbol": "BTCUSDT",
+          "timeframe": "5m"
+        }
+      },
+      "formats": {
+        "15m": "00:01",
+        "1h": "00:00:01",
+        "4h": "00:00:01"
+      },
+      "axis": [
+        {
+          "text": "05:00",
+          "x": 243,
+          "y": 140.147807714255
+        }
+      ],
+      "oneExistingInterval": true,
+      "clockOnlyEngineJournalStorageAlertsUnchanged": true,
+      "sourceConfirmationAndNextRequired": true,
+      "clockJumpsAndResume": true,
+      "detailsFocusRetained": true,
+      "navigationHistoryJournalAndChartTypeIndependent": true,
+      "manualPriceOnlyHidesAxis": true,
+      "feedAndClockDisclosures": true,
+      "sourceSwitchAndOldCallbackGuard": true,
+      "scope": "All market responses mocked; midnight is timestamp arithmetic, not live observation."
+    }
+  ],
+  "errors": []
+}

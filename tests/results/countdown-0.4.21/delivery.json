@@ -1,0 +1,56 @@
+{
+  "version": "0.4.21 RC",
+  "sourceSha256": "c93e8776f3f6e2ec594c861a755f414232b24b4b13f6994bc21cead5e430c957",
+  "requestedCheckpoint": "b3d200b45181b05c7d64f7b44c3f9913226d680f",
+  "synchronizedHead": "a101e6581eb0a24d4356ca428646a7dd6437c825",
+  "baseline": {
+    "file": "baseline/hybrid-terminal.0.4.20.html",
+    "sha256": "1d82240258ec208f384474ecd512ee907523795a5c139ff061fd784e9acecd98"
+  },
+  "preexistingNamedFunctionsChanged": [
+    "draw"
+  ],
+  "anonymousUiChange": "existing details-toggle schedules redraw for countdown details",
+  "source": "latest selected-product S.k candle; existing regionalClock; feedHealth independent",
+  "checks": {
+    "focusedGroups": 8,
+    "npmTest": "pass",
+    "browserWidths": [
+      1440,
+      320
+    ],
+    "existingIntervalMilliseconds": [
+      1000
+    ],
+    "fullLocalBrowserCoverage": {
+      "originalGroupPassed": 19,
+      "originalGroupFailed": 1,
+      "affectedVolumeAllWidths": "pass after explicit canvas scrolling/hit-test/height-mode setup",
+      "appendedProductPricePlanCountdown": "pass",
+      "totalSuitesValidated": 24
+    },
+    "protectedTrackedIdentities": 135,
+    "priorProtectedIdentities": 140,
+    "publicOrResearchRun": false
+  },
+  "screenshots": {
+    "desktop.png": "00090a1bcf603deafa6e0076dbebe76bbe4f0f5f3a2ead4479f2ee6b5680c8fb",
+    "narrow.png": "fc41a25a191284f0c735147285a8256bf65b119b6f4826948741806ddf2c3bf1",
+    "awaiting-close.png": "07d341d0c931276e21a0f10d14df105519f7f20ab512e8172343e7ca18fb4fdc",
+    "awaiting-next.png": "cb484ee9aa8c10f104865a42e5827281592eac0301aa735e18b59cc41541788c",
+    "clock-before-bar.png": "2277fa951fa6fb4f22aef41f3a21e30d6ea5bd7afbdcd16149636da8a3a5a2bf",
+    "local-disconnected.png": "8c2ea6b0d0f9712723c026001f1677f07e8f8d535bdce89a49637e8b81d2dac1",
+    "offline.png": "75ee067aacecfa1d42eed5410371e3a6d7ed1cf9d1472a6078d74876fde7b520",
+    "loading.png": "5ed7e503025d67fd5360fe0181710753bfc166c47216b6e99f402da2f0a3a58e",
+    "hourly.png": "2ff818f8d6d75ac46a98a9a449e1578a572ffca207c9d3739a00eade4b1e07a4",
+    "line-manual.png": "33189dc293b2796a9ab4c8ce15a23d8f937df215bab7b59637f0ddf01553f35d",
+    "help-he.png": "e3cb07398c5a6530e29991c3a89498de7b9dc81d1d607350ec0fd117c43019c6",
+    "help-en.png": "2f79adf96a1eb384b1fa4b63568fe52f2491003b2e84d34c5b3eecab958c32a2"
+  },
+  "limits": [
+    "synthetic isolated profiles only",
+    "midnight timestamp fixture is not live acceptance",
+    "physical device/screen-reader/personal profile/timing accuracy/human readability unverified",
+    "earlier live acceptance does not transfer"
+  ]
+}
