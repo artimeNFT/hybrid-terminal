@@ -1,0 +1,99 @@
+{
+  "study": "hybrid-candidate-context-v1",
+  "specificationVersion": "1.0",
+  "planningCommit": "c074bada10ff4c63f631e1afb05cb6307cdb1db9",
+  "applicationSha256": "e037089b4044aff4fee18b696646126c53f024c155076daae3be96240d13dc16",
+  "source": "hybrid-terminal.html",
+  "population": "first qualifying nearest-vector opportunity per product/symbol/timeframe/zone-time/side, before exclusions; both sides; no score/tie/position/cooldown",
+  "data": {
+    "q3TradeHash": "84a4396bd3534859f663c2b5d08ab2cc1221749eb461cd54d593c3ddf7669397",
+    "octoberStart": 1790812800000,
+    "octoberEnd": 1793491200000,
+    "step": 300000,
+    "octoberRows": 8928,
+    "joinedRows": 35424,
+    "origin": 1782864000000
+  },
+  "features": [
+    "log(abs(T-C)/D)",
+    "log(D/A)",
+    "log(W/A)",
+    "log(1+a)",
+    "s",
+    "log(A/C)",
+    "-s*(C-EMA50)/A",
+    "-s*(RSI14-50)/50",
+    "directional stopping-volume flag",
+    "directional M/W flag"
+  ],
+  "minimumIndex": 3999,
+  "horizon": 120,
+  "ridge": 0.01,
+  "solver": {
+    "method": "zero-initialized damped Newton; SPD Cholesky linear solve; no fallback",
+    "gradientInfinityTolerance": 1e-08,
+    "maxIterations": 200,
+    "armijo": 0.0001,
+    "maxHalvings": 40,
+    "interceptPenalized": false,
+    "scaling": "train-only mean/population SD; zero SD fixed0"
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "blockDays": [
+      3,
+      7
+    ],
+    "seed": 20261103,
+    "rng": "xorshift32 uint; reset per length",
+    "frameDays": 31,
+    "noncircular": true,
+    "percentiles": [
+      0.025,
+      0.975
+    ],
+    "quantile": "type7; defined replicates only",
+    "weighting": "paired daily sums/counts ratio"
+  },
+  "screen": {
+    "delta": 0.005,
+    "positive": "delta>=.005 AND ambiguity lower>0 AND thinned delta>0 AND >=2/3 section gains>0; absent class/empty section/thinned/failure inconclusive",
+    "negative": "otherwise delta<.005 when no failure; no retuning"
+  },
+  "bins": [
+    0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1
+  ],
+  "sections": [
+    [
+      1,
+      10
+    ],
+    [
+      11,
+      20
+    ],
+    [
+      21,
+      31
+    ]
+  ],
+  "thinning": "earliest then >=120*5min; ties older zone then stable ID; no refit",
+  "resources": {
+    "marketWallMs": 900000,
+    "rssBytes": 2147483648,
+    "workers": 1,
+    "acquisitionRequests": 32,
+    "attemptsPerWindow": 3,
+    "requestTimeoutMs": 15000,
+    "maximumWaitMs": 60000,
+    "pageRows": 1000,
+    "paceMs": 1000,
+    "responseBytes": 4000000
+  },
+  "scope": "exploratory candidate-level level-reaching; no execution/expected-R/funding/approved-plan probability/edge claim"
+}

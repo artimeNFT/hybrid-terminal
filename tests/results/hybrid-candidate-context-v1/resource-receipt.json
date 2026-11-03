@@ -1,0 +1,10 @@
+{
+  "budgetExceeded": true,
+  "rssExceeded": false,
+  "rssObservedMax": 381620224,
+  "startedAt": "2026-11-03T12:44:02.443Z",
+  "state": "incomplete",
+  "study": "hybrid-candidate-context-v1",
+  "totalElapsedMs": 897790,
+  "workers": 1
+}

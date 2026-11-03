@@ -1,0 +1,741 @@
+{
+  "study": "hybrid-candidate-context-v1",
+  "verdict": "incomplete-resource-cap",
+  "screeningVerdict": null,
+  "reason": "900-second resource guard stopped full-prefix outcome-blind preparation; no model/data outcome inference",
+  "preparedBars": 31400,
+  "expectedBars": 35424,
+  "remainingBars": 4024,
+  "nextDecisionIndex": 31400,
+  "nextDecisionOpenUTC": "2026-10-18T00:40:00.000Z",
+  "checkpointHash": "82dc72faf406000908ae087dde9a87e92ddd96078d18ac8b09f946e183b69588",
+  "sourcesHash": "0fcea66ab82fbd8de4339bcb7cdc8a9f3b7bbbe52801278c08d7fd3cd7fa95bb",
+  "dataIdentityHash": "b6feb8da1963b38bdf9fb8862a6d056bf1709c25e137a5097f8ffa8dfba31016",
+  "qualityPartial": {
+    "consideredBars": 31400,
+    "exclusions": {
+      "burn-in": 140,
+      "period-tail": 3
+    },
+    "flows": {
+      "test": {
+        "LONG": {
+          "exclusions": {},
+          "first": 92,
+          "invalidFeatures": 0,
+          "retained": 92
+        },
+        "SHORT": {
+          "exclusions": {},
+          "first": 96,
+          "invalidFeatures": 0,
+          "retained": 96
+        }
+      },
+      "train": {
+        "LONG": {
+          "exclusions": {
+            "burn-in": 67,
+            "period-tail": 2
+          },
+          "first": 503,
+          "invalidFeatures": 0,
+          "retained": 434
+        },
+        "SHORT": {
+          "exclusions": {
+            "burn-in": 73,
+            "period-tail": 1
+          },
+          "first": 544,
+          "invalidFeatures": 0,
+          "retained": 470
+        }
+      }
+    },
+    "periods": {},
+    "qualifyingFirst": 1235,
+    "repeated": 24415
+  },
+  "periods": {
+    "train": {
+      "preparation": "complete",
+      "retainedSoFar": 904,
+      "distinctZonesSoFar": 904,
+      "bySide": {
+        "LONG": 434,
+        "SHORT": 470
+      },
+      "days": [
+        {
+          "date": "2026-07-01",
+          "state": "complete",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-07-02",
+          "state": "complete",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-07-03",
+          "state": "complete",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-07-04",
+          "state": "complete",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-07-05",
+          "state": "complete",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-07-06",
+          "state": "complete",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-07-07",
+          "state": "complete",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-07-08",
+          "state": "complete",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-07-09",
+          "state": "complete",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-07-10",
+          "state": "complete",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-07-11",
+          "state": "complete",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-07-12",
+          "state": "complete",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-07-13",
+          "state": "complete",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-07-14",
+          "state": "complete",
+          "retainedSoFar": 2
+        },
+        {
+          "date": "2026-07-15",
+          "state": "complete",
+          "retainedSoFar": 9
+        },
+        {
+          "date": "2026-07-16",
+          "state": "complete",
+          "retainedSoFar": 9
+        },
+        {
+          "date": "2026-07-17",
+          "state": "complete",
+          "retainedSoFar": 14
+        },
+        {
+          "date": "2026-07-18",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-07-19",
+          "state": "complete",
+          "retainedSoFar": 12
+        },
+        {
+          "date": "2026-07-20",
+          "state": "complete",
+          "retainedSoFar": 9
+        },
+        {
+          "date": "2026-07-21",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-07-22",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-07-23",
+          "state": "complete",
+          "retainedSoFar": 15
+        },
+        {
+          "date": "2026-07-24",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-07-25",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-07-26",
+          "state": "complete",
+          "retainedSoFar": 15
+        },
+        {
+          "date": "2026-07-27",
+          "state": "complete",
+          "retainedSoFar": 12
+        },
+        {
+          "date": "2026-07-28",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-07-29",
+          "state": "complete",
+          "retainedSoFar": 7
+        },
+        {
+          "date": "2026-07-30",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-07-31",
+          "state": "complete",
+          "retainedSoFar": 12
+        },
+        {
+          "date": "2026-08-01",
+          "state": "complete",
+          "retainedSoFar": 15
+        },
+        {
+          "date": "2026-08-02",
+          "state": "complete",
+          "retainedSoFar": 17
+        },
+        {
+          "date": "2026-08-03",
+          "state": "complete",
+          "retainedSoFar": 12
+        },
+        {
+          "date": "2026-08-04",
+          "state": "complete",
+          "retainedSoFar": 17
+        },
+        {
+          "date": "2026-08-05",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-08-06",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-08-07",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-08-08",
+          "state": "complete",
+          "retainedSoFar": 14
+        },
+        {
+          "date": "2026-08-09",
+          "state": "complete",
+          "retainedSoFar": 15
+        },
+        {
+          "date": "2026-08-10",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-08-11",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-08-12",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-08-13",
+          "state": "complete",
+          "retainedSoFar": 22
+        },
+        {
+          "date": "2026-08-14",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-08-15",
+          "state": "complete",
+          "retainedSoFar": 16
+        },
+        {
+          "date": "2026-08-16",
+          "state": "complete",
+          "retainedSoFar": 16
+        },
+        {
+          "date": "2026-08-17",
+          "state": "complete",
+          "retainedSoFar": 15
+        },
+        {
+          "date": "2026-08-18",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-08-19",
+          "state": "complete",
+          "retainedSoFar": 16
+        },
+        {
+          "date": "2026-08-20",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-08-21",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-08-22",
+          "state": "complete",
+          "retainedSoFar": 9
+        },
+        {
+          "date": "2026-08-23",
+          "state": "complete",
+          "retainedSoFar": 14
+        },
+        {
+          "date": "2026-08-24",
+          "state": "complete",
+          "retainedSoFar": 7
+        },
+        {
+          "date": "2026-08-25",
+          "state": "complete",
+          "retainedSoFar": 9
+        },
+        {
+          "date": "2026-08-26",
+          "state": "complete",
+          "retainedSoFar": 18
+        },
+        {
+          "date": "2026-08-27",
+          "state": "complete",
+          "retainedSoFar": 9
+        },
+        {
+          "date": "2026-08-28",
+          "state": "complete",
+          "retainedSoFar": 15
+        },
+        {
+          "date": "2026-08-29",
+          "state": "complete",
+          "retainedSoFar": 14
+        },
+        {
+          "date": "2026-08-30",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-08-31",
+          "state": "complete",
+          "retainedSoFar": 5
+        },
+        {
+          "date": "2026-09-01",
+          "state": "complete",
+          "retainedSoFar": 14
+        },
+        {
+          "date": "2026-09-02",
+          "state": "complete",
+          "retainedSoFar": 7
+        },
+        {
+          "date": "2026-09-03",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-09-04",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-09-05",
+          "state": "complete",
+          "retainedSoFar": 7
+        },
+        {
+          "date": "2026-09-06",
+          "state": "complete",
+          "retainedSoFar": 8
+        },
+        {
+          "date": "2026-09-07",
+          "state": "complete",
+          "retainedSoFar": 8
+        },
+        {
+          "date": "2026-09-08",
+          "state": "complete",
+          "retainedSoFar": 7
+        },
+        {
+          "date": "2026-09-09",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-09-10",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-09-11",
+          "state": "complete",
+          "retainedSoFar": 15
+        },
+        {
+          "date": "2026-09-12",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-09-13",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-09-14",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-09-15",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-09-16",
+          "state": "complete",
+          "retainedSoFar": 7
+        },
+        {
+          "date": "2026-09-17",
+          "state": "complete",
+          "retainedSoFar": 11
+        },
+        {
+          "date": "2026-09-18",
+          "state": "complete",
+          "retainedSoFar": 11
+        },
+        {
+          "date": "2026-09-19",
+          "state": "complete",
+          "retainedSoFar": 12
+        },
+        {
+          "date": "2026-09-20",
+          "state": "complete",
+          "retainedSoFar": 11
+        },
+        {
+          "date": "2026-09-21",
+          "state": "complete",
+          "retainedSoFar": 7
+        },
+        {
+          "date": "2026-09-22",
+          "state": "complete",
+          "retainedSoFar": 11
+        },
+        {
+          "date": "2026-09-23",
+          "state": "complete",
+          "retainedSoFar": 9
+        },
+        {
+          "date": "2026-09-24",
+          "state": "complete",
+          "retainedSoFar": 8
+        },
+        {
+          "date": "2026-09-25",
+          "state": "complete",
+          "retainedSoFar": 8
+        },
+        {
+          "date": "2026-09-26",
+          "state": "complete",
+          "retainedSoFar": 7
+        },
+        {
+          "date": "2026-09-27",
+          "state": "complete",
+          "retainedSoFar": 14
+        },
+        {
+          "date": "2026-09-28",
+          "state": "complete",
+          "retainedSoFar": 12
+        },
+        {
+          "date": "2026-09-29",
+          "state": "complete",
+          "retainedSoFar": 14
+        },
+        {
+          "date": "2026-09-30",
+          "state": "complete",
+          "retainedSoFar": 6
+        }
+      ]
+    },
+    "test": {
+      "preparation": "partial",
+      "retainedSoFar": 188,
+      "distinctZonesSoFar": 188,
+      "bySide": {
+        "LONG": 92,
+        "SHORT": 96
+      },
+      "days": [
+        {
+          "date": "2026-10-01",
+          "state": "complete",
+          "retainedSoFar": 9
+        },
+        {
+          "date": "2026-10-02",
+          "state": "complete",
+          "retainedSoFar": 11
+        },
+        {
+          "date": "2026-10-03",
+          "state": "complete",
+          "retainedSoFar": 9
+        },
+        {
+          "date": "2026-10-04",
+          "state": "complete",
+          "retainedSoFar": 14
+        },
+        {
+          "date": "2026-10-05",
+          "state": "complete",
+          "retainedSoFar": 9
+        },
+        {
+          "date": "2026-10-06",
+          "state": "complete",
+          "retainedSoFar": 8
+        },
+        {
+          "date": "2026-10-07",
+          "state": "complete",
+          "retainedSoFar": 15
+        },
+        {
+          "date": "2026-10-08",
+          "state": "complete",
+          "retainedSoFar": 11
+        },
+        {
+          "date": "2026-10-09",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-10-10",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-10-11",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-10-12",
+          "state": "complete",
+          "retainedSoFar": 12
+        },
+        {
+          "date": "2026-10-13",
+          "state": "complete",
+          "retainedSoFar": 10
+        },
+        {
+          "date": "2026-10-14",
+          "state": "complete",
+          "retainedSoFar": 12
+        },
+        {
+          "date": "2026-10-15",
+          "state": "complete",
+          "retainedSoFar": 6
+        },
+        {
+          "date": "2026-10-16",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-10-17",
+          "state": "complete",
+          "retainedSoFar": 13
+        },
+        {
+          "date": "2026-10-18",
+          "state": "partial",
+          "retainedSoFar": 0
+        },
+        {
+          "date": "2026-10-19",
+          "state": "not-processed",
+          "retainedSoFar": null
+        },
+        {
+          "date": "2026-10-20",
+          "state": "not-processed",
+          "retainedSoFar": null
+        },
+        {
+          "date": "2026-10-21",
+          "state": "not-processed",
+          "retainedSoFar": null
+        },
+        {
+          "date": "2026-10-22",
+          "state": "not-processed",
+          "retainedSoFar": null
+        },
+        {
+          "date": "2026-10-23",
+          "state": "not-processed",
+          "retainedSoFar": null
+        },
+        {
+          "date": "2026-10-24",
+          "state": "not-processed",
+          "retainedSoFar": null
+        },
+        {
+          "date": "2026-10-25",
+          "state": "not-processed",
+          "retainedSoFar": null
+        },
+        {
+          "date": "2026-10-26",
+          "state": "not-processed",
+          "retainedSoFar": null
+        },
+        {
+          "date": "2026-10-27",
+          "state": "not-processed",
+          "retainedSoFar": null
+        },
+        {
+          "date": "2026-10-28",
+          "state": "not-processed",
+          "retainedSoFar": null
+        },
+        {
+          "date": "2026-10-29",
+          "state": "not-processed",
+          "retainedSoFar": null
+        },
+        {
+          "date": "2026-10-30",
+          "state": "not-processed",
+          "retainedSoFar": null
+        },
+        {
+          "date": "2026-10-31",
+          "state": "not-processed",
+          "retainedSoFar": null
+        }
+      ]
+    }
+  },
+  "retainedSoFar": 1092,
+  "uniqueRetainedZonesSoFar": 1092,
+  "firstQualifyingZoneSideIDsSoFar": 1235,
+  "featureValuesRetainedFinite": true,
+  "fits": {
+    "M0": 0,
+    "M1": 0
+  },
+  "marketLabelsGenerated": false,
+  "OctoberForecastsOrEvaluation": false,
+  "metrics": {
+    "M0Brier": null,
+    "M1Brier": null,
+    "improvement": null,
+    "ambiguityBounds": null,
+    "temporalSensitivity": null,
+    "reliability": null,
+    "thinned": null,
+    "outcomeCounts": null
+  },
+  "resource": {
+    "budgetExceeded": true,
+    "rssExceeded": false,
+    "rssObservedMax": 381620224,
+    "startedAt": "2026-11-03T12:44:02.443Z",
+    "state": "incomplete",
+    "study": "hybrid-candidate-context-v1",
+    "totalElapsedMs": 897790,
+    "workers": 1
+  },
+  "artifactsPresent": {
+    "source-seal.json": "c5f24bc623cd58b91d21fbebaefd5fb73185e9d5aee446e91284a31a35f811dd"
+  },
+  "notReached": [
+    "complete-unlabeled-summary",
+    "pre-label-count-seal",
+    "training-labels",
+    "M0/M1-fits",
+    "fit-seal",
+    "October-labels-forecasts-evaluation"
+  ],
+  "resume": "Forbidden under exhausted v1 cap; preserve checkpoint. Additional execution requires separate resource-contract authorization; no fresh run."
+}

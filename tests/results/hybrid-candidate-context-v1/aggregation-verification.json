@@ -1,0 +1,17 @@
+{
+  "state": "verified-incomplete-prefix",
+  "checkpointHash": "82dc72faf406000908ae087dde9a87e92ddd96078d18ac8b09f946e183b69588",
+  "retained": 1092,
+  "uniqueIDs": 1092,
+  "firstIDs": 1235,
+  "exclusions": 143,
+  "retainedPlusExclusionsReconciles": true,
+  "allRetainedFeatureValuesFinite": true,
+  "noLabelOrForecastFields": true,
+  "artifactHashesVerified": 1,
+  "marketFits": {
+    "M0": 0,
+    "M1": 0
+  },
+  "noCalculationLabelFitOrForecastReplay": true
+}

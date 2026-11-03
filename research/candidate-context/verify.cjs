@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{read}=require('./store.cjs');
+// Independent stored-output aggregation: no calculation adapter, label generator,
+// model prediction, fitting or evaluation routine is imported.
+function verify(out){const cp=read(out,'checkpoint.json').payload;for(const [file,hash]of Object.entries(cp.artifacts))assert.equal(read(out,file).sha256,hash);assert.equal(cp.seen.length,new Set(cp.seen).size);assert.equal(cp.quality.qualifyingFirst,cp.seen.length);assert.equal(cp.rows.length+Object.values(cp.quality.exclusions).reduce((a,b)=>a+b,0),cp.seen.length);
+ if(cp.stage!=='complete')return{state:'incomplete',stage:cp.stage,nextIndex:cp.nextIndex,retained:cp.rows.length,labelsOrFitsPresent:Object.keys(cp.artifacts).filter(n=>/training|M0|M1|fit-seal|test-predictions|evaluation/.test(n)),artifactHashesVerified:Object.keys(cp.artifacts).length};
+ const rows=read(out,'test-predictions.json').payload,result=read(out,'evaluation.json').payload,n=rows.length;let b0=0,b1=0,min=0,max=0;const counts={target:0,stop:0,expiry:0},daily=Array.from({length:31},()=>({sum:0,count:0}));for(const r of rows){assert.ok(r.y===0||r.y===1);assert.ok([r.p0,r.p1].every(p=>Number.isFinite(p)&&p>=0&&p<=1));const a=(r.p0-r.y)**2,b=(r.p1-r.y)**2,d=a-b,d0=r.p0*r.p0-r.p1*r.p1,d1=(1-r.p0)**2-(1-r.p1)**2;b0+=a;b1+=b;min+=r.ambiguous?Math.min(d0,d1):d;max+=r.ambiguous?Math.max(d0,d1):d;counts[r.type]++;const day=new Date(r.t).getUTCDate()-1;daily[day].sum+=d;daily[day].count++}
+ const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-12,`${a} != ${b}`);near(b0/n,result.whole.brier0);near(b1/n,result.whole.brier1);near((b0-b1)/n,result.whole.delta);near(min/n,result.whole.ambiguityBounds[0]);near(max/n,result.whole.ambiguityBounds[1]);assert.deepEqual(counts,result.whole.outcomes);for(let d=0;d<31;d++){near(daily[d].sum,result.daily[d].sum);assert.equal(daily[d].count,result.daily[d].count)}near(daily.reduce((a,b)=>a+b.sum,0)/daily.reduce((a,b)=>a+b.count,0),result.whole.delta);
+ const fit=read(out,'fit-seal.json').payload;assert.deepEqual(fit.fits,{M0:1,M1:1});assert.equal(fit.createdBeforeOctoberForecastsAndLabels,true);assert.equal(fit.preLabelSeal,read(out,'pre-label-seal.json').sha256);assert.equal(read(out,'pre-label-seal.json').payload.createdBeforeMarketLabels,true);
+ return{state:'verified',records:n,brier0:b0/n,brier1:b1/n,delta:(b0-b1)/n,ambiguityBounds:[min/n,max/n],outcomes:counts,calendarDays:31,fitCounts:fit.fits,noEngineLabelsFitsOrForecastsReplayed:true};
+}
+if(require.main===module)try{console.log(JSON.stringify(verify(process.argv[2]),null,2))}catch(e){console.error(e.stack);process.exitCode=1}module.exports={verify};

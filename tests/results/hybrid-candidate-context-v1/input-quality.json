@@ -1,0 +1,247 @@
+{
+  "study": "hybrid-candidate-context-v1",
+  "q3": {
+    "tradeHash": "84a4396bd3534859f663c2b5d08ab2cc1221749eb461cd54d593c3ddf7669397",
+    "rows": 26496,
+    "verifiedWith": "unchanged loadPinnedTrade / original derivatives schema"
+  },
+  "october": {
+    "dataHash": "aa96d6649a19effcaec2eb9a20871927a994c7b51a531b57329c6c3e8c75532c",
+    "fileSha256": "470ca1240d970d94e5271e6466781644ab5f418ab4d5c4f3b16e5f4eec129e06",
+    "quality": {
+      "conflicts": 0,
+      "duplicates": 0,
+      "endExclusive": 1793491200000,
+      "expectedRows": 8928,
+      "gaps": 0,
+      "rows": 8928,
+      "startInclusive": 1790812800000,
+      "state": "complete"
+    },
+    "requests": [
+      {
+        "attempt": 0,
+        "bodyFile": "response-0.json",
+        "finishedAt": "2026-11-03T12:38:00.015Z",
+        "headers": {
+          "date": "Tue, 03 Nov 2026 12:37:59 GMT",
+          "retry-after": null,
+          "x-mbx-used-weight-1m": "1"
+        },
+        "parameters": {},
+        "responseSha256": "dc4c4c0366da96859ab10e16ab68eaca818ca93d3d3096f7f3630f71ea790cc3",
+        "sequence": 0,
+        "startedAt": "2026-11-03T12:37:56.195Z",
+        "status": 200,
+        "url": "https://fapi.binance.com/fapi/v1/time"
+      },
+      {
+        "attempt": 0,
+        "bodyFile": "response-1.json",
+        "finishedAt": "2026-11-03T12:38:01.463Z",
+        "headers": {
+          "date": "Tue, 03 Nov 2026 12:38:00 GMT",
+          "retry-after": null,
+          "x-mbx-used-weight-1m": "5"
+        },
+        "parameters": {
+          "endTime": 1791112799999,
+          "interval": "5m",
+          "limit": 1000,
+          "startTime": 1790812800000,
+          "symbol": "BTCUSDT"
+        },
+        "responseSha256": "bef7abf1975d18e34649a5532012aa714a88ca509279ed189c59d2fcdeeefd54",
+        "sequence": 1,
+        "startedAt": "2026-11-03T12:38:01.017Z",
+        "status": 200,
+        "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=5m&startTime=1790812800000&endTime=1791112799999&limit=1000"
+      },
+      {
+        "attempt": 0,
+        "bodyFile": "response-2.json",
+        "finishedAt": "2026-11-03T12:38:02.859Z",
+        "headers": {
+          "date": "Tue, 03 Nov 2026 12:38:02 GMT",
+          "retry-after": null,
+          "x-mbx-used-weight-1m": "10"
+        },
+        "parameters": {
+          "endTime": 1791412799999,
+          "interval": "5m",
+          "limit": 1000,
+          "startTime": 1791112800000,
+          "symbol": "BTCUSDT"
+        },
+        "responseSha256": "b6f138fd0213f52c8f3960bd20230267e3c8f5c222a3139f0535c97d265a126d",
+        "sequence": 2,
+        "startedAt": "2026-11-03T12:38:02.465Z",
+        "status": 200,
+        "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=5m&startTime=1791112800000&endTime=1791412799999&limit=1000"
+      },
+      {
+        "attempt": 0,
+        "bodyFile": "response-3.json",
+        "finishedAt": "2026-11-03T12:38:04.239Z",
+        "headers": {
+          "date": "Tue, 03 Nov 2026 12:38:03 GMT",
+          "retry-after": null,
+          "x-mbx-used-weight-1m": "15"
+        },
+        "parameters": {
+          "endTime": 1791712799999,
+          "interval": "5m",
+          "limit": 1000,
+          "startTime": 1791412800000,
+          "symbol": "BTCUSDT"
+        },
+        "responseSha256": "6c68691e02f5784aa38aadac149b41998b56a46e86ef377c85564a6e0fbb4d44",
+        "sequence": 3,
+        "startedAt": "2026-11-03T12:38:03.860Z",
+        "status": 200,
+        "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=5m&startTime=1791412800000&endTime=1791712799999&limit=1000"
+      },
+      {
+        "attempt": 0,
+        "bodyFile": "response-4.json",
+        "finishedAt": "2026-11-03T12:38:05.641Z",
+        "headers": {
+          "date": "Tue, 03 Nov 2026 12:38:05 GMT",
+          "retry-after": null,
+          "x-mbx-used-weight-1m": "20"
+        },
+        "parameters": {
+          "endTime": 1792012799999,
+          "interval": "5m",
+          "limit": 1000,
+          "startTime": 1791712800000,
+          "symbol": "BTCUSDT"
+        },
+        "responseSha256": "19ae83094349d2b3654222514a3658e0525cc287c52304259d433641e2b7d1a5",
+        "sequence": 4,
+        "startedAt": "2026-11-03T12:38:05.240Z",
+        "status": 200,
+        "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=5m&startTime=1791712800000&endTime=1792012799999&limit=1000"
+      },
+      {
+        "attempt": 0,
+        "bodyFile": "response-5.json",
+        "finishedAt": "2026-11-03T12:38:07.053Z",
+        "headers": {
+          "date": "Tue, 03 Nov 2026 12:38:06 GMT",
+          "retry-after": null,
+          "x-mbx-used-weight-1m": "25"
+        },
+        "parameters": {
+          "endTime": 1792312799999,
+          "interval": "5m",
+          "limit": 1000,
+          "startTime": 1792012800000,
+          "symbol": "BTCUSDT"
+        },
+        "responseSha256": "d2bc47928cbdd9b9ea17f426f1bcd43d3a802d5084f14bfd577cf583ddb29f0d",
+        "sequence": 5,
+        "startedAt": "2026-11-03T12:38:06.641Z",
+        "status": 200,
+        "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=5m&startTime=1792012800000&endTime=1792312799999&limit=1000"
+      },
+      {
+        "attempt": 0,
+        "bodyFile": "response-6.json",
+        "finishedAt": "2026-11-03T12:38:08.724Z",
+        "headers": {
+          "date": "Tue, 03 Nov 2026 12:38:08 GMT",
+          "retry-after": null,
+          "x-mbx-used-weight-1m": "30"
+        },
+        "parameters": {
+          "endTime": 1792612799999,
+          "interval": "5m",
+          "limit": 1000,
+          "startTime": 1792312800000,
+          "symbol": "BTCUSDT"
+        },
+        "responseSha256": "13a1a1b70c9a3a2d38aba701e3c810b7d0141e290b42fca87a2b49afab1a5018",
+        "sequence": 6,
+        "startedAt": "2026-11-03T12:38:08.054Z",
+        "status": 200,
+        "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=5m&startTime=1792312800000&endTime=1792612799999&limit=1000"
+      },
+      {
+        "attempt": 0,
+        "bodyFile": "response-7.json",
+        "finishedAt": "2026-11-03T12:38:10.195Z",
+        "headers": {
+          "date": "Tue, 03 Nov 2026 12:38:09 GMT",
+          "retry-after": null,
+          "x-mbx-used-weight-1m": "35"
+        },
+        "parameters": {
+          "endTime": 1792912799999,
+          "interval": "5m",
+          "limit": 1000,
+          "startTime": 1792612800000,
+          "symbol": "BTCUSDT"
+        },
+        "responseSha256": "337ab0d4cd5a1afa5fe845144797bef0474249ee70cf2ff969bc19a31042f1a6",
+        "sequence": 7,
+        "startedAt": "2026-11-03T12:38:09.725Z",
+        "status": 200,
+        "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=5m&startTime=1792612800000&endTime=1792912799999&limit=1000"
+      },
+      {
+        "attempt": 0,
+        "bodyFile": "response-8.json",
+        "finishedAt": "2026-11-03T12:38:11.678Z",
+        "headers": {
+          "date": "Tue, 03 Nov 2026 12:38:11 GMT",
+          "retry-after": null,
+          "x-mbx-used-weight-1m": "40"
+        },
+        "parameters": {
+          "endTime": 1793212799999,
+          "interval": "5m",
+          "limit": 1000,
+          "startTime": 1792912800000,
+          "symbol": "BTCUSDT"
+        },
+        "responseSha256": "db5e21e0d50d39ba9a9f61b8da4ba28a3e2230c5eadeb2250ce269e7a569bba8",
+        "sequence": 8,
+        "startedAt": "2026-11-03T12:38:11.195Z",
+        "status": 200,
+        "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=5m&startTime=1792912800000&endTime=1793212799999&limit=1000"
+      },
+      {
+        "attempt": 0,
+        "bodyFile": "response-9.json",
+        "finishedAt": "2026-11-03T12:38:13.130Z",
+        "headers": {
+          "date": "Tue, 03 Nov 2026 12:38:12 GMT",
+          "retry-after": null,
+          "x-mbx-used-weight-1m": "45"
+        },
+        "parameters": {
+          "endTime": 1793491199999,
+          "interval": "5m",
+          "limit": 1000,
+          "startTime": 1793212800000,
+          "symbol": "BTCUSDT"
+        },
+        "responseSha256": "f36f87b7f019e3fc21eca5257a7282420e53bce2a1bd1b96566fb9c897dd3ef7",
+        "sequence": 9,
+        "startedAt": "2026-11-03T12:38:12.679Z",
+        "status": 200,
+        "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=5m&startTime=1793212800000&endTime=1793491199999&limit=1000"
+      }
+    ],
+    "cutoff": 1793709479438,
+    "schema": "hybrid-candidate-october-trade/v1"
+  },
+  "joined": {
+    "rows": 35424,
+    "rawRowsHash": "982412ebcf98b08e0278c625e3a3684e9dbdefba707a94102506b681a614cd71",
+    "grid": "continuous July1-Nov1,300000ms; validated before Number conversion"
+  },
+  "officialSpecificationReviewed": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data#kline-candlestick-data",
+  "scope": "10 actual public requests: server time +9 October trade pages. No Q3 refetch/Spot/Mark/index/funding/account requests; all12 raw fields/types retained ignored."
+}
