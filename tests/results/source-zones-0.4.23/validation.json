@@ -1,0 +1,104 @@
+{
+  "scope": "synthetic/mocked only; no public feeds, acquired-data replay, fitting or live acceptance",
+  "deterministic": {
+    "initialNpmTest": "stopped after app: active-version fixture and Hebrew chart-chrome placement failures; both corrected",
+    "sevenUnchangedAppSuites": "passed, not repeated",
+    "failedAppChecksThenRemainingExtensions": "passed;48 tests in app-completion.log",
+    "newSourceZoneGroups": "9/9 final focused arithmetic/guards/preservation",
+    "research": "passed",
+    "audit": "passed",
+    "contract": "passed",
+    "preparation": "passed; historical closed-study fixtures explicitly archived0.4.22",
+    "presentation": "14 suites passed"
+  },
+  "browser": {
+    "covered": 26,
+    "preservedEarlierPassedSuites": [
+      "browser-smoke",
+      "browser-increment",
+      "browser-integrity",
+      "browser-day-context",
+      "browser-navigation",
+      "browser-presentation",
+      "browser-target-path",
+      "browser-provenance-readability",
+      "browser-planning-costs",
+      "browser-readability-help",
+      "browser-volume-legend",
+      "browser-confirmed-volume",
+      "browser-regional-windows",
+      "browser-regional-reload-capture",
+      "browser-adr20",
+      "browser-chart-type"
+    ],
+    "finalSourceResume": {
+      "sourceSha256": "51b77ffe1ef79457d9bc3d1aa99c917e3e3d8b6f839ae32010dac5b518eb78c3",
+      "reason": "Resume only failed/interrupted/unstarted checks after compact selector-row fix; preserve16 prior successful browser suites",
+      "checks": [
+        {
+          "name": "browser-manual-drawings",
+          "status": 0,
+          "signal": null
+        },
+        {
+          "name": "browser-chart-usability",
+          "status": 0,
+          "signal": null
+        },
+        {
+          "name": "browser-recorded-decision-review",
+          "status": 0,
+          "signal": null
+        },
+        {
+          "name": "browser-confirmed-candle-context",
+          "status": 0,
+          "signal": null
+        },
+        {
+          "name": "browser-product-context",
+          "status": 0,
+          "signal": null
+        },
+        {
+          "name": "browser-price-card",
+          "status": 0,
+          "signal": null
+        },
+        {
+          "name": "browser-plan-workspace",
+          "status": 0,
+          "signal": null
+        },
+        {
+          "name": "browser-countdown",
+          "status": 0,
+          "signal": null
+        },
+        {
+          "name": "browser-binary-break-even",
+          "status": 0,
+          "signal": null
+        },
+        {
+          "name": "browser-source-zones",
+          "status": 0,
+          "signal": null
+        }
+      ]
+    },
+    "screenshotsInspected": [
+      "desktop/320 chart",
+      "desktop/320 selector",
+      "320 exact details",
+      "320 he/en Help"
+    ],
+    "traceLimitation": "Existing mock-hook tracing.stop warnings after closed contexts; all script assertions passed. No full-trace completeness claim."
+  },
+  "protectedTrackedIdentities": 795,
+  "priorProtectedIdentities": 140,
+  "finalSourceSha256": "51b77ffe1ef79457d9bc3d1aa99c917e3e3d8b6f839ae32010dac5b518eb78c3",
+  "finalNewFeatureTests": "9/9 pass after compact-row/explicit-qualification changes; current source checks pass",
+  "preservation": "795 prior tracked protected +140 prior protected identities unchanged; exact0.4.22 archive verified",
+  "fullSettledSourceValidation": "Required exact-published CI to be read back after the single coherent package push"
+}

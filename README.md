@@ -1,14 +1,22 @@
-# Hybrid Terminal 0.4.22 RC
+# Hybrid Terminal 0.4.23 RC
 
 **New chat or reviewer:** start with [START_HERE.md](START_HERE.md), then the latest current section and task board in [STATUS.md](STATUS.md). Resume existing work; do not create a duplicate implementation session.
 
 **CI / handoff:** operational-document-only changes receive scope regression checks; all other/uncertain changes and manual dispatch receive full QA. See current [STATUS.md](STATUS.md); [STATUS_HISTORY.md](STATUS_HISTORY.md) retains earlier checkpoints.
 
-**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.22 adds a conditional binary break-even requirement inside existing confirmed-plan cost details. Active SHA-256 `e037089b4044aff4fee18b696646126c53f024c155076daae3be96240d13dc16`. This is a requirement under assumptions, never estimated actual success probability or an eligibility filter. Existing strategy, feeds, prices, plan, journal and frozen research remain unchanged. [Delivery evidence](tests/results/binary-breakeven-0.4.22/REPORT.md).
+**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.23 adds optional **Display → Zone view → Source-derived closed**, with **Local** unchanged as the session default. Active SHA-256 `51b77ffe1ef79457d9bc3d1aa99c917e3e3d8b6f839ae32010dac5b518eb78c3`. This is supplied-source closed-bar chart context, independent of Local plan targets and all strategy/journal calculations. [Delivery evidence](tests/results/source-zones-0.4.23/REPORT.md).
 
 Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Public Binance REST/WebSocket access for the selected Spot or USDⓈ-M perpetual product is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
 
 Chart/header/inspector text is English; the analysis panel is Hebrew. Help offers Hebrew and English, with Hebrew on a fresh installation. On narrow screens the chart has its own usable height and the main area scrolls to the analysis panel.
+
+## Optional source-derived CLOSED zones —0.4.23
+
+1. Open **Display → Zone view → Source-derived closed**. **Vectors** controls visibility of either selected layer; Local and source-derived boxes are never overlaid together. Returning to **Local** restores the existing layer. The selector is session-only; reload returns to Local without writing preferences or journal data.
+2. Read the English chart status: ABOVE uses dashed boundaries, BELOW dotted boundaries. Expand **אזורי מקור · סגורים בלבד · לא יעדי תוכנית** in the Hebrew panel for coverage/provenance and exact original/remaining bounds.
+3. This adapter uses the selected product/symbol/timeframe's loaded chart history, including chart-only History. It processes a previous rising/climax source only on the next **closed** bar. Provisional candles, clock passage, hover and panning never finalize it. Warm-up/invalid/zero references and zero-body exclusions are disclosed; gaps reset context rather than invent unobserved recovery. No remaining box becomes a Local plan target.
+
+The pinned [supplied Pine profile](references/tr-main/README.md) is body-only creation/body-with-wicks updates, strict C>O source direction and cap500 per direction before safe cleanup. This is not authenticated library-publication or TradingView-runtime/feed parity, verified strength, a complete strategy or profitability evidence. Exact0.4.22 is internal `baseline/hybrid-terminal.0.4.22.html`; only the two closed candidate-study fixture scripts opt into `research/source-context/candidate-0.4.22.cjs`. Actual app/browser QA uses the new root without that binding. Historical scientific files/seals are unchanged.
 
 ## Conditional binary break-even —0.4.22
 
@@ -148,7 +156,7 @@ npm run qa:browser:install
 npm run test:browser
 ```
 
-`npm test` runs the active versioned source checks, nine deterministic app suites, the unchanged 18-case research / nine audit / nine contract / 13 preparation fixtures in an explicit frozen 0.4.3 context, and five presentation, six target-path, seven provenance/readability, seven planning-cost, six readability/Help, eight volume/legend and five confirmed-volume and eight regional-window and nine ADR20 plus seven chart-type and nine manual-drawing and ten chart-usability plus twelve recorded-decision review and ten confirmed-candle context checks (109 presentation cases total). Browser QA runs nineteen mocked Chromium scripts with synthetic REST/WebSocket fixtures, a guard rejecting unmocked external requests, and per-context traces. Test logs, screenshots, traces and manifests go to ignored `.qa-results/`. Open a trace with `npx playwright show-trace .qa-results/browser/browser-navigation/trace-1.zip`. Neither required CI group uses public Binance, acquired datasets, browser journals, credentials or WSL-specific paths. Legacy direct script commands remain available; the npm runner supplies nonhistorical output directories.
+`npm test` runs the current versioned source checks, deterministic app/extensions, frozen research/audit/contract/preparation fixtures and presentation checks. Only historical fixtures opt into their explicit archived source context (0.4.3, pilot0.4.17, closed candidate-study0.4.22); actual app and browser tests load the current root. `npm run test:browser` runs26 mocked Chromium scripts, with unmocked external requests rejected. Current script registration in package.json is authoritative. Logs, screenshots, traces and manifests are ignored under `.qa-results/`. Neither required QA group uses acquired datasets, personal profiles or live market access. The npm runner keeps generated receipts out of historical tracked evidence.
 
 On a minimal **Ubuntu 24.04 x64 WSL host without passwordless sudo**, use `npm run qa:browser:local` instead of `qa:browser:install`. It installs the pinned Chromium and downloads/extracts the three missing Ubuntu NSS/NSPR/ALSA packages under ignored `.tools/browser-libs`; the runner discovers these local libraries. Other operating systems should use Playwright's normal dependency setup. This fallback requires Ubuntu apt metadata/access but no system writes. No old `/tmp/hybrid-qa-tools` package/library path is used by the normal QA runner.
 

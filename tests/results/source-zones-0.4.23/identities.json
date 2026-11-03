@@ -1,0 +1,12 @@
+{
+  "source": "51b77ffe1ef79457d9bc3d1aa99c917e3e3d8b6f839ae32010dac5b518eb78c3",
+  "archive": "e037089b4044aff4fee18b696646126c53f024c155076daae3be96240d13dc16",
+  "protectedTrackedCount": 795,
+  "priorProtectedCount": 140,
+  "changedProtectedFiles": [],
+  "newFiles": {
+    "research/source-context/candidate-0.4.22.cjs": "143f963652f025aa4b7e175dd2a68e4318101c63086ae2a82bfd7def3695aa8b",
+    "tests/source-zones.cjs": "2aa81d19d6d34a9447e79f7ea78e5e741a6f4656793324f4d9bff1af2efa19d5",
+    "tests/browser-source-zones.cjs": "471767a90e9cba5368a9126319d7c09f580392fbc896b768eacbdce1f8c04e41"
+  }
+}

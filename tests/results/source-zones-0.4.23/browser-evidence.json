@@ -1,0 +1,34 @@
+{
+  "version": "0.4.23 RC",
+  "sourceSha256": "51b77ffe1ef79457d9bc3d1aa99c917e3e3d8b6f839ae32010dac5b518eb78c3",
+  "checks": [
+    {
+      "width": 1440,
+      "actualCanvasStrokeCoordinates": true,
+      "sourceBoundsAndProvenance": true,
+      "localDefaultSessionOnly": true,
+      "confirmedProvisionalAndClockIsolation": true,
+      "historyPanZoomChartType": true,
+      "layerVisibility": true,
+      "sourceEpochStaleResponseClear": true,
+      "bilingualHelp": true,
+      "noOverflow": true,
+      "unchangedLegacyBeforeActualClose": true
+    },
+    {
+      "width": 320,
+      "actualCanvasStrokeCoordinates": true,
+      "sourceBoundsAndProvenance": true,
+      "localDefaultSessionOnly": true,
+      "confirmedProvisionalAndClockIsolation": true,
+      "historyPanZoomChartType": true,
+      "layerVisibility": true,
+      "sourceEpochStaleResponseClear": true,
+      "bilingualHelp": true,
+      "noOverflow": true,
+      "unchangedLegacyBeforeActualClose": true
+    }
+  ],
+  "errors": [],
+  "scope": "Actual isolated Chromium Canvas/file origin, synthetic REST/WS only. No TradingView runtime/public/live/physical acceptance or acquired-data study."
+}
