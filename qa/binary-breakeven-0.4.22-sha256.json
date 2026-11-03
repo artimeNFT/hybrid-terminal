@@ -1,6 +1,6 @@
 {
   "README.md": "c102abbe52bae782286be04ffd86e30c348f846ca6dff91bdbf1de088445c0d8",
-  "STATUS.md": "5032d3be228f7f140986fc8b7527c8a1595bad1428c5e7c167f518e2871adef5",
+  "STATUS.md": "86792880de49d7743898c5787fec62ac26b3900d3dfe2827dd184242023dc3ed",
   "baseline/hybrid-terminal.0.4.21.html": "c93e8776f3f6e2ec594c861a755f414232b24b4b13f6994bc21cead5e430c957",
   "hybrid-terminal.html": "e037089b4044aff4fee18b696646126c53f024c155076daae3be96240d13dc16",
   "package.json": "7116e63e33e8b8021d4e813f4724f044dc608ecae7b03d37bce3c05ffd2870d7",
@@ -30,9 +30,8 @@
   "tests/browser-volume-legend.cjs": "b3b5f1cdd77a2705eec99f33595b365f4e28971e237274308738d25c879dee60",
   "tests/countdown.cjs": "84aa012105a47546c398fae35529aa7631da2d6522ed7ce5b4e2b0b1bf5c7620",
   "tests/presentation.cjs": "7754293ba0957e6cc4549bdcc94fdea35895639e44e56d8584e3ae002ea537ae",
-  "tests/results/0.4.3/browser-navigation/evidence.json": "c076e1af40e0ea5f82aec475fb25e4ee916c324d1ec307c549be1e8ae8bf0449",
   "tests/results/binary-breakeven-0.4.22/HANDOFF.md": "60f60a04566e6def51f3ba96713ae4f8a049787d4390a060cbdf161ee4ae8920",
-  "tests/results/binary-breakeven-0.4.22/REPORT.md": "17ee0cab54a5c05f15f38dfe30dd5346b7c42d8909776a8dddafcd05aa8c2938",
+  "tests/results/binary-breakeven-0.4.22/REPORT.md": "cd6d36f1a8066133324f220d98bb018ce238c94b9d59879f63996e09491a71e8",
   "tests/results/binary-breakeven-0.4.22/browser-evidence.json": "dc68676212b076b40371cbbc78a452cbcd344f2755505aab51bbf5b0d319fcc4",
   "tests/results/binary-breakeven-0.4.22/delivery.json": "c239872759c414c8faa3d47c9f4e7eadb255bed801c37e3cbdebcd00e74d089c",
   "tests/results/binary-breakeven-0.4.22/desktop.png": "d353a3fe087a97f2e728175014577d6ce2cc1ea6625ff0b3cf6c49686ae2f9cb",
