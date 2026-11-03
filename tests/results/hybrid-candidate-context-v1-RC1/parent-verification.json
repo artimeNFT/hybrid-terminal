@@ -1,0 +1,22 @@
+{
+  "state": "verified",
+  "records": 341,
+  "brier0": 0.23129736938684942,
+  "brier1": 0.23154407690037815,
+  "delta": -0.00024670751352873514,
+  "ambiguityBounds": [
+    -0.0002467075135285878,
+    -0.0002467075135285878
+  ],
+  "outcomes": {
+    "target": 158,
+    "stop": 183,
+    "expiry": 0
+  },
+  "calendarDays": 31,
+  "fitCounts": {
+    "M0": 1,
+    "M1": 1
+  },
+  "noEngineLabelsFitsOrForecastsReplayed": true
+}

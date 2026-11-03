@@ -1,0 +1,12 @@
+{
+  "startingCheckpointBytesSha256": "fc889218cb61853a20801bce638fb231bf2c74903237b360948c634f61c4f4fe",
+  "parentReceiptBytesSha256": "e5dfc60ea700f6d60314483789a9c41db1f9e4245059a9c80bb2e2f75a70ccba",
+  "parentSourceSealBytesSha256": "5ebe0a9ff38b0416e4ebde7c5d0109d7fabc72858fb0fa6a3b26f4c86b72a22e",
+  "originalReceiptUnchanged": true,
+  "savedRowsAndIDsPreserved": 1092,
+  "trainingRowsPreserved": 904,
+  "seenIDsPrefixPreserved": 1235,
+  "frozenDirectoryFilesPreserved": 13,
+  "parentSnapshotsRemainExact": true,
+  "finalCheckpointHash": "82eb80a4cb5dbb7444ea86de806af3ce2b1962dbe93742bb4b0ae2a16802aa6d"
+}

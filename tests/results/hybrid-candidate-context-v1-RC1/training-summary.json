@@ -1,0 +1,27 @@
+{
+  "rows": 904,
+  "outcomes": {
+    "target": 454,
+    "stop": 443,
+    "expiry": 7
+  },
+  "y1": 454,
+  "fits": {
+    "M0": 1,
+    "M1": 1
+  },
+  "models": {
+    "M0": {
+      "iterations": 4,
+      "gradient": 7.557474611397108e-14,
+      "zeroSDColumns": [],
+      "loss": 0.643929645831464
+    },
+    "M1": {
+      "iterations": 4,
+      "gradient": 1.6032563731477323e-13,
+      "zeroSDColumns": [],
+      "loss": 0.6423769225220038
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "state": "verified",
+  "checkpointHash": "82eb80a4cb5dbb7444ea86de806af3ce2b1962dbe93742bb4b0ae2a16802aa6d",
+  "whole": {
+    "count": 341,
+    "brier0": 0.23129736938684942,
+    "brier1": 0.23154407690037815,
+    "delta": -0.0002467075135285852,
+    "frequency": 0.4633431085043988,
+    "outcomes": {
+      "target": 158,
+      "stop": 183,
+      "expiry": 0
+    },
+    "gaps": 0,
+    "ambiguous": 0,
+    "ambiguityBounds": [
+      -0.0002467075135285852,
+      -0.0002467075135285852
+    ],
+    "targetFirstDelta": -0.0002467075135285852
+  },
+  "sections": [
+    {
+      "count": 109,
+      "brier0": 0.2377716453794297,
+      "brier1": 0.2378979814282877,
+      "delta": -0.00012633604885792872,
+      "frequency": 0.5321100917431193,
+      "outcomes": {
+        "target": 58,
+        "stop": 51,
+        "expiry": 0
+      },
+      "gaps": 0,
+      "ambiguous": 0,
+      "ambiguityBounds": [
+        -0.00012633604885792872,
+        -0.00012633604885792872
+      ],
+      "targetFirstDelta": -0.00012633604885792872
+    },
+    {
+      "count": 112,
+      "brier0": 0.2204956406720949,
+      "brier1": 0.223582765198751,
+      "delta": -0.0030871245266561567,
+      "frequency": 0.42857142857142855,
+      "outcomes": {
+        "target": 48,
+        "stop": 64,
+        "expiry": 0
+      },
+      "gaps": 0,
+      "ambiguous": 0,
+      "ambiguityBounds": [
+        -0.0030871245266561567,
+        -0.0030871245266561567
+      ],
+      "targetFirstDelta": -0.0030871245266561567
+    },
+    {
+      "count": 120,
+      "brier0": 0.23549818216069354,
+      "brier1": 0.2332031712090455,
+      "delta": 0.0022950109516479697,
+      "frequency": 0.43333333333333335,
+      "outcomes": {
+        "target": 52,
+        "stop": 68,
+        "expiry": 0
+      },
+      "gaps": 0,
+      "ambiguous": 0,
+      "ambiguityBounds": [
+        0.0022950109516479697,
+        0.0022950109516479697
+      ],
+      "targetFirstDelta": 0.0022950109516479697
+    }
+  ],
+  "thinned": {
+    "count": 61,
+    "brier0": 0.26774127044381474,
+    "brier1": 0.26634025858208404,
+    "delta": 0.0014010118617306417,
+    "frequency": 0.5081967213114754,
+    "outcomes": {
+      "target": 31,
+      "stop": 30,
+      "expiry": 0
+    },
+    "gaps": 0,
+    "ambiguous": 0,
+    "ambiguityBounds": [
+      0.0014010118617306417,
+      0.0014010118617306417
+    ],
+    "targetFirstDelta": 0.0014010118617306417
+  },
+  "temporal": [
+    {
+      "blockDays": 3,
+      "defined": 10000,
+      "undefinedReplicates": 0,
+      "percentiles": [
+        -0.002962180980579633,
+        0.0019125403776096592
+      ]
+    },
+    {
+      "blockDays": 7,
+      "defined": 10000,
+      "undefinedReplicates": 0,
+      "percentiles": [
+        -0.0035632583566065808,
+        0.0013768086040320084
+      ]
+    }
+  ],
+  "calendarDays": 31,
+  "reliabilityBinsVerified": true,
+  "fitCounts": {
+    "M0": 1,
+    "M1": 1
+  },
+  "preLabelSeal": "eea813060765363d827fd1fd14bf3020aeb91562d9d3a506eee9ce56af8cc737",
+  "fitSeal": "1d2f127858321654f6ed89a273ff0547c5d26c71250574abc02bb1ef0ec91364",
+  "verdict": "screen-negative",
+  "noMarketFitsOutcomesOrForecastsRepeated": true
+}

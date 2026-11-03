@@ -1,0 +1,23 @@
+{
+  "README.md": "c9598b6ccd41ae42bf3e8aca759d37837261737d97c9be453a3411a325e69131",
+  "STATUS.md": "e594a41c3d012bf32e12dc5654d45b79b011c5e91ff86572a12cc99f28aa0f91",
+  "package.json": "e1479f7159c243056f2e9a53572d3b77aee4ece235780238a16157a1abed45df",
+  "research/candidate-context-RC1-verify.cjs": "ab06b10f3521c73a7e693bfa1876a211a4d0b7ebb4ab4008a818e71073eea86d",
+  "research/candidate-context-RC1/HANDOFF.md": "d6e6e8147eeebfe20f23450943722da3e52158f25f5a949e302bf6dc43d04a2f",
+  "research/candidate-context-RC1/README.md": "e9c49d3d5240700239e526b8d43f99b844f1d015a95549a23f0bcafa8c139543",
+  "research/candidate-context-RC1/fit-seal.json": "003979cbf6cddef31b8a885911468c32b32ac9b0bd4cc371a9f07af89a8f063a",
+  "research/candidate-context-RC1/grant.json": "2c78af689a25c00b998841b59f773d836f3a69eab506de1f7784c3ae71358e35",
+  "research/candidate-context-RC1/pre-label-seal.json": "a3022f0ba4ff0b39bdeb2eb56499f2e44b9be916e231c02b614401b59df23322",
+  "research/candidate-context-continuation.cjs": "e2f375164973b2638a70373ad2cfbe832575dba208414e8726d035e1b0050baf",
+  "tests/candidate-context-continuation.cjs": "908b561ed3a85131ab3ec56313674383e7573f603b639151ca784fe6d961be2e",
+  "tests/results/hybrid-candidate-context-v1-RC1/REPORT.md": "8c7dc75fc87a1ff741a59baa59b35c9c462073de630ff5d23d2b3263715483a1",
+  "tests/results/hybrid-candidate-context-v1-RC1/delivery.json": "a77f09381025745f3de4a5f7ed13c193d0550d96d00890bd3d9c31a1e6c70f62",
+  "tests/results/hybrid-candidate-context-v1-RC1/evaluation.json": "de67d2a5f0167e5356f4cdac57b71972a8bd89133f2e4e7539a96be75c2b1969",
+  "tests/results/hybrid-candidate-context-v1-RC1/independent-verification.json": "039790ff4282d65fd281955a1b889e21e532f6c7334a0015600405331d63bba8",
+  "tests/results/hybrid-candidate-context-v1-RC1/parent-verification.json": "4b7ec60f83ab79b087bcdf8b8a9641d6f32fd506bff92cde0973d9a1eb9b5ff3",
+  "tests/results/hybrid-candidate-context-v1-RC1/preservation.json": "019015bc29a7fdcde8dd4cf7939806f38665cfc68ecfc0646e1a091bb2e6ba02",
+  "tests/results/hybrid-candidate-context-v1-RC1/quality.json": "4af1d6a0cf431aed95bfe5bff77ddc05475a2ac4233116503e339004043cd185",
+  "tests/results/hybrid-candidate-context-v1-RC1/resource-ledger.json": "2eddcf43003d6b2c8e362c9b112324cd891722b3676f097799401652c4b942f7",
+  "tests/results/hybrid-candidate-context-v1-RC1/resource-receipt.json": "a473da917009dabc36d639dc0fa80dea6f4b26ecf5cb8615d1cf24ced5e25479",
+  "tests/results/hybrid-candidate-context-v1-RC1/training-summary.json": "22234b9cb9bf839bf86d448f12037c5c554f2188cc438ad3ed3abaf619065601"
+}
