@@ -1,14 +1,20 @@
-# Hybrid Terminal 0.4.21 RC
+# Hybrid Terminal 0.4.22 RC
 
 **New chat or reviewer:** start with [START_HERE.md](START_HERE.md), then the latest current section and task board in [STATUS.md](STATUS.md). Resume existing work; do not create a duplicate implementation session.
 
 **CI / handoff:** operational-document-only changes receive scope regression checks; all other/uncertain changes and manual dispatch receive full QA. See current [STATUS.md](STATUS.md); [STATUS_HISTORY.md](STATUS_HISTORY.md) retains earlier checkpoints.
 
-**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.21 exposes the existing candle-close estimate beside the chart candle-state badge and shares one read-only projection with the tiny axis text. Active SHA-256 `c93e8776f3f6e2ec594c861a755f414232b24b4b13f6994bc21cead5e430c957`. Existing strategy, feeds, prices, plan, journal and frozen research remain unchanged. [Delivery evidence](tests/results/countdown-0.4.21/REPORT.md).
+**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.22 adds a conditional binary break-even requirement inside existing confirmed-plan cost details. Active SHA-256 `e037089b4044aff4fee18b696646126c53f024c155076daae3be96240d13dc16`. This is a requirement under assumptions, never estimated actual success probability or an eligibility filter. Existing strategy, feeds, prices, plan, journal and frozen research remain unchanged. [Delivery evidence](tests/results/binary-breakeven-0.4.22/REPORT.md).
 
 Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Public Binance REST/WebSocket access for the selected Spot or USDⓈ-M perpetual product is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
 
 Chart/header/inspector text is English; the analysis panel is Hebrew. Help offers Hebrew and English, with Hebrew on a fresh installation. On narrow screens the chart has its own usable height and the main area scrolls to the analysis panel.
+
+## Conditional binary break-even —0.4.22
+
+Expand **עלויות והנחות** in **תוכנית מאושרת · תכנון בלבד**. The new **שיעור הצלחה נדרש לאיזון · תרחיש בינארי בלבד** uses the existing fee/slippage/gap inputs: G is net TP2 payoff, L is the corresponding stop-loss magnitude, both in original risk units. For finite positive G/L, the required fraction is L/(G+L); expected payoff is zero there and positive expectation requires a strictly higher fraction. A nonzero gap shows a separate stressed requirement. Zero target gain can break even only with100% target outcomes; negative gain cannot break even. Invalid inputs/WAIT show unavailable, with no substitute plan.
+
+Open **הנחות ונוסחת האיזון** for the TP2-or-stop-only simplification. Expiry/partial exits are excluded; funding and other unmodeled effects are excluded, not assumed zero. Gap stress is a hypothetical loss, not a distribution of gap events. No measured probability, forecast, recommendation or strategy change. Rounded percentages carry ≈; deliberate hover titles retain the full numeric G/L/fraction. [Synthetic desktop/320px checks and bilingual Help](tests/results/binary-breakeven-0.4.22/REPORT.md).
 
 ## Candle-close countdown —0.4.21
 

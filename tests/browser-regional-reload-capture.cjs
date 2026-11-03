@@ -41,7 +41,7 @@ const hash=()=>crypto.createHash('sha256').update(fs.readFileSync(source)).diges
    assert.equal(capture.preApp.sig.error.name,'ReferenceError');
    assert.equal(evidence.afterReload.now.getItem.value,bytes);
    assert.equal(await p.evaluate(()=>localStorage.getItem('unrelated')),'capture-fixture-retain');
-   assert.equal(evidence.afterReload.now.version.value,'0.4.21');
+   assert.equal(evidence.afterReload.now.version.value,'0.4.22');
    if(fault){
     assert.strictEqual(caught,original);assert.equal(caught.name,'TimeoutError');assert.match(caught.message,/30000ms/);
     assert.equal(evidence.result,'failed');assert.equal(evidence.originalError.message,original.message);

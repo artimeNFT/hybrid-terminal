@@ -1,0 +1,45 @@
+{
+  "version": "0.4.22 RC",
+  "sourceSha256": "e037089b4044aff4fee18b696646126c53f024c155076daae3be96240d13dc16",
+  "startingCheckpoint": "4e02f70da3072ce98c9320989eb3643e784159c5",
+  "baseline": {
+    "file": "baseline/hybrid-terminal.0.4.21.html",
+    "sha256": "c93e8776f3f6e2ec594c861a755f414232b24b4b13f6994bc21cead5e430c957"
+  },
+  "preexistingNamedFunctionsChanged": [
+    "updatePlanningCosts"
+  ],
+  "planningCostScenario": "byte-exact function body",
+  "formula": "G=netTP2R; L=-ordinaryStopR or -gapStopR; p=L/(G+L)",
+  "constraints": "available scenario; finite G,L,sum,p; G>0,L>0; no clamping; G=0/negative special states",
+  "display": "approximately 7 significant percentage digits; unrounded G/L/fraction in result title",
+  "checks": {
+    "focusedGroups": 8,
+    "mockedBrowserContexts": 6,
+    "widths": [
+      1440,
+      320
+    ],
+    "protectedTrackedIdentities": 138,
+    "priorProtectedIdentities": 140,
+    "localDeterministic": "all required groups passed across initial command and interrupted-group resumption; final type guard focused-revalidated",
+    "existingBrowserSuites": 24,
+    "totalBrowserSuitesLocallyValidated": 25
+  },
+  "screenshots": {
+    "desktop.png": "d353a3fe087a97f2e728175014577d6ce2cc1ea6625ff0b3cf6c49686ae2f9cb",
+    "narrow.png": "de97a31758d045597186583d1b8bba9ad6efc66663325e46ccaa2a7f00d5833d",
+    "zero-gain.png": "911f47816342aeafec551049a33a721999c09d518213f33561687ef891d346c0",
+    "negative-gain.png": "1513a102ec188ddb567cb54176fd74b91471fde28d1ecd6c920d50782974f846",
+    "unavailable.png": "b90632803c1a91edf7ba868ffa6a3b68a90f44f9b1ac0cafeec6f49969e4c4af",
+    "invalid-input.png": "6f10590bc430303ba438374a7180a703d630cb00f8c244939157055c96cc9019",
+    "help-he.png": "24eba05cb5aa9889e0e1133cc5ee7a25b977ef551bb1e2c22c47c500597b44cd",
+    "help-en.png": "dadac1298c1c85dc2d8e622026c2290395bb56d1c7e27133ca1bb7aab31cbb35"
+  },
+  "limitations": [
+    "not an empirical probability, eligibility filter or full execution model",
+    "no expiry/partial exits; funding and other effects excluded, not zero",
+    "gap is a hypothetical loss scenario, not an event distribution",
+    "no live/public/physical/personal-profile acceptance"
+  ]
+}

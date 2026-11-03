@@ -1,0 +1,66 @@
+{
+  "version": "0.4.22 RC",
+  "sourceSha256": "e037089b4044aff4fee18b696646126c53f024c155076daae3be96240d13dc16",
+  "checks": [
+    {
+      "width": 1440,
+      "side": "LONG",
+      "ordinaryAndGapIndependentArithmetic": true,
+      "zeroNegativeAndInvalid": true,
+      "confirmedAnchorAndProvisionalIsolation": true,
+      "stableInputsAndFocus": true,
+      "sourceClearAndStaleCallback": true,
+      "marketTimeframeTransitions": true,
+      "unchangedJournalAndNoNewRequests": true,
+      "bilingualHelp": true
+    },
+    {
+      "width": 1440,
+      "side": "SHORT",
+      "ordinaryAndGapIndependentArithmetic": true,
+      "zeroNegativeAndInvalid": true,
+      "confirmedAnchorAndProvisionalIsolation": true,
+      "stableInputsAndFocus": true,
+      "sourceClearAndStaleCallback": true,
+      "marketTimeframeTransitions": true,
+      "unchangedJournalAndNoNewRequests": true,
+      "bilingualHelp": true
+    },
+    {
+      "width": 1440,
+      "side": "WAIT",
+      "noSubstitutePlan": true
+    },
+    {
+      "width": 320,
+      "side": "LONG",
+      "ordinaryAndGapIndependentArithmetic": true,
+      "zeroNegativeAndInvalid": true,
+      "confirmedAnchorAndProvisionalIsolation": true,
+      "stableInputsAndFocus": true,
+      "sourceClearAndStaleCallback": true,
+      "marketTimeframeTransitions": true,
+      "unchangedJournalAndNoNewRequests": true,
+      "bilingualHelp": true
+    },
+    {
+      "width": 320,
+      "side": "SHORT",
+      "ordinaryAndGapIndependentArithmetic": true,
+      "zeroNegativeAndInvalid": true,
+      "confirmedAnchorAndProvisionalIsolation": true,
+      "stableInputsAndFocus": true,
+      "sourceClearAndStaleCallback": true,
+      "marketTimeframeTransitions": true,
+      "unchangedJournalAndNoNewRequests": true,
+      "bilingualHelp": true
+    },
+    {
+      "width": 320,
+      "side": "WAIT",
+      "noSubstitutePlan": true
+    }
+  ],
+  "errors": [],
+  "scope": "Isolated Chromium/file URL, all REST/WS synthetic; literal geometry is a display fixture, not a real decision or outcome. No public/live/physical or personal-profile acceptance."
+}
