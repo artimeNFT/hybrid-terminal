@@ -1,0 +1,82 @@
+{
+  "version": "0.4.25 RC / isolated modeled-risk-budget candidate",
+  "sourceSha256": "240b2f0ba94226e20dd9dafbcd004fdb7b844a3f0e13529e0d045a4c62f931bd",
+  "checks": [
+    {
+      "width": 1440,
+      "side": "LONG",
+      "feeOnly": {
+        "quantity": 9.09090909090909,
+        "nominalLoss": 11
+      },
+      "gapStopBasis": 99,
+      "budgetConserved": true,
+      "zeroEqualsNominal": true,
+      "provisionalAnchorAndJournalPreserved": true,
+      "partialInputsClearImmediately": true,
+      "stableControlsFocusAndExpanders": true,
+      "sourceAndProductIsolation": true,
+      "refreshHasNoStorageOrNetworkWrites": true
+    },
+    {
+      "width": 1440,
+      "side": "SHORT",
+      "feeOnly": {
+        "quantity": 9.09090909090909,
+        "nominalLoss": 11
+      },
+      "gapStopBasis": 101,
+      "budgetConserved": true,
+      "zeroEqualsNominal": true,
+      "provisionalAnchorAndJournalPreserved": true,
+      "partialInputsClearImmediately": true,
+      "stableControlsFocusAndExpanders": true,
+      "sourceAndProductIsolation": true,
+      "refreshHasNoStorageOrNetworkWrites": true
+    },
+    {
+      "width": 1440,
+      "side": "WAIT",
+      "noSubstitutePlan": true
+    },
+    {
+      "width": 320,
+      "side": "LONG",
+      "feeOnly": {
+        "quantity": 9.09090909090909,
+        "nominalLoss": 11
+      },
+      "gapStopBasis": 99,
+      "budgetConserved": true,
+      "zeroEqualsNominal": true,
+      "provisionalAnchorAndJournalPreserved": true,
+      "partialInputsClearImmediately": true,
+      "stableControlsFocusAndExpanders": true,
+      "sourceAndProductIsolation": true,
+      "refreshHasNoStorageOrNetworkWrites": true
+    },
+    {
+      "width": 320,
+      "side": "SHORT",
+      "feeOnly": {
+        "quantity": 9.09090909090909,
+        "nominalLoss": 11
+      },
+      "gapStopBasis": 101,
+      "budgetConserved": true,
+      "zeroEqualsNominal": true,
+      "provisionalAnchorAndJournalPreserved": true,
+      "partialInputsClearImmediately": true,
+      "stableControlsFocusAndExpanders": true,
+      "sourceAndProductIsolation": true,
+      "refreshHasNoStorageOrNetworkWrites": true
+    },
+    {
+      "width": 320,
+      "side": "WAIT",
+      "noSubstitutePlan": true
+    }
+  ],
+  "errors": [],
+  "scope": "Actual isolated native Chromium/file URL, synthetic REST/WS and presentation literals; no public feed, user profile, retention diagnosis, live observation or research run"
+}

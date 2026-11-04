@@ -1,0 +1,46 @@
+{
+  "baseCommit": "c12d02b39982514c190cf4220137093845cec8da",
+  "candidateBranch": "candidate/modeled-risk-budget",
+  "candidateSourceSha256": "240b2f0ba94226e20dd9dafbcd004fdb7b844a3f0e13529e0d045a4c62f931bd",
+  "authoritative025Sha256": "f81375f01a240873017e9ba4efccc7f6deff99d8b7b0c8dfdb6516da9bf7ea57",
+  "unchangedProtectedFiles": 838,
+  "changedProtectedFiles": [],
+  "applicationVersionMetadata": "0.4.25 retained intentionally in isolated candidate; title/source manifest/hash distinguish it; not a released unchanged root",
+  "focusedModelGroups": {
+    "passed": 6,
+    "failed": 0
+  },
+  "affectedExistingGroups": {
+    "passed": 31,
+    "failed": 0
+  },
+  "requiredDeterministic": {
+    "command": "npm test",
+    "exitCode": 0,
+    "settledRuns": 1
+  },
+  "requiredBrowser": {
+    "command": "npm run test:browser",
+    "exitCode": 1,
+    "wholeRuns": 1,
+    "completedExistingScripts": 27,
+    "failure": "New browser script lacked documented existing local libnspr4 library fallback; launch failed before assertions"
+  },
+  "targetedBrowserAfterLaunchCorrection": {
+    "command": "node --require ./scripts/mock-browser-hooks.cjs tests/browser-modeled-risk-budget.cjs",
+    "exitCode": 0,
+    "externalLdLibraryPathSupplied": false,
+    "scenarios": 6,
+    "widths": [
+      1440,
+      320
+    ],
+    "repeatedSuccessfulWholeSuites": 0
+  },
+  "publicNetworkGuard": {
+    "unexpected": [],
+    "scope": "All public HTTP/WebSocket requests must be fulfilled by the existing synthetic page routes"
+  },
+  "candidateCI": "One full required exact-head run after draft PR creation; actual result read back after publication, never inferred from local checks",
+  "remaining": "Unmerged candidate only. Historical regional/fee reload causes UNKNOWN, no diagnosis restart. No account/execution/funding/physical/live acceptance."
+}
