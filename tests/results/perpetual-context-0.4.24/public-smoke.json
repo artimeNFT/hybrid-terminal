@@ -1,0 +1,155 @@
+{
+  "kind": "one bounded native-browser public BTCUSDT USD-M5m manual-context smoke",
+  "sourceSha256": "4dc829b480fd81080b50549a3d43b5e335c822958d7331c44af0721c854cfa35",
+  "startedAt": "2026-11-04T01:25:21.481Z",
+  "bounds": {
+    "seconds": 75,
+    "publicREST": 24,
+    "webSockets": 1,
+    "contextRefreshes": 1,
+    "contextBatchRequests": 7
+  },
+  "result": "observed-all-fields",
+  "elapsedSeconds": 5.109563400999999,
+  "requestCount": 11,
+  "webSocketCount": 1,
+  "refreshCount": 1,
+  "pageErrors": [],
+  "console": [],
+  "context": {
+    "product": "usdm",
+    "symbol": "BTCUSDT",
+    "timeframe": "5m",
+    "epoch": 1
+  },
+  "contextRequests": 7,
+  "serverCutoff": 1793755523556,
+  "fields": {
+    "mark": {
+      "product": "usdm",
+      "symbol": "BTCUSDT",
+      "unit": "USDT",
+      "sourceTime": 1793755523000,
+      "receivedAt": 1793755524272,
+      "endpoint": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=BTCUSDT",
+      "state": "captured",
+      "value": 77093.84481159
+    },
+    "index": {
+      "product": "usdm",
+      "symbol": "BTCUSDT",
+      "unit": "USDT",
+      "sourceTime": 1793755523000,
+      "receivedAt": 1793755524272,
+      "endpoint": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=BTCUSDT",
+      "state": "captured",
+      "value": 77107.76282609
+    },
+    "gap": {
+      "product": "usdm",
+      "symbol": "BTCUSDT",
+      "unit": "bps",
+      "sourceTime": 1793755523000,
+      "receivedAt": 1793755524272,
+      "endpoint": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=BTCUSDT",
+      "state": "captured",
+      "value": -1.8050082105725007
+    },
+    "nextFunding": {
+      "product": "usdm",
+      "symbol": "BTCUSDT",
+      "unit": "UTC scheduled time",
+      "sourceTime": 1793755523000,
+      "receivedAt": 1793755524272,
+      "endpoint": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=BTCUSDT",
+      "state": "captured",
+      "value": 1793779200000,
+      "scheduledTime": 1793779200000
+    },
+    "funding": {
+      "product": "usdm",
+      "symbol": "BTCUSDT",
+      "unit": "% per settlement event",
+      "sourceTime": 1793750400000,
+      "receivedAt": 1793755524276,
+      "endpoint": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&limit=5&endTime=1793755523556",
+      "state": "captured",
+      "value": 0.01,
+      "events": [
+        {
+          "rate": 0.0001,
+          "percent": 0.01,
+          "rateType": "Regular",
+          "markPrice": "77441.70000000"
+        }
+      ],
+      "reason": ""
+    },
+    "oi": {
+      "product": "usdm",
+      "symbol": "BTCUSDT",
+      "unit": "BTC",
+      "sourceTime": 1793755520975,
+      "receivedAt": 1793755524280,
+      "endpoint": "https://fapi.binance.com/fapi/v1/openInterest?symbol=BTCUSDT",
+      "state": "captured",
+      "value": 99185.016,
+      "unitBasis": "USD-M underlying-asset contract quantity; current exchangeInfo baseAsset",
+      "metadataReceivedAt": 1793755524842
+    },
+    "oiChange": {
+      "product": "usdm",
+      "symbol": "BTCUSDT",
+      "unit": "% \u00b7 BTC quantity",
+      "sourceTime": 1793755200000,
+      "receivedAt": 1793755524275,
+      "endpoint": "https://fapi.binance.com/futures/data/openInterestHist?symbol=BTCUSDT&period=5m&limit=2&endTime=1793755500000",
+      "state": "captured",
+      "value": -0.08351006465299848,
+      "window": {
+        "from": 1793754900000,
+        "to": 1793755200000,
+        "periodMs": 300000,
+        "timestampRole": "period end",
+        "qualifiedAt": 1793755523556
+      },
+      "quantities": {
+        "from": 99366.466,
+        "to": 99283.485,
+        "unit": "BTC"
+      }
+    },
+    "bid": {
+      "product": "usdm",
+      "symbol": "BTCUSDT",
+      "unit": "USDT",
+      "sourceTime": 1793755523811,
+      "receivedAt": 1793755524260,
+      "endpoint": "https://fapi.binance.com/fapi/v1/ticker/bookTicker?symbol=BTCUSDT",
+      "state": "captured",
+      "value": 77096.8
+    },
+    "ask": {
+      "product": "usdm",
+      "symbol": "BTCUSDT",
+      "unit": "USDT",
+      "sourceTime": 1793755523811,
+      "receivedAt": 1793755524260,
+      "endpoint": "https://fapi.binance.com/fapi/v1/ticker/bookTicker?symbol=BTCUSDT",
+      "state": "captured",
+      "value": 77096.9
+    },
+    "spread": {
+      "product": "usdm",
+      "symbol": "BTCUSDT",
+      "unit": "bps",
+      "sourceTime": 1793755523811,
+      "receivedAt": 1793755524260,
+      "endpoint": "https://fapi.binance.com/fapi/v1/ticker/bookTicker?symbol=BTCUSDT",
+      "state": "captured",
+      "value": 0.012970698542322915
+    }
+  },
+  "scope": "New isolated context/file URL; public market data only. No personal profile, journal export, account, historical study or live-close/soak acceptance.",
+  "rawEvidenceLocation": ".qa-results/perpetual-context-0.4.24/public-smoke/receipt.json"
+}

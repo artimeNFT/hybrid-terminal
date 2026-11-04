@@ -1,14 +1,22 @@
-# Hybrid Terminal 0.4.23 RC
+# Hybrid Terminal 0.4.24 RC
 
 **New chat or reviewer:** start with [START_HERE.md](START_HERE.md), then the latest current section and task board in [STATUS.md](STATUS.md). Resume existing work; do not create a duplicate implementation session.
 
 **CI / handoff:** operational-document-only changes receive scope regression checks; all other/uncertain changes and manual dispatch receive full QA. See current [STATUS.md](STATUS.md); [STATUS_HISTORY.md](STATUS_HISTORY.md) retains earlier checkpoints.
 
-**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.23 adds optional **Display → Zone view → Source-derived closed**, with **Local** unchanged as the session default. Active SHA-256 `51b77ffe1ef79457d9bc3d1aa99c917e3e3d8b6f839ae32010dac5b518eb78c3`. This is supplied-source closed-bar chart context, independent of Local plan targets and all strategy/journal calculations. [Delivery evidence](tests/results/source-zones-0.4.23/REPORT.md).
+**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.24 adds the optional, collapsed Hebrew **הקשר חוזים · כעת** block. Select USDⓈ-M Perpetual and press **רענון** for a captured current-market context; Spot makes no context requests. Active SHA-256 `4dc829b480fd81080b50549a3d43b5e335c822958d7331c44af0721c854cfa35`. These independent observations do not enter confirmed decisions or Local/source-derived zones. [Delivery evidence](tests/results/perpetual-context-0.4.24/REPORT.md).
 
 Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Public Binance REST/WebSocket access for the selected Spot or USDⓈ-M perpetual product is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
 
 Chart/header/inspector text is English; the analysis panel is Hebrew. Help offers Hebrew and English, with Hebrew on a fresh installation. On narrow screens the chart has its own usable height and the main area scrolls to the analysis panel.
+
+## Manual perpetual context —0.4.24
+
+1. Choose **Market → USDⓈ-M Perpetual** and a supported BTC/ETH/SOL symbol. Expand **הקשר חוזים · כעת** below the confirmed planning workspace. It begins collapsed; opening it fetches nothing.
+2. Press **רענון** once. Each capture uses at most seven public requests, with no pagination, automatic retries or background polling. Refresh is disabled while a batch is running and in Spot. Changing product/symbol/timeframe or reloading the feed clears the capture; request generation guards reject old responses.
+3. Read Mark/Index and their computed gap, settled funding from history, separately scheduled next funding, native underlying-asset OI, qualified historical5m OI change, and best bid/ask/spread. Source times and device receipt times are separate for each response group; exact per-field provenance/raw references/formulas are expandable. UNKNOWN is never zero. The history5m period is independent of chart timeframe.
+
+The block is session memory only, is not added to existing journal/research exports, and has no preference store. Prices remain separate from trade-candle closes. No synchronized/LIVE guarantee, official premium-index identity for the computed gap, fixed funding cadence, APR/funding P&L, execution guarantee, probability, recommendation or liquidation estimate is implied. Existing strategy, plans, costs/sizing, journal, exports, Source-derived closed zones and frozen research remain unchanged. The new internal0.4.23 archive is byte-exact; existing historical QA contexts stay explicit.
 
 ## Optional source-derived CLOSED zones —0.4.23
 
@@ -156,7 +164,7 @@ npm run qa:browser:install
 npm run test:browser
 ```
 
-`npm test` runs the current versioned source checks, deterministic app/extensions, frozen research/audit/contract/preparation fixtures and presentation checks. Only historical fixtures opt into their explicit archived source context (0.4.3, pilot0.4.17, closed candidate-study0.4.22); actual app and browser tests load the current root. `npm run test:browser` runs26 mocked Chromium scripts, with unmocked external requests rejected. Current script registration in package.json is authoritative. Logs, screenshots, traces and manifests are ignored under `.qa-results/`. Neither required QA group uses acquired datasets, personal profiles or live market access. The npm runner keeps generated receipts out of historical tracked evidence.
+`npm test` runs the current versioned source checks, deterministic app/extensions, frozen research/audit/contract/preparation fixtures and presentation checks. Only historical fixtures opt into their explicit archived source context (0.4.3, pilot0.4.17, closed candidate-study0.4.22); actual app and browser tests load the current root. `npm run test:browser` runs27 mocked Chromium scripts, with unmocked external requests rejected. Current script registration in package.json is authoritative. Logs, screenshots, traces and manifests are ignored under `.qa-results/`. Neither required QA group uses acquired datasets, personal profiles or live market access. The npm runner keeps generated receipts out of historical tracked evidence.
 
 On a minimal **Ubuntu 24.04 x64 WSL host without passwordless sudo**, use `npm run qa:browser:local` instead of `qa:browser:install`. It installs the pinned Chromium and downloads/extracts the three missing Ubuntu NSS/NSPR/ALSA packages under ignored `.tools/browser-libs`; the runner discovers these local libraries. Other operating systems should use Playwright's normal dependency setup. This fallback requires Ubuntu apt metadata/access but no system writes. No old `/tmp/hybrid-qa-tools` package/library path is used by the normal QA runner.
 

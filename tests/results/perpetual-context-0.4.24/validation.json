@@ -1,0 +1,20 @@
+{
+  "version": "0.4.24 RC",
+  "htmlSha256": "4dc829b480fd81080b50549a3d43b5e335c822958d7331c44af0721c854cfa35",
+  "archive0.4.23Sha256": "51b77ffe1ef79457d9bc3d1aa99c917e3e3d8b6f839ae32010dac5b518eb78c3",
+  "deterministic": "npm test PASS",
+  "mockedBrowser": "npm run test:browser PASS;27 scripts",
+  "focusedGroups": 9,
+  "sourceBoundPublicSmoke": "one successful5.109563401s attempt;11 total REST/7 context requests/1 existing WS/1 refresh;all10 fields captured",
+  "protectedTrackedCount": 810,
+  "priorProtectedCount": 140,
+  "changedProtectedFiles": [],
+  "preservation": "All original application function bodies except draw unchanged; legacy calculations/plans/journal/export numeric meanings and default raster match0.4.23",
+  "oldReloadFinding": "Original0.4.23 failure remains UNKNOWN/parked. Its unchanged assertions passed during required local QA; no diagnosis repeated.",
+  "identities": {
+    "tests/perpetual-context.cjs": "ee275e9438479fe801dab28b00f314d6243c3ef1ad9b6d75921f5c95f8e07acf",
+    "tests/perpetual-context-fixtures.cjs": "13c496e892a6b43f2b99b379fe9ad8c84edc5779921b1aeda89025f3adef746a",
+    "tests/browser-perpetual-context.cjs": "d39efbe0b9b837c45c679f49781d87979fddebf26a68554ee8ce98457c09d097"
+  },
+  "publication": "Full exact-published CI must be read back after push; no inference from local success"
+}

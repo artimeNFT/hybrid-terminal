@@ -15,7 +15,7 @@ const {replacementFixture}=require('./regression.cjs');
  element('hq').onclick();assert.equal(element('hp').hidden,false);element('helplangen').onclick();assert.equal(element('hp').hidden,false);element('helpclose').onclick();assert.equal(element('hp').hidden,true);
  drawCalls.length=0;app.selectors['[data-l]'].find(e=>e.dataset.l==='m').onclick();await app.flush();
  assert.ok(!drawCalls.some(c=>c.method==='fillText'&&/^[MW]×?$/.test(c.args[0])));
- app.handlers.click({target:element('cp')});assert.match(app.copied,/0\.4\.23 report/);assert.match(app.copied,/Confirmed candle close:/);
+ app.handlers.click({target:element('cp')});assert.match(app.copied,/0\.4\.24 report/);assert.match(app.copied,/Confirmed candle close:/);
  console.log('PASS: application startup, closed-candle panel, REST/WebSocket flow, canvas draw calls, M/W confirmation/supersession, help, layer toggle and report copy.');
  console.log('Scope: DOM, canvas and network are test doubles; not full browser QA.');
 })().catch(error=>{console.error(error);process.exitCode=1});

@@ -9,9 +9,9 @@
   "scripts": {
     "check:source": "node scripts/check-source.cjs",
     "test": "npm run check:source && npm run test:app && npm run test:research && npm run test:audit && npm run test:contract && npm run test:preparation && npm run test:presentation",
-    "test:app": "node scripts/run-qa.cjs app && node --test tests/product-context.cjs && node --test tests/price-card.cjs && node --test tests/plan-workspace.cjs && node --test tests/countdown.cjs && node --test tests/binary-break-even.cjs && node --test tests/source-zones.cjs",
+    "test:app": "node scripts/run-qa.cjs app && node --test tests/product-context.cjs && node --test tests/price-card.cjs && node --test tests/plan-workspace.cjs && node --test tests/countdown.cjs && node --test tests/binary-break-even.cjs && node --test tests/source-zones.cjs && node --test tests/perpetual-context.cjs",
     "test:research": "node scripts/run-qa.cjs research && node --test tests/derivatives-intake.cjs",
-    "test:browser": "node scripts/run-qa.cjs browser && node --require ./scripts/mock-browser-hooks.cjs tests/browser-product-context.cjs && node --require ./scripts/mock-browser-hooks.cjs tests/browser-price-card.cjs && node --require ./scripts/mock-browser-hooks.cjs tests/browser-plan-workspace.cjs && node --require ./scripts/mock-browser-hooks.cjs tests/browser-countdown.cjs && node --require ./scripts/mock-browser-hooks.cjs tests/browser-binary-break-even.cjs && node --require ./scripts/mock-browser-hooks.cjs tests/browser-source-zones.cjs",
+    "test:browser": "node scripts/run-qa.cjs browser && node --require ./scripts/mock-browser-hooks.cjs tests/browser-product-context.cjs && node --require ./scripts/mock-browser-hooks.cjs tests/browser-price-card.cjs && node --require ./scripts/mock-browser-hooks.cjs tests/browser-plan-workspace.cjs && node --require ./scripts/mock-browser-hooks.cjs tests/browser-countdown.cjs && node --require ./scripts/mock-browser-hooks.cjs tests/browser-binary-break-even.cjs && node --require ./scripts/mock-browser-hooks.cjs tests/browser-source-zones.cjs && node --require ./scripts/mock-browser-hooks.cjs tests/browser-perpetual-context.cjs",
     "qa:browser:install": "playwright install --with-deps chromium",
     "qa:browser:local": "node scripts/install-local-browser-deps.cjs",
     "test:audit": "node scripts/run-qa.cjs audit",
