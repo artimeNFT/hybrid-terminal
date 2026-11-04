@@ -1,0 +1,66 @@
+{
+  "state": "INCOMPLETE-OUTPUT-ERROR",
+  "verified": true,
+  "verifiedMeaning": "Failed attempt identities, exact gates, resource bounds, preserved prior sources and absent completion artifacts verified; not a successful preparation",
+  "protocolHash": "e6a19f176e4a9fb1253e397cb24ff5b6fdcea0192b09be0d1f9c287eb589e564",
+  "sourceSealPayloadHash": "f65f54bcd41eb9f54da7996b75b7fbfdccd86fd12df04346a3d0295ea7eda8a9",
+  "files": {
+    "admission.json": "133d9e0e0598b865e32d732a4fa2f3d3fc0245fed2cca6657b9b32adeec7bb07",
+    "cutpoints-seal.json": "23802a3513062b895466e81b2d5f5088375d919af7688fad6ae2d2898fd7f261",
+    "failure.json": "b00bd6159a320cbe8a42e2908658c23c1b9eae846996f9bfa860e47725b46848",
+    "input-seal.json": "3df4f440a24bb33a4375fc26a36f1087cd6c57db9c1780f18dd287e9a852a495",
+    "parity.json": "bb1a6e13e22a63a75931d14258af3b18baa04beaaaf488b48a04991b60385443",
+    "resource-receipt.json": "7cc8efbf81b6946fd4cf27cb2bd3de58e819f8d8b2c6a21e8047eb6a957bd727",
+    "source-seal.json": "8cdde4d997df755934c05753d7dd54f93c372544691ab6c321f50e3770cf2400",
+    "worker.log": "4fde5fdce8119c013e3656cfa3c58cc9dfdb18b0689daa1a2dafa412a7916965"
+  },
+  "protectedTrackedIdentities": 977,
+  "preservedOriginalV1Files": 6,
+  "sourceIdentitiesExact": true,
+  "syntheticGroups": 6,
+  "syntheticGatePassed": true,
+  "retainedOracleIndices": [
+    3999,
+    9236,
+    14473,
+    19711,
+    24948,
+    30186,
+    35423
+  ],
+  "retainedOracleExact": true,
+  "resourceAdmissionPassed": true,
+  "observedElapsedMs": 48081.52012,
+  "absenceVerified": [
+    "episodes.json",
+    "weighted.json",
+    "unmatched.json",
+    "result.json"
+  ],
+  "diagnosedInterface": {
+    "caller": "research/perp-support-v2/worker.cjs:FIELDS",
+    "called": "F.tally",
+    "exportedByFrozenDesign": false
+  },
+  "completeSupportCounts": null,
+  "retention": null,
+  "balance": null,
+  "ess": null,
+  "days": null,
+  "overlap": null,
+  "designGates": "NOT-EVALUATED / no persisted verdict",
+  "rerunOrResume": false,
+  "outcomesComputed": false,
+  "sourceIntegrityCheck": {
+    "command": "npm run check:source",
+    "passed": true,
+    "logSha256": "e9a473c683f49202b68f989ceb00061badbfa53e00be7e6fe78bbcbae1367148"
+  },
+  "sizingPr1": {
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "head": "6c66e608bae724d345971b98ed9152bc81d5b54c",
+    "source": "actual GitHub API readback"
+  }
+}

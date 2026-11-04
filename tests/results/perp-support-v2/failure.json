@@ -1,0 +1,1 @@
+{"message":"F.tally is not a function","outcomesComputed":false,"stack":"TypeError: F.tally is not a function\n    at FIELDS (/mnt/c/users/shlom/desktop/the hybrid-terminal/research/perp-support-v2/worker.cjs:34:34)\n    at execute (/mnt/c/users/shlom/desktop/the hybrid-terminal/research/perp-support-v2/worker.cjs:31:591)","state":"INCOMPLETE"}
