@@ -16,7 +16,7 @@
     "qa:browser:local": "node scripts/install-local-browser-deps.cjs",
     "test:audit": "node scripts/run-qa.cjs audit",
     "test:contract": "node scripts/run-qa.cjs contract",
-    "test:preparation": "node --require ./research/source-context/preload.cjs --test tests/preparation.cjs && node --require ./research/source-context/pilot-0.4.17.cjs --test tests/policy-pilot.cjs && node --test tests/derivatives-pilot.cjs && node --test tests/aggression-increment.cjs && node --require ./research/source-context/candidate-0.4.22.cjs --test tests/candidate-context.cjs && node --require ./research/source-context/candidate-0.4.22.cjs --test tests/candidate-context-continuation.cjs",
+    "test:preparation": "node --require ./research/source-context/preload.cjs --test tests/preparation.cjs && node --require ./research/source-context/pilot-0.4.17.cjs --test tests/policy-pilot.cjs && node --test tests/derivatives-pilot.cjs && node --test tests/aggression-increment.cjs && node --require ./research/source-context/candidate-0.4.22.cjs --test tests/candidate-context.cjs && node --require ./research/source-context/candidate-0.4.22.cjs --test tests/candidate-context-continuation.cjs && node --test tests/perp-support.cjs",
     "test:presentation": "node scripts/run-qa.cjs presentation"
   },
   "devDependencies": {

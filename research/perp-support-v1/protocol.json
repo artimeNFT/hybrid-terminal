@@ -1,0 +1,152 @@
+{
+  "study": "perp-local-support-v1",
+  "version": 1,
+  "scope": "Outcome-blind support preparation only; no outcomes, returns, fits or inference",
+  "specificationCommit": "705e7657a58c898928529883b1eab0775ebac188",
+  "data": {
+    "q3File": "research/datasets/binance-usdm-btcusdt-5m-2026-q3-v1/trade.json",
+    "octoberFile": "research/datasets/hybrid-candidate-context-v1-october/trade.json",
+    "q3Hash": "84a4396bd3534859f663c2b5d08ab2cc1221749eb461cd54d593c3ddf7669397",
+    "q3FileSha256": "d3fe4e7db46ceccc6b17f35298577fc1072c1298602cf22c535ba0b7ec48bbca",
+    "octoberHash": "aa96d6649a19effcaec2eb9a20871927a994c7b51a531b57329c6c3e8c75532c",
+    "octoberFileSha256": "470ca1240d970d94e5271e6466781644ab5f418ab4d5c4f3b16e5f4eec129e06",
+    "joinedRawRowsHash": "982412ebcf98b08e0278c625e3a3684e9dbdefba707a94102506b681a614cd71",
+    "rows": 35424,
+    "origin": 1782864000000,
+    "endExclusive": 1793491200000,
+    "step": 300000,
+    "series": "BINANCE USD-M BTCUSDT linear USDT perpetual trade OHLCV only"
+  },
+  "calculation": {
+    "source": "baseline/hybrid-terminal.0.4.3.html",
+    "sha256": "fa349f556dea8eb1c7c17a6aa10b8537549f9d74946a01f8494a124e852563e9",
+    "state": "full-past-prefix-recompute",
+    "firstDecisionIndex": 3999,
+    "maximumBars": 35424,
+    "qualification": "reuse unchanged research/preparation/features.cjs sourceArm/eligibility/atrPercentile/calendar; no assessSnapshot score/day/RSI gate",
+    "volumeMemo": "pure volumeReference by immutable fixed-origin index; no indicator/parser serialized or rolling state",
+    "selection": "all qualified zones; one GLOBAL first valid per zone/side before coordinate tail exclusions; no sigAt/backtest invocation"
+  },
+  "population": {
+    "V": "mutually exclusive cls2 with qualified reference and positive range",
+    "C": "cls0 with qualified reference and positive range",
+    "excluded": "cls1, unqualified/zero-reference/invalid, zero-range",
+    "polarity": "Local C>=O (doji up); SHORT up-zone H<decision close, LONG down-zone L>decision close",
+    "ageInclusive": [
+      1,
+      300
+    ],
+    "nearEdgeMaxATR": 6,
+    "midpoint": "original (H+L)/2, untouched after source through decision inclusive; equality is a touch",
+    "reserve": 120,
+    "blocks": "[3999+floor(j*(N-3999)/3),3999+floor((j+1)*(N-3999)/3)), j=0,1,2; require index+120<blockEnd",
+    "calendar": "decision-close UTC; Q3 before 2026-10-01T00:00Z, October [2026-10-01,2026-11-01); weekends calendar Sat/Sun; not funding schedule"
+  },
+  "matching": {
+    "exact": [
+      "side",
+      "priorEdgeTouch",
+      "weekend",
+      "utcSixHourBucket",
+      "block"
+    ],
+    "binned": [
+      "midpointDistanceAtr",
+      "zoneWidthAtr",
+      "logAge",
+      "atrPercentile",
+      "logAtrClose"
+    ],
+    "cutpoints": "unweighted post-chronology eligible V type7 Q1/3,Q2/3; unique finite cuts; equality lower bin; unbounded outer bins; constant one bin disclosed",
+    "support": "nV>=1, distinct nC>=3",
+    "weights": "all V=1; all C=nV/nC within retained cell; no alternative matching/thinning",
+    "transforms": "logAge=ln(ageBars), logAtrClose=ln(ATR_t/close_t), ATR midrank uses preceding288 excluding t"
+  },
+  "balance": {
+    "denominator": "fixed pre-match sqrt((sampleVarV+sampleVarC)/2), independently per reported population; no post-weighted SD",
+    "requiredPopulations": [
+      "global",
+      "LONG",
+      "SHORT",
+      "Q3",
+      "October"
+    ],
+    "supplemental": [
+      "block0",
+      "block1",
+      "block2",
+      "side-by-period",
+      "side-by-block"
+    ],
+    "variables": [
+      "five unbinned continuous matching features",
+      "ageBars",
+      "nearEdgeDistanceAtr",
+      "bodyFraction",
+      "upperWickFraction",
+      "lowerWickFraction",
+      "weekday0..6 indicators",
+      "sideShort",
+      "priorEdgeTouch",
+      "weekend",
+      "utcBucket0..3 indicators",
+      "block0..2 indicators"
+    ],
+    "threshold": 0.1,
+    "retentionMinimum": 0.5,
+    "undefined": "equal zero-variance neutral only; missing/insufficient/unequal constant fail explicitly; both arms required",
+    "gateFailure": "NOT-INTERPRETABLE for this design; no bin/gate change"
+  },
+  "resources": {
+    "maximumMonotonicMs": 1200000,
+    "rssBytes": 1073741824,
+    "workers": 1,
+    "attempts": 1,
+    "resume": false,
+    "admissionIndices": [
+      3999,
+      9236,
+      14473,
+      19711,
+      24948,
+      30186,
+      35423
+    ],
+    "projectedMs": "all31425 decisions × max observed full-prefix+feature ms ×2 +60000 matching/output reserve; must fit remaining allowance minus2000 cleanup ms",
+    "memoryAdmission": "2 × observed combined parent/worker RSS must fit1GiB",
+    "pollMs": 50,
+    "heapMiB": 640
+  },
+  "outputs": [
+    "counts/exclusions/doji census",
+    "cutpoints/cells/all weights/retention/unmatched composition",
+    "fixed-denominator balance and all flags",
+    "days/weighted Kish ESS/day HHI/max share",
+    "same/cross-arm coordinate window overlaps/shared decision times",
+    "canonical source/data/protocol/output identities"
+  ],
+  "forbidden": [
+    "outcome labels",
+    "target/barrier resolution",
+    "forward prices for reservations",
+    "returns/costs/funding PnL",
+    "fit/bootstrap/inference",
+    "acquisition",
+    "resume/extension/alternative match"
+  ],
+  "pinnedDependencies": {
+    "research/preparation/features.cjs": "423a9e693f3c20009c42672b26e5aa41bbb22f8e401bc3bd2da703e51e023e25",
+    "research/candidate-context/input.cjs": "b4b034a1d62c9a9cb4db65980f9f57749848656b1224d7f48bc1819d602b2db5",
+    "research/candidate-context/october.cjs": "da3459aebfc8a6673b1523517f080658082caa897108c48d195bef8b23dc7352",
+    "research/candidate-context/protocol.json": "49751e9897537c64fc8a0177e3f36d21df707d83c2470ce486695be3e4437f22",
+    "research/derivatives-pilot/input.cjs": "426c5d1f3503737d478817043a0dc3c3487de210c9d512d27dd7f3b7385ca789",
+    "research/derivatives-pilot/contract.json": "f740da9b9d456a789abba2e063c95583c52a32950f68d836196ae9fa06b8fe5f",
+    "research/derivatives-pilot/protocol.json": "922e8043d100ff21af8ef03e0e2e400e9616539932c933236074d9f695fb1fb0",
+    "research/derivatives/schema.cjs": "9fd8f10f1c2a5f52a2038bb5a820d7ccdc1becb93ea3da9021ddaa9a6ca48b0f",
+    "research/klines.cjs": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d"
+  },
+  "authoritativeApplication": {
+    "path": "hybrid-terminal.html",
+    "sha256": "f81375f01a240873017e9ba4efccc7f6deff99d8b7b0c8dfdb6516da9bf7ea57"
+  }
+}

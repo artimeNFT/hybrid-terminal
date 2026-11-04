@@ -1,0 +1,20 @@
+{
+  "sourceBase": "705e7657a58c898928529883b1eab0775ebac188",
+  "unchangedPreexistingProtectedTrackedFiles": 839,
+  "changedProtectedFiles": [],
+  "authoritativeApplicationSha256": "f81375f01a240873017e9ba4efccc7f6deff99d8b7b0c8dfdb6516da9bf7ea57",
+  "minimalSyntheticGroups": 9,
+  "marketAttempts": 1,
+  "preparationComplete": false,
+  "status": "RESOURCE-REFUSED",
+  "noOutcomeArtifacts": true,
+  "outputFiles": {
+    "source-seal.json": "732583488e8766c244a5cb02332b74e93942a58fa57815c330853243485e04c3",
+    "input-seal.json": "3df4f440a24bb33a4375fc26a36f1087cd6c57db9c1780f18dd287e9a852a495",
+    "admission.json": "519336d51a769451b57c1dad775f83e41a6e37353929bdb8f1728e4b5e66c10b",
+    "resource-receipt.json": "505cb80508f60f04ac15697e4acd8739908776dfdd19a6196b4db2a2bc11b50a",
+    "result.json": "0873e2bff61cbf36eb640c377eb1203f6f79c5ae2f6d5aa1696641a29b5ed63b"
+  },
+  "budgetScope": "validation, data verification, benchmark and all attempted worker output included in one monotonic receipt; general synthetic QA excluded",
+  "publicationCI": "one required change-selected run; actual result read after push and saved ignored/final handoff, not inferred from research status"
+}
