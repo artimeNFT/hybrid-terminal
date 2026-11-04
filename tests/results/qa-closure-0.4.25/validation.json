@@ -1,0 +1,16 @@
+{
+  "rootSha256": "f81375f01a240873017e9ba4efccc7f6deff99d8b7b0c8dfdb6516da9bf7ea57",
+  "unchangedProtectedTrackedFiles": 834,
+  "unchangedOriginalRegionalFiles": {
+    "tests/browser-regional-windows.cjs": "23c6446deccb915141a15c73a93407a754ae5b527e8056f8dc232526761d21c3",
+    "tests/regional-reload-capture.cjs": "64822674c1f85502d41a5d1f72a67080af4da8b04c09675a1e12294471812bfa"
+  },
+  "checks": {
+    "sourceCheck": "PASS",
+    "syntaxAndDiff": "PASS",
+    "focusedCandle": "PASS: 1440/390/320 plus four availability fixtures; one controlled native render capture at 320",
+    "regionalPair": "One file/mocked-http pair; both retained/restored; no reseed or automatic repeat",
+    "publicNetworkGuard": "PASS: zero unexpected HTTP/WebSocket requests"
+  },
+  "remaining": "Regional pre-app missing-key cause UNKNOWN; historical planning-fee issue UNKNOWN. Later green does not prove persistence fixed."
+}

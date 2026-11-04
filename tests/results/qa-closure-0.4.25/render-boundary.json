@@ -1,0 +1,53 @@
+{
+  "sourceSha256": "f81375f01a240873017e9ba4efccc7f6deff99d8b7b0c8dfdb6516da9bf7ea57",
+  "width": 320,
+  "boundary": {
+    "before": {
+      "performanceMs": 2100.2999999523163,
+      "model": {
+        "asOf": 1793154600000,
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "volumeRatio": 1.5
+      },
+      "dom": {
+        "asOf": "1793154600000",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "volumeText": "1.5×"
+      }
+    },
+    "beforeRelease": {
+      "performanceMs": 2154.100000023842,
+      "model": {
+        "asOf": 1793154900000,
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "volumeRatio": 0
+      },
+      "dom": {
+        "asOf": "1793154600000",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "volumeText": "1.5×"
+      }
+    },
+    "heldFrames": 1,
+    "after": {
+      "performanceMs": 2214.7999999523163,
+      "model": {
+        "asOf": 1793154900000,
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "volumeRatio": 0
+      },
+      "dom": {
+        "asOf": "1793154900000",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "volumeText": "0×"
+      }
+    }
+  },
+  "scope": "One controlled native render-boundary capture, test-only frame hold/release; no forced panel, sleep or production change"
+}

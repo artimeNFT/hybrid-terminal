@@ -1,0 +1,85 @@
+{
+  "run": 41834060172,
+  "attempt": 1,
+  "artifactId": 13325375403,
+  "artifactSha256": "4bac38fe7a198482267111262f7524d23f6795041117e90e010ddd6e70fb5543",
+  "sourceSha256": "f81375f01a240873017e9ba4efccc7f6deff99d8b7b0c8dfdb6516da9bf7ea57",
+  "regional": {
+    "beforeReloadRaw": {
+      "type": "string",
+      "value": "{\"schemaVersion\":1,\"enabled\":true}"
+    },
+    "preApp": {
+      "sig": {
+        "error": {
+          "name": "ReferenceError",
+          "message": "S is not defined"
+        }
+      },
+      "property": {
+        "type": "undefined",
+        "value": null
+      },
+      "getItem": {
+        "type": "object",
+        "value": null
+      }
+    },
+    "pollCount": 1800,
+    "transitions": [],
+    "omittedTransitions": 0,
+    "first": {
+      "sigTruthy": true,
+      "regionalEnabled": {
+        "type": "boolean",
+        "truthy": false,
+        "json": "false"
+      }
+    },
+    "last": {
+      "sigTruthy": true,
+      "regionalEnabled": {
+        "type": "boolean",
+        "truthy": false,
+        "json": "false"
+      }
+    },
+    "final": {
+      "property": {
+        "type": "undefined",
+        "value": null
+      },
+      "getItem": {
+        "type": "object",
+        "value": null
+      },
+      "regionalEnabled": {
+        "type": "boolean",
+        "value": false
+      },
+      "regionalStorage": {
+        "type": "string",
+        "value": "defaults"
+      },
+      "version": {
+        "type": "string",
+        "value": "0.4.25"
+      }
+    }
+  },
+  "candle": {
+    "width": 320,
+    "beforeModelWaitMs": 5017.72,
+    "modelWaitCompletedMs": 5022.716,
+    "projectionReadCompletedMs": 5026.799,
+    "domReadCompletedMs": 5031.717,
+    "projectionAsOf": 1793154900000,
+    "projectionVolumeRatio": 0,
+    "domVolumeText": "1.5×",
+    "tracePath": "browser/browser-confirmed-candle-context/trace-3.zip",
+    "earlierWidthsCompleted": [
+      1440,
+      390
+    ]
+  }
+}

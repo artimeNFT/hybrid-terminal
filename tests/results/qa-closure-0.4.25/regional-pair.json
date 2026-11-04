@@ -1,0 +1,644 @@
+{
+  "sourceSha256": "f81375f01a240873017e9ba4efccc7f6deff99d8b7b0c8dfdb6516da9bf7ea57",
+  "scope": "One isolated paired comparison; native storage, no regional reseed on reload; same synthetic clock/bars/empty seed; no user-origin change or personal profile; differing outcome alone cannot prove file-origin causality",
+  "runs": [
+    {
+      "origin": "file",
+      "url": "file:///mnt/c/users/shlom/desktop/the%20hybrid-terminal/hybrid-terminal.html",
+      "initial": {
+        "fixture": {
+          "beforeWrites": {
+            "raw": {
+              "type": "undefined",
+              "value": null
+            },
+            "getItem": {
+              "type": "object",
+              "value": null
+            },
+            "unrelated": {
+              "type": "undefined",
+              "value": null
+            }
+          },
+          "afterWrites": {
+            "raw": {
+              "type": "undefined",
+              "value": null
+            },
+            "getItem": {
+              "type": "object",
+              "value": null
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            }
+          },
+          "preInit": {
+            "sig": {
+              "error": {
+                "name": "ReferenceError",
+                "message": "S is not defined"
+              }
+            },
+            "property": {
+              "type": "undefined",
+              "value": null
+            },
+            "getItem": {
+              "type": "object",
+              "value": null
+            }
+          }
+        },
+        "postInit": {
+          "url": "file:///mnt/c/users/shlom/desktop/the%20hybrid-terminal/hybrid-terminal.html",
+          "origin": "file://",
+          "performanceMs": 767.3999999761581,
+          "raw": {
+            "type": "undefined",
+            "value": null
+          },
+          "getItem": {
+            "type": "object",
+            "value": null
+          },
+          "unrelated": {
+            "type": "string",
+            "value": "retain"
+          },
+          "enabled": false,
+          "storage": "defaults",
+          "sigPresent": true,
+          "symbol": "BTCUSDT",
+          "timeframe": "5m"
+        }
+      },
+      "writes": [
+        {
+          "enabled": true,
+          "before": {
+            "url": "file:///mnt/c/users/shlom/desktop/the%20hybrid-terminal/hybrid-terminal.html",
+            "origin": "file://",
+            "performanceMs": 922.6000000238419,
+            "raw": {
+              "type": "undefined",
+              "value": null
+            },
+            "getItem": {
+              "type": "object",
+              "value": null
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            },
+            "enabled": false,
+            "storage": "defaults",
+            "sigPresent": true,
+            "symbol": "BTCUSDT",
+            "timeframe": "5m"
+          },
+          "after": {
+            "url": "file:///mnt/c/users/shlom/desktop/the%20hybrid-terminal/hybrid-terminal.html",
+            "origin": "file://",
+            "performanceMs": 1044.6999999284744,
+            "raw": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":true}"
+            },
+            "getItem": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":true}"
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            },
+            "enabled": true,
+            "storage": "saved",
+            "sigPresent": true,
+            "symbol": "BTCUSDT",
+            "timeframe": "5m"
+          }
+        },
+        {
+          "enabled": false,
+          "before": {
+            "url": "file:///mnt/c/users/shlom/desktop/the%20hybrid-terminal/hybrid-terminal.html",
+            "origin": "file://",
+            "performanceMs": 1060.2999999523163,
+            "raw": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":true}"
+            },
+            "getItem": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":true}"
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            },
+            "enabled": true,
+            "storage": "saved",
+            "sigPresent": true,
+            "symbol": "BTCUSDT",
+            "timeframe": "5m"
+          },
+          "after": {
+            "url": "file:///mnt/c/users/shlom/desktop/the%20hybrid-terminal/hybrid-terminal.html",
+            "origin": "file://",
+            "performanceMs": 1160.8999999761581,
+            "raw": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":false}"
+            },
+            "getItem": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":false}"
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            },
+            "enabled": false,
+            "storage": "saved",
+            "sigPresent": true,
+            "symbol": "BTCUSDT",
+            "timeframe": "5m"
+          }
+        },
+        {
+          "enabled": true,
+          "before": {
+            "url": "file:///mnt/c/users/shlom/desktop/the%20hybrid-terminal/hybrid-terminal.html",
+            "origin": "file://",
+            "performanceMs": 1174.2999999523163,
+            "raw": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":false}"
+            },
+            "getItem": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":false}"
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            },
+            "enabled": false,
+            "storage": "saved",
+            "sigPresent": true,
+            "symbol": "BTCUSDT",
+            "timeframe": "5m"
+          },
+          "after": {
+            "url": "file:///mnt/c/users/shlom/desktop/the%20hybrid-terminal/hybrid-terminal.html",
+            "origin": "file://",
+            "performanceMs": 1337,
+            "raw": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":true}"
+            },
+            "getItem": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":true}"
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            },
+            "enabled": true,
+            "storage": "saved",
+            "sigPresent": true,
+            "symbol": "BTCUSDT",
+            "timeframe": "5m"
+          }
+        }
+      ],
+      "beforeReload": {
+        "url": "file:///mnt/c/users/shlom/desktop/the%20hybrid-terminal/hybrid-terminal.html",
+        "origin": "file://",
+        "performanceMs": 1850.1999999284744,
+        "raw": {
+          "type": "string",
+          "value": "{\"schemaVersion\":1,\"enabled\":true}"
+        },
+        "getItem": {
+          "type": "string",
+          "value": "{\"schemaVersion\":1,\"enabled\":true}"
+        },
+        "unrelated": {
+          "type": "string",
+          "value": "retain"
+        },
+        "enabled": true,
+        "storage": "saved",
+        "sigPresent": true,
+        "symbol": "ETHUSDT",
+        "timeframe": "15m"
+      },
+      "fixtureOnReload": {
+        "beforeWrites": {
+          "raw": {
+            "type": "string",
+            "value": "{\"schemaVersion\":1,\"enabled\":true}"
+          },
+          "getItem": {
+            "type": "string",
+            "value": "{\"schemaVersion\":1,\"enabled\":true}"
+          },
+          "unrelated": {
+            "type": "string",
+            "value": "retain"
+          }
+        },
+        "afterWrites": {
+          "raw": {
+            "type": "string",
+            "value": "{\"schemaVersion\":1,\"enabled\":true}"
+          },
+          "getItem": {
+            "type": "string",
+            "value": "{\"schemaVersion\":1,\"enabled\":true}"
+          },
+          "unrelated": {
+            "type": "string",
+            "value": "retain"
+          }
+        },
+        "preInit": {
+          "sig": {
+            "error": {
+              "name": "ReferenceError",
+              "message": "S is not defined"
+            }
+          },
+          "property": {
+            "type": "string",
+            "value": "{\"schemaVersion\":1,\"enabled\":true}"
+          },
+          "getItem": {
+            "type": "string",
+            "value": "{\"schemaVersion\":1,\"enabled\":true}"
+          }
+        }
+      },
+      "postInit": {
+        "url": "file:///mnt/c/users/shlom/desktop/the%20hybrid-terminal/hybrid-terminal.html",
+        "origin": "file://",
+        "performanceMs": 361.5,
+        "raw": {
+          "type": "string",
+          "value": "{\"schemaVersion\":1,\"enabled\":true}"
+        },
+        "getItem": {
+          "type": "string",
+          "value": "{\"schemaVersion\":1,\"enabled\":true}"
+        },
+        "unrelated": {
+          "type": "string",
+          "value": "retain"
+        },
+        "enabled": true,
+        "storage": "saved",
+        "sigPresent": true,
+        "symbol": "BTCUSDT",
+        "timeframe": "5m"
+      },
+      "result": "retained-and-restored",
+      "originalError": null,
+      "sourceBeforeReload": {
+        "symbol": "ETHUSDT",
+        "timeframe": "15m",
+        "side": "WAIT"
+      },
+      "errors": [],
+      "poll": {
+        "count": 1,
+        "omittedTransitions": 0
+      }
+    },
+    {
+      "origin": "mocked-http",
+      "url": "http://hybrid.test/",
+      "initial": {
+        "fixture": {
+          "beforeWrites": {
+            "raw": {
+              "type": "undefined",
+              "value": null
+            },
+            "getItem": {
+              "type": "object",
+              "value": null
+            },
+            "unrelated": {
+              "type": "undefined",
+              "value": null
+            }
+          },
+          "afterWrites": {
+            "raw": {
+              "type": "undefined",
+              "value": null
+            },
+            "getItem": {
+              "type": "object",
+              "value": null
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            }
+          },
+          "preInit": {
+            "sig": {
+              "error": {
+                "name": "ReferenceError",
+                "message": "S is not defined"
+              }
+            },
+            "property": {
+              "type": "undefined",
+              "value": null
+            },
+            "getItem": {
+              "type": "object",
+              "value": null
+            }
+          }
+        },
+        "postInit": {
+          "url": "http://hybrid.test/",
+          "origin": "http://hybrid.test",
+          "performanceMs": 611.7999999523163,
+          "raw": {
+            "type": "undefined",
+            "value": null
+          },
+          "getItem": {
+            "type": "object",
+            "value": null
+          },
+          "unrelated": {
+            "type": "string",
+            "value": "retain"
+          },
+          "enabled": false,
+          "storage": "defaults",
+          "sigPresent": true,
+          "symbol": "BTCUSDT",
+          "timeframe": "5m"
+        }
+      },
+      "writes": [
+        {
+          "enabled": true,
+          "before": {
+            "url": "http://hybrid.test/",
+            "origin": "http://hybrid.test",
+            "performanceMs": 744.3999999761581,
+            "raw": {
+              "type": "undefined",
+              "value": null
+            },
+            "getItem": {
+              "type": "object",
+              "value": null
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            },
+            "enabled": false,
+            "storage": "defaults",
+            "sigPresent": true,
+            "symbol": "BTCUSDT",
+            "timeframe": "5m"
+          },
+          "after": {
+            "url": "http://hybrid.test/",
+            "origin": "http://hybrid.test",
+            "performanceMs": 866.7999999523163,
+            "raw": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":true}"
+            },
+            "getItem": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":true}"
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            },
+            "enabled": true,
+            "storage": "saved",
+            "sigPresent": true,
+            "symbol": "BTCUSDT",
+            "timeframe": "5m"
+          }
+        },
+        {
+          "enabled": false,
+          "before": {
+            "url": "http://hybrid.test/",
+            "origin": "http://hybrid.test",
+            "performanceMs": 882.5,
+            "raw": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":true}"
+            },
+            "getItem": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":true}"
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            },
+            "enabled": true,
+            "storage": "saved",
+            "sigPresent": true,
+            "symbol": "BTCUSDT",
+            "timeframe": "5m"
+          },
+          "after": {
+            "url": "http://hybrid.test/",
+            "origin": "http://hybrid.test",
+            "performanceMs": 997.5,
+            "raw": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":false}"
+            },
+            "getItem": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":false}"
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            },
+            "enabled": false,
+            "storage": "saved",
+            "sigPresent": true,
+            "symbol": "BTCUSDT",
+            "timeframe": "5m"
+          }
+        },
+        {
+          "enabled": true,
+          "before": {
+            "url": "http://hybrid.test/",
+            "origin": "http://hybrid.test",
+            "performanceMs": 1014.3999999761581,
+            "raw": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":false}"
+            },
+            "getItem": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":false}"
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            },
+            "enabled": false,
+            "storage": "saved",
+            "sigPresent": true,
+            "symbol": "BTCUSDT",
+            "timeframe": "5m"
+          },
+          "after": {
+            "url": "http://hybrid.test/",
+            "origin": "http://hybrid.test",
+            "performanceMs": 1096.7999999523163,
+            "raw": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":true}"
+            },
+            "getItem": {
+              "type": "string",
+              "value": "{\"schemaVersion\":1,\"enabled\":true}"
+            },
+            "unrelated": {
+              "type": "string",
+              "value": "retain"
+            },
+            "enabled": true,
+            "storage": "saved",
+            "sigPresent": true,
+            "symbol": "BTCUSDT",
+            "timeframe": "5m"
+          }
+        }
+      ],
+      "beforeReload": {
+        "url": "http://hybrid.test/",
+        "origin": "http://hybrid.test",
+        "performanceMs": 1599.2999999523163,
+        "raw": {
+          "type": "string",
+          "value": "{\"schemaVersion\":1,\"enabled\":true}"
+        },
+        "getItem": {
+          "type": "string",
+          "value": "{\"schemaVersion\":1,\"enabled\":true}"
+        },
+        "unrelated": {
+          "type": "string",
+          "value": "retain"
+        },
+        "enabled": true,
+        "storage": "saved",
+        "sigPresent": true,
+        "symbol": "ETHUSDT",
+        "timeframe": "15m"
+      },
+      "fixtureOnReload": {
+        "beforeWrites": {
+          "raw": {
+            "type": "string",
+            "value": "{\"schemaVersion\":1,\"enabled\":true}"
+          },
+          "getItem": {
+            "type": "string",
+            "value": "{\"schemaVersion\":1,\"enabled\":true}"
+          },
+          "unrelated": {
+            "type": "string",
+            "value": "retain"
+          }
+        },
+        "afterWrites": {
+          "raw": {
+            "type": "string",
+            "value": "{\"schemaVersion\":1,\"enabled\":true}"
+          },
+          "getItem": {
+            "type": "string",
+            "value": "{\"schemaVersion\":1,\"enabled\":true}"
+          },
+          "unrelated": {
+            "type": "string",
+            "value": "retain"
+          }
+        },
+        "preInit": {
+          "sig": {
+            "error": {
+              "name": "ReferenceError",
+              "message": "S is not defined"
+            }
+          },
+          "property": {
+            "type": "string",
+            "value": "{\"schemaVersion\":1,\"enabled\":true}"
+          },
+          "getItem": {
+            "type": "string",
+            "value": "{\"schemaVersion\":1,\"enabled\":true}"
+          }
+        }
+      },
+      "postInit": {
+        "url": "http://hybrid.test/",
+        "origin": "http://hybrid.test",
+        "performanceMs": 400.7000000476837,
+        "raw": {
+          "type": "string",
+          "value": "{\"schemaVersion\":1,\"enabled\":true}"
+        },
+        "getItem": {
+          "type": "string",
+          "value": "{\"schemaVersion\":1,\"enabled\":true}"
+        },
+        "unrelated": {
+          "type": "string",
+          "value": "retain"
+        },
+        "enabled": true,
+        "storage": "saved",
+        "sigPresent": true,
+        "symbol": "BTCUSDT",
+        "timeframe": "5m"
+      },
+      "result": "retained-and-restored",
+      "originalError": null,
+      "sourceBeforeReload": {
+        "symbol": "ETHUSDT",
+        "timeframe": "15m",
+        "side": "WAIT"
+      },
+      "errors": [],
+      "poll": {
+        "count": 1,
+        "omittedTransitions": 0
+      }
+    }
+  ]
+}
