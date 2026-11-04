@@ -1,0 +1,38 @@
+{
+  "version": "0.4.25 RC",
+  "sourceSha256": "f81375f01a240873017e9ba4efccc7f6deff99d8b7b0c8dfdb6516da9bf7ea57",
+  "baseline0.4.24Sha256": "4dc829b480fd81080b50549a3d43b5e335c822958d7331c44af0721c854cfa35",
+  "focused": "6 new cutoff groups +9 existing perpetual groups PASS",
+  "requiredLocalQA": {
+    "npm test": "PASS",
+    "npm run test:browser": "PASS;27 scripts"
+  },
+  "actualMockedChromiumWidths": [
+    1440,
+    320
+  ],
+  "cases": [
+    "07:55 source/08:00 schedule/10:00 cutoff rejected",
+    "equal cutoff rejected",
+    "unknown cutoff rejected",
+    "future schedule captured",
+    "missing source with valid cutoff captured, source time remains UNKNOWN",
+    "supplied source time is also a strict bound",
+    "receipt/device time never substitutes for exchange time"
+  ],
+  "preservation": {
+    "changedOriginalFunctionBodies": [
+      "perpetualNowProjection"
+    ],
+    "allOtherFieldsMatchBaseline": true,
+    "protectedTrackedCount": 825,
+    "priorProtectedCount": 140,
+    "changedProtectedFiles": [],
+    "requestBudget": 7,
+    "requestTimeoutMs": 12000,
+    "strategyJournalExportsResearch": "unchanged"
+  },
+  "publicSmoke": "Not run; explicitly out of scope",
+  "historicalReloadIssue": "UNKNOWN/parked; no fix claimed",
+  "publication": "Exact full CI must be read back after push; ignored receipt plus final handoff, no extra announcement publication"
+}

@@ -1,10 +1,10 @@
-# Hybrid Terminal 0.4.24 RC
+# Hybrid Terminal 0.4.25 RC
 
 **New chat or reviewer:** start with [START_HERE.md](START_HERE.md), then the latest current section and task board in [STATUS.md](STATUS.md). Resume existing work; do not create a duplicate implementation session.
 
 **CI / handoff:** operational-document-only changes receive scope regression checks; all other/uncertain changes and manual dispatch receive full QA. See current [STATUS.md](STATUS.md); [STATUS_HISTORY.md](STATUS_HISTORY.md) retains earlier checkpoints.
 
-**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.24 adds the optional, collapsed Hebrew **הקשר חוזים · כעת** block. Select USDⓈ-M Perpetual and press **רענון** for a captured current-market context; Spot makes no context requests. Active SHA-256 `4dc829b480fd81080b50549a3d43b5e335c822958d7331c44af0721c854cfa35`. These independent observations do not enter confirmed decisions or Local/source-derived zones. [Delivery evidence](tests/results/perpetual-context-0.4.24/REPORT.md).
+**Current direction and task order:** [STATUS.md](STATUS.md). Release0.4.25 corrects only next-funding schedule qualification: a valid trusted batch cutoff is required, and the schedule must be strictly later than that cutoff and any supplied source time. Unknown/past/equal schedules remain unavailable with raw provenance retained. Active SHA-256 `f81375f01a240873017e9ba4efccc7f6deff99d8b7b0c8dfdb6516da9bf7ea57`. [Correction evidence](tests/results/next-funding-cutoff-0.4.25/REPORT.md).
 
 Open `hybrid-terminal.html` directly in a modern browser. It is the authoritative standalone vanilla JavaScript/Canvas app. No build, backend or application dependencies. Public Binance REST/WebSocket access for the selected Spot or USDⓈ-M perpetual product is needed. Markets remain BTCUSDT / ETHUSDT / SOLUSDT and chart timeframes remain 5m / 15m / 1h / 4h.
 

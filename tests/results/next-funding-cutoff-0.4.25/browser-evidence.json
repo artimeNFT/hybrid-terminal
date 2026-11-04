@@ -1,0 +1,48 @@
+{
+  "version": "0.4.25 RC",
+  "sourceSha256": "f81375f01a240873017e9ba4efccc7f6deff99d8b7b0c8dfdb6516da9bf7ea57",
+  "checks": [
+    {
+      "width": 1440,
+      "spotAndCollapsedNoRequests": true,
+      "sevenRequestsNoOverlapOrRetry": true,
+      "independentArithmetic": true,
+      "signedZeroSettledFundingAndSchedule": true,
+      "metadataUnitsAndCompletedHistory": true,
+      "sourceVersusReceiptTime": true,
+      "missingTimeAndZeroDenominator": true,
+      "nextScheduleBatchCutoffCases": true,
+      "partialFailure": true,
+      "provisionalHoverTimeIsolation": true,
+      "staleSymbolAfterNewCapture": true,
+      "timeframeAndProductCancellation": true,
+      "unchangedDecisionsJournalStorageTimersSubscriptions": true,
+      "bilingualHelp": true,
+      "noOverflow": true
+    },
+    {
+      "width": 320,
+      "spotAndCollapsedNoRequests": true,
+      "sevenRequestsNoOverlapOrRetry": true,
+      "independentArithmetic": true,
+      "signedZeroSettledFundingAndSchedule": true,
+      "metadataUnitsAndCompletedHistory": true,
+      "sourceVersusReceiptTime": true,
+      "missingTimeAndZeroDenominator": true,
+      "nextScheduleBatchCutoffCases": true,
+      "partialFailure": true,
+      "provisionalHoverTimeIsolation": true,
+      "staleSymbolAfterNewCapture": true,
+      "timeframeAndProductCancellation": true,
+      "unchangedDecisionsJournalStorageTimersSubscriptions": true,
+      "bilingualHelp": true,
+      "noOverflow": true
+    }
+  ],
+  "errors": [],
+  "expectedErrors": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ],
+  "scope": "Actual isolated Chromium/file URL with synthetic REST/WS; injected book503 errors distinguished. No public/live or physical-device acceptance."
+}
