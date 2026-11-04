@@ -9,7 +9,7 @@ const sha = b => crypto.createHash('sha256').update(b).digest('hex');
 
 test('frozen reference is exact, explicit context verifies old sources, and unbound research rejects the active UI', () => {
   assert.equal(sha(fs.readFileSync(oldFile)), expected);
-  const activeExpected = require('../qa/source-checksums.0.4.25.json')['hybrid-terminal.html'];
+  const activeExpected = require('../qa/source-checksums.modeled-risk-budget-candidate.json')['hybrid-terminal.html'];
   assert.equal(sha(fs.readFileSync(path.join(root, 'hybrid-terminal.html'))), activeExpected);
   assert.notEqual(activeExpected, expected);
   const outside = spawnSync(process.execPath, ['-e', "require('./research/audit/adapter.cjs').createAdapter()"], {cwd: root, encoding: 'utf8'});

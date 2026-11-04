@@ -1,3 +1,9 @@
+# Isolated modeled risk-budget candidate — not integrated
+
+This branch, `candidate/modeled-risk-budget`, adds one read-only comparison inside **גודל נומינלי והנחות הון · לא כמות לביצוע** for eligible confirmed plans in supported USD-M contexts. Expand that existing section and read **כמות לפי תקציב הפסד בתרחיש**; existing account/risk and fee/slippage/gap controls supply its assumptions. The nominal estimate remains separate and unchanged.
+
+Candidate HTML retains application metadata0.4.25 RC, has an explicit candidate document title and SHA-256 `240b2f0ba94226e20dd9dafbcd004fdb7b844a3f0e13529e0d045a4c62f931bd`. Its named candidate checksum manifest validates these changed bytes; the historical0.4.25 manifest is preserved. Authoritative main/root stays0.4.25 RC, SHA `f81375f01a240873017e9ba4efccc7f6deff99d8b7b0c8dfdb6516da9bf7ea57`, archived exactly in this candidate. Do not treat the candidate as that unchanged source or merge under failed required QA. [Scope, independent arithmetic and evidence](tests/results/modeled-risk-budget-candidate/REPORT.md).
+
 # Hybrid Terminal 0.4.25 RC
 
 **New chat or reviewer:** start with [START_HERE.md](START_HERE.md), then the latest current section and task board in [STATUS.md](STATUS.md). Resume existing work; do not create a duplicate implementation session.
