@@ -244,3 +244,22 @@
 
 **הביקורת העצמאית הבאה, תחומה בלבד:** בדיקת עקיבות `venue/product/symbol/TF/confirmed_as_of` בין מצב מקור/נר, התוכנית, סיכום ה־HTF והיומן — קריאת קוד/Help ודוגמות שכבר קיימות. אין ריצת feed/QA/Backtest חדשה ואין מיפוי סשן היסטורי חדש. אם קיים כיסוי סביר ואין סתירה — `CLOSE/NO-GO` ולא לפתח דבר.
 
+## K. ביקורת A5 — מקור, זמן, נר מאושר ו־HTF (2026-11-08, קריאה בלבד)
+
+**מקור והגבול:** `main/hybrid-terminal.html` 0.4.25 RC, HEAD `bfa8f5ffa9dee5e34c2df4ee0c07f75b89f5ecf1`, בעיקר `MARKET_PRODUCTS/marketProvenance` ~79–101, `load/htf/refreshHTF/connect` ~109–143, `calc/sigAt` ~194–223, `recordDecision` ~674–685, `confirmedAsOf/dailyAt` ~829–852, `decisionDataWindow` ~1040–1049, `confirmedPlanningCostPlan` ~1484–1487, `confirmedCandleContext` ~1538–1554 ו־`panel` ~1564–1575. ביקורת **סטטית בלבד**, ללא ריצת בדיקות חדשה, feed, Backtest או פתיחת PR. בדיקות קיימות שנקראו: `tests/product-context.cjs`, `tests/confirmed-candle-context.cjs`, `tests/day-context.cjs`, `tests/candidate-context.cjs`. הן מכסות הפרדת מוצר/epoch, שימור החלטה בנר מתהווה ו־UTC daily as-of, **אך לא מהוות אישור גורף להצמדת זמן HTF לתצוגה**.
+
+| גבול מידע | מה מוכח מקריאת הקוד | מסקנת A5 |
+|---|---|---|
+| **מוצר/בורסה/סמל/TF** | `marketProduct` מפריד Binance Spot לעומת USDⓈ-M Trade Klines/WS; `marketProvenance` נושא venue, product, sym, URLs ויחידות. `load()` מאפס epoch, feed, HTF, history ו־pivot cache; עדכוני WS מוגבלים ל־epoch/product/sym/tf הנוכחיים | **PASS ברמת קוד והבדיקות הקיימות**. אין להסיק התאמה ל־mark/index/חשבונות או ל־Tick Volume |
+| **נר ההחלטה** | `restBars` דורש OHLCV רציף; WS מסמן סגירה לפי `x.x`; `calc` קובע `S.closedIndex=closedEnd()`, מפיק `S.sig=sigAt(ci)` בנפרד מ־`S.preview` של המתהווה. `confirmedAsOf` הוא `c.t+TFMS[S.tf]`, boundary ב־UTC | **PASS עקרוני**. סיום קליטה/שעון אינו בעצמו אישור סגירת נר; יש להמשיך לסמן stale/loading |
+| **תוכנית/עלות** | `confirmedPlanningCostPlan` מחייב נר `closed`, `numericBar`, סטטוס `eligible`, `p.entry===c.c` ו־`asOf` תקין; `confirmedTargetPath` קשור לאותו `asOf` ולמקורות רמות כשירים | **PASS** כמודל החלטה; כניסת `plan` היא החלטת close ולא fill |
+| **יומן והיסטוריית צפייה** | `recordDecision` מכיל product/sourceContext, symbol, tf, candleOpen/Close, version, `observedAt` בנפרד; first-write per ID והפרדה ממילוי. `loadOlder` משנה `S.history/S.chart` לתצוגה ואינו מוסיף ל־`S.k` החישובי | **PASS** על זהות נר/מקור ושמירה עקרונית; journal אינו execution ledger, ו־`observedAt` אינו זמן החלטה בבורסה |
+| **סשנים ורמות יום** | `regional windows · Now` נפרד ואינו אירוע setup היסטורי; Daily Pivot/PDH/PDL/ADR מחייבים כיסוי UTC מקור של ימים מלאים, שעון שרת ותקפות יום ביחס ל־`confirmedAsOf` | **PASS בהבחנת השכבות**; אסור לכנות את NOW `historical session validation` או לשחזר Brinks מתוך אזור זמן בלבד |
+| **הקשר HTF** | `HTFM` בוחר **זוג אחד** (`5m→1h`, `15m→4h`, `1h→4h`, `4h→1d`). `htf()` מבקש Klines אחרונים משרת Binance ומוצא את **האחרון שנסגר לפי שעון תגובת הבקשה**, בודק epoch/bucket ומעדכן `S.htf={tf,t,b}`. `panel` מציג `h.t + TFMS[h.tf]` כהקשר. אך **אין סינון `HTF.close <= confirmedAsOf()`** לפני קבלת התוצאה לתצוגה | **GAP מותנה ברמת התצוגה בלבד**: אם feed הטווח הנמוך מתעכב ובינתיים נסגר נר HTF חדש, `h` עשוי להיות *מאוחר יותר* מסגירת האיתות שמוצגת. לא הוכח שכך קרה בפרודקשן; לא נטען ל־look-ahead ב־`sigAt` או Backtest |
+
+**למה זה משנה / למה אין פאניקה:** לדוגמה היפותטית, נר ההחלטה האחרון ב־5m סגר ב־15:55 UTC, אבל טווח 1h נסגר ב־16:00 UTC ונשלף אחר כך בגלל עיכוב ב־feed. הפאנל עשוי להציג את מגמת 1h החדשה לצד החלטת 15:55 בלי חיבור as-of מפורש. זה עלול להטעות סוחר שמפרש אות והקשר כאותה תמונת זמן. **במנוע עצמו `sigAt(i)` אינו קורא `S.htf`, `htf()` אינו מעדכן `S.sig`, ואין קריאה ל־HTF ב־`backtest`** — לכן זו אינה הוכחה לדליפת עתיד לתוצאות ההיסטוריות.
+
+**גבולות מסירה ל־WORK:** אין לשנות תצורת HTF כעת, לא להוסיף 4־TF consensus, לא לבנות clock/region engine חדש, לא להריץ CI/reload בהיעדר אישור ולא להבטיח רווחיות. כשה־P0 מאפשר scope קטן, לבדוק **בתחילה** במבחן יחידה סינתטי מצב `confirmedAsOf=15:55` מול `HTF.close=16:00` ומקרה מקביל בעל שני נרות מתואמים. *אם* הפער משתחזר ונוגע לתצוגה, לשקול `HTF context unavailable/late` או סינון as-of בקריאת התצוגה; לא לשכתב את `sigAt` או התוצאות. בעלי החלטה/ביצוע: WORK + אישור המשתמש. הוא מוגדר **P2 review after P0**, לא חסם QA חדש ולא משימת פיתוח עצמאית.
+
+**סגירת A5:** `PASS` לאטריביוטים של זהות מוצר/נר/תוכנית/יומן/יום; `PARTIAL` בהצמדת זמן ההקשר HTF; `NO-GO` לשינוי קוד או לפיתוח מרחיב ללא ניסוי ראייתי. אין צורך בסרטון, צילום, יומן אמיתי או נתוני חשבון נוספים לשם כך.
+
