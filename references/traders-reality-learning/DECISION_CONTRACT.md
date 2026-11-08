@@ -215,3 +215,32 @@
 **ל־WORK לאחר חזרה — מידע למסירה, לא משימה חדשה:** לקרוא סעיף זה לפני טענה שהמוצר ״מנהל עסקאות״. להבחין במוצר בין מצב **איתות**, **תוכנית תיאורטית**, **עסקה בפועל שאינה ידועה לאפליקציה**, ו־**ניהול אנושי**. אם המשתמש יאשר בעתיד מחזור פיתוח נפרד, להחליט קודם האם Hybrid נועד רק *להסביר החלטות ניהול* או גם *לרשום פוזיציות ידנית*; אין לבחור זאת בלי צורך מוכח, מוצר/מקור/זמן, אחריות על דיווח PnL ו־QA. **שער העבודה הקרוב נשאר P0/Node24/Help synchronization של מועמד הכלכלה, כמפורט בסעיף H וב־STATUS; לא מדלגים עליו.**
 
 **סגירה:** ביקורת זו **הושלמה**, ללא הוספת עוד מסמכים או פתיחת מחקר. לא נדרש מהמשתמש תמלול, צילום או חשבון מסחר נוסף לשם ביקורת זו.
+
+## J. סיכון, חשיפה ו־Sizing — ביקורת גבולות, 2026-11-08
+
+**שיטה:** קריאה והשוואה של `main/hybrid-terminal.html` `bfa8f5ffa9dee5e34c2df4ee0c07f75b89f5ecf1`, מועמד [PR #1 · modeled-risk-budget](https://github.com/artimeNFT/hybrid-terminal/pull/1) (DRAFT, HEAD `6c66e608bae724d345971b98ed9152bc81d5b54c`), [דוח ה־Sizing שכבר בוצע](https://github.com/artimeNFT/hybrid-terminal/blob/6c66e608bae724d345971b98ed9152bc81d5b54c/tests/results/modeled-risk-budget-candidate/REPORT.md), [מועמד תקציר הכלכלה](https://github.com/artimeNFT/hybrid-terminal/tree/candidate/decision-economics-overview-2026-11-08) ו־`main/STATUS.md`. בדיקת נוסחאות סטטית והצלבת המקורות בלבד; **לא בוצעו QA, מחקר, קריאות חשבון, הוראות מסחר או שינוי קוד**. המקורות הרשמיים הרלוונטיים: [Binance USDⓈ-M exchangeInfo](https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data#exchange-information), [Notional & Leverage Brackets](https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/account#notional-and-leverage-brackets). גישת הביקורת היא לתיעוד, **לא** לביצוע API או אימות ערכים חיים לחשבון.
+
+### שרשרת מתמטית אחת — לא שלושה מחשבוני סיכון
+
+| מקור | חישוב הנוכחי | מה הוא *אינו* |
+|---|---|---|
+| **main / `nominalSizing` (~1402–1409)** | `B=account×riskPercent/100`; `D=abs(E−stop)`; `q_nom=B/D`; `notional=q_nom×E`. ההקשר ב־USD-M מראה `perpetual-margin-unconfigured` | `B` הוא תקציב *גאומטרי* לפי סטופ בלבד. אינו `max loss`, כמות מסחרית חוקית או הערכת liquidation |
+| **main / `planningCostScenario` (~1459–1466)** | `F=E×(feeBps+slippageBps)/10000`; `G=stop×gapBps/10000`; `stopLossUnit=D+F+G` ביחידות מחיר נכס; `gapStopR=−1−(F+G)/D` | פער מוגדר כתרחיש היפותטי בסכום מסוים, לא התפלגות ביצוע או תקרת נזק. funding/spread/latency/venue/account effects עדיין מחוץ למודל |
+| **WORK PR #1 / `modeledRiskBudgetSizing` (~1474–1490 ב־candidate)** | חוזר במפורש לפלט המודל: `L=D×(−gapStopR)=D+F+G`; `q_modeled=B/L`; `notional=q_modeled×E`; `nominalLoss=q_nom×L`. מבודד ל־USD-M BTC/ETH/SOL, לתוכנית סגורה וקלט תקין, ללא input או persistence חדשים | השוואה היפותטית *לתרחיש הנבחר* בלבד. **לא** כמות לביצוע, מסגרת מרג'ין/מינוף, סגירת סטופ מובטחת או סיכון חשבון כולל |
+| **מועמד `decision-economics-overview`** | מציג `costR` של תרחיש נבחר ו־`p_required` איזון בינארי; מבוסס על `planningCostScenario` הקיים | `p_required` אינו שיעור הצלחה בפועל או אישור להגדיל גודל פוזיציה. **אין** בו חישוב `q_modeled`; לא לשכפל את PR #1 |
+
+**בדיקת סבירות מתוך מקרי literal שכבר נבדקו ושמורים בדוח PR #1, לא ריצת בדיקות חדשה:** חשבון `1000 USDT`, סיכון `1%` ⇒ `B=10`. LONG `E=100`, `S=99`, `D=1`, עמלה `10 bps`, `F=.1`, `G=0` ⇒ `q_nom=10`, הפסד ממודל נומינלי `11 USDT`, `q_modeled=10/1.1≈9.0909`. בהנחת Gap `100bps` מהסטופ ⇒ `G=.99`, `L=2.09`, הפסד ממודל בכמות הנומינלית `20.9 USDT`, `q_modeled=10/2.09≈4.7847`. **הכמות החדשה משווה `q×L=B` לפי הנחות התרחיש בלבד**, לא `realized loss≤B`.
+
+### ממשל סיכון וגבולות מקור
+
+- **מרג'ין/מינוף/ליקווידציה:** `sizingSnapshot` ו־PR #1 אינם קוראים נתוני חשבון או user leverage brackets ואינם משערים תחזית ליקווידציה; גודל העסקה/תקרת הפסד אינם ניתנים להסקה ממרחק סטופ ו־`account` שהוזן בלבד. קריאת `USD-M Perpetual` בטרמינל היא הקשר/מחקר, לא חשבון מסחר משולב.
+- **כללי זירה:** `exchangeInfo` מפרט עבור סמל/מוצר שדות כמו `tickSize`, `minQty`, `stepSize`, `notional` וסטטוס חוזה. הם עשויים להשתנות; אין לעגל או לאשר כמות על בסיס precision בלבד. **לא בוצעה שאילתת exchangeInfo חיה**, וה־UI אינו מאמת הרשאות חשבון, מסנני הזמנה או מימוש פקודה.
+- **חשיפה מצטברת:** אין מצב פוזיציות אמיתיות, עסקאות חופפות, collateral משותף או התחייבויות אחרות של חשבון; `B` הוא תקציב פר־תרחיש מוזן, לא תקציב מצטבר. יומן ההחלטות אינו רשימת פוזיציות/מילויים. אין לאסוף פרטי חשבון או להציע מנגנון חשיפה ללא אפיון מוצר נפרד.
+- **עלויות שאינן ממודלות:** Funding עתידי, spread בפועל, שינויי עמלות, market impact, partial fill, פקודות מגוננות שנכשלו, latency, liquidation/ADL, היבטי Cross/Isolated, מחיר כניסה בפועל ושינויי סטופ; הם אינם מוגדרים כאפס במודל. נכון להציג `unavailable/unmodeled`, לא `safe`.
+- **התנגשות מועמדים לפני אינטגרציה:** גם PR #1 וגם מועמד `decision-economics-overview` מחייבים טיפול באזור `updatePlanningCosts` / `planeconomics` של `hybrid-terminal.html`, על בסיס ענפים שונים. WORK חייב לבחון היקף שינויים מדויק, סדר צירוף, תאימות Help, שמירת מאזינים/פוקוס/קלטים, QA/version manifests, והקשרי Spot/Perp/WAIT. **אין מיזוג אוטומטי/העתקת בלוקים/יצירת מימוש sizing שלישי**.
+- **מצב הבדיקות:** PR #1 מדווח על Node24/CI מלא **PASS עבור HEAD שלו בלבד** (CI 41884925737), אך הוא DRAFT ולא מוזג. מועמד economics נבדק עד כה ב־Node22 + Chromium ממודל, **לא** Node24/CI מלא. QA שחרור על `main` עדיין BLOCKED בשל regional reload UNKNOWN, לא תוקן על ידי CI מועמד אחר.
+
+**הכרעה וסיום:** `PASS` על עקיבות הנוסחאות במקורות; `GAP ALREADY OWNED` על הפסד ממודל שחורג מתקציב נומינלי — קיים פתרון מבודד ב־PR #1; `DEFER` על חשבון חי/portfolio exposure/liquidation/executable quantity. לא נמצא פער שמצדיק קוד חדש ללא WORK. נדרש רק ש־WORK יראה את *שני* המועמדים יחד ויאשר את שערי הבדיקות לפני שילוב; לא לקבל `green` מענף אחד כהכשר ל־`main`.
+
+**הביקורת העצמאית הבאה, תחומה בלבד:** בדיקת עקיבות `venue/product/symbol/TF/confirmed_as_of` בין מצב מקור/נר, התוכנית, סיכום ה־HTF והיומן — קריאת קוד/Help ודוגמות שכבר קיימות. אין ריצת feed/QA/Backtest חדשה ואין מיפוי סשן היסטורי חדש. אם קיים כיסוי סביר ואין סתירה — `CLOSE/NO-GO` ולא לפתח דבר.
+
