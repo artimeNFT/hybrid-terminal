@@ -134,6 +134,12 @@
 - שורות **201–222**: `sigAt` מחשב מועמד החזרה ל־Vector נגדִי על בסיס מתיחה מ־EMA50, Stopping Volume, W/M ו־RSI, ויעד `mid` של אזור נגדי. **אין תנאי First Vector עצמאי**.
 - ההבדל החיוני אינו "ליצור Vector" או "להוסיף EMA", אלא **האם first-vector event מכיל מידע שאינו כבר נלכד במנוע mean reversion**, ובאיזה מחיר ביצוע/כניסה מאוחרת. אין השוואת תשואות שבוצעה בעקבות הסרטונים.
 
+### הצלבה למקור PVSRA רשמי — 2026-11-08, ללא ניסוי חדש
+
+[Traders_Reality_Lib (TradersReality, TradingView, 2022)](https://www.tradingview.com/script/8zgJTM9u-Traders-Reality-Lib/) מגדיר לפי תיאור הספרייה `climax` בתנאי `volume >= 2×mean(previous 10)` **או** `volume×(high-low) >= max(previous 10 volume×range)`; ו־`rising` בתנאי `volume >= 1.5×mean(previous 10)`. ההגדרה מסירה את העמימות של צילום ה־cheat sheet **לגבי ספי הנוסחה**; היא אינה מאמתת פירושי ״Buy/Sell״ או כוונת עושי שוק.
+
+**אין לייחס לנו גילוי חדש:** [`main/references/tr-main/README.md`](https://github.com/artimeNFT/hybrid-terminal/blob/main/references/tr-main/README.md) כבר בדק בדיוק את `library.pine` שהמשתמש מסר מול `volumeReference/analyze` ואת ההבדלים. ההתאמה היא **למבחן המתמטי על קלט OHLCV בר־שימוש זהה**, לא לפרשנות `Tick Volume` של MT4, `C>O` לעומת `C>=O` (doji), טיפול ב־zero/warm-up, יצירת zones לפי rising+climax לעומת climax-only, body/wicks, age או סטטיסטיקת רווחיות. גם `Source-derived closed` שכבר קיימת אינה יעד תוכנית. לא משנים ספים, נתונים, צבעים או מנוע ולא משחזרים את בדיקת המקור פעם נוספת.
+
 ## מקור משלים VECTOR-COLORS — What Are Vector Candles? (כ־12:39)
 **זיהוי מקור:** ההקלטה מציגה את Tino המסביר הבדלי צבעי Vector ב־PVSRA/Hybrid. ייתכן שזהו #20 ברשימת 37 הסרטונים (משך דומה), אך **לא אומת קישור/מזהה YouTube**. התמלול `Pasted text (2)(6).txt`; SHA256 `c976304151ccaae8dd6a4a8421f87de17a16343fcabb86de8606bfa4d36211f6`.
 - **00:30–04:30:** מסגרת פרשנית "ירוק בשיא = הכנת SHORT, אדום בשפל = הכנת LONG" וטיעונים על Market Maker. אלה **הסברים של הדובר ולא ראיה למיקום פוזיציה או לכוונת צד נגדי**.
