@@ -17,7 +17,13 @@
 
 **אם סוכן אינו יכול לקרוא את הענף:** יש לבקש חיבור/הרשאה ל־GitHub או קישור מדויק. אי־גישה אינה הוכחה שהמחקר חסר, ואינה מצדיקה המצאה או התחלת תכנון מחדש.
 
-**מועמד יישום מבודד (2026-11-08, לבדיקת Work בלבד):** המשתמש אישר להתקדם בינתיים ללא Work בשינוי תצוגה תחום. ענף [candidate/decision-economics-overview-2026-11-08](https://github.com/artimeNFT/hybrid-terminal/tree/candidate/decision-economics-overview-2026-11-08), commit `c2f21f5f164f6319365f936ff6997f44f26b7f2e`, מבוסס בדיוק על `main` commit `bfa8f5ffa9dee5e34c2df4ee0c07f75b89f5ecf1`. הוא מכיל **HTML מועמד ותיקון תצוגת כלכלת התוכנית בלבד** וכן `tests/decision-economics-overview.cjs` עם ארבע בדיקות ממוקדות ש**טרם הורצו**. בוצעה רק בדיקת תחביר סטטית, לא QA/Chromium/CI. לא נפתח PR, לא מוזג, ולא שונו `main`, מנוע אותות או מחקר. **Work צריך לקרוא ולבדוק את המועמד במקום לפתח גרסה שנייה**, לאמת סטטוס/בעלות מקומית ולהחליט אם ומתי להריץ QA לפי אישור נפרד; חסם regional QA ב־main נותר פתוח.
+**מועמד יישום מבודד — סטטוס מעודכן ל־2026-11-08:** המשתמש אישר התקדמות ללא Work *בענף מועמד בלבד*. ענף [`candidate/decision-economics-overview-2026-11-08`](https://github.com/artimeNFT/hybrid-terminal/tree/candidate/decision-economics-overview-2026-11-08), HEAD מאומת `2624ae476edaf2a49eef631559e60172d300a2ea` (מימוש המקור `c2f21f5f164f6319365f936ff6997f44f26b7f2e`; מבוסס על `main` `bfa8f5ffa9dee5e34c2df4ee0c07f75b89f5ecf1`). הקוד הוא תוספת תצוגה בלבד ל־`hybrid-terminal.html` והבדיקות `tests/decision-economics-overview.cjs`; קיימת [רשומת בדיקות מפורטת](https://github.com/artimeNFT/hybrid-terminal/blob/candidate/decision-economics-overview-2026-11-08/tests/results/decision-economics-overview/REPORT.md).
+
+**בדיקות שבוצעו בפועל:** 17/17 assertions ב־Chromium עם OHLCV ואחסון מדומים; 4/4 בדיקות Node מקוריות של המועמד ו־5/5 מקרי קצה משלימים מקומיים (Node **22.16.0**); השוואת מצב המנוע/האיתות/Backtest/יומן מול `main` עבור fixture זה ללא הבדל תוכני רלוונטי. זהויות Git blob של ה־HTML והבדיקות/חומרי harness שאומתו מפורטות בדוח. אין טענה לאימות כלל־מערכתי.
+
+**גבולות שלא הוסרו:** סביבת הבדיקה זמינה רק ב־Node 22, והפרויקט דורש **Node 24**; לא הורצו `npm run test:app`, `test:browser`, CI מלא, persistence reload אמיתי או נתוני Binance חיים. **המועמד אינו QA-cleared; אין PR, אין merge, ולא שונו `main`, `STATUS.md`, מנוע מסחר או ניסויי שוק.** חסם regional retention/reload המקורי וההנחיה לא לבצע blind retry נשארו בתוקף.
+
+**המשך אצל Work:** לקרוא קודם `main/STATUS.md`, ענף המחקר וחוזה ההחלטה; לקרוא את ענף המועמד והדוח **לפני בניית מימוש כפול**. הפעולה הבאה בעלת ערך היא אימות ממוקד ב־Node 24 בסביבת הפרויקט, בתיאום עם בעלות WORK ולפי אישור המשתמש; בהמשך סקירת QA/UX ושערי release בנפרד. **אין להריץ מחדש QA מלא, לפתוח PR או למזג אוטומטית.**
 
 ## מטרת התיקייה
 
