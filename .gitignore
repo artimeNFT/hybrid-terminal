@@ -1,5 +1,7 @@
 # QA dependencies, local tools and generated runs; keep lockfiles and fixtures.
 node_modules/
+# Also ignore the authorized candidate-local dependency symlink.
+/node_modules
 /.tools/
 /.qa-results/
 /.qa-clean-checkout/
