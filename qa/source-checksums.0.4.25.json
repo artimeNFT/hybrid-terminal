@@ -1,5 +1,5 @@
 {
-  "hybrid-terminal.html": "f81375f01a240873017e9ba4efccc7f6deff99d8b7b0c8dfdb6516da9bf7ea57",
+  "hybrid-terminal.html": "3deca059295efcf960b3177b28c27a2f5ccd752976e47d0842154f81178ebcfd",
   "research/klines.cjs": "50104e76ec7209b058bc26f129d42ed59d615ed2f48efb0e4454e481287c1b1d",
   "research/SCHEMA.md": "041a8f3841ebb3859f8c1e680ddcb0a29e5ee846828372841785721f2e61a74a",
   "baseline/hybrid-terminal.0.3.1.html": "940e951deaea0474a575a4ba859c43333aed9b5996441ab6975f22f5beba793e",
@@ -36,5 +36,7 @@
   "references/tr-main/main.pine": "992f91f45eaad0604473fed2e4d10012c4accbc26397603f9440cbfd44eed1fd",
   "references/tr-main/library.pine": "5a0f368cf597d38792439b48d1787399f78522ff96959f96baa562722be5c36b",
   "baseline/hybrid-terminal.0.4.23.html": "51b77ffe1ef79457d9bc3d1aa99c917e3e3d8b6f839ae32010dac5b518eb78c3",
-  "baseline/hybrid-terminal.0.4.24.html": "4dc829b480fd81080b50549a3d43b5e335c822958d7331c44af0721c854cfa35"
+  "baseline/hybrid-terminal.0.4.24.html": "4dc829b480fd81080b50549a3d43b5e335c822958d7331c44af0721c854cfa35",
+  "baseline/hybrid-terminal.0.4.25.html": "f81375f01a240873017e9ba4efccc7f6deff99d8b7b0c8dfdb6516da9bf7ea57",
+  "research/source-context/perp-support-v2-0.4.25.cjs": "b0a191612b5cae31980f9c0fcc52edcb70a50dffd3665bbc77ae60c278364481"
 }
