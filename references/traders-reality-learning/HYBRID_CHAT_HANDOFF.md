@@ -162,6 +162,33 @@ Retrospective local verification reported matching sealed code/protocol/adapter/
 
 **Interval limitation:** stored interval values match the report, but individual bootstrap resample results were not retained. Independent interval reconstruction remains **UNVERIFIED**. No bootstrap was regenerated. Do not describe every scientific output as independently reconstructed.
 
+### Economic diagnosis — stored results, no new experiment
+
+A subsequent owner-relayed local Codex extraction separated gross performance from modeled costs across the same 772 admitted pairs. Stored ledger/report values were used; no market exits, strategy outcomes or bootstrap were rerun.
+
+| Metric | Value |
+|---|---:|
+| Strategy mean gross R | -0.027434535R |
+| Mean modeled fee R | 0.632850174R |
+| Mean modeled slippage R | 0.126566507R |
+| Strategy mean adjusted R | -0.786851216R |
+| Mirrored-null mean gross R | -0.022637160R |
+| Gross strategy-minus-null mean delta | -0.004797375R |
+| Median stop distance | 24.845268203 bps |
+| Fee-only break-even threshold, existing slippage fixed | -2.433452 bps |
+
+Arithmetic reconciles at displayed precision:
+
+`-0.027434535 - 0.632850174 - 0.126566507 = -0.786851216R`.
+
+The modeled cost burden is 0.759416681R per trade. Even removing the modeled fee entirely while holding gross returns and modeled slippage fixed leaves a mean of **-0.154001042R**. This is an algebraic sensitivity of stored results, not another simulation or an executable alternative.
+
+The threshold uses mean `0.0001 × E/D = 0.063285017396R` per fee basis point. It is an equal-trade-R modeled threshold, not account return, an achievable venue fee or a reason to assume rebates. Its negative sign indicates that zero fees would not suffice under the unchanged slippage model.
+
+**Decision implication:** the exact proxy was negative before costs and did not demonstrate gross directional advantage over its conditional null. The gross delta is a point estimate; no new statistical-significance claim is made. The failure is not solely a fee problem. **Keep C shelved and allocate no further research budget to tuning this exact proxy on the same historical evidence.**
+
+Funding remains excluded, exposure UNKNOWN, and the controller and independent interval-reconstruction limitations above remain. This diagnosis does not validate or disprove the complete Hybrid/MTF method and starts no follow-up study.
+
 ### Execution failure remains preserved
 
 All eight synthetic groups passed. Complete GNU time evidence identified the scientific worker invocation:
