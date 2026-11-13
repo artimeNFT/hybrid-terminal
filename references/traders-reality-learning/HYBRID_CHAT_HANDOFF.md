@@ -213,6 +213,28 @@ No scientific repair, rerun or original-receipt reconstruction was performed. Th
 
 For continuation, state only the actual delta and a justified next task. Do not resend completed prompts, silently tune a shelved proxy, introduce a fourth variant merely to keep working, or convert old proposals into new work orders.
 
+### WORK viability assessment — 2026-11-13
+
+This is a bounded read-only assessment of the evidence summarized above, the existing decision contract and documented baseline-tool capabilities. It is a WORK recommendation, **not** a new owner-approved implementation, experiment or restarted usability exercise.
+
+| Claim | Evidence-supported status |
+|---|---|
+| Existing calculations can assemble a multi-timeframe factual snapshot | Reported demonstrated once using existing calculation functions; not a built-in synchronized MTF decision engine |
+| Hybrid automatically produces the supervising assistant's combined MTF interpretation | **Not established.** The explanation was supplied by the assistant, not computed by the terminal |
+| Modeled sizing conserves a modeled scenario budget | Mathematical capability checked; not measured user-error reduction or guaranteed realized loss |
+| The tested proxies demonstrate commercial edge | **No.** Decisions and limitations above remain unchanged |
+| Existing workflow saves the owner time or reduces errors versus their current process | **Unmeasured** |
+| Generic chart/risk features alone justify more development | **Not established** |
+
+Baseline facts: TradingView documents [multi-chart layouts and synchronization](https://www.tradingview.com/support/solutions/43000629990-leveraging-multi-chart-layouts-in-your-analysis/) and [position/risk planning tools](https://www.tradingview.com/support/solutions/43000475660-how-to-use-long-and-short-position-drawing-tools/). These facts do not establish full feature parity, plan availability, equal cost-model behavior or the best tool for this owner. They do mean generic charts and arithmetic alone are not a demonstrated differentiator.
+
+**Recommendation:** no new feature implementation or proxy research is justified by the current evidence alone. In particular, packaging the already demonstrated snapshot into another utility needs a demonstrated recurring need; packaging convenience is not itself evidence of an advantage.
+
+The product objective remains human decision support. A defensible continuation case would require evidence of a specific benefit versus the owner's actual current workflow. The owner's comparison baseline has not been established in this assessment. Clarifying that factual baseline is the next information request; it does not start an evaluation.
+
+The previously stopped usability exercise and completed CI investigations remain closed. No new execution is authorized by this assessment. Do not repeat diagnosis or demonstrations merely to show activity, and do not call the complete Hybrid method disproved by the proxy results.
+
+
 ## 9. Source map and maintenance
 
 - [main START_HERE](https://github.com/artimeNFT/hybrid-terminal/blob/main/START_HERE.md) and [main STATUS](https://github.com/artimeNFT/hybrid-terminal/blob/main/STATUS.md): implemented roots, behavior and historical engineering restrictions; later checkpoint facts above update obsolete task status.
